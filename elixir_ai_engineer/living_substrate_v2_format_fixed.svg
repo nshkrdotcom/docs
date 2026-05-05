@@ -1,0 +1,247 @@
+<svg width="100%" viewBox="0 0 760 1230" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Elixir AI Engineer — living substrate v2</title>
+  <desc>Three nested feedback loops — candidate synthesis, normalization, harness evolution — operating over a continuously projected graph substrate, now extended with an intervention graph and control oracle layer.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#7D7A72" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .t  { font-family: "Anthropic Sans", Inter, ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 400; fill: #1a1a18; }
+      .th { font-family: "Anthropic Sans", Inter, ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 500; fill: #1a1a18; }
+      .ts { font-family: "Anthropic Sans", Inter, ui-sans-serif, system-ui, sans-serif; font-size: 12px; font-weight: 400; fill: #4a4a45; }
+      .arr { fill: none; stroke: #9c9a92; stroke-width: 1.6; }
+      .leader { fill: none; stroke: #9c9a92; stroke-width: 0.5; stroke-dasharray: 3 3; }
+      .loop-outer { fill: none; stroke: #AFA9EC; stroke-width: 0.5; stroke-dasharray: 6 4; }
+      .loop-mid   { fill: none; stroke: #5DCAA5; stroke-width: 0.5; stroke-dasharray: 6 4; }
+      .loop-inner { fill: none; stroke: #85B7EB; stroke-width: 0.5; stroke-dasharray: 5 4; }
+      .feedback-purple { fill: none; stroke: #7F77DD; stroke-width: 1.2; stroke-dasharray: 5 4; }
+      .feedback-teal   { fill: none; stroke: #1D9E75; stroke-width: 1.2; stroke-dasharray: 5 4; }
+      .feedback-blue   { fill: none; stroke: #378ADD; stroke-width: 1.2; stroke-dasharray: 5 4; }
+      .feedback-amber  { fill: none; stroke: #BA7517; stroke-width: 1.2; stroke-dasharray: 5 4; }
+      .c-blue   > rect { fill: #E6F1FB; stroke: #85B7EB; }
+      .c-blue   > text.th { fill: #0C447C; }
+      .c-blue   > text.ts { fill: #185FA5; }
+      .c-teal   > rect { fill: #E1F5EE; stroke: #5DCAA5; }
+      .c-teal   > text.th { fill: #085041; }
+      .c-teal   > text.ts { fill: #0F6E56; }
+      .c-purple > rect { fill: #EEEDFE; stroke: #AFA9EC; }
+      .c-purple > text.th { fill: #26215C; }
+      .c-purple > text.ts { fill: #534AB7; }
+      .c-amber  > rect { fill: #FAEEDA; stroke: #EF9F27; }
+      .c-amber  > text.th { fill: #412402; }
+      .c-amber  > text.ts { fill: #854F0B; }
+      .c-gray   > rect { fill: #F1EFE8; stroke: #B4B2A9; }
+      .c-gray   > text.th { fill: #2C2C2A; }
+      .c-gray   > text.ts { fill: #5F5E5A; }
+      .c-coral  > rect { fill: #FAECE7; stroke: #F0997B; }
+      .c-coral  > text.th { fill: #4A1B0C; }
+      .c-coral  > text.ts { fill: #993C1D; }
+      @media (prefers-color-scheme: dark) {
+        .c-blue   > rect { fill: #0C447C; stroke: #85B7EB; }
+        .c-blue   > text.th { fill: #B5D4F4; }
+        .c-blue   > text.ts { fill: #85B7EB; }
+        .c-teal   > rect { fill: #085041; stroke: #5DCAA5; }
+        .c-teal   > text.th { fill: #9FE1CB; }
+        .c-teal   > text.ts { fill: #5DCAA5; }
+        .c-purple > rect { fill: #26215C; stroke: #AFA9EC; }
+        .c-purple > text.th { fill: #CECBF6; }
+        .c-purple > text.ts { fill: #AFA9EC; }
+        .c-amber  > rect { fill: #412402; stroke: #EF9F27; }
+        .c-amber  > text.th { fill: #FAC775; }
+        .c-amber  > text.ts { fill: #EF9F27; }
+        .c-gray   > rect { fill: #2C2C2A; stroke: #888780; }
+        .c-gray   > text.th { fill: #D3D1C7; }
+        .c-gray   > text.ts { fill: #B4B2A9; }
+        .c-coral  > rect { fill: #4A1B0C; stroke: #F0997B; }
+        .c-coral  > text.th { fill: #F5C4B3; }
+        .c-coral  > text.ts { fill: #F0997B; }
+        .t  { fill: #e8e6dd; }
+        .th { fill: #e8e6dd; }
+        .ts { fill: #a8a59d; }
+        .loop-outer { stroke: #7F77DD; }
+        .loop-mid   { stroke: #1D9E75; }
+        .loop-inner { stroke: #378ADD; }
+      }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="760" height="1230" fill="#FBFAF6"/>
+  <g id="diagram" transform="translate(40 20)">
+  <rect x="14" y="30" width="652" height="876" rx="16" class="loop-outer"/>
+  <text class="ts" x="26" y="48">harness evolution — refines rules, costs, operators, specs across sessions</text>
+
+  <rect x="28" y="62" width="624" height="672" rx="14" class="loop-mid"/>
+  <text class="ts" x="40" y="80">normalization — compresses working code toward ENF</text>
+
+  <rect x="42" y="92" width="596" height="414" rx="12" class="loop-inner"/>
+  <text class="ts" x="54" y="110">candidate synthesis — spec → skeleton → bounded LM fill → evidence</text>
+
+  <g class="c-gray">
+    <rect x="240" y="122" width="200" height="48" rx="8" stroke-width="0.75"/>
+    <text class="th" x="340" y="142" text-anchor="middle" dominant-baseline="central">SpecCell</text>
+    <text class="ts" x="340" y="160" text-anchor="middle" dominant-baseline="central">contracts · effects · ENF budget</text>
+  </g>
+
+  <line x1="340" y1="170" x2="340" y2="192" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="c-blue">
+    <rect x="200" y="192" width="280" height="48" rx="8" stroke-width="0.75"/>
+    <text class="th" x="340" y="212" text-anchor="middle" dominant-baseline="central">Skeleton generator</text>
+    <text class="ts" x="340" y="230" text-anchor="middle" dominant-baseline="central">deterministic scaffolding — no LM</text>
+  </g>
+
+  <line x1="340" y1="240" x2="340" y2="262" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="c-blue">
+    <rect x="200" y="262" width="280" height="48" rx="8" stroke-width="0.75"/>
+    <text class="th" x="340" y="282" text-anchor="middle" dominant-baseline="central">Context bundle</text>
+    <text class="ts" x="340" y="300" text-anchor="middle" dominant-baseline="central">typed · scoped · forbidden list</text>
+  </g>
+
+  <line x1="340" y1="310" x2="340" y2="332" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="c-blue">
+    <rect x="200" y="332" width="280" height="48" rx="8" stroke-width="0.75"/>
+    <text class="th" x="340" y="352" text-anchor="middle" dominant-baseline="central">Bounded LM fill</text>
+    <text class="ts" x="340" y="370" text-anchor="middle" dominant-baseline="central">fills holes only · no arch invention</text>
+  </g>
+
+  <line x1="340" y1="380" x2="340" y2="402" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="c-blue">
+    <rect x="200" y="402" width="280" height="48" rx="8" stroke-width="0.75"/>
+    <text class="th" x="340" y="422" text-anchor="middle" dominant-baseline="central">Evidence gate</text>
+    <text class="ts" x="340" y="440" text-anchor="middle" dominant-baseline="central">unit · property · fault · adversarial</text>
+  </g>
+
+  <path d="M200 426 L172 426 L172 286 L200 286" class="feedback-blue" marker-end="url(#arrow)"/>
+  <text class="ts" x="160" y="360" text-anchor="middle" transform="rotate(-90 160 360)">fail → repair</text>
+
+  <line x1="340" y1="450" x2="340" y2="478" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="c-gray">
+    <rect x="42" y="478" width="596" height="120" rx="10" stroke-width="0.75"/>
+    <text class="th" x="340" y="498" text-anchor="middle" dominant-baseline="central">Substrate — continuously projected</text>
+  </g>
+
+  <g class="c-blue">
+    <rect x="56" y="512" width="98" height="36" rx="6" stroke-width="0.75"/>
+    <text class="ts" x="105" y="530" text-anchor="middle" dominant-baseline="central">SpecGraph</text>
+  </g>
+  <g class="c-blue">
+    <rect x="162" y="512" width="98" height="36" rx="6" stroke-width="0.75"/>
+    <text class="ts" x="211" y="530" text-anchor="middle" dominant-baseline="central">ImplGraph</text>
+  </g>
+  <g class="c-blue">
+    <rect x="268" y="512" width="110" height="36" rx="6" stroke-width="0.75"/>
+    <text class="ts" x="323" y="530" text-anchor="middle" dominant-baseline="central">EvidenceGraph</text>
+  </g>
+  <g class="c-blue">
+    <rect x="386" y="512" width="108" height="36" rx="6" stroke-width="0.75"/>
+    <text class="ts" x="440" y="530" text-anchor="middle" dominant-baseline="central">RuntimeGraph</text>
+  </g>
+  <g class="c-blue">
+    <rect x="502" y="512" width="122" height="36" rx="6" stroke-width="0.75"/>
+    <text class="ts" x="563" y="530" text-anchor="middle" dominant-baseline="central">Lineage + Cost</text>
+  </g>
+
+  <g class="c-amber">
+    <rect x="56" y="556" width="570" height="30" rx="6" stroke-width="0.75"/>
+    <text class="ts" x="341" y="571" text-anchor="middle" dominant-baseline="central">drift classifier: conforming · violation · omission · bloat · refinement candidate · dead path</text>
+  </g>
+
+  <line x1="340" y1="598" x2="340" y2="624" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="c-teal">
+    <rect x="42" y="624" width="286" height="52" rx="8" stroke-width="0.75"/>
+    <text class="th" x="185" y="644" text-anchor="middle" dominant-baseline="central">ENF auditor</text>
+    <text class="ts" x="185" y="662" text-anchor="middle" dominant-baseline="central">module kind · process proof · API trace</text>
+  </g>
+
+  <g class="c-teal">
+    <rect x="352" y="624" width="286" height="52" rx="8" stroke-width="0.75"/>
+    <text class="th" x="495" y="644" text-anchor="middle" dominant-baseline="central">Cost model</text>
+    <text class="ts" x="495" y="662" text-anchor="middle" dominant-baseline="central">module · process · API · pure bonus</text>
+  </g>
+
+  <line x1="185" y1="676" x2="185" y2="704" class="arr" marker-end="url(#arrow)"/>
+  <line x1="495" y1="676" x2="495" y2="704" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="c-teal">
+    <rect x="42" y="704" width="596" height="52" rx="8" stroke-width="0.75"/>
+    <text class="th" x="340" y="724" text-anchor="middle" dominant-baseline="central">Compression normalizer</text>
+    <text class="ts" x="340" y="742" text-anchor="middle" dominant-baseline="central">collapse fake behaviour · remove stateless GenServer · shrink API surface</text>
+  </g>
+
+  <path d="M42 730 L20 730 L20 538 L42 538" class="feedback-teal" marker-end="url(#arrow)"/>
+  <text class="ts" x="8" y="635" text-anchor="middle" transform="rotate(-90 8 635)">above budget → compress</text>
+
+  <line x1="340" y1="756" x2="340" y2="784" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="c-purple">
+    <rect x="42" y="784" width="286" height="52" rx="8" stroke-width="0.75"/>
+    <text class="th" x="185" y="804" text-anchor="middle" dominant-baseline="central">Nogood compiler</text>
+    <text class="ts" x="185" y="822" text-anchor="middle" dominant-baseline="central">failure → rule → gate → CI</text>
+  </g>
+
+  <g class="c-purple">
+    <rect x="352" y="784" width="286" height="52" rx="8" stroke-width="0.75"/>
+    <text class="th" x="495" y="804" text-anchor="middle" dominant-baseline="central">Lineage + benchmark</text>
+    <text class="ts" x="495" y="822" text-anchor="middle" dominant-baseline="central">judgment traces → training signal</text>
+  </g>
+
+  <path d="M638 808 L660 808 L660 146 L440 146" class="feedback-purple" marker-end="url(#arrow)"/>
+  <text class="ts" x="672" y="480" text-anchor="middle" transform="rotate(-90 672 480)">refines ENF · costs · operators · spec</text>
+
+  <line x1="42" y1="906" x2="638" y2="906" stroke="#c8c5bc" stroke-width="0.75" stroke-dasharray="4 4"/>
+  <text class="ts" x="340" y="898" text-anchor="middle">intervention control</text>
+
+  <g class="c-coral">
+    <rect x="42" y="916" width="280" height="52" rx="8" stroke-width="0.75"/>
+    <text class="th" x="182" y="936" text-anchor="middle" dominant-baseline="central">Architecture capsules</text>
+    <text class="ts" x="182" y="954" text-anchor="middle" dominant-baseline="central">multiscale · predictive · scenario-tested</text>
+  </g>
+
+  <g class="c-coral">
+    <rect x="358" y="916" width="280" height="52" rx="8" stroke-width="0.75"/>
+    <text class="th" x="498" y="936" text-anchor="middle" dominant-baseline="central">Intervention graph</text>
+    <text class="ts" x="498" y="954" text-anchor="middle" dominant-baseline="central">expected scope · blast radius · history</text>
+  </g>
+
+  <line x1="182" y1="968" x2="182" y2="994" class="arr" marker-end="url(#arrow)"/>
+  <line x1="498" y1="968" x2="498" y2="994" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="c-coral">
+    <rect x="42" y="994" width="596" height="52" rx="8" stroke-width="0.75"/>
+    <text class="th" x="340" y="1014" text-anchor="middle" dominant-baseline="central">Control oracle</text>
+    <text class="ts" x="340" y="1032" text-anchor="middle" dominant-baseline="central">which intervention is local · safe · reversible · bounded</text>
+  </g>
+
+  <path d="M340 994 L340 968 L640 968 L640 286 L480 286" class="feedback-amber" marker-end="url(#arrow)"/>
+  <text class="ts" x="652" y="640" text-anchor="middle" transform="rotate(-90 652 640)">valid morphisms → bounded generation</text>
+
+  <line x1="182" y1="858" x2="182" y2="916" class="arr" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <line x1="498" y1="858" x2="498" y2="916" class="arr" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+  <line x1="42" y1="1064" x2="638" y2="1064" stroke="#c8c5bc" stroke-width="0.75"/>
+
+  <rect x="42" y="1076" width="10" height="10" rx="2" fill="#85B7EB"/>
+  <text class="ts" x="58" y="1086">blue — candidate loop</text>
+
+  <rect x="200" y="1076" width="10" height="10" rx="2" fill="#5DCAA5"/>
+  <text class="ts" x="216" y="1086">teal — normalization</text>
+
+  <rect x="352" y="1076" width="10" height="10" rx="2" fill="#AFA9EC"/>
+  <text class="ts" x="368" y="1086">purple — harness evolution</text>
+
+  <rect x="532" y="1076" width="10" height="10" rx="2" fill="#F0997B"/>
+  <text class="ts" x="548" y="1086">coral — intervention control</text>
+
+  <rect x="42" y="1100" width="10" height="10" rx="2" fill="#EF9F27"/>
+  <text class="ts" x="58" y="1110">amber — control oracle feedback</text>
+
+  <text class="ts" x="340" y="1140" text-anchor="middle">every code change projects continuously · drift cannot silently merge · failure becomes substrate material</text>
+  <text class="ts" x="340" y="1162" text-anchor="middle">architecture is the geometry of possible change · the control oracle is the missing layer</text>
+
+  </g>
+</svg>
