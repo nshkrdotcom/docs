@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Living Substrate — harness evolution engine</title>
+  <desc id="desc">A zoom-in diagram showing how failures, counterexamples, runtime drift, normalization outcomes, and human decisions are compiled into versioned rules, tests, spec refinements, normalizers, and pipeline changes.</desc>
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.34"/>
+    </filter>
+    <filter id="smallShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.24"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M2 2 L10 6 L2 10" fill="none" stroke="#ded8c9" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M2 2 L10 6 L2 10" fill="none" stroke="#73dfbf" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M2 2 L10 6 L2 10" fill="none" stroke="#b9b4ff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M2 2 L10 6 L2 10" fill="none" stroke="#f4a62a" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <linearGradient id="frameGrad" x1="40" y1="40" x2="1360" y2="960" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#171b25"/>
+      <stop offset="1" stop-color="#090b10"/>
+    </linearGradient>
+    <linearGradient id="inputGrad" x1="72" y1="146" x2="398" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6b3614"/>
+      <stop offset="1" stop-color="#2b1b10"/>
+    </linearGradient>
+    <linearGradient id="engineGrad" x1="436" y1="146" x2="964" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f3d69"/>
+      <stop offset="1" stop-color="#0b1c36"/>
+    </linearGradient>
+    <linearGradient id="versionGrad" x1="1002" y1="146" x2="1328" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#292566"/>
+      <stop offset="1" stop-color="#131235"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#73dfbf" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#0e3f70" stop-opacity=".20"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      :root {
+        --bg:#07090d; --ink:#f3f1e8; --muted:#c9c4b8; --dim:#9f9a90;
+        --blue:#91c8ff; --blueStrong:#c8e4ff; --teal:#73dfbf; --tealStrong:#b9f2df;
+        --purple:#a9a3f3; --purpleStrong:#d2cef8; --amber:#f4a62a; --amberStrong:#ffd49a; --red:#ffb199;
+        --card:#141922; --stroke:#817c70;
+      }
+      .font { font-family:"Anthropic Sans", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .title { font-size:32px; font-weight:750; letter-spacing:-0.025em; fill:var(--ink); }
+      .subtitle { font-size:16px; fill:var(--muted); }
+      .panel-label { font-size:13px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; fill:var(--muted); }
+      .node-title { font-size:17px; font-weight:760; fill:var(--ink); }
+      .node-sub { font-size:12.5px; fill:var(--muted); }
+      .micro { font-size:11.5px; fill:var(--dim); }
+      .tiny { font-size:10.5px; fill:var(--dim); letter-spacing:.02em; }
+      .arrow { fill:none; stroke:#ded8c9; stroke-width:2.0; marker-end:url(#arrow); }
+      .arrow-soft { fill:none; stroke:#ded8c9; stroke-width:1.45; stroke-opacity:.56; marker-end:url(#arrow); }
+      .arrow-teal { fill:none; stroke:#73dfbf; stroke-width:2.05; marker-end:url(#arrowTeal); }
+      .arrow-purple { fill:none; stroke:#b9b4ff; stroke-width:2.05; marker-end:url(#arrowPurple); }
+      .arrow-amber { fill:none; stroke:#f4a62a; stroke-width:2.05; marker-end:url(#arrowAmber); }
+      .dash { fill:none; stroke:#ded8c9; stroke-width:1.6; stroke-dasharray:7 8; stroke-opacity:.70; marker-end:url(#arrow); }
+      .dash-teal { fill:none; stroke:#73dfbf; stroke-width:1.9; stroke-dasharray:8 8; marker-end:url(#arrowTeal); }
+      .dash-purple { fill:none; stroke:#b9b4ff; stroke-width:1.9; stroke-dasharray:8 8; marker-end:url(#arrowPurple); }
+      .card { fill:#141922; stroke:#7f7a70; stroke-width:1.05; }
+      .cardBlue { fill:#12375e; stroke:#80bdff; stroke-width:1.15; }
+      .cardTeal { fill:#0d4a3e; stroke:#73dfbf; stroke-width:1.15; }
+      .cardPurple { fill:#292566; stroke:#b9b4ff; stroke-width:1.15; }
+      .cardAmber { fill:#392414; stroke:#f4a62a; stroke-width:1.15; }
+      .pill { fill:#0d1118; stroke:#6f6a61; stroke-width:1; }
+      .centerRing { fill:#0e1621; stroke:#73dfbf; stroke-width:1.5; }
+      .centerInner { fill:#111b29; stroke:#80bdff; stroke-width:1.2; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="1000" fill="#07090d"/>
+  <g class="font" filter="url(#softShadow)">
+    <rect x="40" y="40" width="1320" height="920" rx="34" fill="url(#frameGrad)" stroke="#3d4250" stroke-width="1.4"/>
+
+    <text class="title" x="700" y="88" text-anchor="middle">Living Substrate — harness evolution engine</text>
+    <text class="subtitle" x="700" y="116" text-anchor="middle">the next zoom layer: failures compile into versioned rules, tests, specs, normalizers, and pipeline changes</text>
+
+    <!-- Three vertical panels -->
+    <rect x="72" y="150" width="326" height="706" rx="28" fill="url(#inputGrad)" stroke="#f4a62a" stroke-width="1.25"/>
+    <rect x="436" y="150" width="528" height="706" rx="28" fill="url(#engineGrad)" stroke="#80bdff" stroke-width="1.25"/>
+    <rect x="1002" y="150" width="326" height="706" rx="28" fill="url(#versionGrad)" stroke="#b9b4ff" stroke-width="1.25"/>
+
+    <text class="panel-label" x="102" y="186">FAILURE SIGNALS</text>
+    <text class="panel-label" x="466" y="186">MATERIALIZATION ENGINE</text>
+    <text class="panel-label" x="1032" y="186">VERSIONED HARNESS</text>
+
+    <!-- Left input stack -->
+    <g filter="url(#smallShadow)">
+      <rect class="cardAmber" x="112" y="228" width="246" height="74" rx="16"/>
+      <text class="node-title" x="235" y="255" text-anchor="middle">ENF Violations</text>
+      <text class="node-sub" x="235" y="276" text-anchor="middle">bloat • unjustified OTP • effects</text>
+
+      <rect class="cardAmber" x="112" y="334" width="246" height="74" rx="16"/>
+      <text class="node-title" x="235" y="361" text-anchor="middle">Counterexamples</text>
+      <text class="node-sub" x="235" y="382" text-anchor="middle">StackLab falsification traces</text>
+
+      <rect class="cardAmber" x="112" y="440" width="246" height="74" rx="16"/>
+      <text class="node-title" x="235" y="467" text-anchor="middle">Runtime Drift</text>
+      <text class="node-sub" x="235" y="488" text-anchor="middle">BEAM telemetry contradicts model</text>
+
+      <rect class="cardAmber" x="112" y="546" width="246" height="74" rx="16"/>
+      <text class="node-title" x="235" y="573" text-anchor="middle">Human Review</text>
+      <text class="node-sub" x="235" y="594" text-anchor="middle">false positives • accepted exceptions</text>
+
+      <rect class="cardAmber" x="112" y="652" width="246" height="74" rx="16"/>
+      <text class="node-title" x="235" y="679" text-anchor="middle">Rewrite Outcomes</text>
+      <text class="node-sub" x="235" y="700" text-anchor="middle">behavior preserved or broken</text>
+
+      <rect class="pill" x="112" y="770" width="246" height="38" rx="19"/>
+      <text class="micro" x="235" y="794" text-anchor="middle">all signals append to lineage</text>
+    </g>
+
+    <!-- Arrows from left to core -->
+    <path class="arrow-amber" d="M358 265 C414 265 430 302 487 335"/>
+    <path class="arrow-amber" d="M358 371 C414 371 431 386 488 421"/>
+    <path class="arrow-amber" d="M358 477 H487"/>
+    <path class="arrow-amber" d="M358 583 C414 583 431 568 488 533"/>
+    <path class="arrow-amber" d="M358 689 C414 689 430 652 487 619"/>
+
+    <!-- Center core glow and ring -->
+    <ellipse cx="700" cy="477" rx="230" ry="240" fill="url(#coreGlow)"/>
+    <circle class="centerRing" cx="700" cy="477" r="138"/>
+    <circle class="centerInner" cx="700" cy="477" r="98"/>
+    <text class="node-title" x="700" y="455" text-anchor="middle">Harness</text>
+    <text class="node-title" x="700" y="478" text-anchor="middle">Evolution</text>
+    <text class="node-title" x="700" y="501" text-anchor="middle">Compiler</text>
+    <text class="node-sub" x="700" y="529" text-anchor="middle">turn failure into structure</text>
+
+    <!-- Compiler satellites, aligned -->
+    <g filter="url(#smallShadow)">
+      <rect class="cardBlue" x="492" y="224" width="190" height="62" rx="15"/>
+      <text class="node-title" x="587" y="249" text-anchor="middle">Classify</text>
+      <text class="node-sub" x="587" y="269" text-anchor="middle">violation • omission • bloat</text>
+
+      <rect class="cardBlue" x="718" y="224" width="190" height="62" rx="15"/>
+      <text class="node-title" x="813" y="249" text-anchor="middle">Deduplicate</text>
+      <text class="node-sub" x="813" y="269" text-anchor="middle">same defect, one cause</text>
+
+      <rect class="cardBlue" x="492" y="668" width="190" height="62" rx="15"/>
+      <text class="node-title" x="587" y="693" text-anchor="middle">Score Outcome</text>
+      <text class="node-sub" x="587" y="713" text-anchor="middle">signal quality • false positives</text>
+
+      <rect class="cardBlue" x="718" y="668" width="190" height="62" rx="15"/>
+      <text class="node-title" x="813" y="693" text-anchor="middle">Choose Patch</text>
+      <text class="node-sub" x="813" y="713" text-anchor="middle">lowest power durable fix</text>
+    </g>
+
+    <path class="arrow-soft" d="M606 286 C630 326 647 354 670 382"/>
+    <path class="arrow-soft" d="M793 286 C770 326 753 354 730 382"/>
+    <path class="arrow-soft" d="M606 668 C630 628 647 600 670 572"/>
+    <path class="arrow-soft" d="M793 668 C770 628 753 600 730 572"/>
+
+    <!-- Materialization row -->
+    <rect class="pill" x="492" y="768" width="416" height="52" rx="18"/>
+    <text class="micro" x="700" y="789" text-anchor="middle">materialization contract</text>
+    <text class="node-sub" x="700" y="809" text-anchor="middle">create the smallest durable substrate mutation that prevents recurrence</text>
+
+    <!-- Right output stack -->
+    <g filter="url(#smallShadow)">
+      <rect class="cardPurple" x="1042" y="212" width="246" height="62" rx="15"/>
+      <text class="node-title" x="1165" y="237" text-anchor="middle">RulePack vN+1</text>
+      <text class="node-sub" x="1165" y="257" text-anchor="middle">static detector or denied pattern</text>
+
+      <rect class="cardPurple" x="1042" y="304" width="246" height="62" rx="15"/>
+      <text class="node-title" x="1165" y="329" text-anchor="middle">TestPack vN+1</text>
+      <text class="node-sub" x="1165" y="349" text-anchor="middle">property, state, or fault test</text>
+
+      <rect class="cardPurple" x="1042" y="396" width="246" height="62" rx="15"/>
+      <text class="node-title" x="1165" y="421" text-anchor="middle">SpecPatch</text>
+      <text class="node-sub" x="1165" y="441" text-anchor="middle">new obligation or refined boundary</text>
+
+      <rect class="cardPurple" x="1042" y="488" width="246" height="62" rx="15"/>
+      <text class="node-title" x="1165" y="513" text-anchor="middle">NormalizerPatch</text>
+      <text class="node-sub" x="1165" y="533" text-anchor="middle">safe rewrite with evidence lock</text>
+
+      <rect class="cardPurple" x="1042" y="580" width="246" height="62" rx="15"/>
+      <text class="node-title" x="1165" y="605" text-anchor="middle">PipelinePlan</text>
+      <text class="node-sub" x="1165" y="625" text-anchor="middle">operator order and escalation</text>
+
+      <rect class="cardTeal" x="1042" y="696" width="246" height="84" rx="17"/>
+      <text class="node-title" x="1165" y="725" text-anchor="middle">Harness Release</text>
+      <text class="node-sub" x="1165" y="746" text-anchor="middle">candidate lane • shadow lane</text>
+      <text class="node-sub" x="1165" y="765" text-anchor="middle">promote only by metrics</text>
+    </g>
+
+    <!-- Core to outputs arrows -->
+    <path class="arrow-purple" d="M828 424 C910 372 948 243 1042 243"/>
+    <path class="arrow-purple" d="M842 446 C923 414 948 335 1042 335"/>
+    <path class="arrow-purple" d="M848 477 H1042"/>
+    <path class="arrow-purple" d="M842 508 C923 540 948 519 1042 519"/>
+    <path class="arrow-purple" d="M828 530 C910 582 948 611 1042 611"/>
+    <path class="arrow-teal" d="M908 794 H1042"/>
+
+    <!-- Release loop back -->
+    <path class="dash-teal" d="M1165 696 C1165 122 235 112 235 228"/>
+    <text class="tiny" x="773" y="150" text-anchor="middle">new harness creates stricter future runs</text>
+
+    <!-- Bottom comparison band -->
+    <rect x="192" y="884" width="1016" height="46" rx="19" fill="#0d1118" stroke="#5e5a52" stroke-width="1"/>
+    <text class="micro" x="700" y="903" text-anchor="middle">promotion gate</text>
+    <text class="node-sub" x="700" y="923" text-anchor="middle">pipeline_vN vs pipeline_vN+1: fewer invalid candidates • lower bloat ratio • fewer frontier calls • no evidence regression</text>
+  </g>
+</svg>
