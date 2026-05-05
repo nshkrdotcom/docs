@@ -1,0 +1,77 @@
+version: 0.1.0
+name: Elixir Engineering Normal Form MVP
+
+module_kinds:
+  PureDomainModule:
+    allowed:
+      - defstruct
+      - pure_functions
+      - pattern_matching
+      - guards
+    forbidden:
+      - use_GenServer
+      - use_Supervisor
+      - System_get_env
+      - Application_get_env
+      - File_write
+      - Network_call
+      - Process_spawn
+      - ETS_access
+      - Credential_materialization
+
+  StatefulProcess:
+    required:
+      - state_ownership_justification
+      - public_api_facade
+      - child_spec
+      - crash_behavior
+    forbidden:
+      - business_logic_in_callbacks
+      - blocking_external_call_in_callback
+      - unsupervised_spawn
+      - raw_credential_access
+
+  Behaviour:
+    allowed_when:
+      - multiple_implementations_exist
+      - declared_boundary_seam
+      - explicit_roadmap_extension
+    reject_when:
+      - one_implementation
+      - no_declared_spec_seam
+
+checks:
+  GenServerWithoutStateJustification:
+    severity: critical
+    gate: block
+
+  SingleImplementationBehaviour:
+    severity: warning
+    gate: warn
+
+  PublicFunctionWithoutContract:
+    severity: critical
+    gate: block
+
+  UndeclaredExternalEffect:
+    severity: critical
+    gate: block
+
+  InventedDomainTerm:
+    severity: warning
+    gate: warn
+
+cost_weights:
+  module: 1.0
+  public_function: 0.4
+  stateful_process: 4.0
+  supervisor: 2.0
+  dynamic_supervisor: 3.0
+  registry: 2.0
+  behaviour: 2.0
+  single_impl_behaviour: 5.0
+  undeclared_effect: 9999
+  boundary_violation: 9999
+  invented_domain_term: 3.0
+  pure_function_bonus: -0.2
+  traceability_bonus: -0.5

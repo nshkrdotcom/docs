@@ -1,0 +1,17 @@
+flowchart TD
+    A[Human Requirement] --> B[SpecCell Tree]
+    B --> C[Architecture Tournament]
+    C --> D[ENF Policy]
+    D --> E[Deterministic Skeleton]
+    E --> F[Context Bundle]
+    F --> G[LM Fill]
+    G --> H[Candidate Code]
+    H --> I[Implementation Graph]
+    I --> J[Spec Audit]
+    J --> K[Evidence Runner]
+    K --> L[Normalizer]
+    L --> M[Acceptance Gate]
+    M -->|reject| F
+    M -->|accept| N[Accepted Code]
+    N --> O[Runtime Evidence]
+    O --> B

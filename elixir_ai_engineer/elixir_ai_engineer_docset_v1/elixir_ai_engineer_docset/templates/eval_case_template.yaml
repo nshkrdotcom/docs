@@ -1,0 +1,33 @@
+id: eval.example
+name: Example Eval Case
+category: pure_core | otp_boundary | credentialed_effect | compression | greenfield_design
+spec_cell: example.cell
+
+input:
+  requirement: ""
+  existing_spec: ""
+  existing_code: ""
+
+expected:
+  must_create: []
+  must_not_create: []
+  must_have_tests: []
+  must_not_have_effects: []
+  runtime_shape: null
+  max_modules: null
+  max_public_functions: null
+  max_processes: null
+
+checks:
+  - format
+  - compile
+  - tests
+  - spec_audit
+  - enf
+  - compression
+
+scoring:
+  correctness_weight: 1.0
+  enf_weight: 1.0
+  compression_weight: 1.0
+  frontier_call_penalty: 0.1
