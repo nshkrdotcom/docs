@@ -1,0 +1,8 @@
+The key thing the nested-loop diagram still doesn't show is the *direction of truth*. The graph substrate isn't a middle layer — it's the center of gravity that everything orbits. Let me draw that.Here's what's structurally different about this one.
+
+The substrate is at the center spatially, not at the bottom of a flow. Four forces orbit it — candidate synthesis left, evidence and adversary right, normalization bottom-left, harness evolution bottom-right — and all of them have bidirectional relationships with the center. Things flow *into* the graphs (proposals, evidence, runtime observations) and things flow *out* of the graphs (constraints back to the candidate loop, bloat signals to the normalizer, lineage to evolution). The graphs aren't a database at the end of a pipeline. They're the gravitational field everything moves through.
+
+The two arrows that make the architecture real rather than aspirational: the counterexample arrow that curves from StackLab all the way back up to the SpecCell tree (counterexamples refine specs, not just code — that's CEGAR), and the harness evolution arrow that runs up the right spine and feeds back into everything (the pipeline version is itself an artifact of optimization). Those two loops are what make this a living substrate rather than a very good CI step.
+
+The judgment trace at the bottom is deliberately separated from the substrate. It's the output that's legible to external audiences — labs, potential clients, anyone evaluating whether this matters. The substrate produces engineering judgment, not just code, and that judgment trace is the thing GitHub will never have.
+
