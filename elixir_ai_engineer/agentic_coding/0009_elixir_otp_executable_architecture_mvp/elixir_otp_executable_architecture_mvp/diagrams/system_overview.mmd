@@ -1,0 +1,13 @@
+flowchart TD
+    A[Architecture Docs] --> B[Semantic Types]
+    B --> C[Semantic Registry]
+    C --> D[Type Oracle]
+    C --> E[Projection Engine]
+    C --> F[Consistency Kernel]
+    G[Agent] --> D
+    D --> G
+    G --> F
+    E --> H[Tests / Checks / Benchmarks]
+    H --> F
+    I[Mutation Harness] --> F
+    J[Runtime Observer] --> C

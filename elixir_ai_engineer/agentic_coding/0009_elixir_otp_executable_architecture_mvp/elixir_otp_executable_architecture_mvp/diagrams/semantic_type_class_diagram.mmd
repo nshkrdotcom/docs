@@ -1,0 +1,19 @@
+classDiagram
+    class SemanticType {
+      id
+      kind
+      behavior
+      effects
+      capabilities
+      resources
+      cost
+      protocol
+      observations
+    }
+    class ProjectionContract
+    class MutationSuite
+    class CapabilityBundle
+    class AccessEdge
+    SemanticType --> ProjectionContract
+    SemanticType --> MutationSuite
+    CapabilityBundle --> AccessEdge

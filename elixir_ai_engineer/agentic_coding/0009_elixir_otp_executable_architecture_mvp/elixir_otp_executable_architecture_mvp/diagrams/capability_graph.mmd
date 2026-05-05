@@ -1,0 +1,6 @@
+flowchart LR
+    Agent[SessionCheckoutRepairAgent]
+    Agent -->|Read| App[AppWide Context]
+    Agent -->|Modify| Checkout[session_pool.checkout]
+    Agent -. forbidden .-> Kernel[capability.kernel]
+    Agent -. forbidden .-> Protocol[session.protocol.lifecycle]

@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant Agent
+    participant Oracle
+    participant Graph
+    participant Capability
+    participant Projection
+    Agent->>Oracle: intent + capability bundle
+    Oracle->>Graph: find implicated semantic objects
+    Oracle->>Capability: filter modify authority
+    Oracle->>Projection: required checks
+    Oracle-->>Agent: valid morphism space

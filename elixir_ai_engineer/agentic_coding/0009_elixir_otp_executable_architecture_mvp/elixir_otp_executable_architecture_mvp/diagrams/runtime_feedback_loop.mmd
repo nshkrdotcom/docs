@@ -1,0 +1,9 @@
+flowchart TD
+    Type[Cost Type] --> Telemetry[Generated Telemetry Contract]
+    Telemetry --> Runtime[Runtime Execution]
+    Runtime --> Metrics[Observed Metrics]
+    Metrics --> Compare[Compare to Envelope]
+    Compare -->|OK| Done[No Action]
+    Compare -->|Anomaly| Refine[Candidate Type Refinement]
+    Refine --> Review[Human/Trusted Review]
+    Review --> Type
