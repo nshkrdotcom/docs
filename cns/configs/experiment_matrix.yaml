@@ -1,0 +1,21 @@
+experiments:
+  - id: EXP_001
+    name: synthetic_latent_context
+    baselines: [rag, rag_nli, debate, gcts_no_decompose, gcts_full]
+    primary_metrics: [top3_world_coverage, latent_predicate_f1, ece]
+  - id: EXP_002
+    name: scifact_fever_oracleless
+    baselines: [rag, rag_nli, debate, self_consistency, graph_only, gcts_full]
+    primary_metrics: [citation_validity, zthr, brier, ece, abstention_precision]
+  - id: EXP_003
+    name: multiverse_calibration
+    baselines: [single_world, topk_worlds]
+    primary_metrics: [ece, brier, entropy_error_corr]
+  - id: EXP_004
+    name: oracle_boundary_ablation
+    conditions: [no_oracle, calibration_oracle, illegal_runtime_oracle]
+    primary_metrics: [ece, brier, deployable]
+  - id: EXP_005
+    name: chirality_predictiveness
+    predictors: [round_trip_chirality, graph_chirality, residual_energy, embedding_distance, beta1]
+    dependent_variables: [iterations, residual_after_synthesis, false_synthesis_rate]

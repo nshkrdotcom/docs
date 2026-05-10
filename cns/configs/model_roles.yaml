@@ -1,0 +1,20 @@
+roles:
+  extraction_llm:
+    can_generate_candidates: true
+    can_promote_truth: false
+    fine_tune_allowed: true
+  rendering_llm:
+    can_generate_report_text: true
+    can_add_new_facts: false
+    post_verification_required: true
+  entailment_model:
+    can_score_grounding: true
+    can_promote_truth: false
+    calibration_required: true
+  world_ranker:
+    can_compute_posteriors: true
+    can_promote_truth_by_policy: true
+    requires_proof_traces: true
+  human_oracle:
+    train_calibrate_evaluate_only: true
+    runtime_truth_decision_allowed: false
