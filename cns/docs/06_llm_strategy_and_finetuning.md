@@ -60,16 +60,16 @@ Train lightweight calibrators, not truth engines:
 
 For extraction/adaptation:
 
-\[
+$$
 \mathcal{L}=\mathcal{L}_{gen}+\lambda_1\mathcal{L}_{citation}+\lambda_2\mathcal{L}_{entailment}+\lambda_3\mathcal{L}_{schema}+\lambda_4\mathcal{L}_{contrastive}.
-\]
+$$
 
 Where:
 
-- \(\mathcal{L}_{citation}\): invalid or missing evidence references;
-- \(\mathcal{L}_{entailment}\): claim not entailed by cited span;
-- \(\mathcal{L}_{schema}\): invalid output format;
-- \(\mathcal{L}_{contrastive}\): claim closer to true evidence than negative evidence.
+- $\mathcal{L}_{citation}$: invalid or missing evidence references;
+- $\mathcal{L}_{entailment}$: claim not entailed by cited span;
+- $\mathcal{L}_{schema}$: invalid output format;
+- $\mathcal{L}_{contrastive}$: claim closer to true evidence than negative evidence.
 
 ## Oracle use policy
 
