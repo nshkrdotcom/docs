@@ -1,0 +1,313 @@
+# Formal Development Process
+
+## Purpose
+
+This document defines the rigorous process for architecting and delivering large Elixir/OTP applications. It is not only a coding guide. It is a formal development loop that creates architecture artifacts, subjects them to critique, lowers approved design into implementation, and accepts work only when evidence proves the behavior, runtime shape, and operational properties are correct.
+
+The process is deliberately iterative. A design is expected to change when the review finds unclear concepts, unsafe runtime ownership, hidden effects, excessive abstraction, or inadequate tests.
+
+## Core Principle
+
+```text
+Every feature moves from intent -> model -> contract -> runtime design -> implementation -> evidence.
+No feature skips the review and evidence stages.
+```
+
+Elixir/OTP rewards explicit runtime design. It also punishes vague ownership. This process exists to keep the design precise before concurrency, supervision, persistence, and distribution amplify mistakes.
+
+## Tiers Of Work
+
+### Tier 0: Charter
+
+The charter defines why the system exists and what it must never violate.
+
+Required artifacts:
+
+- Product or system intent.
+- Nonfunctional priorities.
+- Hard invariants.
+- Explicit non-goals.
+- Operational constraints.
+
+Acceptance gate:
+
+```text
+Every hard invariant has an intended enforcement path.
+Every nonfunctional priority is ranked.
+Every non-goal blocks at least one tempting design direction.
+```
+
+### Tier 1: Domain And Boundary Design
+
+This tier defines the system without OTP.
+
+Required artifacts:
+
+- Domain vocabulary.
+- Value objects.
+- Entities and aggregates.
+- Commands and events.
+- Read models.
+- Persistence records.
+- Bounded contexts.
+- Boundary graph.
+- External systems and anti-corruption layers.
+
+Acceptance gate:
+
+```text
+No unresolved synonyms.
+No implementation-only nouns pretending to be domain concepts.
+No cross-context operation without a declared contract.
+No external payload enters domain core unchanged.
+```
+
+### Tier 2: State, Consistency, And Effects
+
+This tier defines what changes, where it is persisted, and which effects occur.
+
+Required artifacts:
+
+- State ownership table.
+- Invariant enforcement matrix.
+- Transaction boundaries.
+- Idempotency strategy.
+- State machines.
+- External effect declarations.
+- Recovery rules.
+
+Acceptance gate:
+
+```text
+Each invariant is enforced by the weakest sufficient mechanism.
+Race-sensitive invariants use database constraints, locks, idempotency keys, or a declared serialization owner.
+Irreversible external effects are protected by outbox, job, or idempotent delivery.
+```
+
+### Tier 3: OTP Lowering
+
+Only after domain, state, and effects are clear does the design lower into OTP primitives.
+
+Required artifacts:
+
+- Process justification forms.
+- Supervisor design forms.
+- Registry naming rules.
+- Message protocol definitions.
+- Restart and shutdown policy.
+- Backpressure and mailbox policy.
+- Telemetry obligations.
+
+Acceptance gate:
+
+```text
+Every process has a runtime responsibility.
+Every long-lived production process is supervised.
+Every supervisor owns a failure domain.
+Every stateful process can restart without corrupting durable state.
+```
+
+### Tier 4: Implementation
+
+Implementation is bounded by approved artifacts.
+
+Rules:
+
+- The patch may not invent domain concepts.
+- The patch may not add external effects that are not declared.
+- The patch may not add processes without process justification.
+- The patch may not widen public API without contract review.
+- Pure core behavior must be tested without booting the supervision tree.
+
+Acceptance gate:
+
+```text
+The implementation matches the approved design or includes an explicit design amendment.
+All required tests and QC gates pass.
+Exceptions are documented with owner and expiration.
+```
+
+### Tier 5: Evidence And Release
+
+Evidence is a durable record of why the feature was accepted.
+
+Required artifacts:
+
+- Test output summary.
+- Static analysis summary.
+- Migration safety notes.
+- Observability notes.
+- Operational runbook changes.
+- Known exceptions.
+- Review decision.
+
+Acceptance gate:
+
+```text
+The evidence package is sufficient for a reviewer to reproduce the acceptance decision.
+```
+
+## Iterative Review Loop
+
+Each feature runs this loop:
+
+```text
+1. Draft design.
+2. Review for concept clarity.
+3. Review boundaries and state ownership.
+4. Review OTP lowering.
+5. Review tests, operations, and release risks.
+6. Revise or reject.
+7. Implement only approved scope.
+8. Verify.
+9. Accept or send back to redesign.
+```
+
+Review is not a final ceremony. It is a development tool. If a late implementation detail invalidates the architecture, the feature returns to the design stage and records an amendment.
+
+## Critical Reflection Stages
+
+### Concept Reflection
+
+Ask:
+
+- Are two names describing the same thing?
+- Is a manager, coordinator, or service hiding a missing domain concept?
+- Is a technical implementation detail being promoted to the domain language?
+- Can this design be explained in fewer concepts?
+
+Output:
+
+```yaml
+concept_review:
+  accepted_terms:
+    - Order
+    - PaymentAuthorization
+  suspicious_terms:
+    - OrderManager
+  required_changes:
+    - Collapse OrderManager into Orders context API plus Order domain module.
+```
+
+### Boundary Reflection
+
+Ask:
+
+- What crosses each boundary?
+- Is the payload stable and versioned?
+- Does the caller depend on an internal module?
+- Could this boundary survive extraction into another application or service?
+
+### Runtime Reflection
+
+Ask:
+
+- Why is this a process?
+- Why is it supervised here?
+- What state is lost on crash?
+- What rebuilds the state?
+- What prevents mailbox growth?
+- What is the shutdown behavior?
+
+### Compression Reflection
+
+Ask:
+
+- Which module can be deleted?
+- Which behavior has only one implementation?
+- Which wrapper only renames another API?
+- Which process can be replaced with a pure function?
+- Which read model can be derived instead of stored?
+
+Compression review is mandatory before implementation for greenfield features and mandatory before large refactors in brownfield work.
+
+## Human, Tool, And LM Responsibilities
+
+### Human Review
+
+Humans own:
+
+- Product tradeoffs.
+- Domain language.
+- Risk acceptance.
+- Security exceptions.
+- Release approval.
+- Final architecture decisions.
+
+### Deterministic Tooling
+
+Tools own:
+
+- Formatting.
+- Compilation.
+- Tests.
+- Static checks.
+- Dependency audits.
+- Boundary graph checks where available.
+- Public API diffs.
+- Migration safety checks.
+
+### LM-Assisted Critique
+
+Language models may help with:
+
+- Finding ambiguous concepts.
+- Suggesting missing tests.
+- Critiquing runtime design.
+- Proposing compression.
+- Explaining failures.
+
+Language models are not final authority for:
+
+- Test status.
+- Compile status.
+- Whether a file exists.
+- Whether a public function changed.
+- Whether a secret leaked.
+- Whether a process is supervised.
+
+Repeated LM findings should become deterministic checks when possible.
+
+## Refactor, Rebuild, Or Continue
+
+Use this decision table:
+
+| Signal | Action |
+|---|---|
+| Concept names unclear but behavior is sound | Refactor names and docs. |
+| Boundary leakage is local | Refactor behind a stable facade. |
+| Process owns state that belongs in database | Rebuild that process around persisted state. |
+| GenServer serializes unrelated work | Split or remove the process. |
+| External effect can be duplicated | Add idempotency/outbox before feature growth. |
+| Existing module blocks core invariants | Rebuild the module behind compatibility wrapper. |
+| Tests cannot observe required behavior | Redesign the public contract or instrumentation. |
+
+## Stop Conditions
+
+Do not proceed to implementation when:
+
+- The domain vocabulary is unstable.
+- The consistency boundary is unknown.
+- The feature requires a process but state recovery is undefined.
+- External effects have no idempotency plan.
+- A migration can lock or corrupt production data.
+- There is no way to test the failure mode that matters.
+- A security exception has no owner or expiration.
+
+## Required Records
+
+Each feature should leave:
+
+```text
+docs/features/<feature>/
+  00_charter.md
+  01_domain_and_boundaries.md
+  02_state_effects_and_consistency.md
+  03_otp_lowering.md
+  04_test_and_qc_plan.md
+  05_review_findings.md
+  06_acceptance_evidence.md
+```
+
+Small features may combine files, but they may not omit the content.
+

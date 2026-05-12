@@ -1,0 +1,256 @@
+# Testing, Verification, And Model Checking
+
+## Purpose
+
+This document defines the verification strategy for large Elixir/OTP systems, from pure unit tests to distributed failure testing.
+
+## Testing Rule
+
+```text
+Test the pure core without processes.
+Test the process through its public API.
+Test effects at the boundary.
+Test failure modes explicitly.
+```
+
+## Test Layers
+
+| Layer | Purpose |
+|---|---|
+| Unit tests | Pure functions, constructors, validators, transitions. |
+| Boundary tests | DTO parsing, changesets, adapter mapping. |
+| Integration tests | Repo transactions, constraints, context APIs. |
+| Process tests | GenServer/Agent/Task lifecycle through public API. |
+| Supervision tests | Crash, restart, state recovery, shutdown. |
+| Contract tests | Behaviors, external providers, payload compatibility. |
+| Property tests | Invariants over generated inputs. |
+| State-machine tests | Long-running lifecycle transitions. |
+| Concurrency tests | Race and interleaving risk. |
+| Distributed tests | Multi-node behavior and rolling compatibility. |
+| Chaos tests | Network or dependency failure. |
+| Release tests | Config, migration, boot, shutdown, rollback. |
+
+## Pure Core Tests
+
+Pure tests should cover:
+
+- Constructor validity.
+- Invalid data rejection.
+- Allowed transitions.
+- Forbidden transitions.
+- Event emission.
+- Algebraic properties.
+- Idempotency.
+
+They should not require:
+
+- Repo.
+- Supervision tree.
+- HTTP.
+- Real time.
+- Global config.
+
+## Boundary Tests
+
+Boundary tests cover:
+
+- External input shape.
+- Unknown fields.
+- Type conversion.
+- Atom safety.
+- Error messages.
+- Provider payload mapping.
+- Redaction.
+
+## Persistence Tests
+
+Persistence tests cover:
+
+- Database constraints.
+- Transaction rollback.
+- `Ecto.Multi` step failure.
+- Race-sensitive constraints.
+- Idempotency keys.
+- Migration assumptions.
+
+Include tests that prove validations are not the only line of defense for concurrent invariants.
+
+## Process Tests
+
+Test process behavior through public API:
+
+- Start.
+- Normal call.
+- Expected error.
+- Timeout.
+- Crash and restart.
+- State recovery.
+- Duplicate message.
+- Unknown message.
+- Shutdown.
+
+Avoid:
+
+- Reaching into process internals.
+- Testing implementation message tuples from outside.
+- `Process.sleep/1` as synchronization.
+
+Prefer:
+
+- Monitors.
+- Test probes.
+- Telemetry events.
+- Eventually helpers with bounded timeout.
+- Controlled clocks.
+
+## Supervision Tests
+
+Test:
+
+- Child restarts after crash.
+- State is rebuilt or intentionally lost.
+- Supervisor strategy behaves as expected.
+- `:rest_for_one` dependencies restart together.
+- Shutdown order is safe.
+- Permanent/transient/temporary policies are correct.
+
+## Contract Tests
+
+For behavior adapters:
+
+- Run the same contract suite against fake and real adapter when practical.
+- Verify error normalization.
+- Verify timeout semantics.
+- Verify telemetry.
+
+For external APIs:
+
+- Use recorded fixtures where appropriate.
+- Validate schema.
+- Validate semantic expectations.
+- Include compatibility tests for old payloads.
+
+## Property-Based Testing
+
+Use property tests when:
+
+- Input space is large.
+- Invariants are simple to state.
+- Edge cases are easy to miss.
+
+Good properties:
+
+- Money operations never produce negative amounts unless allowed.
+- Encoders/decoders round trip.
+- Commands are idempotent.
+- Sorting/ranking is stable under ties.
+- State transitions never enter forbidden state.
+
+## Stateful Property Testing
+
+Use state-machine property tests for:
+
+- Workflow engines.
+- Caches.
+- Lock managers.
+- Rate limiters.
+- Session state.
+- Distributed registries.
+
+Model:
+
+- Abstract state.
+- Generated commands.
+- Preconditions.
+- Next-state function.
+- Postconditions.
+
+## Model Checking
+
+Use model checking or schedule exploration when:
+
+- Race condition would be severe.
+- Interleavings are hard to cover randomly.
+- Process messaging logic is central.
+- Shared ETS or registry logic is complex.
+
+Keep scenarios small and terminating. Stub external dependencies.
+
+## Trace-Based Verification
+
+Use trace-based verification when:
+
+- System is eventually consistent.
+- State is distributed.
+- Direct assertions are flaky.
+- Temporal order matters.
+
+Pattern:
+
+1. Emit structured trace events.
+2. Run scenario.
+3. Verify trace history with pure assertions.
+
+Example assertion:
+
+```text
+If job_started occurs, then job_finished or job_dead occurs with the same job_id.
+No provider_success occurs before authorization_granted.
+```
+
+## Chaos Testing
+
+Inject:
+
+- Network latency.
+- Network partition.
+- External timeout.
+- Provider 5xx.
+- Database disconnect.
+- Node crash.
+- Worker crash.
+- Duplicate delivery.
+
+Chaos tests need clear expected behavior:
+
+- Retry.
+- Fail closed.
+- Park for operator.
+- Compensate.
+- Degrade feature.
+
+## Release Tests
+
+Before release:
+
+- Boot release artifact.
+- Verify runtime config.
+- Run migrations in staging-like environment.
+- Test graceful shutdown.
+- Test old payload decoding.
+- Test mixed-version cluster for protocol changes.
+- Test rollback or forward-fix.
+
+## Coverage Matrix
+
+Each feature should declare:
+
+| Risk | Required Test |
+|---|---|
+| Business invariant | Pure unit or property test. |
+| Race-sensitive invariant | Constraint/transaction test. |
+| Process state | Process restart test. |
+| External effect | Adapter contract and idempotency test. |
+| Workflow | State-machine transition test. |
+| Distributed payload | Compatibility test. |
+| Security boundary | Rejection and redaction test. |
+
+## Review Checklist
+
+- [ ] Pure core has direct tests.
+- [ ] Processes are tested through public API.
+- [ ] Failure modes are tested, not only happy paths.
+- [ ] Race-sensitive rules are tested at authoritative layer.
+- [ ] External contracts and old payloads are tested.
+- [ ] Release risks have release-level tests.
+
