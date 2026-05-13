@@ -231,15 +231,8 @@ fast_track:
   feature:
   scope:
   why_low_risk:
-  existing_boundaries_used:
-  new_runtime_ownership: false
-  new_external_effect: false
-  public_api_change: false
-  migration_risk: false
-  security_or_tenant_change: false
   tests:
   qc_gates:
-  reviewer:
 ```
 
 ## LiveView Design Template
@@ -269,6 +262,12 @@ live_view:
     - name:
       cancellation_ok:
       failure_ui:
+  eventual_consistency:
+    pending_states:
+    completion_topics:
+    correlation_id:
+    requery_source:
+    failure_ui:
   tests:
 ```
 

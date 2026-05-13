@@ -92,6 +92,65 @@ Inject dependencies when they affect testability or determinism:
 
 Do not over-abstract every module. Prefer explicit parameters for simple cases and behaviors for real external seams.
 
+## Testing Effect Shells With Behaviours
+
+Effect shells orchestrate Repo, external clients, jobs, PubSub, clocks, IDs, and telemetry. Test them by keeping the hard-to-control effects behind explicit behaviours or dependency structs.
+
+Use behaviours for:
+
+- External HTTP/SDK clients.
+- Payment/email/storage providers.
+- Job enqueue adapters when enqueue behavior is part of the contract.
+- PubSub publisher adapters when topic/payload compatibility matters.
+- Clocks, ID generation, and policy evaluators when deterministic tests need control.
+
+Avoid behaviours for:
+
+- Pure modules with no external effect.
+- A single internal function that is easy to call directly.
+- Repo operations where real SQL Sandbox integration tests prove the behavior better.
+
+Mox-compatible pattern:
+
+```elixir
+defmodule MyApp.Payments.Provider do
+  @callback authorize(map(), keyword()) ::
+              {:ok, map()} | {:error, term()}
+end
+
+defmodule MyApp.Billing do
+  def capture(command, deps \\ default_deps()) do
+    with {:ok, authorization} <- deps.payment_provider.authorize(command.provider_request, timeout: deps.timeout) do
+      persist_authorization(command, authorization, deps.repo)
+    end
+  end
+
+  defp default_deps do
+    %{
+      repo: MyApp.Repo,
+      payment_provider: MyApp.Payments.StripeProvider,
+      timeout: 5_000
+    }
+  end
+end
+```
+
+Test strategy:
+
+- Use SQL Sandbox for Repo behavior.
+- Use Mox or explicit fake modules for external clients.
+- Verify expected external calls and error mapping.
+- Test timeout, retry, idempotency, and telemetry paths.
+- Avoid global mutable mocks in async tests.
+- Pass dependencies explicitly when a test needs different behavior.
+
+Concurrency rule:
+
+```text
+Mocks must be process-aware or explicitly allowed for spawned tasks/processes.
+If an effect shell starts supervised work, the test must arrange dependency access for that process or assert through durable effects instead.
+```
+
 ## Error Semantics
 
 ### Expected Business Failures

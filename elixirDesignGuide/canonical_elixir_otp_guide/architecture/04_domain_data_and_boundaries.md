@@ -15,6 +15,35 @@ API DTOs express external contracts.
 
 These shapes may overlap, but they are not automatically the same thing.
 
+## Progressive Separation
+
+Do not create a DTO, domain struct, Ecto schema, read model, and mapper for every small feature by default.
+
+The simple Phoenix shape is acceptable:
+
+```text
+Context public function -> Ecto changeset/schema -> Repo
+```
+
+Use it when:
+
+- The external input, persisted data, and returned result are intentionally the same shape.
+- The behavior is simple CRUD plus validations/constraints.
+- There is no workflow, external provider payload, or long-lived runtime state.
+- The public API is internal and easy to change.
+
+Split the shape when divergence appears:
+
+| Divergence | Add |
+|---|---|
+| Web/API params differ from persistence. | DTO or embedded schema. |
+| Business rules become pure transitions. | Domain struct/module. |
+| Reads need denormalized or stale-tolerant shape. | Read model/projection. |
+| Provider payload differs from internal language. | Adapter request/response structs. |
+| Persistence storage is an implementation detail. | Mapper/translator module. |
+
+The review question is not "did we create all layers?" It is "are the shapes still honestly the same?"
+
 ## Data Categories
 
 ### Value Object
@@ -233,6 +262,47 @@ lib/my_app/
 
 `MyApp.Orders` is the public context API and may orchestrate effects. `MyApp.Orders.Order` should be pure unless there is an explicit exception.
 
+## Mapping Without Boilerplate Sprawl
+
+Mapping belongs at boundaries. Prefer small, explicit translator modules over reflection-style mappers.
+
+Example:
+
+```elixir
+defmodule MyApp.Orders.OrderMapper do
+  alias MyApp.Orders.Order
+  alias MyApp.Orders.Schemas.OrderSchema
+
+  def to_domain(%OrderSchema{} = schema) do
+    %Order{
+      id: schema.id,
+      customer_id: schema.customer_id,
+      status: schema.status,
+      total_cents: schema.total_cents
+    }
+  end
+
+  def to_insert_attrs(%Order{} = order) do
+    %{
+      id: order.id,
+      customer_id: order.customer_id,
+      status: order.status,
+      total_cents: order.total_cents
+    }
+  end
+end
+```
+
+Rules:
+
+- Map only at boundary crossings, not between every function.
+- Keep field renames explicit.
+- Let domain constructors validate domain meaning before persistence mapping.
+- Use `embedded_schema` for input DTOs when changeset casting/validation is useful without a table.
+- Avoid generic mappers that silently copy fields across security or compatibility boundaries.
+
+If mapping grows large, that is design feedback. The shapes may be too different to share a single context function, or the feature may need a dedicated adapter/read model.
+
 ## Public API Budget
 
 Every public function should answer:
@@ -319,6 +389,7 @@ Repair:
 ## Review Checklist
 
 - [ ] Every data shape is classified.
+- [ ] Simple schema-as-domain usage is either still honest or has explicit fracture triggers recorded.
 - [ ] Every boundary edge is declared.
 - [ ] External payloads are translated at boundaries.
 - [ ] Race-sensitive invariants have authoritative enforcement.

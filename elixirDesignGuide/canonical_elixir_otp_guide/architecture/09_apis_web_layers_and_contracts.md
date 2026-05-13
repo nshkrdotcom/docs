@@ -141,6 +141,56 @@ Use context APIs, jobs, or supervised workers instead when:
 - Work must retry durably.
 - Work is shared by many users.
 
+### Eventual Consistency In The UI
+
+When a LiveView command delegates to a durable job or outbox path, the UI needs an explicit coordination contract.
+
+Pattern:
+
+```text
+1. User submits command.
+2. LiveView calls context API.
+3. Context writes durable state/job/outbox and returns command_id or resource_id.
+4. LiveView assigns pending state keyed by command_id/resource_id.
+5. Worker completes effect and publishes scoped notification.
+6. LiveView receives notification, re-queries authoritative state, clears pending state.
+```
+
+Use optimistic UI only when:
+
+- The optimistic state is reversible.
+- Failure can be shown clearly.
+- The user cannot observe a false durable fact as confirmed.
+- Duplicate completion messages are harmless.
+
+Use pending UI when:
+
+- External provider confirmation matters.
+- Payment, email, webhook, or workflow completion may fail.
+- Authorization or state can change after submission.
+
+Pending-state assign example:
+
+```elixir
+socket
+|> assign(:pending_commands, Map.put(socket.assigns.pending_commands, command_id, :payment_capture))
+```
+
+Completion message rules:
+
+- Include tenant/resource scope.
+- Include correlation or command ID.
+- Include payload version when durable or cross-node.
+- Prefer compact event payload plus re-query over large state payload.
+- Treat duplicate or stale completion as normal.
+
+Avoid:
+
+- Clearing pending state based only on job enqueue success.
+- Broadcasting provider secrets or raw response payloads.
+- Blocking the LiveView process while waiting for durable job completion.
+- Assuming PubSub delivery is guaranteed.
+
 ### LiveView Tests
 
 LiveView tests should cover:
@@ -150,6 +200,9 @@ LiveView tests should cover:
 - PubSub notification handling.
 - Reconnect or remount recovery when state matters.
 - Async loading success and failure.
+- Pending state for durable jobs/outbox effects.
+- PubSub completion and failure notifications.
+- Duplicate or stale completion messages.
 - Large-list rendering through streams or pagination.
 
 ## DTOs And Input Validation

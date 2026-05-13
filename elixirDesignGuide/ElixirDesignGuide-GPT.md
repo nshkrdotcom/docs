@@ -57,6 +57,30 @@ Frameworks such as Ash can encode parts of this architecture through resources, 
 
 ---
 
+## Mapping when shapes diverge
+
+Use explicit translator modules at boundaries instead of generic field-copying mappers:
+
+```elixir
+defmodule MyApp.Orders.OrderMapper do
+  def to_domain(%MyApp.Orders.Schemas.Order{} = schema) do
+    %MyApp.Orders.Order{
+      id: schema.id,
+      customer_id: schema.customer_id,
+      status: schema.status
+    }
+  end
+
+  def to_insert_attrs(%MyApp.Orders.Order{} = order) do
+    %{id: order.id, customer_id: order.customer_id, status: order.status}
+  end
+end
+```
+
+Map only at boundary crossings. Repetitive or lossy mapping is design feedback that the boundary needs a clearer contract.
+
+---
+
 ## Separate read models from write models
 
 Complex systems often become painful because one schema is forced to serve all purposes: API input, database persistence, UI form state, domain logic, and reporting. Prefer separate models when the shape differs.
@@ -770,6 +794,8 @@ LiveComponents run in the parent LiveView process, while nested LiveViews start 
 
 Use LiveView async helpers for bounded work that should stop when the LiveView exits; use jobs or context services when work must continue after navigation. ([Hexdocs][21])
 
+For eventual consistency, return a command or resource ID from the context API, assign a pending state in the LiveView, let the worker/outbox broadcast a scoped completion or failure notification, then re-query authoritative state before showing confirmed completion. Job enqueue is not the same thing as external effect completion.
+
 ---
 
 # 9. Jobs, ingestion, and external effects
@@ -801,7 +827,6 @@ Fast-track evidence is still required:
 fast_track:
   scope:
   why_low_risk:
-  changed_contracts: none
   tests:
   qc_gates:
 ```
@@ -1041,6 +1066,7 @@ A complex Elixir/OTP application is well-designed when these are true:
 * Mailbox growth, restarts, memory, and latency are observable.
 * Crash/restart paths are tested.
 * SQL Sandbox or equivalent real database tests cover Repo behavior where practical. ([Hexdocs][26])
+* Mox or equivalent process-aware mocks cover external behaviours, while Repo behavior is tested against the database. ([Hexdocs][28])
 * Shutdown is graceful.
 * Backpressure exists where load can exceed capacity.
 * No important work disappears silently.
@@ -1065,6 +1091,8 @@ Design in this order:
 ```
 
 The strongest Elixir systems are not “all OTP everywhere.” They are mostly pure, explicit data transformations, with OTP used precisely where the system needs durable runtime structure.
+
+Progressive architecture matters: a simple Phoenix context and Ecto schema may be enough while input, domain, persistence, and read shapes are honestly identical. Split into DTOs, pure domain structs, read models, and mappers when shapes diverge, invariants outgrow changesets, state machines emerge, or tests for business rules require database setup only because no pure core exists.
 
 [1]: https://www.erlang.org/doc/system/design_principles.html "Overview — Erlang System Documentation v28.5"
 [2]: https://hexdocs.pm/elixir/Application.html "Application — Elixir v1.19.5"
@@ -1093,3 +1121,4 @@ The strongest Elixir systems are not “all OTP everywhere.” They are mostly p
 [25]: https://hexdocs.pm/gen_stage/GenStage.html "GenStage — gen_stage"
 [26]: https://hexdocs.pm/ecto_sql/Ecto.Adapters.SQL.Sandbox.html "Ecto.Adapters.SQL.Sandbox — Ecto SQL"
 [27]: https://ash-project.github.io/ash/what-is-ash.html "What is Ash?"
+[28]: https://hexdocs.pm/mox/Mox.html "Mox — Mox"

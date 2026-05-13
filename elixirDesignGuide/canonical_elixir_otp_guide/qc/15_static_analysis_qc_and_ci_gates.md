@@ -142,6 +142,49 @@ Tools may include:
 - Dependency graph scripts.
 - Public API export diffs.
 
+Example boundary configuration shape:
+
+```elixir
+defmodule MyApp.Orders do
+  use Boundary,
+    deps: [
+      MyApp.Orders.Domain,
+      MyApp.Orders.Schemas,
+      MyApp.Repo
+    ],
+    exports: [Orders]
+end
+
+defmodule MyApp.Orders.Domain do
+  use Boundary, deps: [], exports: [Order, Money]
+end
+```
+
+The exact configuration should match the project, but the rule is stable: domain/core packages have no dependency on Repo, web, provider SDKs, or runtime process APIs.
+
+Example custom-check targets:
+
+```elixir
+# .credo.exs sketch
+%{
+  configs: [
+    %{
+      name: "default",
+      checks: [
+        {Credo.Check.Warning.ApplicationConfigInModuleAttribute, []},
+        {MyApp.Credo.NoStringToAtom, paths: ["lib"]},
+        {MyApp.Credo.NoMixEnvInLib, paths: ["lib"]},
+        {MyApp.Credo.NoRepoInDomain, paths: ["lib/my_app/*/domain"]},
+        {MyApp.Credo.NoSpawnInLib, paths: ["lib"]},
+        {MyApp.Credo.NoPersistentTermHotWrite, paths: ["lib"]}
+      ]
+    }
+  ]
+}
+```
+
+Treat snippets as examples, not portable copy/paste. The important part is promoting repeated review findings into deterministic checks.
+
 ## OTP Checks
 
 Flag:
@@ -292,6 +335,7 @@ Do not use LM as authority for:
 
 - [ ] Required gates are declared.
 - [ ] Boundary and OTP checks cover local anti-patterns.
+- [ ] Boundary enforcement uses deterministic tooling where practical, not only PR vigilance.
 - [ ] LiveView/PubSub, ingestion, and advanced primitive checks cover local anti-patterns.
 - [ ] Exceptions have owner and expiration.
 - [ ] CI profiles distinguish local, PR, release, and architecture gates.

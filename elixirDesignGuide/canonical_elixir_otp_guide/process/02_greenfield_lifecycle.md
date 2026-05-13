@@ -85,6 +85,22 @@ Gate:
 No single schema may silently serve as API input, persistence record, domain aggregate, and read model unless the shapes are intentionally identical.
 ```
 
+Progressive rule:
+
+```text
+Schema-as-domain is allowed only while the shapes are intentionally identical and the invariants remain simple.
+The first divergence must create an explicit boundary shape instead of adding more conditional behavior to the schema.
+```
+
+Fracture triggers:
+
+- API payload differs from database fields.
+- UI form state differs from write model.
+- External provider terms leak into internal names.
+- State transitions become central to correctness.
+- Reporting queries force write-schema compromises.
+- Tests for business rules require database setup only because the logic has nowhere pure to live.
+
 ## Stage 4: Capabilities And Contracts
 
 Define what the system can do as contracts, not modules.

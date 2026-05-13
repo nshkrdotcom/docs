@@ -159,6 +159,9 @@ For behavior adapters:
 - Verify error normalization.
 - Verify timeout semantics.
 - Verify telemetry.
+- Use Mox or an equivalent process-aware mock for external behaviours in async tests.
+- Pass explicit dependency modules/structs into effect shells when the test needs a fake.
+- Prefer real SQL Sandbox tests over Repo mocks for persistence behavior.
 
 For external APIs:
 
@@ -166,6 +169,25 @@ For external APIs:
 - Validate schema.
 - Validate semantic expectations.
 - Include compatibility tests for old payloads.
+
+## Effect Shell Tests
+
+Effect-shell tests cover orchestration across boundaries:
+
+- Domain transition called with normalized input.
+- Repo transaction success and rollback.
+- External client success/failure/timeout mapping.
+- Job/outbox enqueue behavior.
+- PubSub topic and payload shape where observable.
+- Telemetry emission.
+- Idempotency on duplicate commands or retries.
+
+Rules:
+
+- Mock only the external seam, not the business rule.
+- Keep Mox expectations local to the test process or explicitly allow spawned processes.
+- Use test probes, durable rows, or telemetry when spawned process behavior is hard to observe directly.
+- Do not hide race-sensitive behavior behind a fake when the database or source system is the authority.
 
 ## Property-Based Testing
 

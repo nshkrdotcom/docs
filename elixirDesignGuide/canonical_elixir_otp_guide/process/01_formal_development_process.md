@@ -177,13 +177,46 @@ Fast-track evidence:
 fast_track:
   scope:
   why_low_risk:
-  changed_contracts: none | listed
   tests:
   qc_gates:
-  reviewer:
 ```
 
 If any reviewer cannot explain why the work is low risk, promote it to L1 or higher. Fast track reduces ceremony; it does not remove tests, ownership, or accountability.
+
+## Progressive Architecture
+
+Start with the simplest shape that preserves the current invariants. Do not split DTOs, domain structs, read models, and schemas just to satisfy a diagram.
+
+Allowed simple shape:
+
+```text
+Phoenix context API
+  -> Ecto schema/changeset
+  -> Repo transaction
+```
+
+This is acceptable when:
+
+- The API/input shape, persistence shape, and domain shape are intentionally identical.
+- Business rules are simple validations and constraints.
+- There is no long-running workflow or explicit state machine.
+- External effects are absent or already routed through an existing outbox/job path.
+- There is no public external payload compatibility obligation.
+
+Fracture the simple shape into explicit DTO/domain/schema/read-model layers when one of these triggers appears:
+
+| Trigger | Split Needed |
+|---|---|
+| External API or provider payload differs from persistence shape. | DTO or adapter payload module. |
+| Domain invariant no longer fits cleanly in a changeset. | Pure domain struct/transition module. |
+| Race-sensitive rule needs transaction/lock/idempotency beyond validation. | Application service plus persistence contract. |
+| Lifecycle has more than trivial states or forbidden transitions. | State machine/domain transition module. |
+| Read/query shape diverges from write shape. | Read model/projection. |
+| Multiple contexts need the same concept with different meanings. | Bounded context language and boundary graph. |
+| Tests require booting Repo or LiveView to prove pure business rules. | Extract pure core. |
+| Mapping code becomes repetitive or error-prone. | Dedicated mapper/translator module at the boundary. |
+
+Progressive architecture is not permission to let boundaries decay. It is a rule for delaying separation until the design pressure is real and named.
 
 ## Iterative Review Loop
 

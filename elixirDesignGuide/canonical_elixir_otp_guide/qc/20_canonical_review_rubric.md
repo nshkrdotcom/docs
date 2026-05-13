@@ -74,6 +74,7 @@ Blockers:
 - PubSub is used as durable delivery for business events.
 - Tenantless topic or payload leaks cross tenant/security boundaries.
 - High-fanout broadcast has no payload budget, recovery path, or overload plan.
+- UI presents job enqueue as completed external effect.
 
 Review:
 
@@ -81,6 +82,7 @@ Review:
 - LiveViews delegate writes through context APIs.
 - PubSub messages are small, scoped, versioned where needed, and treated as notifications.
 - Async work is bounded and correct to cancel when the user leaves.
+- Durable work has pending/confirmed/failed UI states and a re-query path.
 - LiveComponents are not mistaken for separate processes.
 
 ## Persistence And Effects

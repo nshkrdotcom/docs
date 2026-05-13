@@ -328,6 +328,48 @@ QC:
 - No large or secret PubSub payloads.
 - High fanout has telemetry and overload plan.
 
+## Playbook 9A: LiveView Eventual-Consistency UX
+
+Use when:
+
+- A LiveView command enqueues durable work.
+- External provider confirmation is not immediate.
+- The UI must show pending, optimistic, failed, or completed state.
+
+Design:
+
+- Context API returns `command_id`, `job_id`, or `resource_id`.
+- LiveView stores pending state keyed by that ID.
+- Worker/outbox broadcasts scoped completion/failure notification.
+- LiveView re-queries authoritative state after notification.
+- Failure path exposes retry, cancel, or operator escalation.
+- Duplicate/stale notifications are harmless.
+
+State options:
+
+| UX State | Use When |
+|---|---|
+| Pending | External confirmation matters. |
+| Optimistic | Local reversal is easy and failure is rare/clear. |
+| Confirmed | Authoritative state has been reloaded. |
+| Failed | Worker/provider produced terminal failure. |
+| Unknown | PubSub missed; LiveView should re-query or show refresh/retry. |
+
+Tests:
+
+- Submit command and show pending state.
+- Worker completion notification clears pending after re-query.
+- Worker failure notification shows actionable failure state.
+- Duplicate notification is harmless.
+- Missed notification recovers on reconnect or refresh.
+
+QC:
+
+- Job enqueue success is not presented as external completion.
+- PubSub notification is scoped and compact.
+- Pending state is not durable authority.
+- UI state can recover after LiveView crash or reconnect.
+
 ## Playbook 10: Broadway / Data Ingestion Feature
 
 Use when:
