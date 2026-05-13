@@ -31,12 +31,12 @@ $$
 
 where:
 
-- $owner_k$ is the actor controlling or expected to control the record;
-- $duty_k \in [0,1]$ estimates whether the record should exist under normal procedure, law, policy, practice, or instrumentation;
-- $expected_k \in [0,1]$ estimates expected observability;
-- $access_k \in \{\texttt{available}, \texttt{inaccessible}, \texttt{sealed}, \texttt{withheld}, \texttt{destroyed}, \texttt{not\textunderscore{}generated}, \texttt{unknown}\}$;
-- $production_k$ describes whether the record was produced, requested, refused, partially produced, contradicted, or unavailable;
-- $q_k$ is confidence in the access-state classification.
+- `owner_k` is the actor controlling or expected to control the record;
+- `duty_k in [0,1]` estimates whether the record should exist under normal procedure, law, policy, practice, or instrumentation;
+- `expected_k in [0,1]` estimates expected observability;
+- `access_k` is one of `available`, `inaccessible`, `sealed`, `withheld`, `destroyed`, `not_generated`, or `unknown`;
+- `production_k` describes whether the record was produced, requested, refused, partially produced, contradicted, or unavailable;
+- `q_k` is confidence in the access-state classification.
 
 The record-access state set is $A = \{r_1,\dots,r_m\}$.
 
@@ -67,18 +67,19 @@ $$
 c_j = (p_j, a_j, \rho_j, \kappa_j, \sigma_j)
 $$
 
-where $p_j$ is a proposition, $a_j$ is a canonical argument frame, $\rho_j$ is a reference set, $\kappa_j$ is a record-contingency set, and $\sigma_j$ is a status in:
+where `p_j` is a proposition, `a_j` is a canonical argument frame, `rho_j` is a reference set, `kappa_j` is a record-contingency set, and `sigma_j` is a status in:
 
-$$
-\{\texttt{proven},\texttt{probable},\texttt{plausible},\texttt{record\textunderscore{}contingent},\texttt{conflicted},\texttt{unsupported},\texttt{rejected}\}.
-$$
+`proven`, `probable`, `plausible`, `record_contingent`, `conflicted`,
+`unsupported`, or `rejected`.
 
 ### Relations
 
-Relations among claims are typed:
+Let relation labels be `supports`, `refutes`, `implies`, `specializes`,
+`generalizes`, `qualifies`, `depends_on`, and `independent`. Relations among
+claims are typed:
 
 $$
-R \subseteq C \times \{\texttt{supports}, \texttt{refutes}, \texttt{implies}, \texttt{specializes}, \texttt{generalizes}, \texttt{qualifies}, \texttt{depends\textunderscore{}on}, \texttt{independent}\} \times C.
+R \subseteq C \times \mathcal{R} \times C.
 $$
 
 ### Rules
