@@ -199,6 +199,7 @@ finding:
 acceptance:
   feature:
   owner:
+  review_tier:
   design_docs:
   implementation_refs:
   gates:
@@ -213,10 +214,125 @@ acceptance:
   public_api_changes:
   migrations:
   effects:
+  liveview_pubsub:
+  ingestion_pipelines:
+  advanced_primitives:
+  framework_mapping:
   telemetry:
   exceptions:
   decision:
   reviewer:
+```
+
+## Fast Track Template
+
+```yaml
+fast_track:
+  feature:
+  scope:
+  why_low_risk:
+  existing_boundaries_used:
+  new_runtime_ownership: false
+  new_external_effect: false
+  public_api_change: false
+  migration_risk: false
+  security_or_tenant_change: false
+  tests:
+  qc_gates:
+  reviewer:
+```
+
+## LiveView Design Template
+
+```yaml
+live_view:
+  module:
+  route_or_mount:
+  context_apis:
+  assigns:
+    - name:
+      type: presentation | derived | async_result | stream | durable_reference
+      recovery:
+  events:
+    - name:
+      context_call:
+      expected_errors:
+  pubsub:
+    topics:
+      - topic_shape:
+        tenant_scope:
+        payload:
+        versioned:
+        missed_message_recovery:
+        fanout_estimate:
+  async_work:
+    - name:
+      cancellation_ok:
+      failure_ui:
+  tests:
+```
+
+## Ingestion Pipeline Template
+
+```yaml
+ingestion_pipeline:
+  name:
+  source:
+  producer:
+  delivery_guarantee:
+  message_schema:
+  payload_version:
+  processor_concurrency:
+  batch_size:
+  batch_timeout:
+  partitioning:
+  idempotency:
+  ack_policy:
+  retry_policy:
+  poison_message_policy:
+  dead_letter:
+    destination:
+    owner:
+    alert:
+    replay:
+    retention:
+  shutdown:
+  telemetry:
+  tests:
+```
+
+## Advanced Primitive Template
+
+```yaml
+advanced_primitive:
+  name:
+  primitive: ets | persistent_term | atomics | counters
+  owner_module:
+  reason:
+  read_pattern:
+  write_pattern:
+  update_frequency:
+  state_authority: cache | derived | local_metric | durable_fact
+  restart_or_loss_behavior:
+  observability:
+  tests:
+```
+
+## Ash Mapping Template
+
+```yaml
+ash_mapping:
+  domain:
+  resources:
+    - resource:
+      guide_concept:
+      public_actions:
+      policies:
+      data_layer:
+      generated_interfaces:
+      effects:
+      transaction_notes:
+      tests:
 ```
 
 ## Exception Waiver Template
@@ -255,4 +371,3 @@ Proposed | Accepted | Superseded
 
 ## Review Date
 ```
-

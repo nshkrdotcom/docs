@@ -75,6 +75,43 @@ Persistence tests cover:
 
 Include tests that prove validations are not the only line of defense for concurrent invariants.
 
+Use Ecto SQL Sandbox for normal Repo-backed tests when available. Database integration tests are often the right default for transactions, constraints, migrations, and context APIs. Do not mock the database when the behavior being tested is database behavior.
+
+Sandbox rules:
+
+- Use concurrent sandbox tests where the adapter supports them.
+- Use shared mode or explicit allowances when spawned processes need database access.
+- Keep pure domain tests separate so database setup does not hide business logic coupling.
+- Add explicit non-sandbox or staging tests for migration, lock, and production-shape data risks.
+- Be cautious with adapters whose transaction behavior does not support safe concurrent sandbox tests.
+
+## LiveView Tests
+
+LiveView tests cover:
+
+- `mount`, `handle_params`, and authorization behavior.
+- `handle_event` through rendered UI interactions.
+- PubSub `handle_info` messages through documented topics.
+- `assign_async`, `start_async`, and failure UI states.
+- Reconnect/remount recovery for user-visible state.
+- Streams, pagination, or temporary assigns for large collections.
+
+Do not assert internal socket state when public rendered behavior or telemetry can prove the same contract.
+
+## Ingestion Pipeline Tests
+
+Broadway or GenStage pipeline tests cover:
+
+- Message decoding and boundary validation.
+- Idempotent handling of duplicate messages.
+- Batch behavior.
+- Ack and failure paths.
+- Poison-message/dead-letter handling.
+- Partition or ordering behavior.
+- Graceful shutdown or replay assumptions.
+
+Use Broadway's test helpers where available, but keep domain decisions testable outside the pipeline callbacks.
+
 ## Process Tests
 
 Test process behavior through public API:
@@ -242,6 +279,8 @@ Each feature should declare:
 | Process state | Process restart test. |
 | External effect | Adapter contract and idempotency test. |
 | Workflow | State-machine transition test. |
+| LiveView state | Rendered interaction, PubSub, async, and reconnect test. |
+| Ingestion pipeline | Ack/failure/batch/replay test. |
 | Distributed payload | Compatibility test. |
 | Security boundary | Rejection and redaction test. |
 
@@ -251,6 +290,7 @@ Each feature should declare:
 - [ ] Processes are tested through public API.
 - [ ] Failure modes are tested, not only happy paths.
 - [ ] Race-sensitive rules are tested at authoritative layer.
+- [ ] Repo behavior is tested against the database with SQL Sandbox or an equivalent integration setup where practical.
+- [ ] LiveView and ingestion pipeline behavior are tested through public/runtime boundaries.
 - [ ] External contracts and old payloads are tested.
 - [ ] Release risks have release-level tests.
-

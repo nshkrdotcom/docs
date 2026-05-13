@@ -59,6 +59,8 @@ Rules:
 - Background jobs include tenant scope.
 - PubSub topics include tenant scope where needed.
 - Cache keys include tenant scope.
+- LiveView assigns do not contain secrets or cross-tenant data that can be exposed through debug/render paths.
+- Ash policies or equivalent authorization rules are reviewed when resource actions change.
 - Telemetry avoids leaking tenant-sensitive payloads.
 
 ## Unsafe Atoms
@@ -144,4 +146,3 @@ Test:
 - [ ] Unsafe atom, eval, shell, and deserialization paths are absent or waived.
 - [ ] Effects carry authorization/audit context.
 - [ ] Security tests cover failure and rejection paths.
-

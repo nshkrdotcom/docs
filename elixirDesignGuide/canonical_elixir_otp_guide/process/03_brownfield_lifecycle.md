@@ -58,16 +58,20 @@ Inventory these surfaces:
 - Supervisors and children.
 - GenServers, Agents, Tasks, DynamicSupervisors, Registries, ETS owners.
 - Public modules and public functions.
+- Phoenix LiveViews, LiveComponents, PubSub topics, and subscriptions.
+- Broadway/GenStage pipelines, producers, acknowledgements, and dead-letter paths.
+- Ash resources, actions, policies, generated interfaces, and data layers where used.
 - Ecto schemas, migrations, constraints, and repos.
 - External clients and SDKs.
 - Config and env access.
 - Secrets handling.
 - Background jobs.
+- `:persistent_term` keys, `:atomics`, and `:counters` owners.
 - Message/event formats.
 - Observability instrumentation.
 - CI commands and release scripts.
 
-Run the inventory through four explicit audit tracks:
+Run the inventory through explicit audit tracks:
 
 | Audit Track | Questions |
 |---|---|
@@ -75,6 +79,8 @@ Run the inventory through four explicit audit tracks:
 | Data audit | Which tables, schemas, constraints, migrations, read models, and repair scripts define durable truth? |
 | Boundary audit | Which public APIs are actually used, which internal modules leak, and where do external payloads enter? |
 | Dependency audit | Which Mix apps, libraries, external services, and optional providers are required for boot, tests, and release? |
+| Realtime audit | Which LiveViews subscribe to which topics, what payloads flow, and what happens on missed messages or fanout spikes? |
+| Ingestion audit | Which pipelines acknowledge, retry, batch, dead-letter, replay, and expose source lag? |
 
 Useful scans:
 
@@ -83,12 +89,17 @@ rg 'use GenServer|use Agent|DynamicSupervisor|Task.Supervisor|Task\\.start|Task\
 rg 'Application\\.get_env|System\\.get_env|Mix\\.env' lib config
 rg 'String\\.to_atom|binary_to_term|Code\\.eval|:os\\.cmd|System\\.cmd' lib test
 rg 'Repo\\.transaction|Ecto\\.Multi|unique_constraint|foreign_key_constraint' lib priv
+rg 'use Phoenix.LiveView|use Phoenix.LiveComponent|Phoenix.PubSub|subscribe\\(|broadcast\\(' lib test
+rg 'use Broadway|use GenStage|handle_message|handle_batch|ack|dead' lib test
+rg 'persistent_term|:counters|:atomics|:ets\\.new|:ets\\.insert' lib test
+rg 'use Ash.Resource|actions do|policies do|Ash\\.|AshPostgres' lib test
 ```
 
 Gate:
 
 ```text
 Every production-significant process is listed with owner, supervisor, state, and restart behavior.
+Every LiveView/PubSub, ingestion, advanced primitive, and Ash surface is listed with owner and contract.
 ```
 
 ## Phase 2: Risk Classification
@@ -116,6 +127,12 @@ Risk tags:
 - `duplicate_state_owner`
 - `missing_observability`
 - `contract_drift`
+- `liveview_state_authority`
+- `pubsub_fanout_risk`
+- `unsafe_ingestion_ack`
+- `poison_message_loop`
+- `advanced_primitive_misuse`
+- `ash_policy_drift`
 
 Gate:
 

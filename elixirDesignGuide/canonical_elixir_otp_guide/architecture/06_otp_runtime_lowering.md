@@ -30,6 +30,8 @@ If none exists, use a plain module.
 | Dynamic runtime children | `DynamicSupervisor` | Manual PID registry |
 | Dynamic process lookup | `Registry` | Dynamically generated atoms |
 | High-read shared table | ETS with supervised owner | GenServer bottleneck for every read |
+| Read-mostly global term | `:persistent_term` | ETS replacement for frequently updated data |
+| Hot shared counters | `:counters` or `:atomics` | GenServer counter bottleneck |
 | Durable background work | Oban or durable job system | In-memory task for must-run work |
 | Backpressured stream | GenStage/Broadway pattern | Unbounded casts |
 
@@ -161,6 +163,60 @@ Rules:
 - Recovery is defined.
 - ETS is not invisible domain authority unless durability is intentionally not required.
 
+## `:persistent_term`
+
+Use `:persistent_term` for values that are read extremely often and updated rarely or never:
+
+- Validated runtime configuration snapshot.
+- Dispatch table.
+- Feature matrix loaded at boot.
+- References to immutable resources or counter tables.
+
+Rules:
+
+- Treat it as an advanced VM primitive, not a cache default.
+- Keep the number of keys small.
+- Prefer a few larger terms over many small terms.
+- Use stable keys such as `{MyApp.Module, :config}`.
+- Do not update or erase large values during peak load.
+- Do not store tenant, request, session, or frequently changing feature state.
+- Document who may update it and how rollback works.
+
+Reason:
+
+```text
+Reads are optimized.
+Writes, replacements, and deletes can impose system-wide costs.
+```
+
+Use ETS, process state, database rows, or a config service when updates are frequent or per-tenant.
+
+## `:atomics` And `:counters`
+
+Use `:atomics` or `:counters` for hot, numeric, local-node counters when process serialization is too expensive:
+
+- Metrics counters.
+- High-frequency instrumentation.
+- Scheduler-sharded counters.
+- Approximate local rate counters where restart loss is acceptable.
+
+Choose conservatively:
+
+| Need | Primitive |
+|---|---|
+| Stronger ordered atomic integer operations | `:atomics` |
+| Counter arrays with simple add/sub/get operations | `:counters` |
+| Very high write concurrency where eventual read consistency is acceptable | `:counters` with `:write_concurrency` |
+
+Rules:
+
+- A supervised owner module creates and exposes the reference.
+- Define whether counter state may be lost on restart.
+- Do not use local counters as durable business facts.
+- Do not use approximate counters for billing, quotas, or security limits unless backed by authoritative storage.
+- Export safe read/reset APIs.
+- Include metrics for dropped/reset/reinitialized counters when loss matters.
+
 ## `:gen_statem`
 
 Use when state machine complexity dominates:
@@ -223,7 +279,7 @@ Document every raw message shape.
 ```yaml
 process:
   name:
-  primitive: GenServer | Agent | Task | DynamicSupervisor | Registry | ETS owner | gen_statem
+  primitive: GenServer | Agent | Task | DynamicSupervisor | Registry | ETS owner | persistent_term owner | counters owner | gen_statem | Broadway
   reason:
     - owns_runtime_state
     - serializes_resource
@@ -265,4 +321,3 @@ If the form cannot be completed, the process should probably not exist.
 - [ ] Each async path has capacity and failure semantics.
 - [ ] Each dynamic child has supervisor and identity.
 - [ ] Durable work is not implemented as in-memory fire-and-forget work.
-

@@ -50,6 +50,60 @@ Job rules:
 - Dead-letter or parked state has owner review and alerting.
 - Job can be canceled or superseded if required.
 
+## Data Ingestion Pipelines
+
+Use Broadway or a GenStage-based pipeline when:
+
+- Data arrives from Kafka, SQS, RabbitMQ, Google Pub/Sub, files, sockets, or another high-volume source.
+- Backpressure matters.
+- Work benefits from processor concurrency and batching.
+- Acknowledgement, retry, or dead-letter behavior is tied to the source.
+- Ordering or partitioning by key matters.
+
+Do not use ad hoc GenServers, unbounded casts, or `Task.async_stream` as the default ingestion architecture for sustained external streams.
+
+Broadway pipeline design must define:
+
+- Source and producer module.
+- Delivery guarantee from the source.
+- Ack semantics.
+- Batch size and batch timeout.
+- Processor concurrency.
+- Partitioning key and ordering requirements.
+- Idempotency key or dedupe strategy.
+- Poison-message handling.
+- Dead-letter or quarantine destination.
+- Replay strategy.
+- Shutdown and drain behavior.
+- Telemetry and backlog metrics.
+
+Decision table:
+
+| Need | Prefer |
+|---|---|
+| Must run one command later with retry | Oban or durable job. |
+| Deliver outbox effects after commit | Outbox worker or durable job. |
+| Consume a sustained message stream with backpressure | Broadway / GenStage. |
+| Batch writes or provider calls from a stream | Broadway batchers. |
+| Preserve per-key order while parallelizing other keys | Broadway partitioning or source partitioning. |
+| Process a small in-memory list for current caller | `Task.async_stream` or plain `Enum`. |
+
+Pipeline rules:
+
+- `handle_message` and `handle_batch` callbacks stay thin and delegate domain decisions to pure or context modules.
+- Messages are versioned at the boundary before entering domain code.
+- Side effects are idempotent because source delivery is commonly at-least-once.
+- Acknowledgement is coupled to successful processing or explicit failure handling.
+- Backpressure configuration is reviewed under expected and overload rates.
+- Dead-letter queues have owners, alerts, replay tools, and retention rules.
+
+Avoid:
+
+- Acknowledging before durable state or idempotent effect safety exists.
+- Treating processor concurrency as a substitute for database constraints.
+- Global ordering claims when only per-partition ordering is provided.
+- Large message payloads when the pipeline can pass references and load detail from authoritative storage.
+
 ## Workflow
 
 Use workflow when:
@@ -173,5 +227,6 @@ Outbox review:
 - [ ] External mutations are idempotent.
 - [ ] Retry policy is bounded and observable.
 - [ ] Jobs can tolerate duplicate execution.
+- [ ] Ingestion pipelines define backpressure, acknowledgement, batching, poison-message, and replay behavior.
 - [ ] State machines include forbidden transition tests.
 - [ ] Non-compensable effects are explicit.

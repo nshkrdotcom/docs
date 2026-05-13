@@ -21,6 +21,19 @@ Anything repeatedly found in review should become a deterministic check when pra
 | L4 | Construction constraint | Generator/template prevents invalid shape. |
 | L5 | Merge gate | CI blocks acceptance. |
 
+## Risk-Tiered Gates
+
+QC gates scale with risk:
+
+| Tier | Required Gate Shape |
+|---|---|
+| L0 Fast Track | Format, compile, focused tests, and any affected local static checks. |
+| L1 Standard Feature | PR gate plus persistence/boundary tests for changed behavior. |
+| L2 Runtime Or Integration | PR gate plus process, job, LiveView/PubSub, external adapter, migration, or ingestion tests as applicable. |
+| L3 Architecture Change | Release gate plus architecture gate and evidence ledger. |
+
+Skipping a heavier gate is acceptable only when the change remains inside the declared lower tier.
+
 ## Baseline Gates
 
 Recommended baseline:
@@ -69,6 +82,10 @@ Advanced checks to consider:
 - No blocking calls in GenServer callbacks.
 - Missing telemetry around external calls.
 - No broad rescue swallowing errors.
+- LiveView callbacks calling Repo directly for domain writes.
+- LiveView `handle_info` accepting broad undocumented message shapes.
+- Broadway callbacks with hidden provider effects and no idempotency marker.
+- Direct `:persistent_term.put/2`, `:counters.new/2`, or `:atomics.new/2` outside approved owner modules.
 
 ### Dialyzer
 
@@ -138,6 +155,31 @@ Flag:
 - Registry for static singleton.
 - DynamicSupervisor with fixed children.
 - `Process.sleep/1` in tests.
+- `:persistent_term` writes in request, job, LiveView, or hot callback paths.
+- Counter arrays used for durable business facts.
+
+## LiveView And PubSub Checks
+
+Flag:
+
+- LiveView assigning durable business truth without external recovery.
+- LiveView `handle_event` implementing business transitions instead of delegating to context APIs.
+- LiveView subscribing to global or tenantless topics in multi-tenant systems.
+- PubSub payloads that include large structs, secrets, or provider payloads.
+- PubSub used as must-deliver business event transport.
+- LiveComponents used for isolation assumptions even though they share the parent LiveView process.
+
+## Ingestion Checks
+
+Flag Broadway/GenStage pipelines where:
+
+- Ack behavior is undocumented.
+- Processor or batcher callbacks contain unbounded side effects.
+- Duplicate delivery is unsafe.
+- Poison-message handling is missing.
+- Backpressure, concurrency, and batch settings have no rationale.
+- Dead-letter queues lack owner, alert, replay, or retention policy.
+- Pipeline telemetry is missing.
 
 ## Migration Safety Checks
 
@@ -187,6 +229,9 @@ mix test --include release
 - Migration risk review.
 - Effect declaration diff.
 - Telemetry coverage diff.
+- LiveView/PubSub subscription diff.
+- Ingestion pipeline diff.
+- Advanced primitive ownership diff.
 
 ## Exceptions
 
@@ -247,8 +292,8 @@ Do not use LM as authority for:
 
 - [ ] Required gates are declared.
 - [ ] Boundary and OTP checks cover local anti-patterns.
+- [ ] LiveView/PubSub, ingestion, and advanced primitive checks cover local anti-patterns.
 - [ ] Exceptions have owner and expiration.
 - [ ] CI profiles distinguish local, PR, release, and architecture gates.
 - [ ] Repeated review findings are promoted to checks.
 - [ ] Evidence ledger is maintained for releases.
-

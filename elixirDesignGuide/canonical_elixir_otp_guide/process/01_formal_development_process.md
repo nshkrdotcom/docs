@@ -147,9 +147,47 @@ Acceptance gate:
 The evidence package is sufficient for a reviewer to reproduce the acceptance decision.
 ```
 
+## Risk Tiers And Fast Track
+
+The formal process scales with risk. It is not a demand to fill every template for every patch.
+
+Classify each change before choosing the review depth:
+
+| Tier | Use For | Required Process |
+|---|---|---|
+| L0: Fast Track | Simple CRUD, copy/UI-only change, small context function, no new runtime ownership, no risky migration, no external effect. | Fast-track checklist, focused tests, normal QC gates. |
+| L1: Standard Feature | New capability with domain rules, persistence changes, or public API surface but no new runtime topology. | Charter summary, boundary contract, state/effect notes, tests, acceptance evidence. |
+| L2: Runtime Or Integration Feature | New process, job, workflow, PubSub fanout, LiveView subscription pattern, external provider, durable effect, or migration with production risk. | Full design artifacts for affected areas plus process/effect/persistence forms. |
+| L3: System Architecture Change | New bounded context, distributed ownership, data model rewrite, cluster protocol, ingestion pipeline, or rebuild. | Full formal process, architecture tournament, rollout plan, rollback or forward-fix plan. |
+
+Fast-track eligibility requires all of this:
+
+```text
+No new OTP process, Registry, ETS table, persistent term, counter array, or supervisor.
+No new external mutation, background job, outbox producer, Broadway pipeline, or PubSub fanout.
+No public API compatibility break.
+No authorization, tenant-boundary, secret-handling, or unsafe-input change.
+No migration that can lock, rewrite, or corrupt production data.
+No race-sensitive invariant added or changed.
+```
+
+Fast-track evidence:
+
+```yaml
+fast_track:
+  scope:
+  why_low_risk:
+  changed_contracts: none | listed
+  tests:
+  qc_gates:
+  reviewer:
+```
+
+If any reviewer cannot explain why the work is low risk, promote it to L1 or higher. Fast track reduces ceremony; it does not remove tests, ownership, or accountability.
+
 ## Iterative Review Loop
 
-Each feature runs this loop:
+Each non-fast-track feature runs this loop:
 
 ```text
 1. Draft design.
@@ -164,6 +202,16 @@ Each feature runs this loop:
 ```
 
 Review is not a final ceremony. It is a development tool. If a late implementation detail invalidates the architecture, the feature returns to the design stage and records an amendment.
+
+Fast-track features run a smaller loop:
+
+```text
+1. Confirm fast-track eligibility.
+2. Implement through existing public boundaries.
+3. Add or update focused tests.
+4. Run declared QC gates.
+5. Record evidence in the PR or change note.
+```
 
 ## Critical Reflection Stages
 
@@ -310,4 +358,3 @@ docs/features/<feature>/
 ```
 
 Small features may combine files, but they may not omit the content.
-

@@ -115,6 +115,29 @@ Gate:
 Every capability has an explicit input, output, expected error, and invariant list.
 ```
 
+## Stage 4A: Fast-Track Classification
+
+Before deeper architecture work, decide whether the feature is low risk.
+
+Fast-track work may continue with a compact record when it only:
+
+- Adds or changes presentation behavior.
+- Adds a simple context function over existing persistence.
+- Uses existing boundary contracts.
+- Uses existing supervision and runtime infrastructure.
+- Adds no external effect except through an existing declared path.
+- Adds no race-sensitive invariant, tenant/security change, or risky migration.
+
+Fast-track gate:
+
+```text
+The feature can be explained as an existing-boundary change.
+No new runtime owner, durable effect, ingestion pipeline, or public contract obligation is introduced.
+Tests still cover the changed behavior.
+```
+
+If the work introduces LiveView subscriptions, PubSub fanout, Broadway/GenStage ingestion, Ash resource/action policy changes, or any advanced VM primitive, it is not L0 fast track even when the patch is small.
+
 ## Stage 5: Boundary Graph
 
 Define bounded contexts and allowed edges.
@@ -289,4 +312,3 @@ After launch:
 - Update runbooks.
 
 Greenfield does not end at launch. The first production incidents are design feedback.
-

@@ -35,17 +35,122 @@ Controller should not:
 
 LiveView should:
 
-- Own UI state.
+- Own interactive UI state.
 - Call context APIs.
 - Subscribe to PubSub where appropriate.
-- Use assign state as presentation state.
+- Use assigns as presentation state.
+- Use streams or temporary assigns for large/changing collections.
+- Use `assign_async` or `start_async` for bounded async loading tied to the LiveView lifetime.
+- Keep URL params, session, or durable storage as the recovery source for user-visible state when refresh/reconnect matters.
 
 LiveView should not:
 
 - Become domain state authority.
-- Hide business transitions in event handlers.
+- Hide business transitions in `handle_event`, `handle_info`, or `handle_async`.
 - Call Repo for domain writes.
 - Start unmanaged processes.
+- Subscribe every connected user to broad topics without fanout and payload budgeting.
+
+LiveView is a process. That makes it a runtime boundary, but usually not a domain runtime owner. Treat socket assigns as presentation cache unless the design explicitly proves otherwise.
+
+### LiveView State Classification
+
+Classify each assign:
+
+| Assign Type | Use For | Recovery |
+|---|---|---|
+| Presentation state | Filters, selected tab, open modal, local form state. | URL params, session, or harmless reset. |
+| Derived read state | Loaded rows, counts, dashboard data. | Re-query context API or projection. |
+| Async result state | Loading/error/result wrapper for a bounded async operation. | Restart async operation or display retry. |
+| Stream state | Large collections rendered incrementally. | Rebuild stream from context query or event. |
+| Durable business fact | Order status, payment state, workflow progress. | Must not live only in assigns. Persist elsewhere. |
+
+Rules:
+
+- Assigns may cache durable facts for rendering, but may not be the authoritative copy.
+- Form changesets are UI validation state; final writes still go through context APIs.
+- If a LiveView crash or reconnect would lose user-visible business progress, persist or checkpoint that progress outside the LiveView.
+
+### LiveView Callback Policy
+
+`handle_event/3` should:
+
+- Parse event intent.
+- Call context APIs or local presentation helpers.
+- Assign result state.
+- Avoid business case trees.
+
+`handle_info/2` should:
+
+- Accept documented messages only.
+- Treat PubSub messages as notifications.
+- Re-query authoritative state when payload freshness or authorization matters.
+- Drop, coalesce, or rate-limit noisy updates.
+
+`handle_async/3` should:
+
+- Update loading/result/error assigns.
+- Avoid starting follow-on unbounded work.
+- Translate failures into UI state or let unexpected faults crash according to policy.
+
+### PubSub And Fanout
+
+PubSub is appropriate for UI notification, cache invalidation, and local real-time updates. It is not a durable event log.
+
+For every LiveView subscription define:
+
+- Topic shape.
+- Tenant/account/resource scope.
+- Payload version.
+- Maximum expected subscriber count.
+- Payload size budget.
+- Missed-message recovery path.
+- Authorization or topic access rule.
+- Whether the LiveView re-queries after notification.
+
+Avoid:
+
+- Broadcasting whole Ecto schemas or large lists.
+- One global topic for all tenants.
+- Treating PubSub delivery as confirmation that a business event was processed.
+- High-frequency fanout without coalescing, throttling, or a read-model strategy.
+
+For very large fanout, review Phoenix PubSub adapter/pool configuration, custom dispatching needs, payload encoding cost, and rollout safety.
+
+### Components
+
+Function components are pure rendering functions and should be preferred for markup decomposition.
+
+LiveComponents run in the parent LiveView process. Use them for encapsulated UI state and event handling, but do not assume they create isolation from parent mailbox, memory, or crash behavior.
+
+Nested LiveViews start separate processes. Use them only when process isolation, independent lifecycle, or sticky behavior is actually needed.
+
+### LiveView Async Work
+
+Use LiveView async helpers when:
+
+- The work is bounded.
+- The result is only needed by the LiveView.
+- Cancellation when the user leaves is correct.
+- Failure can be represented as UI state.
+
+Use context APIs, jobs, or supervised workers instead when:
+
+- Work must continue after navigation.
+- Work mutates external systems.
+- Work must retry durably.
+- Work is shared by many users.
+
+### LiveView Tests
+
+LiveView tests should cover:
+
+- Event handling through rendered UI.
+- Authorization and tenant-scoped topics.
+- PubSub notification handling.
+- Reconnect or remount recovery when state matters.
+- Async loading success and failure.
+- Large-list rendering through streams or pagination.
 
 ## DTOs And Input Validation
 
@@ -163,4 +268,4 @@ Before changing public API:
 - [ ] DTOs validate and normalize external input.
 - [ ] Public API surface is justified.
 - [ ] Contracts are versioned where durable or external.
-
+- [ ] LiveView assigns, PubSub subscriptions, async work, and recovery paths are classified.

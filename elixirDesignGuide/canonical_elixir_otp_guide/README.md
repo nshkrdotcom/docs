@@ -39,6 +39,8 @@ For an existing system, read in this order:
 
 For a specific feature, use [use_cases/18_use_case_playbooks.md](use_cases/18_use_case_playbooks.md) and the templates in [templates/19_templates_and_forms.md](templates/19_templates_and_forms.md).
 
+For low-risk changes, first apply the fast-track test in [process/01_formal_development_process.md](process/01_formal_development_process.md). Fast track is intended for existing-boundary changes with no new runtime ownership, external effect, public contract break, risky migration, or security/tenant-boundary change. If the change touches LiveView fanout, Broadway ingestion, advanced VM primitives, Ash policies/actions, durable effects, or new processes, use the standard review path.
+
 ## Docset Map
 
 ### Process
@@ -105,6 +107,6 @@ Most business behavior should not live in that tree. The tree owns runtime respo
 6. Declare effects, idempotency, and recovery.
 7. Lower only necessary runtime responsibilities into OTP primitives.
 8. Design supervision around failure domains.
-9. Design tests and observability before implementation is accepted.
-10. Use QC gates to prevent regressions.
-
+9. Choose the right delivery primitive: request/transaction, LiveView notification, durable job/outbox, Broadway ingestion, or workflow.
+10. Design tests and observability before implementation is accepted.
+11. Use risk-tiered QC gates to prevent regressions without overburdening low-risk work.

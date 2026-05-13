@@ -153,6 +153,8 @@ Test effect shell with integration tests:
 - Outbox writes.
 - Adapter error mapping.
 
+When testing Repo behavior, prefer real database integration tests with Ecto SQL Sandbox or an equivalent transactional setup. Mocking Repo can be useful at an outer seam, but it does not prove constraints, locks, transaction rollback, or migration assumptions.
+
 Test processes through public API:
 
 - Start.
@@ -220,4 +222,3 @@ def new(attrs, id, now), do: %__MODULE__{id: id, inserted_at: now}
 - [ ] Unexpected faults are not swallowed.
 - [ ] Time, IDs, config, and IO are injectable where needed.
 - [ ] Tests cover core separately from effect shell.
-

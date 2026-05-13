@@ -245,6 +245,34 @@ Every public function should answer:
 
 Public APIs become compatibility obligations. Keep them small.
 
+## Framework Mapping: Ash
+
+Ash is an optional application-layer framework that can encode many of this guide's boundaries declaratively. Using Ash does not remove the need for architecture review; it changes where the review looks.
+
+Map concepts explicitly:
+
+| Guide Concept | Ash Concept |
+|---|---|
+| Bounded context / public API | Ash Domain and generated/code interfaces. |
+| Entity or persistence-backed resource | Ash Resource. |
+| Command or query capability | Ash Action. |
+| Input contract | Action arguments, accepted attributes, validations. |
+| Authorization boundary | Ash policies and actor context. |
+| Persistence boundary | Data layer, commonly AshPostgres. |
+| Effect hook | Action lifecycle hook, notifier, job, or explicit application service. |
+
+Rules:
+
+- Name Ash actions after business capabilities, not only CRUD verbs, when domain behavior matters.
+- Treat generated APIs as public contracts if callers depend on them.
+- Keep provider SDK structs, raw web params, and external payloads out of resources unless the resource is explicitly an adapter or integration record.
+- Review policy changes as authorization changes.
+- Review action lifecycle hooks for transaction boundaries and external effects.
+- Use outbox/jobs for irreversible external effects; do not hide provider mutation inside a resource hook without idempotency and recovery.
+- Keep custom pure domain modules when behavior is clearer outside the resource DSL.
+
+Ash adoption is an architecture decision. Record why it is being used, which guide responsibilities it enforces, and where application-specific checks still live.
+
 ## Anti-Patterns
 
 ### One Schema For Everything
@@ -296,4 +324,4 @@ Repair:
 - [ ] Race-sensitive invariants have authoritative enforcement.
 - [ ] Public APIs map to contracts.
 - [ ] Runtime state has owner and recovery path.
-
+- [ ] Framework abstractions such as Ash map cleanly to domain, boundary, policy, persistence, and effect responsibilities.

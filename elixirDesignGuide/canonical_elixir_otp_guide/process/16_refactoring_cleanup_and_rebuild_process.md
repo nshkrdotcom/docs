@@ -83,8 +83,10 @@ Required fields:
 | 6 | Unsafe deserialization and runtime eval | Remove high-impact execution risks. |
 | 7 | OTP lifecycle and supervision | Ensure work is owned and restartable. |
 | 8 | Mailbox and backpressure | Prevent memory growth and overload collapse. |
+| 8A | LiveView and PubSub fanout | Prevent UI processes from becoming hidden domain owners or fanout bottlenecks. |
 | 9 | GenServer functional-core cleanup | Extract business logic from callbacks. |
 | 10 | Serialization and versioning | Stabilize durable and external contracts. |
+| 10A | Ingestion pipeline safety | Stabilize ack, retry, dead-letter, and replay semantics. |
 | 11 | Persistence and state backend cleanup | Clarify authority and side effects. |
 | 12 | Package and dependency boundaries | Reduce transitive coupling. |
 | 13 | Observability and context propagation | Make failures explainable. |
@@ -222,6 +224,23 @@ Exit:
 Important asynchronous work has capacity, overload, and observability rules.
 ```
 
+### Pass 8A: LiveView And PubSub Fanout
+
+Actions:
+
+- Classify LiveView assigns as presentation, derived, async, stream, or durable reference.
+- Move business writes from LiveView callbacks into context APIs.
+- Replace broad PubSub topics with tenant/resource-scoped topics.
+- Shrink large PubSub payloads to identifiers or compact events.
+- Add missed-message recovery by re-querying authoritative state.
+- Add telemetry for event latency, message handling, fanout, and async failures.
+
+Exit:
+
+```text
+LiveView processes own presentation state only, and PubSub fanout is scoped, observable, and recoverable.
+```
+
 ### Pass 9: GenServer Functional-Core Cleanup
 
 Actions:
@@ -251,6 +270,23 @@ Exit:
 Rolling upgrades and persisted old payloads have a compatibility path.
 ```
 
+### Pass 10A: Ingestion Pipeline Safety
+
+Actions:
+
+- Inventory Broadway/GenStage producers, processors, batchers, and source guarantees.
+- Document acknowledgement, retry, poison-message, dead-letter, and replay behavior.
+- Add idempotency or dedupe before increasing concurrency.
+- Move domain decisions out of pipeline callbacks where practical.
+- Add telemetry for source lag, batch latency, ack failure, and dead-letter counts.
+- Add tests for duplicate delivery and failure paths.
+
+Exit:
+
+```text
+Ingestion pipelines can tolerate duplicate delivery, bounded failure, shutdown, and replay without corrupting state.
+```
+
 ### Pass 11: Persistence And State Backend Cleanup
 
 Actions:
@@ -259,6 +295,7 @@ Actions:
 - Split read and write models.
 - Replace hidden process authority with durable state where needed.
 - Add idempotency keys.
+- Replace inappropriate `:persistent_term`, `:atomics`, or `:counters` usage with an owner module or durable authority.
 
 Exit:
 
@@ -343,4 +380,3 @@ Rebuild rules:
 - Compare old and new behavior.
 - Migrate data in reversible steps when possible.
 - Keep old decoders until compatibility window ends.
-

@@ -53,6 +53,8 @@ Blockers:
 - GenServer exists only for code organization.
 - Critical work uses unbounded `cast` or fire-and-forget process.
 - Process state cannot recover after crash but represents business fact.
+- `:persistent_term` is updated on hot paths or used for frequently changing state.
+- `:atomics` or `:counters` hold durable business truth without authoritative backing.
 
 Review:
 
@@ -61,6 +63,25 @@ Review:
 - Restart policies match lifecycle.
 - Mailbox and overload behavior are defined.
 - Dynamic lookup is justified.
+- Advanced VM primitives have owner modules, update semantics, and restart/loss policy.
+
+## LiveView And PubSub
+
+Blockers:
+
+- LiveView assigns are the only source of durable user-visible business state.
+- LiveView `handle_event` or `handle_info` hides domain transitions or external effects.
+- PubSub is used as durable delivery for business events.
+- Tenantless topic or payload leaks cross tenant/security boundaries.
+- High-fanout broadcast has no payload budget, recovery path, or overload plan.
+
+Review:
+
+- Assigns are classified as presentation, derived, async, stream, or durable reference.
+- LiveViews delegate writes through context APIs.
+- PubSub messages are small, scoped, versioned where needed, and treated as notifications.
+- Async work is bounded and correct to cancel when the user leaves.
+- LiveComponents are not mistaken for separate processes.
 
 ## Persistence And Effects
 
@@ -77,6 +98,22 @@ Review:
 - Constraints enforce race-sensitive rules.
 - Outbox or durable jobs protect effects.
 - Migrations are staged safely.
+
+## Ingestion Pipelines
+
+Blockers:
+
+- Broadway/GenStage pipeline acknowledges before durable/idempotent processing is safe.
+- Duplicate delivery can corrupt state or duplicate external mutation.
+- Poison messages can loop indefinitely without quarantine or owner review.
+- Backpressure is bypassed by unbounded casts, tasks, or mailbox accumulation.
+
+Review:
+
+- Source guarantees, ack behavior, batching, concurrency, and partitioning are documented.
+- Messages are versioned and validated at the boundary.
+- Dead-letter/replay procedures exist.
+- Pipeline telemetry covers lag, failures, batches, and ack outcomes.
 
 ## APIs And Contracts
 
@@ -137,6 +174,8 @@ Blockers:
 Review:
 
 - Tests cover pure core, boundaries, persistence, processes, effects, and release risks.
+- Repo behavior is tested against real database semantics via SQL Sandbox or an equivalent integration setup where practical.
+- LiveView, PubSub, and ingestion paths are tested through their public/runtime boundaries.
 - Property or state-machine testing is used where input/state space is large.
 - CI gates are appropriate for risk.
 - Exceptions have owner and expiration.
@@ -168,4 +207,3 @@ Reject when:
 - What can be lost, and why is that acceptable?
 - What can be externally observed, and is it intentional?
 - What can be removed to make the design simpler?
-

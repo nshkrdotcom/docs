@@ -25,6 +25,8 @@ Emit telemetry for:
 - Authorization failures.
 - Rate limits.
 - Queue depth.
+- LiveView mount count, connected count, event latency, async failures, and PubSub message handling latency.
+- Broadway/ingestion demand, processor latency, batch latency, ack failures, dead-letter count, and source lag.
 
 Event naming:
 
@@ -73,6 +75,8 @@ Track:
 - Scheduler utilization.
 - Database query latency.
 - External provider latency and error rate.
+- LiveView connected count, event latency, async error rate, and PubSub message rate.
+- Ingestion source lag, processor latency, batch size, ack failure rate, dead-letter count, and replay count.
 
 ## Tracing
 
@@ -109,6 +113,8 @@ Minimum dashboards:
 - Application overview.
 - Command latency/errors.
 - Job/outbox health.
+- LiveView/PubSub fanout health when real-time features are critical.
+- Ingestion pipeline health when Broadway/GenStage pipelines are critical.
 - Process health.
 - Database health.
 - External dependency health.
@@ -164,6 +170,13 @@ For jobs:
 - Define whether jobs finish, checkpoint, or abort.
 - Ensure aborted jobs retry safely.
 - Keep shutdown timeout realistic.
+
+For ingestion pipelines:
+
+- Stop accepting or claiming new source messages before stopping processors.
+- Let bounded in-flight batches ack, fail, or return to the source according to source semantics.
+- Record whether shutdown can duplicate messages.
+- Keep replay and dead-letter procedures ready before release.
 
 For processes:
 

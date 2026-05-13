@@ -17,8 +17,12 @@ Status legend:
 - [x] QC appears throughout the guide, not only in QC-specific files.
 - [x] Templates exist for architecture, process, state, effects, reviews, exceptions, and acceptance.
 - [x] Final review pass completed for clarity, utility, and canonical consistency.
+- [x] Fast-track governance exists for low-risk work.
+- [x] Phoenix LiveView, Broadway/data ingestion, advanced VM primitives, SQL Sandbox testing, and Ash ecosystem mapping are covered.
 
 Review note: The final pass added explicit brownfield audit tracks, SLO feedback, and Oban/dead-letter handling language before this checklist was closed.
+
+Revision note: The expansion pass added risk-tiered review, LiveView state/fanout guidance, Broadway ingestion guidance, `:persistent_term`/`:atomics`/`:counters` rules, SQL Sandbox guidance, and optional Ash mapping.
 
 ## 01 Formal Development Process
 
@@ -27,6 +31,7 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 - [x] Defines required artifacts and gates.
 - [x] Defines when to refactor, rebuild, or stop.
 - [x] Defines roles for human review, deterministic tooling, and LM-assisted critique.
+- [x] Defines risk tiers and fast-track evidence for low-risk changes.
 
 ## 02 Greenfield Lifecycle
 
@@ -34,6 +39,7 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 - [x] Prevents premature process-oriented design.
 - [x] Provides acceptance gates for each stage.
 - [x] Covers iterative architecture tournaments and compression review.
+- [x] Covers fast-track classification before heavyweight review.
 
 ## 03 Brownfield Lifecycle
 
@@ -49,6 +55,7 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 - [x] Maps invariants to enforcement locations.
 - [x] Covers anti-corruption layers and external payload translation.
 - [x] Covers public API budgets and module organization.
+- [x] Covers optional Ash framework mapping.
 
 ## 05 Functional Core, Effect Shell
 
@@ -61,6 +68,7 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 ## 06 OTP Runtime Lowering
 
 - [x] Defines when to use plain modules, GenServer, Agent, Task, Task.Supervisor, Supervisor, DynamicSupervisor, Registry, ETS, `:gen_statem`, GenStage/Broadway, and Oban.
+- [x] Defines when to use `:persistent_term`, `:atomics`, and `:counters`.
 - [x] Requires process justification forms.
 - [x] Covers call/cast/message policy.
 - [x] Covers business logic extraction from callbacks.
@@ -85,6 +93,7 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 ## 09 APIs, Web Layers, And Contracts
 
 - [x] Covers Phoenix/controllers/LiveView/context boundaries.
+- [x] Covers LiveView assigns, async work, PubSub fanout, components, and recovery.
 - [x] Covers DTOs and input validation.
 - [x] Covers behavior contracts, consumer contracts, and versioning.
 - [x] Covers public API review and compatibility.
@@ -95,6 +104,7 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 - [x] Covers long-running workflows.
 - [x] Covers state machines and sagas.
 - [x] Covers Oban/job queues, retries, backoff, dead letters, and compensation.
+- [x] Covers Broadway/GenStage ingestion pipelines, backpressure, batching, acknowledgement, replay, and poison messages.
 - [x] Covers external HTTP/CLI/provider calls.
 - [x] Covers idempotent effect delivery and exactly-once illusions.
 
@@ -113,6 +123,7 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 - [x] Covers graceful shutdown and drain.
 - [x] Covers incident-ready diagnostics and runbooks.
 - [x] Covers operational SLOs and feedback into design.
+- [x] Covers LiveView/PubSub and ingestion observability.
 
 ## 13 Security, Config, Secrets, And Tenant Boundaries
 
@@ -126,6 +137,8 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 
 - [x] Covers unit, integration, contract, property, state-machine, concurrency, trace, chaos, and release tests.
 - [x] Covers testing pure logic separately from processes.
+- [x] Covers SQL Sandbox database integration testing.
+- [x] Covers LiveView and ingestion pipeline testing.
 - [x] Covers process restart and supervision tests.
 - [x] Covers distributed test harnesses.
 - [x] Covers when to use model checking or trace-based verification.
@@ -134,6 +147,7 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 
 - [x] Covers format, compile, warnings, Credo, Dialyzer, Sobelow, deps audit, boundary checks, custom checks, and migration safety.
 - [x] Covers CI gate levels.
+- [x] Covers risk-tiered gates, LiveView/PubSub checks, ingestion checks, and advanced primitive checks.
 - [x] Covers deterministic versus LM-assisted controls.
 - [x] Covers exceptions with owners and expiration.
 - [x] Covers release evidence and quality ledgers.
@@ -150,6 +164,7 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 
 - [x] Covers pre-code reviews.
 - [x] Covers architecture review stages.
+- [x] Covers fast-track acceptance and ecosystem fit review.
 - [x] Covers implementation acceptance.
 - [x] Covers evidence packages.
 - [x] Covers post-merge learning and rule promotion.
@@ -161,6 +176,9 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 - [x] Covers background job/outbox feature.
 - [x] Covers external provider integration.
 - [x] Covers real-time/PubSub feature.
+- [x] Covers Phoenix LiveView feature.
+- [x] Covers Broadway/data ingestion feature.
+- [x] Covers Ash-based resource feature.
 - [x] Covers distributed/clustered feature.
 - [x] Covers brownfield remediation feature.
 
@@ -175,6 +193,7 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 - [x] Provides effect declaration template.
 - [x] Provides review finding template.
 - [x] Provides acceptance evidence template.
+- [x] Provides fast-track, LiveView, ingestion pipeline, advanced primitive, and Ash mapping templates.
 - [x] Provides exception waiver template.
 
 ## 20 Canonical Review Rubric
@@ -184,6 +203,7 @@ Review note: The final pass added explicit brownfield audit tracks, SLO feedback
 - [x] Covers OTP/process review.
 - [x] Covers persistence/effects review.
 - [x] Covers API/contracts review.
+- [x] Covers LiveView/PubSub and ingestion pipeline review.
 - [x] Covers distributed/operations/security review.
 - [x] Covers test/QC/release review.
 - [x] Defines severity, blocking criteria, and acceptance decision.

@@ -53,6 +53,8 @@ GenServer state expresses runtime ownership.
 
 Those may overlap, but they should not be assumed to be the same thing.
 
+Frameworks such as Ash can encode parts of this architecture through resources, actions, policies, and data layers. That can reduce local boilerplate, but it does not remove the need to review domain language, authorization, transaction boundaries, generated public APIs, and effect placement. ([Ash][27])
+
 ---
 
 ## Separate read models from write models
@@ -230,6 +232,9 @@ Use a process only when you need a **runtime property**. The GenServer docs are 
 | Dynamic process lookup                  | `Registry`                              | Dynamically generated atoms              |
 | Explicit finite-state machine           | `:gen_statem`                           | Hand-rolled state machine in a GenServer |
 | High-read shared in-memory table        | ETS owned by supervised process         | GenServer bottleneck for every read      |
+| Read-mostly global term                 | `:persistent_term`                      | Frequently updated cache/config          |
+| Hot local counters                      | `:counters` / `:atomics`                | GenServer counter bottleneck             |
+| Backpressured ingestion                 | Broadway / GenStage                     | Unbounded casts or ad hoc task fanout     |
 | Non-OTP subsystem                       | `:supervisor_bridge` or adapter process | Unmanaged external process tree          |
 
 ---
@@ -425,6 +430,18 @@ Canonical ETS rule:
 A supervised process owns the ETS table.
 Other processes may read/write only according to the access policy.
 The table is a cache/index/runtime optimization, not an invisible domain model.
+```
+
+## `:persistent_term`, `:atomics`, and `:counters`
+
+Use `:persistent_term` only for values that are read extremely often and updated rarely or never, such as validated configuration snapshots or dispatch tables. It is optimized for reads, but updates and deletes have system-wide costs; it is not a general ETS replacement. ([Erlang.org][18])
+
+Use `:atomics` or `:counters` for very hot local numeric counters where a process would bottleneck. They are useful for metrics and instrumentation paths, but they should not hold durable business facts unless backed by authoritative storage. `:counters` also has a `:write_concurrency` mode that trades read consistency for write throughput. ([Erlang.org][19], [Erlang.org][20])
+
+Canonical rule:
+
+```text
+Advanced VM primitives need owner modules, update policy, restart/loss semantics, and observability.
 ```
 
 ---
@@ -733,7 +750,67 @@ The public context module, such as `MyApp.Orders`, is allowed to orchestrate eff
 
 ---
 
-# 8. Design workflow for a complex feature
+# 8. Phoenix LiveView and PubSub
+
+LiveView is a process that owns interactive presentation state. It should call context APIs and render results; it should not become durable domain authority. LiveView lifecycle callbacks handle browser events, process messages, params, and async results, so they need the same boundary discipline as any other process callback. ([Hexdocs][21])
+
+Classify assigns:
+
+| Assign type | Use for | Recovery |
+| --- | --- | --- |
+| Presentation | selected tab, modal, filter | URL/session/reset |
+| Derived read state | rows, counts, dashboard data | re-query context |
+| Async result | loading/error/result state | retry or reload |
+| Stream | large changing collections | rebuild from query/event |
+| Durable fact reference | order id/status shown in UI | persisted source of truth |
+
+PubSub is appropriate for UI notification and cache invalidation, not must-deliver business events. Topic shape, tenant scope, payload size, fanout count, and missed-message recovery should be explicit. Phoenix PubSub supports subscribe/broadcast and adapter configuration, including pool-size migration concerns in clustered deployments. ([Hexdocs][22])
+
+LiveComponents run in the parent LiveView process, while nested LiveViews start their own processes. Do not use LiveComponents as an isolation boundary. ([Hexdocs][23])
+
+Use LiveView async helpers for bounded work that should stop when the LiveView exits; use jobs or context services when work must continue after navigation. ([Hexdocs][21])
+
+---
+
+# 9. Jobs, ingestion, and external effects
+
+Use durable jobs or outbox rows for must-run work and irreversible external effects. Use Broadway or GenStage when the problem is sustained ingestion from a source that needs demand, acknowledgement, batching, or partitioning. Broadway is built for concurrent ingestion pipelines with backpressure, automatic acknowledgements, batching, graceful shutdown, and test helpers. ([Hexdocs][24])
+
+Decision table:
+
+| Need | Prefer |
+| --- | --- |
+| One command later with retry | Oban or durable job |
+| Deliver effect after commit | Outbox / durable job |
+| Sustained external stream | Broadway / GenStage |
+| Batch provider writes | Broadway batcher |
+| Per-key ordering | Source partitioning or Broadway partitioning |
+| Small caller-local list | `Enum` or `Task.async_stream` |
+
+Ingestion pipeline designs must define source guarantees, ack behavior, batch settings, concurrency, partitioning, idempotency, poison-message handling, replay, shutdown, and telemetry. GenStage provides the underlying demand/backpressure model: consumers ask upstream producers for demand, and producers should not emit more than was requested. ([Hexdocs][25])
+
+---
+
+# 10. Fast-track vs. full process
+
+The formal process should scale with risk. Fast track is valid for low-risk work that stays inside existing public boundaries and adds no new runtime owner, external effect, public contract break, security/tenant change, risky migration, or race-sensitive invariant.
+
+Fast-track evidence is still required:
+
+```yaml
+fast_track:
+  scope:
+  why_low_risk:
+  changed_contracts: none
+  tests:
+  qc_gates:
+```
+
+Any LiveView fanout, Broadway pipeline, new process, durable effect, Ash policy/action change, migration risk, or advanced VM primitive promotes the work to a standard or full review path.
+
+---
+
+# 11. Design workflow for a complex feature
 
 Use this sequence for each major feature.
 
@@ -814,6 +891,12 @@ Registry:
 
 :gen_statem:
   explicit workflow state machine
+
+Broadway:
+  sustained ingestion with backpressure, ack, batching, or partitioning
+
+:persistent_term / :counters / :atomics:
+  only when VM-level read/counter performance is needed and ownership is explicit
 ```
 
 ## Step 7: Define failure behavior
@@ -827,7 +910,7 @@ If duplicate command arrives: idempotency key returns prior result.
 
 ---
 
-# 9. Common anti-patterns
+# 12. Common anti-patterns
 
 ## Anti-pattern: “One GenServer per context”
 
@@ -904,7 +987,7 @@ A crash is fine only when restart is safe.
 
 ---
 
-# 10. Review rubric
+# 13. Review rubric
 
 A complex Elixir/OTP application is well-designed when these are true:
 
@@ -931,6 +1014,7 @@ A complex Elixir/OTP application is well-designed when these are true:
 * External effects are idempotent or protected by outbox/job records.
 * Retries are bounded and observable.
 * Timeouts are explicit.
+* Sustained ingestion uses explicit backpressure, ack, batching, replay, and dead-letter rules.
 
 ## OTP usage
 
@@ -942,12 +1026,21 @@ A complex Elixir/OTP application is well-designed when these are true:
 * Restart policies match the child’s lifecycle.
 * Supervisors are grouped by failure domain.
 * Startup and shutdown order are intentional.
+* Advanced VM primitives are used only with ownership, update policy, and loss/restart semantics.
+
+## LiveView and PubSub
+
+* LiveView assigns are presentation or derived state, not durable truth.
+* `handle_event`, `handle_info`, and `handle_async` delegate domain behavior.
+* PubSub topics are scoped, payloads are small, and missed-message recovery is defined.
+* High fanout has observability and overload strategy.
 
 ## Operations
 
 * Process names and telemetry make the system inspectable.
 * Mailbox growth, restarts, memory, and latency are observable.
 * Crash/restart paths are tested.
+* SQL Sandbox or equivalent real database tests cover Repo behavior where practical. ([Hexdocs][26])
 * Shutdown is graceful.
 * Backpressure exists where load can exceed capacity.
 * No important work disappears silently.
@@ -966,7 +1059,9 @@ Design in this order:
 5. Use OTP only for runtime ownership, concurrency, failure, and lifecycle.
 6. Build supervision trees around failure domains.
 7. Supervise all long-lived or significant processes.
-8. Make every restart safe, observable, and bounded.
+8. Use LiveView for interactive presentation state, not domain authority.
+9. Use durable jobs/outbox for must-run effects and Broadway/GenStage for sustained ingestion.
+10. Make every restart, retry, fanout, and replay safe, observable, and bounded.
 ```
 
 The strongest Elixir systems are not “all OTP everywhere.” They are mostly pure, explicit data transformations, with OTP used precisely where the system needs durable runtime structure.
@@ -988,3 +1083,13 @@ The strongest Elixir systems are not “all OTP everywhere.” They are mostly p
 [15]: https://hexdocs.pm/elixir/Supervisor.html "Supervisor — Elixir v1.19.5"
 [16]: https://hexdocs.pm/elixir/dynamic-supervisor.html "Supervising dynamic children — Elixir v1.19.5"
 [17]: https://www.erlang.org/doc/apps/stdlib/supervisor_bridge.html "supervisor_bridge — stdlib v7.3"
+[18]: https://www.erlang.org/doc/apps/erts/persistent_term.html "persistent_term — erts"
+[19]: https://www.erlang.org/doc/apps/erts/atomics.html "atomics — erts"
+[20]: https://www.erlang.org/doc/apps/erts/counters.html "counters — erts"
+[21]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html "Phoenix.LiveView — Phoenix LiveView"
+[22]: https://hexdocs.pm/phoenix_pubsub/Phoenix.PubSub.html "Phoenix.PubSub — Phoenix.PubSub"
+[23]: https://hexdocs.pm/phoenix_live_view/Phoenix.Component.html "Phoenix.Component — Phoenix LiveView"
+[24]: https://hexdocs.pm/broadway/Broadway.html "Broadway — Broadway"
+[25]: https://hexdocs.pm/gen_stage/GenStage.html "GenStage — gen_stage"
+[26]: https://hexdocs.pm/ecto_sql/Ecto.Adapters.SQL.Sandbox.html "Ecto.Adapters.SQL.Sandbox — Ecto SQL"
+[27]: https://ash-project.github.io/ash/what-is-ash.html "What is Ash?"

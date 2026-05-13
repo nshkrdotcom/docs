@@ -12,6 +12,29 @@ A feature is accepted when its behavior, boundaries, runtime shape, failure beha
 
 Code that works locally but lacks evidence is not accepted.
 
+## Review Depth
+
+Use the smallest review process that honestly covers the risk.
+
+Fast-track acceptance is allowed only when:
+
+- The change stays behind existing public APIs.
+- No new process, supervisor, Registry, ETS table, `:persistent_term`, `:atomics`, or `:counters` usage is added.
+- No new LiveView subscription/fanout pattern, Broadway pipeline, external provider, durable job, or outbox path is added.
+- No public contract, tenant boundary, authorization policy, secret handling, migration risk, or race-sensitive invariant changes.
+
+Fast-track review asks:
+
+```text
+Is this truly an existing-boundary change?
+What behavior changed?
+Which tests prove it?
+Which QC gates ran?
+What would promote this to standard review?
+```
+
+Any "yes" to runtime ownership, durable effects, ingestion, security, public API, or migration risk promotes the feature to the full staged review below.
+
 ## Review Stages
 
 ### Stage 1: Concept Inventory Review
@@ -169,6 +192,23 @@ Blockers:
 - Duplicate implementation paths.
 - Public functions added "just in case."
 
+### Stage 9: Ecosystem Fit Review
+
+Use when a feature adopts or extends a framework such as Ash, Broadway, Phoenix LiveView, or another opinionated layer.
+
+Questions:
+
+- Which guide concepts are delegated to the framework?
+- Which framework extension point owns validation, authorization, persistence, effects, and telemetry?
+- What remains application-specific and must still be reviewed here?
+- Are generated APIs, resource actions, pipeline stages, or callbacks part of the public contract?
+
+Blockers:
+
+- Framework abstraction hides an external effect, authorization decision, or transaction boundary.
+- Generated public API surface is accepted without compatibility review.
+- Ash action/policy changes, Broadway ack behavior, or LiveView callback state changes are merged without tests at the framework boundary.
+
 ## Evidence Package
 
 Each accepted feature records:
@@ -177,12 +217,17 @@ Each accepted feature records:
 feature:
   name:
   owner:
+  review_tier: fast_track | standard | runtime_integration | architecture
   design_docs:
   contracts:
   public_api_changes:
   migrations:
   processes_added:
   external_effects:
+  liveview_pubsub:
+  ingestion_pipelines:
+  advanced_primitives:
+  framework_mapping:
   test_evidence:
     format:
     compile:
@@ -265,4 +310,3 @@ After each feature:
    - Test generator.
 
 The review system should become stricter over time based on real defects.
-

@@ -287,3 +287,125 @@ QC:
 - Exceptions explicit.
 - Same class of defect gets a check or review gate.
 
+## Playbook 9: Phoenix LiveView Feature
+
+Use when:
+
+- A feature is primarily interactive UI.
+- LiveView owns presentation state for connected users.
+- PubSub, async loading, uploads, streams, or real-time updates are involved.
+
+Design:
+
+- Define context APIs for all domain reads and writes.
+- Classify assigns as presentation, derived, async result, stream, or durable reference.
+- Define URL/session recovery for state that must survive reconnect.
+- Define PubSub topics, tenant/resource scope, payload shape, and missed-message recovery.
+- Define fanout expectations and payload budget.
+- Define async work and cancellation semantics.
+
+OTP:
+
+- LiveView process owns socket/assign presentation state.
+- LiveComponents do not add process isolation.
+- Nested LiveViews are separate processes and require lifecycle rationale.
+- Use jobs/context services for work that must continue after navigation.
+
+Tests:
+
+- Rendered event handling.
+- Context API calls and expected errors.
+- PubSub notifications through documented topics.
+- Async success/failure UI.
+- Reconnect/remount recovery.
+- Streams or pagination for large collections.
+
+QC:
+
+- No Repo domain writes in LiveView.
+- No durable facts only in assigns.
+- No global tenantless topics in multi-tenant paths.
+- No large or secret PubSub payloads.
+- High fanout has telemetry and overload plan.
+
+## Playbook 10: Broadway / Data Ingestion Feature
+
+Use when:
+
+- Data arrives continuously or in high volume.
+- Source acknowledgements, batching, backpressure, replay, or ordering matter.
+- Kafka, SQS, RabbitMQ, Google Pub/Sub, files, or external streams feed the system.
+
+Design:
+
+- Define source guarantee and producer.
+- Define message schema and version.
+- Define decode/validation boundary.
+- Define idempotency and dedupe.
+- Define batch size, batch timeout, processor concurrency, and partitioning key.
+- Define ack, retry, poison-message, dead-letter, and replay behavior.
+- Define source lag and backlog observability.
+
+OTP:
+
+- Broadway/GenStage pipeline for sustained stream processing.
+- Oban/job only for command-style durable background work.
+- Domain logic remains outside callbacks.
+- Use source partitioning or Broadway partitioning for per-key ordering.
+
+Tests:
+
+- Decode and validation.
+- Duplicate delivery.
+- Batch behavior.
+- Ack/failure paths.
+- Poison-message and dead-letter handling.
+- Replay scenario.
+- Shutdown/drain assumption.
+
+QC:
+
+- No unbounded cast/task ingestion.
+- Duplicate processing is safe.
+- Ack does not precede durable/idempotent safety.
+- Dead-letter queue has owner, alert, replay, and retention.
+- Pipeline telemetry is declared.
+
+## Playbook 11: Ash-Based Resource Feature
+
+Use when:
+
+- The application has adopted Ash or is evaluating Ash for resource-oriented domain/application modeling.
+- Actions, policies, data layers, generated interfaces, or Ash extensions carry part of the architecture.
+
+Design:
+
+- Map resources to domain or persistence-backed concepts.
+- Name actions after capabilities when behavior exceeds basic CRUD.
+- Define accepted inputs and expected errors per action.
+- Define actor/policy requirements.
+- Define transaction and action lifecycle hook behavior.
+- Define generated public API and compatibility obligations.
+- Define where effects run: action hook, notifier, job, outbox, or explicit service.
+
+OTP:
+
+- Ash resources are not processes.
+- Add OTP only for runtime ownership outside the resource model.
+- Use Oban/outbox/Broadway as normal for durable effects or ingestion.
+
+Tests:
+
+- Action success/failure.
+- Policy allow/deny behavior.
+- Data-layer constraints.
+- Generated API or interface contract.
+- Effect hook idempotency and transaction boundary.
+
+QC:
+
+- Framework abstraction does not hide effects or authorization.
+- Generated APIs are reviewed as public contracts.
+- Provider payloads do not leak into domain resources.
+- Policy changes receive security review.
+- Keep pure modules when behavior is clearer outside the DSL.
