@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Dict, Iterable, List, Set, Tuple
 
+
 @dataclass(frozen=True)
 class HornRule:
     id: str
@@ -10,10 +11,12 @@ class HornRule:
     head: str
     strict: bool = True
 
+
 @dataclass
 class ClosureResult:
     facts: Set[str]
     proofs: Dict[str, List[str]]
+
 
 class TinyTensorLogic:
     """Minimal symbolic closure sketch.
@@ -21,6 +24,7 @@ class TinyTensorLogic:
     Real implementation should compile rules to tensor operations. This tiny
     class provides the same semantics for tests and toy examples.
     """
+
     def __init__(self, rules: Iterable[HornRule]):
         self.rules = list(rules)
 
@@ -29,10 +33,10 @@ class TinyTensorLogic:
         proofs: Dict[str, List[str]] = {f: ["evidence"] for f in known}
         for _ in range(max_steps):
             changed = False
-            for r in self.rules:
-                if all(atom in known for atom in r.body) and r.head not in known:
-                    known.add(r.head)
-                    proofs[r.head] = list(r.body) + [r.id]
+            for rule in self.rules:
+                if all(atom in known for atom in rule.body) and rule.head not in known:
+                    known.add(rule.head)
+                    proofs[rule.head] = list(rule.body) + [rule.id]
                     changed = True
             if not changed:
                 break

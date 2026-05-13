@@ -41,7 +41,7 @@ Baselines:
 
 Success:
 
-- zero promoted claims with unresolved citations;
+- zero promoted strict claims with unresolved citations;
 - improved ECE/Brier over baselines;
 - higher abstention precision.
 
@@ -82,6 +82,34 @@ Dependent variables:
 
 Success: chirality has statistically significant predictive power beyond embedding distance and graph cycle count.
 
+### EXP-006 — Adversarial record suppression
+
+Purpose: test whether GCTS distinguishes absent evidence, evidence of absence, inaccessible evidence, likely withheld evidence, and not-generated evidence.
+
+Data: synthetic scenarios with planted access states:
+
+- expected record exists and is produced;
+- expected record exists but is inaccessible;
+- expected record exists but is withheld;
+- expected record was destroyed;
+- record was never expected to exist;
+- produced record affirmatively refutes the claim.
+
+Baselines:
+
+- RAG-only;
+- RAG + NLI;
+- LLM debate;
+- GCTS without access modeling;
+- full GCTS.
+
+Success:
+
+- access-state F1 ≥ 0.75 on synthetic planted cases;
+- improved likely-truth Brier/ECE over no-access ablation;
+- lower false rejection rate for claims whose decisive records are inaccessible;
+- lower false promotion rate for claims where evidence of absence is available.
+
 ## Test layers
 
 ### Unit tests
@@ -91,19 +119,22 @@ Success: chirality has statistically significant predictive power beyond embeddi
 - tensor rule firing;
 - proof trace emission;
 - posterior normalization;
-- entropy/confidence formulas.
+- entropy/confidence formulas;
+- access-state classification invariants.
 
 ### Property tests
 
 - posterior mass sums to 1;
 - adding supporting evidence should not increase contradiction energy unless source reliability conflicts;
 - strict rule promotion requires a proof trace;
-- invalid citations force claim status to unsupported;
-- soft rules cannot promote strict truth claims.
+- invalid citations force strict claim status to unsupported;
+- soft rules cannot promote strict truth claims;
+- absence of evidence cannot be treated as evidence of absence without a record-duty and access-path basis;
+- adding unused suppression hypotheses increases parsimony penalty.
 
 ### Integration tests
 
-- ingestion → extraction → grounding → closure → world ranking → report.
+- ingestion → extraction → grounding → access modeling → closure → world ranking → report.
 
 ### Golden tests
 
@@ -114,7 +145,10 @@ Success: chirality has statistically significant predictive power beyond embeddi
   - subgroup resolution;
   - time-split resolution;
   - conflicting sources;
-  - source reliability downgrade.
+  - source reliability downgrade;
+  - expected record not produced;
+  - record affirmatively refutes claim;
+  - record not expected to exist.
 
 ### Red-team tests
 
@@ -122,7 +156,9 @@ Success: chirality has statistically significant predictive power beyond embeddi
 - semantically similar negations;
 - unsupported paraphrase;
 - misleading source with high lexical overlap;
-- evidence that supports a narrower claim than generated.
+- evidence that supports a narrower claim than generated;
+- false suppression inference from ordinary missingness;
+- strategic partial disclosure.
 
 ## Baseline suite
 
@@ -131,11 +167,12 @@ Success: chirality has statistically significant predictive power beyond embeddi
 3. **LLM debate:** multiple agents debate and summarize.
 4. **Self-consistency:** sample multiple answers and majority/consistency vote.
 5. **Argument graph only:** extract support/refute graph and rank by graph metrics.
-6. **Full GCTS:** evidence closure + worlds + chirality + residual decomposition.
+6. **GCTS without access modeling:** evidence closure + worlds + chirality, no record-access layer.
+7. **Full GCTS:** evidence closure + worlds + chirality + residual decomposition + access modeling.
 
 ## Statistical tests
 
-- Bootstrap CIs for ECE, Brier, coverage.
+- Bootstrap CIs for ECE, Brier, coverage, and access-state F1.
 - McNemar tests for paired pass/fail comparisons.
 - Mann-Whitney U for difficulty distributions.
 - Spearman/Pearson correlation for chirality predictiveness.
@@ -147,6 +184,7 @@ Success: chirality has statistically significant predictive power beyond embeddi
 - dataset manifest;
 - run manifest;
 - raw predictions;
+- access-state table;
 - world posterior table;
 - proof traces;
 - metrics JSON;

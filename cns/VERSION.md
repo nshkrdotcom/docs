@@ -1,7 +1,7 @@
 # Version
 
-CNS 7.0 / GCTS: Grounded Chiral Tensor Synthesis
+CNS 7.1 / GCTS: Grounded Chiral Tensor Synthesis
 
-Generated: 2026-05-10
+Generated: 2026-05-13
 
 Status: Research proposal docset.

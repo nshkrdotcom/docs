@@ -1,11 +1,12 @@
 {
-  "title": "CNS 7.0 / GCTS: Grounded Chiral Tensor Synthesis",
-  "generated_at": "2026-05-10T00:47:58.049879Z",
+  "title": "CNS 7.1 / GCTS: Grounded Chiral Tensor Synthesis",
+  "generated_at": "2026-05-13T00:00:00Z",
   "status": "research proposal docset; not full implementation",
   "files": [
     "MANIFEST.json",
     "README.md",
     "VERSION.md",
+    "appendices/adversarial_evidence_policy.md",
     "appendices/experiment_report_template.md",
     "appendices/formal_definitions_extended.md",
     "appendices/math_proof_sketches.md",
@@ -31,17 +32,18 @@
     "docs/15_chiral_resolution_algorithm.md",
     "docs/16_multiverse_view_ui.md",
     "docs/17_model_cards_and_calibration.md",
+    "docs/18_adversarial_evidence_and_likely_truth.md",
     "experiments/EXP_001_synthetic_latent_context.md",
     "experiments/EXP_002_scifact_fever_oracleless.md",
     "experiments/EXP_003_multiverse_calibration.md",
     "experiments/EXP_004_oracle_boundary_ablation.md",
     "experiments/EXP_005_chirality_predictiveness.md",
+    "experiments/EXP_006_adversarial_record_suppression.md",
     "references/annotated_bibliography.md",
     "references/references.bib",
     "references/source_map.md",
     "sketches/README.md",
-    "sketches/__pycache__/cns_types.cpython-313.pyc",
-    "sketches/__pycache__/worlds.cpython-313.pyc",
+    "sketches/adversarial_evidence.py",
     "sketches/calibration.py",
     "sketches/chirality.py",
     "sketches/cns_types.py",
@@ -53,6 +55,6 @@
     "tests/property_test_plan.md",
     "tests/testing_strategy.md"
   ],
-  "core_claim": "Maintain proof-carrying multiverse views and rank truth under limited evidence without runtime oracle dependency.",
-  "file_count": 49
+  "core_claim": "Maintain access-aware proof-carrying multiverse views and rank likely truth under limited, contradictory, and adversarial evidence without runtime oracle dependency.",
+  "file_count": 51
 }

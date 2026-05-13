@@ -29,32 +29,50 @@ Build:
 Exit criteria:
 
 - 100% invalid citations caught on tests;
-- no promoted claim without evidence;
+- no strict promoted claim without evidence;
 - basic SciFact/FEVER pipeline runs.
 
-## Phase 2 — Tensor closure and proof traces (Weeks 4–6)
+## Phase 2 — Access-state and missingness MVP (Weeks 4–5)
+
+Build:
+
+- record-access schema;
+- expected-record classifier;
+- access-state classifier;
+- absence/evidence-of-absence decision rules;
+- source-control and incentive metadata.
+
+Exit criteria:
+
+- access-state golden tests pass;
+- absence of evidence is never treated as evidence of absence without record-duty support;
+- record-contingent claims are represented separately from unsupported claims.
+
+## Phase 3 — Tensor closure and proof traces (Weeks 6–8)
 
 Build:
 
 - small monotone tensor-rule engine;
 - proof trace recorder;
-- strict/soft rule policy;
+- strict/soft/access rule policy;
 - zero-temperature closure.
 
 Exit criteria:
 
 - proof traces emitted for all strict claims;
 - strict rules cannot promote unsupported claims;
+- soft/access rules cannot promote strict claims;
 - unit and property tests pass.
 
-## Phase 3 — Multiverse world builder (Weeks 7–9)
+## Phase 4 — Multiverse world builder (Weeks 9–11)
 
 Build:
 
 - candidate world enumeration;
 - energy scoring;
 - posterior normalization;
-- claim truth ranking;
+- claim likely-truth ranking;
+- strict support mass;
 - entropy/confidence outputs.
 
 Exit criteria:
@@ -63,42 +81,46 @@ Exit criteria:
 - calibration pipeline reports Brier/ECE;
 - reports render ranked alternatives.
 
-## Phase 4 — Chirality and latent context (Weeks 10–12)
+## Phase 5 — Chirality, latent context, and access residuals (Weeks 12–14)
 
 Build:
 
 - round-trip chirality;
 - graph chiral tensor;
 - residual tensor;
-- basic NMF/Tucker-style latent context proposer;
+- access chirality;
+- basic NMF/Tucker-style latent context and access-state proposer;
 - residual reduction metrics.
 
 Exit criteria:
 
 - chirality predictiveness experiment runs;
 - synthetic latent context recovery tested;
+- adversarial record-suppression experiment runs;
 - top-3 world coverage target evaluated.
 
-## Phase 5 — Fine-tuning decision (Weeks 13–16)
+## Phase 6 — Fine-tuning decision (Weeks 15–18)
 
-If extraction remains bottleneck:
+If extraction or access classification remains bottleneck:
 
 - prepare LoRA training data;
 - train claim extraction adapter;
 - train relation extraction adapter;
+- train access-state adapter;
 - evaluate against non-fine-tuned pipeline.
 
 Go/no-go:
 
-- fine-tuning must improve grounding and calibration, not only fluency.
+- fine-tuning must improve grounding, access classification, and calibration, not only fluency.
 
-## Phase 6 — Research paper and demo (Weeks 17–20)
+## Phase 7 — Research paper and demo (Weeks 19–22)
 
 Deliverables:
 
 - full evaluation report;
 - ablation tables;
 - proof trace demos;
+- record-access demos;
 - interactive multiverse view;
 - paper draft.
 
@@ -111,6 +133,7 @@ cns-gcts/
     ingest.py
     extract.py
     verify.py
+    access.py
     tensor_logic.py
     worlds.py
     chirality.py
@@ -128,7 +151,8 @@ cns-gcts/
 
 - test before training;
 - validate before synthesis;
-- proof before promotion;
-- confidence before prose;
+- proof before strict promotion;
+- likelihood before prose;
+- confidence before conclusion;
 - abstain before hallucinate;
 - labels for calibration, never runtime truth.

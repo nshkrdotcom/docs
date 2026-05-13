@@ -1,6 +1,6 @@
 # Annotated Bibliography
 
-This bibliography supports the CNS 7.0 / Grounded Chiral Tensor Synthesis (GCTS) proposal. It is organized by what each source contributes to the buildable theory.
+This bibliography supports the CNS 7.1 / Grounded Chiral Tensor Synthesis (GCTS) proposal. It is organized by what each source contributes to the buildable theory.
 
 ## Evidence-grounded generation and verification
 

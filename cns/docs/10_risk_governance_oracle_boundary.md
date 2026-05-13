@@ -13,7 +13,7 @@
 ### Forbidden oracle use
 
 - Runtime access to gold labels.
-- Runtime human/model truth decisions that bypass evidence closure.
+- Runtime human/model truth decisions that bypass evidence closure and world ranking.
 - Dataset label leakage into retrieval, ranking, or world building.
 - Prompting an LLM to “decide” truth and using that as posterior.
 
@@ -21,9 +21,11 @@
 
 1. **Runtime manifest:** records whether labels were accessible. Any label access marks run as non-deployable.
 2. **Promotion policy:** strict claims require evidence references and proof trace.
-3. **Audit log:** every promoted claim has a trace from evidence to rule closure to world ranking.
-4. **Human review flag:** high-impact or high-uncertainty results require review.
-5. **Rule registry:** strict rules require approval and tests.
+3. **Likely-truth policy:** probable and plausible claims require posterior calculation over explicit worlds.
+4. **Access policy:** record-contingent claims must identify record dependencies and access states.
+5. **Audit log:** every promoted claim has a trace from evidence/access state to rule closure to world ranking.
+6. **Human review flag:** high-impact or high-uncertainty results require review.
+7. **Rule registry:** strict rules require approval and tests.
 
 ## Safety risks
 
@@ -38,6 +40,18 @@ Mitigation: confidence bands, entropy, uncertainty decomposition, estimative lan
 Risk: manipulated evidence changes world rankings.
 
 Mitigation: source reliability priors, source diversity metrics, adversarial evidence tests, source-quality uncertainty.
+
+### Access overreach
+
+Risk: system infers withholding, destruction, or concealment too readily from ordinary missingness.
+
+Mitigation: record-duty thresholds, access-path checks, competing missingness worlds, MDL penalty, conservative confidence.
+
+### Access underreach
+
+Risk: system treats inaccessible controlled records as simple lack of evidence.
+
+Mitigation: record-contingency state, access uncertainty, expected-record modeling, and explicit next-evidence requirements.
 
 ### Latent predicate abuse
 
@@ -59,16 +73,17 @@ Mitigation: render from structured payload only; post-render verifier; reject un
 
 ## Ethical boundary
 
-GCTS is a decision-support system. It should expose alternatives and uncertainty, not replace human judgment in high-stakes domains.
+GCTS is a decision-support system. It should expose alternatives, likely-truth rankings, access constraints, and uncertainty; it should not replace human judgment in high-stakes domains.
 
 ## Audit checklist
 
 Before deploying a result:
 
-- [ ] All promoted claims have resolvable citations.
+- [ ] All strict promoted claims have resolvable citations.
 - [ ] All strict claims have proof traces.
 - [ ] Runtime labels were unavailable.
-- [ ] Posterior and confidence are reported separately.
+- [ ] Posterior, strict support, and confidence are reported separately.
 - [ ] Top alternatives are shown.
+- [ ] Record-contingent claims identify record dependencies.
 - [ ] Uncertainty decomposition is shown.
 - [ ] Evidence that would change the conclusion is listed.

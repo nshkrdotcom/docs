@@ -9,7 +9,7 @@ Expected: proven/probable depending on rule policy.
 ## Case 2: Invalid citation
 
 Claim cites missing evidence ID.  
-Expected: unsupported; no promotion.
+Expected: unsupported; no strict promotion.
 
 ## Case 3: Similar negation
 
@@ -33,3 +33,23 @@ Expected: latent predicate `subgroup`.
 
 Two sources conflict; one is downgraded.  
 Expected: both worlds shown, posterior favors higher-quality source but uncertainty remains.
+
+## Case 7: Expected record inaccessible
+
+Claim depends on a high-duty record that is expected to exist but inaccessible.  
+Expected: record_contingent; not rejected solely due to missing record.
+
+## Case 8: Evidence of absence
+
+Expected record is available, in-scope, and affirmatively lacks the claimed event.  
+Expected: rejected or very unlikely unless a valid scope/context challenge exists.
+
+## Case 9: Record not expected
+
+Claim references a record type that ordinary process would not generate.  
+Expected: no absence penalty; record dependency may be ignored or marked not_generated.
+
+## Case 10: Withheld expected record
+
+Expected record is controlled by an actor with exposure, requested, and not produced.  
+Expected: competing benign and strategic missingness worlds; suppression hypothesis may affect likely-truth ranking but not strict proof.

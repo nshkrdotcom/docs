@@ -17,5 +17,9 @@ experiments:
     primary_metrics: [ece, brier, deployable]
   - id: EXP_005
     name: chirality_predictiveness
-    predictors: [round_trip_chirality, graph_chirality, residual_energy, embedding_distance, beta1]
+    predictors: [round_trip_chirality, graph_chirality, residual_energy, access_chirality, embedding_distance, beta1]
     dependent_variables: [iterations, residual_after_synthesis, false_synthesis_rate]
+  - id: EXP_006
+    name: adversarial_record_suppression
+    baselines: [rag, rag_nli, debate, gcts_no_access, gcts_full]
+    primary_metrics: [access_state_f1, likely_truth_brier, ece, false_absence_penalty_rate, suppression_hypothesis_precision]

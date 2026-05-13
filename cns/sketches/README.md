@@ -4,8 +4,9 @@ These Python files are reference sketches, not a full implementation. They defin
 
 ## Files
 
-- `cns_types.py` — dataclasses for evidence, claims, rules, proof traces, worlds, and reports.
-- `chirality.py` — graph and round-trip chirality functions.
+- `cns_types.py` — dataclasses for evidence, access states, claims, rules, proof traces, worlds, and reports.
+- `adversarial_evidence.py` — access-state and missing-record helper functions.
+- `chirality.py` — graph, round-trip, access, and residual chirality functions.
 - `worlds.py` — energy-based possible-world ranking and claim posterior computation.
 - `tensor_logic.py` — tiny tensor-logic closure sketch.
 - `synthetic_latent_context_experiment.py` — toy generator for latent-context contradictions.
