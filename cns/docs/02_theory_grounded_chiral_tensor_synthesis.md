@@ -34,7 +34,7 @@ where:
 - $owner_k$ is the actor controlling or expected to control the record;
 - $duty_k \in [0,1]$ estimates whether the record should exist under normal procedure, law, policy, practice, or instrumentation;
 - $expected_k \in [0,1]$ estimates expected observability;
-- $access_k \in \{available, inaccessible, sealed, withheld, destroyed, not\_generated, unknown\}$;
+- $access_k \in \{\texttt{available}, \texttt{inaccessible}, \texttt{sealed}, \texttt{withheld}, \texttt{destroyed}, \texttt{not\textunderscore{}generated}, \texttt{unknown}\}$;
 - $production_k$ describes whether the record was produced, requested, refused, partially produced, contradicted, or unavailable;
 - $q_k$ is confidence in the access-state classification.
 
@@ -70,7 +70,7 @@ $$
 where $p_j$ is a proposition, $a_j$ is a canonical argument frame, $\rho_j$ is a reference set, $\kappa_j$ is a record-contingency set, and $\sigma_j$ is a status in:
 
 $$
-\{\texttt{proven},\texttt{probable},\texttt{plausible},\texttt{record\_contingent},\texttt{conflicted},\texttt{unsupported},\texttt{rejected}\}.
+\{\texttt{proven},\texttt{probable},\texttt{plausible},\texttt{record\textunderscore{}contingent},\texttt{conflicted},\texttt{unsupported},\texttt{rejected}\}.
 $$
 
 ### Relations
@@ -78,7 +78,7 @@ $$
 Relations among claims are typed:
 
 $$
-R \subseteq C \times \{supports, refutes, implies, specializes, generalizes, qualifies, depends\_on, independent\} \times C.
+R \subseteq C \times \{\texttt{supports}, \texttt{refutes}, \texttt{implies}, \texttt{specializes}, \texttt{generalizes}, \texttt{qualifies}, \texttt{depends\textunderscore{}on}, \texttt{independent}\} \times C.
 $$
 
 ### Rules
@@ -131,7 +131,7 @@ is the grounding-synthesis closure.
 The orthesis is the stable structured state:
 
 $$
-(\mathcal{T}^*,\mathcal{A}^*) = G(S(\mathcal{T}^*,\mathcal{A}^*)).
+(\mathcal{T}^{\ast},\mathcal{A}^{\ast}) = G(S(\mathcal{T}^{\ast},\mathcal{A}^{\ast})).
 $$
 
 It is not an oracle truth. It is the structured state that survives language rendering without losing proof support, likely-truth support, access-state coherence, or explicit uncertainty.
@@ -295,7 +295,7 @@ The system must emit $P(c\mid E,A,I)$, $P_0(c\mid E)$, and $Conf(c)$ separately.
 GCTS maps numerical posterior intervals to estimative language:
 
 | Posterior interval | Estimative language |
-|---:|---|
+| ---: | --- |
 | 0.00–0.05 | almost certainly false |
 | 0.05–0.20 | very unlikely |
 | 0.20–0.40 | unlikely |
