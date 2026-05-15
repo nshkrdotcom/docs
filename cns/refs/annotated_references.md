@@ -2,7 +2,7 @@
 
 ## CNS lineage sources
 
-The CNS 2.0 lineage defines the central object and architecture: Structured Narrative Objects, multi-component critic pipeline, dialectical synthesis engine, and Evidential Entanglement. CNS 8.0 restores that center.
+The CNS 2.0 lineage defines Structured Narrative Objects, the multi-component critic pipeline, the dialectical synthesis engine, and Evidential Entanglement. CNS 8.0 uses that object model and pipeline.
 
 The CNS 3.x/Tinkerer lineage provides the operational pattern: Proposer, Antagonist, Synthesizer, semantic validation, citation validity, chirality, topology, and human review gates.
 

@@ -2,9 +2,9 @@
 
 ## Grounded Dialectical Orthesis
 
-This package is a replacement research proposal and implementation-plan docset for **Chiral Narrative Synthesis 8.0 (CNS 8.0)**.
+This docset defines **Chiral Narrative Synthesis 8.0 (CNS 8.0)**.
 
-CNS 8.0 centers the original CNS mechanism:
+CNS 8.0 uses the original CNS sequence:
 
 ```text
 conflicting narrative objects
@@ -23,10 +23,10 @@ The evidence/access/possible-world machinery is included only as a constraint an
 
 ## Package map
 
-- `TOC.md` — complete table of contents.
-- `docs/` — research proposal, theory, architecture, implementation, experiments, and novelty analysis.
+- `TOC.md` — source table of contents.
+- `docs/` — research proposal, theory, architecture, implementation, experiments, and contribution analysis.
 - `schemas/` — JSON schemas for SNO-8, evidence atoms, proof traces, and orthesis reports.
-- `sketches/` — small Python sketches for the core computational ideas.
+- `sketches/` — small Python sketches for the computational components.
 - `configs/` — MVP config and runtime policy examples.
 - `experiments/` — experiment matrix and ablation suite.
 - `prompts/` — bounded LLM role prompts.
@@ -39,10 +39,10 @@ Use **Chiral Narrative Synthesis** or **CNS 8.0** for the work. Do not rename th
 
 ## What CNS 8.0 preserves
 
-- Structured Narrative Objects as the central computational object.
+- Structured Narrative Objects as the main data object.
 - Dialectical roles: Proposer, Antagonist, Synthesizer, critic ensemble.
 - Chirality as structured asymmetry, not generic disagreement.
-- Evidential Entanglement as the productive-conflict selector.
+- Evidential Entanglement as the conflict selector.
 - Orthesis as stable synthesis candidate / fixed point.
 - Tensor logic as proof-carrying synthesis substrate.
 - Predicate invention as contradiction-driven hidden-context discovery.

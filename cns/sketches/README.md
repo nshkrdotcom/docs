@@ -1,6 +1,6 @@
 # Python Sketches
 
-These files are minimal scaffolds for CNS 8.0 implementation planning.
+These files are minimal small examples for CNS 8.0 implementation planning.
 
 - `cns8_types.py` — dataclasses for EvidenceAtom, Claim, Relation, ProofTrace, SNO.
 - `chirality.py` — evidence entanglement and chirality proxies.

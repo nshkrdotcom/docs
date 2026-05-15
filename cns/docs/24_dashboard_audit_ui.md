@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The dashboard should make CNS structure visible. It should not hide the machinery behind a single answer.
+The dashboard shows CNS structure directly instead of reducing a run to one answer.
 
 ## Views
 

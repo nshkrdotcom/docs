@@ -124,4 +124,4 @@ Do not collapse these into one confidence score.
 - round-trip drift;
 - topology overclaim;
 - possible-world substitution;
-- LLM truth voting.
+- LLM judgments.

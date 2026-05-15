@@ -47,7 +47,7 @@ Human review may be used:
 - as calibration data;
 - as training data in future offline runs.
 
-Human review must not be silently used as a runtime oracle in the same evaluation run.
+Human review is recorded after runtime unless the run is explicitly marked as a review or retraining step.
 
 ## Review labels
 

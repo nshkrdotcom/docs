@@ -4,9 +4,9 @@
 
 This document states what CNS 8.0 restores, what it keeps from the grounding/access work, and what it rejects.
 
-## Non-negotiable CNS spine
+## CNS 8.0 core flow
 
-CNS 8.0 uses this spine:
+CNS 8.0 uses this flow:
 
 ```text
 SNOs
@@ -22,13 +22,13 @@ SNOs
 → audit / uncertainty report
 ```
 
-Any subsystem that does not strengthen that spine is excluded or demoted.
+Other subsystems are infrastructure or are omitted.
 
 ## Restored concepts
 
 ### Structured Narrative Objects
 
-SNOs are the primary unit. Evidence atoms exist inside SNOs. A CNS system is not a bag of claims; it is a population of narrative objects with identity, structure, provenance, and synthesis lineage.
+SNOs are the unit of analysis. Evidence atoms are attached inside SNOs, alongside identity, structure, provenance, and synthesis lineage.
 
 ### Dialectical agents
 
@@ -36,7 +36,7 @@ The Proposer, Antagonist, Synthesizer, and critic ensemble are explicit roles wi
 
 ### Evidential Entanglement
 
-CNS selects conflicts where accounts disagree over shared evidence. This is the productive zone for synthesis. Low-overlap disagreement is often just topic mismatch.
+CNS selects conflicts where accounts disagree over shared evidence. This is the target case for synthesis. Low-overlap disagreement is often just topic mismatch.
 
 ### Chirality
 
@@ -60,18 +60,18 @@ Graph cycles, Betti-1, persistence, holonomy, and curvature are diagnostics of s
 
 ## Useful material retained from the later grounding/access work
 
-The later grounding/access material is useful when subordinate to CNS:
+The later grounding/access material supports CNS in these roles:
 
 | Material | CNS 8.0 role |
 |---|---|
 | Evidence atoms | Span-level grounding inside SNOs |
 | Record-access states | Missingness and source-availability metadata |
 | Possible-world rankings | Auxiliary uncertainty layer after synthesis |
-| Oracle boundary | Training/runtime hygiene |
+| Oracle boundary | Training/runtime separation |
 | Strict proof vs likely truth | Output classification |
 | Calibration | Evaluation and reporting |
 | Audit reports | Final interface, not the engine |
-| Prior-art discipline | Novelty boundary and publication prep |
+| Prior-art boundary | Publication boundary |
 
 ## Rejected failure pattern
 
@@ -81,7 +81,7 @@ CNS 8.0 rejects this structure:
 evidence atom → record state → possible world → posterior ranking → audit report
 ```
 
-That is a verification/ranking machine. It can support CNS but cannot replace CNS.
+That is a verification/ranking machine. It can support CNS but does not replace CNS.
 
 ## Correct hierarchy
 

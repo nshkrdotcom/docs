@@ -2,7 +2,7 @@
 
 ## Policy
 
-CNS 8.0 may train with oracles. CNS 8.0 must not run with hidden oracles.
+CNS 8.0 can use oracles during training and evaluation. Runtime analysis cannot use hidden labels, answer keys, or LLM judgments.
 
 ## Allowed offline oracle use
 
@@ -47,7 +47,7 @@ Every run manifest records:
 
 ## Output language
 
-CNS must not present likely claims as strict claims.
+CNS keeps likely claims separate from strict claims.
 
 Allowed:
 

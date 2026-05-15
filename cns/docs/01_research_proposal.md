@@ -6,9 +6,9 @@
 
 ## Abstract
 
-Chiral Narrative Synthesis 8.0 (CNS 8.0) is a buildable research program for synthesizing grounded narrative objects under contradiction and incomplete information. The system operates over **Structured Narrative Objects** (SNOs), not loose claims. It identifies productive conflicts by combining **chirality** with **Evidential Entanglement**, stress-tests them through an Antagonist and critic ensemble, grounds all promoted claims through tensor-logic proof traces, uses residual contradictions to propose latent predicates, and emits a synthesized SNO called an **orthesis candidate** when the synthesis survives repeated grounding and rendering.
+Chiral Narrative Synthesis 8.0 (CNS 8.0) is a research and implementation plan for synthesizing grounded narrative objects under contradiction and incomplete information. The system operates over **Structured Narrative Objects** (SNOs), not loose claims. It identifies productive conflicts by combining **chirality** with **Evidential Entanglement**, stress-tests them through an Antagonist and critic ensemble, grounds all promoted claims through tensor-logic proof traces, uses residual contradictions to propose latent predicates, and emits a synthesized SNO called an **orthesis candidate** when the synthesis survives repeated grounding and rendering.
 
-CNS 8.0 is not a fact-verification wrapper and not a possible-world ranker. Fact verification, access states, possible worlds, calibration, and audit reporting are used as constraints on narrative synthesis. The central operation remains **grounded dialectical synthesis**: constructing a new narrative object from structured disagreement while preserving provenance, residual uncertainty, and unresolved contradiction.
+CNS 8.0 uses fact verification, access states, possible worlds, calibration, and audit reporting as constraints on narrative synthesis. It performs **grounded dialectical synthesis**: constructing a new narrative object from structured disagreement while preserving provenance, residual uncertainty, and unresolved contradiction.
 
 ## Core hypothesis
 
@@ -35,7 +35,7 @@ When contradictions persist under zero-temperature proof closure, can residual-t
 
 ### RQ4 — Runtime oracle discipline
 
-Can the system train with labels and expert oracles while running without runtime gold labels, answer keys, or LLM truth votes?
+Can the system train with labels and expert oracles while running without runtime gold labels, answer keys, or LLM judgments?
 
 ### RQ5 — Multiverse-aware output
 
@@ -47,13 +47,13 @@ Can possible-world ranking and record-access states improve uncertainty reportin
 2. **CNS Productive Conflict Score:** a pair-selection metric combining chiral tension and evidential entanglement.
 3. **Grounded Dialectical Orthesis:** a synthesis loop that emits an orthesis candidate only after surviving grounding, antagonist pressure, proof closure, and residual analysis.
 4. **Contradiction-Driven Predicate Invention:** tensor decomposition over residual contradiction mass to propose latent context predicates.
-5. **Strict Runtime Oracle Boundary:** offline oracle use for training/calibration/evaluation, with no runtime label leakage.
-6. **Buildable MVP:** a staged implementation plan using retrieval, extraction, NLI, graph topology, tensor closure, residual decomposition, and bounded LLM rendering.
-7. **Evaluation Suite:** synthetic latent-context tests, SciFact/FEVER grounding tests, SNO-pair synthesis tests, and ablations.
+5. **Runtime Oracle Boundary:** offline oracle use for training/calibration/evaluation, with no runtime label leakage.
+6. **MVP:** a staged implementation plan using retrieval, extraction, NLI, graph topology, tensor closure, residual decomposition, and bounded LLM rendering.
+7. **Evaluation Plan:** synthetic latent-context tests, SciFact/FEVER grounding tests, SNO-pair synthesis tests, and ablations.
 
 ## Scope
 
-CNS 8.0 is a research and engineering plan. The Python files in `sketches/` are not production code; they are scaffolds for implementation and test design.
+CNS 8.0 is a research and engineering plan. The Python files in `sketches/` are small examples for implementation and test design.
 
 ## System-level pipeline
 
@@ -73,9 +73,9 @@ source corpus
 → audit report exposes proof traces, uncertainties, and residual contradictions
 ```
 
-## What is deliberately not central
+## Boundary conditions
 
-- LLM debate as truth voting.
+- LLM debate used to decide truth.
 - RAG as final synthesis.
 - Possible-world posterior mass as replacement for narrative synthesis.
 - Evidence atoms as replacement for SNOs.
@@ -84,7 +84,7 @@ source corpus
 
 ## Expected MVP result
 
-The first CNS 8.0 MVP should demonstrate:
+The first CNS 8.0 MVP targets:
 
 1. citation-valid SNO extraction on a small corpus;
 2. productive-pair selection by chirality and evidential entanglement;

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-CNS 8.0 is not a new name for an unrelated architecture. It consolidates the earlier CNS line and keeps the parts that strengthen the original mechanism.
+CNS 8.0 consolidates the earlier CNS line around the parts that support the original mechanism.
 
 ## Lineage map
 
@@ -11,7 +11,7 @@ CNS 8.0 is not a new name for an unrelated architecture. It consolidates the ear
 | CNS 2.0 | SNOs | primary computational object |
 | CNS 2.0 | Multi-component critic pipeline | critic ensemble |
 | CNS 2.0 | Dialectical synthesis engine | Proposer / Antagonist / Synthesizer loop |
-| CNS 2.0 | Evidential Entanglement | productive-conflict selector |
+| CNS 2.0 | Evidential Entanglement | conflict selector |
 | CNS 3.x | Proposer/Antagonist/Synthesizer implementation pattern | agent architecture |
 | CNS 3.x | citation validity, entailment, semantic validation | grounding critics |
 | CNS 3.x | beta-1 and chirality metrics | topology/chirality critics |

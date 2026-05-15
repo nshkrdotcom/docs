@@ -16,7 +16,7 @@ LLMs are proposal and rendering tools. They are not truth oracles.
 
 ## Forbidden LLM roles
 
-- final truth voting;
+- final answer selection;
 - promotion of strict claims without proof trace;
 - hidden use of gold labels;
 - silent invention of evidence IDs;
@@ -39,7 +39,7 @@ Do not fine-tune the model to make final truth judgments unless the output is cl
 
 ## LoRA
 
-Use LoRA or similar adapter methods for extraction and formatting where the goal is schema reliability and citation discipline.
+Use LoRA or similar adapter methods for extraction and formatting where the goal is schema reliability and citation reliability.
 
 Recommended first adapters:
 
@@ -85,7 +85,7 @@ Forbidden:
 
 ## Prompt design
 
-Prompts should be role-bounded and output schema-constrained. See `prompts/`.
+Prompts are role-bounded and schema-constrained. See `prompts/`.
 
 ## Model choice
 

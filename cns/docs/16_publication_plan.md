@@ -4,7 +4,7 @@
 
 **Title:** Chiral Narrative Synthesis 8.0: Grounded Dialectical Orthesis for Proof-Carrying Narrative Resolution
 
-Core claims:
+Claims:
 
 1. SNOs preserve narrative structure better than claim-only verification.
 2. Chirality + Evidential Entanglement selects productive conflicts.
@@ -25,19 +25,19 @@ Required results:
 
 **Title:** Language–Logic Chirality Predicts Synthesis Difficulty in Evidence-Grounded Narrative Objects
 
-Core claim: graph/evidence/language–logic chirality predicts synthesis difficulty better than embedding distance or contradiction labels alone.
+Claim: graph/evidence/language–logic chirality predicts synthesis difficulty better than embedding distance or contradiction labels alone.
 
 ## Paper 3 — Predicate invention
 
 **Title:** Contradiction-Driven Predicate Invention for Grounded Narrative Synthesis
 
-Core claim: residual tensor factorization can recover latent context variables in synthetic and semi-real synthesis tasks.
+Claim: residual tensor factorization can recover latent context variables in synthetic and semi-real synthesis tasks.
 
 ## Paper 4 — Oracle boundary
 
-**Title:** Training with Oracles, Running without Oracles: Runtime Discipline for Undersupervised Synthesis Systems
+**Title:** Training with Oracles, Running without Oracles: Runtime Separation for Undersupervised Synthesis Systems
 
-Core claim: oracle use can be rigorous when labels train/calibrate/evaluate but do not enter runtime decision-making.
+Claim: oracle use can be valid when labels train/calibrate/evaluate but do not enter runtime decision-making.
 
 ## Demo
 

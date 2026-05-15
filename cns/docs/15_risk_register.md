@@ -6,7 +6,7 @@ Symptom: final output is top worlds or claim labels but no synthesized SNO.
 
 Mitigation: every run must emit SNO lineage and synthesis status.
 
-## Risk 2 — LLM truth voting
+## Risk 2 — LLM judgments
 
 Symptom: an LLM judge decides which narrative is true.
 
@@ -52,7 +52,7 @@ Mitigation: residual contradiction section required in audit report.
 
 Symptom: doc reads like a collection of known systems.
 
-Mitigation: keep the CNS spine explicit and evaluate interactions/ablations.
+Mitigation: keep the SNO synthesis flow visible and evaluate module interactions/ablations.
 
 ## Risk 10 — Dataset leakage
 
@@ -64,7 +64,7 @@ Mitigation: oracle-boundary audit, split hashes, prompt scans.
 
 Symptom: evidence IDs do not resolve.
 
-Mitigation: fail closed; citation validity hard gate.
+Mitigation: reject invalid inputs; citation validity required check.
 
 ## Risk 12 — Calibration laundering
 

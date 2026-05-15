@@ -15,7 +15,7 @@
 11. [Implementation Plan](docs/11_implementation_plan.md)
 12. [Experiment and Evaluation Plan](docs/12_experiment_evaluation_plan.md)
 13. [Metrics and Acceptance Criteria](docs/13_metrics_acceptance_criteria.md)
-14. [Prior Art and Novelty Boundary](docs/14_prior_art_novelty_boundary.md)
+14. [Prior Art and Contribution Boundary](docs/14_prior_art_novelty_boundary.md)
 15. [Risk Register and Failure Modes](docs/15_risk_register.md)
 16. [Publication Plan](docs/16_publication_plan.md)
 17. [Glossary](docs/17_glossary.md)

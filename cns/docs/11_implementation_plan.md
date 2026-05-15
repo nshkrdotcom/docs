@@ -2,7 +2,7 @@
 
 ## MVP objective
 
-Build a CNS 8.0 prototype that can process a small evidence corpus, produce SNOs, identify productive contradictions, perform proof-constrained synthesis, recover simple latent predicates on synthetic tasks, and emit an audit-ready orthesis candidate.
+Build a CNS 8.0 prototype that can process a small evidence corpus, produce SNOs, identify productive contradictions, perform proof-constrained synthesis, recover simple latent predicates on synthetic tasks, and emit an orthesis candidate with evidence, proof traces, residuals, and uncertainty recorded.
 
 ## Phase 0 — Repository skeleton
 
@@ -27,7 +27,7 @@ Components:
 Acceptance criteria:
 
 - every evidence atom has stable ID and hash;
-- missing evidence IDs fail closed;
+- missing evidence IDs reject invalid inputs;
 - parser handles valid and invalid SNOs;
 - citation validity measured per claim.
 

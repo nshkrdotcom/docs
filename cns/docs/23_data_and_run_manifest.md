@@ -2,7 +2,7 @@
 
 ## Why manifests matter
 
-CNS 8.0 experiments must prevent oracle leakage and preserve reproducibility.
+CNS 8.0 experiment records track oracle separation and reproducibility.
 
 ## Dataset manifest
 
@@ -74,7 +74,7 @@ runs/{run_id}/
 
 ## Oracle leakage fields
 
-Runtime input schemas must exclude:
+Runtime input schemas exclude:
 
 - label;
 - gold rationale;

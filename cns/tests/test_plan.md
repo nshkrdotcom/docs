@@ -4,7 +4,7 @@
 
 - EvidenceAtom hashing and lookup.
 - SNO schema validation.
-- citation validity fail-closed behavior.
+- citation-validity rejection behavior.
 - evidence entanglement calculation.
 - graph chirality proxy.
 - zero-temperature closure.

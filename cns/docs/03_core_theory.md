@@ -123,7 +123,7 @@ where $P_0$ is zero-temperature proof closure, $R$ is residual contradiction, an
 
 ## 7. Failure conditions
 
-CNS must refuse synthesis or emit only a partial synthesis when:
+CNS returns no synthesis or a partial synthesis when:
 
 - citations fail;
 - evidence does not entail promoted claims;

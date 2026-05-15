@@ -1,8 +1,8 @@
-# 14 — Prior Art and Novelty Boundary
+# 14 — Prior Art and Contribution Boundary
 
 ## Purpose
 
-CNS 8.0 must be defensible without hiding its dependencies. This document states what prior work covers and where CNS 8.0 is different.
+This document states what prior work covers and where CNS 8.0 differs.
 
 ## Fact verification
 
@@ -38,13 +38,13 @@ CNS uses related neuro-symbolic ideas but adds chiral narrative selection, evide
 
 Tensor Logic proposes tensor equations as a unifying construct for neural, symbolic, and statistical AI, including the observation that logical rules and Einstein summation can be treated in a shared language.
 
-CNS 8.0 uses tensor logic as a proof and closure substrate. The CNS novelty is not "rules as tensors" alone; it is the use of tensor closure inside chiral narrative synthesis, with residual contradiction driving predicate invention and orthesis testing.
+CNS 8.0 uses tensor logic as a proof and closure substrate. This is not "rules as tensors" alone; it is the use of tensor closure inside chiral narrative synthesis, with residual contradiction driving predicate invention and orthesis testing.
 
 ## Probabilistic Soft Logic
 
 Probabilistic Soft Logic provides weighted first-order-like rules and efficient probabilistic inference.
 
-CNS can borrow calibration and soft-rule ideas, but strict CNS promotion requires proof traces and explicit runtime oracle boundaries.
+CNS can borrow calibration and soft-rule ideas, but strict CNS promotion requires proof traces and runtime oracle boundaries.
 
 ## Large Concept Models
 
@@ -54,13 +54,13 @@ CNS can use concept-level representations for $L$, but CNS requires explicit gro
 
 ## Intelligence analysis and ACH
 
-Analysis of Competing Hypotheses and analytic standards emphasize competing hypotheses, uncertainty, source evaluation, and disciplined probability language.
+Analysis of Competing Hypotheses and analytic standards emphasize competing hypotheses, uncertainty, source evaluation, and controlled probability language.
 
-CNS uses these as reporting discipline. CNS differs by constructing proof-bearing narrative objects, measuring chiral tension, and performing predicate invention.
+CNS uses these as reporting method. CNS differs by constructing proof-bearing narrative objects, measuring chiral tension, and performing predicate invention.
 
-## Novelty claim
+## Contribution claim
 
-CNS 8.0's strongest novelty is the integrated mechanism:
+CNS 8.0's strongest contribution is the integrated mechanism:
 
 ```text
 SNOs
@@ -75,9 +75,9 @@ SNOs
 
 No single prior-art bucket covers this full pipeline.
 
-## Novelty boundary
+## Contribution boundary
 
-Do not claim novelty for:
+Do not claim contribution for:
 
 - RAG retrieval;
 - NLI entailment scoring;
@@ -88,4 +88,4 @@ Do not claim novelty for:
 - tensor factorization in general;
 - multi-agent debate in general.
 
-Claim novelty for the CNS composition and the specific role each component plays in grounded dialectical synthesis.
+Claim contribution for the CNS composition and the specific role each component plays in grounded dialectical synthesis.
