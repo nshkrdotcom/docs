@@ -82,16 +82,7 @@ High entanglement without chiral opposition is agreement or redundancy. High chi
 ## 4. Productive Conflict Score
 
 $$
-\mathrm{PCS}(a,b)
-=
-\sigma(
-\alpha \chi_G
-+\beta \chi_E
-+\gamma \chi_{LL}
-+\delta \mathrm{Ent}
-+\lambda \chi_E\mathrm{Ent}
--\eta \mathrm{AccessGap}
-)
+\mathrm{PCS}(a,b) = \sigma(\alpha \chi_G +\beta \chi_E +\gamma \chi_{LL} +\delta \mathrm{Ent} +\lambda \chi_E\mathrm{Ent} -\eta \mathrm{AccessGap})
 $$
 
 The interaction term $\chi_E\mathrm{Ent}$ is central: CNS cares about conflict over shared evidence.
