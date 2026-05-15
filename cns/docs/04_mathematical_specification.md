@@ -66,7 +66,7 @@ A large holonomy residual marks unstable narrative transport.
 Let $F$ be grounded facts and $R_0$ be zero-temperature rules. A rule $r$ has the form:
 
 ```math
-Y[\mathbf{i}] = \operatorname{step}\left(\sum_{\mathbf{j}} \prod_k X_k[\mathbf{i}_k,\mathbf{j}_k]\right)
+Y[\mathbf{i}] = \mathrm{step}\left(\sum_{\mathbf{j}} \prod_k X_k[\mathbf{i}_k,\mathbf{j}_k]\right)
 ```
 
 The closure is the least fixed point:
