@@ -42,10 +42,10 @@
 
 **Assumptions.**
 
-- Grounding function \(G\) is deterministic or variance-bounded under fixed configuration.
+- Grounding function $G$ is deterministic or variance-bounded under fixed configuration.
 - Logic state comparison weights proof-critical atoms.
 
-**Test.** CNS output has lower \(\chi_{LL}\) than baseline summaries.
+**Test.** CNS output has lower $\chi_{LL}$ than baseline summaries.
 
 ## Claim 5 — Possible-world ranking improves uncertainty reporting but does not create synthesis
 

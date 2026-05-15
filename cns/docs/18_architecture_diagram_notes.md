@@ -105,4 +105,4 @@ The substrate constrains synthesis; it is not the framework.
        └───────────────────┘
 ```
 
-The orthesis criterion tests whether the \(G\circ S\) loop preserves proof-critical structure.
+The orthesis criterion tests whether the $G\circ S$ loop preserves proof-critical structure.

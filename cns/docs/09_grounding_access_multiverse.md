@@ -72,9 +72,9 @@ Each world contains:
 
 CNS may compute:
 
-\[
+$$
 P(W_i\mid E,A)
-\]
+$$
 
 but this is only an uncertainty report. It is not the CNS engine.
 

@@ -6,10 +6,10 @@ Semantic similarity does not imply logical compatibility. Two texts can be seman
 
 ## Spaces
 
-- \(L\): language / embedding / concept space.
-- \(\mathcal{T}\): logic / tensor / proof space.
-- \(G: L \to \mathcal{T}\): grounding.
-- \(S: \mathcal{T} \to L\): synthesis or rendering.
+- $L$: language / embedding / concept space.
+- $\mathcal{T}$: logic / tensor / proof space.
+- $G: L \to \mathcal{T}$: grounding.
+- $S: \mathcal{T} \to L$: synthesis or rendering.
 
 ## Bundle view
 
@@ -35,10 +35,10 @@ ground → logic inference → render
 
 The difference is chiral distortion.
 
-\[
+$$
 \chi_{LL} =
 \|G(S(T)) - T\|_\Omega
-\]
+$$
 
 This is the key CNS 8.0 round-trip test.
 
@@ -55,15 +55,15 @@ SNO_A
 → SNO_A'
 ```
 
-If \(SNO_A'\) differs from \(SNO_A\) in proof-critical atoms, the narrative is unstable.
+If $SNO_A'$ differs from $SNO_A$ in proof-critical atoms, the narrative is unstable.
 
 ## Orthesis in the bundle
 
 Orthesis is a stable section:
 
-\[
+$$
 T^* = G(S(T^*))
-\]
+$$
 
 with acceptable residuals and proof traces.
 
@@ -71,7 +71,7 @@ In practice, CNS accepts an orthesis candidate when repeated render/re-ground cy
 
 ## Why this is different from vector averaging
 
-Vector averaging produces a midpoint in \(L\). CNS synthesis seeks a stable state in \(\mathcal{T}\) that can be rendered into \(L\) without losing proof-critical structure.
+Vector averaging produces a midpoint in $L$. CNS synthesis seeks a stable state in $\mathcal{T}$ that can be rendered into $L$ without losing proof-critical structure.
 
 ## Why this is different from LLM debate
 
@@ -83,7 +83,7 @@ Fact verification labels claims. CNS builds a new narrative object when contradi
 
 ## Testable predictions
 
-1. High \(\chi_{LL}\) predicts synthesis difficulty.
+1. High $\chi_{LL}$ predicts synthesis difficulty.
 2. Orthesis candidates have lower round-trip residual than ordinary summaries.
-3. Predicate invention reduces \(\chi_{LL}\) when the original predicate vocabulary is incomplete.
+3. Predicate invention reduces $\chi_{LL}$ when the original predicate vocabulary is incomplete.
 4. Possible-world ranking alone does not reduce round-trip residual unless it is connected to synthesis.

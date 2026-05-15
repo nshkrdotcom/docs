@@ -22,14 +22,14 @@ Target strict claims: ≥ 0.75 in MVP, domain-adjusted later.
 
 ### Zero-Temperature Hallucination Rate
 
-\[
+$$
 ZTHR =
 \frac{
 \#\text{strict promoted claims without valid proof trace}
 }{
 \#\text{strict promoted claims}
 }
-\]
+$$
 
 Target: 0.
 
@@ -57,10 +57,10 @@ Unresolved support/refute contradiction mass after proof closure and accepted pr
 
 ### Predicate-Invention Utility
 
-\[
+$$
 PIU =
 \frac{\Delta ResidualEnergy}{1 + PredicateComplexity}
-\]
+$$
 
 ### False Predicate Rate
 
@@ -72,15 +72,15 @@ Fraction of synthesized SNOs satisfying round-trip and proof criteria.
 
 ### Round-trip residual
 
-\[
+$$
 \chi_{LL}=\|G(S(T))-T\|_\Omega
-\]
+$$
 
 ### Beta-1 reduction
 
-\[
+$$
 \Delta \beta_1 = \beta_1(G_{input}) - \beta_1(G_{synth})
-\]
+$$
 
 CNS should not force cycles to zero when the contradiction is real. Preserved contradictions must be explicit.
 

@@ -10,9 +10,9 @@ CNS 8.0 separates rules by temperature:
 
 | Temperature | Role | Promotion status |
 |---:|---|---|
-| \(T=0\) | strict proof, deterministic closure | may promote strict claims |
-| \(0<T<1\) | analogical bridge, soft rule | may propose hypotheses |
-| annealed \(T\downarrow 0\) | exploratory claim converted to proof obligation | may promote only after strict proof |
+| $T=0$ | strict proof, deterministic closure | may promote strict claims |
+| $0<T<1$ | analogical bridge, soft rule | may propose hypotheses |
+| annealed $T\downarrow 0$ | exploratory claim converted to proof obligation | may promote only after strict proof |
 | LLM-only | language proposal | cannot promote truth |
 
 ## Example tensor rule
@@ -25,11 +25,11 @@ supported_claim(c) ← cites(c,e), entails(e,c)
 
 Tensor form:
 
-\[
+$$
 Supported[c] = step(Cites[c,e] \cdot Entails[e,c])
-\]
+$$
 
-The repeated index \(e\) is contracted. `step` is the zero-temperature gate.
+The repeated index $e$ is contracted. `step` is the zero-temperature gate.
 
 ## Proof-carrying synthesis
 
@@ -92,14 +92,14 @@ A latent predicate is accepted only when it:
 
 ## Predicate-Invention Utility
 
-\[
+$$
 PIU =
 \frac{
 \Delta \mathrm{ResidualEnergy}
 }{
 1 + \mathrm{PredicateComplexity}
 }
-\]
+$$
 
 A predicate with high residual reduction but high complexity may still be rejected by the Novelty-Parsimony Critic.
 

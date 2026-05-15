@@ -50,7 +50,7 @@ Hu et al. introduce low-rank adaptation for efficient fine-tuning. CNS may use L
 
 ### Large Concept Models
 
-Meta's LCM work models language over higher-level sentence/concept representations. CNS can use concept representations as part of language space \(L\).
+Meta's LCM work models language over higher-level sentence/concept representations. CNS can use concept representations as part of language space $L$.
 
 ### ICD 203 and ACH
 

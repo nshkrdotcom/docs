@@ -50,7 +50,7 @@ CNS can borrow calibration and soft-rule ideas, but strict CNS promotion require
 
 Large Concept Models operate over higher-level sentence/concept representations rather than token-level prediction.
 
-CNS can use concept-level representations for \(L\), but CNS requires explicit grounding into \(\mathcal{T}\), proof traces, and synthesis stability.
+CNS can use concept-level representations for $L$, but CNS requires explicit grounding into $\mathcal{T}$, proof traces, and synthesis stability.
 
 ## Intelligence analysis and ACH
 

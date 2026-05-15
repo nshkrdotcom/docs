@@ -28,7 +28,7 @@ Mitigation: access-state critic; separate absence-of-evidence from evidence-of-a
 
 Symptom: synthesized text re-grounds into a different logic state.
 
-Mitigation: orthesis loop; \(\chi_{LL}\) threshold.
+Mitigation: orthesis loop; $\chi_{LL}$ threshold.
 
 ## Risk 6 — Topology theater
 

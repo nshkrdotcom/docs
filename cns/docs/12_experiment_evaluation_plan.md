@@ -92,8 +92,8 @@ For each synthesized SNO:
 1. render to natural language;
 2. re-extract SNO;
 3. align proof-critical atoms;
-4. compute \(\chi_{LL}\);
-5. repeat for \(n\) cycles.
+4. compute $\chi_{LL}$;
+5. repeat for $n$ cycles.
 
 ### Metrics
 
@@ -111,7 +111,7 @@ Test whether topology metrics predict synthesis difficulty.
 
 ### Metrics
 
-- \(\beta_1\) before/after synthesis;
+- $\beta_1$ before/after synthesis;
 - persistence features;
 - chiral tensor norm;
 - residual energy;
