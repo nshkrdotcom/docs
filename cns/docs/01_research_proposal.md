@@ -1,126 +1,96 @@
-# 01 — Research Proposal
+# 01 — CNS 8.0 Research Proposal
 
-## Project title
+## Title
 
-**Grounded Chiral Tensor Synthesis: A Buildable Framework for Likely-Truth Ranking under Limited, Contradictory, and Adversarial Information**
+**Chiral Narrative Synthesis 8.0: Grounded Dialectical Orthesis through Chiral Tension, Evidential Entanglement, Tensor Logic, and Predicate Invention**
 
-## Research question
+## Abstract
 
-Can a multi-agent, proof-carrying, access-aware system construct calibrated likely-truth rankings from limited, contradictory, and adversarially controlled evidence without relying on a runtime oracle?
+Chiral Narrative Synthesis 8.0 (CNS 8.0) is a buildable research program for synthesizing grounded narrative objects under contradiction and incomplete information. The system operates over **Structured Narrative Objects** (SNOs), not loose claims. It identifies productive conflicts by combining **chirality** with **Evidential Entanglement**, stress-tests them through an Antagonist and critic ensemble, grounds all promoted claims through tensor-logic proof traces, uses residual contradictions to propose latent predicates, and emits a synthesized SNO called an **orthesis candidate** when the synthesis survives repeated grounding and rendering.
 
-## Hypothesis
+CNS 8.0 is not a fact-verification wrapper and not a possible-world ranker. Fact verification, access states, possible worlds, calibration, and audit reporting are used as constraints on narrative synthesis. The central operation remains **grounded dialectical synthesis**: constructing a new narrative object from structured disagreement while preserving provenance, residual uncertainty, and unresolved contradiction.
 
-A system that combines evidence-grounded claim extraction, tensor-logic proof closure, access-state modeling, institutional-incentive modeling, chiral mismatch measurement, and possible-world ranking will produce better calibrated and more auditable likely-truth syntheses than RAG-only, LLM-debate-only, or argument-graph-only baselines.
+## Core hypothesis
 
-## Motivation
+Conflicting accounts become productive when they have both:
 
-Limited information does not justify either a single overconfident answer or a retreat into “not proven.” It justifies a structured set of alternatives with explicit likelihood, confidence, evidence coverage, access constraints, source incentives, and uncertainty.
+1. high **chiral tension** — structured asymmetry or non-commuting language–logic round-trip distortion; and
+2. high **Evidential Entanglement** — substantial overlap in the evidence base they interpret differently.
 
-Intelligence analysis, investigative work, scientific synthesis, legal reasoning, and institutional accountability all require inference under incomplete records. CNS 7.1 turns that discipline into an executable AI architecture: the system maintains plausible worlds, ranks them, exposes evidence and record-access diagnostics, and distinguishes absence of evidence from evidence of absence.
+CNS 8.0 predicts that high-chirality / high-entanglement pairs are better synthesis targets than pairs selected by embedding distance, debate disagreement, RAG retrieval score, or claim-level contradiction alone.
+
+## Research questions
+
+### RQ1 — Productive conflict selection
+
+Can a combined chirality–entanglement score identify pairs of narrative objects that yield useful synthesis better than embedding-distance or contradiction-only baselines?
+
+### RQ2 — Orthesis convergence
+
+Can repeated grounding and synthesis produce stable SNOs whose proof traces, evidence coverage, and topology diagnostics improve over iterations?
+
+### RQ3 — Predicate invention
+
+When contradictions persist under zero-temperature proof closure, can residual-tensor decomposition recover latent context variables such as time, subgroup, measurement method, source frame, jurisdiction, mechanism, or definition boundary?
+
+### RQ4 — Runtime oracle discipline
+
+Can the system train with labels and expert oracles while running without runtime gold labels, answer keys, or LLM truth votes?
+
+### RQ5 — Multiverse-aware output
+
+Can possible-world ranking and record-access states improve uncertainty reporting without replacing the synthesis operation?
+
+## Contributions
+
+1. **SNO-8:** a typed, proof-carrying Structured Narrative Object that keeps narrative identity, reasoning graph, evidence, access state, proof trace, residual contradictions, and synthesis lineage in one object.
+2. **CNS Productive Conflict Score:** a pair-selection metric combining chiral tension and evidential entanglement.
+3. **Grounded Dialectical Orthesis:** a synthesis loop that emits an orthesis candidate only after surviving grounding, antagonist pressure, proof closure, and residual analysis.
+4. **Contradiction-Driven Predicate Invention:** tensor decomposition over residual contradiction mass to propose latent context predicates.
+5. **Strict Runtime Oracle Boundary:** offline oracle use for training/calibration/evaluation, with no runtime label leakage.
+6. **Buildable MVP:** a staged implementation plan using retrieval, extraction, NLI, graph topology, tensor closure, residual decomposition, and bounded LLM rendering.
+7. **Evaluation Suite:** synthetic latent-context tests, SciFact/FEVER grounding tests, SNO-pair synthesis tests, and ablations.
 
 ## Scope
 
-The project focuses on claims that can be represented as textual or structured propositions linked to evidence, expected records, observation reports, source obligations, or access states.
+CNS 8.0 is a research and engineering plan. The Python files in `sketches/` are not production code; they are scaffolds for implementation and test design.
 
-Initial domains:
+## System-level pipeline
 
-1. Scientific claim verification: SciFact / SciFact-Open.
-2. General fact verification: FEVER / FEVEROUS variants.
-3. Synthetic conflict cases with planted latent contexts.
-4. Controlled intelligence-style scenarios with multiple hypotheses and evidence items.
-5. Synthetic adversarial-record scenarios with planted withheld, unavailable, destroyed, or never-generated records.
+```text
+source corpus
+→ evidence atomization
+→ Proposer builds candidate SNOs
+→ grounding critics validate citations and entailment
+→ Antagonist finds chiral tension, contradictions, topology issues, access gaps
+→ pair selector ranks high-chirality/high-entanglement SNO pairs
+→ tensor prover computes zero-temperature closure
+→ residual analyzer identifies unresolved contradiction mass
+→ predicate inventor proposes latent context predicates when needed
+→ Synthesizer constructs a new grounded SNO
+→ orthesis loop tests G(S(T)) stability
+→ multiverse/access layer ranks remaining interpretations
+→ audit report exposes proof traces, uncertainties, and residual contradictions
+```
 
-Out of scope for MVP:
+## What is deliberately not central
 
-- fully autonomous investigative collection;
-- unrestricted legal, medical, or financial advice;
-- claims requiring private, classified, or inaccessible evidence without an explicit access model;
-- unrestricted arbitrary theorem proving;
-- direct runtime truth judgment by a human, model, benchmark label, or hidden oracle.
+- LLM debate as truth voting.
+- RAG as final synthesis.
+- Possible-world posterior mass as replacement for narrative synthesis.
+- Evidence atoms as replacement for SNOs.
+- Record-access state as replacement for contradiction analysis.
+- Audit report as replacement for synthesis.
 
-## Core deliverables
+## Expected MVP result
 
-1. **Theory paper:** definitions, formal claims, and proof sketches for language–logic chirality, likely-truth ranking, record-access modeling, and possible-world inference.
-2. **MVP architecture:** modular pipeline with agents, schemas, configs, and audit interfaces.
-3. **Programmatic experiment suite:** synthetic, benchmark, and adversarial-record tests with baselines and ablations.
-4. **Reference implementation skeleton:** Python sketches for types, chirality, tensor rules, access modeling, and world scoring.
-5. **Evaluation report template:** pre-registered metrics and thresholds.
+The first CNS 8.0 MVP should demonstrate:
 
-## Why this can be built
-
-The MVP uses existing components:
-
-- retrieval over a document corpus;
-- citation resolution and span alignment;
-- NLI/entailment models;
-- LLM extraction with schema validation;
-- monotone tensor rules implemented as matrix/tensor operations;
-- posterior scoring using energy models over candidate worlds;
-- access-state heuristics and calibrated classifiers;
-- calibration with held-out labels and synthetic gold worlds.
-
-The novelty is the architecture and formal coupling, not dependence on speculative model capabilities.
-
-## Success definition
-
-The system succeeds if it can:
-
-- ingest evidence and produce proof-carrying candidate worlds;
-- rank claims by posterior likely truth probability;
-- identify when strict proof is unavailable but a claim remains likely, plausible, conflicted, or record-contingent;
-- distinguish absent evidence, evidence of absence, and inaccessible evidence;
-- recover latent context predicates in synthetic contradictions;
-- represent source incentives and record-control asymmetries without turning them into direct truth oracles;
-- pass oracle-boundary tests showing no runtime labels are needed;
-- outperform RAG/debate baselines on calibration, abstention, likely-truth ranking, and auditability.
-
-## Key research risks
-
-1. **World explosion:** possible worlds may scale poorly.
-   - Mitigation: beam search, factorized world generation, pruning by proof support, access relevance, and contradiction energy.
-2. **NLI unreliability:** entailment models may over/under-score domain claims.
-   - Mitigation: calibration, domain-specific evaluation, abstention, ensemble validators.
-3. **LLM extraction drift:** generated claims may not preserve evidence semantics.
-   - Mitigation: schema tests, citation gates, extraction fine-tuning only if needed.
-4. **Overfitted latent predicates:** tensor decomposition may invent meaningless contexts.
-   - Mitigation: MDL penalty, held-out validation, human-inspectable predicate descriptions.
-5. **Suppression overreach:** the system may infer concealment too readily from missing records.
-   - Mitigation: record-generation duty tests, access-path modeling, motive calibration, alternative missingness hypotheses, conservative confidence.
-6. **False confidence:** posterior masses may appear precise without enough evidence.
-   - Mitigation: entropy reporting, confidence bands, source-quality uncertainty, access uncertainty, explicit unknown output.
-
-## Work packages
-
-### WP1 — Representation and schemas
-
-Define EvidenceAtom, AccessState, RecordObligation, InstitutionalIncentiveProfile, Claim, Rule, ProofTrace, WorldView, MultiverseState, and SynthesisReport.
-
-### WP2 — Oracle-less inference loop
-
-Implement retrieval, claim extraction, evidence scoring, rule closure, access-state modeling, world ranking, and abstention.
-
-### WP3 — Chiral metrics
-
-Implement graph chirality, round-trip chirality, residual tensor chirality, and access-chirality metrics.
-
-### WP4 — Latent context and record-access resolution
-
-Implement residual decomposition that proposes latent context predicates and access-state hypotheses, then evaluates them against evidence and missingness constraints.
-
-### WP5 — Experimental validation
-
-Run synthetic, benchmark, and adversarial-record experiments with pre-registered thresholds and baselines.
-
-### WP6 — Agent orchestration
-
-Implement multi-agent pipeline with strict role separation and audit traces.
-
-## Expected contribution
-
-GCTS should produce a publishable contribution if experiments support these claims:
-
-1. Maintaining explicit possible worlds improves calibration and abstention under contradiction.
-2. Evidence-weighted chirality predicts synthesis difficulty better than simple embedding distance.
-3. Tensor residual decomposition can recover latent context variables in controlled contradictory settings.
-4. Access-state modeling improves likely-truth ranking in adversarial missing-record settings.
-5. Runtime oracle-free truth ranking can be trained/calibrated using oracle labels without depending on them during deployment.
+1. citation-valid SNO extraction on a small corpus;
+2. productive-pair selection by chirality and evidential entanglement;
+3. zero-temperature proof closure over at least one rule family;
+4. residual tensor construction over unresolved support/refute mass;
+5. latent context recovery on synthetic examples;
+6. synthesized SNO output with proof traces;
+7. orthesis stability diagnostics;
+8. calibrated uncertainty report with explicit access states.

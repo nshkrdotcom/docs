@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProofTrace",
+  "type": "object",
+  "required": [
+    "proof_id",
+    "claim_id",
+    "root_evidence",
+    "rules",
+    "status"
+  ],
+  "properties": {
+    "proof_id": {
+      "type": "string"
+    },
+    "claim_id": {
+      "type": "string"
+    },
+    "root_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "temperature": {
+      "type": "number"
+    },
+    "intermediate_atoms": {
+      "type": "array"
+    },
+    "status": {
+      "enum": [
+        "valid",
+        "invalid",
+        "partial"
+      ]
+    },
+    "checksum": {
+      "type": "string"
+    }
+  }
+}

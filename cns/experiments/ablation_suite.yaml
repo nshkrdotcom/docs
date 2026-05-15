@@ -1,0 +1,19 @@
+ablations:
+  - remove: antagonist
+    expected_failure: fewer detected contradictions, higher unsupported synthesis
+  - remove: evidential_entanglement
+    expected_failure: selects unrelated disagreements
+  - remove: graph_chirality
+    expected_failure: misses structural opposition
+  - remove: language_logic_roundtrip
+    expected_failure: fluent but unstable renderings
+  - remove: tensor_proof_closure
+    expected_failure: strict claims without machine-checkable proof
+  - remove: predicate_invention
+    expected_failure: persistent contradictions remain unresolved
+  - remove: access_states
+    expected_failure: missing records misinterpreted as evidence
+  - remove: possible_worlds
+    expected_failure: weaker uncertainty reporting
+  - remove: orthesis_loop
+    expected_failure: synthesized SNO drifts after re-grounding

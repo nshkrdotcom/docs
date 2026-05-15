@@ -1,0 +1,61 @@
+version: "8.0"
+
+evidence:
+  chunk_chars: 800
+  overlap_chars: 120
+  require_hashes: true
+  default_access_state: available
+
+extraction:
+  backend: prompt
+  schema: schemas/sno8.schema.json
+  max_retries: 2
+  fail_closed_on_invalid_citation: true
+
+grounding:
+  entailment_model: "cross-encoder/nli-placeholder"
+  strict_entailment_threshold: 0.75
+  likely_entailment_threshold: 0.55
+  citation_validity_required_for_strict: true
+
+chirality:
+  weights:
+    graph: 0.30
+    evidence_polarity: 0.30
+    language_logic: 0.25
+    entanglement_interaction: 0.15
+  productive_conflict_threshold: 0.60
+
+proof:
+  zero_temperature_rules_only_promote_strict: true
+  zthr_target: 0.0
+  record_proof_checksums: true
+
+predicate_invention:
+  enabled: true
+  max_latent_predicates: 5
+  piu_threshold: 0.05
+  complexity_penalty: 1.0
+  require_grounding: true
+
+orthesis:
+  max_round_trips: 3
+  roundtrip_residual_threshold: 0.10
+  beta1_reduction_target: 0.30
+  allow_preserved_residuals: true
+
+multiverse:
+  enabled: true
+  max_worlds: 10
+  posterior_temperature: 1.0
+
+oracle_boundary:
+  allow_training_oracles: true
+  forbid_runtime_labels: true
+  run_leakage_scan: true
+
+llm:
+  proposer_model: "model-placeholder"
+  antagonist_model: "model-placeholder"
+  synthesizer_model: "model-placeholder"
+  use_llm_truth_vote: false

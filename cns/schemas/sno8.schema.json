@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SNO-8",
+  "type": "object",
+  "required": [
+    "sno_id",
+    "version",
+    "hypothesis",
+    "claims",
+    "relations",
+    "evidence",
+    "metrics",
+    "lineage"
+  ],
+  "properties": {
+    "sno_id": {
+      "type": "string"
+    },
+    "version": {
+      "const": "8.0"
+    },
+    "hypothesis": {
+      "type": "object"
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relation"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "record_access": {
+      "type": "array"
+    },
+    "proof_traces": {
+      "type": "array"
+    },
+    "residuals": {
+      "type": "array"
+    },
+    "latent_predicates": {
+      "type": "array"
+    },
+    "world_support": {
+      "type": "array"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "lineage": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "claim": {
+      "type": "object",
+      "required": [
+        "claim_id",
+        "text",
+        "status",
+        "evidence_refs"
+      ],
+      "properties": {
+        "claim_id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "strict",
+            "likely",
+            "hypothesis",
+            "unresolved",
+            "rejected"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "proof_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "relation": {
+      "type": "object",
+      "required": [
+        "source",
+        "target",
+        "type"
+      ],
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "supports",
+            "refutes",
+            "implies",
+            "conditions",
+            "narrows",
+            "explains",
+            "reframes",
+            "in_tension_with",
+            "equivalent_under_context",
+            "latent_context_for"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

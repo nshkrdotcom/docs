@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OrthesisReport",
+  "type": "object",
+  "required": [
+    "sno_id",
+    "accepted",
+    "metrics",
+    "strict_claims",
+    "likely_claims",
+    "unresolved_claims",
+    "rejected_claims"
+  ],
+  "properties": {
+    "sno_id": {
+      "type": "string"
+    },
+    "accepted": {
+      "type": "boolean"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "strict_claims": {
+      "type": "array"
+    },
+    "likely_claims": {
+      "type": "array"
+    },
+    "hypotheses": {
+      "type": "array"
+    },
+    "unresolved_claims": {
+      "type": "array"
+    },
+    "rejected_claims": {
+      "type": "array"
+    },
+    "proof_traces": {
+      "type": "array"
+    },
+    "access_gaps": {
+      "type": "array"
+    },
+    "worlds": {
+      "type": "array"
+    }
+  }
+}

@@ -1,20 +1,13 @@
-# Sketch Code README
+# Python Sketches
 
-These Python files are reference sketches, not a full implementation. They define the primary data types and minimal algorithms needed to build the MVP.
+These files are minimal scaffolds for CNS 8.0 implementation planning.
 
-## Files
+- `cns8_types.py` — dataclasses for EvidenceAtom, Claim, Relation, ProofTrace, SNO.
+- `chirality.py` — evidence entanglement and chirality proxies.
+- `tensor_logic.py` — tiny zero-temperature proof closure sketch.
+- `predicate_invention.py` — residual tensor and factorization sketch.
+- `orthesis_loop.py` — render/re-ground fixed-point loop.
+- `world_ranking.py` — possible-world posterior as reporting substrate.
+- `synthetic_latent_context.py` — toy latent-context generator.
 
-- `cns_types.py` — dataclasses for evidence, access states, claims, rules, proof traces, worlds, and reports.
-- `adversarial_evidence.py` — access-state and missing-record helper functions.
-- `chirality.py` — graph, round-trip, access, and residual chirality functions.
-- `worlds.py` — energy-based possible-world ranking and claim posterior computation.
-- `tensor_logic.py` — tiny tensor-logic closure sketch.
-- `synthetic_latent_context_experiment.py` — toy generator for latent-context contradictions.
-
-## Run locally
-
-```bash
-python sketches/synthetic_latent_context_experiment.py
-```
-
-The sketch prints a small ranked-world example. It intentionally avoids external dependencies beyond Python and NumPy.
+They are deliberately small and test-oriented.

@@ -1,43 +1,43 @@
+"""Tiny zero-temperature tensor-logic closure sketch.
+
+This is deliberately small: boolean matrices plus explicit proof traces.
+"""
 from __future__ import annotations
-
 from dataclasses import dataclass
-from typing import Dict, Iterable, List, Set, Tuple
-
-
-@dataclass(frozen=True)
-class HornRule:
-    id: str
-    body: Tuple[str, ...]
-    head: str
-    strict: bool = True
-
+import numpy as np
 
 @dataclass
 class ClosureResult:
-    facts: Set[str]
-    proofs: Dict[str, List[str]]
+    supported: np.ndarray
+    proof_edges: list[tuple[int, int, str]]
 
+def zero_temp_supported(cites: np.ndarray, entails: np.ndarray) -> ClosureResult:
+    """Derive Supported[c] = step(sum_e Cites[c,e] * Entails[e,c]).
 
-class TinyTensorLogic:
-    """Minimal symbolic closure sketch.
-
-    Real implementation should compile rules to tensor operations. This tiny
-    class provides the same semantics for tests and toy examples.
+    cites: shape [claims, evidence]
+    entails: shape [evidence, claims]
     """
+    scores = (cites.astype(int) * entails.T.astype(int)).sum(axis=1)
+    supported = scores > 0
+    proofs: list[tuple[int, int, str]] = []
+    for c in range(cites.shape[0]):
+        for e in range(cites.shape[1]):
+            if cites[c, e] and entails[e, c]:
+                proofs.append((c, e, "supported_claim(c) <- cites(c,e) AND entails(e,c)"))
+    return ClosureResult(supported=supported, proof_edges=proofs)
 
-    def __init__(self, rules: Iterable[HornRule]):
-        self.rules = list(rules)
+def zthr(strict_claim_ids: list[int], proof_edges: list[tuple[int, int, str]]) -> float:
+    strict = set(strict_claim_ids)
+    if not strict:
+        return 0.0
+    proved = {c for (c, _e, _rule) in proof_edges}
+    missing = strict - proved
+    return len(missing) / len(strict)
 
-    def close(self, facts: Iterable[str], max_steps: int = 64) -> ClosureResult:
-        known = set(facts)
-        proofs: Dict[str, List[str]] = {f: ["evidence"] for f in known}
-        for _ in range(max_steps):
-            changed = False
-            for rule in self.rules:
-                if all(atom in known for atom in rule.body) and rule.head not in known:
-                    known.add(rule.head)
-                    proofs[rule.head] = list(rule.body) + [rule.id]
-                    changed = True
-            if not changed:
-                break
-        return ClosureResult(facts=known, proofs=proofs)
+if __name__ == "__main__":
+    cites = np.array([[1,0], [0,1], [0,0]], dtype=bool)
+    entails = np.array([[1,0,0], [0,1,0]], dtype=bool)
+    result = zero_temp_supported(cites, entails)
+    print(result.supported.tolist())
+    print(result.proof_edges)
+    print("ZTHR", zthr([0,1], result.proof_edges))
