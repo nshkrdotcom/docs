@@ -35,13 +35,19 @@ If you only read one thing, read this README first, then read these in order:
 7. [0104_ArchitectureDebtEconomics.md](0104_ArchitectureDebtEconomics.md)  
    Explains how teams decide which architecture problems are worth fixing now.
 
-Those seven files give the shortest path to the current thesis: representation, reasoning, practice, repair, and planning.
+8. [0120_KnowledgeBoundaries_andEpistemicLimits.md](0120_KnowledgeBoundaries_andEpistemicLimits.md)  
+   Explains how the system distinguishes incomplete analysis from structural unknowability.
+
+9. [0125_ArchitecturalPluralism_andPerspectiveModels.md](0125_ArchitecturalPluralism_andPerspectiveModels.md)  
+   Explains how the system supports multiple valid architecture views instead of forcing one universal answer.
+
+Those nine files give the shortest path to the current thesis: representation, reasoning, practice, repair, planning, epistemic limits, and plural architecture.
 
 ---
 
 ## The Mental Model
 
-The system has four broad layers.
+The system has five broad layers.
 
 ### 1. Representation Substrate
 
@@ -132,6 +138,21 @@ planning and remediation portfolios
 ```
 
 This layer is what prevents the product from becoming a brittle enforcement tool. It gives teams a path from advisory insight to trusted enforcement, with rollback, calibration, and economic prioritization.
+
+### 5. Epistemic and Ecosystem Layer
+
+This is what keeps the system honest about its limits and useful inside a real toolchain:
+
+```text
+knowledge boundary disclosure
+concept drift detection
+output artifact lifecycle
+external tool synchronization
+team attention budgets
+perspective-aware architecture views
+```
+
+This layer prevents the product from pretending that architecture is a single, fully discoverable object. It lets the system say what it cannot know, when its own concepts have changed, when its generated outputs have become stale, when team attention is exhausted, and which architecture perspective is active.
 
 ---
 
@@ -434,6 +455,43 @@ to:
 architecture intelligence that can be adopted, trusted, repaired, rolled out, explored, and used for planning
 ```
 
+### Phase 7: Epistemic and Ecosystem Maturity
+
+The `0110` critique identifies a deeper set of limits: what the system cannot know, how concepts themselves drift, how generated outputs accumulate, how external tools participate in workflows, how team attention is spent, and how multiple valid architecture perspectives coexist.
+
+- [0110_critique_claude.md](0110_critique_claude.md)  
+  Names the remaining gaps around epistemic limits, concept drift, output artifacts, tool integration, attention economics, and architectural pluralism.
+
+- [0120_KnowledgeBoundaries_andEpistemicLimits.md](0120_KnowledgeBoundaries_andEpistemicLimits.md)  
+  Adds a model for static limits, runtime limits, config limits, restricted evidence, human-memory limits, and structurally unknowable facts.
+
+- [0121_ConceptDrift_andReconceptualization.md](0121_ConceptDrift_andReconceptualization.md)  
+  Adds versioned architectural concepts, concept drift signals, and reconceptualization proposals for when the system's concepts genuinely change.
+
+- [0122_OutputArtifactGraph_andGeneratedEntropy.md](0122_OutputArtifactGraph_andGeneratedEntropy.md)  
+  Models the lifecycle, dependencies, staleness, supersession, and entropy of the system's own generated outputs.
+
+- [0123_ToolEcosystemWorkflowIntegration.md](0123_ToolEcosystemWorkflowIntegration.md)  
+  Adds integration objects for external tools, records, sync bindings, workflow routes, authority policies, and notification routing.
+
+- [0124_TeamAttentionEconomics.md](0124_TeamAttentionEconomics.md)  
+  Adds team-level attention budgets, fatigue signals, curation policies, batching, and value-per-attention ranking.
+
+- [0125_ArchitecturalPluralism_andPerspectiveModels.md](0125_ArchitecturalPluralism_andPerspectiveModels.md)  
+  Adds perspective-specific architecture claims, mappings, conflicts, scopes, and governance of authoritative perspectives.
+
+Together, these move the system from:
+
+```text
+architecture intelligence that participates in engineering workflows
+```
+
+to:
+
+```text
+architecture intelligence that understands its own limits, outputs, ecosystem, audience, and perspectival role
+```
+
 ---
 
 ## Core Concepts
@@ -674,6 +732,66 @@ A drift, violation, missing verification, known unknown, stale ADR, expired exce
 
 Debt items can be accepted, planned, remediated, or deferred with review dates.
 
+### Epistemic Boundary
+
+A known boundary on what the system can determine:
+
+```text
+dynamic dispatch not statically resolvable
+runtime behavior not sampled
+production config outside repository
+verbal decision never recorded
+evidence restricted by access policy
+multiple valid perspectives
+```
+
+Epistemic boundaries prevent the system from treating "not knowable by this method" as "not analyzed enough."
+
+### Concept Version
+
+A time-bounded definition of an architectural concept such as a bounded context, shared kernel, domain term, public API surface, or ownership category.
+
+Concept versions let the system say:
+
+```text
+This classification changed because the concept changed,
+not because the old classifier was simply wrong.
+```
+
+### Output Artifact
+
+A generated or published result from the system:
+
+```text
+PR comment
+CI check
+ADR draft
+generated test
+exception draft
+query answer
+projection packet
+debt item
+remediation plan
+```
+
+Output artifacts have lifecycle, staleness, dependencies, and relationships to each other.
+
+### Architecture Perspective
+
+A valid way of modeling the same system for a specific purpose:
+
+```text
+domain
+runtime
+security
+data ownership
+product capability
+deployment
+team ownership
+```
+
+Different perspectives can be simultaneously valid, with governance deciding which is authoritative for a specific decision.
+
 ---
 
 ## Example Product Experience
@@ -738,6 +856,8 @@ projection packet
 failure repair if wrong
 rollout stage
 debt prioritization
+knowledge boundary disclosure
+perspective selection
 ```
 
 ---
@@ -815,6 +935,42 @@ Read:
 5. [0103_TestStructure_asArchitectureEvidence.md](0103_TestStructure_asArchitectureEvidence.md)
 
 This covers what makes the system usable in real organizations: graceful failure, staged enforcement, economic prioritization, exploratory workflows, and richer test-derived architecture evidence.
+
+### For Epistemic Limits and Ecosystem Fit
+
+Read:
+
+1. [0120_KnowledgeBoundaries_andEpistemicLimits.md](0120_KnowledgeBoundaries_andEpistemicLimits.md)
+2. [0121_ConceptDrift_andReconceptualization.md](0121_ConceptDrift_andReconceptualization.md)
+3. [0122_OutputArtifactGraph_andGeneratedEntropy.md](0122_OutputArtifactGraph_andGeneratedEntropy.md)
+4. [0123_ToolEcosystemWorkflowIntegration.md](0123_ToolEcosystemWorkflowIntegration.md)
+5. [0124_TeamAttentionEconomics.md](0124_TeamAttentionEconomics.md)
+6. [0125_ArchitecturalPluralism_andPerspectiveModels.md](0125_ArchitecturalPluralism_andPerspectiveModels.md)
+
+This covers what keeps the system honest and usable at scale: knowledge limits, concept drift, output lifecycle, external tool workflow, attention budgets, and multiple valid architecture views.
+
+### If You Are Asking "Where Is the Primitive?"
+
+Read:
+
+1. [0088_CollaborativeEngineeringPractice.md](0088_CollaborativeEngineeringPractice.md)
+2. [0040_arch_gpt.md](0040_arch_gpt.md)
+3. [0063_ActionModel_forThe_OperatingIntelligenceKernel.md](0063_ActionModel_forThe_OperatingIntelligenceKernel.md)
+4. [0122_OutputArtifactGraph_andGeneratedEntropy.md](0122_OutputArtifactGraph_andGeneratedEntropy.md)
+
+The primitive is the stateful work episode over an evidence-scoped context bundle. The supporting objects are artifacts, claims, belief states, trace paths, action contracts, output artifacts, and open loops.
+
+### If You Are Asking "What Makes This Different?"
+
+Read:
+
+1. [0060_eng_gpt.md](0060_eng_gpt.md)
+2. [0061_BeliefCalculusfortheOperatingIntelligenceKernel.md](0061_BeliefCalculusfortheOperatingIntelligenceKernel.md)
+3. [0062_CommitmentLanguage_ArchDSL.md](0062_CommitmentLanguage_ArchDSL.md)
+4. [0100_SystemFailureModes_andTrustRepair.md](0100_SystemFailureModes_andTrustRepair.md)
+5. [0120_KnowledgeBoundaries_andEpistemicLimits.md](0120_KnowledgeBoundaries_andEpistemicLimits.md)
+
+The differentiator is not that the system stores a larger graph. It is that it maintains scoped beliefs, knows when evidence is stale or structurally unavailable, compiles architecture into executable commitments, repairs trust after mistakes, and supports multiple architecture perspectives.
 
 ---
 
@@ -979,6 +1135,26 @@ Primary docs:
 - [0103_TestStructure_asArchitectureEvidence.md](0103_TestStructure_asArchitectureEvidence.md)
 - [0104_ArchitectureDebtEconomics.md](0104_ArchitectureDebtEconomics.md)
 
+### Stage 7: Epistemic and Ecosystem Maturity
+
+```text
+epistemic boundaries
+concept drift
+output artifact graph
+tool ecosystem synchronization
+team attention budgets
+architecture perspectives
+```
+
+Primary docs:
+
+- [0120_KnowledgeBoundaries_andEpistemicLimits.md](0120_KnowledgeBoundaries_andEpistemicLimits.md)
+- [0121_ConceptDrift_andReconceptualization.md](0121_ConceptDrift_andReconceptualization.md)
+- [0122_OutputArtifactGraph_andGeneratedEntropy.md](0122_OutputArtifactGraph_andGeneratedEntropy.md)
+- [0123_ToolEcosystemWorkflowIntegration.md](0123_ToolEcosystemWorkflowIntegration.md)
+- [0124_TeamAttentionEconomics.md](0124_TeamAttentionEconomics.md)
+- [0125_ArchitecturalPluralism_andPerspectiveModels.md](0125_ArchitecturalPluralism_andPerspectiveModels.md)
+
 ---
 
 ## Architectural Invariants
@@ -1001,6 +1177,10 @@ Every action leaves a durable learning signal.
 Every system failure can be disputed, repaired, and converted into calibration or benchmark data.
 Every enforcement rollout has scope, stage, metrics, and rollback criteria.
 Every architecture debt item has an owner, review state, or explicit unknown.
+Every answer distinguishes incomplete analysis from structural knowledge boundaries.
+Every generated output has lifecycle, provenance, dependencies, and staleness state.
+Every team-facing finding competes for an explicit attention budget.
+Every perspective-dependent claim names the active architecture perspective.
 ```
 
 These invariants are more important than any individual table.
@@ -1032,6 +1212,18 @@ Runtime traces can confirm or refute assumptions, but observed behavior is not a
 ### Local Exception vs Global Rule
 
 A scoped exception should not weaken a commitment globally.
+
+### Unknown vs Unknowable
+
+The system should not keep searching forever for evidence that is outside its method boundary. It should disclose the boundary and ask for a different input or authority.
+
+### Single Truth vs Valid Perspectives
+
+Some architecture disputes should be governed into one authoritative answer. Others should remain multiple valid perspectives because they serve different tasks.
+
+### Useful Output vs Output Entropy
+
+Generated comments, tests, ADR drafts, and plans create value only if they remain linked, fresh, deduplicated, and superseded when appropriate.
 
 ---
 
@@ -1086,6 +1278,24 @@ Rollout Stage
 Architecture Debt Item
   A finding that carries ongoing cost and needs remediation, acceptance, or review.
 
+Epistemic Boundary
+  A modeled limit on what can be known by a method, scope, access level, or evidence source.
+
+Concept Drift
+  A change in the meaning or membership of an architectural concept over time.
+
+Output Artifact
+  A generated or published result of the system, with lifecycle, dependencies, and staleness.
+
+Tool Sync Binding
+  A link between an internal artifact and an external record in GitHub, Jira, Slack, Notion, or another tool.
+
+Attention Budget
+  A team's finite capacity for findings, questions, blocking items, and notifications.
+
+Architecture Perspective
+  A task-specific valid view of the system, such as security, runtime, domain, data, or product.
+
 Trust UX
   The interface discipline for showing evidence, scope, uncertainty, contradictions, and safe actions.
 ```
@@ -1094,4 +1304,4 @@ Trust UX
 
 ## One-Sentence Summary
 
-This dossier designs a system that turns software architecture from scattered code, docs, decisions, runtime traces, and human memory into a live, evidence-backed, queryable, enforceable, and governable engineering intelligence layer.
+This dossier designs a system that turns software architecture from scattered code, docs, decisions, runtime traces, generated outputs, external tools, and human memory into a live, evidence-backed, queryable, enforceable, governable, and self-limiting engineering intelligence layer.
