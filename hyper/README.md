@@ -41,13 +41,22 @@ If you only read one thing, read this README first, then read these in order:
 9. [0125_ArchitecturalPluralism_andPerspectiveModels.md](0125_ArchitecturalPluralism_andPerspectiveModels.md)  
    Explains how the system supports multiple valid architecture views instead of forcing one universal answer.
 
-Those nine files give the shortest path to the current thesis: representation, reasoning, practice, repair, planning, epistemic limits, and plural architecture.
+10. [0140_ReadingSessions_andInterpretiveWork.md](0140_ReadingSessions_andInterpretiveWork.md)  
+    Explains how sustained reading, annotations, confusion, acceptance, and resumption become first-class architecture work.
+
+11. [0145_FormalizationEconomics_andCeremonyBudget.md](0145_FormalizationEconomics_andCeremonyBudget.md)  
+    Explains when making architecture explicit adds value, and when it creates ceremony debt.
+
+12. [0147_ArchitectureVelocity_andTimeToMarket.md](0147_ArchitectureVelocity_andTimeToMarket.md)  
+    Explains how architecture affects development speed, coordination cost, and time-to-market.
+
+Those twelve files give the shortest path to the current thesis: representation, reasoning, practice, repair, planning, epistemic limits, plural architecture, human understanding, formalization cost, and delivery speed.
 
 ---
 
 ## The Mental Model
 
-The system has five broad layers.
+The system has six broad layers.
 
 ### 1. Representation Substrate
 
@@ -153,6 +162,27 @@ perspective-aware architecture views
 ```
 
 This layer prevents the product from pretending that architecture is a single, fully discoverable object. It lets the system say what it cannot know, when its own concepts have changed, when its generated outputs have become stale, when team attention is exhausted, and which architecture perspective is active.
+
+### 6. Cognitive, Narrative, and Delivery Layer
+
+This is what models architecture as something people read, partially understand, explain, narrate, staff, and use to ship:
+
+```text
+reading sessions
+partial understanding
+accepted ambiguity
+reader models
+personalized explanations
+architecture narratives
+intentional informality
+formalization economics
+cross-cutting concern architecture
+architecture velocity
+human expertise availability
+context continuity
+```
+
+This layer prevents the system from treating architecture as only an objective artifact. It models the subjective, social, and time-to-market dimensions: who understands what, which uncertainty has been accepted, when silence is intentional, how much ceremony is worth paying for, which concern cuts across the stack, and whether the current architecture helps or slows delivery.
 
 ---
 
@@ -492,6 +522,52 @@ to:
 architecture intelligence that understands its own limits, outputs, ecosystem, audience, and perspectival role
 ```
 
+### Phase 8: Human Understanding and Delivery Intelligence
+
+The `0130` critique identifies the next missing layer: sustained reading, partial understanding, personalized explanation, narrative sensemaking, intentional silence, formalization cost, cross-cutting concerns, architecture velocity, and human expertise availability.
+
+- [0130_critique_claude.md](0130_critique_claude.md)  
+  Names the remaining gaps around the subjective, temporal, social, and delivery dimensions of architecture.
+
+- [0140_ReadingSessions_andInterpretiveWork.md](0140_ReadingSessions_andInterpretiveWork.md)  
+  Adds durable reading sessions, reading marks, threads, checkpoints, side-by-side comparison, and resumption.
+
+- [0141_PartialUnderstanding_andAcceptedAmbiguity.md](0141_PartialUnderstanding_andAcceptedAmbiguity.md)  
+  Adds scoped understanding states, accepted ambiguity, understanding gaps, and decay rules.
+
+- [0142_ReaderModels_andPersonalizedExplanation.md](0142_ReaderModels_andPersonalizedExplanation.md)  
+  Adds reader profiles, exposure, vocabulary, explanation goals, variants, and feedback.
+
+- [0143_ArchitectureNarrative_andHistoricalSensemaking.md](0143_ArchitectureNarrative_andHistoricalSensemaking.md)  
+  Adds evidence-backed architecture narratives, episodes, turning points, narrative gaps, and story variants.
+
+- [0144_IntentionalSilence_andInformality.md](0144_IntentionalSilence_andInformality.md)  
+  Adds absence signals, informality decisions, documentation nonrequirements, and absence reviews.
+
+- [0145_FormalizationEconomics_andCeremonyBudget.md](0145_FormalizationEconomics_andCeremonyBudget.md)  
+  Adds formalization candidates, ceremony budgets, cost models, formalization levels, and ceremony debt.
+
+- [0146_CrossCuttingConcernArchitecture.md](0146_CrossCuttingConcernArchitecture.md)  
+  Adds first-class concern architecture for security, performance, observability, compliance, privacy, and similar concerns.
+
+- [0147_ArchitectureVelocity_andTimeToMarket.md](0147_ArchitectureVelocity_andTimeToMarket.md)  
+  Adds velocity signals, change friction profiles, coordination cost, feedback latency, and time-to-market forecasts.
+
+- [0148_HumanExpertiseAvailability_andContextContinuity.md](0148_HumanExpertiseAvailability_andContextContinuity.md)  
+  Adds expertise claims, availability, review readiness, context concentration risk, and handoff records.
+
+Together, these move the system from:
+
+```text
+architecture intelligence that is honest about its own limits
+```
+
+to:
+
+```text
+architecture intelligence that understands how people read, explain, remember, formalize, staff, and ship architecture
+```
+
 ---
 
 ## Core Concepts
@@ -792,6 +868,142 @@ team ownership
 
 Different perspectives can be simultaneously valid, with governance deciding which is authoritative for a specific decision.
 
+### Reading Session
+
+A durable episode of sustained interpretation:
+
+```text
+scope
+threads
+annotations
+confusion marks
+comparisons
+checkpoints
+accepted-for-now states
+```
+
+Reading sessions make slow understanding resumable and visible without forcing every note to become a finding.
+
+### Understanding State
+
+A scoped record of how well a person or team understands something for a purpose:
+
+```text
+partial
+sufficient for current PR
+strong for incident response
+stale after code change
+uncertainty accepted
+```
+
+Understanding is purpose-specific. Someone can understand a module well enough for a formatting change but not enough for a security-sensitive refactor.
+
+### Reader Model
+
+A conservative model of a person's prior exposure, vocabulary, role, preferences, and understanding states.
+
+Reader models let explanations adapt without changing the underlying truth:
+
+```text
+new engineer -> teach local concepts first
+service owner -> skip basics and show drift
+security reviewer -> lead with trust boundary
+product manager -> lead with capability and risk
+```
+
+### Architecture Narrative
+
+An evidence-backed story of how a system area became what it is:
+
+```text
+origin
+turning points
+constraints
+incidents
+migrations
+exceptions
+current consequences
+```
+
+Narrative differs from traceability. Traceability shows links; narrative explains why the current shape is intelligible.
+
+### Intentional Informality
+
+A scoped decision that an expected artifact is not currently required:
+
+```text
+no ADR for this prototype
+no enforced commitment until beta
+informal ownership is acceptable for this shared helper
+tests deferred until the integration stabilizes
+```
+
+This prevents the system from treating every absence as neglect.
+
+### Formalization Level
+
+The current or target amount of explicit ceremony:
+
+```text
+none
+note
+lightweight record
+reviewed record
+executable commitment
+enforced policy
+```
+
+Formalization levels let teams spend architecture ceremony where it creates more value than cost.
+
+### Cross-Cutting Concern Architecture
+
+A first-class architecture object for concerns that span the stack:
+
+```text
+security
+performance
+observability
+reliability
+privacy
+compliance
+accessibility
+internationalization
+```
+
+A concern is not just a tag. It has requirements, decisions, controls, surfaces, runtime signals, exceptions, owners, and governance.
+
+### Architecture Velocity
+
+The effect of architecture on delivery speed:
+
+```text
+impact radius
+reviewer count
+owner clarification delay
+test feedback latency
+coordination cost
+change friction
+time-to-market forecast
+```
+
+This connects architecture to how quickly teams can ship correct changes.
+
+### Expertise Claim
+
+An evidence-backed claim that a person or team has relevant context:
+
+```text
+authored this area
+reviewed recent changes
+responded to incidents
+owns this concern
+completed reading session
+has stale expertise
+is unavailable
+```
+
+Expertise claims support review routing, handoffs, and context-loss prevention without turning people into public scores.
+
 ---
 
 ## Example Product Experience
@@ -858,6 +1070,9 @@ rollout stage
 debt prioritization
 knowledge boundary disclosure
 perspective selection
+concern architecture projection
+reviewer expertise and availability
+accepted ambiguity handling
 ```
 
 ---
@@ -949,6 +1164,22 @@ Read:
 
 This covers what keeps the system honest and usable at scale: knowledge limits, concept drift, output lifecycle, external tool workflow, attention budgets, and multiple valid architecture views.
 
+### For Human Understanding, Narrative, and Delivery
+
+Read:
+
+1. [0140_ReadingSessions_andInterpretiveWork.md](0140_ReadingSessions_andInterpretiveWork.md)
+2. [0141_PartialUnderstanding_andAcceptedAmbiguity.md](0141_PartialUnderstanding_andAcceptedAmbiguity.md)
+3. [0142_ReaderModels_andPersonalizedExplanation.md](0142_ReaderModels_andPersonalizedExplanation.md)
+4. [0143_ArchitectureNarrative_andHistoricalSensemaking.md](0143_ArchitectureNarrative_andHistoricalSensemaking.md)
+5. [0144_IntentionalSilence_andInformality.md](0144_IntentionalSilence_andInformality.md)
+6. [0145_FormalizationEconomics_andCeremonyBudget.md](0145_FormalizationEconomics_andCeremonyBudget.md)
+7. [0146_CrossCuttingConcernArchitecture.md](0146_CrossCuttingConcernArchitecture.md)
+8. [0147_ArchitectureVelocity_andTimeToMarket.md](0147_ArchitectureVelocity_andTimeToMarket.md)
+9. [0148_HumanExpertiseAvailability_andContextContinuity.md](0148_HumanExpertiseAvailability_andContextContinuity.md)
+
+This covers the human layer: slow reading, partial understanding, adaptive explanation, historical story, intentional informality, ceremony cost, concern-specific architecture, delivery velocity, and expertise continuity.
+
 ### If You Are Asking "Where Is the Primitive?"
 
 Read:
@@ -957,8 +1188,9 @@ Read:
 2. [0040_arch_gpt.md](0040_arch_gpt.md)
 3. [0063_ActionModel_forThe_OperatingIntelligenceKernel.md](0063_ActionModel_forThe_OperatingIntelligenceKernel.md)
 4. [0122_OutputArtifactGraph_andGeneratedEntropy.md](0122_OutputArtifactGraph_andGeneratedEntropy.md)
+5. [0140_ReadingSessions_andInterpretiveWork.md](0140_ReadingSessions_andInterpretiveWork.md)
 
-The primitive is the stateful work episode over an evidence-scoped context bundle. The supporting objects are artifacts, claims, belief states, trace paths, action contracts, output artifacts, and open loops.
+The primitive is the stateful work episode over an evidence-scoped context bundle. Reading sessions are a specialized episode for slow interpretive work. The supporting objects are artifacts, claims, belief states, trace paths, action contracts, output artifacts, reading marks, accepted ambiguity, and open loops.
 
 ### If You Are Asking "What Makes This Different?"
 
@@ -969,8 +1201,10 @@ Read:
 3. [0062_CommitmentLanguage_ArchDSL.md](0062_CommitmentLanguage_ArchDSL.md)
 4. [0100_SystemFailureModes_andTrustRepair.md](0100_SystemFailureModes_andTrustRepair.md)
 5. [0120_KnowledgeBoundaries_andEpistemicLimits.md](0120_KnowledgeBoundaries_andEpistemicLimits.md)
+6. [0140_ReadingSessions_andInterpretiveWork.md](0140_ReadingSessions_andInterpretiveWork.md)
+7. [0145_FormalizationEconomics_andCeremonyBudget.md](0145_FormalizationEconomics_andCeremonyBudget.md)
 
-The differentiator is not that the system stores a larger graph. It is that it maintains scoped beliefs, knows when evidence is stale or structurally unavailable, compiles architecture into executable commitments, repairs trust after mistakes, and supports multiple architecture perspectives.
+The differentiator is not that the system stores a larger graph. It is that it maintains scoped beliefs, knows when evidence is stale or structurally unavailable, compiles architecture into executable commitments, repairs trust after mistakes, supports multiple architecture perspectives, remembers interpretive work, and understands that formalization itself has a cost.
 
 ---
 
@@ -1155,6 +1389,33 @@ Primary docs:
 - [0124_TeamAttentionEconomics.md](0124_TeamAttentionEconomics.md)
 - [0125_ArchitecturalPluralism_andPerspectiveModels.md](0125_ArchitecturalPluralism_andPerspectiveModels.md)
 
+### Stage 8: Human Understanding and Delivery Intelligence
+
+```text
+reading sessions
+partial understanding
+reader models
+architecture narratives
+intentional informality
+formalization economics
+cross-cutting concern maps
+architecture velocity
+expertise availability
+context handoffs
+```
+
+Primary docs:
+
+- [0140_ReadingSessions_andInterpretiveWork.md](0140_ReadingSessions_andInterpretiveWork.md)
+- [0141_PartialUnderstanding_andAcceptedAmbiguity.md](0141_PartialUnderstanding_andAcceptedAmbiguity.md)
+- [0142_ReaderModels_andPersonalizedExplanation.md](0142_ReaderModels_andPersonalizedExplanation.md)
+- [0143_ArchitectureNarrative_andHistoricalSensemaking.md](0143_ArchitectureNarrative_andHistoricalSensemaking.md)
+- [0144_IntentionalSilence_andInformality.md](0144_IntentionalSilence_andInformality.md)
+- [0145_FormalizationEconomics_andCeremonyBudget.md](0145_FormalizationEconomics_andCeremonyBudget.md)
+- [0146_CrossCuttingConcernArchitecture.md](0146_CrossCuttingConcernArchitecture.md)
+- [0147_ArchitectureVelocity_andTimeToMarket.md](0147_ArchitectureVelocity_andTimeToMarket.md)
+- [0148_HumanExpertiseAvailability_andContextContinuity.md](0148_HumanExpertiseAvailability_andContextContinuity.md)
+
 ---
 
 ## Architectural Invariants
@@ -1181,6 +1442,15 @@ Every answer distinguishes incomplete analysis from structural knowledge boundar
 Every generated output has lifecycle, provenance, dependencies, and staleness state.
 Every team-facing finding competes for an explicit attention budget.
 Every perspective-dependent claim names the active architecture perspective.
+Every sustained reading session can be paused, resumed, and converted into claims, unknowns, or accepted ambiguity.
+Every accepted ambiguity has scope, purpose, risk, owner, and review trigger.
+Every personalized explanation preserves the same evidence and belief state even when the presentation changes.
+Every architecture narrative discloses evidence, gaps, perspective, and lifecycle state.
+Every intentional absence distinguishes informality from missing evidence.
+Every formalization recommendation accounts for ceremony cost as well as value.
+Every cross-cutting concern is navigable across requirements, code, tests, runtime, ownership, and governance.
+Every velocity claim is grounded in architecture-level signals, not personal productivity scoring.
+Every expertise routing decision separates authority, practical context, availability, and privacy.
 ```
 
 These invariants are more important than any individual table.
@@ -1224,6 +1494,26 @@ Some architecture disputes should be governed into one authoritative answer. Oth
 ### Useful Output vs Output Entropy
 
 Generated comments, tests, ADR drafts, and plans create value only if they remain linked, fresh, deduplicated, and superseded when appropriate.
+
+### Reading vs Querying
+
+Some architecture work begins with a precise question. Much of it begins with slow interpretation, partial understanding, and revisitable notes.
+
+### Explicitness vs Ceremony Cost
+
+Formal architecture records create clarity only when their value exceeds their authoring, review, maintenance, and reading cost.
+
+### Absence vs Intentional Informality
+
+Missing evidence may be a gap, but it may also be a deliberate decision to keep a boundary, test, owner record, or ADR informal for now.
+
+### Objective Artifact vs Human Understanding
+
+Architecture exists in code and records, but its practical value depends on who understands it, what they remember, and what they are available to decide.
+
+### Architecture Quality vs Delivery Speed
+
+The system should connect architecture choices to time-to-market without reducing engineering work to simplistic productivity metrics.
 
 ---
 
@@ -1296,6 +1586,36 @@ Attention Budget
 Architecture Perspective
   A task-specific valid view of the system, such as security, runtime, domain, data, or product.
 
+Reading Session
+  A durable interpretive work mode with scope, threads, marks, checkpoints, comparisons, and resumption.
+
+Understanding State
+  A purpose-scoped record of partial, sufficient, stale, or strong understanding.
+
+Accepted Ambiguity
+  A deliberate decision to proceed with known uncertainty under a stated scope, risk, and review trigger.
+
+Reader Model
+  A conservative profile of prior exposure, vocabulary, role, and explanation preferences.
+
+Architecture Narrative
+  An evidence-backed story of how an architecture area reached its current shape.
+
+Intentional Informality
+  A scoped decision that an expected artifact or rule is not currently worth formalizing.
+
+Formalization Economics
+  The cost/value discipline for deciding how explicit an architecture record or policy should become.
+
+Cross-Cutting Concern Architecture
+  A coherent architecture object for concerns like security, performance, observability, privacy, and compliance.
+
+Architecture Velocity
+  The effect of architecture on delivery speed, coordination cost, feedback latency, and time-to-market.
+
+Expertise Claim
+  Evidence that a person or team has relevant context, authority, or review readiness for an area.
+
 Trust UX
   The interface discipline for showing evidence, scope, uncertainty, contradictions, and safe actions.
 ```
@@ -1304,4 +1624,4 @@ Trust UX
 
 ## One-Sentence Summary
 
-This dossier designs a system that turns software architecture from scattered code, docs, decisions, runtime traces, generated outputs, external tools, and human memory into a live, evidence-backed, queryable, enforceable, governable, and self-limiting engineering intelligence layer.
+This dossier designs a system that turns software architecture from scattered code, docs, decisions, runtime traces, generated outputs, external tools, human memory, partial understanding, and delivery pressure into a live, evidence-backed, queryable, enforceable, governable, self-limiting, and human-aware engineering intelligence layer.
