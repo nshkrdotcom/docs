@@ -29,13 +29,19 @@ If you only read one thing, read this README first, then read these in order:
 5. [0088_CollaborativeEngineeringPractice.md](0088_CollaborativeEngineeringPractice.md)  
    Reframes the system as support for real engineering practice, not only software as an artifact.
 
-Those five files give the shortest path to the current thesis.
+6. [0100_SystemFailureModes_andTrustRepair.md](0100_SystemFailureModes_andTrustRepair.md)  
+   Explains how the system recovers when it makes consequential mistakes.
+
+7. [0104_ArchitectureDebtEconomics.md](0104_ArchitectureDebtEconomics.md)  
+   Explains how teams decide which architecture problems are worth fixing now.
+
+Those seven files give the shortest path to the current thesis: representation, reasoning, practice, repair, and planning.
 
 ---
 
 ## The Mental Model
 
-The system has three broad layers.
+The system has four broad layers.
 
 ### 1. Representation Substrate
 
@@ -104,9 +110,28 @@ boundary violation dashboard
 provider migration control room
 governance review queue
 onboarding/rationale assistant
+middle-out exploration workspace
+architecture debt portfolio
 ```
 
 The UX is not just visualization. It is a trust surface: every important claim should expose scope, evidence, uncertainty, freshness, contradiction, and next action.
+
+### 4. Adoption and Repair Layer
+
+This is what lets the system survive contact with real teams:
+
+```text
+false-positive dispute flow
+trust repair
+detector downgrade
+gradual enforcement rollout
+architecture debt economics
+middle-out exploration
+test-structure interpretation
+planning and remediation portfolios
+```
+
+This layer is what prevents the product from becoming a brittle enforcement tool. It gives teams a path from advisory insight to trusted enforcement, with rollback, calibration, and economic prioritization.
 
 ---
 
@@ -375,6 +400,40 @@ to:
 software development as a practice to be supported
 ```
 
+### Phase 6: Operational Maturity and Adoption
+
+The `0090` critique identifies the next level of realism: what happens when the system is wrong, how users explore without a known question, how enforcement rolls out safely, how tests reveal architecture, and how teams prioritize architecture debt.
+
+- [0090_critique_claude.md](0090_critique_claude.md)  
+  Names the remaining adoption and practice gaps after the `0080` series.
+
+- [0100_SystemFailureModes_andTrustRepair.md](0100_SystemFailureModes_andTrustRepair.md)  
+  Adds a model for false positives, false enforcement, detector reliability, trust repair, downgrade policies, and post-failure learning.
+
+- [0101_MiddleOutExploration_andModelBuilding.md](0101_MiddleOutExploration_andModelBuilding.md)  
+  Adds exploratory sensemaking for users who start from code, tests, traces, or patterns before they know the right architectural question.
+
+- [0102_GradualEnforcementRollout.md](0102_GradualEnforcementRollout.md)  
+  Adds staged rollout for commitments: observe, warn, fail new violations, fail touched violations, cohort enforcement, and full enforcement.
+
+- [0103_TestStructure_asArchitectureEvidence.md](0103_TestStructure_asArchitectureEvidence.md)  
+  Treats test organization, mocks, fixtures, setup, assertions, and integration breadth as evidence of architecture intent.
+
+- [0104_ArchitectureDebtEconomics.md](0104_ArchitectureDebtEconomics.md)  
+  Adds a portfolio model for prioritizing architecture debt by cost, risk, interest, remediation effort, and finite engineering capacity.
+
+Together, these move the system from:
+
+```text
+architecture intelligence that can reason
+```
+
+to:
+
+```text
+architecture intelligence that can be adopted, trusted, repaired, rolled out, explored, and used for planning
+```
+
 ---
 
 ## Core Concepts
@@ -565,6 +624,56 @@ provider migration task
 
 Open loops turn findings into durable work, rather than one-off comments.
 
+### Failure Event
+
+A first-class record that the system behaved incorrectly or harmfully:
+
+```text
+false-positive CI block
+wrong scope
+stale evidence action
+bad suggested fix
+hidden uncertainty
+repeated false positive
+```
+
+Failure events drive trust repair, detector downgrade, calibration updates, and regression benchmarks.
+
+### Exploration Session
+
+A middle-out sensemaking session where a user starts from code, tests, runtime behavior, or search results and builds a provisional model.
+
+The output may become:
+
+```text
+candidate commitment
+known unknown
+context bundle
+architecture question
+governance proposal
+```
+
+### Rollout Stage
+
+A commitment enforcement phase:
+
+```text
+observe
+warn
+fail new violations
+fail touched violations
+cohort enforcement
+full enforcement
+```
+
+Rollout stages let teams formalize architecture without breaking every PR on day one.
+
+### Architecture Debt Item
+
+A drift, violation, missing verification, known unknown, stale ADR, expired exception, or provider migration risk that carries ongoing cost.
+
+Debt items can be accepted, planned, remediated, or deferred with review dates.
+
 ---
 
 ## Example Product Experience
@@ -626,6 +735,9 @@ action policy
 governance
 trust UX
 projection packet
+failure repair if wrong
+rollout stage
+debt prioritization
 ```
 
 ---
@@ -691,6 +803,18 @@ Read:
 5. [0087_SalienceDrivenInferenceScheduling.md](0087_SalienceDrivenInferenceScheduling.md)
 
 This covers authority, tacit knowledge, ownership drift, layered policy, and resource allocation.
+
+### For Adoption, Rollout, and Planning
+
+Read:
+
+1. [0100_SystemFailureModes_andTrustRepair.md](0100_SystemFailureModes_andTrustRepair.md)
+2. [0102_GradualEnforcementRollout.md](0102_GradualEnforcementRollout.md)
+3. [0104_ArchitectureDebtEconomics.md](0104_ArchitectureDebtEconomics.md)
+4. [0101_MiddleOutExploration_andModelBuilding.md](0101_MiddleOutExploration_andModelBuilding.md)
+5. [0103_TestStructure_asArchitectureEvidence.md](0103_TestStructure_asArchitectureEvidence.md)
+
+This covers what makes the system usable in real organizations: graceful failure, staged enforcement, economic prioritization, exploratory workflows, and richer test-derived architecture evidence.
 
 ---
 
@@ -836,6 +960,25 @@ Primary docs:
 - [0086_ExternalInterfaceEvolution.md](0086_ExternalInterfaceEvolution.md)
 - [0087_SalienceDrivenInferenceScheduling.md](0087_SalienceDrivenInferenceScheduling.md)
 
+### Stage 6: Adoption Maturity
+
+```text
+system failure handling
+trust repair
+middle-out exploration
+gradual enforcement rollout
+test-structure architecture extraction
+architecture debt economics
+```
+
+Primary docs:
+
+- [0100_SystemFailureModes_andTrustRepair.md](0100_SystemFailureModes_andTrustRepair.md)
+- [0101_MiddleOutExploration_andModelBuilding.md](0101_MiddleOutExploration_andModelBuilding.md)
+- [0102_GradualEnforcementRollout.md](0102_GradualEnforcementRollout.md)
+- [0103_TestStructure_asArchitectureEvidence.md](0103_TestStructure_asArchitectureEvidence.md)
+- [0104_ArchitectureDebtEconomics.md](0104_ArchitectureDebtEconomics.md)
+
 ---
 
 ## Architectural Invariants
@@ -855,6 +998,9 @@ Every compressed view preserves high-risk and contested facts.
 Every human correction records scope and authority.
 Every governance decision is auditable.
 Every action leaves a durable learning signal.
+Every system failure can be disputed, repaired, and converted into calibration or benchmark data.
+Every enforcement rollout has scope, stage, metrics, and rollback criteria.
+Every architecture debt item has an owner, review state, or explicit unknown.
 ```
 
 These invariants are more important than any individual table.
@@ -927,6 +1073,18 @@ Known Unknown
 
 Open Loop
   An unresolved follow-up such as missing test, expired exception, ADR update, or owner clarification.
+
+Failure Event
+  A record of system behavior that was wrong, harmful, over-enforced, or trust-damaging.
+
+Exploration Session
+  A durable middle-out investigation where understanding emerges from code, tests, runtime, and patterns.
+
+Rollout Stage
+  A controlled enforcement phase for a commitment, such as observe, warn, fail new, or enforce all.
+
+Architecture Debt Item
+  A finding that carries ongoing cost and needs remediation, acceptance, or review.
 
 Trust UX
   The interface discipline for showing evidence, scope, uncertainty, contradictions, and safe actions.
