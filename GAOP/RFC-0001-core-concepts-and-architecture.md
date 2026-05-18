@@ -84,6 +84,26 @@ Trace lineage is the causal chain connecting input artifacts, command envelopes,
 
 Trace lineage MUST support auditor reconstruction of why a governed effect occurred.
 
+### Epistemic Frame
+
+An epistemic frame is the protocol object that records the conditions under which a claim, command, authority decision, effect, receipt, replay result, or audit projection was produced.
+
+An epistemic frame captures system identity, analyzer identity, resource budgets, index completeness, coordination mode, concurrent work, reflexivity state, and external constraint context.
+
+An epistemic frame is not passive metadata. A compliant implementation MAY use it to restrict conclusions, disclose degraded results, prevent unsafe merges, and decide whether two observations are comparable.
+
+### Framed Observation
+
+A framed observation is any protocol-relevant claim whose meaning depends on the conditions of production.
+
+Examples include confidence scores, policy findings, impact analyses, replay conclusions, and audit projections.
+
+### External Constraint
+
+An external constraint is a regulatory, legal, ecosystem, platform, certification, or contractual requirement that affects architecture or execution semantics but may not be encoded directly in local policy bundles.
+
+External constraints MUST be represented separately from local design preferences.
+
 ### Policy Bundle
 
 A policy bundle is an immutable set of policy material used to evaluate a command or constrain execution.
@@ -144,6 +164,8 @@ flowchart TD
 8. Redaction MUST happen before raw payloads enter permanent audit records.
 9. Provider-specific payloads MUST be normalized before becoming protocol receipts.
 10. Protocol objects MUST be serializable in a language-neutral representation.
+11. Claims, receipts, replay results, and audit projections that depend on system identity, resource limits, coordination state, reflexivity state, or external constraints SHOULD reference an epistemic frame.
+12. GAOP-Strict implementations MUST support epistemic frame references as defined in RFC-0008.
 
 ## Canonicalization and hashes
 
@@ -255,5 +277,20 @@ The following schema defines shared GAOP primitive types.
 | GAOP-Evidence | Adds evidence records, trace lineage, and replay hash chains. |
 | GAOP-Lease | Adds credential lease and materialization rules. |
 | GAOP-HITL | Adds review gates and compensation recipes. |
-| GAOP-Strict | Implements all required RFC-0001 through RFC-0007 rules. |
+| GAOP-Epistemic | Adds epistemic frames, analyzer manifests, coordination context, query bounds, reflexivity signals, and external constraints. |
+| GAOP-Strict | Implements all required RFC-0001 through RFC-0008 rules. |
 
+## Epistemic extension
+
+Protocol objects defined in RFC-0002 through RFC-0007 MAY carry:
+
+```json
+{
+  "epistemic_frame_ref": "epistemic-frame://tenant/example/frame",
+  "epistemic_frame_hash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+}
+```
+
+If present, `epistemic_frame_hash` MUST be computed over the canonical serialized `EpistemicFrame` defined in RFC-0008.
+
+If a protocol object includes an epistemic frame reference, downstream components MUST preserve it or explicitly create a successor frame that references it.

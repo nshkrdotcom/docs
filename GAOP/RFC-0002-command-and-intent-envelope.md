@@ -432,3 +432,30 @@ Resource scopes MUST be represented by references and constraints. They MUST NOT
 }
 ```
 
+
+## Epistemic frame binding
+
+A command envelope MAY include `epistemic_frame_ref` and `epistemic_frame_hash` when the command was produced by an analyzer, planner, autonomous agent, bounded query, replay process, or other system whose output depends on system identity or resource conditions.
+
+For GAOP-Epistemic conformance:
+
+1. Agent-produced command envelopes MUST include an epistemic frame reference.
+2. Human-entered command envelopes SHOULD include an epistemic frame reference if the command was shaped by system-generated findings.
+3. Commands derived from degraded or partial query results MUST disclose the originating epistemic frame.
+4. A policy engine SHOULD treat missing epistemic context as a risk factor for high-impact effects.
+
+Schema fragment:
+
+```json
+{
+  "epistemic_frame_ref": {
+    "type": "string",
+    "maxLength": 2048,
+    "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+  },
+  "epistemic_frame_hash": {
+    "type": "string",
+    "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+  }
+}
+```

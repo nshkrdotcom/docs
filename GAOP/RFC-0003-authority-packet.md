@@ -401,3 +401,39 @@ If any validation fails, the execution layer MUST return a denial receipt and MU
 3. Implementations SHOULD keep authority packet lifetimes short.
 4. An authority packet SHOULD be single-use for high-risk write, delete, execute, network, or delegation operations.
 
+
+## Epistemic validation rules
+
+An authority packet MAY include `epistemic_frame_ref` and `epistemic_frame_hash`.
+
+For GAOP-Epistemic conformance:
+
+1. A policy engine MUST record the epistemic frame under which it evaluated policy.
+2. If policy evaluation uses model-generated classification, static analysis, retrieved context, or bounded query output, the authority packet MUST reference an epistemic frame.
+3. If an authority packet relies on degraded or partial evidence, `decision` SHOULD be `deny` or `review_required` for high-impact effects unless policy explicitly permits degraded evidence.
+4. If an authority packet compares confidence scores from different analyzer manifests, it MUST verify manifest transition compatibility as defined in RFC-0008.
+5. An execution layer MAY reject authority packets whose epistemic frame is missing, expired, incompatible, or lower-trust than the requested effect class permits.
+
+Schema fragment:
+
+```json
+{
+  "epistemic_frame_ref": {
+    "type": "string",
+    "maxLength": 2048,
+    "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+  },
+  "epistemic_frame_hash": {
+    "type": "string",
+    "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+  },
+  "epistemic_disclosures": {
+    "type": "array",
+    "maxItems": 128,
+    "items": {
+      "type": "string",
+      "maxLength": 4096
+    }
+  }
+}
+```

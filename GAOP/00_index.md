@@ -27,6 +27,7 @@ The terms `MUST`, `MUST NOT`, `REQUIRED`, `SHOULD`, `SHOULD NOT`, and `MAY` are 
 | RFC-0005 | Governed Effects and Receipts | Defines effect execution and normalized receipts. |
 | RFC-0006 | Audit Lineage and Causal Replay | Defines evidence records, hash chains, and replay semantics. |
 | RFC-0007 | Human-in-the-Loop and Compensation | Defines review gates and rollback/compensation recipes. |
+| RFC-0008 | Epistemic Frames and Operational Correctness | Defines system identity, bounded execution, coordination, reflexivity, and external constraint context. |
 
 ## Reading order
 
@@ -37,6 +38,7 @@ The terms `MUST`, `MUST NOT`, `REQUIRED`, `SHOULD`, `SHOULD NOT`, and `MAY` are 
 5. `RFC-0005-governed-effects-and-receipts.md`
 6. `RFC-0006-audit-lineage-and-causal-replay.md`
 7. `RFC-0007-hitl-and-compensation.md`
+8. `RFC-0008-epistemic-frames-and-operational-correctness.md`
 
 ## Protocol principle
 
@@ -53,6 +55,7 @@ A governed effect is valid only when it can be tied to:
 7. An execution lane.
 8. A deterministic or cryptographic receipt.
 9. A trace lineage record.
+10. An epistemic frame describing the system, resource, coordination, reflexivity, and external-constraint conditions under which the observation or action was produced.
 
 ## Out of scope
 
@@ -69,3 +72,8 @@ GAOP does not standardize:
 
 GAOP standardizes the contracts that allow those systems to interoperate safely.
 
+## Epistemic correctness
+
+GAOP treats evidence as framed. A receipt or claim without epistemic context may still be useful, but it is not sufficient for strict conformance in environments where model versions, analyzer versions, query budgets, concurrent analyses, reflexivity, or external constraints can change the meaning of the result.
+
+RFC-0008 defines the protocol objects that prevent silently incomparable confidence scores, silently partial query results, racing analyses, self-induced calibration drift, and missing external constraint context.

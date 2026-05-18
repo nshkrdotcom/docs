@@ -439,3 +439,48 @@ An execution layer resuming from review MUST verify:
 
 If any check fails, execution MUST remain paused or be denied.
 
+
+## Epistemic review and compensation rules
+
+Review gates, review decisions, compensation recipes, and compensation receipts MAY include `epistemic_frame_ref` and `epistemic_frame_hash`.
+
+For GAOP-Epistemic conformance:
+
+1. A review gate MUST disclose the epistemic frame that caused review to be required.
+2. A reviewer SHOULD be shown degradation disclosures, manifest incompatibilities, reflexivity warnings, coordination conflicts, and external constraints relevant to the decision.
+3. A review approval MUST bind to the same epistemic frame or a compatible successor frame.
+4. Compensation recipes SHOULD declare external constraints that affect rollback safety.
+5. Compensation receipts MUST disclose if compensation was partial because of external constraints or changed frame conditions.
+
+Schema fragment:
+
+```json
+{
+  "epistemic_frame_ref": {
+    "type": "string",
+    "maxLength": 2048,
+    "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+  },
+  "epistemic_frame_hash": {
+    "type": "string",
+    "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+  },
+  "review_disclosures": {
+    "type": "array",
+    "maxItems": 128,
+    "items": {
+      "type": "string",
+      "maxLength": 4096
+    }
+  },
+  "external_constraint_refs": {
+    "type": "array",
+    "maxItems": 128,
+    "items": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    }
+  }
+}
+```

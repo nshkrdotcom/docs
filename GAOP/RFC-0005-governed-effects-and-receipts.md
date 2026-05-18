@@ -388,3 +388,49 @@ Quarantined payloads:
 4. Execution lanes MUST return normalized receipts.
 5. Execution lanes MUST NOT treat raw target payloads as permanent receipt bodies.
 
+
+## Epistemic receipt rules
+
+Effect requests and effect receipts MAY include `epistemic_frame_ref` and `epistemic_frame_hash`.
+
+For GAOP-Epistemic conformance:
+
+1. An effect request MUST preserve the epistemic frame from the authority packet unless it creates a successor frame.
+2. An execution lane MUST disclose if it ran under a degraded resource class, partial index, best-effort coordination mode, or external constraint exception.
+3. An effect receipt MUST disclose whether the execution result is complete, degraded, quarantined, or externally constrained.
+4. A successful effect receipt MUST NOT hide that the underlying decision was based on partial evidence.
+5. A denied effect receipt SHOULD include epistemic disclosures when denial was caused by missing frame context, incompatible manifests, exceeded query bounds, or external constraint conflict.
+
+Schema fragment:
+
+```json
+{
+  "epistemic_frame_ref": {
+    "type": "string",
+    "maxLength": 2048,
+    "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+  },
+  "epistemic_frame_hash": {
+    "type": "string",
+    "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+  },
+  "execution_completeness": {
+    "type": "number",
+    "minimum": 0.0,
+    "maximum": 1.0
+  },
+  "degradation_disclosure": {
+    "type": "object",
+    "additionalProperties": true
+  },
+  "external_constraint_refs": {
+    "type": "array",
+    "maxItems": 128,
+    "items": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    }
+  }
+}
+```
