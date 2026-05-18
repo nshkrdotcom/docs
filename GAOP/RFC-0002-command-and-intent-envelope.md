@@ -418,9 +418,9 @@ Resource scopes MUST be represented by references and constraints. They MUST NOT
 ## Idempotency rules
 
 1. A client MUST provide an idempotency key for every command.
-2. A receiver MUST use `tenant_id`, `actor_ref`, `capability_id`, `operation`, and `idempotency_key` to detect duplicate commands.
+2. The tuple `(tenant_id, idempotency_key)` MUST be globally unique within the retention window.
 3. A duplicate command with byte-identical canonical payload SHOULD return the previous terminal result.
-4. A duplicate command with the same idempotency key and different canonical payload MUST be rejected.
+4. A duplicate command with the same `(tenant_id, idempotency_key)` tuple but different canonical payload (e.g., different operation, different capability) MUST be rejected with an `IdempotencyMismatch` error (category: `client`, code: `idempotency.mismatch`).
 5. Idempotency keys MUST be retained by receivers for at least the lifetime of the associated authority packet. Implementations SHOULD retain keys for at least 24 hours.
 
 ## Trace rules

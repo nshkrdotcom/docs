@@ -445,6 +445,17 @@ The effect request references the authority packet by `authority_id` and `author
 9. An effect receipt MUST include `actor_ref` from the originating command envelope.
 10. `redaction_manifest_ref` SHOULD be present when the effect produces output that requires redaction. It MAY be absent for effects with no sensitive output.
 
+## Redaction tombstone rules
+
+When a field value is redacted from a payload before permanent storage:
+
+1. The JSON key MUST be preserved. Redacted values MUST NOT be removed from the object, as this would cause strict JSON parsers downstream to fail on missing required keys.
+2. Redacted scalar values MUST be replaced by a tombstone string containing the hash of the original value in the format: `"[REDACTED: <hash>]"` (e.g., `"[REDACTED: sha256:a1b2c3...]"`).
+3. The tombstone hash provides a cryptographic pointer to the quarantined original data.
+4. Redacted array values SHOULD be replaced by a single-element array containing a tombstone string.
+5. Redacted object values SHOULD be replaced by an object containing a single `"_redacted"` key with a tombstone string value.
+6. The `redacted_fields` array in the `RedactionManifest` MUST list the JSON Pointer (RFC 6901) path of every redacted field.
+
 ## Quarantine rules
 
 Raw provider or target-resource payloads MAY be stored in a quarantine store when needed for debugging, compliance, or replay.

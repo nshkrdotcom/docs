@@ -338,16 +338,19 @@ An `AuthorityPacket` MUST include:
     },
     "Signature": {
       "type": "object",
+      "description": "Signatures SHOULD use JSON Web Signature (JWS - RFC 7515) algorithm identifiers (e.g., EdDSA, RS256, ES256). The key_ref SHOULD be a resolvable URI to a public key, JWK, or JWKS (JSON Web Key Set) endpoint.",
       "required": ["signature_algorithm", "key_ref", "signature_value"],
       "additionalProperties": false,
       "properties": {
         "signature_algorithm": {
           "type": "string",
+          "description": "SHOULD use JWS (RFC 7515) algorithm identifiers: EdDSA, RS256, ES256, etc.",
           "minLength": 1,
           "maxLength": 128
         },
         "key_ref": {
           "type": "string",
+          "description": "A resolvable URI to a public key, JWK, or JWKS endpoint.",
           "minLength": 1,
           "maxLength": 2048,
           "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"

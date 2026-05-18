@@ -490,11 +490,12 @@ A compensation recipe is a declarative plan. Each compensation step MUST indepen
 2. A compensation recipe MUST identify the effect request it applies to.
 3. A compensation recipe MUST reference the authority packet that governs it via `authority_id` and `authority_hash`.
 4. A compensation step MUST be independently governed as a new effect through the full GAOP lifecycle.
-5. Compensation MUST produce a compensation receipt.
-6. Compensation MUST NOT erase the original effect receipt.
-7. Failed compensation MUST be represented explicitly.
-8. Manual remediation MAY be a valid compensation strategy if automated reversal is unsafe or impossible.
-9. When `compensation_strategy` is `none_available`, the `steps` array MAY be empty. For all other strategies, `steps` MUST contain at least one entry.
+5. Operations referenced in a `CompensationStep` MUST be idempotent. The execution layer MUST be able to retry a compensation step until it receives a terminal success or failure without causing duplicate rollbacks or side effects.
+6. Compensation MUST produce a compensation receipt.
+7. Compensation MUST NOT erase the original effect receipt.
+8. Failed compensation MUST be represented explicitly.
+9. Manual remediation MAY be a valid compensation strategy if automated reversal is unsafe or impossible.
+10. When `compensation_strategy` is `none_available`, the `steps` array MAY be empty. For all other strategies, `steps` MUST contain at least one entry.
 
 ## Review approval binding
 

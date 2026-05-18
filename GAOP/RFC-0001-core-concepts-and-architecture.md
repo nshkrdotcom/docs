@@ -87,6 +87,8 @@ Trace lineage is the causal chain connecting input artifacts, command envelopes,
 
 Trace lineage MUST support auditor reconstruction of why a governed effect occurred.
 
+A GAOP `trace_id` MAY map directly to a W3C Trace Context `trace-id` (a 16-byte array represented as 32 lowercase hex characters) as defined in the W3C Trace Context specification. This allows enterprises to overlay GAOP governance on existing distributed tracing infrastructure (OpenTelemetry, Datadog, Honeycomb, Jaeger, etc.).
+
 ### Epistemic Frame
 
 An epistemic frame is the protocol object that records the conditions under which a claim, command, authority decision, effect, receipt, replay result, or audit projection was produced.
