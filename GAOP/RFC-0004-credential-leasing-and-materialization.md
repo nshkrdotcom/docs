@@ -144,6 +144,15 @@ stateDiagram-v2
       "type": "integer",
       "minimum": 0
     },
+    "epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
     "issued_at": {
       "type": "string",
       "format": "date-time"
@@ -159,8 +168,7 @@ stateDiagram-v2
           { "type": "string", "maxLength": 4096 },
           { "type": "number" },
           { "type": "integer" },
-          { "type": "boolean" },
-          { "type": "null" }
+          { "type": "boolean" }
         ]
       },
       "default": {}
@@ -292,6 +300,15 @@ stateDiagram-v2
       "description": "Non-secret fingerprint or hash commitment. MUST NOT be sufficient to recover the secret.",
       "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
     },
+    "epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
     "materialized_at": {
       "type": "string",
       "format": "date-time"
@@ -353,10 +370,7 @@ Permanent records MUST NOT include:
 6. Unredacted authorization headers.
 7. Unredacted cookie values.
 
-
 ## Epistemic frame binding
-
-Credential leases and materialization receipts MAY include `epistemic_frame_ref` and `epistemic_frame_hash`.
 
 For GAOP-Epistemic conformance:
 
@@ -365,18 +379,3 @@ For GAOP-Epistemic conformance:
 3. A credential broker MAY deny materialization when the epistemic frame is stale, degraded, or incompatible with the requested secret class.
 4. Materialization at the edge MUST NOT weaken the epistemic frame. If a new frame is created at materialization time, it MUST reference the prior frame.
 
-Schema fragment:
-
-```json
-{
-  "epistemic_frame_ref": {
-    "type": "string",
-    "maxLength": 2048,
-    "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
-  },
-  "epistemic_frame_hash": {
-    "type": "string",
-    "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
-  }
-}
-```

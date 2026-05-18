@@ -6,7 +6,7 @@ Version: v1.0
 
 ## Abstract
 
-This document defines the GAOP effect request and effect receipt. An effect request is the execution-layer payload that carries an authority packet and bounded operation request. An effect receipt is the normalized, durable proof of what happened.
+This document defines the GAOP effect request and effect receipt. An effect request is the execution-layer payload that carries an authority reference and bounded operation request. An effect receipt is the normalized, durable proof of what happened.
 
 ## Effect lifecycle
 
@@ -31,6 +31,8 @@ flowchart TD
 
 ## EffectRequest JSON Schema
 
+The effect request references the authority packet by `authority_id` and `authority_hash`. The execution layer MUST retrieve and validate the full authority packet before performing side effects.
+
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
@@ -44,7 +46,8 @@ flowchart TD
     "trace_id",
     "command_id",
     "command_hash",
-    "authority_packet",
+    "authority_id",
+    "authority_hash",
     "target_ref",
     "operation",
     "resource_scope_ids",
@@ -85,8 +88,15 @@ flowchart TD
       "type": "string",
       "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
     },
-    "authority_packet": {
-      "$ref": "https://gaop.dev/schemas/v1/authority-packet.schema.json"
+    "authority_id": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 256,
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]*$"
+    },
+    "authority_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
     },
     "target_ref": {
       "type": "string",
@@ -137,6 +147,15 @@ flowchart TD
       "type": "string",
       "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
     },
+    "epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
     "requested_at": {
       "type": "string",
       "format": "date-time"
@@ -159,6 +178,7 @@ flowchart TD
     "effect_request_id",
     "tenant_id",
     "trace_id",
+    "actor_ref",
     "status",
     "target_ref",
     "operation",
@@ -166,7 +186,6 @@ flowchart TD
     "authority_id",
     "authority_hash",
     "output_hash",
-    "redaction_manifest_ref",
     "started_at",
     "completed_at"
   ],
@@ -199,6 +218,12 @@ flowchart TD
       "minLength": 16,
       "maxLength": 256,
       "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]*$"
+    },
+    "actor_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
     },
     "status": {
       "type": "string",
@@ -238,7 +263,6 @@ flowchart TD
     },
     "redaction_manifest_ref": {
       "type": "string",
-      "minLength": 1,
       "maxLength": 2048,
       "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
     },
@@ -264,13 +288,65 @@ flowchart TD
       },
       "default": []
     },
-    "denial_reason": {
-      "type": "string",
-      "maxLength": 4096
+    "error_detail": {
+      "description": "Structured error information. Uses the ErrorDetail schema from RFC-0001 core types.",
+      "type": "object",
+      "required": ["category", "code", "message"],
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": ["client", "policy", "execution", "infrastructure", "lease", "review", "epistemic"]
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]*$"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "retryable": {
+          "type": "boolean",
+          "default": false
+        },
+        "detail_ref": {
+          "type": "string",
+          "maxLength": 2048,
+          "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+        }
+      }
     },
-    "error_class": {
+    "epistemic_frame_ref": {
       "type": "string",
-      "maxLength": 256
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
+    "execution_completeness": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "degradation_disclosure": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "external_constraint_refs": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "type": "string",
+        "maxLength": 2048,
+        "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+      },
+      "default": []
     },
     "started_at": {
       "type": "string",
@@ -361,11 +437,13 @@ flowchart TD
 1. Every attempted side effect MUST produce an effect receipt.
 2. A denied effect MUST produce a receipt with `status: "denied"`.
 3. A timed-out effect MUST produce a receipt with `status: "timeout"`.
-4. A failed effect MUST distinguish platform failure from target-resource failure when possible.
+4. A failed effect MUST include an `error_detail` object that distinguishes platform failure from target-resource failure when possible.
 5. `output_hash` MUST hash the normalized, redacted output or a deterministic empty payload.
 6. Raw target payloads MUST be redacted or quarantined before permanent receipt persistence.
 7. `target_ref` MUST be a stable reference, not a raw credential-bearing endpoint.
 8. An effect receipt MUST preserve `trace_id`.
+9. An effect receipt MUST include `actor_ref` from the originating command envelope.
+10. `redaction_manifest_ref` SHOULD be present when the effect produces output that requires redaction. It MAY be absent for effects with no sensitive output.
 
 ## Quarantine rules
 
@@ -388,10 +466,7 @@ Quarantined payloads:
 4. Execution lanes MUST return normalized receipts.
 5. Execution lanes MUST NOT treat raw target payloads as permanent receipt bodies.
 
-
 ## Epistemic receipt rules
-
-Effect requests and effect receipts MAY include `epistemic_frame_ref` and `epistemic_frame_hash`.
 
 For GAOP-Epistemic conformance:
 
@@ -401,36 +476,3 @@ For GAOP-Epistemic conformance:
 4. A successful effect receipt MUST NOT hide that the underlying decision was based on partial evidence.
 5. A denied effect receipt SHOULD include epistemic disclosures when denial was caused by missing frame context, incompatible manifests, exceeded query bounds, or external constraint conflict.
 
-Schema fragment:
-
-```json
-{
-  "epistemic_frame_ref": {
-    "type": "string",
-    "maxLength": 2048,
-    "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
-  },
-  "epistemic_frame_hash": {
-    "type": "string",
-    "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
-  },
-  "execution_completeness": {
-    "type": "number",
-    "minimum": 0.0,
-    "maximum": 1.0
-  },
-  "degradation_disclosure": {
-    "type": "object",
-    "additionalProperties": true
-  },
-  "external_constraint_refs": {
-    "type": "array",
-    "maxItems": 128,
-    "items": {
-      "type": "string",
-      "maxLength": 2048,
-      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
-    }
-  }
-}
-```

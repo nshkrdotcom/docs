@@ -59,7 +59,7 @@ A `CommandEnvelope` MUST include:
 
 A `ResourceScope` describes the maximum blast radius of a request. Scope is not a suggestion. Policy and execution layers MUST treat scope as a hard boundary.
 
-Examples of scope kinds:
+Well-known scope kinds:
 
 1. `path_prefix`.
 2. `object_collection`.
@@ -70,6 +70,8 @@ Examples of scope kinds:
 7. `artifact_collection`.
 8. `source_system_segment`.
 9. `target_resource_segment`.
+
+Implementations MAY define additional scope kinds. Custom scope kinds SHOULD use a namespaced identifier (e.g., `myorg.kubernetes_namespace`).
 
 Resource scopes MUST be represented by references and constraints. They MUST NOT include raw credentials.
 
@@ -154,6 +156,14 @@ Resource scopes MUST be represented by references and constraints. They MUST NOT
     "constraints": {
       "$ref": "#/$defs/CommandConstraints"
     },
+    "delegation_chain": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/$defs/DelegationLink"
+      },
+      "default": []
+    },
     "created_at": {
       "type": "string",
       "format": "date-time"
@@ -162,6 +172,15 @@ Resource scopes MUST be represented by references and constraints. They MUST NOT
       "type": "string",
       "format": "date-time"
     },
+    "epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
     "metadata": {
       "type": "object",
       "additionalProperties": {
@@ -169,8 +188,7 @@ Resource scopes MUST be represented by references and constraints. They MUST NOT
           { "type": "string", "maxLength": 4096 },
           { "type": "number" },
           { "type": "integer" },
-          { "type": "boolean" },
-          { "type": "null" }
+          { "type": "boolean" }
         ]
       },
       "default": {}
@@ -179,7 +197,7 @@ Resource scopes MUST be represented by references and constraints. They MUST NOT
   "$defs": {
     "RequestedCapability": {
       "type": "object",
-      "required": ["capability_id", "operation"],
+      "required": ["capability_id", "operation", "effect_class"],
       "additionalProperties": false,
       "properties": {
         "capability_id": {
@@ -255,17 +273,10 @@ Resource scopes MUST be represented by references and constraints. They MUST NOT
         },
         "scope_kind": {
           "type": "string",
-          "enum": [
-            "path_prefix",
-            "object_collection",
-            "record_set",
-            "endpoint_class",
-            "dataset",
-            "message_queue",
-            "artifact_collection",
-            "source_system_segment",
-            "target_resource_segment"
-          ]
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "Well-known values: path_prefix, object_collection, record_set, endpoint_class, dataset, message_queue, artifact_collection, source_system_segment, target_resource_segment. Implementations MAY define additional values using namespaced identifiers.",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]*$"
         },
         "resource_ref": {
           "type": "string",
@@ -355,6 +366,40 @@ Resource scopes MUST be represented by references and constraints. They MUST NOT
           "enum": ["none", "allowlisted", "tenant_private", "unrestricted"]
         }
       }
+    },
+    "DelegationLink": {
+      "type": "object",
+      "required": ["delegator_ref", "delegatee_ref", "delegation_scope_ids"],
+      "additionalProperties": false,
+      "properties": {
+        "delegator_ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+        },
+        "delegatee_ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+        },
+        "delegation_scope_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 128,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          },
+          "uniqueItems": true
+        },
+        "delegated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
     }
   }
 }
@@ -373,15 +418,27 @@ Resource scopes MUST be represented by references and constraints. They MUST NOT
 ## Idempotency rules
 
 1. A client MUST provide an idempotency key for every command.
-2. A receiver MUST use `tenant_id`, `actor_ref`, `requested_capability`, and `idempotency_key` to detect duplicate commands.
+2. A receiver MUST use `tenant_id`, `actor_ref`, `capability_id`, `operation`, and `idempotency_key` to detect duplicate commands.
 3. A duplicate command with byte-identical canonical payload SHOULD return the previous terminal result.
 4. A duplicate command with the same idempotency key and different canonical payload MUST be rejected.
+5. Idempotency keys MUST be retained by receivers for at least the lifetime of the associated authority packet. Implementations SHOULD retain keys for at least 24 hours.
 
 ## Trace rules
 
 1. `trace_id` MUST be preserved across policy evaluation, authority packet generation, effect execution, receipt generation, and evidence records.
 2. A downstream component MUST NOT replace `trace_id`.
 3. A downstream component MAY add child trace identifiers if parent linkage is retained.
+
+## Epistemic frame binding
+
+A command envelope MAY include `epistemic_frame_ref` and `epistemic_frame_hash` when the command was produced by an analyzer, planner, autonomous agent, bounded query, replay process, or other system whose output depends on system identity or resource conditions.
+
+For GAOP-Epistemic conformance:
+
+1. Agent-produced command envelopes MUST include an epistemic frame reference.
+2. Human-entered command envelopes SHOULD include an epistemic frame reference if the command was shaped by system-generated findings.
+3. Commands derived from degraded or partial query results MUST disclose the originating epistemic frame.
+4. A policy engine SHOULD treat missing epistemic context as a risk factor for high-impact effects.
 
 ## Example command envelope
 
@@ -432,30 +489,3 @@ Resource scopes MUST be represented by references and constraints. They MUST NOT
 }
 ```
 
-
-## Epistemic frame binding
-
-A command envelope MAY include `epistemic_frame_ref` and `epistemic_frame_hash` when the command was produced by an analyzer, planner, autonomous agent, bounded query, replay process, or other system whose output depends on system identity or resource conditions.
-
-For GAOP-Epistemic conformance:
-
-1. Agent-produced command envelopes MUST include an epistemic frame reference.
-2. Human-entered command envelopes SHOULD include an epistemic frame reference if the command was shaped by system-generated findings.
-3. Commands derived from degraded or partial query results MUST disclose the originating epistemic frame.
-4. A policy engine SHOULD treat missing epistemic context as a risk factor for high-impact effects.
-
-Schema fragment:
-
-```json
-{
-  "epistemic_frame_ref": {
-    "type": "string",
-    "maxLength": 2048,
-    "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
-  },
-  "epistemic_frame_hash": {
-    "type": "string",
-    "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
-  }
-}
-```

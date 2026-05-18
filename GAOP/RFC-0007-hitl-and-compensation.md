@@ -13,10 +13,10 @@ This document defines GAOP human-in-the-loop review gates and compensation recip
 ```mermaid
 stateDiagram-v2
     [*] --> Execution_Paused
-    Execution_Paused --> Operator_Approved: review decision allow
+    Execution_Paused --> Operator_Allowed: review decision allow
     Execution_Paused --> Operator_Denied: review decision deny
     Execution_Paused --> Review_Expired: timeout
-    Operator_Approved --> Resume_Execution
+    Operator_Allowed --> Resume_Execution
     Operator_Denied --> Trigger_Compensation
     Review_Expired --> Trigger_Compensation
     Resume_Execution --> Effect_Executed
@@ -97,7 +97,7 @@ stateDiagram-v2
     },
     "review_state": {
       "type": "string",
-      "enum": ["pending", "approved", "denied", "expired", "cancelled"]
+      "enum": ["pending", "allowed", "denied", "expired", "cancelled"]
     },
     "required_reviewer_class": {
       "type": "string",
@@ -121,6 +121,24 @@ stateDiagram-v2
           "format": "date-time"
         }
       }
+    },
+    "epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
+    "review_disclosures": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "type": "string",
+        "maxLength": 4096
+      },
+      "default": []
     },
     "created_at": {
       "type": "string",
@@ -191,7 +209,7 @@ stateDiagram-v2
     },
     "decision": {
       "type": "string",
-      "enum": ["approve", "deny"]
+      "enum": ["allow", "deny"]
     },
     "decision_rationale": {
       "type": "string",
@@ -223,6 +241,15 @@ stateDiagram-v2
         }
       }
     },
+    "epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
     "decided_at": {
       "type": "string",
       "format": "date-time"
@@ -232,6 +259,8 @@ stateDiagram-v2
 ```
 
 ## CompensationRecipe JSON Schema
+
+A compensation recipe is a declarative plan. Each compensation step MUST independently pass through the full GAOP lifecycle (command → authority → effect → receipt) when executed.
 
 ```json
 {
@@ -245,8 +274,9 @@ stateDiagram-v2
     "tenant_id",
     "trace_id",
     "applies_to_effect_request_id",
+    "authority_id",
+    "authority_hash",
     "compensation_strategy",
-    "steps",
     "created_at"
   ],
   "additionalProperties": false,
@@ -279,17 +309,46 @@ stateDiagram-v2
       "maxLength": 256,
       "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]*$"
     },
+    "authority_id": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 256,
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]*$"
+    },
+    "authority_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
     "compensation_strategy": {
       "type": "string",
       "enum": ["inverse_effect", "restore_snapshot", "append_correction", "manual_remediation", "none_available"]
     },
     "steps": {
       "type": "array",
-      "minItems": 1,
       "maxItems": 128,
       "items": {
         "$ref": "#/$defs/CompensationStep"
-      }
+      },
+      "default": []
+    },
+    "epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
+    "external_constraint_refs": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "type": "string",
+        "maxLength": 2048,
+        "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+      },
+      "default": []
     },
     "created_at": {
       "type": "string",
@@ -394,6 +453,15 @@ stateDiagram-v2
       },
       "default": []
     },
+    "epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
     "receipt_hash": {
       "type": "string",
       "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
@@ -420,11 +488,13 @@ stateDiagram-v2
 
 1. High-risk multi-step operations SHOULD declare compensation recipes before execution.
 2. A compensation recipe MUST identify the effect request it applies to.
-3. A compensation step SHOULD be independently governed as a new effect.
-4. Compensation MUST produce a compensation receipt.
-5. Compensation MUST NOT erase the original effect receipt.
-6. Failed compensation MUST be represented explicitly.
-7. Manual remediation MAY be a valid compensation strategy if automated reversal is unsafe or impossible.
+3. A compensation recipe MUST reference the authority packet that governs it via `authority_id` and `authority_hash`.
+4. A compensation step MUST be independently governed as a new effect through the full GAOP lifecycle.
+5. Compensation MUST produce a compensation receipt.
+6. Compensation MUST NOT erase the original effect receipt.
+7. Failed compensation MUST be represented explicitly.
+8. Manual remediation MAY be a valid compensation strategy if automated reversal is unsafe or impossible.
+9. When `compensation_strategy` is `none_available`, the `steps` array MAY be empty. For all other strategies, `steps` MUST contain at least one entry.
 
 ## Review approval binding
 
@@ -439,10 +509,7 @@ An execution layer resuming from review MUST verify:
 
 If any check fails, execution MUST remain paused or be denied.
 
-
 ## Epistemic review and compensation rules
-
-Review gates, review decisions, compensation recipes, and compensation receipts MAY include `epistemic_frame_ref` and `epistemic_frame_hash`.
 
 For GAOP-Epistemic conformance:
 
@@ -452,35 +519,3 @@ For GAOP-Epistemic conformance:
 4. Compensation recipes SHOULD declare external constraints that affect rollback safety.
 5. Compensation receipts MUST disclose if compensation was partial because of external constraints or changed frame conditions.
 
-Schema fragment:
-
-```json
-{
-  "epistemic_frame_ref": {
-    "type": "string",
-    "maxLength": 2048,
-    "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
-  },
-  "epistemic_frame_hash": {
-    "type": "string",
-    "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
-  },
-  "review_disclosures": {
-    "type": "array",
-    "maxItems": 128,
-    "items": {
-      "type": "string",
-      "maxLength": 4096
-    }
-  },
-  "external_constraint_refs": {
-    "type": "array",
-    "maxItems": 128,
-    "items": {
-      "type": "string",
-      "maxLength": 2048,
-      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
-    }
-  }
-}
-```

@@ -31,11 +31,25 @@ flowchart TD
     D --> E[Effect Request Hash]
     E --> F[Effect Receipt Hash]
     F --> G[Evidence Record Hash]
-    G --> H[Trace Root Hash]
+    G --> H[Trace Summary Hash]
     D --> I[Policy Bundle Hash]
     E --> J[Credential Lease Refs]
     F --> K[Redaction Manifest Ref]
 ```
+
+## Trace summary hash
+
+A trace summary hash aggregates the evidence produced for a single trace. It is computed over the ordered sequence of `evidence_hash` values within a trace, sorted lexicographically.
+
+The trace summary hash provides a single commitment that an auditor can use to verify that all evidence records for a trace are present and unmodified.
+
+The trace summary hash MUST be computed as:
+
+```text
+trace_summary_hash = hash(canonical([evidence_hash_1, evidence_hash_2, ...]))
+```
+
+Where the evidence hashes are sorted lexicographically before canonicalization.
 
 ## EvidenceRecord JSON Schema
 
@@ -152,6 +166,15 @@ flowchart TD
       "maxLength": 2048,
       "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
     },
+    "epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
     "evidence_hash": {
       "type": "string",
       "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
@@ -221,6 +244,15 @@ flowchart TD
     "replay_mode": {
       "type": "string",
       "enum": ["hash_verify_only", "policy_recompute", "dry_run_execution", "full_reexecution"]
+    },
+    "epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
     },
     "requested_at": {
       "type": "string",
@@ -293,6 +325,30 @@ flowchart TD
       },
       "default": []
     },
+    "epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "epistemic_frame_hash": {
+      "type": "string",
+      "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
+    },
+    "source_epistemic_frame_ref": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "frame_comparison_outcome": {
+      "type": "string",
+      "description": "Uses the canonical frame comparison outcomes defined in RFC-0008.",
+      "enum": [
+        "equivalent",
+        "compatible_with_disclosure",
+        "not_comparable",
+        "unknown"
+      ]
+    },
     "completed_at": {
       "type": "string",
       "format": "date-time"
@@ -313,12 +369,12 @@ input_artifact_hashes
   -> effect_request_hash
   -> receipt_hash
   -> evidence_hash
-  -> trace_root_hash
+  -> trace_summary_hash
 ```
 
 Rules:
 
-1. Each hash MUST be computed over canonical serialized content.
+1. Each hash MUST be computed over canonical serialized content using JCS (RFC 8785) for JSON payloads.
 2. Each downstream object MUST include or reference the relevant upstream hash.
 3. Evidence records MUST be append-only.
 4. Historical evidence MUST NOT be rewritten.
@@ -345,10 +401,7 @@ Full re-execution SHOULD be disabled by default for non-idempotent or externally
 5. Replay MUST NOT rematerialize secrets unless a new authority packet and credential lease allow it.
 6. Replay SHOULD prefer hash verification and policy recomputation before full re-execution.
 
-
 ## Epistemic lineage and replay
-
-Evidence records, replay requests, and replay results MAY include `epistemic_frame_ref` and `epistemic_frame_hash`.
 
 For GAOP-Epistemic conformance:
 
@@ -358,45 +411,14 @@ For GAOP-Epistemic conformance:
 4. A replay result MUST NOT claim verification if analyzer manifests are incompatible and no manifest transition permits comparison.
 5. A replay result MUST disclose degraded replay conditions, partial index state, resource bounds, and external constraints.
 
-Frame comparison outcomes:
+## Frame comparison outcomes
+
+Frame comparison outcomes are defined canonically in RFC-0008 and used across the protocol:
 
 | Outcome | Meaning |
 |---|---|
-| `equivalent` | Frames are compatible for the replayed claim or effect. |
-| `successor_compatible` | Replay frame supersedes original frame with an explicit compatible transition. |
-| `incompatible_manifest` | Analyzer or model manifest changed in a way that prevents direct comparison. |
-| `degraded_replay` | Replay ran under weaker resource or index conditions. |
-| `external_constraint_changed` | Relevant external constraints changed between original and replay. |
-| `unknown` | The implementation cannot prove frame compatibility. |
+| `equivalent` | Outputs are comparable for the relevant claim or effect. |
+| `compatible_with_disclosure` | Outputs may be compared if disclosures are preserved. |
+| `not_comparable` | Outputs MUST NOT be merged into a single confidence or truth value. |
+| `unknown` | The implementation lacks enough information to decide. |
 
-Schema fragment:
-
-```json
-{
-  "epistemic_frame_ref": {
-    "type": "string",
-    "maxLength": 2048,
-    "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
-  },
-  "epistemic_frame_hash": {
-    "type": "string",
-    "pattern": "^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$"
-  },
-  "source_epistemic_frame_ref": {
-    "type": "string",
-    "maxLength": 2048,
-    "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
-  },
-  "frame_comparison_outcome": {
-    "type": "string",
-    "enum": [
-      "equivalent",
-      "successor_compatible",
-      "incompatible_manifest",
-      "degraded_replay",
-      "external_constraint_changed",
-      "unknown"
-    ]
-  }
-}
-```

@@ -24,6 +24,7 @@ GAOP specifies:
 4. Effect request and receipt semantics.
 5. Audit lineage and replay semantics.
 6. Human review and compensation semantics.
+7. Epistemic framing and operational correctness semantics.
 
 GAOP does not specify:
 
@@ -47,6 +48,8 @@ A principal MUST be represented by a stable reference. A principal reference MUS
 ### Tenant
 
 A tenant is an administrative and policy boundary. Every command, authority packet, credential lease, effect request, receipt, and evidence record MUST be associated with exactly one tenant.
+
+Tenant isolation is a protocol invariant. A compliant implementation MUST NOT allow protocol objects from one tenant to reference, authorize, or affect protocol objects in another tenant unless an explicit cross-tenant delegation mechanism is defined and audited.
 
 ### Agentic Intent
 
@@ -102,7 +105,13 @@ Examples include confidence scores, policy findings, impact analyses, replay con
 
 An external constraint is a regulatory, legal, ecosystem, platform, certification, or contractual requirement that affects architecture or execution semantics but may not be encoded directly in local policy bundles.
 
-External constraints MUST be represented separately from local design preferences.
+External constraints MUST be represented separately from local design preferences. External constraints SHOULD be evaluated by the policy engine and bound into the authority packet's conditions, making them explicit policy inputs.
+
+### Delegation
+
+Delegation occurs when one principal or agent authorizes another to act on its behalf within a governed scope.
+
+When Agent A delegates to Agent B, Agent B MUST issue a new command envelope with its own `actor_ref`. The command envelope MUST reference the delegating principal via a delegation chain. Resource scopes MUST narrow or remain equal through delegation; they MUST NOT widen. Agent B requires its own authority packet. The delegating agent's epistemic frame SHOULD be referenced as a parent frame in Agent B's epistemic frame.
 
 ### Policy Bundle
 
@@ -171,15 +180,29 @@ flowchart TD
 
 GAOP hashes are computed over canonical serialized payloads.
 
-Compliant implementations MUST define and publish the canonicalization method they use. JSON implementations SHOULD use deterministic UTF-8 JSON with sorted object keys, no insignificant whitespace, and stable number/string encoding.
+JSON implementations MUST use JSON Canonicalization Scheme (JCS) as defined in RFC 8785 for deterministic serialization. JCS requires:
 
-Hash strings SHOULD use this format:
+1. Lexicographic sorting of object member names.
+2. No insignificant whitespace.
+3. Numbers serialized per ECMAScript rules (no trailing zeros, no positive sign, exponential notation for magnitudes outside a defined range).
+4. Strings serialized with minimal escaping per ECMAScript rules.
+5. UTF-8 encoding.
+
+Non-JSON implementations MUST define and publish the canonicalization method they use, and the method MUST produce byte-identical output for logically equivalent payloads.
+
+Hash strings MUST use this format:
 
 ```text
-sha256:<lowercase-hex-digest>
+<algorithm>:<lowercase-hex-digest>
 ```
 
-Implementations MAY support additional algorithms if the algorithm is included in the hash string.
+The default algorithm is `sha256`. Implementations MAY support additional algorithms if the algorithm identifier is included in the hash string.
+
+Hash strings MUST match the following pattern:
+
+```text
+^[a-z0-9_+-]+:[a-fA-F0-9]{32,}$
+```
 
 ## Core JSON Schema definitions
 
@@ -244,14 +267,50 @@ The following schema defines shared GAOP primitive types.
     },
     "NonSecretMetadata": {
       "type": "object",
+      "description": "Flat key-value metadata. Keys with null values are equivalent to absent keys for canonicalization purposes.",
       "additionalProperties": {
         "oneOf": [
           { "type": "string", "maxLength": 4096 },
           { "type": "number" },
           { "type": "integer" },
-          { "type": "boolean" },
-          { "type": "null" }
+          { "type": "boolean" }
         ]
+      }
+    },
+    "EpistemicFrameRef": {
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+    },
+    "ErrorDetail": {
+      "type": "object",
+      "required": ["category", "code", "message"],
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": ["client", "policy", "execution", "infrastructure", "lease", "review", "epistemic"]
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._:-]*$"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "retryable": {
+          "type": "boolean",
+          "default": false
+        },
+        "detail_ref": {
+          "type": "string",
+          "maxLength": 2048,
+          "pattern": "^[a-zA-Z][a-zA-Z0-9+.-]*://.+$"
+        }
       }
     }
   }
@@ -277,7 +336,8 @@ The following schema defines shared GAOP primitive types.
 | GAOP-Evidence | Adds evidence records, trace lineage, and replay hash chains. |
 | GAOP-Lease | Adds credential lease and materialization rules. |
 | GAOP-HITL | Adds review gates and compensation recipes. |
-| GAOP-Epistemic | Adds epistemic frames, analyzer manifests, coordination context, query bounds, reflexivity signals, and external constraints. |
+| GAOP-Epistemic | Adds epistemic frames, analyzer manifests, manifest transitions, and query execution bounds (RFC-0008 core tier). |
+| GAOP-Epistemic-Full | Additionally adds analysis epochs, reflexivity signals, external constraints, and calibration quarantine (RFC-0008 advanced tier). |
 | GAOP-Strict | Implements all required RFC-0001 through RFC-0008 rules. |
 
 ## Epistemic extension
@@ -294,3 +354,52 @@ Protocol objects defined in RFC-0002 through RFC-0007 MAY carry:
 If present, `epistemic_frame_hash` MUST be computed over the canonical serialized `EpistemicFrame` defined in RFC-0008.
 
 If a protocol object includes an epistemic frame reference, downstream components MUST preserve it or explicitly create a successor frame that references it.
+
+## Versioning and schema evolution
+
+### Protocol versioning
+
+The protocol version string `gaop.v1` identifies the major version. Minor, non-breaking additions within v1 are indicated by the presence of new optional fields.
+
+Breaking changes MUST increment the major version (e.g., `gaop.v2`). A receiver that does not recognize the protocol version MUST reject the object.
+
+### Schema extension
+
+All GAOP schemas use `"additionalProperties": false` on their core property sets to ensure strict validation. To support forward-compatible extensions without breaking existing validators:
+
+1. Each schema includes an optional `extensions` property when extensibility is needed.
+2. Implementation-defined fields MUST use the `extensions` object rather than adding top-level properties.
+3. A receiver MUST NOT reject a protocol object solely because it contains unknown keys within `extensions`.
+4. Extensions MUST NOT override or redefine the semantics of normative fields.
+
+### Deprecation
+
+A field or object marked for deprecation MUST remain valid for at least one major version after the deprecation is announced. Deprecated fields SHOULD include a deprecation notice in their schema description.
+
+## Transport considerations
+
+GAOP defines data model contracts, not wire transport. However, compliant implementations SHOULD observe the following guidance:
+
+### HTTP binding
+
+When transporting GAOP objects over HTTP:
+
+1. Request and response bodies MUST use `application/json` content type with UTF-8 encoding.
+2. GAOP object type SHOULD be indicated via a `GAOP-Object-Type` header (e.g., `CommandEnvelope`, `AuthorityPacket`).
+3. Protocol version SHOULD be indicated via a `GAOP-Protocol-Version` header.
+4. Error responses MUST use the `ErrorDetail` schema defined in this RFC.
+5. Idempotent submissions SHOULD use HTTP PUT or POST with idempotency key headers.
+6. Evidence queries SHOULD support pagination via `cursor` and `limit` parameters.
+
+### Asynchronous transport
+
+When transporting GAOP objects over message queues or event buses:
+
+1. The message envelope MUST include `gaop_object_type`, `protocol_version`, `tenant_id`, and `trace_id` as message attributes or headers.
+2. The message body MUST be the canonical JSON serialization of the GAOP object.
+3. Implementations SHOULD use at-least-once delivery with idempotency-key-based deduplication.
+
+### Clock synchronization
+
+All timestamps in GAOP objects MUST be UTC. Implementations SHOULD synchronize clocks via NTP or equivalent. Implementations SHOULD accept authority packets, credential leases, and review gates within 60 seconds of their stated `expires_at` to accommodate reasonable clock skew. Implementations MUST NOT accept objects more than 300 seconds past their stated `expires_at`.
+
