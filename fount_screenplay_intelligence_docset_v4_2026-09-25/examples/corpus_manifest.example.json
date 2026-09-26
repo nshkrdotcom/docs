@@ -1,0 +1,12 @@
+{
+  "corpus_item_id": "feature-pilot-001",
+  "label": "private-feature-a",
+  "rights_basis": "author_owned",
+  "rights_evidence_ref": "internal-consent-record",
+  "allowed_uses": ["structural_evaluation", "human_reader_pilot"],
+  "provider_export_allowed": false,
+  "human_review_allowed": true,
+  "redistribution_allowed": false,
+  "retention_policy": "project_private",
+  "confidentiality_class": "confidential"
+}

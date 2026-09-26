@@ -1,0 +1,38 @@
+{
+  "playbook": "scene_doctor",
+  "source_revision": "rev-current",
+  "concern": "The interrogation loses pressure after the first reversal.",
+  "intent": {
+    "desired_effect": "sustained entrapment without making Mara overtly aggressive",
+    "protected_strengths": ["Mara remains restrained", "the key reveal stays ambiguous"]
+  },
+  "finding": {
+    "claim_class": "derived_narrative_state",
+    "summary": "Pressure appears to flatten after the first reversal because the tactic and leverage relationship stop changing while information continues to accumulate."
+  },
+  "evidence": [
+    {"scene_id": "scene-42", "element_ids": ["e-8", "e-12", "e-19"]}
+  ],
+  "trajectory": [
+    {"point": "turn-8", "event": "reversal"},
+    {"point": "turn-12", "event": "stasis"},
+    {"point": "turn-19", "event": "stasis"}
+  ],
+  "diagnoses": [
+    {
+      "id": "repeated_tactic",
+      "support": ["obs-tactic-12", "obs-tactic-19"],
+      "counterevidence": ["obs-info-gain-17"],
+      "uncertainty": "medium"
+    }
+  ],
+  "alternatives": [
+    "The stasis may be intentional if the desired effect is entrapment rather than escalation."
+  ],
+  "strategies": [],
+  "resource_usage": {
+    "preflight": {"provider_requests_estimated": 12, "reuse_estimated_ratio": 0.5},
+    "actual": {"provider_requests": 10, "reuse_ratio": 0.6}
+  },
+  "limitations": ["No human-calibrated claim is made that a reader will feel bored or tense."]
+}

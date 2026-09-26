@@ -1,0 +1,17 @@
+{
+  "id": "scene.objective_active",
+  "type": "noul",
+  "instructions": "Is the selected character actively pursuing a concrete objective in this scene?",
+  "projection": "scene.character_objective",
+  "output_contract": "scene.objective_active",
+  "context_contract": {
+    "required": {},
+    "optional": {
+      "active_goals": {"type": "list", "items": "fact"}
+    },
+    "allow_unknown": false
+  },
+  "metadata": {
+    "family": "scene_engine"
+  }
+}

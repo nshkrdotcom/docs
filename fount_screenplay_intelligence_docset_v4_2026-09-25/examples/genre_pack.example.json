@@ -1,0 +1,24 @@
+{
+  "id": "project.neo_noir_mystery",
+  "description": "Project-specific mystery/noir emphasis without treating genre conventions as universal rules.",
+  "trust": "project",
+  "lenses": [
+    "knowledge.inference",
+    "mystery.clue_visibility",
+    "relationship.concealment"
+  ],
+  "diagnostic_salience": {
+    "premature_inference": 1.0,
+    "clue_fairness": 0.8,
+    "relationship_misdirection": 0.7
+  },
+  "intent": {
+    "subversions": [
+      "Do not diagnose delayed culprit identification as a defect after the midpoint; the film intentionally becomes character-first."
+    ]
+  },
+  "resource_policy_request": {
+    "class": "standard",
+    "optional_enrichment": true
+  }
+}

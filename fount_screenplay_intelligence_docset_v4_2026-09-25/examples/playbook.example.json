@@ -1,0 +1,17 @@
+{
+  "id": "dialogue_pass",
+  "intent_schema": {
+    "optional": ["characters", "protected_strengths", "tone"]
+  },
+  "requires": [
+    "dialogue.response",
+    "dialogue.direct_intention",
+    "dialogue.exposition",
+    "dialogue.tactic",
+    "dialogue.status_bid",
+    "voice.discriminability"
+  ],
+  "reducers": ["conversation_exchange", "relationship_timeline"],
+  "diagnoses": ["static_exchange", "repeated_tactic", "expository_exchange", "interchangeable_voice"],
+  "output": "dialogue_pass_report"
+}

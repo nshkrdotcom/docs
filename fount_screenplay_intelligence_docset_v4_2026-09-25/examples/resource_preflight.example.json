@@ -1,0 +1,16 @@
+{
+  "playbook": "submission_read",
+  "scope": "feature_revision_current",
+  "estimate": {
+    "targets": 146,
+    "provider_requests": 92,
+    "reuse_ratio": 0.64,
+    "hosted_cost": {"currency": "USD", "low": 1.2, "high": 2.1, "available": true},
+    "local_compute": {"available": false}
+  },
+  "caps": {
+    "max_provider_requests": 120,
+    "max_hosted_cost": {"currency": "USD", "amount": 3.0},
+    "optional_enrichment": "skip_if_needed"
+  }
+}

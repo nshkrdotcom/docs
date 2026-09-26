@@ -1,0 +1,11 @@
+{
+  "id": "sequence.repeated_function",
+  "concern": "The middle of the sequence feels repetitive.",
+  "hypothesis": "Several consecutive scenes repeat the same dramatic function without increasing cost, changing strategy, or creating a new consequence.",
+  "support": ["obs_a", "timeline_delta_b"],
+  "counterevidence": ["scene_18_relationship_reversal"],
+  "missing_evidence": [],
+  "confidence": 0.78,
+  "protected_strengths": ["the gradual trust build between Mara and Dan"],
+  "next_investigations": ["compare sequence objective and consequence state at each scene exit"]
+}

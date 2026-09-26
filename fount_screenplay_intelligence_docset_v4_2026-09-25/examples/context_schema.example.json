@@ -1,0 +1,13 @@
+{
+  "lens": "dialogue.deception",
+  "context_contract": {
+    "required": {
+      "known_facts": {"type": "list", "items": "fact"},
+      "speaker_beliefs": {"type": "list", "items": "belief"}
+    },
+    "optional": {
+      "relationship_state": {"type": "relation_summary"}
+    },
+    "allow_unknown": false
+  }
+}
