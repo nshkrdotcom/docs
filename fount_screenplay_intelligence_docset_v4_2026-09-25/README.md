@@ -2,12 +2,13 @@
 
 Fount is a tool for discovering, writing, revising, and finishing feature screenplays—with humans and agents working on the same creative material. Its purpose is better writing decisions, not a screenplay score or an architecture showcase. Elixir is the chosen medium for the joy of building with it.
 
-Every ChatGPT.com pass receives exactly four fresh XML attachments:
+Every ChatGPT.com pass receives exactly five fresh XML attachments:
 
 1. `fount.xml`;
 2. `system_one_sdk.xml`;
 3. `inference.xml`;
-4. `docset.xml` containing this complete, progressively updated docset.
+4. `agent_session_manager.xml`;
+5. `docset.xml` containing this complete, progressively updated docset.
 
 ChatGPT.com writes the current phase without claiming unrun Elixir checks and returns a Fount overlay ZIP, complete updated docset ZIP, and handoff. The user applies and commits the changes. Codex verifies that applied state, runs and repairs the phase, and updates the docset. The next pass starts only from the QC-corrected baseline. Document 35 specifies the exact manifest and responsibilities.
 
@@ -15,7 +16,7 @@ ChatGPT.com writes the current phase without claiming unrun Elixir checks and re
 
 Read `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md`, `33_WRITER_WORKFLOWS_AND_CREATIVE_CONTRACT.md`, and `34_HUMAN_JEV_AND_LLM_COLLABORATION.md` before treating the architecture below as a product brief. The new research complements the earlier reader/notes work with discovery, cinematic action and sound, voice, rehearsal, and useful alternatives.
 
-`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–4 are COMPLETE on engineering QC. Phase 3 Level-A and Phase 4 first-reader studies remain visible validation debt; D046 makes all future human reviews optional and nonblocking.
+`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–4 are COMPLETE on engineering QC. Phase 5 is OFFLINE_IMPLEMENTED and awaiting Codex runtime QC. Phase 3 Level-A and Phase 4 first-reader studies remain visible validation debt; D046 makes all future human reviews optional and nonblocking.
 
 Success means a writer can arrive with an image, a scene, or a difficult note; explore real choices; preserve what matters; see consequences; and choose what becomes the draft. No compulsory outline, universal conflict theory, or simulated audience verdict. Human-only writing remains useful without provider credentials.
 
@@ -257,11 +258,10 @@ latest QC'd source snapshots + latest docset
 
 ## Current status
 
-Read `PROGRESS.md`. Phase 4 runtime QC passed at Fount `cfde46c` and is `COMPLETE` under D046. Its optional first-reader pilot was skipped as visible validation debt. Phase 5 is next and must start from the verified post-QC source in a separate implementation pass.
+Read `PROGRESS.md`. Phases 1–4 are `COMPLETE`; Phase 4 runtime QC passed at Fount `cfde46c`. Phase 5 — Diagnosis and Multi-Pass Playbook Shell — is `OFFLINE_IMPLEMENTED` from that verified source and now awaits Codex runtime QC. Phase 6 remains `NOT_STARTED`.
 
-## Current delivery: Phase 4
+## Current delivery: Phase 5
 
-The current source delivery adds screenplay-facing temporal and first-reader state without moving writing or provider effects into Intelligence. Writers can inspect event-qualified character/resource/relationship state, setup/payoff links, and partial story-time sequence views while separately seeing what a first-time reader has been shown so far: open questions, reveals, promises, threats, epistemic models, relationship movement, suspense components, comprehension risk and forward pull. A later-presented flashback can change the Reader ledger while remaining earlier in diegetic time, and private notes cannot leak into an ordinary reader checkpoint.
+The current source delivery adds evidence-composed diagnosis and the writer-facing multi-pass Intelligence shell without moving provider execution into the pure core. Writers can state a concern, intended effect and protected strengths; inspect exact screenplay evidence; see competing diagnostic hypotheses, counterevidence, abstentions, uncertainty and missing evidence; and run one of ten baseline writer playbooks through `Observe -> pure reduction -> validated context -> Observe -> pure diagnosis`. Source-selection and request caps remain visible as partial coverage rather than a false clean result. The result packet keeps evidence, derived state, diagnoses, strategies and candidate pages semantically separate; candidate writing remains Workshop-owned.
 
-Artifacts are `fount_phase_04_overlay.zip`, `fount_phase_04_docset.zip`, and `FOUNT_PHASE_04_CODEX_QC_HANDOFF.md`. At the historical source-delivery checkpoint, the source-writing environment ran Python/source and strict overlay checks but had no Elixir/Mix runtime. The later runtime QC results are in `handoffs/PHASE_04_RUNTIME_QC_REPORT.md`. The optional first-reader human checkpoint pilot was skipped under D046 and is not replaced by fixtures or model output. Read `PROGRESS.md` and `handoffs/PHASE_04_IMPLEMENTATION_MATRIX.md` for the authoritative boundary.
-
+Artifacts are `fount_phase_05_overlay.zip`, `fount_phase_05_docset.zip`, and `FOUNT_PHASE_05_CODEX_QC_HANDOFF.md`. The source-writing environment executed Python/source, JSON, shell-syntax and strict overlay transport checks only; no Elixir/Mix/runtime/provider/database/human checks are claimed. Read `handoffs/PHASE_05_IMPLEMENTATION_MATRIX.md`, `handoffs/PHASE_05_STATIC_CHECKS.json`, and `handoffs/PHASE_05_RUNTIME_QC_HANDOFF.md`. Do not advance to Phase 6 in the QC pass.

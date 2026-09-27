@@ -259,13 +259,13 @@ Future implementation agents must not silently reverse approved decisions. Recor
 
 **Status:** Adopted for this docset revision.
 
-## D036 — Four XML inputs and user-applied overlays
+## D036 — Four XML inputs and user-applied overlays (historical; superseded by D047)
 
 **Decision:** Each source-writing pass receives exactly fount.xml, system_one_sdk.xml, inference.xml, and docset.xml. It returns a strict hashed Fount overlay, complete updated docset, and QC handoff. The user applies and commits; Codex verifies and repairs that state without reapplying.
 
 **Basis:** User workflow and the actual Fount overlay applier; document 35.
 
-**Status:** Adopted for this docset revision.
+**Status:** Historical transport rule; superseded for new passes by D047.
 
 ## D037 — Product completion phases and evidence
 
@@ -277,7 +277,7 @@ Future implementation agents must not silently reverse approved decisions. Recor
 
 ## D038 — Use the supplied SystemOneSDK facade
 
-**Decision:** The dependency snapshot is system_one_sdk, with actual question preparation, evaluation, answer, and provider contracts. Preserve working Jev semantics; do not invent a fifth SDK input or replace the facade with raw hosted-provider calls.
+**Decision:** The dependency snapshot is system_one_sdk, with actual question preparation, evaluation, answer, and provider contracts. Preserve working Jev semantics; do not bypass the facade with ASM or raw hosted-provider calls. ASM is a separate inspection input under D047, not a replacement System One SDK.
 
 **Basis:** Source inspection recorded in document 34.
 
@@ -363,3 +363,15 @@ The Level-A work remains unperformed: no three rights-cleared feature scripts/su
 The user explicitly authorized the Phase-4 first-reader validation-debt override and then directed: “all human reviews going forward are optional and shall not block any work at all”; keep the review steps but assume they will be skipped. This supersedes the earlier prospective human/domain phase gates in documents 16–19, 28, 35–36, templates, and handoff instructions. Engineering, architecture, provenance, preservation, security, and any specifically authorized live-provider gates remain distinct requirements. A phase may be `COMPLETE` when those applicable non-human gates pass even when no reader/writer study occurs; subsequent phases need no further waiver for a skipped human review.
 
 Review packets and study protocols remain optional resources. Mark every unperformed study as `not run` / visible validation debt; do not invent participants, observations, usefulness findings, calibration, or claims of human validation. If a study is later run, its results can be recorded separately without changing the engineering completion rule. This policy also marks Phase 4 `COMPLETE` on its recorded engineering QC, with the first-reader pilot unperformed. D045 remains the historical Phase-3 decision.
+
+## Transport policy update — 2026-09-27
+
+### D047 — Five XML inputs include ASM for independent boundary inspection
+
+**Decision:** Every new source-writing pass receives exactly five content-identified XML snapshots: Fount, SystemOneSDK, Inference, Agent Session Manager, and the complete current docset. The source-writing agent inspects actual APIs from the snapshots, returns the strict Fount overlay, complete updated docset, and Codex runtime-QC handoff; the user applies and commits; Codex verifies/repairs the applied state without reapplying the overlay.
+
+ASM is included because Inference exposes an actual ASM agent-session adapter and provider-feature boundary. Its presence does not change the four-package Fount architecture and does not authorize direct ASM dependencies in `fount_observe` or pure/shell Intelligence. Phase-specific code uses only the dependency layers allowed by the package DAG.
+
+**Basis:** Current five-input handoff and inspection of Inference 0.5.0 `Inference.Adapters.ASM` against Agent Session Manager 0.17.1 public `query/3`, `stream/3`, `start_session/1`, `stop_session/1`, and `ASM.ProviderFeatures` APIs.
+
+**Status:** Adopted; supersedes D036 for all new transport packets.

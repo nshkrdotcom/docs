@@ -213,7 +213,7 @@ All rows below are specification requirements, initially NOT_STARTED. Phase hand
 | W10 | Read/share/export without private-material leakage | 15 | A09/A11 |
 | W11 | Useful partial results, cancellation, controlled retry | 12/15 | A10 |
 | W12 | Honest comparative usefulness evidence | 15/16 | A12 |
-| H01 | Four XML inputs with exact source identity | every pass | document 35 packet audit |
+| H01 | Five XML inputs with exact source identity | every pass | document 35 packet audit |
 | H02 | User applies/commits; Codex verifies/repairs | every pass | application/QC commit record |
 | H03 | Actual SystemOneSDK facade and answer semantics | 1/2/9 | document 34 SDK contract tests |
 
@@ -309,3 +309,24 @@ Phase 5 Diagnosis/Acquisition/Playbooks and all later capability/persistence/Wor
 **Phase 4 runtime trace — 2026-09-27:** Fount `cfde46cd2f654e050cbb9b5dbe32501625510c69` passed 263 four-package ExUnit tests, 19 focused Phase-4 tests, forward-leak/private-material and non-linear temporal cases, compiled architecture, strict Credo, Dialyzer, ExDoc, isolated Core/Workshop integration (11/14), writer acceptance/PDF and package inspection. These executed results supersede the offline-only labels above. The first-reader pilot is unperformed; Phase 4 is `DOMAIN_REVIEW_PENDING`. Phase 5 remains `NOT_STARTED`.
 
 **D046 policy trace:** The user made all future human reviews optional and nonblocking. Phase 4 is `COMPLETE` on the executed engineering evidence above; its first-reader pilot was skipped and remains visible validation debt. For later phases, trace engineering tests/demonstrations separately from any optional human study. Do not claim human validity or usefulness without real participants and records. Phase 5 remains `NOT_STARTED`.
+
+## Phase 5 concrete source traceability — OFFLINE_IMPLEMENTED
+
+| Requirement | Phase-5 source/test evidence | Status |
+|---|---|---|
+| pure evidence-composed diagnosis | `diagnosis.ex`, `diagnosis/{concern,evidence_need,result}.ex`, `diagnosis_test.exs` | WRITTEN; Python boundary scan PASS; ExUnit unrun |
+| explicit evidence needs / abstention / competing hypotheses | same Diagnosis source/tests | WRITTEN; ExUnit unrun |
+| shell-only Observe acquisition | `acquisition/{planner,context_builder,diagnostic_measurements,measurements}.ex`, `playbooks/writer_runner.ex` | WRITTEN; runtime unrun |
+| closed Observe context | `ContextBuilder` + `diagnosis.evidence_support.json`; actual `Fount.Observe.Context.from_map/2` | JSON/source checks PASS; ExUnit unrun |
+| two diagnosis lens assets | `fount_observe/priv/lenses/diagnosis.*.json`, Observe Registry | JSON PASS; provider unrun |
+| ten writer playbooks | `playbooks/writer_registry.ex`, `writer_registry_test.exs` | Python catalog check PASS; ExUnit unrun |
+| partial coverage under request/evidence caps | `WriterRunner` + `writer_runner_test.exs` | WRITTEN; ExUnit unrun |
+| writer semantic result packet | `reporting/writer_packet.ex`, `renderer.ex`, `writer_packet_test.exs` | WRITTEN; runtime unrun |
+| resource preflight/actual usage | actual Observe preflight/evaluate/Budget integration in `WriterRunner`/`Measurements` | WRITTEN; runtime unrun |
+| deterministic Sandbox playbook | `writer_runner_test.exs`, `examples/phase_five.exs` | WRITTEN; example unrun |
+| pure-core boundary | `phase_five_architecture_test.exs` + offline direct scan | source scan PASS; compiled gate unrun |
+| existing analysis/writing preservation | additive writer registry; no Core/Workshop/StoryWorld/Reader source modifications | full preservation ladder pending Codex |
+| five-input transport | `PHASE_05_INPUTS.json`, D047, document 35 | RECORDED |
+| human diagnosis/usefulness review | `PHASE_05_DOMAIN_REVIEW_PACKET.md` | NOT RUN; validation debt under D046 |
+
+The source-writing pass does not transfer Phase-4 runtime evidence to changed Intelligence/Observe source. Phase 5 remains `OFFLINE_IMPLEMENTED` until Codex executes and repairs the runtime gates. Phase 6 and all capability-family work remain `NOT_STARTED`.

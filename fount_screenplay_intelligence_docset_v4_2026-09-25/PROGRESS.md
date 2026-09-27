@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phases 1–4 COMPLETE on engineering QC; Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
+**Current state:** Phases 1–4 COMPLETE on engineering QC; Phase 5 OFFLINE_IMPLEMENTED and awaiting runtime QC. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
 
 ## Status values
 
@@ -22,7 +22,7 @@ Runtime QC establishes completion when applicable engineering and other non-huma
 | 2 | Observe Measurement Substrate Hardening | COMPLETE | `fount_phase_02_overlay.zip` | `handoffs/PHASE_02_RUNTIME_QC_REPORT.md` | Engineering, persistence, writer, package, architecture and authorized narrow live gate passed; no human quality claim |
 | 3 | Story-World Pure Core | COMPLETE | `fount_phase_03_overlay.zip` | `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` | Engineering QC passed at Fount `60f989b`; user explicitly deferred Level-A human review as visible validation debt |
 | 4 | Temporal and Forward-Reader Engine | COMPLETE | `fount_phase_04_overlay.zip` | `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` | Engineering and preservation gates passed at Fount `cfde46c`; first-reader pilot skipped under D046 as visible validation debt |
-| 5 | Diagnosis and Multi-Pass Playbook Shell | NOT_STARTED | — | — | Diagnosis + Acquisition + Playbooks |
+| 5 | Diagnosis and Multi-Pass Playbook Shell | OFFLINE_IMPLEMENTED | `fount_phase_05_overlay.zip` | — | Diagnosis + Acquisition + ten writer playbooks + writer packet written; runtime QC pending |
 | 6 | Capabilities A: Scene/Agency/Character/Relationship | NOT_STARTED | — | — | Families 1–4 |
 | 7 | Capabilities B: Audience/Sequence/Dialogue/Setup-Payoff | NOT_STARTED | — | — | Families 5–8 |
 | 8 | Capabilities C: Emotional/Theme/Genre/Revision | NOT_STARTED | — | — | Families 9–12 |
@@ -54,6 +54,7 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-26 | 4 | Source implementation delivered | `fount_phase_04_overlay.zip`; `fount_phase_04_docset.zip`; `FOUNT_PHASE_04_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 23-file strict overlay verified offline; runtime QC and first-reader checkpoint pilot pending |
 | 2026-09-27 | 4 | Runtime QC and repairs | Fount applied `bf20ede`, repair `cfde46c`; docset applied `a59aea6`; `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` | Engineering and preservation gates pass; first-reader pilot initially pending |
 | 2026-09-27 | 4 | User-authorized human-review policy | D046 in `DECISIONS.md` | COMPLETE; first-reader pilot skipped as visible debt; all future human reviews optional and nonblocking |
+| 2026-09-27 | 5 | Source implementation delivered | `fount_phase_05_overlay.zip`; `fount_phase_05_docset.zip`; `FOUNT_PHASE_05_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 36-file strict overlay verified offline; Elixir/runtime QC pending; optional human usefulness pilot not run |
 
 ## Non-negotiable progress rule
 
@@ -67,7 +68,7 @@ Under D046, human/domain pilots are optional and skipped by default. `DOMAIN_REV
 
 Source overlay: `fount_phase_01_overlay.zip`. Complete updated docset: `fount_phase_01_docset.zip`. Runtime agent prompt: `FOUNT_PHASE_01_CODEX_QC_HANDOFF.md` (also retained under `handoffs/`).
 
-At that historical delivery the user applied and committed, and Codex repaired Phase 1. Its original offline stop rule is superseded by the recorded Phase 1 COMPLETE checkpoint. Phase 2 is also COMPLETE; Phase 3 is the current source delivery. Do not reapply historical overlays during runtime QC.
+At that historical delivery the user applied and committed, and Codex repaired Phase 1. Its original offline stop rule is superseded by the recorded Phase 1 COMPLETE checkpoint. Phase 2 is also COMPLETE; the sentence originally describing Phase 3 as the current delivery is historical. Do not reapply historical overlays during runtime QC.
 
 The offline Python source/transport checks and the gates that were unrun at delivery remain recorded as historical results in `handoffs/PHASE_01_STATIC_CHECKS.json`. Exact original checkout byte identity is unverified because the four input exports were unsealed. The strict manifest is based on decoded source bodies; no mismatch bypass or unknown-file deletion was permitted.
 
@@ -126,3 +127,11 @@ Phase 4 engineering QC passed at Fount `cfde46cd2f654e050cbb9b5dbe32501625510c69
 ## D046 optional human-review policy and Phase 4 completion — 2026-09-27
 
 The user authorized both the Phase-4 first-reader validation-debt override and a standing policy that all human reviews going forward are optional and never block work. They are assumed skipped unless actually commissioned. Phase 4 is `COMPLETE` on Fount `cfde46c` engineering QC. Its first-reader study is unperformed validation debt, not human validation. Future phases need no further review waiver; engineering and other non-human gates still apply. Phase 5 is `NOT_STARTED` and eligible for a separate implementation pass.
+
+## Phase 5 offline delivery — 2026-09-27
+
+Phase 5 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The strict overlay contains 36 operations (22 additions, 14 modifications, no deletions) and implements pure evidence-composed Diagnosis plus the shell-side Acquisition/context/playbook/reporting path. The ten baseline writer playbooks are exposed through a separate closed registry while the existing low-level playbook registry remains intact. Two closed Observe diagnosis lenses are added; candidate screenplay writing remains Workshop-owned.
+
+Offline checks include the seven-test Phase-5 Python source gate, JSON validation for both new lens assets, a direct pure-Diagnosis forbidden-boundary scan, shell syntax check, ZIP integrity, strict overlay dry-run, strict apply, and whole-tree byte comparison. Repository-wide Python discovery still has the pre-existing missing `scripts/prune_deleted_directories.py` import gap. Elixir/Mix, ExUnit, compiled architecture, Credo, Dialyzer, docs/package, DB/Workshop/PDF, live-provider, and human-review gates are unrun here.
+
+Read `handoffs/PHASE_05_OFFLINE_HANDOFF.md`, `handoffs/PHASE_05_IMPLEMENTATION_MATRIX.md`, `handoffs/PHASE_05_STATIC_CHECKS.json`, and `handoffs/PHASE_05_RUNTIME_QC_HANDOFF.md`. The user applies and commits the Phase-5 artifacts; Codex verifies the applied state, repairs and tests Phase 5, records actual evidence, and **stops before Phase 6**. The optional diagnosis/usefulness pilot was not run and remains visible validation debt under D046.

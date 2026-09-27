@@ -227,3 +227,15 @@ Used to justify treating screenplay corpus rights as an explicit operational/leg
 The primary-source ledger in `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md` adds ten research themes with direct links, source limitations, and explicitly labeled product inferences: Sciamma, August, Kaufman, Reichardt, Leigh, Wordcraft, Dramatron, creativity/diversity research, working-writer affordances, and Fountain fidelity.
 
 Use those sources alongside the earlier reader/notes literature, not as a replacement canon. Practitioner methods remain optional; short-story or small co-writing studies do not validate feature-screenplay outcomes. No source provides evidence that the unbuilt Fount phases are superior to other tools.
+
+## Phase 5 source/API snapshot ledger — 2026-09-27
+
+This Phase-5 source-writing pass used five raw Repomix XML snapshots, identified by repository contents rather than attachment filenames. Exact attachment hashes, sizes and file counts are in `handoffs/PHASE_05_INPUTS.json`. The snapshots did not contain authenticated current Git seals, so no current source commit is invented from them. The docset's verified post-Phase-4 Fount commit `cfde46cd2f654e050cbb9b5dbe32501625510c69` is historical baseline context.
+
+- **Fount:** four-package workspace (`fount`, `fount_observe`, `fount_intelligence`, `fount_workshop`) with Phase-4 Temporal/Reader source. Phase 5 uses the existing Observe `Context`, `Lens`, `Request`, `preflight/evaluate`, `Budget`, `Sandbox`, and Intelligence `Acquisition.Measurements` boundaries.
+- **SystemOneSDK 0.6.0:** inspected public client/question/evaluation APIs. Phase 5 adds no direct use; provider-native semantics remain behind Observe.
+- **Inference 0.5.0:** inspected provider-neutral completion/streaming APIs and `Inference.Adapters.ASM`. Phase 5 adds no direct use; Inference remains Workshop-owned.
+- **Agent Session Manager 0.17.1:** inspected `ASM.query/3`, `stream/3`, session lifecycle and `ASM.ProviderFeatures` to verify the real Inference agent-session boundary. Phase 5 adds no direct ASM dependency.
+- **Current docset:** documents 00–36 plus Phase-1 through Phase-4 runtime history. Its progress record made Phase 5 the first phase eligible for implementation.
+
+No web source or conversation memory substitutes for these code/API snapshots in the Phase-5 implementation record. Human usefulness validation was not run.

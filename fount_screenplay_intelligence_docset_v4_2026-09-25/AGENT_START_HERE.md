@@ -9,7 +9,8 @@ You must have:
 1. `fount.xml`;
 2. `system_one_sdk.xml`;
 3. `inference.xml`;
-4. `docset.xml`, containing this complete updated docset.
+4. `agent_session_manager.xml`;
+5. `docset.xml`, containing this complete updated docset.
 
 ## Determine your phase
 
@@ -17,15 +18,15 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phases 1–4: COMPLETE. Phase 4 passed engineering QC at Fount `cfde46c`; its optional first-reader pilot was skipped under D046 as visible validation debt. Phase 5 is NOT_STARTED.**
+> **Phases 1–4: COMPLETE. Phase 5: OFFLINE_IMPLEMENTED and awaiting runtime QC. Phase 6 remains NOT_STARTED.**
 
-Read `handoffs/PHASE_04_OFFLINE_HANDOFF.md`, `handoffs/PHASE_04_RUNTIME_QC_HANDOFF.md`, and `PROGRESS.md`. The user applies/commits the Phase-4 artifacts first; Codex then verifies that applied state, runs/repairs Phase 4, records runtime evidence, and stops. Phase 3 remains COMPLETE under D045 with its separate Level-A validation debt.
+Read `handoffs/PHASE_05_OFFLINE_HANDOFF.md`, `handoffs/PHASE_05_RUNTIME_QC_HANDOFF.md`, and `PROGRESS.md`. The user applies/commits the Phase-5 artifacts first; Codex then verifies that applied state, compiles/tests/repairs Phase 5, records runtime evidence, and stops before Phase 6. Phases 1–4 remain COMPLETE; their validation debt is historical and must not be silently converted into human-validation claims.
 
 ## Read before coding
 
 For every phase:
 
-First read documents 32–36: research, writer workflows, collaboration, four-XML handoff, and phase demonstrations. Phases 12–15 have their detailed scope in document 36; Phase 16 is final integration.
+First read documents 32–36: research, writer workflows, collaboration, five-XML handoff (document 35 retains its historical filename), and phase demonstrations. Phases 12–15 have their detailed scope in document 36; Phase 16 is final integration.
 
 1. `00_SCOPE_AND_PRINCIPLES.md`
 2. `04_TARGET_PACKAGE_ARCHITECTURE.md`
@@ -94,6 +95,6 @@ Before implementing any phase after Phase 2, read:
 
 Do not fabricate human validation. Under D046, human/domain pilots are optional and skipped by default. Preserve in-scope evaluation interfaces and any useful study instructions, but do not block engineering completion or later work for absent reviewers. Record skipped studies as validation debt.
 
-### Current Phase 4 checkpoint
+### Current Phase 5 checkpoint
 
-Phase 4 runtime QC passed at Fount `cfde46c` and the phase is `COMPLETE` under D046. Its first-reader study was skipped and remains visible validation debt. The next implementation pass begins with Phase 5 from this verified source; do not infer human-calibrated Reader claims from the deterministic tests.
+Phase 5 is `OFFLINE_IMPLEMENTED` from the post-Phase-4 source. Diagnosis, Acquisition context conversion, ten writer playbooks, resource/coverage accounting, writer result packets, deterministic rendering, Sandbox tests and the reference example are written but uncompiled here. Codex must test/repair this phase and stop before Phase 6. No human usefulness study was run.

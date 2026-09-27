@@ -359,5 +359,5 @@ selected authorized live Workshop/Inference checks
 - candidates preserve protected material and remain separate from canon until acceptance;
 - voice, cinematic choices, alternatives, rehearsal, research, notes, consequences, and session continuity follow documents 33–34;
 - optional human reviews in Phases 12–15 are recorded if performed; skipped reviews remain visible validation debt and do not block acceptance;
-- exactly four XML inputs and the user-apply/commit → Codex-QC protocol are followed;
+- exactly five XML inputs and the user-apply/commit → Codex-QC protocol are followed;
 - no unsupported claim of creative superiority, audience response, submission eligibility, or commercial success.

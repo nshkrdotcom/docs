@@ -8,12 +8,13 @@ The agent's job is to inspect APIs, write the phase implementation, package the 
 
 ## 2. Required inputs every phase
 
-The prompt must include four inputs:
+The prompt must include five inputs:
 
 1. `fount.xml`, containing the complete current workspace relevant to implementation;
 2. `system_one_sdk.xml`;
 3. `inference.xml`;
-4. `docset.xml`, containing the complete current docset and prior handoffs.
+4. `agent_session_manager.xml`, for the actual agent-session/provider boundary used by Inference where relevant;
+5. `docset.xml`, containing the complete current docset and prior handoffs.
 
 Filenames may contain timestamps. Identify them by content, not an assumed literal filename.
 

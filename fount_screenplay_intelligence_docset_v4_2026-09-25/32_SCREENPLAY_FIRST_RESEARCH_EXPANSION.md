@@ -72,7 +72,7 @@ Product inference: fidelity and a correct reader-visible projection are creative
 
 ## What changes
 
-Documents 33–36 are normative additions: writer workflows, human/Jev/LLM collaboration, four-XML handoff, and product acceptance demonstrations. Older analytical and safety contracts still apply. When a heuristic conflicts with declared intent, expose the tradeoff rather than treating the heuristic as law.
+Documents 33–36 are normative additions: writer workflows, human/Jev/LLM collaboration, five-XML handoff, and product acceptance demonstrations. Older analytical and safety contracts still apply. When a heuristic conflicts with declared intent, expose the tradeoff rather than treating the heuristic as law.
 
 The distinctive proposition is the combination: pursue an unusual intention, see what pages support, rehearse materially different choices, inspect consequences, and own the decision. This is an ambition to test, not a claim of world-leading performance already achieved.
 
