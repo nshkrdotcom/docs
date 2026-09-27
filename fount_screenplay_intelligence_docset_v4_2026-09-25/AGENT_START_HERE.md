@@ -17,7 +17,7 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phase 4 - Temporal and Forward-Reader Engine: OFFLINE_IMPLEMENTED. Runtime QC and the real first-reader domain gate are pending. Phase 5 is NOT_STARTED.**
+> **Phases 1–4: COMPLETE. Phase 4 passed engineering QC at Fount `cfde46c`; its optional first-reader pilot was skipped under D046 as visible validation debt. Phase 5 is NOT_STARTED.**
 
 Read `handoffs/PHASE_04_OFFLINE_HANDOFF.md`, `handoffs/PHASE_04_RUNTIME_QC_HANDOFF.md`, and `PROGRESS.md`. The user applies/commits the Phase-4 artifacts first; Codex then verifies that applied state, runs/repairs Phase 4, records runtime evidence, and stops. Phase 3 remains COMPLETE under D045 with its separate Level-A validation debt.
 
@@ -92,8 +92,8 @@ Before implementing any phase after Phase 2, read:
 - `30_LONGITUDINAL_RESOURCE_ECONOMICS.md`;
 - `31_FEATURE_SCREENPLAY_PRODUCT_SCOPE.md`.
 
-Do not fabricate human validation. When a phase requires a human/domain pilot, produce the evaluation artifacts and handoff instructions, then leave the domain gate pending until actual review occurs.
+Do not fabricate human validation. Under D046, human/domain pilots are optional and skipped by default. Preserve in-scope evaluation interfaces and any useful study instructions, but do not block engineering completion or later work for absent reviewers. Record skipped studies as validation debt.
 
 ### Current Phase 4 checkpoint
 
-Phase 4 source implementation has been delivered but has not passed Elixir/runtime QC in this source-writing environment. Its first-reader checkpoint pilot is also pending. Codex must start from the user-applied Phase-4 commit, run/repair the current phase, update the docset, and stop before Phase 5. If engineering passes before real reader validation, use `DOMAIN_REVIEW_PENDING` unless the user explicitly authorizes visible validation debt.
+Phase 4 runtime QC passed at Fount `cfde46c` and the phase is `COMPLETE` under D046. Its first-reader study was skipped and remains visible validation debt. The next implementation pass begins with Phase 5 from this verified source; do not infer human-calibrated Reader claims from the deterministic tests.

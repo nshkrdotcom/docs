@@ -88,7 +88,7 @@ Record the user-applied commit, QC correction commits, toolchain, actual command
 
 Run the phase's writer demonstration and its source-preservation checks. A successful package compilation alone does not complete a product phase. Human/domain review and paid/live provider checks remain separate evidence with explicit pending states.
 
-Set `COMPLETE` only when the phase's engineering and required domain gates are satisfied, or record a user-authorized exception as outstanding validation debt. Do not fabricate reviewers to unblock automation.
+Set `COMPLETE` when the applicable engineering and other non-human gates pass. Under D046, optional human reviews may be skipped without a new exception; record skipped reviews as validation debt and never fabricate reviewers.
 
 Update `PROGRESS.md`, requirement traceability, handoff, decisions where needed, and integrity hashes. Prepare the next four XMLs from that state. Pause at a real missing input or authority; ordinary implementation failures are for Codex to repair, not merely report.
 

@@ -99,13 +99,13 @@ After QC:
 
 ## Domain/product review handoff
 
-If the current phase has a required domain pilot:
+If the current phase defines an optional domain pilot:
 
 - generate the canonical writer/domain evaluation packet after engineering QC;
 - verify its evidence/provenance and reference rendering;
-- do not mark the human/domain gate passed unless actual reviewers/readers completed it;
-- use `DOMAIN_REVIEW_PENDING` when engineering QC passes but human review remains outstanding;
-- record an explicit user override as validation debt if sequencing continues without the pilot.
+- do not mark human validation passed unless actual reviewers/readers completed it;
+- record a skipped study as visible validation debt;
+- let engineering-clean phases reach `COMPLETE` and continue without a new human-review waiver under D046.
 
 Also verify where relevant:
 

@@ -155,12 +155,12 @@ For phases after Phase 2, inspect the product contracts relevant to the phase:
 - `30_LONGITUDINAL_RESOURCE_ECONOMICS.md`;
 - `31_FEATURE_SCREENPLAY_PRODUCT_SCOPE.md`.
 
-If the phase has a required human/domain pilot:
+If the phase defines an optional human/domain pilot:
 
 - write the evaluation/export/reference-rendering support needed by the pilot;
 - prepare the rights/reviewer/corpus manifest fields and handoff packet;
 - do **not** invent reader/writer responses;
-- do **not** claim the domain gate passed;
+- do **not** claim a skipped study was performed;
 - record remaining human/resource dependencies explicitly.
 
 For writer-facing outputs, preserve evidence -> derived state -> diagnosis -> strategy -> candidate separation and the claim classes defined in doc 27.

@@ -1,6 +1,6 @@
 # Phase 4 implementation matrix — Temporal Views and Forward-Reader Engine
 
-**Current status:** engineering QC passed at Fount `cfde46c`; `DOMAIN_REVIEW_PENDING` for the real first-reader checkpoint pilot. Phase 5 is not implemented by this delivery.
+**Current status:** engineering QC passed at Fount `cfde46c`; `COMPLETE` under D046; the optional first-reader pilot was skipped and remains visible validation debt. Phase 5 is not implemented by this delivery.
 
 | Phase-4 requirement | Implementation | Verification source | Offline status |
 |---|---|---|---|
@@ -32,7 +32,7 @@
 | presentation suffix recomputation | `Reader.recomputation_boundary/2` | suffix boundary case | written |
 | writer-usable reference example | `examples/phase_four.exs` prints non-linear coordinate separation, private-note exclusion, Reader state, temporal character view | Codex runtime handoff | written; unrun |
 | pure architecture | no acquisition/persistence/provider calls in Temporal/Reader | Python direct source scan + compiled architecture gate required later | source scan PASS; compiled gate unrun |
-| first-reader checkpoint pilot | `PHASE_04_DOMAIN_REVIEW_PACKET.md` | real rights-cleared readers, first-exposure protocol | **PENDING; no human result claimed** |
+| first-reader checkpoint pilot | `PHASE_04_DOMAIN_REVIEW_PACKET.md` | real rights-cleared readers, first-exposure protocol | **SKIPPED under D046; no human result claimed** |
 
 ## Screenplay-first acceptance represented
 
@@ -44,4 +44,4 @@ Phase 5 Diagnosis, Acquisition, multi-pass Playbooks, resource planning, writer 
 
 ## Runtime QC addendum — 2026-09-27
 
-All 19 focused Phase-4 ExUnit tests pass (Temporal 5, Reader forward 12, differential 2). The new Reader regression covers boneyard and omitted-scene exclusion in addition to private notes. The full four-package CI, compiled architecture, strict Credo, Dialyzer, ExDoc and isolated persistence/writer/PDF preservation gates pass. See `PHASE_04_RUNTIME_QC_REPORT.md` for exact commands and repair hashes in `PHASE_04_FILE_INVENTORY.json`. No human first-reader result exists.
+All 19 focused Phase-4 ExUnit tests pass (Temporal 5, Reader forward 12, differential 2). The new Reader regression covers boneyard and omitted-scene exclusion in addition to private notes. The full four-package CI, compiled architecture, strict Credo, Dialyzer, ExDoc and isolated persistence/writer/PDF preservation gates pass. See `PHASE_04_RUNTIME_QC_REPORT.md` for exact commands and repair hashes in `PHASE_04_FILE_INVENTORY.json`. No human first-reader result exists; under D046 the study was skipped as visible validation debt and Phase 4 is COMPLETE.

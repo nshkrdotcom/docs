@@ -217,7 +217,7 @@ All rows below are specification requirements, initially NOT_STARTED. Phase hand
 | H02 | User applies/commits; Codex verifies/repairs | every pass | application/QC commit record |
 | H03 | Actual SystemOneSDK facade and answer semantics | 1/2/9 | document 34 SDK contract tests |
 
-Every phase also performs its demonstration from document 36. Research R01–R10 motivates W01–W12, but citations alone do not satisfy implementation or human-validation gates.
+Every phase also performs its engineering demonstration from document 36. Research R01–R10 motivates W01–W12, but citations alone do not satisfy implementation or establish human validation. Optional human studies never block phase completion under D046.
 
 ## Phase 1 concrete source traceability - COMPLETE
 
@@ -283,7 +283,7 @@ W01–W12 later workflow rows are not advanced by this source delivery. At the P
 
 **Runtime trace:** Fount `60f989bcb9935b28519c908f3cd123ad6efe172f` passed 244 four-package ExUnit tests, compiled architecture on 267 modules/229 source files, strict Credo, Dialyzer, ExDoc, isolated Core/Workshop integration (11/14 tests), writer accept/reject/PDF examples, and four package inspections. `story_world_temporal_test.exs` now also proves strict-cycle constraint provenance and contradictory pair-query abstention. The Level-A corpus/reviewer/reconciliation artifacts remain unrecorded; Phase 3 is `COMPLETE` under D045's explicit validation-debt override, and At that Phase-3 checkpoint, Phase 4 was `NOT_STARTED` but eligible to begin next.
 
-## Phase 4 concrete source traceability - DOMAIN_REVIEW_PENDING
+## Phase 4 concrete source traceability - COMPLETE (human pilot skipped)
 
 The complete current requirement/source/test mapping is `handoffs/PHASE_04_IMPLEMENTATION_MATRIX.md`. Runtime results are not yet available; the rows below are source-delivery evidence only.
 
@@ -307,3 +307,5 @@ Phase 5 Diagnosis/Acquisition/Playbooks and all later capability/persistence/Wor
 
 
 **Phase 4 runtime trace — 2026-09-27:** Fount `cfde46cd2f654e050cbb9b5dbe32501625510c69` passed 263 four-package ExUnit tests, 19 focused Phase-4 tests, forward-leak/private-material and non-linear temporal cases, compiled architecture, strict Credo, Dialyzer, ExDoc, isolated Core/Workshop integration (11/14), writer acceptance/PDF and package inspection. These executed results supersede the offline-only labels above. The first-reader pilot is unperformed; Phase 4 is `DOMAIN_REVIEW_PENDING`. Phase 5 remains `NOT_STARTED`.
+
+**D046 policy trace:** The user made all future human reviews optional and nonblocking. Phase 4 is `COMPLETE` on the executed engineering evidence above; its first-reader pilot was skipped and remains visible validation debt. For later phases, trace engineering tests/demonstrations separately from any optional human study. Do not claim human validity or usefulness without real participants and records. Phase 5 remains `NOT_STARTED`.

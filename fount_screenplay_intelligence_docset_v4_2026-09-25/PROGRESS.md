@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phases 1–3 COMPLETE; Phase 3 Level-A human review remains visible validation debt under D045; Phase 4 engineering QC passed and is DOMAIN_REVIEW_PENDING until the real first-reader pilot or an explicit override
+**Current state:** Phases 1–4 COMPLETE on engineering QC; Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
 
 ## Status values
 
@@ -14,14 +14,14 @@ DOMAIN_REVIEW_PENDING
 COMPLETE
 ```
 
-Runtime QC may establish engineering completion; phases with required human/domain pilots also require the domain gate (or an explicit user override recorded as validation debt) before `COMPLETE`.
+Runtime QC establishes completion when applicable engineering and other non-human gates pass. Under D046, human/domain reviews are optional and skipped by default; they never block `COMPLETE` or later work. Record skipped studies as validation debt without claiming human results.
 
 | Phase | Name | Status | Offline overlay | Runtime QC report | Notes |
 |---:|---|---|---|---|---|
 | 1 | Direct Architecture Supersession and Probe Removal | COMPLETE | `fount_phase_01_overlay.zip` | `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | Engineering, storage, writer and architecture gates pass; live Luna alternatives output failures are user-authorized validation debt |
 | 2 | Observe Measurement Substrate Hardening | COMPLETE | `fount_phase_02_overlay.zip` | `handoffs/PHASE_02_RUNTIME_QC_REPORT.md` | Engineering, persistence, writer, package, architecture and authorized narrow live gate passed; no human quality claim |
 | 3 | Story-World Pure Core | COMPLETE | `fount_phase_03_overlay.zip` | `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` | Engineering QC passed at Fount `60f989b`; user explicitly deferred Level-A human review as visible validation debt |
-| 4 | Temporal and Forward-Reader Engine | DOMAIN_REVIEW_PENDING | `fount_phase_04_overlay.zip` | `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` | Engineering and preservation gates passed at Fount `cfde46c`; real first-reader pilot remains unperformed |
+| 4 | Temporal and Forward-Reader Engine | COMPLETE | `fount_phase_04_overlay.zip` | `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` | Engineering and preservation gates passed at Fount `cfde46c`; first-reader pilot skipped under D046 as visible validation debt |
 | 5 | Diagnosis and Multi-Pass Playbook Shell | NOT_STARTED | — | — | Diagnosis + Acquisition + Playbooks |
 | 6 | Capabilities A: Scene/Agency/Character/Relationship | NOT_STARTED | — | — | Families 1–4 |
 | 7 | Capabilities B: Audience/Sequence/Dialogue/Setup-Payoff | NOT_STARTED | — | — | Families 5–8 |
@@ -52,7 +52,8 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-26 | 3 | Runtime QC and repairs | Fount applied `69b8537`, repair `60f989b`; docset applied `aabd58c`; `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` | Engineering ladder, isolated DB/writer/PDF and package checks passed; Level-A human gate remains pending |
 | 2026-09-26 | 3 | User-authorized validation-debt override | User: “yes make it so it wont stop phase 4, obviously.”; decision D045 | COMPLETE under the documented exception; Level-A human review remains unperformed and must not be claimed |
 | 2026-09-26 | 4 | Source implementation delivered | `fount_phase_04_overlay.zip`; `fount_phase_04_docset.zip`; `FOUNT_PHASE_04_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 23-file strict overlay verified offline; runtime QC and first-reader checkpoint pilot pending |
-| 2026-09-27 | 4 | Runtime QC and repairs | Fount applied `bf20ede`, repair `cfde46c`; docset applied `a59aea6`; `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` | Engineering and preservation gates pass; first-reader pilot pending, so DOMAIN_REVIEW_PENDING |
+| 2026-09-27 | 4 | Runtime QC and repairs | Fount applied `bf20ede`, repair `cfde46c`; docset applied `a59aea6`; `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` | Engineering and preservation gates pass; first-reader pilot initially pending |
+| 2026-09-27 | 4 | User-authorized human-review policy | D046 in `DECISIONS.md` | COMPLETE; first-reader pilot skipped as visible debt; all future human reviews optional and nonblocking |
 
 ## Non-negotiable progress rule
 
@@ -60,9 +61,7 @@ Do not begin the next phase from the offline overlay alone. Use the source snaps
 
 ## Domain-review state note
 
-For phases that carry a human/domain pilot under `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md`, `DOMAIN_REVIEW_PENDING` may appear between engineering/runtime QC and `COMPLETE`.
-
-This does not apply retroactively to Phase 1. Human/domain validation must never be fabricated by an offline or runtime agent.
+Under D046, human/domain pilots are optional and skipped by default. `DOMAIN_REVIEW_PENDING` remains in historical records but is not used solely for an absent human review going forward. This does not apply retroactively to Phase 1. Human/domain validation must never be fabricated by an offline or runtime agent.
 
 ## Historical Phase 1 delivery - 2026-09-26
 
@@ -115,11 +114,15 @@ Phase 4 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The source overlay implements 
 
 Read `handoffs/PHASE_04_OFFLINE_HANDOFF.md`, `handoffs/PHASE_04_IMPLEMENTATION_MATRIX.md`, `handoffs/PHASE_04_PRESERVATION_AUDIT.md`, and `handoffs/PHASE_04_RUNTIME_QC_HANDOFF.md`. The overlay has 12 additions and 11 modifications with no deletions. Offline Phase-4 source checks and strict overlay application passed; the global Python source suite still exposes the input-only missing `scripts/prune_deleted_directories.py` helper. Elixir/Mix checks were not available and are not claimed.
 
-The real first-reader checkpoint study is prepared in `handoffs/PHASE_04_DOMAIN_REVIEW_PACKET.md` and has not been performed. After engineering QC, use `DOMAIN_REVIEW_PENDING` if that human gate is still absent unless the user explicitly authorizes a visible validation-debt override.
+The real first-reader checkpoint study is prepared in `handoffs/PHASE_04_DOMAIN_REVIEW_PACKET.md` and has not been performed. At the historical source-delivery checkpoint, the pending rule applied. D046 now supersedes it: the study is optional, skipped as validation debt, and does not block `COMPLETE`.
 
 **Phase 5 and all later phases remain NOT_STARTED. Codex must stop after repairing/testing/completing the Phase-4 gate state.**
 
 
 ## Phase 4 runtime QC checkpoint — 2026-09-27
 
-Phase 4 engineering QC passed at Fount `cfde46cd2f654e050cbb9b5dbe32501625510c69` (tree `2f6e7e6c9514bab1962c9195c518076646220458`). Full CI, 263 four-package ExUnit tests, isolated database/Workshop/PDF gates, architecture, package builds, targeted Reader/Temporal tests and provider-free example passed. See `handoffs/PHASE_04_RUNTIME_QC_REPORT.md`. The real first-reader checkpoint pilot has no participant or corpus records; status is `DOMAIN_REVIEW_PENDING`. Phase 5 remains `NOT_STARTED`.
+Phase 4 engineering QC passed at Fount `cfde46cd2f654e050cbb9b5dbe32501625510c69` (tree `2f6e7e6c9514bab1962c9195c518076646220458`). Full CI, 263 four-package ExUnit tests, isolated database/Workshop/PDF gates, architecture, package builds, targeted Reader/Temporal tests and provider-free example passed. See `handoffs/PHASE_04_RUNTIME_QC_REPORT.md`. The real first-reader checkpoint pilot has no participant or corpus records; under D046 it is optional, skipped and visible validation debt. Phase 4 is `COMPLETE`. Phase 5 remains `NOT_STARTED`.
+
+## D046 optional human-review policy and Phase 4 completion — 2026-09-27
+
+The user authorized both the Phase-4 first-reader validation-debt override and a standing policy that all human reviews going forward are optional and never block work. They are assumed skipped unless actually commissioned. Phase 4 is `COMPLETE` on Fount `cfde46c` engineering QC. Its first-reader study is unperformed validation debt, not human validation. Future phases need no further review waiver; engineering and other non-human gates still apply. Phase 5 is `NOT_STARTED` and eligible for a separate implementation pass.

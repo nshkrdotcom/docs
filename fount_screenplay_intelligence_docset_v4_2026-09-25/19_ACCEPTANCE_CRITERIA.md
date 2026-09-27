@@ -323,7 +323,7 @@ selected authorized live Workshop/Inference checks
 
 ## AD. Human/domain validation
 
-- Phase 3–9 validation artifacts/gates required by `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md` are recorded or explicitly overridden as visible debt;
+- Phase 3–9 human-validation studies are optional under D046; performed results are recorded, and skipped studies remain visible validation debt without blocking engineering acceptance;
 - rights/provenance manifests exist for nontrivial corpus material;
 - Reader human-valid claims are not made beyond available evidence;
 - support/validity and writer usefulness are evaluated separately.
@@ -358,6 +358,6 @@ selected authorized live Workshop/Inference checks
 - human-only writing, comparison, acceptance, and export work without provider credentials;
 - candidates preserve protected material and remain separate from canon until acceptance;
 - voice, cinematic choices, alternatives, rehearsal, research, notes, consequences, and session continuity follow documents 33–34;
-- human reviews required by Phases 12–15 are recorded, pending, or explicitly deferred by the user as visible debt;
+- optional human reviews in Phases 12–15 are recorded if performed; skipped reviews remain visible validation debt and do not block acceptance;
 - exactly four XML inputs and the user-apply/commit → Codex-QC protocol are followed;
 - no unsupported claim of creative superiority, audience response, submission eligibility, or commercial success.

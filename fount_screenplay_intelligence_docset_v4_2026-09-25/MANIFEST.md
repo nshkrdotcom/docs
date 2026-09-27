@@ -96,7 +96,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phases 1–3 are COMPLETE; Phase 3 carries visible human-review validation debt under D045. Phase 4 is OFFLINE_IMPLEMENTED and awaiting runtime QC plus the first-reader domain gate. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phases 1–4 are COMPLETE on engineering QC; Phase 3 and Phase 4 human studies remain unperformed validation debt. D046 makes future human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -151,5 +151,7 @@ Phase-3 runtime QC is recorded in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. No h
 - `handoffs/PHASE_04_DOMAIN_REVIEW_PACKET.md`: rights-aware first-reader checkpoint pilot; no human participants/results fabricated.
 - `handoffs/PHASE_04_STATIC_CHECKS.json`: actual offline source/archive results and explicit unrun runtime gates.
 - `handoffs/PHASE_04_OFFLINE_HANDOFF.md`: current source-delivery account.
-- `handoffs/PHASE_04_RUNTIME_QC_HANDOFF.md`: Codex verifies the applied Phase-4 state, repairs/tests it, records the domain-gate state, and stops before Phase 5.
+- `handoffs/PHASE_04_RUNTIME_QC_HANDOFF.md`: historical Codex QC instructions for the applied Phase-4 state.
+- `handoffs/PHASE_04_RUNTIME_QC_REPORT.md`: executed Phase-4 engineering and preservation evidence, with the D046 completion addendum.
+- `handoffs/PHASE_04_DOCSET_HASHES.json`: post-QC complete-docset file hashes, excluding the self-referential hash index.
 

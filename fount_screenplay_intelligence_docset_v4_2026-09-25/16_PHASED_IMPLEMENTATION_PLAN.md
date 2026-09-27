@@ -217,7 +217,7 @@ Runtime agent must run/fix:
 
 ## Product-validation spine for Phases 3–11
 
-Engineering/runtime QC and dramaturgical/product validation are separate gates.
+Engineering/runtime QC and dramaturgical/product validation are separate evidence classes. Under D046, human reviews are optional and never block phase completion or subsequent work.
 
 The program uses the resource model in `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md`:
 
@@ -234,7 +234,7 @@ Phase 11  scaled calibration, robustness, disagreement, model/provider compariso
 
 Early pilots are exploratory. They catch wrong constructs and unusable output before those mistakes become dependencies. They are **not** population-level validation.
 
-For phases with a required human/domain pilot, runtime QC produces the canonical evaluation packet/reference rendering and records the rights/reviewer plan. The phase may enter `DOMAIN_REVIEW_PENDING` after engineering QC. It reaches `COMPLETE` only after the required domain gate passes or the user records an explicit override/debt.
+For phases with an optional human/domain pilot, runtime QC preserves any in-scope evaluation packet/reference rendering and records the study as performed or skipped. Engineering-clean phases reach `COMPLETE` without a human pilot. Skipped reviews remain visible validation debt; no separate override is needed under D046.
 
 The reference writer-facing semantics are defined by `27_WRITER_INTERACTION_AND_PRESENTATION_CONTRACT.md`.
 
@@ -360,13 +360,13 @@ Required cases include:
 
 ## Domain pilot
 
-Prepare and complete the Phase-3 structural/factual pilot from `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md` using rights-cleared material. The pilot must review source grounding, event/fact/state correctness, ambiguity handling, and usefulness of the reference presentation.
+Optionally run the Phase-3 structural/factual pilot from `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md` using rights-cleared material. The pilot must review source grounding, event/fact/state correctness, ambiguity handling, and usefulness of the reference presentation.
 
 Do not claim human reader-response validation in this phase.
 
 ## Exit criteria
 
-Story-world compilation/query is deterministic, replayable, source-grounded, architecture-gate clean, no API assumes that story chronology is a single scene-ordinal sequence, and the required structural/domain pilot is recorded (or explicitly overridden as visible validation debt).
+Story-world compilation/query is deterministic, replayable, source-grounded, architecture-gate clean, no API assumes that story chronology is a single scene-ordinal sequence. The optional structural/domain pilot recorded if performed and otherwise listed as unperformed validation debt.
 
 ---
 
@@ -423,7 +423,7 @@ Implement presentation-order Reader reduction plus qualified diegetic state/traj
 
 ## Domain pilot
 
-Run the first-reader checkpoint pilot defined by `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md`.
+Optionally run the first-reader checkpoint pilot defined by `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md`.
 
 The packet must keep distinct:
 
@@ -436,7 +436,7 @@ Use first-exposure prefixes and prevent future-scene leakage. Record disagreemen
 
 ## Exit criteria
 
-Reader and temporal/story-world views have no acquisition/persistence dependencies, pass forward-leak and non-linear-story correctness gates, state explicitly whether each trajectory is presentation-relative or diegetic/story-time-qualified, and have completed/recorded the first-reader domain pilot or an explicit validation-debt override.
+Reader and temporal/story-world views have no acquisition/persistence dependencies, pass forward-leak and non-linear-story correctness gates, state explicitly whether each trajectory is presentation-relative or diegetic/story-time-qualified; the optional first-reader pilot is recorded if performed and otherwise remains visible validation debt.
 
 ---
 
@@ -482,11 +482,11 @@ Implement evidence-composed diagnosis plus the imperative Intelligence shell tha
 
 ## Domain pilot
 
-Run the diagnosis/playbook usefulness pilot from `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md`. At minimum, experienced screenwriting/story reviewers assess support/validity separately from usefulness, clarity, alternative-awareness, intent preservation, uncertainty honesty, and over-prescriptiveness.
+Optionally run the diagnosis/playbook usefulness pilot from `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md`. At minimum, experienced screenwriting/story reviewers assess support/validity separately from usefulness, clarity, alternative-awareness, intent preservation, uncertainty honesty, and over-prescriptiveness.
 
 ## Exit criteria
 
-The old Probe plan/execute/explain intent is fully superseded by multi-pass playbooks and diagnoses while the pure core remains provider/persistence free; playbooks emit the writer presentation contract and the Phase-5 diagnosis/usefulness pilot is recorded or explicitly overridden as validation debt.
+The old Probe plan/execute/explain intent is fully superseded by multi-pass playbooks and diagnoses while the pure core remains provider/persistence free; playbooks emit the writer presentation contract; the optional Phase-5 diagnosis/usefulness pilot is recorded if performed and otherwise listed as validation debt.
 
 ---
 
@@ -514,13 +514,13 @@ Must include:
 
 ## Domain evaluation
 
-Add corpus/fixture cases, annotation instructions, and human-reviewed packets for the four capability families. Use rights-cleared material and evaluate both support/validity and writer usefulness where subjective interpretation is involved.
+Add corpus/fixture cases and optional annotation instructions and human-review packets for the four capability families. Use rights-cleared material and evaluate both support/validity and writer usefulness where subjective interpretation is involved.
 
-At least one human-reviewed case per newly completed family plus adversarial/negative cases should be recorded before claiming the family product-ready.
+Human-reviewed cases are optional. Product-readiness claims without them must rely on engineering evidence and avoid claiming human usefulness validation.
 
 ## Exit criteria
 
-All four families have source-grounded outputs, deterministic core fixtures, Sandbox playbook integration, documented limitations, non-linear-story cases, Workshop usefulness mapping, and recorded domain-review cases (or explicit validation debt).
+All four families have source-grounded outputs, deterministic core fixtures, Sandbox playbook integration, documented limitations, non-linear-story cases, Workshop usefulness mapping; optional domain-review cases are recorded if performed and otherwise listed as validation debt.
 
 ---
 
@@ -546,11 +546,11 @@ Complete:
 
 ## Domain evaluation
 
-Add human-reviewed cases for Audience/Reader, Sequence, Dialogue, and Setup/Payoff. Reader cases must use forward-exposure checkpoints; dialogue/usefulness review must distinguish factual support from writer usefulness.
+Optional human-reviewed cases may be added for Audience/Reader, Sequence, Dialogue, and Setup/Payoff. Reader cases must use forward-exposure checkpoints; dialogue/usefulness review must distinguish factual support from writer usefulness.
 
 ## Exit criteria
 
-Each family has complete sensor/intelligence/playbook coverage, representative revision/non-linear presentation fixtures, and recorded domain-review cases (or explicit validation debt).
+Each family has complete sensor/intelligence/playbook coverage, representative revision/non-linear presentation fixtures; optional domain-review cases are recorded if performed and otherwise listed as validation debt.
 
 ---
 
@@ -582,11 +582,11 @@ Each family has complete sensor/intelligence/playbook coverage, representative r
 
 ## Domain evaluation
 
-Add human-reviewed cases for Emotional/Value Movement, Theme/Meaning, Genre Packs, and Revision Intelligence. Genre review must test at least one hybrid/custom pack and one intentional subversion case.
+Optional human-reviewed cases may be added for Emotional/Value Movement, Theme/Meaning, Genre Packs, and Revision Intelligence. Genre review must test at least one hybrid/custom pack and one intentional subversion case.
 
 ## Exit criteria
 
-All twelve capability families pass traceability and acceptance requirements, including the safe custom-pack workflow and recorded domain-review cases (or explicit validation debt).
+All twelve capability families pass traceability and acceptance requirements, including the safe custom-pack workflow; optional domain-review cases are recorded if performed and otherwise listed as validation debt.
 
 ---
 
@@ -634,11 +634,11 @@ Workshop still uses `inference` for generation and Fount typed edits for canonic
 
 ## Domain evaluation
 
-Run at least one end-to-end feature-screenplay investigation/rewrite session using the human-review protocol in `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md`. Evaluate whether the system helped the writer understand the concern, whether alternatives were meaningfully different, whether protected strengths survived, and whether the presentation was usable without a bespoke GUI.
+Optionally run an end-to-end feature-screenplay investigation/rewrite session using the human-review protocol in `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md`. Evaluate whether the system helped the writer understand the concern, whether alternatives were meaningfully different, whether protected strengths survived, and whether the presentation was usable without a bespoke GUI.
 
 ## Exit criteria
 
-Writer-facing workflows remain operational and can use Intelligence without bypassing explicit review/acceptance; the writer presentation/resource contracts survive end-to-end; and the Phase-9 workflow review is recorded or explicitly overridden as validation debt.
+Writer-facing workflows remain operational and can use Intelligence without bypassing explicit review/acceptance; the writer presentation/resource contracts survive end-to-end; the optional Phase-9 workflow review is recorded if performed and otherwise listed as validation debt.
 
 ---
 
@@ -689,7 +689,7 @@ Include database integration tests and scenarios proving:
 
 ## Goal
 
-Scale the earlier human/domain pilots into systematic calibration, robustness, disagreement, and regression evaluation. This phase does not introduce human evaluation for the first time.
+Implement systematic calibration, robustness, disagreement, and regression evaluation where evidence exists. Earlier human/domain pilots are optional and may be absent.
 
 ## Scope
 
@@ -716,25 +716,25 @@ Scale the earlier human/domain pilots into systematic calibration, robustness, d
 
 ## Exit criteria
 
-Core lenses/capabilities have executable evaluation notes/fixtures, early-pilot findings have been incorporated, discovered regressions become permanent tests, and scaled human/corpus claims are documented at their actual level of evidence. Contract-shape changes fail stale generated fixtures visibly and require regeneration rather than compatibility decoding.
+Core lenses/capabilities have executable evaluation notes/fixtures, any actual early-pilot findings have been incorporated, discovered regressions become permanent tests, and scaled human/corpus claims are documented at their actual level of evidence. Contract-shape changes fail stale generated fixtures visibly and require regeneration rather than compatibility decoding.
 
 ---
 
 # Phase 12 — Discovery, Session Modes, and Scene Exploration
 
-Implement the complete Phase 12 brief in `36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md`: W01–W03/W11, source mappings, tests, runnable example, and human review. Exit requires the fragment-to-scene and resume demonstrations, with no mandatory outline or analysis funnel.
+Implement the complete Phase 12 brief in `36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md`: W01–W03/W11, source mappings, tests, and runnable example; human review is optional. Exit requires the fragment-to-scene and resume demonstrations, with no mandatory outline or analysis funnel.
 
 # Phase 13 — Cinematic Revision, Rehearsal, and Voice
 
-Implement the complete Phase 13 brief in document 36: W04–W06, visual/sound passes, voice protection, and noncanonical rehearsal. Exit requires actual candidate comparisons and the stated human review, not only generated explanations of success.
+Implement the complete Phase 13 brief in document 36: W04–W06, visual/sound passes, voice protection, and noncanonical rehearsal. Exit requires actual candidate comparisons and mechanical evidence, not only generated explanations of success; human review is optional.
 
 # Phase 14 — Research, Notes, and Consequential Revision
 
-Implement the complete Phase 14 brief in document 36: W07–W09, research provenance, conflicting/stale notes, revision consequences, and stale-candidate protection. Exit requires the note/reveal demonstrations and collaborator review.
+Implement the complete Phase 14 brief in document 36: W07–W09, research provenance, conflicting/stale notes, revision consequences, and stale-candidate protection. Exit requires the note/reveal demonstrations; collaborator review is optional.
 
 # Phase 15 — Read, Share, Resume, and Prove Usefulness
 
-Implement the complete Phase 15 brief in document 36: W01/W10–W12 and whole-workflow integration. Exit requires human-only and agent-assisted paths, clean export, session recovery, and the recorded comparison study. Missing human evidence remains pending.
+Implement the complete Phase 15 brief in document 36: W01/W10–W12 and whole-workflow integration. Exit requires human-only and agent-assisted paths, clean export, and session recovery. The human comparison study is optional; if skipped, record no human usefulness claim.
 
 # Phase 16 — Final Integration, Documentation, Package Readiness, and Acceptance
 
@@ -786,9 +786,9 @@ DOMAIN_REVIEW_PENDING
 COMPLETE
 ```
 
-`OFFLINE_IMPLEMENTED` does **not** mean tests passed. `DOMAIN_REVIEW_PENDING` is used only where the phase has a required human/domain pilot.
+`OFFLINE_IMPLEMENTED` does **not** mean tests passed. `DOMAIN_REVIEW_PENDING` remains a historical status; under D046, missing human review alone no longer keeps an engineering-clean phase pending.
 
-The next phase may begin only when the prior phase is `COMPLETE`, unless the user explicitly overrides the sequence. An override records any outstanding domain-validation debt rather than silently treating it as passed.
+The next phase may begin when the prior phase is `COMPLETE` on applicable non-human gates. Optional human review never blocks sequencing; any unperformed study remains visible validation debt and cannot support a human-validation claim.
 
 # 5. Overlay contract
 

@@ -152,4 +152,4 @@ Not open. This program targets feature-film screenplays. Television/series mecha
 
 ## 19. Human-validation staffing/procurement
 
-The validation process is specified, but the exact named reviewers/readers, compensation, script licenses, NDAs, and storage vendor cannot be fixed by architecture. Before each human-gated phase begins, record the concrete resource plan in the phase handoff/progress artifacts.
+The validation process is specified, but the exact named reviewers/readers, compensation, script licenses, NDAs, and storage vendor cannot be fixed by architecture. If an optional human study is actually commissioned, record its concrete resource plan before conducting it. Missing staffing or rights-cleared study material does not block implementation under D046.

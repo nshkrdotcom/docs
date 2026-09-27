@@ -1,6 +1,6 @@
 # Phase 4 first-reader domain review packet
 
-**Status:** prepared only. No reader study has been run and no human result is claimed.
+**Status:** optional protocol retained; pilot skipped under D046. No reader study has been run and no human result is claimed.
 
 ## Goal
 
@@ -61,4 +61,4 @@ At least one selected case should contain a flashback, recollection, intercut, o
 
 ## Completion rule
 
-Engineering QC can finish before this pilot. If the software gates pass but this packet has no real review records, Phase 4 becomes `DOMAIN_REVIEW_PENDING`, not `COMPLETE`, unless the user explicitly authorizes a visible validation-debt override. Codex must not invent participants or findings.
+Under D046 this pilot is optional and skipped by default. Phase 4 is `COMPLETE` on engineering QC with this unperformed study recorded as visible validation debt. Codex must not invent participants or findings or claim human validation.

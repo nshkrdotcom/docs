@@ -4,7 +4,7 @@
 **Date:** <YYYY-MM-DD>  
 **Baseline before overlay:** <Repomix/SHA if known>  
 **Offline overlay:** <filename>  
-**Status:** COMPLETE | QC_BLOCKED | DOMAIN_REVIEW_PENDING
+**Status:** COMPLETE | QC_BLOCKED (human review alone never blocks under D046)
 
 ## User-applied overlay verification
 
@@ -89,7 +89,7 @@ Include focused checks then full gates required by `18_RUNTIME_QC_PROTOCOL.md`.
 - resource preflight/actual reporting checked where relevant:
 - declarative pack/lens safety checked where relevant:
 - rights/corpus manifest checked where relevant:
-- domain pilot required: yes/no
+- optional human/domain pilot: performed/skipped/not applicable
 - reviewers/readers actually completed pilot: yes/no
 - domain findings / usefulness concerns:
-- validation debt / explicit override if any:
+- skipped-study validation debt, if any:

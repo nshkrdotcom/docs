@@ -1,5 +1,7 @@
 # Codex QC handoff — Fount Phase 4
 
+**Historical handoff, superseded:** Phase 4 runtime QC passed at Fount `cfde46c`; the phase is `COMPLETE` under D046. Its optional first-reader pilot was skipped as visible validation debt. See `PHASE_04_RUNTIME_QC_REPORT.md` and current `PROGRESS.md`. The instructions below describe the original pre-QC task and must not be rerun as a new Phase-4 implementation pass.
+
 You are the runtime/QC agent for **Phase 4 — Temporal Views and Forward-Reader Engine**. The user has already applied and committed the Phase-4 Fount overlay and complete docset before handing the checkout to you. **Do not reapply the overlay. Do not implement Phase 5.**
 
 ## 1. Establish the applied source

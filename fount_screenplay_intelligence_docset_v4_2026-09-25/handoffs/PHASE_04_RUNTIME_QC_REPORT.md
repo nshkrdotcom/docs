@@ -1,6 +1,6 @@
 # Phase 4 runtime QC — Temporal Views and Forward-Reader Engine
 
-**Date:** 2026-09-27 HST. **Engineering result:** passed. **Phase status:** `DOMAIN_REVIEW_PENDING`. No Phase-5 work, hosted-provider call, or human pilot was performed.
+**Date:** 2026-09-27 HST. **Engineering result:** passed. **Phase status:** `COMPLETE` under D046; first-reader pilot unperformed validation debt. No Phase-5 work, hosted-provider call, or human pilot was performed.
 
 ## Source identity and baseline
 
@@ -42,4 +42,8 @@ The Phase-4 correctness ladder is exercised by the 19 targeted tests: frozen ear
 
 ## First-reader gate and remaining limits
 
-`PHASE_04_DOMAIN_REVIEW_PACKET.md` still has no rights-cleared corpus manifest, first-exposure checkpoint records, independent readers, or disagreement analysis. Fixtures, Codex inspection, and model output do not satisfy that pilot. Phase 4 therefore remains `DOMAIN_REVIEW_PENDING`; `COMPLETE` needs the real pilot or a separate explicit user-authorized validation-debt override. Phase 3's D045 override does not transfer. No Phase-5 Diagnosis, Acquisition, or multi-pass Playbooks were implemented.
+`PHASE_04_DOMAIN_REVIEW_PACKET.md` still has no rights-cleared corpus manifest, first-exposure checkpoint records, independent readers, or disagreement analysis. Fixtures, Codex inspection, and model output do not satisfy that pilot. At the original engineering checkpoint Phase 4 was `DOMAIN_REVIEW_PENDING`. The later D046 authorization marks it `COMPLETE` with this study skipped as visible validation debt; Phase 3's D045 override remains a separate historical decision. No Phase-5 Diagnosis, Acquisition, or multi-pass Playbooks were implemented.
+
+## Subsequent user authorization — D046
+
+After the engineering checkpoint, the user authorized marking Phase 4 complete with the first-reader pilot skipped, then made all future human reviews optional and nonblocking. The study packet remains available, but no participant, corpus result, human-calibrated interpretation, or usefulness finding is claimed. Phase 4 is `COMPLETE` on the engineering evidence above; the unperformed study remains visible validation debt. This addendum supersedes the earlier pending-status conclusion without changing any test result or Fount source identity.

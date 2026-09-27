@@ -54,7 +54,7 @@ Early pilots are deliberately small and exploratory.
 
 They are designed to catch category errors before eight more phases build on them.
 
-Suggested minimum pilot targets, subject to actual staffing:
+Optional pilot targets if a study is commissioned, subject to actual staffing:
 
 - Phase 3: at least 3 rights-cleared feature scripts or substantial feature-script excerpts; at least 2 independent structural reviewers for selected facts/events/relations;
 - Phase 4: at least 3 scripts/excerpts with first-reader checkpoints; target 3–5 independent readers per selected checkpoint set;
@@ -62,7 +62,7 @@ Suggested minimum pilot targets, subject to actual staffing:
 - Phases 6–8: each newly completed capability family contributes at least one human-reviewed case plus adversarial/negative cases;
 - Phase 9: at least one end-to-end rewrite/investigation session evaluated for usefulness, intent preservation, and evidence quality.
 
-These numbers are **pilot floor/targets**, not claims of statistical validity.
+These are **optional pilot targets** if a study is commissioned, not implementation requirements or claims of statistical validity.
 
 Phase 11 designs the larger evaluation using observed variance/disagreement and an explicit study plan rather than pretending an arbitrary N proves calibration.
 
@@ -182,7 +182,7 @@ That is more informative than declaring one reader "wrong."
 
 Engineering and domain status are distinct.
 
-For phases with required domain pilots, progress may pass through:
+For phases with optional domain pilots, engineering progress follows its own gates. Historical progress could pass through:
 
 ```text
 OFFLINE_IMPLEMENTED
@@ -191,9 +191,7 @@ DOMAIN_REVIEW_PENDING
 COMPLETE
 ```
 
-A phase may be engineering-clean while domain review remains pending. It must not be described as dramaturgically validated until the relevant domain gate passes.
-
-The user may explicitly override a domain gate for implementation sequencing, but the override is recorded in `PROGRESS.md` and validation debt remains visible.
+Under D046, an engineering-clean phase may be `COMPLETE` while every human review is skipped. Missing human review never blocks implementation, sequencing, or engineering acceptance and needs no new waiver. Record the skipped study as visible validation debt. The phase must not be described as dramaturgically or human validated until real study evidence exists.
 
 ## 11. Phase-11 role
 
@@ -208,7 +206,7 @@ Phase 11 is the scale-up phase for:
 - model/provider comparisons;
 - study-design refinement based on earlier pilots.
 
-It is not the first human contact with the system.
+If earlier optional studies were skipped, Phase 11 may be the first human contact with the system; do not imply otherwise.
 
 ## 12. Legal caution
 

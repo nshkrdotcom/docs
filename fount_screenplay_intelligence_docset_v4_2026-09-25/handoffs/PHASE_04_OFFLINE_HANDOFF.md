@@ -1,5 +1,7 @@
 # Phase 4 offline implementation handoff
 
+**Historical source-delivery record:** Phase 4 later passed runtime QC and is `COMPLETE` under D046. The optional first-reader study was skipped as visible validation debt. See `PHASE_04_RUNTIME_QC_REPORT.md` and `PROGRESS.md`.
+
 **Phase:** 4 — Temporal Views and Forward-Reader Engine  
 **Status at source delivery:** `OFFLINE_IMPLEMENTED`  
 **Stop line:** Phase 5 is not implemented by this delivery.

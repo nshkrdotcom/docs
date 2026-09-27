@@ -277,12 +277,12 @@ After `COMPLETE`:
 
 Runtime QC proves that code compiles/runs and that provider/storage contracts behave as specified. It does not establish that a screenplay diagnosis is useful or matches human reader experience.
 
-For phases with a domain pilot:
+For phases with an optional domain pilot:
 
 1. run normal engineering/runtime QC;
-2. generate the canonical evaluation packet/reference rendering;
+2. generate the in-scope canonical evaluation packet/reference rendering;
 3. verify source/evidence/provenance integrity;
-4. hand the packet to the required human reviewer/reader process from `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md`;
-5. record domain-review outcome separately from runtime status.
+4. record the human review as performed or skipped; if skipped, retain visible validation debt without blocking phase completion;
+5. record any actual domain-review outcome separately from runtime status.
 
 Do not conflate a green Mix/CI run with dramaturgical validation.

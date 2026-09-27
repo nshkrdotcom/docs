@@ -286,7 +286,7 @@ After producing the required artifacts for the current phase, stop. Do not silen
 
 ## Domain-validation responsibilities
 
-For phases that require human/domain pilots, the offline implementation agent does **not** fabricate human results.
+For phases with optional human/domain pilots, the offline implementation agent does **not** fabricate human results.
 
 It must:
 
@@ -294,6 +294,6 @@ It must:
 - update the validation manifest;
 - state which rights-cleared material/reviewer resources are still required;
 - include explicit domain-review instructions in the handoff;
-- leave the phase in a non-complete state until the required runtime/domain gates are satisfied.
+- leave the phase in `OFFLINE_IMPLEMENTED` until runtime QC; skipped human review does not block engineering completion under D046.
 
 The runtime-QC agent may prepare/render the packet but must not mark a human/domain gate passed without actual review evidence.

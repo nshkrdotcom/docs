@@ -50,7 +50,7 @@ Tasks:
 
 **Required demonstration:** Use A01, then resume it on another invocation. Show the same accepted draft, unchosen alternatives, protected text, and pending question.
 
-**Human gate:** One discovery-oriented writer and one outline-oriented writer each complete a session and answer whether the tool forced an unwanted process. Record exact task, output, friction, and rejection reasons. This is a formative gate, not population evidence; missing reviewers leave `DOMAIN_REVIEW_PENDING`.
+**Optional human study:** If commissioned, one discovery-oriented writer and one outline-oriented writer each complete a session and answer whether the tool forced an unwanted process. Record exact task, output, friction, and rejection reasons. This is formative evidence, not population evidence. Under D046, missing reviewers do not block the phase; record the study as skipped validation debt.
 
 ## Phase 13 — Cinematic revision, rehearsal, and voice
 
@@ -69,7 +69,7 @@ Tasks:
 
 **Required demonstration:** Revise A02 in two different ways; keep the writer's silence and repeated phrase. Reject a fluent but generic control. Show the protected-text check and the human tradeoff.
 
-**Human gate:** Two writers review original/candidate/generic-control excerpts in randomized order. Record voice fit, meaningful difference, cinematic usefulness, and cases where the original is preferred. Do not claim blinded preference if condition labels were visible.
+**Optional human study:** If commissioned, two writers review original/candidate/generic-control excerpts in randomized order. Record voice fit, meaningful difference, cinematic usefulness, and cases where the original is preferred. Do not claim blinded preference if condition labels were visible.
 
 ## Phase 14 — Research, notes, and consequential revision
 
@@ -88,7 +88,7 @@ Tasks:
 
 **Required demonstration:** Apply A06 to two conflicting notes, then A07 to a reveal move. Show why one note needs re-anchoring and why one suggested “fix” was declined.
 
-**Human gate:** A writer and a separate note-giver or story collaborator review the workflow. Record whether the original concern survives triage, whether disagreement is represented fairly, and whether the proposed revision addresses the chosen concern.
+**Optional human study:** If commissioned, a writer and a separate note-giver or story collaborator review the workflow. Record whether the original concern survives triage, whether disagreement is represented fairly, and whether the proposed revision addresses the chosen concern.
 
 ## Phase 15 — Read, share, resume, and prove usefulness
 
@@ -103,11 +103,11 @@ Tasks:
 1. Produce a human table-read packet without TTS and record reactions independently of screenplay facts. Keep optional speech adapters optional.
 2. Verify clean sharing/export of selected material, with no private-note or alternative leakage. Test dual dialogue, non-ASCII text, unsupported export features, and roundtrip fidelity.
 3. Provide one documented end-to-end entry path for capture → explore → revise → compare → accept/reject → export → resume. Use existing commands; do not require a new graphical editor.
-4. Run human-only, basic LLM-assistance, and Fount-assisted task comparisons. Record actual outputs, time, errors, friction, and preferences separately. Include failures and unchanged originals.
+4. Preserve runnable human-only, basic LLM-assistance, and Fount-assisted paths. An optional comparative human study may record actual outputs, time, errors, friction, and preferences separately, including failures and unchanged originals.
 
 **Required demonstration:** A09–A12 plus a complete scene session using the same source identities. No provider credentials are necessary for the human-only path.
 
-**Human gate:** At least four writers with differing practices each try the three conditions on comparable tasks; counterbalance order and acknowledge learning effects and the small sample. Preserve consent and material rights. Record whether the tool helped the next decision, respected voice, and created meaningful alternatives. This evaluates the workflow, not commercial potential.
+**Optional human study:** If commissioned, at least four writers with differing practices each try the three conditions on comparable tasks; counterbalance order and acknowledge learning effects and the small sample. Preserve consent and material rights. Record whether the tool helped the next decision, respected voice, and created meaningful alternatives. This evaluates the workflow, not commercial potential.
 
 ## Phase 16 — Final integration and acceptance
 
