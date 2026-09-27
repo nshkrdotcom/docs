@@ -294,3 +294,47 @@ Future implementation agents must not silently reverse approved decisions. Recor
 5. **Analytical identity:** closed playbook requests and logical result/lens IDs with content digests replace superseded analytical request/report/profile generations. Existing canonical interchange and writing-proposal contracts are preserved, not gratuitously renumbered.
 6. **Transport evidence limitation:** these attachments do not contain authenticated seals. Decoded-body preimage checks remain strict; actual checkout identity is explicitly unverified. This does not waive document 35's sealing requirement for future inputs. Unseen excluded files require actual checkout inspection; no guessed deletions are authorized.
 7. **Empty directories:** the supplied full-file applier leaves directories. A separate, tested post-apply helper removes only empty ancestors of declared deletions; it cannot remove unknown content.
+
+## Phase 2 source decisions - 2026-09-26
+
+### D039 - One semantic serializer, separate evidence envelope
+
+`Request.semantic_input/1` is both the provider payload and hash input. Typed Fact
+evidence IDs remain in storage/Observation provenance, not semantic content.
+`Projection.at/4` still exposes inspectable provenance; `Projection.request/5`
+minimizes model input. The Intelligence shell uses the same context semantics.
+Cost/risk: callers relying on provenance accidentally changing measurement
+identity now get reuse; current evidence binding must pass the explicit tests.
+
+### D040 - Shapes are data, calibration is a separate claim
+
+Output contracts use a closed declarative shape grammar and content digest, not
+module hashes or old/new schema readers. Calibrated views retain raw distributions.
+An empirical asset declaration is labeled as author-declared, not independently
+verified human evidence; model/corpus identifiers do not establish a study.
+
+### D041 - Request caps and uncertainty are explicit
+
+A finite provider-request cap disables automatic retries. Explicit `retry: true`
+with that cap is rejected rather than silently exceeding it. Shared budgets count
+scheduled states, including timed-out work; unknown remote spend stays unknown.
+Partial completion survives a later timeout, but runtime QC must verify real SDK
+worker cleanup and cancellation. This is not a claim that remote work is undone.
+
+### D042 - Exact current preimages from supplied post-QC evidence
+
+The current XMLs lack seals. For every modification, match decoded bytes (or those
+bytes with exactly one restored terminal LF) against the supplied Phase 1 post-QC
+hash. Use only the matching original hash in the strict manifest. This authenticates
+those files against the supplied record, not an entire checkout or absent source.
+No LF bypass is requested. Missing cleanup/SDK test files remain explicit input
+omissions for real-checkout inspection, not guessed replacements.
+
+### D043 - Narrow source delivery, not future product completion
+
+Use a scene-question packet with exact input passages, model-estimate labeling,
+synthetic-fixture disclosure and an honest unavailable case. It creates no edits,
+diagnosis engine, L2 database or new package. Direct Sandbox fixtures and Memory
+cache remain valid existing APIs; the file loader and ETS cache are additional
+supported inputs/storage, not a compatibility generation. Full later workflow
+and domain validation remain in their existing phases.

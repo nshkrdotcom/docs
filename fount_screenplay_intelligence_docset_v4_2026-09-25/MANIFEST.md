@@ -94,7 +94,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phase 1 is still next.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phase 2 is now offline implemented and awaiting QC; use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -113,4 +113,16 @@ Documents 32–36 add screenplay-first research, writer workflows, actual SDK co
 - `handoffs/PHASE_01_STATIC_CHECKS.json`
 - `handoffs/PHASE_01_FILE_INVENTORY.json`
 
-Phase 1 is offline implemented and awaits runtime verification/repair. These records do not advance the next phase.
+These are historical Phase 1 records. Its runtime-QC report records COMPLETE with the explicit Luna-output debt. Phase 2 source delivery records follow.
+
+## Phase 2 delivery records
+
+- `handoffs/PHASE_02_INPUTS.json`: four content-identified input hashes, file-level preimage evidence and omissions.
+- `handoffs/PHASE_02_FILE_INVENTORY.json`: complete added/modified inventory, hashes and new test names.
+- `handoffs/PHASE_02_IMPLEMENTATION_MATRIX.md`: entire phase scope mapped to source/tests/demo.
+- `handoffs/PHASE_02_PRESERVATION_AUDIT.md`: unchanged functionality/source and required runtime reruns.
+- `handoffs/PHASE_02_STATIC_CHECKS.json`: actual offline results, failures and unrun gates.
+- `handoffs/PHASE_02_OFFLINE_HANDOFF.md`: source delivery account.
+- `handoffs/PHASE_02_RUNTIME_QC_HANDOFF.md`: Codex verifies the user-applied state, repairs Phase 2, then stops.
+
+No Phase 2 runtime-QC report is fabricated. Add it only after the actual runtime pass.

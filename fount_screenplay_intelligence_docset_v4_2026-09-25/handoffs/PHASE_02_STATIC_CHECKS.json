@@ -1,0 +1,234 @@
+{
+  "phase": 2,
+  "date": "2026-09-26",
+  "runtime_status": "NOT_RUN",
+  "summary": "22 Python source/asset/transport-sealer checks pass. Full discovery has one import error for a helper omitted by the supplied XML. Strict overlay transport and preservation checks pass. This is not Elixir/runtime validation.",
+  "checks": [
+    {
+      "check": "phase_one_python",
+      "status": "PASS",
+      "detail": {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-p",
+          "test_phase_one_source.py",
+          "-v"
+        ],
+        "cwd": "Fount repository root",
+        "exit_code": 0,
+        "output_tail": "test_architecture_gate_exists (test_phase_one_source.PhaseSource.test_architecture_gate_exists) ... ok\ntest_exact_package_set (test_phase_one_source.PhaseSource.test_exact_package_set) ... ok\ntest_lens_assets_have_content_identity_not_versions (test_phase_one_source.PhaseSource.test_lens_assets_have_content_identity_not_versions) ... ok\ntest_no_superseded_runtime_references (test_phase_one_source.PhaseSource.test_no_superseded_runtime_references) ... ok\ntest_observe_contracts_exist (test_phase_one_source.PhaseSource.test_observe_contracts_exist) ... ok\ntest_provider_and_generation_boundaries (test_phase_one_source.PhaseSource.test_provider_and_generation_boundaries) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.008s\n\nOK\n"
+      }
+    },
+    {
+      "check": "seal_python",
+      "status": "PASS",
+      "detail": {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-p",
+          "test_seal_handoff_snapshot.py",
+          "-v"
+        ],
+        "cwd": "Fount repository root",
+        "exit_code": 0,
+        "output_tail": "test_changed_source_is_rejected (test_seal_handoff_snapshot.SnapshotTests.test_changed_source_is_rejected) ... ok\ntest_duplicate_paths_are_rejected (test_seal_handoff_snapshot.SnapshotTests.test_duplicate_paths_are_rejected) ... ok\ntest_empty_file_is_preserved (test_seal_handoff_snapshot.SnapshotTests.test_empty_file_is_preserved) ... ok\ntest_restores_exact_bytes_and_records_identity (test_seal_handoff_snapshot.SnapshotTests.test_restores_exact_bytes_and_records_identity) ... ok\ntest_reviewed_exclusion_is_explicit_and_preserves_bytes (test_seal_handoff_snapshot.SnapshotTests.test_reviewed_exclusion_is_explicit_and_preserves_bytes) ... ok\ntest_reviewed_file_cannot_duplicate_existing_source (test_seal_handoff_snapshot.SnapshotTests.test_reviewed_file_cannot_duplicate_existing_source) ... ok\ntest_symlink_is_rejected (test_seal_handoff_snapshot.SnapshotTests.test_symlink_is_rejected) ... ok\ntest_traversal_is_rejected (test_seal_handoff_snapshot.SnapshotTests.test_traversal_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.003s\n\nOK\n"
+      }
+    },
+    {
+      "check": "phase_two_python",
+      "status": "PASS",
+      "detail": {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-p",
+          "test_phase_two_source.py",
+          "-v"
+        ],
+        "cwd": "Fount repository root",
+        "exit_code": 0,
+        "output_tail": "test_all_observe_assets_are_json_objects (test_phase_two_source.PhaseTwoSourceTests.test_all_observe_assets_are_json_objects) ... ok\ntest_docs_state_runtime_is_unrun (test_phase_two_source.PhaseTwoSourceTests.test_docs_state_runtime_is_unrun) ... ok\ntest_fixture_output_contract_identity (test_phase_two_source.PhaseTwoSourceTests.test_fixture_output_contract_identity) ... ok\ntest_fixture_question_identity (test_phase_two_source.PhaseTwoSourceTests.test_fixture_question_identity) ... ok\ntest_fixture_semantic_input_identity (test_phase_two_source.PhaseTwoSourceTests.test_fixture_semantic_input_identity) ... ok\ntest_identity_calibration_makes_no_empirical_claim (test_phase_two_source.PhaseTwoSourceTests.test_identity_calibration_makes_no_empirical_claim) ... ok\ntest_required_implementation_files_are_present (test_phase_two_source.PhaseTwoSourceTests.test_required_implementation_files_are_present) ... ok\ntest_runtime_regression_sources_and_demos_are_included (test_phase_two_source.PhaseTwoSourceTests.test_runtime_regression_sources_and_demos_are_included) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.001s\n\nOK\n"
+      }
+    },
+    {
+      "check": "full_python",
+      "status": "BLOCKED_BY_INPUT_OMISSION",
+      "detail": {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/tests",
+          "-v"
+        ],
+        "cwd": "Fount repository root",
+        "exit_code": 1,
+        "output_tail": "alibration_makes_no_empirical_claim) ... ok\ntest_required_implementation_files_are_present (test_phase_two_source.PhaseTwoSourceTests.test_required_implementation_files_are_present) ... ok\ntest_runtime_regression_sources_and_demos_are_included (test_phase_two_source.PhaseTwoSourceTests.test_runtime_regression_sources_and_demos_are_included) ... ok\ntest_prune_deleted_directories (unittest.loader._FailedTest.test_prune_deleted_directories) ... ERROR\ntest_changed_source_is_rejected (test_seal_handoff_snapshot.SnapshotTests.test_changed_source_is_rejected) ... ok\ntest_duplicate_paths_are_rejected (test_seal_handoff_snapshot.SnapshotTests.test_duplicate_paths_are_rejected) ... ok\ntest_empty_file_is_preserved (test_seal_handoff_snapshot.SnapshotTests.test_empty_file_is_preserved) ... ok\ntest_restores_exact_bytes_and_records_identity (test_seal_handoff_snapshot.SnapshotTests.test_restores_exact_bytes_and_records_identity) ... ok\ntest_reviewed_exclusion_is_explicit_and_preserves_bytes (test_seal_handoff_snapshot.SnapshotTests.test_reviewed_exclusion_is_explicit_and_preserves_bytes) ... ok\ntest_reviewed_file_cannot_duplicate_existing_source (test_seal_handoff_snapshot.SnapshotTests.test_reviewed_file_cannot_duplicate_existing_source) ... ok\ntest_symlink_is_rejected (test_seal_handoff_snapshot.SnapshotTests.test_symlink_is_rejected) ... ok\ntest_traversal_is_rejected (test_seal_handoff_snapshot.SnapshotTests.test_traversal_is_rejected) ... ok\n\n======================================================================\nERROR: test_prune_deleted_directories (unittest.loader._FailedTest.test_prune_deleted_directories)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_prune_deleted_directories\nTraceback (most recent call last):\n  File \"/usr/lib/python3.13/unittest/loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/usr/lib/python3.13/unittest/loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/mnt/data/fount_phase_02_work/fount/scripts/tests/test_prune_deleted_directories.py\", line 12, in <module>\n    import prune_deleted_directories as cleanup\nModuleNotFoundError: No module named 'prune_deleted_directories'\n\n\n----------------------------------------------------------------------\nRan 23 tests in 0.012s\n\nFAILED (errors=1)\n"
+      }
+    },
+    {
+      "check": "shell_syntax",
+      "status": "PASS",
+      "detail": {
+        "command": [
+          "bash",
+          "-n",
+          "scripts/verify_handoff.sh"
+        ],
+        "cwd": "Fount repository root",
+        "exit_code": 0,
+        "output_tail": ""
+      }
+    },
+    {
+      "check": "runtime_availability",
+      "status": "UNAVAILABLE",
+      "detail": {
+        "elixir": null,
+        "mix": null,
+        "erl": null,
+        "python3": "/opt/pyvenv/bin/python3"
+      }
+    },
+    {
+      "check": "exact_source_preservation",
+      "status": "PASS",
+      "detail": {
+        "baseline_files": 408,
+        "unchanged_files": 383,
+        "added": 21,
+        "modified": 25,
+        "deleted": 0,
+        "all_modified_preimages_authenticated": true,
+        "unchanged": "All pre-existing tests, canonical package, Workshop package, locks, migrations, root project, installed lenses",
+        "identity_scope": "Reconstructed supplied baseline and matching post-QC file hashes, not a live Git checkout"
+      }
+    },
+    {
+      "check": "json_parsing",
+      "status": "PASS",
+      "detail": {
+        "files_parsed": 43,
+        "scope": "Fount and current docset represented JSON files"
+      }
+    },
+    {
+      "check": "supplied_archive_validator",
+      "status": "PASS",
+      "detail": {
+        "result": "PASS",
+        "operations": 46,
+        "payloads": 46,
+        "directory_entries": 0,
+        "unlisted_payloads": 0
+      }
+    },
+    {
+      "check": "strict_dry_run",
+      "status": "PASS",
+      "detail": {
+        "result": "PASS",
+        "writes_planned": 46,
+        "original_tree_unchanged": true,
+        "allow_terminal_newline": false
+      }
+    },
+    {
+      "check": "strict_apply_and_preservation",
+      "status": "PASS",
+      "detail": {
+        "result": "PASS",
+        "changed_files": 46,
+        "all_result_hashes_and_modes_verified": true,
+        "unrelated_file_preserved": true,
+        "archive_manifest_not_installed": true
+      }
+    },
+    {
+      "check": "repeat_application_is_noop",
+      "status": "PASS",
+      "detail": {
+        "result": "PASS",
+        "unchanged_operations": 46
+      }
+    },
+    {
+      "check": "local_preimage_drift_rejected",
+      "status": "PASS",
+      "detail": {
+        "result": "PASS",
+        "path": "packages/fount_intelligence/lib/fount/intelligence/acquisition/measurements.ex",
+        "local_edit_preserved": true
+      }
+    },
+    {
+      "check": "new_file_collision_rejected",
+      "status": "PASS",
+      "detail": {
+        "result": "PASS",
+        "path": "handoff/PHASE_02_SOURCE_NOTES.md"
+      }
+    },
+    {
+      "check": "malformed_archives_rejected",
+      "status": "PASS",
+      "detail": {
+        "result": "PASS",
+        "cases": [
+          "changed_payload_hash",
+          "unlisted_payload",
+          "unsafe_path",
+          "missing_payload"
+        ]
+      }
+    },
+    {
+      "check": "phase_stop_and_original_docset_retention",
+      "status": "PASS",
+      "detail": {
+        "result": "PASS",
+        "original_docset_files_retained": 71,
+        "phase_1": "COMPLETE, historical QC report unchanged",
+        "phase_2": "OFFLINE_IMPLEMENTED",
+        "phases_3_to_16": "NOT_STARTED"
+      }
+    }
+  ],
+  "source_test_declarations": 32,
+  "unrun": [
+    "Elixir parsing/formatting",
+    "Mix dependency resolution",
+    "warnings-as-errors compilation",
+    "all ExUnit tests",
+    "compiled architecture gate",
+    "Credo",
+    "Dialyzer",
+    "ExDoc",
+    "Hex package builds",
+    "all writer/examples",
+    "PostgreSQL",
+    "PDF/speech",
+    "live SystemOne/TypeSafe or generic endpoint calls",
+    "live Inference",
+    "human/domain review"
+  ],
+  "additional_environment_note": "Optional tree-sitter parser installation failed on DNS/network access; Pygments is not a parser and no syntax-validation claim is made.",
+  "review": "Self-review only; no independent reviewer/subagent execution",
+  "artifact_integrity": "Docset SHA256SUMS.txt and ZIP roundtrip verified by package_and_check.py; delivery_checks.json records final file counts and archive identities outside the docset to avoid self-hash recursion."
+}

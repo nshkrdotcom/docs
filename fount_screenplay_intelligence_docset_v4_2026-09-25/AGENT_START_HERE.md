@@ -15,11 +15,11 @@ You must have:
 
 Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is already offline-implemented or awaiting QC/domain review, repair or finish that handoff rather than starting the next phase or rewriting it from scratch.
 
-At initial delivery that is:
+The current checkpoint is:
 
-> **Phase 1 — Direct Architecture Supersession and `fount_probe` Removal**
+> **Phase 2 - Observe Measurement Substrate Hardening: OFFLINE_IMPLEMENTED**
 
-Phase 1 is intentionally not split into a compatibility/scaffold subphase.
+Read `handoffs/PHASE_02_RUNTIME_QC_HANDOFF.md`. Verify and repair this source delivery rather than restarting it or beginning Phase 3. Phase 1 is COMPLETE under its recorded live-output waiver.
 
 ## Read before coding
 
@@ -94,6 +94,6 @@ Before implementing any phase after Phase 2, read:
 
 Do not fabricate human validation. When a phase requires a human/domain pilot, produce the evaluation artifacts and handoff instructions, then leave the domain gate pending until actual review occurs.
 
-### Current Phase 1 checkpoint
+### Current Phase 2 checkpoint
 
-Phase 1 is now `OFFLINE_IMPLEMENTED`; read its offline handoff and the runtime QC prompt. Do not restart the split or begin the next phase. The input identity/unknown-excluded-file limitations are explicit QC prerequisites, not permission to force overlay application.
+Phase 2 is `OFFLINE_IMPLEMENTED`. Read its implementation matrix, source identities, static checks and runtime-QC prompt. The user applies and commits; Codex checks that applied state. Current inputs were unsealed, but all modified preimages match the supplied Phase 1 post-QC hashes. No hash mismatch bypass, guessed excluded source, inherited runtime pass, or Phase 3 implementation is permitted.

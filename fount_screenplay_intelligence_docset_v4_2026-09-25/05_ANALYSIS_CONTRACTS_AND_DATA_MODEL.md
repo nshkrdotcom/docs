@@ -581,3 +581,14 @@ All durable/exportable analytical values must:
 No contract in this document exists to decode superseded Probe shapes or old analytical schemas.
 
 When a current analytical output contract changes, stale development-derived data/fixtures are recomputed or regenerated. Do not add old-contract readers, conversion layers, or numeric compatibility versions.
+
+## Phase 2 source implementation checkpoint
+
+`Fount.Observe.OutputContract` now represents an active contract as `id`, `shape`
+and `sha256`. The shape is the serialized normalized answer, including ordered
+choice/rubric data. It uses a closed local schema grammar, not remote JSON Schema
+resolution. `MeasurementResult` retains `normalized_raw` and an optional separate
+`calibration` view; current Observation evidence is constructed afresh on reuse.
+`Recording` provides human/rule values and active-contract imports without inventing
+probability. See `handoffs/PHASE_02_IMPLEMENTATION_MATRIX.md` for exact paths/tests.
+These are written source contracts, not a passed runtime or domain gate.

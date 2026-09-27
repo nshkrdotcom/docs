@@ -1,0 +1,59 @@
+{
+  "phase": 2,
+  "date": "2026-09-26",
+  "attachments": [
+    {
+      "role": "fount",
+      "input": "fount(5).xml",
+      "sha256": "6a31e350383a7de7d7303c6737d0cd72423e3f59eece99767810c5865f739605",
+      "bytes": 1787377,
+      "file_count": 408
+    },
+    {
+      "role": "inference",
+      "input": "inference(3).xml",
+      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
+      "bytes": 299421,
+      "file_count": 69
+    },
+    {
+      "role": "docset",
+      "input": "docset.raw(1).xml",
+      "sha256": "8a57526fbdedfa04c88c2b407229feda56bd61d35c7cf1acf33295b2536812ff",
+      "bytes": 854766,
+      "file_count": 71
+    },
+    {
+      "role": "system_one_sdk",
+      "input": "system_one_sdk(7).xml",
+      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+      "bytes": 875342,
+      "file_count": 253
+    }
+  ],
+  "identified_by_contents": {
+    "fount": "packages/fount/lib/fount.ex plus fount_observe, fount_intelligence and fount_workshop packages",
+    "docset": "AGENT_START_HERE.md, PROGRESS.md, numbered implementation specifications and Phase 1 QC evidence",
+    "system_one_sdk": "packages/system_one_sdk/lib/system_one_sdk.ex; question, provider, batch and Test APIs; version 0.6.0",
+    "inference": "apps/inference/lib/inference.ex and Client/Request/Response/adapter contracts; version 0.5.0"
+  },
+  "sealed_snapshot_index_present": false,
+  "historical_declared_post_qc_commits": {
+    "fount": "b82b6560da3fed3955e51a52f3a1d613d5141513",
+    "system_one_sdk": "e757598a89e549274b979f0e77c6a4b2b6667752",
+    "inference": "3750a03ec62a3c9da11be9caa4dc911ebbbb9801"
+  },
+  "commit_identity_caveat": "These commits are recorded by the supplied Phase 1 QC report, not authenticated seals on the current four XML attachments.",
+  "modified_preimage_authentication": {
+    "count": 25,
+    "basis": "Matching runtime_qc.post_qc_overlay_results or runtime_qc.followup_changes hashes in supplied handoffs/PHASE_01_FILE_INVENTORY.json",
+    "reconstruction": "Use decoded bytes exactly, or restore terminal LF only when the supplied post-QC hash matches the reconstructed bytes. Never normalize any other difference.",
+    "allow_terminal_newline_bypass": false
+  },
+  "omissions": [
+    "handoff/prune_deleted_directories.py absent from Fount XML, while its original Python test is present; preserve/check actual checkout file, do not invent it.",
+    "Fount SVGs and generated/build/provider material excluded by snapshot policy.",
+    "SystemOneSDK snapshot has 253 files, versus 254 in the historical sealed report; client_configuration_test.exs is absent. Re-review the known dummy-credential exclusion on the actual SDK checkout before sealing.",
+    "No live checkout, repository history, runtime dependencies, database or provider credentials are available here."
+  ]
+}

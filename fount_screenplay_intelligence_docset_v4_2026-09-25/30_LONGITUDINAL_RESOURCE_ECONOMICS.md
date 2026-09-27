@@ -170,3 +170,13 @@ Cost/compute estimation accuracy itself should be measured over time:
 ## 12. Non-goal
 
 Do not use one competitor's per-script coverage price as proof that Fount is economical. Fount's iterative usage pattern is materially different.
+
+## Phase 2 substrate checkpoint
+
+Observe preflight reports exact semantic-input/specification byte sizes and target,
+question and active-cap metadata without spending a budget or calling a provider.
+`Batch.resource_usage` distinguishes actual scheduled/completed/reused work and
+reported usage. Unavailable wire/cost/retry totals are unknown, not guessed values.
+A finite initial-provider-request cap forces retries off. Durable longitudinal
+history and marginal-rewrite economics remain later Intelligence-shell work.
+The source and tests are written; real runtime/live accounting is not yet verified.

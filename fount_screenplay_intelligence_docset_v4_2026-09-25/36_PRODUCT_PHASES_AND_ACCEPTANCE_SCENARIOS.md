@@ -194,3 +194,16 @@ Pass: all outcomes appear in the evaluation record. No aggregated screenplay sco
 ## Traceability record for each demonstration
 
 Record requirement/case ID, fixture or consented source identity, invoked public operation/command, candidate or output path, assertions, actual execution status, source revision, and human-review status where relevant. Source-writing agents may fill proposed commands and tests but must not mark them executed.
+
+## Phase 2 demonstration delivery record
+
+Written: `packages/fount_observe/examples/phase_two.exs`,
+`examples/fixture_file.exs`, `examples/live.exs`, and
+`test/phase_two_scene_question_test.exs` relative to Observe. The deterministic
+example asks about a synthetic scene, shows supplied evidence, distinguishes
+fixture answers from real inference, excludes private notes and checks unchanged
+Fountain. It also shows an unavailable-provider result with no false finding.
+
+Execution status: NOT_RUN in the source-writing environment. Codex must run and
+inspect the actual artifacts before this demonstration satisfies the phase exit.
+No human usefulness or screenplay-quality claim is made.

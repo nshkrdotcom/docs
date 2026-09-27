@@ -303,6 +303,13 @@ Observe's public surface is stable enough that later Intelligence phases depend 
 
 ---
 
+## Phase 2 delivery checkpoint
+
+Phase 2 is OFFLINE_IMPLEMENTED. The complete scope mapping, tests, demonstration,
+source identities and required runtime repair are in the `PHASE_02_*` handoffs.
+Do not restart Phase 1 or begin Phase 3. New source is not a runtime pass; the
+historical Phase 1 waiver does not waive this phase's measurement acceptance.
+
 # Phase 3 — Story-World Pure Core
 
 ## Goal

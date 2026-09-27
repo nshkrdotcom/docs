@@ -15,7 +15,7 @@ ChatGPT.com writes the current phase without claiming unrun Elixir checks and re
 
 Read `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md`, `33_WRITER_WORKFLOWS_AND_CREATIVE_CONTRACT.md`, and `34_HUMAN_JEV_AND_LLM_COLLABORATION.md` before treating the architecture below as a product brief. The new research complements the earlier reader/notes work with discovery, cinematic action and sound, voice, rehearsal, and useful alternatives.
 
-`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. The initial next phase remains Phase 1; this revision does not claim any future phase is implemented.
+`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phase 1 is COMPLETE and Phase 2 is OFFLINE_IMPLEMENTED; runtime QC and repair of Phase 2 are next. Later phases are not implemented by this delivery.
 
 Success means a writer can arrive with an image, a scene, or a difficult note; explore real choices; preserve what matters; see consequences; and choose what becomes the draft. No compulsory outline, universal conflict theory, or simulated audience verdict. Human-only writing remains useful without provider credentials.
 
@@ -258,3 +258,16 @@ latest QC'd source snapshots + latest docset
 ## Current status
 
 Read `PROGRESS.md`. Initial next phase remains Phase 1.
+
+## Current delivery: Phase 2
+
+The current source delivery hardens measurement identity, evidence binding,
+context/output contracts, calibration, caching, partial failures, privacy and
+resource accounting. Its small writer-facing example asks one scene question
+without changing the screenplay. Read `PROGRESS.md` and the complete matrix in
+`handoffs/PHASE_02_IMPLEMENTATION_MATRIX.md`.
+
+Deliverables are `fount_phase_02_overlay.zip`, `fount_phase_02_docset.zip` and
+`PHASE_02_RUNTIME_QC_HANDOFF.md`. The source-writing environment has no Elixir
+runtime. Python checks and archive validation are not runtime or human evidence.
+The user applies/commits; Codex verifies and repairs Phase 2 only.

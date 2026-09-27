@@ -213,3 +213,12 @@ This docset remains headless, but the API/CLI/reference tooling must make it pos
 - estimate resource use;
 - install/enable/disable a project/studio asset;
 - inspect its content hash and trust/source metadata.
+
+## Phase 2 implementation boundary
+
+`Lens.validate/1`, closed output/context declarations and registered projection
+identities supply the Phase 2 static hooks. `resource_policy_request` can lower
+host caps but cannot choose credentials, endpoints, modules, callbacks or remote
+schemas. Installed native adapters remain a closed code registry. Full pack
+installation/composition/catalog behavior belongs to its later phase and is not
+claimed here. Runtime validation of these written hooks remains pending QC.

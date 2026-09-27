@@ -396,3 +396,16 @@ Safe project/studio lens authoring is permitted only through the constrained mod
 A declarative lens can supply measurement rubric/configuration only inside registered generic measurement machinery, projection/context capabilities, and output contracts. It cannot define code, tools, provider endpoints, credentials, arbitrary loops, or resource policy above host caps.
 
 Lens text is treated as potentially untrusted input; least privilege, typed output contracts, minimal context, and lack of tool authority are the primary defenses.
+
+## Phase 2 concrete public surface (runtime QC pending)
+
+The existing `Fount.Observe.evaluate/4` and provider facade remain. Added public
+operations are `Fount.Observe.preflight/3`, `Projection.request/5`,
+`SceneQuestion.ask/5`, `Context.from_map/2`, `OutputContract.literal/2`,
+`Recording.record/3`, `Recording.export/1`, `Recording.import_record/3`,
+`Sandbox.fixture/3`, `Sandbox.load/2`, and `Cache.ETS.start_link/1`.
+
+The actual signatures and examples are in Observe's `guides/measurement-substrate.md`.
+No Inference calls moved into Observe. SystemOneSDK types still terminate in the
+installed adapter; no external API was inferred from these conceptual examples.
+The complete Phase 2 source/test matrix and unrun runtime gates are in `handoffs/`.

@@ -221,15 +221,15 @@ Every phase also performs its demonstration from document 36. Research R01–R10
 
 ## Phase 1 concrete source traceability - COMPLETE
 
-The source mappings below have now been checked with 198 workspace unit tests, 25 database-backed integration tests, the source/BEAM architecture gate, and the deterministic accept/reject demonstration. See `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` for exact results and the still-blocked live/release gates. The 37-module/26-test source classification remains in the preservation audit. Later-phase rows above retain their original scope and status.
+The source mappings below have now been checked with 198 workspace unit tests, 25 database-backed integration tests, the source/BEAM architecture gate, and the deterministic accept/reject demonstration. See `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` for exact historical results and the explicitly retained Luna-output debt. The 37-module/26-test source classification remains in the preservation audit. Later-phase rows above retain their original scope and status.
 
 | Requirement / preserved usefulness | Source | Tests or demonstration | Status |
 |---|---|---|---|
-| Final package graph / direct removal | root `mix.exs`; both new Mix projects; strict overlay manifest | `scripts/tests/test_phase_one_source.py`; Intelligence `architecture_test.exs`; `mix fount.architecture` | Python source checks run; Elixir gate unrun |
+| Final package graph / direct removal | root `mix.exs`; both new Mix projects; strict overlay manifest | `scripts/tests/test_phase_one_source.py`; Intelligence `architecture_test.exs`; `mix fount.architecture` | Phase 1 source and compiled gates passed per its QC report; rerun for Phase 2 |
 | Neutral atomic questions and evidence | Observe `question.ex`, `request.ex`, `distribution.ex`, `evidence_ref.ex`, `context.ex` | `measurement_contract_test.exs` | Runtime tests passed; see Phase 1 QC report |
 | Real SDK boundary and normalization | Observe `providers/system_one.ex` | `system_one_boundary_test.exs` | Runtime tests passed; see Phase 1 QC report |
 | Association / partial failures / caps / timeout | Observe `executor.ex`, `association.ex`, `provider_call.ex`, `budget.ex` | `executor_sandbox_test.exs`; `system_one_boundary_test.exs` | Runtime tests passed; see Phase 1 QC report |
-| Minimum L1 cache / current provenance | Observe `measurement_result.ex`, `observation.ex`, `cache/memory.ex` | `cache_integrity_test.exs`; cross-revision Sandbox test | Runtime tests passed; Phase 2 hardening still unstarted |
+| Minimum L1 cache / current provenance | Observe `measurement_result.ex`, `observation.ex`, `cache/memory.ex` | `cache_integrity_test.exs`; cross-revision Sandbox test | Runtime tests passed; Phase 1 evidence only; Phase 2 hardening now WRITTEN_UNEXECUTED |
 | Closed analytical requests / no executable data | Intelligence `playbooks/registry.ex`, `playbooks/request.ex` | `request_contract_test.exs`; migrated catalog tests in Workshop | Runtime tests passed; see Phase 1 QC report |
 | Pure interpretation and core-shell boundary | Intelligence `capabilities/*`, `reader/reveal.ex`, `story_world/records.ex`, `runner/architecture.ex` | `reader_replay_test.exs`; `architecture_test.exs` | Runtime tests passed; see Phase 1 QC report |
 | Exact selection / evidence / search | core `selection.ex`, `source_evidence.ex`, `inventory.ex`, `search.ex` | moved inventory/search/source-evidence tests; original canonical tests | Runtime tests passed; see Phase 1 QC report |
@@ -239,3 +239,21 @@ The source mappings below have now been checked with 198 workspace unit tests, 2
 | Strict file transport and safe directory completion | unchanged applier; new `handoff/prune_deleted_directories.py` | Python transport checks and four cleanup tests | See actual static/transport report |
 
 The reusable MeasurementResult/Observation/context baseline is required to implement Phase 1's Observe minimum. Its presence does not mark Phase 2, Phase 10 or any expanded writer phase complete.
+
+## Phase 2 concrete source traceability - OFFLINE_IMPLEMENTED
+
+The complete requirement/source/test mapping is
+`handoffs/PHASE_02_IMPLEMENTATION_MATRIX.md`. It covers every scope/test row in
+Phase 2 of document 16 and the scene-question demonstration in document 36.
+There are 32 new ExUnit test declarations in five new test files, plus
+eight Python source/asset checks. Runtime tests/examples are WRITTEN_UNEXECUTED;
+only the actual checks in `PHASE_02_STATIC_CHECKS.json` are offline-verified.
+
+H01: four raw input hashes and content classification recorded; modified preimages
+match supplied post-QC hashes, but the missing input seals remain explicit.
+H02: strict changed-file overlay and complete docset; user applies/commits and
+Codex verifies without reapplication. H03: inspected public SDK facade retained;
+new partial relay and metadata use the supplied 0.6.0 source fields.
+W01/W11: the narrow inspection/resource/partial-result substrate is written; the
+full later session workflow is not claimed complete. No other later-phase row is
+advanced. Prior Phase 1 runtime evidence does not transfer to changed source.
