@@ -65,6 +65,7 @@
 - `examples/playbook.example.json`
 - `examples/writer_result_packet.example.json`
 - `examples/genre_pack.example.json`
+- `examples/declarative_lens.example.json`
 - `examples/corpus_manifest.example.json`
 - `examples/resource_preflight.example.json`
 
@@ -83,7 +84,7 @@
 - `handoffs/` — phase-specific offline and QC handoffs are added during implementation.
 - `handoffs/PREPARATION_2026-09-26.md` — source baselines and actual preparation checks; not a completed implementation phase.
 - `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` — applied source identity, engineering repairs and gates, and user-authorized Level-A validation debt.
-- `handoffs/PHASE_07_OFFLINE_HANDOFF.md` / `PHASE_07_RUNTIME_QC_HANDOFF.md` — current source delivery and Codex repair/QC instructions.
+- `handoffs/PHASE_08_OFFLINE_HANDOFF.md` / `PHASE_08_RUNTIME_QC_HANDOFF.md` — current source delivery and Codex repair/QC instructions.
 
 ## Five XML phase inputs
 
@@ -97,7 +98,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–7 are COMPLETE on engineering QC; Phase 8 remains NOT_STARTED. Phase 6 and Phase 7 runtime QC are recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_07_RUNTIME_QC_REPORT.md`. Phase 3/4/5/6/7 human studies are unperformed validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–7 are COMPLETE on engineering QC; Phase 8 is OFFLINE_IMPLEMENTED pending runtime QC; Phase 9 remains NOT_STARTED. Phase 6 and Phase 7 runtime QC are recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_07_RUNTIME_QC_REPORT.md`. Phase 3/4/5/6/7 human studies are unperformed validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -195,3 +196,15 @@ Phase-3 runtime QC is recorded in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. No h
 - `handoffs/PHASE_07_DOCSET_HASHES.json`: complete updated-docset identities, excluding itself and `SHA256SUMS.txt` to avoid a mutual checksum cycle.
 - `handoffs/PHASE_07_RUNTIME_QC_REPORT.md`: verified applied/repaired commits, engineering and preservation gates, defects, repairs and validation debt.
 
+## Phase 8 delivery records
+
+- `handoffs/PHASE_08_INPUTS.json`: five content-identified XML identities and inspected API boundaries.
+- `handoffs/PHASE_08_FILE_INVENTORY.json`: exact 37-operation overlay inventory with preimage/result hashes and sizes.
+- `handoffs/PHASE_08_IMPLEMENTATION_MATRIX.md`: every Phase-8 capability/extensibility/revision requirement mapped to source/tests/writer value.
+- `handoffs/PHASE_08_PRESERVATION_AUDIT.md`: protected Core/Workshop/prior-family behavior and runtime regression obligations.
+- `handoffs/PHASE_08_DOMAIN_REVIEW_PACKET.md`: optional D046 human/domain study; no fabricated result.
+- `handoffs/PHASE_08_STATIC_CHECKS.json`: executed offline evidence and explicit unrun runtime gates.
+- `handoffs/PHASE_08_OFFLINE_HANDOFF.md`: source delivery, limitations and Phase-9 stop line.
+- `handoffs/PHASE_08_RUNTIME_QC_HANDOFF.md`: Codex instructions for user-applied Phase-8 state.
+- `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`: intentionally `NOT_RUN` until Codex executes runtime QC.
+- `handoffs/PHASE_08_DOCSET_HASHES.json`: complete Phase-8 docset identities, excluding recursive checksum files.

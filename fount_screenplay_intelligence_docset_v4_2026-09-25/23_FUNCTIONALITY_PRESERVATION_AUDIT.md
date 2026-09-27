@@ -628,3 +628,11 @@ At final acceptance, the repository must be able to demonstrate:
 ## Phase 1 source audit record
 
 The concrete file-by-file disposition is in `handoffs/PHASE_01_PRESERVATION_AUDIT.md`. All supplied module/test paths have reviewed ownership and existing destination files. Behavioral equivalence remains unverified until Codex runs the preserved and new tests; there is no unreviewed source item being silently dropped. Excluded files are explicitly outside the snapshot inventory, not assumed deleted.
+
+## Phase 8 preservation checkpoint — 2026-09-27
+
+The Phase-8 overlay modifies only Observe/Intelligence/docs/tests and adds no deletion. `packages/fount/**` canonical screenplay behavior and `packages/fount_workshop/**` creative/canon workflows are unchanged. Existing StoryWorld/Temporal/Reader/Diagnosis and Phase-6/7 family modules are reused.
+
+The ten writer-playbook IDs remain intact, and `character_trajectory` keeps its prior default family routing; Emotional/Value is opt-in rather than a silent provider/cost expansion. Genre analysis requires an explicit pack. Revision regression requires explicit before/after models rather than overloading ordinary one-model playbook execution. No direct SystemOneSDK/Inference/ASM integration is added.
+
+Offline transport/source checks support preservation but do not prove runtime behavior. Codex must rerun the full Core/Observe/Intelligence/Workshop regression ladder described in `handoffs/PHASE_08_PRESERVATION_AUDIT.md` before marking Phase 8 COMPLETE.

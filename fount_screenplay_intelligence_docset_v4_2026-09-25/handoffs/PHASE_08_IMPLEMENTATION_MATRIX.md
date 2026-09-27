@@ -1,0 +1,29 @@
+# Phase 8 implementation matrix — Capabilities C
+
+**Status:** `OFFLINE_IMPLEMENTED`. Runtime checks are pending. Phase 9 is not implemented.
+
+| Product requirement | Implementation | Deterministic source/test coverage | Screenplay-writing usefulness |
+|---|---|---|---|
+| Emotional / Value Movement | `emotional.value_movement`; `Capabilities.EmotionalValueMovement`; multidimensional condition/value trajectory | `phase_eight_capabilities_test.exs`, `phase_eight_runner_test.exs` | Shows practical gain/loss and changes in hope, fear, security, belonging, trust, status, control, certainty and moral confidence without asserting a universal emotion score. |
+| event/reaction and reversal | measurement trajectory + StoryWorld state/causal evidence | capability tests + fixture | Helps a writer see whether major events materially alter behavior/conditions or whether a promised reversal has no visible consequence. |
+| Theme and Meaning | `theme.meaning`; `Capabilities.ThemeMeaning` | capability/runner tests | Builds competing thematic hypotheses from recurring value conflicts, choices, consequences, motifs and ending recontextualization while retaining counterevidence. |
+| no authoritative theme/depth score | hypotheses keep support/counterevidence/intent comparison distinct | source-contract and capability tests | Lets the writer inspect meaning rather than receive an automatic verdict about what the script “really means.” |
+| six optional initial genre packs | `Fount.Intelligence.Packs` ships mystery/thriller/horror/romance/comedy/action as disabled data-only assets | `phase_eight_packs_test.exs` | Gives useful genre-specific emphasis without making genre conventions universal rules or forcing one taxonomy. |
+| safe custom/hybrid pack path | `GenrePack` + immutable `Catalog`: validate/preview/install/enable/disable; trust/source, salience, intent and resource caps | pack tests + source gate | A project/studio can encode its own mystery/comedy hybrid and deliberate anti-genre choices without writing Elixir. |
+| constrained declarative lens authoring | `Fount.Observe.DeclarativeLens`; registered projection, normal Observe question/output machinery, explicit catalogs | `phase_eight_lens_assets_test.exs`, `phase_eight_packs_test.exs` | Lets a project add a precise measurement question while denying arbitrary code, tool, endpoint, credential, path, DB or decoder authority. |
+| custom lens + custom pack composition | enabled caller-owned declarative lens catalog is passed into pack validation/resolution | pack/runner tests | A custom pack can actually use an installed custom measurement instead of being a documentation-only promise. |
+| genre subversion/opt-out intent | pack `intent.subversions` / `intent.opt_out`; `Capabilities.GenreLensPacks` | capability/pack tests | Prevents an intentional refusal of a genre convention from being silently converted into a defect. |
+| Revision Intelligence two-revision API | `Capabilities.RevisionIntelligence.compare/6`; `CapabilityRunner.preflight_revision/run_revision/run_revision_playbook` | `phase_eight_runner_test.exs` | Compares actual before/after screenplay states instead of pretending one revision can describe its own collateral damage. |
+| exact source/structural change | existing `Fount.Screenplay.diff/2`, `to_fountain/2` and source Myers diff | runner tests | Ties revision claims to concrete page/structure changes. |
+| target effect, collateral risk, protected strengths | revision measurements + before/after state + explicit protected-strength checks | capability/runner tests | Answers “did this revision do the intended job and what else did it disturb?” without choosing for the writer. |
+| reader/character/relationship trajectory diffs | separate Reader diff and separate character/relationship state-transition outputs | revision capability tests | Makes a dialogue or sequence fix inspectable across character/relationship/reader experience rather than collapsing changes into one quality number. |
+| causal ripple + story-time continuity | StoryWorld causal descendants/relations kept separate from presentation-order source changes | revision tests | Finds downstream consequence risk while respecting flashbacks and other non-linear presentation choices. |
+| strategy distinctness | existing `StrategyContrast` may compare 2–5 supplied strategies; result remains evidence, not winner | runner tests | Helps writers see whether “alternatives” are actually different without selecting a best rewrite. |
+| preserved playbook behavior | original ten writer-playbook IDs remain; `character_trajectory` default family list unchanged; new emotional analysis is explicit opt-in | architecture/runner/source tests | Existing writer workflows do not unexpectedly spend more calls or change packet shape just because Phase 8 exists. |
+| generation/canon boundary | Phase-8 packets keep generated candidate nil; no Workshop acceptance/generation implementation | source gate | Analysis can guide a later rewrite, but Phase 8 cannot silently write or accept pages. |
+| external dependency boundary | no new direct SystemOneSDK/Inference/ASM calls | source inspection + architecture source gate | Keeps measurement acquisition Observe-owned and creative completion Workshop/Inference-owned. |
+| Phase-9 stop | no Workshop Intelligence Integration implementation | source gate | Delivery remains strictly within the requested current phase. |
+
+## Exit-criteria state
+
+Source now covers all twelve capability families and the safe custom-pack/declarative-lens path. Phase 8 is still **not runtime-complete** until Codex formats, compiles, runs focused ExUnit and the full preservation ladder, repairs defects if necessary, and records actual evidence. The optional human/domain review is unrun validation debt under D046.

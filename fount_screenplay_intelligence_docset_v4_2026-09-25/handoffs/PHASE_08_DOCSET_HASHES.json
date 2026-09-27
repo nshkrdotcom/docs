@@ -1,10 +1,10 @@
 {
   "format_version": 1,
-  "phase": 7,
+  "phase": 8,
   "date": "2026-09-27",
-  "status": "COMPLETE_RUNTIME_QC",
-  "purpose": "Phase 7 complete updated docset file identities after runtime QC; self-file and SHA256SUMS.txt omitted to avoid checksum recursion",
-  "file_count": 127,
+  "status": "OFFLINE_IMPLEMENTED",
+  "purpose": "Phase 8 complete updated docset file identities at source delivery; self-file and SHA256SUMS.txt omitted to avoid checksum recursion",
+  "file_count": 138,
   "files": {
     "00_SCOPE_AND_PRINCIPLES.md": {
       "sha256": "7622a5fd100536e11505af345559ce496684ba2d319aad867d8c93d561cf2499",
@@ -87,8 +87,8 @@
       "mode": 420
     },
     "16_PHASED_IMPLEMENTATION_PLAN.md": {
-      "sha256": "9b5fc0ebf871b8d1d63d2616e921a035f6b4a835d9a6ab27032280bce49e8a02",
-      "bytes": 38725,
+      "sha256": "c71f3ec2156adf4f020752498ab6aa3f1de8967129f66c9641d8a090166a7141",
+      "bytes": 39946,
       "mode": 420
     },
     "17_AGENT_EXECUTION_PROTOCOL.md": {
@@ -102,8 +102,8 @@
       "mode": 420
     },
     "19_ACCEPTANCE_CRITERIA.md": {
-      "sha256": "1067b568047774fdaae23994f723a89a616f34f9dfff994d111735dc076556bf",
-      "bytes": 16552,
+      "sha256": "1138073afecb47f31acc9a3aaf60f30581b162974f76ae12fb74bb176c70d380",
+      "bytes": 18137,
       "mode": 420
     },
     "20_OPEN_QUESTIONS_AND_DEFERRED_DECISIONS.md": {
@@ -122,8 +122,8 @@
       "mode": 420
     },
     "23_FUNCTIONALITY_PRESERVATION_AUDIT.md": {
-      "sha256": "e8395695de1f98fac571a82baf226423ec78b9abe744ee0019cbf083dbe7e231",
-      "bytes": 18192,
+      "sha256": "bf98d8746bb49920ce64a5d2d7ccc4153541d3af9911d9a3691fa39e2520a1f7",
+      "bytes": 19204,
       "mode": 420
     },
     "24_INTERNAL_BOUNDARY_ENFORCEMENT.md": {
@@ -192,8 +192,8 @@
       "mode": 420
     },
     "AGENT_START_HERE.md": {
-      "sha256": "847bcd4083c49b3aa14ca87c697e778b2f823f7c0cc46b371a790aeddd58bfe1",
-      "bytes": 4521,
+      "sha256": "fbf54b6914a98d76a093f075e3289eb6aab0ee03bcbc7448852aceb88b5e0ad9",
+      "bytes": 5141,
       "mode": 420
     },
     "DECISIONS.md": {
@@ -202,33 +202,33 @@
       "mode": 420
     },
     "MANIFEST.md": {
-      "sha256": "b02822eff81dd18ad1af38b6fc9fa2382d1454e8af3258944700888eed36f07e",
-      "bytes": 12186,
+      "sha256": "f187296953a83ebfbf1db26ac08513d060b149c3934baa822b36192352bc0c75",
+      "bytes": 13414,
       "mode": 420
     },
     "PROGRESS.md": {
-      "sha256": "dd8f5a4d0a38075dfbbe7c7b1716495afb7da8e1334c8ee9a120f4278ba4c687",
-      "bytes": 25313,
+      "sha256": "80d9dee0f931e217d6178d6d4326fd68602166aa19d30348eb3505ebd7221229",
+      "bytes": 27777,
       "mode": 420
     },
     "README.md": {
-      "sha256": "d1494303cb4d9f94462bc089310786f9bb49594d9b290ce7bb460622c5cb9aa1",
-      "bytes": 14037,
+      "sha256": "17514fa45555bead3765169ea6a57a32fc25e90fb221d5513453918196e0a45b",
+      "bytes": 14651,
       "mode": 420
     },
     "SOURCES.md": {
-      "sha256": "75eeabe12a76cae8ed174a2f1effa16f5e95fb26a3cf7fac57707fc9f326fe04",
-      "bytes": 16085,
+      "sha256": "77013e7fcbac8c52f225f6baa2d01670b8573fc7d0ab74bf757c5f436d15ad04",
+      "bytes": 17399,
       "mode": 420
     },
     "TRACEABILITY_MATRIX.md": {
-      "sha256": "3a51209c0aaba7fe7437c91662866df9c17971ef71a89afa057e9d0ae64fc558",
-      "bytes": 38050,
+      "sha256": "d27e39645247d7bcbcf8751f631b3b75bb482a3f02bdc83e35b91d7d4d98198b",
+      "bytes": 40057,
       "mode": 420
     },
     "examples/CONCEPTUAL_CONTRACT_EXAMPLES.md": {
-      "sha256": "75a3561c54361d56f33b72bcd8b91b23550e1914093c0691b02338ce2c53aaed",
-      "bytes": 3994,
+      "sha256": "e30a203b65170e8d25b41dd2940f1f5cfbf80ad32170970c6a98fea00e4eb931",
+      "bytes": 4632,
       "mode": 420
     },
     "examples/context_schema.example.json": {
@@ -241,14 +241,19 @@
       "bytes": 415,
       "mode": 420
     },
+    "examples/declarative_lens.example.json": {
+      "sha256": "71c2736bd3a951cb01e3b71c8cd4295b04d2e7e07867dbbfb13c0c57c2a2b653",
+      "bytes": 1394,
+      "mode": 420
+    },
     "examples/diagnosis.example.json": {
       "sha256": "70d22ac5802928c6f99ce4763b8f7ef5bc4df063425cf156a1aebe42079bfdf8",
       "bytes": 665,
       "mode": 420
     },
     "examples/genre_pack.example.json": {
-      "sha256": "23809e8cbdcaf088fa667c8df2067e6f0cef54784e588d823eeaad0afae93447",
-      "bytes": 683,
+      "sha256": "d130d38133de83faff53e873772bd3b8fcce58d5ac3df413a4cf5f75ac5f13c3",
+      "bytes": 1457,
       "mode": 420
     },
     "examples/lens_asset.example.json": {
@@ -556,49 +561,99 @@
       "bytes": 3474,
       "mode": 420
     },
+    "handoffs/PHASE_07_DOCSET_HASHES.json": {
+      "sha256": "94201dac1bd0f32b9e62212b7acb3c6f5c0aaf1206f16a43e9357b834fedc16a",
+      "bytes": 22612,
+      "mode": 420
+    },
     "handoffs/PHASE_07_DOMAIN_REVIEW_PACKET.md": {
-      "sha256": "956a9e88c301d27ff134bc7e346ae34a43574ae5c234ec12f93656c5a3b4b08b",
-      "bytes": 1766,
+      "sha256": "1934df3a7b5c353035618687230726171fa945e553ba9ec019fbd79bf37d051d",
+      "bytes": 1765,
       "mode": 420
     },
     "handoffs/PHASE_07_FILE_INVENTORY.json": {
-      "sha256": "a170f2ae60020bed9e31a67b860028aa6e091f543f0d7719971d196bdef715a9",
-      "bytes": 21223,
+      "sha256": "5a6bc04e7b22283b7b6cbf3f84481ca8acbfed9ed15e4b02ec9b85fbc3d32c6b",
+      "bytes": 21222,
       "mode": 420
     },
     "handoffs/PHASE_07_IMPLEMENTATION_MATRIX.md": {
-      "sha256": "9f9e00599762a3c60f00954988ab8f82abcae72bdc0ead58fbc4e08549d0bec4",
-      "bytes": 5724,
+      "sha256": "66d57350f44adc4728a0b6ea92b7b069e67da1806f02ae087ec4539a5079b615",
+      "bytes": 5723,
       "mode": 420
     },
     "handoffs/PHASE_07_INPUTS.json": {
-      "sha256": "133f3f665bed0247e367ae3efe801efc490f873981fdb0edbde7c4e78029815f",
-      "bytes": 5223,
+      "sha256": "f03219c598a8fe3da57f755f62739b64c0917fddd467eeb4c19c1265da5e985e",
+      "bytes": 5222,
       "mode": 420
     },
     "handoffs/PHASE_07_OFFLINE_HANDOFF.md": {
-      "sha256": "a145629fa2a89672a3ac2c41a33cd0cfeda1d7c95168e611f906e3a519412453",
-      "bytes": 3569,
+      "sha256": "bb880cccef415594c8fec1711a551b35278fb72d2671c321ae84064f2d8aa5c0",
+      "bytes": 3568,
       "mode": 420
     },
     "handoffs/PHASE_07_PRESERVATION_AUDIT.md": {
-      "sha256": "eae7bdce4b7b94af15e06a75f00476e1d5ed71a65b257702f511ade56732c465",
-      "bytes": 3213,
+      "sha256": "dabefcf27cf672941765d4fde344b3c4516c8c1ec21bbde383f728e491458e71",
+      "bytes": 3212,
       "mode": 420
     },
     "handoffs/PHASE_07_RUNTIME_QC_HANDOFF.md": {
-      "sha256": "ac4956cf4bce2bd717d6cd3fe290efaf0498d02128d9cbe6ef173109d533ce4b",
-      "bytes": 7319,
+      "sha256": "0a06211b36150c6f932027b0b97f1d32815007f8b47d4bbcab9a3def8eae233c",
+      "bytes": 7318,
       "mode": 420
     },
     "handoffs/PHASE_07_RUNTIME_QC_REPORT.md": {
-      "sha256": "a8f57e42990a4967cea7e54a9c56a4535cdeb7d8375667584f14929bf322fe10",
-      "bytes": 6713,
-      "mode": 436
+      "sha256": "c894b10f946158f89339d7304db9791e3d926de66fe72797fde7b8f33f7a28d2",
+      "bytes": 6712,
+      "mode": 420
     },
     "handoffs/PHASE_07_STATIC_CHECKS.json": {
-      "sha256": "a63ea1d5796db95057080bc155088ecba1747cfa50a3e83c6f4a6a1f494d03eb",
-      "bytes": 4315,
+      "sha256": "8ac042e590e5be3a973dc338d82ecd8d8637a747697e1d8f7e86d846093b48b1",
+      "bytes": 4314,
+      "mode": 420
+    },
+    "handoffs/PHASE_08_DOMAIN_REVIEW_PACKET.md": {
+      "sha256": "11f41cf2b8cdf039480d3df6f7588a514c0d7245f427dae4cd1c3db7d14cac91",
+      "bytes": 1575,
+      "mode": 420
+    },
+    "handoffs/PHASE_08_FILE_INVENTORY.json": {
+      "sha256": "5ecd27b11b7a2fa247d30430bb741577156bdb9d2e47085d1e1af740604104f3",
+      "bytes": 12930,
+      "mode": 420
+    },
+    "handoffs/PHASE_08_IMPLEMENTATION_MATRIX.md": {
+      "sha256": "814c8c154a4a230026031cfbd5ea98a0bf2f5922992656d4be95a56bd8602515",
+      "bytes": 5829,
+      "mode": 420
+    },
+    "handoffs/PHASE_08_INPUTS.json": {
+      "sha256": "e927e713d031a811b5a3bf4dacf4fc58edecf714479c257fa84bc5b76c0b0cd7",
+      "bytes": 5883,
+      "mode": 420
+    },
+    "handoffs/PHASE_08_OFFLINE_HANDOFF.md": {
+      "sha256": "3f96e8baaebcc6cd8e02146992ac14e8d3729837e574c9c24b16f643a64e397a",
+      "bytes": 4215,
+      "mode": 420
+    },
+    "handoffs/PHASE_08_PRESERVATION_AUDIT.md": {
+      "sha256": "a0de770e88f8d0bfb122804f086ad04e9885fe9086807e2c75668f4e9f254384",
+      "bytes": 3016,
+      "mode": 420
+    },
+    "handoffs/PHASE_08_RUNTIME_QC_HANDOFF.md": {
+      "sha256": "10899b4f335041a42a1a83cc559521d4e0496b80ef546a584e2ca84bd1d20ba7",
+      "bytes": 7026,
+      "mode": 420
+    },
+    "handoffs/PHASE_08_RUNTIME_QC_REPORT.md": {
+      "sha256": "100af5e783f405af9c60c4c2633a1171242cb9b2282ce621ea673c3a50fd13bd",
+      "bytes": 712,
+      "mode": 420
+    },
+    "handoffs/PHASE_08_STATIC_CHECKS.json": {
+      "sha256": "b8a449c70d079762738f55e73af4a0b702f4027acc3cbe6ac6890d9681c174b7",
+      "bytes": 3715,
       "mode": 420
     },
     "handoffs/PREPARATION_2026-09-26.md": {

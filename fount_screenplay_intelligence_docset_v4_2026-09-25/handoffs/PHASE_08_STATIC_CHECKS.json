@@ -1,0 +1,101 @@
+{
+  "phase": 8,
+  "date": "2026-09-27",
+  "status": "OFFLINE_IMPLEMENTED",
+  "environment": {
+    "elixir": "NOT_AVAILABLE",
+    "mix": "NOT_AVAILABLE",
+    "erl": "NOT_AVAILABLE"
+  },
+  "checks": [
+    {
+      "name": "five_input_content_identification",
+      "status": "PASS",
+      "evidence": "raw attachment SHA-256/byte/file counts recorded in PHASE_08_INPUTS.json"
+    },
+    {
+      "name": "external_api_source_inspection",
+      "status": "PASS",
+      "evidence": "SystemOneSDK 0.6.0, Inference 0.5.0, ASM 0.17.1 and actual Fount APIs inspected; no invented direct Phase-8 integration"
+    },
+    {
+      "name": "phase_8_lens_json_parse",
+      "status": "PASS",
+      "command": "python3 JSON parse of four Phase-8 lens files",
+      "result": "4/4 parsed"
+    },
+    {
+      "name": "phase_source_contract_suite",
+      "status": "PASS",
+      "command": "python3 -m unittest discover -s scripts/tests -p 'test_phase_*_source.py' -v",
+      "result": "52 tests passed"
+    },
+    {
+      "name": "python_compile_changed_handoff_sources",
+      "status": "PASS",
+      "command": "python3 -m py_compile scripts/tests/test_phase_eight_source.py scripts/tests/test_phase_seven_source.py handoff/apply_overlay.py scripts/seal_handoff_snapshot.py"
+    },
+    {
+      "name": "phase_8_external_boundary_scan",
+      "status": "PASS",
+      "result": "no SystemOneSDK, Inference, ASM or FountWorkshop reference in Phase-8 pure capability/pack/declarative-lens implementation scan"
+    },
+    {
+      "name": "repository_wide_python_discovery",
+      "status": "BLOCKED_BY_INPUT_SNAPSHOT",
+      "command": "python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v",
+      "result": "61 tests discovered; 60 passed; one import error because supplied Fount XML omits the cleanup implementation helper imported by test_prune_deleted_directories.py"
+    },
+    {
+      "name": "overlay_zip_integrity",
+      "status": "PASS",
+      "command": "unzip -t fount_phase_08_overlay.zip"
+    },
+    {
+      "name": "overlay_strict_dry_run",
+      "status": "PASS",
+      "result": "37 writes accepted against decoded pristine supplied Fount source; no mismatch bypass"
+    },
+    {
+      "name": "overlay_strict_apply",
+      "status": "PASS",
+      "result": "37 changes applied"
+    },
+    {
+      "name": "whole_tree_reproduction",
+      "status": "PASS",
+      "result": "541 desired source files reproduced after strict apply, excluding generated Python caches and applier backup journal"
+    },
+    {
+      "name": "phase_9_absence_guard",
+      "status": "PASS",
+      "evidence": "source-contract suite requires Phase 8 to stop before Workshop Intelligence Integration"
+    },
+    {
+      "name": "elixir_formatter_compile_exunit",
+      "status": "NOT_RUN",
+      "reason": "Elixir/Erlang/Mix unavailable"
+    },
+    {
+      "name": "compiled_architecture_credo_dialyzer_exdoc_packages",
+      "status": "NOT_RUN",
+      "reason": "Elixir/Erlang/Mix unavailable"
+    },
+    {
+      "name": "postgres_workshop_writer_pdf_table_read",
+      "status": "NOT_RUN",
+      "reason": "runtime/database/tooling unavailable in source-writing environment"
+    },
+    {
+      "name": "live_provider_checks",
+      "status": "NOT_RUN",
+      "reason": "not required for offline source delivery and no runtime is available"
+    },
+    {
+      "name": "optional_human_domain_review",
+      "status": "NOT_RUN",
+      "reason": "D046 makes human/domain reviews optional; no participant/corpus result fabricated"
+    }
+  ],
+  "completion_rule": "This evidence supports OFFLINE_IMPLEMENTED only. Runtime QC/repair must run on the user-applied checkout before Phase 8 can become COMPLETE. Phase 9 remains NOT_STARTED."
+}

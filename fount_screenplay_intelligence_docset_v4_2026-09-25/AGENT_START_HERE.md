@@ -18,7 +18,7 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phases 1–7: COMPLETE on engineering QC. Phase 8 remains NOT_STARTED.**
+> **Phases 1–7: COMPLETE on engineering QC. Phase 8: OFFLINE_IMPLEMENTED pending runtime QC. Phase 9 remains NOT_STARTED.**
 
 Read `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` and `PROGRESS.md` for the verified Phase-7 state. Fount repair commit `4a1c723` passed engineering and preservation QC. Historical validation debt remains visible; do not claim human validation. Stop before Phase 8.
 
@@ -95,6 +95,10 @@ Before implementing any phase after Phase 2, read:
 
 Do not fabricate human validation. Under D046, human/domain pilots are optional and skipped by default. Preserve in-scope evaluation interfaces and any useful study instructions, but do not block engineering completion or later work for absent reviewers. Record skipped studies as validation debt.
 
-### Current Phase 7 checkpoint
+### Previous verified Phase 7 checkpoint
 
-Phase 6 is COMPLETE on the runtime evidence recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Phase 7 is `COMPLETE` after runtime QC at Fount `4a1c723`. Audience/Reader Experience, Sequence Movement, Dialogue Interaction, and Setup/Payoff + Motifs are source-written with four closed Observe lenses, existing strict-forward Reader and Temporal/StoryWorld reuse, typed dialogue context validation, non-linear setup/payoff fixtures, playbook wiring, writer packets, and explicit claim limitations. The 305-test workspace CI, 53 Python tests, isolated DB/writer/PDF checks and four package builds passed; see `handoffs/PHASE_07_RUNTIME_QC_REPORT.md`. No human/domain usefulness study was run. Phase 8 remains NOT_STARTED.
+Phase 6 is COMPLETE on the runtime evidence recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Phase 7 is `COMPLETE` after runtime QC at Fount `4a1c723`. Audience/Reader Experience, Sequence Movement, Dialogue Interaction, and Setup/Payoff + Motifs are source-written with four closed Observe lenses, existing strict-forward Reader and Temporal/StoryWorld reuse, typed dialogue context validation, non-linear setup/payoff fixtures, playbook wiring, writer packets, and explicit claim limitations. The 305-test workspace CI, 53 Python tests, isolated DB/writer/PDF checks and four package builds passed; see `handoffs/PHASE_07_RUNTIME_QC_REPORT.md`. No human/domain usefulness study was run. At that verified checkpoint Phase 8 was NOT_STARTED; the current source handoff is the Phase-8 checkpoint below.
+
+### Current Phase 8 checkpoint
+
+Phase 8 source is `OFFLINE_IMPLEMENTED`, not COMPLETE. Families 9–12, the constrained declarative-lens/genre-pack path, and explicit two-revision analysis are delivered in a strict 37-operation overlay. 52 Phase 1–8 source-contract tests pass offline; Elixir/runtime checks are unrun. Read all `handoffs/PHASE_08_*` records. For the next action, Codex tests/repairs **Phase 8 only** from the user-applied commits and stops before Phase 9.

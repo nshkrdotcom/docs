@@ -602,6 +602,9 @@ Optional human-reviewed cases may be added for Emotional/Value Movement, Theme/M
 
 All twelve capability families pass traceability and acceptance requirements, including the safe custom-pack workflow; optional domain-review cases are recorded if performed and otherwise listed as validation debt.
 
+
+**Phase 8 source-delivery checkpoint — 2026-09-27:** `OFFLINE_IMPLEMENTED`, not COMPLETE. Source now covers families 9–12 with four installed Observe lenses, multidimensional Emotional/Value state movement, competing Theme/Meaning hypotheses with counterevidence, safe optional Genre Packs plus constrained declarative-lens authoring, and an explicit two-revision Revision Intelligence path that separates source/presentation change from diegetic/story-time effects. The initial mystery/thriller/horror/romance/comedy/action packs are optional and disabled by default; custom packs/lenses remain data-only and capability-limited. Existing writer-playbook IDs/default routing are preserved; generation/canon remain Workshop-owned. The strict overlay has 37 operations (22 additions, 15 modifications, no deletions). Four lens JSON parses, 52 Phase 1–8 source-contract tests, Python compilation/boundary scan, ZIP integrity, strict apply and tree reproduction pass. The supplied XML still lacks the cleanup helper imported by one repository-wide Python test. Elixir/Mix/runtime gates and optional human/domain review are unrun. Phase 9 remains `NOT_STARTED`; Codex must test/repair Phase 8 and stop before Phase 9.
+
 ---
 
 # Phase 9 — Workshop Intelligence Integration

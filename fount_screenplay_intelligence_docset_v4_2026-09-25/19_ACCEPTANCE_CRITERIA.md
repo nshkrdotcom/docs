@@ -361,3 +361,21 @@ selected authorized live Workshop/Inference checks
 - optional human reviews in Phases 12–15 are recorded if performed; skipped reviews remain visible validation debt and do not block acceptance;
 - exactly five XML inputs and the user-apply/commit → Codex-QC protocol are followed;
 - no unsupported claim of creative superiority, audience response, submission eligibility, or commercial success.
+
+## AI. Phase 8 source-delivery checkpoint
+
+The Phase-8 source delivery is acceptable for handoff when all of the following are true; runtime completion still requires Codex:
+
+- all twelve capability-family IDs are present and families 9–12 have Observe + Intelligence + writer-facing paths;
+- Emotional/Value reports multiple explicit conditions/value/event-reaction changes and does not claim universal emotion;
+- Theme supports competing hypotheses plus support/counterevidence and no authoritative theme/depth score;
+- the six initial genre packs are optional, disabled by default and not a closed genre list;
+- project/studio/third-party custom packs validate trust/source, references, intent/subversion and resource requests under host caps;
+- declarative custom lenses cannot name or obtain arbitrary executable/network/filesystem/credential/database/tool authority and compile only through existing safe Observe machinery;
+- Revision Intelligence consumes explicit before/after revisions and keeps target effect, collateral risk, protected strengths, reader/character/relationship trajectories, causal ripple, source/presentation change and story-time continuity distinct;
+- strategy comparison does not choose a winner;
+- existing ten writer playbooks/default routes and Core/Workshop ownership are preserved;
+- Phase 9 Workshop intelligence integration is absent;
+- actual offline evidence and all unrun runtime checks are recorded in `handoffs/PHASE_08_STATIC_CHECKS.json`.
+
+Current source-delivery state: `OFFLINE_IMPLEMENTED`. Elixir/runtime acceptance is not claimed.

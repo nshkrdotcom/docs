@@ -1,0 +1,42 @@
+{
+  "id": "project.clue_legibility",
+  "description": "Project-owned measurement asking whether a selected clue is legible at first exposure without requiring a genre-specific implementation module.",
+  "trust": "project",
+  "source": {
+    "label": "project story room",
+    "revision": "2026-09-27",
+    "owner": "writer"
+  },
+  "kind": "choice",
+  "instructions": "At this presentation checkpoint, how legible is the selected clue from the performed material alone?",
+  "criteria": {
+    "legible": "A first-exposure reader can identify the clue as potentially meaningful.",
+    "ambiguous": "The detail is perceptible but its possible significance is genuinely ambiguous.",
+    "obscured": "The detail is unlikely to register as a clue from the supplied performed material."
+  },
+  "projection": "page_reader",
+  "output_contract": "observe.answer_set",
+  "context_contract": {
+    "required": {},
+    "optional": {},
+    "allow_unknown": false
+  },
+  "interpretation_policy": {
+    "support_probability": 0.8,
+    "unsupported_probability": 0.2,
+    "minimum_confidence": 0.5
+  },
+  "resource_policy_request": {
+    "max_states": 32,
+    "max_context_bytes": 32768,
+    "max_question_bytes": 4096,
+    "max_questions": 1,
+    "total_timeout_ms": 30000,
+    "max_concurrency": 1,
+    "max_provider_requests": 1
+  },
+  "calibration_refs": [
+    "identity"
+  ],
+  "resource_class": "small"
+}

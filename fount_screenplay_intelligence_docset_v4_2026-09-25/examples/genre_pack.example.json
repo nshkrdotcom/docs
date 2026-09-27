@@ -1,24 +1,50 @@
 {
   "id": "project.neo_noir_mystery",
   "description": "Project-specific mystery/noir emphasis without treating genre conventions as universal rules.",
+  "purpose": "Emphasize clue legibility, reader inference and deliberate misdirection for this project while preserving the writer's anti-genre choices.",
   "trust": "project",
+  "source": {
+    "label": "project story room",
+    "revision": "2026-09-27",
+    "owner": "writer"
+  },
   "lenses": [
-    "knowledge.inference",
-    "mystery.clue_visibility",
-    "relationship.concealment"
+    "audience.reader_experience",
+    "setup_payoff.motifs",
+    "theme.meaning"
+  ],
+  "capability_families": [
+    "audience_reader_experience",
+    "setup_payoff_motifs",
+    "theme_meaning",
+    "genre_lens_packs"
+  ],
+  "playbooks": [
+    "suspense_audit",
+    "setup_payoff",
+    "submission_read"
   ],
   "diagnostic_salience": {
     "premature_inference": 1.0,
     "clue_fairness": 0.8,
     "relationship_misdirection": 0.7
   },
+  "writer_intent_prompts": [
+    "Which clues should feel legible without making the culprit obvious?",
+    "Where is noir expectation being deliberately refused?"
+  ],
   "intent": {
     "subversions": [
-      "Do not diagnose delayed culprit identification as a defect after the midpoint; the film intentionally becomes character-first."
+      "Delayed culprit identification after the midpoint is intentional because the film becomes character-first."
+    ],
+    "opt_out": [
+      "Do not require a conventional detective-procedural reveal cadence."
     ]
   },
   "resource_policy_request": {
-    "class": "standard",
-    "optional_enrichment": true
+    "max_targets": 120,
+    "max_states": 120,
+    "max_provider_requests": 120,
+    "max_wall_ms": 60000
   }
 }

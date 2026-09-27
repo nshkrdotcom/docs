@@ -1,0 +1,350 @@
+{
+  "phase": 8,
+  "status": "OFFLINE_IMPLEMENTED",
+  "date": "2026-09-27",
+  "overlay_sha256": "a3765d2e8ac8450959e5ad2b03d76b73df06386b3357b6fb841da761f4c92d12",
+  "overlay_bytes": 77908,
+  "summary": {
+    "added": 22,
+    "modified": 15,
+    "deleted": 0,
+    "operations": 37
+  },
+  "source_basis": "decoded source bodies from supplied content-identified Fount XML; no deletion operation is present",
+  "files": [
+    {
+      "path": "packages/fount_intelligence/CHANGELOG.md",
+      "action": "modify",
+      "original_sha256": "b9050935e2e899dc083f43e7c86461b49fb53669bdde8424ffe67ab919fbc4a5",
+      "result_sha256": "3ffa2552e5ff74760ca02f79f0b2a20b7b7819203c883cafebd90762d41b8606",
+      "mode": 420,
+      "original_bytes": 3330,
+      "result_bytes": 3625
+    },
+    {
+      "path": "packages/fount_intelligence/README.md",
+      "action": "modify",
+      "original_sha256": "34decde6e55124020089b57b5ccf83cb7353aea3b224bed3e80f6ab5f7292575",
+      "result_sha256": "a563cc02da593322bae2194a8cc37ab6d3bf9864d08bc212532f237332181b8b",
+      "mode": 420,
+      "original_bytes": 4558,
+      "result_bytes": 5159
+    },
+    {
+      "path": "packages/fount_intelligence/examples/README.md",
+      "action": "modify",
+      "original_sha256": "3440a4dfb1a563663adfcc5642d72b56f7a95d4fd7202cac1525b921e405bb0f",
+      "result_sha256": "23f8452fa51f2dc0f6e19e0403269dfa5cdc09844d8effc51708450a44214ecc",
+      "mode": 420,
+      "original_bytes": 2927,
+      "result_bytes": 3474
+    },
+    {
+      "path": "packages/fount_intelligence/examples/phase_eight.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "8c5b2b2054e3e4b1e821d55c22b50b39626f9f5653da72c3f0c775ac2034cd25",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 2629
+    },
+    {
+      "path": "packages/fount_intelligence/guides/capabilities-c.md",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "023796b287a714a723b1716c8c8295a6b6767b586bd2716fc7521a28e4090f27",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 7678
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence.ex",
+      "action": "modify",
+      "original_sha256": "63ea4ff7b18129324daf6858b4d970cb22cbfbfc7d22f1506c16b43b68e56bec",
+      "result_sha256": "e88a9c3906ff384cf98cd2d6f8c54a7ce16f8337cc2f2ea514adba06f0075a3d",
+      "mode": 420,
+      "original_bytes": 7254,
+      "result_bytes": 9112
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/acquisition/capability_measurements.ex",
+      "action": "modify",
+      "original_sha256": "d496e7f6cd8c61d0bd2324e242427f396d6b6bcba917c86ddaafcb773fbe8cf6",
+      "result_sha256": "4e03df91fc40742e8e9022ff661c07e88a66ec30fbab222fa40f2e8429caab08",
+      "mode": 420,
+      "original_bytes": 18050,
+      "result_bytes": 27055
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities.ex",
+      "action": "modify",
+      "original_sha256": "58712f4b6e479a482c07e696bb6cbe9a769be2d508328c0b80d127b1285ca6ee",
+      "result_sha256": "64b2e8cb1b43d4d87ac843b7ac4dee1ee2e76d56df9fc15adca96233f7dce534",
+      "mode": 420,
+      "original_bytes": 1992,
+      "result_bytes": 3198
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/emotional_value_movement.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "788f040ae8b04fe794cd25fea1f8d31f746960500e375a288a8c151c1f2805b9",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 9083
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/genre_lens_packs.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "0cee266d384d8fabe1ac97b2504932a9e5015d32e90a1ed961a254e14e59165a",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 5889
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/result.ex",
+      "action": "modify",
+      "original_sha256": "0bcbef2abb666520bf1ededc5e216dd34b0c188d5226e05c08e79bf47398202c",
+      "result_sha256": "4460c5db2493e8247794c2284058203914b6f3718e5b3e7efe7af33351ce4e24",
+      "mode": 420,
+      "original_bytes": 697,
+      "result_bytes": 697
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/revision_intelligence.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "46f9d6dc81481b4fc284a53cec8a4b184bc3c569fa9e06894b9e591d893b185e",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 16776
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/theme_meaning.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "dd6d302ebf680b91df7014b0e9c5d95feff5270ea0e538122630c752c4129d8a",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 7164
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/packs.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "c0cbeb65a27b9aea6da2d09529f44385c09421025d1d29fc4b92a855697fd500",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 8722
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/packs/catalog.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "f8b859881b8c0811c6b2a937e42e115dc7880868f458359d1c10985c8b743e80",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 1974
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/packs/genre_pack.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "1a2e863905c4805749a39947307d9954c701b4fb231442cbbe4a498cc5c5a8df",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 6265
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/playbooks/capability_runner.ex",
+      "action": "modify",
+      "original_sha256": "d80ce998148e84fbe8677db224fa2182bf7b492521019cbf2750f95328f85190",
+      "result_sha256": "7aea2bb7bdba88636815624b0f1ab38ef907dccc2570373e8cd1a7a9318d12db",
+      "mode": 420,
+      "original_bytes": 22137,
+      "result_bytes": 32822
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/playbooks/writer_registry.ex",
+      "action": "modify",
+      "original_sha256": "cfaa7a94a125c81c692762fb684a544d57486a69be7acf2ca7ccd85af90fdab0",
+      "result_sha256": "c573d8ff8b9c4d451cfe6e0ec3bde9dff927993ed130d6e6ec3633c9aada09e4",
+      "mode": 420,
+      "original_bytes": 6830,
+      "result_bytes": 7040
+    },
+    {
+      "path": "packages/fount_intelligence/mix.exs",
+      "action": "modify",
+      "original_sha256": "cb2b202b20c43b4013ad1df54845e12eb3aeb2877e404eb7a71573bdeca93ebc",
+      "result_sha256": "707721d385abefeb0307409d0069ac295606eb9ff8fdc1a8fa682f5543997412",
+      "mode": 420,
+      "original_bytes": 3567,
+      "result_bytes": 3729
+    },
+    {
+      "path": "packages/fount_intelligence/test/phase_eight_architecture_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "7244cef95f5a162593d5d85f59a97bc6156df4a292884b92a4875b51b7201e82",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 1557
+    },
+    {
+      "path": "packages/fount_intelligence/test/phase_eight_capabilities_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "da8ae09a57df8a9ccf5bf59b4368552477a82a9cdf5ccd973911818a4d16a3bc",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 5921
+    },
+    {
+      "path": "packages/fount_intelligence/test/phase_eight_packs_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "6e93f1696bf902aeb7083e257b844a3fd922dfc2b110e23b989dca7e7d393fab",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 4573
+    },
+    {
+      "path": "packages/fount_intelligence/test/phase_eight_runner_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "222fd33d50ed5d7e6a155a44a639f610548fb09e59662b17d4d3bcbc86aa6b53",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 4270
+    },
+    {
+      "path": "packages/fount_intelligence/test/support/phase_eight_fixture.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "c4f11f2ec21f01f6d0ebf06aaf33408294ee49816fe8a1e5d6f2eae8a2627f59",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 2548
+    },
+    {
+      "path": "packages/fount_observe/CHANGELOG.md",
+      "action": "modify",
+      "original_sha256": "89af9ac28260e59472e72fbce250c50224685c6d60f62e94b98beab2442408e2",
+      "result_sha256": "271442671d04169a299f4a5881f4891c068b221592a11b161c04a7424260dccd",
+      "mode": 420,
+      "original_bytes": 1636,
+      "result_bytes": 1806
+    },
+    {
+      "path": "packages/fount_observe/README.md",
+      "action": "modify",
+      "original_sha256": "ee28406ebf68f7cc94449f030eebf1e6466f5c71bfde44405cc8e43256006e2c",
+      "result_sha256": "285e7f41317224128b779c341817252dc992e6be1862a42e3b87ad0b2fe108f1",
+      "mode": 420,
+      "original_bytes": 3637,
+      "result_bytes": 4339
+    },
+    {
+      "path": "packages/fount_observe/guides/declarative-lenses.md",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "5f1e3eaad6b95139a04383605943d55d73fbe2ed3e124957942215dcdbe18dbc",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 2277
+    },
+    {
+      "path": "packages/fount_observe/lib/fount/observe.ex",
+      "action": "modify",
+      "original_sha256": "145d292de693618f4e0a1957a2f55ae8e1b6d8a40248f7bcb0d13ed7a27a3314",
+      "result_sha256": "803a807209ad5f46f66690a1e551c51ef730c8bd77628742cc8a5a03633a960c",
+      "mode": 420,
+      "original_bytes": 857,
+      "result_bytes": 1955
+    },
+    {
+      "path": "packages/fount_observe/lib/fount/observe/declarative_lens.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "92e03b2614e083d1344a2a3b6386e1b6b9d45b7ef51df3566ffe901c639768f7",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 8403
+    },
+    {
+      "path": "packages/fount_observe/lib/fount/observe/registry.ex",
+      "action": "modify",
+      "original_sha256": "d6951112ad3275d98843d0e498d602f90ebd29d95d5b019ad70578c88357f812",
+      "result_sha256": "10a17efe69a1c1da7b09da52197b6903ee514fae911177830747b6c7bce06a9c",
+      "mode": 420,
+      "original_bytes": 2014,
+      "result_bytes": 2091
+    },
+    {
+      "path": "packages/fount_observe/mix.exs",
+      "action": "modify",
+      "original_sha256": "489598bb6eb3a4be7871743e09219e4d79a1fad552ed10b27e698c3d47ccc861",
+      "result_sha256": "0431a2147df506d44c94160cb08b0cddb2ce32dbe601fe04c5ffa90740edf830",
+      "mode": 420,
+      "original_bytes": 3750,
+      "result_bytes": 3831
+    },
+    {
+      "path": "packages/fount_observe/priv/lenses/emotional.value_movement.json",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "27c42d894e4536e8ef390ab27a747c1cd1a85c25535d8c6d3646bac515d7de78",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 680
+    },
+    {
+      "path": "packages/fount_observe/priv/lenses/genre.lens_pack.json",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "98e70059190267873c48484bfe51fc893e9523b0cea0002e3c8028aac34659cd",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 671
+    },
+    {
+      "path": "packages/fount_observe/priv/lenses/revision.intelligence.json",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "a4adbd4d843299c23c271c1f087e680334953d8d3571f75a4f0ecb28105bbcd0",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 682
+    },
+    {
+      "path": "packages/fount_observe/priv/lenses/theme.meaning.json",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "782286855f50251685d960616c17f34e7a689075d687ae8e606b6cad844cf388",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 670
+    },
+    {
+      "path": "packages/fount_observe/test/phase_eight_lens_assets_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "4ec7252709dad74b31fdf4a922c53069795784c6164b9d49fede44cfa4ee276a",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 3769
+    },
+    {
+      "path": "scripts/tests/test_phase_eight_source.py",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "115b6db1b078eb5e1c3d62676ebfdc218e973601bc58b34ee7490a0dc72ab2d7",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 9351
+    }
+  ],
+  "deletions": []
+}

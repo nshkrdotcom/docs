@@ -254,3 +254,14 @@ Actual source inspection confirmed that Phase 7 requires no new direct dependenc
 
 No Elixir/Mix/runtime or human-review claim is sourced from this offline pass. Exact attachment identities, API lists, omissions, and check evidence are in `handoffs/PHASE_07_INPUTS.json` and `handoffs/PHASE_07_STATIC_CHECKS.json`.
 
+## K. Phase 8 five-XML source inspection — 2026-09-27
+
+The current implementation pass used only the supplied five snapshots as authority for source/API facts. Content identification and exact SHA-256/byte/file counts are recorded in `handoffs/PHASE_08_INPUTS.json`.
+
+- Fount was identified by its four-package `fount` / `fount_observe` / `fount_intelligence` / `fount_workshop` workspace and Phase-7 implementation/QC state.
+- System One was identified by the `system_one_contracts`, `system_one_sdk`, `system_one_bumblebee`, and `system_one_server` poncho packages; inspected `SystemOneSDK` version is 0.6.0.
+- Inference was identified by `apps/inference`, provider-neutral request/response/adapter code and ASM adapter; inspected package version is 0.5.0.
+- ASM was identified by `lib/asm` session/run/provider-backend/inference-endpoint code; inspected version is 0.17.1.
+- The docset was identified by numbered documents 00–36 plus handoffs through Phase 7; its authoritative progress record made Phase 8 the first unfinished phase.
+
+Phase 8 adds no direct SystemOneSDK, Inference or ASM call. Actual Fount APIs were inspected before use; details are in `PHASE_08_INPUTS.json`. The source-writing environment had no Elixir runtime, so source inspection does not substitute for Codex runtime verification.

@@ -134,3 +134,9 @@ See `corpus_manifest.example.json` and `../28_HUMAN_VALIDATION_AND_CORPUS_OPERAT
 Expensive playbooks expose an estimate and caps before execution where the runtime can estimate them reliably. Actual usage is recorded afterward.
 
 See `resource_preflight.example.json` and `../30_LONGITUDINAL_RESOURCE_ECONOMICS.md`.
+
+## Phase-8 declarative lens
+
+Project/studio measurement customization is data-only. A declarative lens may choose one of the registered neutral projections, use `noul`/`choice`/`score` question data, request only recognized resource controls, and use the normal `observe.answer_set` output contract. It cannot name a module, function, shell command, path, endpoint, credential, decoder, adapter, tool, or database query.
+
+See `declarative_lens.example.json`, `genre_pack.example.json`, and `../29_SAFE_LENS_AND_PACK_EXTENSIBILITY.md`. Installation and enablement are separate decisions; pack resource requests never override host caps.

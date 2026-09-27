@@ -391,3 +391,22 @@ The source-writing pass does not transfer Phase-6 runtime evidence to changed Ph
 ## Phase 7 runtime verification — COMPLETE
 
 At Fount `4a1c723`, all four new family/lens pairs, strict-forward Reader behavior, separate sequence story-time/presentation views, measurement-ID diagnosis lineage, cue-backed dialogue pairs and typed context rejection, watch-origin flashback qualification, setup/payoff motifs, nil generated candidates and the Phase-8 stop line are verified. Focused Phase-7 tests (2 Observe, 11 Intelligence), 305 full workspace tests, 53 Python source tests, compiled architecture, strict Credo, Dialyzer, ExDoc, four package archives, isolated Core/Workshop DB integrations (11/14) and writer accept/reject PDF/table-read flows pass. Details and repair hashes are in `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_07_FILE_INVENTORY.json`. Optional human/domain review remains NOT RUN under D046; no human usefulness claim is made. Phase 8 is NOT_STARTED.
+
+## Phase 8 source-delivery traceability — 2026-09-27
+
+| Requirement | Delivered source | Offline evidence | Runtime status |
+|---|---|---|---|
+| Family 9 Emotional / Value Movement | `emotional.value_movement`, `Capabilities.EmotionalValueMovement` | focused source/capability tests | pending Codex |
+| Family 10 Theme & Meaning | `theme.meaning`, `Capabilities.ThemeMeaning` | focused source/capability tests | pending Codex |
+| Family 11 Genre Lens Packs | `genre.lens_pack`, `Packs`, `GenrePack`, `Catalog`, six optional core packs | pack/capability/source tests | pending Codex |
+| safe custom/hybrid pack | trust/source/ref/salience/intent/resource validation; install != enable | pack tests + doc examples | pending Codex |
+| constrained declarative lens | `Fount.Observe.DeclarativeLens` through registered projection/question/lens machinery | Observe/source tests | pending Codex |
+| Family 12 Revision Intelligence | `revision.intelligence`, explicit before/after runner + `compare_revision` | revision capability/runner tests | pending Codex |
+| revision presentation != diegetic != story time | source diff, StoryWorld transition/story-time and Reader trajectories kept separate | revision tests | pending Codex |
+| protected strengths/collateral/causal ripple | revision comparison packet fields | revision tests | pending Codex |
+| strategy distinctness without winner | existing StrategyContrast composition | runner tests | pending Codex |
+| preserve ten playbook IDs/defaults | WriterRegistry IDs unchanged; character default unchanged | architecture/source/runner tests | pending Codex |
+| no direct provider/runtime boundary leak | no Phase-8 direct SystemOneSDK/Inference/ASM use | source/API inspection | pending compiled architecture gate |
+| stop before Phase 9 | Workshop source unchanged; candidate remains nil | overlay inventory/source guard | PASS offline |
+
+This is source traceability only. Runtime verification/repair remains required before Phase 8 can be marked COMPLETE.
