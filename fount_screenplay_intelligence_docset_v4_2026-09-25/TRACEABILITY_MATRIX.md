@@ -279,6 +279,29 @@ The complete requirement/source/test mapping is `handoffs/PHASE_03_IMPLEMENTATIO
 | pure-core package boundary | new StoryWorld namespace; existing `Runner.Architecture` gate | `story_world_architecture_test.exs` + offline direct scans | source scan only; compiled gate unrun |
 | early StoryWorld structural/factual pilot | `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md` | at least 3 rights-cleared feature scripts/excerpts and 2 independent structural reviewers | **PENDING; no human result claimed** |
 
-W01–W12 later workflow rows are not advanced by this source delivery. Phase 4 Reader state, diagnosis, playbook-shell reasoning, durable persistence and Workshop integration remain NOT_STARTED.
+W01–W12 later workflow rows are not advanced by this source delivery. At the Phase-3 source-delivery checkpoint, Phase 4 Reader state, diagnosis, playbook-shell reasoning, durable persistence and Workshop integration were NOT_STARTED.
 
-**Runtime trace:** Fount `60f989bcb9935b28519c908f3cd123ad6efe172f` passed 244 four-package ExUnit tests, compiled architecture on 267 modules/229 source files, strict Credo, Dialyzer, ExDoc, isolated Core/Workshop integration (11/14 tests), writer accept/reject/PDF examples, and four package inspections. `story_world_temporal_test.exs` now also proves strict-cycle constraint provenance and contradictory pair-query abstention. The Level-A corpus/reviewer/reconciliation artifacts remain unrecorded; Phase 3 is `COMPLETE` under D045's explicit validation-debt override, and Phase 4 is `NOT_STARTED` but eligible to begin next.
+**Runtime trace:** Fount `60f989bcb9935b28519c908f3cd123ad6efe172f` passed 244 four-package ExUnit tests, compiled architecture on 267 modules/229 source files, strict Credo, Dialyzer, ExDoc, isolated Core/Workshop integration (11/14 tests), writer accept/reject/PDF examples, and four package inspections. `story_world_temporal_test.exs` now also proves strict-cycle constraint provenance and contradictory pair-query abstention. The Level-A corpus/reviewer/reconciliation artifacts remain unrecorded; Phase 3 is `COMPLETE` under D045's explicit validation-debt override, and At that Phase-3 checkpoint, Phase 4 was `NOT_STARTED` but eligible to begin next.
+
+## Phase 4 concrete source traceability - OFFLINE_IMPLEMENTED
+
+The complete current requirement/source/test mapping is `handoffs/PHASE_04_IMPLEMENTATION_MATRIX.md`. Runtime results are not yet available; the rows below are source-delivery evidence only.
+
+| Requirement / writer usefulness | Source | Tests or demonstration | Current evidence |
+|---|---|---|---|
+| event-qualified character/resource/commitment/knowledge views | `Fount.Intelligence.Temporal` | `temporal_views_test.exs` | written; Elixir unrun |
+| presentation/story-time coordinate separation | `Temporal.sequence_view/3`, `trajectory/5`; Phase-3 StoryWorld constraints | flashback/non-linear cases | written; no source-order chronology fallback |
+| directional relationship state | `Temporal.relationship_state/5` | asymmetric relationship case | written; Elixir unrun |
+| setup/payoff lifecycle | `Temporal.setup_payoff_ledger/2` | setup/payoff case | written; Elixir unrun |
+| story-time connected recomputation | `StoryTime.connected_nodes/2`; `Temporal.recomputation_region/2` | connected-region case | written; Elixir unrun |
+| first-reader forward-only checkpoints | `Fount.Intelligence.Reader.reduce/3`; Reader state/snapshot/event values | `reader_forward_test.exs` | written; Elixir unrun |
+| private material / future evidence cannot leak | Reader canonical-selection boundary + evidence validation | private-note and future-evidence cases | written; Python source guard PASS |
+| reader question/reveal/promise/threat/epistemic/relationship/audience-state ledgers | Reader reducers | lifecycle/flashback/suspense tests | written; Elixir unrun |
+| reader vs diegetic character knowledge | `Reader.knowledge_differential/6` + StoryWorld | `reader_story_world_differential_test.exs` | written; Elixir unrun |
+| presentation suffix recomputation | `Reader.recomputation_boundary/2` | suffix test | written; Elixir unrun |
+| provider/persistence-free core | Temporal/Reader namespace | direct Python source scan + compiled architecture gate required later | source scan PASS; compiled gate unrun |
+| writer-facing Phase-4 demonstration | `examples/phase_four.exs`; temporal/reader guide | runtime example | written; unrun |
+| first-reader human checkpoint pilot | `handoffs/PHASE_04_DOMAIN_REVIEW_PACKET.md` | >=3 rights-cleared scripts/excerpts; 3–5 readers/checkpoint target | **PENDING; no human result claimed** |
+
+Phase 5 Diagnosis/Acquisition/Playbooks and all later capability/persistence/Workshop work remain `NOT_STARTED`. The source-writing pass does not transfer Phase-3 runtime evidence to changed Phase-4 Intelligence source.
+

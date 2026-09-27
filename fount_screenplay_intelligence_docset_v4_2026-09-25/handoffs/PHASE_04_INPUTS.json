@@ -1,0 +1,79 @@
+{
+  "phase": 4,
+  "date": "2026-09-26",
+  "attachments": [
+    {
+      "role": "fount",
+      "input": "content-identified Fount XML",
+      "sha256": "8a7221ec431e5caa58eca416f545ad24061014f8663c8fd3e8f5b6404516e4db",
+      "bytes": 2056671,
+      "file_count": 448
+    },
+    {
+      "role": "system_one_sdk",
+      "input": "content-identified System One SDK XML",
+      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+      "bytes": 875342,
+      "file_count": 253
+    },
+    {
+      "role": "inference",
+      "input": "content-identified Inference XML",
+      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
+      "bytes": 299421,
+      "file_count": 69
+    },
+    {
+      "role": "docset",
+      "input": "content-identified current implementation docset XML",
+      "sha256": "2179f1c8bb4eff53b1f89897c9774d7162b7675b8366acb27787e90178302a63",
+      "bytes": 1078151,
+      "file_count": 89
+    }
+  ],
+  "identified_by_contents": {
+    "fount": "four-package Fount workspace containing packages/fount, fount_observe, fount_intelligence, and fount_workshop; Phase-3 StoryWorld QC-corrected source is present",
+    "system_one_sdk": "System One poncho workspace containing system_one_sdk, system_one_contracts, system_one_bumblebee, and system_one_server; public SystemOneSDK version 0.6.0",
+    "inference": "provider-neutral Inference repository containing apps/inference; public package version 0.5.0",
+    "docset": "numbered implementation documents 00-36 plus PROGRESS.md and Phase-1/2/3 handoff/QC history"
+  },
+  "sealed_snapshot_index_present": false,
+  "progress_basis": "PROGRESS.md records Phases 1-3 COMPLETE, with Phase-3 Level-A human review as explicit D045 validation debt, and Phase 4 Temporal and Forward-Reader Engine as the first phase not complete.",
+  "commit_identity_caveat": "The supplied raw Repomix XMLs do not contain current Git metadata or a sealed snapshot index. No current source commit is invented. The docset records the prior verified Phase-3 Fount commit as historical context only; Codex must record the user-applied Phase-4 commit during runtime QC.",
+  "sdk_api_inspection": {
+    "version": "0.6.0",
+    "public_functions_inspected": [
+      "version/0",
+      "new_client/1",
+      "system_one/4",
+      "noul/2",
+      "choice/3",
+      "score/3",
+      "prepare/1",
+      "prepare!/1",
+      "evaluate/4",
+      "evaluate!/4",
+      "evaluate_stream/4",
+      "evaluate_many/4",
+      "system_one!/4",
+      "list_models/2"
+    ],
+    "phase_4_usage": "none; Phase 4 remains pure Intelligence and System One remains behind Observe acquisition"
+  },
+  "inference_api_inspection": {
+    "version": "0.5.0",
+    "public_functions_inspected": [
+      "client/1",
+      "capabilities/1",
+      "client!/1",
+      "complete/3",
+      "stream/3"
+    ],
+    "phase_4_usage": "none; Inference remains Workshop-owned and outside pure Temporal/Reader reduction"
+  },
+  "omissions": [
+    "No Elixir/Erlang/Mix runtime is available in the source-writing environment.",
+    "No first-reader human checkpoint corpus or actual reader responses were supplied; the Phase-4 domain pilot remains pending and no human result is fabricated.",
+    "The Fount input contains scripts/tests/test_prune_deleted_directories.py but not scripts/prune_deleted_directories.py, so the repository-wide Python source suite has one pre-existing import failure unrelated to Phase 4."
+  ]
+}

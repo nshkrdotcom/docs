@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phases 1–3 COMPLETE; Phase 3 Level-A human review is visible validation debt under explicit user override; Phase 4 is next and NOT_STARTED
+**Current state:** Phases 1–3 COMPLETE; Phase 3 Level-A human review remains visible validation debt under D045; Phase 4 is OFFLINE_IMPLEMENTED and awaiting runtime QC plus the first-reader domain gate
 
 ## Status values
 
@@ -21,7 +21,7 @@ Runtime QC may establish engineering completion; phases with required human/doma
 | 1 | Direct Architecture Supersession and Probe Removal | COMPLETE | `fount_phase_01_overlay.zip` | `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | Engineering, storage, writer and architecture gates pass; live Luna alternatives output failures are user-authorized validation debt |
 | 2 | Observe Measurement Substrate Hardening | COMPLETE | `fount_phase_02_overlay.zip` | `handoffs/PHASE_02_RUNTIME_QC_REPORT.md` | Engineering, persistence, writer, package, architecture and authorized narrow live gate passed; no human quality claim |
 | 3 | Story-World Pure Core | COMPLETE | `fount_phase_03_overlay.zip` | `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` | Engineering QC passed at Fount `60f989b`; user explicitly deferred Level-A human review as visible validation debt |
-| 4 | Temporal and Forward-Reader Engine | NOT_STARTED | — | — | Temporal + Reader pure reducers |
+| 4 | Temporal and Forward-Reader Engine | OFFLINE_IMPLEMENTED | `fount_phase_04_overlay.zip` | — | Pure Temporal + Reader source/tests/example delivered; Elixir/runtime QC and first-reader pilot pending |
 | 5 | Diagnosis and Multi-Pass Playbook Shell | NOT_STARTED | — | — | Diagnosis + Acquisition + Playbooks |
 | 6 | Capabilities A: Scene/Agency/Character/Relationship | NOT_STARTED | — | — | Families 1–4 |
 | 7 | Capabilities B: Audience/Sequence/Dialogue/Setup-Payoff | NOT_STARTED | — | — | Families 5–8 |
@@ -51,6 +51,7 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-26 | 3 | Source implementation delivered | `fount_phase_03_overlay.zip`; `fount_phase_03_docset.zip`; `FOUNT_PHASE_03_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; pure StoryWorld source/tests/reference demo written; runtime QC and required Level-A human structural/factual review pending |
 | 2026-09-26 | 3 | Runtime QC and repairs | Fount applied `69b8537`, repair `60f989b`; docset applied `aabd58c`; `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` | Engineering ladder, isolated DB/writer/PDF and package checks passed; Level-A human gate remains pending |
 | 2026-09-26 | 3 | User-authorized validation-debt override | User: “yes make it so it wont stop phase 4, obviously.”; decision D045 | COMPLETE under the documented exception; Level-A human review remains unperformed and must not be claimed |
+| 2026-09-26 | 4 | Source implementation delivered | `fount_phase_04_overlay.zip`; `fount_phase_04_docset.zip`; `FOUNT_PHASE_04_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 23-file strict overlay verified offline; runtime QC and first-reader checkpoint pilot pending |
 
 ## Non-negotiable progress rule
 
@@ -99,10 +100,21 @@ Phase 2 is **COMPLETE** on the evidence in `handoffs/PHASE_02_RUNTIME_QC_REPORT.
 
 Phase 3 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The source overlay adds the pure `Fount.Intelligence.StoryWorld` reference core: evidence-backed narrative records, reality scopes, event-qualified state, partial diegetic story-time constraints, independent causality, dependency/counterfactual primitives, and deterministic writer-facing reference JSON/Markdown. The provider-free example and new ExUnit tests are written but unrun because this source-writing environment has no Elixir/Erlang/Mix.
 
-Read `handoffs/PHASE_03_OFFLINE_HANDOFF.md`, `handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md`, and `handoffs/PHASE_03_RUNTIME_QC_HANDOFF.md`. Codex starts from the user-applied commits, verifies overlay hashes, formats/compiles/tests/repairs Phase 3, reruns full preservation gates, and records actual evidence. The required Level-A structural/factual human review is prepared in `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md` and must not be fabricated. If engineering QC passes but real reviewers are still pending, use `DOMAIN_REVIEW_PENDING`; do not mark COMPLETE unless the review is recorded or the user explicitly authorizes visible validation debt. Phase 4 and later phases remain NOT_STARTED.
+Read `handoffs/PHASE_03_OFFLINE_HANDOFF.md`, `handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md`, and `handoffs/PHASE_03_RUNTIME_QC_HANDOFF.md`. Codex starts from the user-applied commits, verifies overlay hashes, formats/compiles/tests/repairs Phase 3, reruns full preservation gates, and records actual evidence. The required Level-A structural/factual human review is prepared in `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md` and must not be fabricated. If engineering QC passes but real reviewers are still pending, use `DOMAIN_REVIEW_PENDING`; do not mark COMPLETE unless the review is recorded or the user explicitly authorizes visible validation debt. At that historical checkpoint, Phase 4 and later phases were NOT_STARTED.
 
 ## Phase 3 runtime QC checkpoint - 2026-09-26
 
 Phase 3 engineering QC passed at Fount `60f989bcb9935b28519c908f3cd123ad6efe172f` (tree `dceb415ceb697eabed1fb84eb091a71fe1666458`). The original 29-file overlay hashes were verified before repair; the repair inventory is appended to `handoffs/PHASE_03_FILE_INVENTORY.json`. Four-package `mix ci`, the compiled architecture gate, 244 ExUnit tests, isolated database/Workshop writer and PDF checks, all four package builds, and the Phase-3 example passed. Details and command exit codes are in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`.
 
-The rights-cleared three-case corpus, two independent structural reviews, and reconciliation required by `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md` have not occurred. At the runtime-QC checkpoint Phase 3 was `DOMAIN_REVIEW_PENDING`. The user subsequently authorized deferral as visible validation debt; see decision D045 and the report addendum. Phase 3 is now `COMPLETE` under that explicit exception, and Phase 4 remains `NOT_STARTED` but is eligible to begin in a later pass.
+The rights-cleared three-case corpus, two independent structural reviews, and reconciliation required by `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md` have not occurred. At the runtime-QC checkpoint Phase 3 was `DOMAIN_REVIEW_PENDING`. The user subsequently authorized deferral as visible validation debt; see decision D045 and the report addendum. Phase 3 is now `COMPLETE` under that explicit exception, and At that historical checkpoint, Phase 4 was `NOT_STARTED` but eligible to begin in a later pass.
+
+## Phase 4 offline delivery - 2026-09-26
+
+Phase 4 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The source overlay implements pure diegetic Temporal views and a strict forward-only Reader reducer on top of the verified Phase-3 StoryWorld baseline. It separates screenplay presentation checkpoints from partial diegetic story time, rejects future-evidence leakage, excludes private/non-performed material from ordinary reader exposure, exposes question/reveal/expectation/promise/threat/epistemic/relationship/suspense/curiosity/surprise/comprehension/alignment/forward-pull state, compares reader-visible versus diegetic knowledge, and supplies separate presentation-suffix and story-time-connected recomputation boundaries.
+
+Read `handoffs/PHASE_04_OFFLINE_HANDOFF.md`, `handoffs/PHASE_04_IMPLEMENTATION_MATRIX.md`, `handoffs/PHASE_04_PRESERVATION_AUDIT.md`, and `handoffs/PHASE_04_RUNTIME_QC_HANDOFF.md`. The overlay has 12 additions and 11 modifications with no deletions. Offline Phase-4 source checks and strict overlay application passed; the global Python source suite still exposes the input-only missing `scripts/prune_deleted_directories.py` helper. Elixir/Mix checks were not available and are not claimed.
+
+The real first-reader checkpoint study is prepared in `handoffs/PHASE_04_DOMAIN_REVIEW_PACKET.md` and has not been performed. After engineering QC, use `DOMAIN_REVIEW_PENDING` if that human gate is still absent unless the user explicitly authorizes a visible validation-debt override.
+
+**Phase 5 and all later phases remain NOT_STARTED. Codex must stop after repairing/testing/completing the Phase-4 gate state.**
+

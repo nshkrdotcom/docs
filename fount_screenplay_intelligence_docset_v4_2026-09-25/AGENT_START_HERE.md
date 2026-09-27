@@ -17,9 +17,9 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phase 3 - Story-World Pure Core: COMPLETE under explicit human-review validation-debt override. Phase 4 is next and NOT_STARTED.**
+> **Phase 4 - Temporal and Forward-Reader Engine: OFFLINE_IMPLEMENTED. Runtime QC and the real first-reader domain gate are pending. Phase 5 is NOT_STARTED.**
 
-Read `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`, decision D045, and `PROGRESS.md` for the verified Phase-3 source and visible Level-A debt. The next implementation pass may begin Phase 4 from Fount commit `60f989bcb9935b28519c908f3cd123ad6efe172f`; this override pass does not implement it. Phases 1 and 2 remain COMPLETE under their recorded QC evidence.
+Read `handoffs/PHASE_04_OFFLINE_HANDOFF.md`, `handoffs/PHASE_04_RUNTIME_QC_HANDOFF.md`, and `PROGRESS.md`. The user applies/commits the Phase-4 artifacts first; Codex then verifies that applied state, runs/repairs Phase 4, records runtime evidence, and stops. Phase 3 remains COMPLETE under D045 with its separate Level-A validation debt.
 
 ## Read before coding
 
@@ -94,6 +94,6 @@ Before implementing any phase after Phase 2, read:
 
 Do not fabricate human validation. When a phase requires a human/domain pilot, produce the evaluation artifacts and handoff instructions, then leave the domain gate pending until actual review occurs.
 
-### Current Phase 3 checkpoint
+### Current Phase 4 checkpoint
 
-Phase 2 is `COMPLETE` after the runtime QC recorded in `handoffs/PHASE_02_RUNTIME_QC_REPORT.md`. Phase 3 engineering QC passed at Fount `60f989bcb9935b28519c908f3cd123ad6efe172f`; see `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. The user explicitly deferred Phase-3 Level-A human review as visible validation debt in D045, so Phase 3 is `COMPLETE` under that exception. Phase 4 is eligible to begin in the next implementation pass; its own requirements and gates still apply.
+Phase 4 source implementation has been delivered but has not passed Elixir/runtime QC in this source-writing environment. Its first-reader checkpoint pilot is also pending. Codex must start from the user-applied Phase-4 commit, run/repair the current phase, update the docset, and stop before Phase 5. If engineering passes before real reader validation, use `DOMAIN_REVIEW_PENDING` unless the user explicitly authorizes visible validation debt.

@@ -83,6 +83,7 @@
 - `handoffs/` — phase-specific offline and QC handoffs are added during implementation.
 - `handoffs/PREPARATION_2026-09-26.md` — source baselines and actual preparation checks; not a completed implementation phase.
 - `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` — applied source identity, engineering repairs and gates, and user-authorized Level-A validation debt.
+- `handoffs/PHASE_04_OFFLINE_HANDOFF.md` / `PHASE_04_RUNTIME_QC_HANDOFF.md` — current source delivery and Codex repair/QC instructions.
 
 ## Four XML phase inputs
 
@@ -95,7 +96,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phases 1–3 are COMPLETE; Phase 3 carries visible human-review validation debt under decision D045. Phase 4 is next and NOT_STARTED. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phases 1–3 are COMPLETE; Phase 3 carries visible human-review validation debt under D045. Phase 4 is OFFLINE_IMPLEMENTED and awaiting runtime QC plus the first-reader domain gate. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -140,3 +141,15 @@ These are historical Phase 1 records. Its runtime-QC report records COMPLETE wit
 - `handoffs/PHASE_03_RUNTIME_QC_HANDOFF.md`: Codex verifies the user-applied Phase-3 state, repairs it, runs engineering QC, then stops before Phase 4.
 
 Phase-3 runtime QC is recorded in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. No human-review result is fabricated. The user explicitly deferred the Level-A pilot as visible validation debt in D045, allowing Phase 4 to start in a later pass.
+
+## Phase 4 delivery records
+
+- `handoffs/PHASE_04_INPUTS.json`: current four content-identified raw XML identities plus inspected System One/Inference public API boundaries.
+- `handoffs/PHASE_04_FILE_INVENTORY.json`: exact 23-file Fount overlay inventory with preimage/result hashes and modes.
+- `handoffs/PHASE_04_IMPLEMENTATION_MATRIX.md`: every Temporal/Reader requirement mapped to source/tests/example.
+- `handoffs/PHASE_04_PRESERVATION_AUDIT.md`: unchanged Core/Observe/Workshop/StoryWorld functionality and required reruns.
+- `handoffs/PHASE_04_DOMAIN_REVIEW_PACKET.md`: rights-aware first-reader checkpoint pilot; no human participants/results fabricated.
+- `handoffs/PHASE_04_STATIC_CHECKS.json`: actual offline source/archive results and explicit unrun runtime gates.
+- `handoffs/PHASE_04_OFFLINE_HANDOFF.md`: current source-delivery account.
+- `handoffs/PHASE_04_RUNTIME_QC_HANDOFF.md`: Codex verifies the applied Phase-4 state, repairs/tests it, records the domain-gate state, and stops before Phase 5.
+
