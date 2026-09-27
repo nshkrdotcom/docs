@@ -260,3 +260,24 @@ full later session workflow is not claimed complete. No other later-phase row is
 advanced. Prior Phase 1 runtime evidence does not transfer to changed source.
 
 Phase 2 QC verified all 19 rows in `handoffs/PHASE_02_IMPLEMENTATION_MATRIX.md` with the 232-test workspace suite, compiled boundary gate, isolated database and writer examples, one capped live SDK request and four package builds. Later W01/W11 session work remains assigned to later phases.
+
+## Phase 3 concrete source traceability - OFFLINE_IMPLEMENTED
+
+The complete requirement/source/test mapping is `handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md`. The source-writing pass adds the pure StoryWorld core only; Elixir/runtime checks and the required Level-A human structural/factual pilot remain pending. The rows below are source traceability, not QC verification.
+
+| Requirement / writer usefulness | Source | Tests or demonstration | Offline status |
+|---|---|---|---|
+| canonical + frozen-observation StoryWorld compile | `story_world.ex`; `story_world/compiler.ex`; `story_world/evidence.ex` | `story_world_reference_test.exs`; `story_world_records_test.exs` | written; runtime unrun |
+| event-qualified facts/state/knowledge | `story_world/values.ex`; `story_world/query.ex`; `story_world/consistency.ex` | `story_world_temporal_test.exs`; `story_world_records_test.exs` | written; runtime unrun |
+| presentation order separate from diegetic chronology | compiler presentation points; `story_world/story_time.ex` | flashback/unknown/overlap tests | written; no scene-order fallback |
+| partial story-time with ambiguity/contradiction/evidence | `story_world/story_time.ex` | `story_world_temporal_test.exs` | written; runtime unrun |
+| reality/narrative scopes | `NarrativeScope`; compiler scope validation; scoped queries | `story_world_scope_causality_test.exs` | written; runtime unrun |
+| causal graph independent from time | `story_world/causal.ex`; causal queries | `story_world_scope_causality_test.exs` | written; runtime unrun |
+| connected recomputation/counterfactual support impact | `story_world/dependency_index.ex`; `story_world/counterfactual.ex` | `story_world_reference_test.exs`; records dependency case | written; no replacement-page generation |
+| writer-facing semantic packet/reference renderer | `story_world/inspection.ex`; `story_world/renderer.ex` | deterministic reference test; `examples/phase_three.exs` | written; demo unrun |
+| Phase-2 extraction usefulness retained | compiler legacy normalization + unchanged `story_world/records.ex` | legacy `events` preservation test | written; runtime unrun |
+| pure-core package boundary | new StoryWorld namespace; existing `Runner.Architecture` gate | `story_world_architecture_test.exs` + offline direct scans | source scan only; compiled gate unrun |
+| early StoryWorld structural/factual pilot | `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md` | at least 3 rights-cleared feature scripts/excerpts and 2 independent structural reviewers | **PENDING; no human result claimed** |
+
+W01–W12 later workflow rows are not advanced by this source delivery. Phase 4 Reader state, diagnosis, playbook-shell reasoning, durable persistence and Workshop integration remain NOT_STARTED.
+

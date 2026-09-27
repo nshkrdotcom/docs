@@ -1,0 +1,58 @@
+{
+  "phase": 3,
+  "date": "2026-09-26",
+  "attachments": [
+    {
+      "role": "fount",
+      "input": "content-identified Fount XML",
+      "sha256": "89c7e363389ccf6414c94664a6224e6134b0be90064971f0461e659372faf430",
+      "bytes": 1910830,
+      "file_count": 428
+    },
+    {
+      "role": "system_one_sdk",
+      "input": "content-identified System One SDK XML",
+      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+      "bytes": 875342,
+      "file_count": 253
+    },
+    {
+      "role": "inference",
+      "input": "content-identified Inference XML",
+      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
+      "bytes": 299421,
+      "file_count": 69
+    },
+    {
+      "role": "docset",
+      "input": "content-identified current implementation docset XML",
+      "sha256": "8c1586b780c818012b6a965630b0f44028ea60f9d88b231202947473290c446c",
+      "bytes": 971776,
+      "file_count": 80
+    }
+  ],
+  "identified_by_contents": {
+    "fount": "four-package Fount workspace with canonical fount, fount_observe, fount_intelligence and fount_workshop plus Phase-2 QC source",
+    "system_one_sdk": "System One monorepo containing packages/system_one_sdk; public version 0.6.0",
+    "inference": "Inference repository containing apps/inference; public package version 0.5.0",
+    "docset": "numbered documents 00-36, PROGRESS.md, AGENT_START_HERE.md, and Phase-1/2 handoff/QC records"
+  },
+  "sealed_snapshot_index_present": false,
+  "progress_basis": "PROGRESS.md records Phase 1 COMPLETE, Phase 2 COMPLETE, Phase 3 Story-World Pure Core NOT_STARTED; Phase 3 is therefore the current phase.",
+  "commit_identity_caveat": "The supplied XMLs are raw Repomix exports without a current snapshot_index. Current source commit IDs are not invented; Codex must record the user's actual applied commits during runtime QC.",
+  "sdk_api_inspection": {
+    "version": "0.6.0",
+    "public_functions_inspected": ["version/0", "new_client/1", "noul/2", "choice/3", "score/3", "prepare/1", "evaluate/4", "evaluate_stream/4"],
+    "phase_3_usage": "none; System One remains behind Observe acquisition"
+  },
+  "inference_api_inspection": {
+    "version": "0.5.0",
+    "public_functions_inspected": ["client/1", "client!/1", "complete/3", "stream/3", "capabilities/1"],
+    "phase_3_usage": "none; Inference remains outside the pure StoryWorld core"
+  },
+  "omissions": [
+    "No current Git metadata or sealed snapshot index is present in the four raw XML attachments.",
+    "No Elixir/Erlang/Mix runtime is available in the source-writing environment.",
+    "No rights-cleared human-review corpus or completed Phase-3 structural reviewers are supplied; the domain pilot must remain pending rather than fabricated."
+  ]
+}

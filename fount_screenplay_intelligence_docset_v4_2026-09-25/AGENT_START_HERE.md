@@ -17,9 +17,9 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phase 2 - Observe Measurement Substrate Hardening: COMPLETE after runtime QC**
+> **Phase 3 - Story-World Pure Core: OFFLINE_IMPLEMENTED; runtime/domain QC pending**
 
-Read `handoffs/PHASE_02_RUNTIME_QC_HANDOFF.md`. Verify and repair this source delivery rather than restarting it or beginning Phase 3. Phase 1 is COMPLETE under its recorded live-output waiver.
+Read `handoffs/PHASE_03_RUNTIME_QC_HANDOFF.md`, `handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md`, and `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md`. Verify and repair the user-applied Phase-3 source rather than restarting it or beginning Phase 4. Phases 1 and 2 are COMPLETE under their recorded QC evidence.
 
 ## Read before coding
 
@@ -94,6 +94,6 @@ Before implementing any phase after Phase 2, read:
 
 Do not fabricate human validation. When a phase requires a human/domain pilot, produce the evaluation artifacts and handoff instructions, then leave the domain gate pending until actual review occurs.
 
-### Current Phase 2 checkpoint
+### Current Phase 3 checkpoint
 
-Phase 2 is `COMPLETE` after the runtime QC recorded in `handoffs/PHASE_02_RUNTIME_QC_REPORT.md`. The original inputs were unsealed; the applied overlay was hash-verified before repair. Fresh sealed post-QC snapshots and identities are recorded in `handoffs/PHASE_02_PACKET_RECORD.md`. This handoff stops after Phase 2; Phase 3 was not implemented.
+Phase 2 is `COMPLETE` after the runtime QC recorded in `handoffs/PHASE_02_RUNTIME_QC_REPORT.md`. Phase 3 is now `OFFLINE_IMPLEMENTED`: its pure StoryWorld source, tests, provider-free demonstration, strict overlay, and Level-A human-review packet are delivered, but Elixir/runtime checks and actual independent structural review are not claimed. Codex verifies/repairs the applied Phase-3 commits and records engineering QC. If the required human review is still outstanding after engineering QC, set `DOMAIN_REVIEW_PENDING`. Do not begin Phase 4 in the same pass.

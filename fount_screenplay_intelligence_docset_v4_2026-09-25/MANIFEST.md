@@ -94,7 +94,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phase 2 is now offline implemented and awaiting QC; use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phases 1 and 2 are COMPLETE; Phase 3 is offline implemented and awaiting runtime/domain QC. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -113,7 +113,7 @@ Documents 32–36 add screenplay-first research, writer workflows, actual SDK co
 - `handoffs/PHASE_01_STATIC_CHECKS.json`
 - `handoffs/PHASE_01_FILE_INVENTORY.json`
 
-These are historical Phase 1 records. Its runtime-QC report records COMPLETE with the explicit Luna-output debt. Phase 2 source delivery records follow.
+These are historical Phase 1 records. Its runtime-QC report records COMPLETE with the explicit Luna-output debt. Phase 2 records follow.
 
 ## Phase 2 delivery records
 
@@ -125,4 +125,17 @@ These are historical Phase 1 records. Its runtime-QC report records COMPLETE wit
 - `handoffs/PHASE_02_OFFLINE_HANDOFF.md`: source delivery account.
 - `handoffs/PHASE_02_RUNTIME_QC_HANDOFF.md`: Codex verifies the user-applied state, repairs Phase 2, then stops.
 
-No Phase 2 runtime-QC report is fabricated. Add it only after the actual runtime pass.
+`handoffs/PHASE_02_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_02_PACKET_RECORD.md` now record the actual Phase-2 completion evidence.
+
+## Phase 3 delivery records
+
+- `handoffs/PHASE_03_INPUTS.json`: content-identified raw XML identities and API inspection scope.
+- `handoffs/PHASE_03_FILE_INVENTORY.json`: exact added/modified inventory, byte hashes, modes and test declarations.
+- `handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md`: Phase-3 requirements mapped to source/tests/demo.
+- `handoffs/PHASE_03_PRESERVATION_AUDIT.md`: source areas left unchanged and full regression obligations.
+- `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md`: rights-aware Level-A human structural/factual review protocol; no fabricated reviewers/results.
+- `handoffs/PHASE_03_STATIC_CHECKS.json`: checks actually executed in the offline environment and explicit unrun gates.
+- `handoffs/PHASE_03_OFFLINE_HANDOFF.md`: source-delivery account and stop line.
+- `handoffs/PHASE_03_RUNTIME_QC_HANDOFF.md`: Codex verifies the user-applied Phase-3 state, repairs it, runs engineering QC, then stops before Phase 4.
+
+No Phase-3 runtime-QC or human-review result is fabricated. Add the runtime report only after actual execution; mark `DOMAIN_REVIEW_PENDING` if engineering QC passes while real reviewers remain outstanding.

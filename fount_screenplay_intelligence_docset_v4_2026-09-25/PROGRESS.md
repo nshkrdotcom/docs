@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phase 1 and Phase 2 COMPLETE; stop after Phase 2 QC in this handoff
+**Current state:** Phase 1 and Phase 2 COMPLETE; Phase 3 OFFLINE_IMPLEMENTED; runtime/domain QC next; do not begin Phase 4
 
 ## Status values
 
@@ -20,7 +20,7 @@ Runtime QC may establish engineering completion; phases with required human/doma
 |---:|---|---|---|---|---|
 | 1 | Direct Architecture Supersession and Probe Removal | COMPLETE | `fount_phase_01_overlay.zip` | `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | Engineering, storage, writer and architecture gates pass; live Luna alternatives output failures are user-authorized validation debt |
 | 2 | Observe Measurement Substrate Hardening | COMPLETE | `fount_phase_02_overlay.zip` | `handoffs/PHASE_02_RUNTIME_QC_REPORT.md` | Engineering, persistence, writer, package, architecture and authorized narrow live gate passed; no human quality claim |
-| 3 | Story-World Pure Core | NOT_STARTED | — | — | StoryWorld namespace |
+| 3 | Story-World Pure Core | OFFLINE_IMPLEMENTED | `fount_phase_03_overlay.zip` | — | Pure StoryWorld source/tests/demo written; runtime QC and Level-A structural/factual human review pending |
 | 4 | Temporal and Forward-Reader Engine | NOT_STARTED | — | — | Temporal + Reader pure reducers |
 | 5 | Diagnosis and Multi-Pass Playbook Shell | NOT_STARTED | — | — | Diagnosis + Acquisition + Playbooks |
 | 6 | Capabilities A: Scene/Agency/Character/Relationship | NOT_STARTED | — | — | Families 1–4 |
@@ -48,6 +48,7 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-26 | 1 | Runtime QC completion and release follow-up | Fount `b82b656`; SDK `e757598`; Inference `3750a03`; `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | COMPLETE; Core/SDK/ASM/Inference releases verified and published; large-prompt transport fixed; Luna alternatives model-output debt retained |
 | 2026-09-26 | 2 | Source implementation delivered | `fount_phase_02_overlay.zip`; `fount_phase_02_docset.zip`; `PHASE_02_RUNTIME_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; Python source/asset and strict archive checks recorded separately; runtime and live gates pending |
 | 2026-09-26 | 2 | Runtime QC and repairs | applied Fount `2eea821`, docset `819c1c6`; Fount repair `08c2c44`; `handoffs/PHASE_02_RUNTIME_QC_REPORT.md` | COMPLETE; full CI, isolated DB/writer/PDF, package builds, deterministic examples and authorized synthetic live TypeSafe measurement passed |
+| 2026-09-26 | 3 | Source implementation delivered | `fount_phase_03_overlay.zip`; `fount_phase_03_docset.zip`; `FOUNT_PHASE_03_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; pure StoryWorld source/tests/reference demo written; runtime QC and required Level-A human structural/factual review pending |
 
 ## Non-negotiable progress rule
 
@@ -63,11 +64,11 @@ This does not apply retroactively to Phase 1. Human/domain validation must never
 
 Source overlay: `fount_phase_01_overlay.zip`. Complete updated docset: `fount_phase_01_docset.zip`. Runtime agent prompt: `FOUNT_PHASE_01_CODEX_QC_HANDOFF.md` (also retained under `handoffs/`).
 
-At that historical delivery the user applied and committed, and Codex repaired Phase 1. Its original offline stop rule is superseded by the recorded Phase 1 COMPLETE checkpoint; Phase 2 is now the current source delivery. Do not reapply either overlay during runtime QC.
+At that historical delivery the user applied and committed, and Codex repaired Phase 1. Its original offline stop rule is superseded by the recorded Phase 1 COMPLETE checkpoint. Phase 2 is also COMPLETE; Phase 3 is the current source delivery. Do not reapply historical overlays during runtime QC.
 
 The offline Python source/transport checks and the gates that were unrun at delivery remain recorded as historical results in `handoffs/PHASE_01_STATIC_CHECKS.json`. Exact original checkout byte identity is unverified because the four input exports were unsealed. The strict manifest is based on decoded source bodies; no mismatch bypass or unknown-file deletion was permitted.
 
-Runtime QC supersedes the preceding offline-only expectation. Actual commands, fixes, live results and remaining blockers are in `handoffs/PHASE_01_RUNTIME_QC_REPORT.md`. The original raw-input identity gap is retained; fresh sealed snapshots describe the post-QC source only. Phase 2 was NOT_STARTED at the Phase 1 QC checkpoint. The current Phase 2 source delivery is recorded below.
+Runtime QC supersedes the preceding offline-only expectation. Actual commands, fixes, live results and remaining blockers are in `handoffs/PHASE_01_RUNTIME_QC_REPORT.md`. The original raw-input identity gap is retained; fresh sealed snapshots describe the post-QC source only. Phase 2 was NOT_STARTED at the Phase 1 QC checkpoint; its later delivery and completion are recorded below.
 
 ## Historical Phase 2 offline delivery - 2026-09-26
 
@@ -90,4 +91,10 @@ unchanged; that waiver does not waive Phase 2's measurement checks.
 
 ## Phase 2 runtime QC completion - 2026-09-26
 
-Phase 2 is **COMPLETE** on the evidence in `handoffs/PHASE_02_RUNTIME_QC_REPORT.md`. The prior OFFLINE_IMPLEMENTED checkpoint and its unrun claims describe the historical source delivery only. The user authorized a small synthetic live measurement; no human creative-quality or empirical calibration claim was made. Phase 3 remains NOT_STARTED and was not begun in this QC pass.
+Phase 2 is **COMPLETE** on the evidence in `handoffs/PHASE_02_RUNTIME_QC_REPORT.md`. The prior OFFLINE_IMPLEMENTED checkpoint and its unrun claims describe the historical source delivery only. The user authorized a small synthetic live measurement; no human creative-quality or empirical calibration claim was made. Phase 3 was not begun in that QC pass.
+
+## Phase 3 offline delivery - 2026-09-26
+
+Phase 3 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The source overlay adds the pure `Fount.Intelligence.StoryWorld` reference core: evidence-backed narrative records, reality scopes, event-qualified state, partial diegetic story-time constraints, independent causality, dependency/counterfactual primitives, and deterministic writer-facing reference JSON/Markdown. The provider-free example and new ExUnit tests are written but unrun because this source-writing environment has no Elixir/Erlang/Mix.
+
+Read `handoffs/PHASE_03_OFFLINE_HANDOFF.md`, `handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md`, and `handoffs/PHASE_03_RUNTIME_QC_HANDOFF.md`. Codex starts from the user-applied commits, verifies overlay hashes, formats/compiles/tests/repairs Phase 3, reruns full preservation gates, and records actual evidence. The required Level-A structural/factual human review is prepared in `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md` and must not be fabricated. If engineering QC passes but real reviewers are still pending, use `DOMAIN_REVIEW_PENDING`; do not mark COMPLETE unless the review is recorded or the user explicitly authorizes visible validation debt. Phase 4 and later phases remain NOT_STARTED.

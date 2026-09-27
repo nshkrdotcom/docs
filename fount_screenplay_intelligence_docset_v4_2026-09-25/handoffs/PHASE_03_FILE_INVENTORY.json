@@ -1,0 +1,394 @@
+{
+  "phase": 3,
+  "status": "OFFLINE_IMPLEMENTED",
+  "date": "2026-09-26",
+  "summary": {
+    "added": 21,
+    "modified": 8,
+    "deleted": 0
+  },
+  "files": [
+    {
+      "path": "handoff/PHASE_03_SOURCE_NOTES.md",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "7b10dd02c52e40cd99096ded7d8e74fce1d2fa96229234c08f2999c9cdf7073c",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 4705,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/examples/phase_three.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "41892eda21952ed41cd8988070f56e5968121ed27b0ea411a0113c71cb993f66",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 3277,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/guides/story-world.md",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "8fa40e333edb769a1ddc5143af16a04d6a313468982a5998a94df8b1158c53df",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 6590,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/causal.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "3648874cbab03cabe7eb3b15a6d7079b3beb5e1d3a75ea47fdbd9f890fd3505b",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 1638,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/compiler.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "e36f7f2ab488c695d186ca9503e813ba7f808d3e14aaea94de9159c4059f4bf6",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 44257,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/consistency.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "b535272a8e292ed346970db277ab19960fe3c29f9706b867c44660a1875fc1d4",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 3640,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/counterfactual.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "46823ffcbe491cc956a4c7157f834a6cab7a83221e75b9e54eac44b914ded61f",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 2703,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/dependency_index.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "c4b3336d88ed5d399847b64d06b99b63329575b4e028e68514fc239207f21555",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 2463,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/evidence.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "8d2df87a9aef644657cf08e0eec63577ee5d904819104084e838e9f8d3a926ee",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 3484,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/inspection.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "a0db1a7f36a0dce1bb23805af7f9a8daa09cf1c8621b1d132b4e68758959ea2e",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 5935,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/query.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "157861e0d5c40d6be9d60fe276ca851e8bb724c5e75b165609ca093b932c8d8a",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 5360,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/renderer.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "790cdb35eb882198168f15c4a07ca6dcbbe6e2cf1f012f322b0be34516c1f290",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 4438,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/story_time.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "5771250ddc00a1d497638d28c6926c9d4d6363dcc667a1084e6f769a140e6118",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 8837,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/values.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "e07dcdccc3edf7bd6b4f6b64cca5154e6577e46d694278b6319ab2db93f03a85",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 7052,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "dca7ea134b0e449f3e6c899af8cdf999ca330ae4e381d213a9333d867194e34d",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 2214,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/test/story_world_architecture_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "184a4b86dab6677a3cb770e5a163902be377af64ebfcea88a1fb9b3bb8754c97",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 1035,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/test/story_world_records_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "0a805d391ecb7aff6193b80346c268517ac1260dde18b65b2f02bec4d21deaeb",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 4049,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/test/story_world_reference_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "7289508dc2d18b589b25e24340a14803a5cd5abc175915c1fef8501430075fd1",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 3268,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/test/story_world_scope_causality_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "bd097426868d479b3e480d42d4e53269b9d4ad5c2a59efa761798a0ba16a92eb",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 2606,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/test/story_world_temporal_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "04bb83f8d34bf100650c4d1353672a70daa5b2d017ea5be8347a625e0988b5fd",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 4268,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/test/support/story_world_fixture.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "103057a9dc02e36b71bdcbff9fb25161bf48137cd78e9bd74bfd5d058d2bde93",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 2582,
+      "original_evidence": null
+    },
+    {
+      "path": "packages/fount_intelligence/CHANGELOG.md",
+      "action": "modify",
+      "original_sha256": "4d04186876bec9ee509adaddb776225761de0cc68bf718f359ec9b8c37de7857",
+      "result_sha256": "620fa56e4d80621464910f53352aae6cf478f27c2c757c5c271c03834ee8e182",
+      "mode": 420,
+      "original_bytes": 248,
+      "result_bytes": 941,
+      "original_evidence": {
+        "sha256": "4d04186876bec9ee509adaddb776225761de0cc68bf718f359ec9b8c37de7857",
+        "bytes": 248,
+        "basis": "supplied_Fount_XML_decoded_file_body",
+        "caveat": "raw Repomix input has no current snapshot_index/Git seal"
+      }
+    },
+    {
+      "path": "packages/fount_intelligence/README.md",
+      "action": "modify",
+      "original_sha256": "f39dfa2554fca65a8877cd49c609c119d73dc90ff67dfdf5333bf23ccb589aa9",
+      "result_sha256": "04f2e92163beeb7c7f4c617e54177a2af3c7f72b6be18776edcc7f795a1deaad",
+      "mode": 420,
+      "original_bytes": 2334,
+      "result_bytes": 3345,
+      "original_evidence": {
+        "sha256": "f39dfa2554fca65a8877cd49c609c119d73dc90ff67dfdf5333bf23ccb589aa9",
+        "bytes": 2334,
+        "basis": "supplied_Fount_XML_decoded_file_body",
+        "caveat": "raw Repomix input has no current snapshot_index/Git seal"
+      }
+    },
+    {
+      "path": "packages/fount_intelligence/examples/README.md",
+      "action": "modify",
+      "original_sha256": "4a0df12eacbdc1a4f450a82cba88d6ac1c9506b27c760a166209a652d60ce5bc",
+      "result_sha256": "584b5c5882ebcc3530fdf32413be6ebea33af415cb501d2bed0310056cc62859",
+      "mode": 420,
+      "original_bytes": 692,
+      "result_bytes": 1147,
+      "original_evidence": {
+        "sha256": "4a0df12eacbdc1a4f450a82cba88d6ac1c9506b27c760a166209a652d60ce5bc",
+        "bytes": 692,
+        "basis": "supplied_Fount_XML_decoded_file_body",
+        "caveat": "raw Repomix input has no current snapshot_index/Git seal"
+      }
+    },
+    {
+      "path": "packages/fount_intelligence/guides/architecture.md",
+      "action": "modify",
+      "original_sha256": "af978408e512cb082d1e161579d88ea526a59a24dba78ec680cffd8c9e219c58",
+      "result_sha256": "bbd6241e045a99d80eac2cde22884ad1de35e3c9d2179b552daf4ec53eb8eab9",
+      "mode": 420,
+      "original_bytes": 2538,
+      "result_bytes": 3423,
+      "original_evidence": {
+        "sha256": "af978408e512cb082d1e161579d88ea526a59a24dba78ec680cffd8c9e219c58",
+        "bytes": 2538,
+        "basis": "supplied_Fount_XML_decoded_file_body",
+        "caveat": "raw Repomix input has no current snapshot_index/Git seal"
+      }
+    },
+    {
+      "path": "packages/fount_intelligence/guides/usage.md",
+      "action": "modify",
+      "original_sha256": "ffa36ab259430083180aec39f25adbdfd9ceda61168109f98cf9b21814eb1ff7",
+      "result_sha256": "ca9977ab8526c39b1ee2a019be93d07a688fbd90a812751fa20608fb7ba01807",
+      "mode": 420,
+      "original_bytes": 2905,
+      "result_bytes": 3782,
+      "original_evidence": {
+        "sha256": "ffa36ab259430083180aec39f25adbdfd9ceda61168109f98cf9b21814eb1ff7",
+        "bytes": 2905,
+        "basis": "supplied_Fount_XML_decoded_file_body",
+        "caveat": "raw Repomix input has no current snapshot_index/Git seal"
+      }
+    },
+    {
+      "path": "packages/fount_intelligence/guides/verification.md",
+      "action": "modify",
+      "original_sha256": "516c51af902088dd6314a8b5ff56855b9db9ee408e37b9b5e177c86981879a0c",
+      "result_sha256": "e7912777f26ae301a338c57c67857de78b3ef6b1e7bffdaf2847a25bb50bda47",
+      "mode": 420,
+      "original_bytes": 1294,
+      "result_bytes": 2081,
+      "original_evidence": {
+        "sha256": "516c51af902088dd6314a8b5ff56855b9db9ee408e37b9b5e177c86981879a0c",
+        "bytes": 1294,
+        "basis": "supplied_Fount_XML_decoded_file_body",
+        "caveat": "raw Repomix input has no current snapshot_index/Git seal"
+      }
+    },
+    {
+      "path": "packages/fount_intelligence/mix.exs",
+      "action": "modify",
+      "original_sha256": "fcf87a8d42878cf84130a5e17114fa2729035f17f45547ca61815ba1c94adf65",
+      "result_sha256": "496c5f51e5973afcc32999595e61059c586ce979925327cf750c476a3d4c1e3a",
+      "mode": 420,
+      "original_bytes": 2917,
+      "result_bytes": 2991,
+      "original_evidence": {
+        "sha256": "fcf87a8d42878cf84130a5e17114fa2729035f17f45547ca61815ba1c94adf65",
+        "bytes": 2917,
+        "basis": "supplied_Fount_XML_decoded_file_body",
+        "caveat": "raw Repomix input has no current snapshot_index/Git seal"
+      }
+    },
+    {
+      "path": "packages/fount_intelligence/test/test_helper.exs",
+      "action": "modify",
+      "original_sha256": "7c66674db33f80de6cfcd270824d97f8d7c56f4a28fa927fe27bdbd15fb9691f",
+      "result_sha256": "698ea6205678e5efdbdf0e367409417fe74e506391a8f86ff004360d364813c2",
+      "mode": 420,
+      "original_bytes": 14,
+      "result_bytes": 76,
+      "original_evidence": {
+        "sha256": "7c66674db33f80de6cfcd270824d97f8d7c56f4a28fa927fe27bdbd15fb9691f",
+        "bytes": 14,
+        "basis": "supplied_Fount_XML_decoded_file_body",
+        "caveat": "raw Repomix input has no current snapshot_index/Git seal"
+      }
+    }
+  ],
+  "new_test_declarations": [
+    {
+      "file": "packages/fount_intelligence/test/story_world_architecture_test.exs",
+      "name": "StoryWorld pure source rejects provider, repository, filesystem, clock, and random shortcuts"
+    },
+    {
+      "file": "packages/fount_intelligence/test/story_world_records_test.exs",
+      "name": "core record families retain evidence, uncertainty, epistemic ownership, and dependencies"
+    },
+    {
+      "file": "packages/fount_intelligence/test/story_world_records_test.exs",
+      "name": "Phase-2 extraction record kinds remain ingestible as evidence-backed StoryWorld inputs"
+    },
+    {
+      "file": "packages/fount_intelligence/test/story_world_reference_test.exs",
+      "name": "compile and reference rendering are deterministic for the same canonical revision and frozen observations"
+    },
+    {
+      "file": "packages/fount_intelligence/test/story_world_reference_test.exs",
+      "name": "stale or source-mismatched frozen evidence is rejected"
+    },
+    {
+      "file": "packages/fount_intelligence/test/story_world_reference_test.exs",
+      "name": "counterfactual primitive reports dependency impact without generating replacement pages"
+    },
+    {
+      "file": "packages/fount_intelligence/test/story_world_scope_causality_test.exs",
+      "name": "dream state cannot silently corrupt base state"
+    },
+    {
+      "file": "packages/fount_intelligence/test/story_world_scope_causality_test.exs",
+      "name": "causal direction remains independent from presentation and story-time direction"
+    },
+    {
+      "file": "packages/fount_intelligence/test/story_world_temporal_test.exs",
+      "name": "flashback does not inherit later-presented state and event-qualified death/possession stay temporal"
+    },
+    {
+      "file": "packages/fount_intelligence/test/story_world_temporal_test.exs",
+      "name": "overlap, ambiguity, and unknown chronology do not manufacture a total order"
+    },
+    {
+      "file": "packages/fount_intelligence/test/story_world_temporal_test.exs",
+      "name": "contradictory temporal evidence is reported with its source evidence"
+    }
+  ],
+  "new_test_declaration_count": 11,
+  "existing_related_tests_retained": [
+    "packages/fount_intelligence/test/story_world_records_validation_test.exs"
+  ],
+  "identity_note": "Preimages/results are byte hashes from the supplied raw Fount XML reconstruction. The input has no current Git/snapshot seal; Codex must record actual applied commit identities.",
+  "runtime_status": "Elixir/Erlang/Mix unavailable; all Elixir tests unrun."
+}
