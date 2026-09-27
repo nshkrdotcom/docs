@@ -1,5 +1,10 @@
 # Codex: verify, repair and complete Fount Phase 2 only
 
+**Historical execution prompt:** Phase 2 runtime QC is complete. See
+`PHASE_02_RUNTIME_QC_REPORT.md` and `PHASE_02_PACKET_RECORD.md` for actual results
+and sealed post-QC sources. The OFFLINE_IMPLEMENTED status below describes the
+applied source delivery before runtime QC.
+
 **Phase:** 2 - Observe Measurement Substrate Hardening.
 **Source-delivery status:** OFFLINE_IMPLEMENTED, not runtime verified.
 **Date:** 2026-09-26, Pacific/Honolulu.
