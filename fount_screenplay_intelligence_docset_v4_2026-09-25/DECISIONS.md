@@ -338,3 +338,13 @@ diagnosis engine, L2 database or new package. Direct Sandbox fixtures and Memory
 cache remain valid existing APIs; the file loader and ETS cache are additional
 supported inputs/storage, not a compatibility generation. Full later workflow
 and domain validation remain in their existing phases.
+
+### D044 - Unknown remote request count remains unknown after incomplete calls
+
+Phase 2 runtime QC found that a scheduled remote call without completion metadata
+was reported as zero actual provider requests. The Observe resource record now
+reports `provider_requests: null` for that case, keeps
+`initial_provider_requests_scheduled`, and reports zero only when no remote call
+was scheduled. This preserves the distinction between local scheduling and
+confirmed remote work; a timed-out local task does not prove remote cancellation.
+The focused regression and four-package CI passed after the repair.

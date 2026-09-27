@@ -17,7 +17,7 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phase 2 - Observe Measurement Substrate Hardening: OFFLINE_IMPLEMENTED**
+> **Phase 2 - Observe Measurement Substrate Hardening: COMPLETE after runtime QC**
 
 Read `handoffs/PHASE_02_RUNTIME_QC_HANDOFF.md`. Verify and repair this source delivery rather than restarting it or beginning Phase 3. Phase 1 is COMPLETE under its recorded live-output waiver.
 
@@ -96,4 +96,4 @@ Do not fabricate human validation. When a phase requires a human/domain pilot, p
 
 ### Current Phase 2 checkpoint
 
-Phase 2 is `OFFLINE_IMPLEMENTED`. Read its implementation matrix, source identities, static checks and runtime-QC prompt. The user applies and commits; Codex checks that applied state. Current inputs were unsealed, but all modified preimages match the supplied Phase 1 post-QC hashes. No hash mismatch bypass, guessed excluded source, inherited runtime pass, or Phase 3 implementation is permitted.
+Phase 2 is `COMPLETE` after the runtime QC recorded in `handoffs/PHASE_02_RUNTIME_QC_REPORT.md`. The original inputs were unsealed; the applied overlay was hash-verified before repair. Fresh sealed post-QC snapshots and identities are recorded in `handoffs/PHASE_02_PACKET_RECORD.md`. This handoff stops after Phase 2; Phase 3 was not implemented.

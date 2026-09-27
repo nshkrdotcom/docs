@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phase 1 complete; Phase 2 OFFLINE_IMPLEMENTED, awaiting runtime QC and repair
+**Current state:** Phase 1 and Phase 2 COMPLETE; stop after Phase 2 QC in this handoff
 
 ## Status values
 
@@ -19,7 +19,7 @@ Runtime QC may establish engineering completion; phases with required human/doma
 | Phase | Name | Status | Offline overlay | Runtime QC report | Notes |
 |---:|---|---|---|---|---|
 | 1 | Direct Architecture Supersession and Probe Removal | COMPLETE | `fount_phase_01_overlay.zip` | `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | Engineering, storage, writer and architecture gates pass; live Luna alternatives output failures are user-authorized validation debt |
-| 2 | Observe Measurement Substrate Hardening | OFFLINE_IMPLEMENTED | `fount_phase_02_overlay.zip` | Pending; `handoffs/PHASE_02_RUNTIME_QC_HANDOFF.md` | Complete source/test/demo delivery; no Elixir or live execution claimed |
+| 2 | Observe Measurement Substrate Hardening | COMPLETE | `fount_phase_02_overlay.zip` | `handoffs/PHASE_02_RUNTIME_QC_REPORT.md` | Engineering, persistence, writer, package, architecture and authorized narrow live gate passed; no human quality claim |
 | 3 | Story-World Pure Core | NOT_STARTED | — | — | StoryWorld namespace |
 | 4 | Temporal and Forward-Reader Engine | NOT_STARTED | — | — | Temporal + Reader pure reducers |
 | 5 | Diagnosis and Multi-Pass Playbook Shell | NOT_STARTED | — | — | Diagnosis + Acquisition + Playbooks |
@@ -47,6 +47,7 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-26 | 1 | Runtime QC and repairs | applied Fount `0cc296c`, docset `d87ad39`; `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | QC_BLOCKED; four-package tests, architecture, DB/PDF and deterministic writer demonstration passed; live completion and SDK release identity open |
 | 2026-09-26 | 1 | Runtime QC completion and release follow-up | Fount `b82b656`; SDK `e757598`; Inference `3750a03`; `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | COMPLETE; Core/SDK/ASM/Inference releases verified and published; large-prompt transport fixed; Luna alternatives model-output debt retained |
 | 2026-09-26 | 2 | Source implementation delivered | `fount_phase_02_overlay.zip`; `fount_phase_02_docset.zip`; `PHASE_02_RUNTIME_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; Python source/asset and strict archive checks recorded separately; runtime and live gates pending |
+| 2026-09-26 | 2 | Runtime QC and repairs | applied Fount `2eea821`, docset `819c1c6`; Fount repair `08c2c44`; `handoffs/PHASE_02_RUNTIME_QC_REPORT.md` | COMPLETE; full CI, isolated DB/writer/PDF, package builds, deterministic examples and authorized synthetic live TypeSafe measurement passed |
 
 ## Non-negotiable progress rule
 
@@ -68,7 +69,7 @@ The offline Python source/transport checks and the gates that were unrun at deli
 
 Runtime QC supersedes the preceding offline-only expectation. Actual commands, fixes, live results and remaining blockers are in `handoffs/PHASE_01_RUNTIME_QC_REPORT.md`. The original raw-input identity gap is retained; fresh sealed snapshots describe the post-QC source only. Phase 2 was NOT_STARTED at the Phase 1 QC checkpoint. The current Phase 2 source delivery is recorded below.
 
-## Current Phase 2 delivery - 2026-09-26
+## Historical Phase 2 offline delivery - 2026-09-26
 
 **OFFLINE_IMPLEMENTED**, not COMPLETE. Read `handoffs/PHASE_02_OFFLINE_HANDOFF.md`
 and `handoffs/PHASE_02_RUNTIME_QC_HANDOFF.md`. The overlay contains 21 added
@@ -86,3 +87,7 @@ without implementing Phase 3 in the same pass.
 from unrun runtime gates and records the input-only missing cleanup helper.
 Phase 1's recorded COMPLETE status and explicit Luna-output validation debt remain
 unchanged; that waiver does not waive Phase 2's measurement checks.
+
+## Phase 2 runtime QC completion - 2026-09-26
+
+Phase 2 is **COMPLETE** on the evidence in `handoffs/PHASE_02_RUNTIME_QC_REPORT.md`. The prior OFFLINE_IMPLEMENTED checkpoint and its unrun claims describe the historical source delivery only. The user authorized a small synthetic live measurement; no human creative-quality or empirical calibration claim was made. Phase 3 remains NOT_STARTED and was not begun in this QC pass.
