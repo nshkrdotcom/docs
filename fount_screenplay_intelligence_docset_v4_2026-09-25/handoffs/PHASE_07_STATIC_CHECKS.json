@@ -99,5 +99,9 @@
       "reason": "D046 makes human/domain reviews optional; no participant/corpus result fabricated"
     }
   ],
-  "completion_rule": "This evidence supports OFFLINE_IMPLEMENTED only. Runtime QC/repair must run on the user-applied checkout before Phase 7 can become COMPLETE. Phase 8 remains NOT_STARTED."
+  "completion_rule": "This evidence supports OFFLINE_IMPLEMENTED only. Runtime QC/repair must run on the user-applied checkout before Phase 7 can become COMPLETE. Phase 8 remains NOT_STARTED.",
+  "runtime_reconciliation": {
+    "status": "PASS_ON_APPLIED_CHECKOUT",
+    "note": "Historical offline repository-wide Python discovery remains recorded above. Its scripts/prune_deleted_directories.py path was incorrect for the real checkout: the tracked helper is handoff/prune_deleted_directories.py. Runtime QC preserved that helper and all 53 repository-wide Python tests passed. See PHASE_07_RUNTIME_QC_REPORT.md."
+  }
 }

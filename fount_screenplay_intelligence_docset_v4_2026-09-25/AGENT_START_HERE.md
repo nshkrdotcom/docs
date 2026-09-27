@@ -18,9 +18,9 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phases 1–6: COMPLETE. Phase 7: OFFLINE_IMPLEMENTED and awaiting runtime QC/repair. Phase 8 remains NOT_STARTED.**
+> **Phases 1–7: COMPLETE on engineering QC. Phase 8 remains NOT_STARTED.**
 
-Read `handoffs/PHASE_07_OFFLINE_HANDOFF.md`, `handoffs/PHASE_07_RUNTIME_QC_HANDOFF.md`, `handoffs/PHASE_07_IMPLEMENTATION_MATRIX.md`, and `PROGRESS.md`. The user applies/commits the Phase-7 artifacts first; Codex then verifies that applied state, compiles/tests/repairs Phase 7, records runtime evidence, and stops before Phase 8. Phases 1–6 remain COMPLETE; historical validation debt must not be silently converted into human-validation claims.
+Read `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` and `PROGRESS.md` for the verified Phase-7 state. Fount repair commit `4a1c723` passed engineering and preservation QC. Historical validation debt remains visible; do not claim human validation. Stop before Phase 8.
 
 ## Read before coding
 
@@ -97,4 +97,4 @@ Do not fabricate human validation. Under D046, human/domain pilots are optional 
 
 ### Current Phase 7 checkpoint
 
-Phase 6 is COMPLETE on the runtime evidence recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Phase 7 is `OFFLINE_IMPLEMENTED` from that QC-corrected source. Audience/Reader Experience, Sequence Movement, Dialogue Interaction, and Setup/Payoff + Motifs are source-written with four closed Observe lenses, existing strict-forward Reader and Temporal/StoryWorld reuse, typed dialogue context validation, non-linear setup/payoff fixtures, playbook wiring, writer packets, and explicit claim limitations. Elixir/Mix/runtime checks remain unrun here. Codex must test/repair Phase 7 and stop before Phase 8. No human/domain usefulness study was run.
+Phase 6 is COMPLETE on the runtime evidence recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Phase 7 is `COMPLETE` after runtime QC at Fount `4a1c723`. Audience/Reader Experience, Sequence Movement, Dialogue Interaction, and Setup/Payoff + Motifs are source-written with four closed Observe lenses, existing strict-forward Reader and Temporal/StoryWorld reuse, typed dialogue context validation, non-linear setup/payoff fixtures, playbook wiring, writer packets, and explicit claim limitations. The 305-test workspace CI, 53 Python tests, isolated DB/writer/PDF checks and four package builds passed; see `handoffs/PHASE_07_RUNTIME_QC_REPORT.md`. No human/domain usefulness study was run. Phase 8 remains NOT_STARTED.

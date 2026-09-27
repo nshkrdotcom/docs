@@ -1,6 +1,6 @@
 {
   "phase": 7,
-  "status": "OFFLINE_IMPLEMENTED",
+  "status": "COMPLETE_RUNTIME_QC",
   "date": "2026-09-27",
   "overlay_sha256": "23be29b59a05ff456d995c8550da88048a78a1d2b4ee9b722f752eb2fe4c44f3",
   "summary": {
@@ -20,7 +20,9 @@
       "mode": 420,
       "original_bytes": 2648,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 2788
+      "result_bytes": 2788,
+      "post_repair_sha256": "f28491ee570073a928991157803036099bc87674be4e4cf70463e189e68be92c",
+      "post_repair_bytes": 2788
     },
     {
       "path": "README.md",
@@ -31,7 +33,9 @@
       "mode": 420,
       "original_bytes": 23828,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 24172
+      "result_bytes": 24172,
+      "post_repair_sha256": "8421d9768201c61deefa23f4467e7a749a6db6c923487c0845ae9d2463506d81",
+      "post_repair_bytes": 24172
     },
     {
       "path": "packages/fount_intelligence/CHANGELOG.md",
@@ -42,7 +46,9 @@
       "mode": 420,
       "original_bytes": 3009,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 3331
+      "result_bytes": 3331,
+      "post_repair_sha256": "1b71061bf6e45b35231c324bb891f427e9069fed108de1bfd22d741999b0d65b",
+      "post_repair_bytes": 3331
     },
     {
       "path": "packages/fount_intelligence/README.md",
@@ -53,7 +59,9 @@
       "mode": 420,
       "original_bytes": 3908,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 4559
+      "result_bytes": 4559,
+      "post_repair_sha256": "0029b685dde98558b006cf641cc52fcc3671c14c197f6758dd604bd07e60c3cd",
+      "post_repair_bytes": 4559
     },
     {
       "path": "packages/fount_intelligence/examples/README.md",
@@ -64,7 +72,9 @@
       "mode": 420,
       "original_bytes": 2495,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 2928
+      "result_bytes": 2928,
+      "post_repair_sha256": "29728d58cb3675e15d3c67331e0f8ab4028570a6e544703341e92f7f2e6e6e23",
+      "post_repair_bytes": 2928
     },
     {
       "path": "packages/fount_intelligence/examples/phase_seven.exs",
@@ -75,7 +85,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 2735
+      "result_bytes": 2735,
+      "post_repair_sha256": "b58aa5777fdef9acf505c892481780448cfb9899fe5bde6320c80f590cb46365",
+      "post_repair_bytes": 2815
     },
     {
       "path": "packages/fount_intelligence/guides/capabilities-b.md",
@@ -86,7 +98,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 5721
+      "result_bytes": 5721,
+      "post_repair_sha256": "65f8de76745f391f5375a2bdfc36ac0c647a8649d86f6b56e71d4dce93848c52",
+      "post_repair_bytes": 5721
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/acquisition/capability_measurements.ex",
@@ -97,7 +111,9 @@
       "mode": 420,
       "original_bytes": 8691,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 17159
+      "result_bytes": 17159,
+      "post_repair_sha256": "eb7977a83085d048bf8d5396cb62496ee57ff533f921a3c86c8a42cebaa97a80",
+      "post_repair_bytes": 18051
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities.ex",
@@ -108,7 +124,9 @@
       "mode": 420,
       "original_bytes": 1220,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 1993
+      "result_bytes": 1993,
+      "post_repair_sha256": "d0af03d669da949b1132e17fea5efa6a873b0c65fade55066e5a8d95cb605cc9",
+      "post_repair_bytes": 1993
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/audience_reader_experience.ex",
@@ -119,7 +137,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 9029
+      "result_bytes": 9029,
+      "post_repair_sha256": "64cf00c251384300c531c37fb06b1e09f2281f8f2427dedadff03d2d11a8d610",
+      "post_repair_bytes": 9029
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/dialogue_interaction.ex",
@@ -130,7 +150,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 10419
+      "result_bytes": 10419,
+      "post_repair_sha256": "d26ee33a62f84b88ea1c09e0fd66d4a8c8208ec75992775fb7fda2894bcd6c1f",
+      "post_repair_bytes": 10505
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/result.ex",
@@ -141,7 +163,9 @@
       "mode": 420,
       "original_bytes": 689,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 698
+      "result_bytes": 698,
+      "post_repair_sha256": "e1988774ca5f83ede11888fefbd439c66fbe7d9395dbbfe1b0719a8db326393c",
+      "post_repair_bytes": 698
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/sequence_movement.ex",
@@ -152,7 +176,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 12224
+      "result_bytes": 12224,
+      "post_repair_sha256": "804eb813aaf71e7ca625f1f9b6c9e0c22895a00adec4d96d7b841afec9bfe332",
+      "post_repair_bytes": 12570
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/setup_payoff_motifs.ex",
@@ -163,7 +189,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 12641
+      "result_bytes": 12641,
+      "post_repair_sha256": "1bdaf69da2011d86a6aa226275a86d41c3c707abf49e703ee61783c6828171eb",
+      "post_repair_bytes": 13010
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/playbooks/capability_runner.ex",
@@ -174,7 +202,9 @@
       "mode": 420,
       "original_bytes": 16093,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 22025
+      "result_bytes": 22025,
+      "post_repair_sha256": "a2fb959db79a98a84a5482d3efefb11d71ed2cedc626dee14b6f639b7ab3307b",
+      "post_repair_bytes": 22138
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/playbooks/writer_registry.ex",
@@ -185,7 +215,9 @@
       "mode": 420,
       "original_bytes": 6546,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 6831
+      "result_bytes": 6831,
+      "post_repair_sha256": "7d78172d0b46286778ed2a5e70f76b1f1064bd982a06f7eb61b1e9d058ade7f8",
+      "post_repair_bytes": 6831
     },
     {
       "path": "packages/fount_intelligence/mix.exs",
@@ -196,7 +228,9 @@
       "mode": 420,
       "original_bytes": 3531,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 3568
+      "result_bytes": 3568,
+      "post_repair_sha256": "893a82abcaacd52816725253de0dda7a3406d2765bef1c65556326a26364d926",
+      "post_repair_bytes": 3568
     },
     {
       "path": "packages/fount_intelligence/test/phase_seven_architecture_test.exs",
@@ -207,7 +241,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 1590
+      "result_bytes": 1590,
+      "post_repair_sha256": "ee2d1bc3573a38f4c411b21e2ca6bd8bc3db0cadcd3f7e50f871139a5fedf2c6",
+      "post_repair_bytes": 1536
     },
     {
       "path": "packages/fount_intelligence/test/phase_seven_capabilities_test.exs",
@@ -218,7 +254,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 5313
+      "result_bytes": 5313,
+      "post_repair_sha256": "910e20f711858e85d08d08a3a2fa8cd22e2baa2ff340c182dceaf33ba83a5865",
+      "post_repair_bytes": 6176
     },
     {
       "path": "packages/fount_intelligence/test/phase_seven_runner_test.exs",
@@ -229,7 +267,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 6607
+      "result_bytes": 6607,
+      "post_repair_sha256": "aa0f1a0a55c8d3e67137c627b70d67c0c0ac03e45e98901e7761bc49b5ed76d8",
+      "post_repair_bytes": 6707
     },
     {
       "path": "packages/fount_intelligence/test/support/phase_seven_fixture.ex",
@@ -240,7 +280,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 16785
+      "result_bytes": 16785,
+      "post_repair_sha256": "c854a2a041784bd7170e0b6faa4c082d3abed9d9b8c9011554ff49987af48a30",
+      "post_repair_bytes": 17242
     },
     {
       "path": "packages/fount_observe/CHANGELOG.md",
@@ -251,7 +293,9 @@
       "mode": 420,
       "original_bytes": 1469,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 1637
+      "result_bytes": 1637,
+      "post_repair_sha256": "75aac97cdbc12c8ead60feb3a7bee30f325045daa834fa8f1181ae125deda28c",
+      "post_repair_bytes": 1637
     },
     {
       "path": "packages/fount_observe/lib/fount/observe/registry.ex",
@@ -262,7 +306,9 @@
       "mode": 420,
       "original_bytes": 1931,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 2015
+      "result_bytes": 2015,
+      "post_repair_sha256": "790183ed37c18ef6b215393d62dec56b0de4b39de9c472b81542d107ef186f10",
+      "post_repair_bytes": 2015
     },
     {
       "path": "packages/fount_observe/priv/lenses/audience.reader_experience.json",
@@ -273,7 +319,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 797
+      "result_bytes": 797,
+      "post_repair_sha256": "d3bc8b6b7977bff6906c045a01732f25d7e0ae4341234066f4f43bb0c8a4c00b",
+      "post_repair_bytes": 797
     },
     {
       "path": "packages/fount_observe/priv/lenses/dialogue.exchange.json",
@@ -284,7 +332,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 1026
+      "result_bytes": 1026,
+      "post_repair_sha256": "bf4bc77c69222b0cf46917e14c234f1c0fe3f3bd3daa9857196b5e0b2b62cc89",
+      "post_repair_bytes": 1026
     },
     {
       "path": "packages/fount_observe/priv/lenses/sequence.movement.json",
@@ -295,7 +345,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 732
+      "result_bytes": 732,
+      "post_repair_sha256": "cf11b96cfdac826bc0702785231fcccef46c47b6906bee9b2a9775d80f2c06b7",
+      "post_repair_bytes": 732
     },
     {
       "path": "packages/fount_observe/priv/lenses/setup_payoff.motifs.json",
@@ -306,7 +358,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 763
+      "result_bytes": 763,
+      "post_repair_sha256": "e45151890d05f935abb2f703642db238b4a46959f0351e9809f06899bd58a410",
+      "post_repair_bytes": 763
     },
     {
       "path": "packages/fount_observe/test/phase_seven_lens_assets_test.exs",
@@ -317,7 +371,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 1724
+      "result_bytes": 1724,
+      "post_repair_sha256": "131218ae58f809eb668f7b81edb23ba995c2033de6d33e1e887eea0d104fd108",
+      "post_repair_bytes": 1816
     },
     {
       "path": "scripts/tests/test_phase_seven_source.py",
@@ -328,7 +384,9 @@
       "mode": 420,
       "original_bytes": null,
       "original_evidence": null,
-      "result_bytes": 7020
+      "result_bytes": 7020,
+      "post_repair_sha256": "2f04fc6f0f9d415ca8bd0fbc5f9fd79918f48e5f21bf89bfc68e96c7406761dd",
+      "post_repair_bytes": 7020
     },
     {
       "path": "scripts/tests/test_phase_six_source.py",
@@ -339,9 +397,77 @@
       "mode": 420,
       "original_bytes": 6400,
       "original_evidence": "decoded five-XML Fount source body",
-      "result_bytes": 5961
+      "result_bytes": 5961,
+      "post_repair_sha256": "5f5ff0b48813e5247f2563d463762f65d0aceeb3dc8c481288c8d1e8f59b8687",
+      "post_repair_bytes": 5961
     }
   ],
   "deletions": [],
-  "runtime_note": "result hashes describe the source-writing overlay before Codex runtime repair; Codex must append/update post-repair identities if it changes source"
+  "runtime_note": "result hashes describe the source-writing overlay before Codex runtime repair; Codex must append/update post-repair identities if it changes source",
+  "applied_fount_commit": "72bfec6c6cb36257a34c14cffa7275fda32b41ad",
+  "repair_fount_commit": "4a1c723bff3f4085a344af7122fbf190a1deab4b",
+  "repair_fount_tree": "10d66f5ccb04d269d11803c9cc5ba5624ca90e3e",
+  "post_repair_files": [
+    {
+      "path": "packages/fount_intelligence/examples/phase_seven.exs",
+      "sha256": "b58aa5777fdef9acf505c892481780448cfb9899fe5bde6320c80f590cb46365",
+      "bytes": 2815
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/acquisition/capability_measurements.ex",
+      "sha256": "eb7977a83085d048bf8d5396cb62496ee57ff533f921a3c86c8a42cebaa97a80",
+      "bytes": 18051
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/dialogue_interaction.ex",
+      "sha256": "d26ee33a62f84b88ea1c09e0fd66d4a8c8208ec75992775fb7fda2894bcd6c1f",
+      "bytes": 10505
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/sequence_movement.ex",
+      "sha256": "804eb813aaf71e7ca625f1f9b6c9e0c22895a00adec4d96d7b841afec9bfe332",
+      "bytes": 12570
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/setup_payoff_motifs.ex",
+      "sha256": "1bdaf69da2011d86a6aa226275a86d41c3c707abf49e703ee61783c6828171eb",
+      "bytes": 13010
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/playbooks/capability_runner.ex",
+      "sha256": "a2fb959db79a98a84a5482d3efefb11d71ed2cedc626dee14b6f639b7ab3307b",
+      "bytes": 22138
+    },
+    {
+      "path": "packages/fount_intelligence/test/phase_seven_architecture_test.exs",
+      "sha256": "ee2d1bc3573a38f4c411b21e2ca6bd8bc3db0cadcd3f7e50f871139a5fedf2c6",
+      "bytes": 1536
+    },
+    {
+      "path": "packages/fount_intelligence/test/phase_seven_capabilities_test.exs",
+      "sha256": "910e20f711858e85d08d08a3a2fa8cd22e2baa2ff340c182dceaf33ba83a5865",
+      "bytes": 6176
+    },
+    {
+      "path": "packages/fount_intelligence/test/phase_seven_runner_test.exs",
+      "sha256": "aa0f1a0a55c8d3e67137c627b70d67c0c0ac03e45e98901e7761bc49b5ed76d8",
+      "bytes": 6707
+    },
+    {
+      "path": "packages/fount_intelligence/test/support/phase_seven_fixture.ex",
+      "sha256": "c854a2a041784bd7170e0b6faa4c082d3abed9d9b8c9011554ff49987af48a30",
+      "bytes": 17242
+    },
+    {
+      "path": "packages/fount_intelligence/test/test_helper.exs",
+      "sha256": "fcedab2c9a05e0cb0b09db24d70d01955a60af93e3ddd6fa4cb8856f1c54fc89",
+      "bytes": 256
+    },
+    {
+      "path": "packages/fount_observe/test/phase_seven_lens_assets_test.exs",
+      "sha256": "131218ae58f809eb668f7b81edb23ba995c2033de6d33e1e887eea0d104fd108",
+      "bytes": 1816
+    }
+  ],
+  "post_repair_note": "Original result_sha256/result_bytes retain immutable source-delivery identity; post_repair fields and post_repair_files describe the committed runtime repair, including the previously unchanged test helper."
 }

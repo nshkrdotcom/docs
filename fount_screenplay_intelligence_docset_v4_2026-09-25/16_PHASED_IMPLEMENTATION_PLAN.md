@@ -564,6 +564,8 @@ Each family has complete sensor/intelligence/playbook coverage, representative r
 
 **Phase 7 source-delivery checkpoint — 2026-09-27:** `OFFLINE_IMPLEMENTED`, not COMPLETE. Four closed Observe lenses, four pure Capability-B evaluators, strict-forward Reader reuse, explicit presentation/story-time sequence views, validated neutral dialogue context, setup/payoff/motif lifecycle reasoning, a non-linear five-scene fixture, playbook wiring, and writer-facing packet coverage are source-written. The strict overlay has 30 operations (16 additions, 14 modifications, no deletions). Four lens JSON checks, 41 Phase 1–7 source-contract tests, Python compilation, ZIP integrity, strict overlay dry-run/apply, manifest hash verification, and clean-tree reproduction pass. Repository-wide Python discovery is blocked only by the supplied XML omitting the historical cleanup helper imported by its test. Elixir/Mix/runtime gates and the optional human/domain review are unrun. Phase 8 remains `NOT_STARTED`; Codex must test/repair Phase 7 and stop before Phase 8.
 
+**Phase 7 runtime QC checkpoint — 2026-09-27:** `COMPLETE` at Fount `4a1c723bff3f4085a344af7122fbf190a1deab4b` (tree `10d66f5ccb04d269d11803c9cc5ba5624ca90e3e`). Full evidence is in `handoffs/PHASE_07_RUNTIME_QC_REPORT.md`: 305 workspace tests, 53 Python tests, architecture/strict quality/docs/package gates, isolated Core/Workshop DB and writer accept/reject/PDF/table-read checks pass. Optional human/domain review was skipped under D046 and remains validation debt. Phase 8 remains `NOT_STARTED`.
+
 ---
 
 # Phase 8 — Capability Completion C: Emotional/Value, Theme, Genre, Revision Intelligence

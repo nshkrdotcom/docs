@@ -363,7 +363,7 @@ The source-writing pass does not transfer Phase-5 runtime evidence to changed In
 
 At Fount `51f7c5e`, all four Phase-6 families and lenses, exact selected source in semantic input and provenance, partial coverage for caps, scene/agency/character/relationship reasoning, non-linear story-time separation, evidence-backed hypotheses, Sandbox playbooks and nil generated candidates are verified by 10 focused ExUnit tests, 292 workspace tests, 46 Python source tests, and source/compiled architecture inspection. Core and Workshop isolated integrations (11/14), accept/reject writer demonstrations, two-page PDF, table-read, strict Credo, Dialyzer, ExDoc and four archive builds pass. See `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Optional human/domain review is NOT RUN under D046; Phase 7 remains NOT_STARTED. Historical source-delivery statuses above remain as chronology.
 
-## Phase 7 concrete source traceability — OFFLINE_IMPLEMENTED
+## Phase 7 concrete source traceability — historical offline delivery
 
 | Requirement | Phase-7 source/test evidence | Offline state |
 |---|---|---|
@@ -387,3 +387,7 @@ At Fount `51f7c5e`, all four Phase-6 families and lenses, exact selected source 
 
 The source-writing pass does not transfer Phase-6 runtime evidence to changed Phase-7 Observe/Intelligence source. Phase 7 remains `OFFLINE_IMPLEMENTED` until Codex executes and repairs the runtime/preservation ladder. Phase 8 remains `NOT_STARTED`.
 
+
+## Phase 7 runtime verification — COMPLETE
+
+At Fount `4a1c723`, all four new family/lens pairs, strict-forward Reader behavior, separate sequence story-time/presentation views, measurement-ID diagnosis lineage, cue-backed dialogue pairs and typed context rejection, watch-origin flashback qualification, setup/payoff motifs, nil generated candidates and the Phase-8 stop line are verified. Focused Phase-7 tests (2 Observe, 11 Intelligence), 305 full workspace tests, 53 Python source tests, compiled architecture, strict Credo, Dialyzer, ExDoc, four package archives, isolated Core/Workshop DB integrations (11/14) and writer accept/reject PDF/table-read flows pass. Details and repair hashes are in `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_07_FILE_INVENTORY.json`. Optional human/domain review remains NOT RUN under D046; no human usefulness claim is made. Phase 8 is NOT_STARTED.
