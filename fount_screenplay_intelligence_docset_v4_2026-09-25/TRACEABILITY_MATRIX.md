@@ -410,3 +410,7 @@ At Fount `4a1c723`, all four new family/lens pairs, strict-forward Reader behavi
 | stop before Phase 9 | Workshop source unchanged; candidate remains nil | overlay inventory/source guard | PASS offline |
 
 This is source traceability only. Runtime verification/repair remains required before Phase 8 can be marked COMPLETE.
+
+## Phase 8 runtime QC traceability — 2026-09-27
+
+At Fount `f7f4d68` (tree `5b12527`), all twelve family IDs and four Phase-8 Observe assets, safe custom-lens/pack validation and explicit enablement, opt-in genre and Emotional/Value routing, Theme counterevidence, explicit two-revision comparison, retained Reader-state changes, separate character/relationship/causal/story-time effects, nil generated candidate and Phase-9 stop line are verified by focused and full tests. Full `mix ci` passed 320 ExUnit tests with compiled architecture, strict Credo, Dialyzer and ExDoc; 64 Python tests, four archives, isolated Core/Workshop PostgreSQL integrations (11/14), representative prior-family/Core regressions and writer accept/reject/PDF/table-read demonstrations passed. See `handoffs/PHASE_08_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_08_FILE_INVENTORY.json` for commands, defects, repairs and hashes. Optional human/domain review remains NOT RUN under D046; no human validity or usefulness claim is made. Phase 8 is **COMPLETE**; Phase 9 is **NOT_STARTED**.

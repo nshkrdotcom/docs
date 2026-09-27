@@ -16,7 +16,7 @@ ChatGPT.com writes the current phase without claiming unrun Elixir checks and re
 
 Read `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md`, `33_WRITER_WORKFLOWS_AND_CREATIVE_CONTRACT.md`, and `34_HUMAN_JEV_AND_LLM_COLLABORATION.md` before treating the architecture below as a product brief. The new research complements the earlier reader/notes work with discovery, cinematic action and sound, voice, rehearsal, and useful alternatives.
 
-`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–7 are COMPLETE on engineering QC; Phase 8 is OFFLINE_IMPLEMENTED pending runtime QC; Phase 9 remains NOT_STARTED. Phase 6 runtime evidence is in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`, and the current source delivery is described by `handoffs/PHASE_07_*`. Phase 3 Level-A, Phase 4 first-reader, Phase 5 usefulness, Phase 6 capability-usefulness, and Phase 7 capability-usefulness studies remain visible validation debt; D046 makes human reviews optional and nonblocking.
+`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–8 are COMPLETE on engineering QC; Phase 9 remains NOT_STARTED. Phase 8 runtime evidence is in `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. Phase 3 Level-A, Phase 4 first-reader, Phase 5 usefulness, and Phase 6/7/8 capability-usefulness studies remain visible validation debt; D046 makes human reviews optional and nonblocking.
 
 Success means a writer can arrive with an image, a scene, or a difficult note; explore real choices; preserve what matters; see consequences; and choose what becomes the draft. No compulsory outline, universal conflict theory, or simulated audience verdict. Human-only writing remains useful without provider credentials.
 
@@ -258,7 +258,7 @@ latest QC'd source snapshots + latest docset
 
 ## Current status
 
-Read `PROGRESS.md`. Phases 1–7 are `COMPLETE` on engineering QC. Phase 8 is `OFFLINE_IMPLEMENTED` pending Codex runtime QC; Phase 9 remains `NOT_STARTED`.
+Read `PROGRESS.md`. Phases 1–8 are `COMPLETE` on engineering QC. Phase 9 remains `NOT_STARTED`.
 
 ## Previous verified checkpoint: Phase 7
 
@@ -266,6 +266,10 @@ The current source delivery makes capability families 5–8 concrete. A writer c
 
 Artifacts are `fount_phase_07_overlay.zip`, `fount_phase_07_docset.zip`, and `FOUNT_PHASE_07_CODEX_QC_HANDOFF.md`. The source-delivery checks remain historical. Runtime QC passed at Fount `4a1c723`: 305 workspace tests, 53 Python tests, compiled architecture, strict Credo, Dialyzer, ExDoc, four archives, isolated Core/Workshop PostgreSQL integrations and writer accept/reject PDF/table-read demonstrations. The real helper is `handoff/prune_deleted_directories.py`; the XML-only missing-file account used the wrong path. Read `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` for defects, repairs and limits. Optional human review was skipped under D046; no human usefulness claim is made. At that checkpoint Phase 8 was NOT_STARTED; the current Phase-8 source handoff is below.
 
-## Current Phase 8 source handoff
+## Historical Phase 8 source handoff
 
-Phase 8 source is delivered as `OFFLINE_IMPLEMENTED`: Emotional/Value Movement, Theme/Meaning, Genre Lens Packs, Revision Intelligence, safe declarative-lens/pack configuration, and explicit before/after revision comparison are source-written. See `handoffs/PHASE_08_OFFLINE_HANDOFF.md`, `handoffs/PHASE_08_IMPLEMENTATION_MATRIX.md`, and `handoffs/PHASE_08_RUNTIME_QC_HANDOFF.md`. Runtime compilation/QC is pending; Phase 9 has not started.
+At source delivery, Phase 8 was `OFFLINE_IMPLEMENTED`: Emotional/Value Movement, Theme/Meaning, Genre Lens Packs, Revision Intelligence, safe declarative-lens/pack configuration, and explicit before/after revision comparison are source-written. See `handoffs/PHASE_08_OFFLINE_HANDOFF.md`, `handoffs/PHASE_08_IMPLEMENTATION_MATRIX.md`, and `handoffs/PHASE_08_RUNTIME_QC_HANDOFF.md`. At that checkpoint runtime compilation/QC was pending; Phase 9 had not started.
+
+### Phase 8 verified runtime result
+
+Phase 8 is **COMPLETE** on engineering and preservation QC at Fount `f7f4d68`: 320 workspace tests, 64 Python source tests, compiled architecture, strict Credo, Dialyzer, ExDoc, four package archives, isolated Core/Workshop PostgreSQL integrations, and writer accept/reject/PDF/table-read checks passed. See `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. The optional human/domain review was skipped under D046 and remains validation debt. Phase 9 remains NOT_STARTED.

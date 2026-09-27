@@ -19,7 +19,9 @@
       "result_sha256": "3ffa2552e5ff74760ca02f79f0b2a20b7b7819203c883cafebd90762d41b8606",
       "mode": 420,
       "original_bytes": 3330,
-      "result_bytes": 3625
+      "result_bytes": 3625,
+      "post_repair_sha256": "3ffa2552e5ff74760ca02f79f0b2a20b7b7819203c883cafebd90762d41b8606",
+      "post_repair_bytes": 3625
     },
     {
       "path": "packages/fount_intelligence/README.md",
@@ -28,7 +30,9 @@
       "result_sha256": "a563cc02da593322bae2194a8cc37ab6d3bf9864d08bc212532f237332181b8b",
       "mode": 420,
       "original_bytes": 4558,
-      "result_bytes": 5159
+      "result_bytes": 5159,
+      "post_repair_sha256": "a563cc02da593322bae2194a8cc37ab6d3bf9864d08bc212532f237332181b8b",
+      "post_repair_bytes": 5159
     },
     {
       "path": "packages/fount_intelligence/examples/README.md",
@@ -37,7 +41,9 @@
       "result_sha256": "23f8452fa51f2dc0f6e19e0403269dfa5cdc09844d8effc51708450a44214ecc",
       "mode": 420,
       "original_bytes": 2927,
-      "result_bytes": 3474
+      "result_bytes": 3474,
+      "post_repair_sha256": "23f8452fa51f2dc0f6e19e0403269dfa5cdc09844d8effc51708450a44214ecc",
+      "post_repair_bytes": 3474
     },
     {
       "path": "packages/fount_intelligence/examples/phase_eight.exs",
@@ -46,7 +52,9 @@
       "result_sha256": "8c5b2b2054e3e4b1e821d55c22b50b39626f9f5653da72c3f0c775ac2034cd25",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 2629
+      "result_bytes": 2629,
+      "post_repair_sha256": "a66cdff7ee350056420d38145359fdcb7e351a2736987821f767be70f719652e",
+      "post_repair_bytes": 2938
     },
     {
       "path": "packages/fount_intelligence/guides/capabilities-c.md",
@@ -55,7 +63,9 @@
       "result_sha256": "023796b287a714a723b1716c8c8295a6b6767b586bd2716fc7521a28e4090f27",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 7678
+      "result_bytes": 7678,
+      "post_repair_sha256": "023796b287a714a723b1716c8c8295a6b6767b586bd2716fc7521a28e4090f27",
+      "post_repair_bytes": 7678
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence.ex",
@@ -64,7 +74,9 @@
       "result_sha256": "e88a9c3906ff384cf98cd2d6f8c54a7ce16f8337cc2f2ea514adba06f0075a3d",
       "mode": 420,
       "original_bytes": 7254,
-      "result_bytes": 9112
+      "result_bytes": 9112,
+      "post_repair_sha256": "50cf733b3f8c61e28664054980ca6c188e391cafd53397e81914580809c1fb42",
+      "post_repair_bytes": 9113
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/acquisition/capability_measurements.ex",
@@ -73,7 +85,9 @@
       "result_sha256": "4e03df91fc40742e8e9022ff661c07e88a66ec30fbab222fa40f2e8429caab08",
       "mode": 420,
       "original_bytes": 18050,
-      "result_bytes": 27055
+      "result_bytes": 27055,
+      "post_repair_sha256": "07ae1a7a29501e977674fe119239a75f8e73bf47ec45c39501edc264d543c0dc",
+      "post_repair_bytes": 28067
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities.ex",
@@ -82,7 +96,9 @@
       "result_sha256": "64b2e8cb1b43d4d87ac843b7ac4dee1ee2e76d56df9fc15adca96233f7dce534",
       "mode": 420,
       "original_bytes": 1992,
-      "result_bytes": 3198
+      "result_bytes": 3198,
+      "post_repair_sha256": "f57a2da0ace2abd90d95d9638041ed51f855d25dea583eb8d20b37ffe49328c0",
+      "post_repair_bytes": 3275
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/emotional_value_movement.ex",
@@ -91,7 +107,9 @@
       "result_sha256": "788f040ae8b04fe794cd25fea1f8d31f746960500e375a288a8c151c1f2805b9",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 9083
+      "result_bytes": 9083,
+      "post_repair_sha256": "1c3868a1e61638cedbb5b54d21dcc44cb13c3596c9d4498649730ddc09cc1424",
+      "post_repair_bytes": 9186
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/genre_lens_packs.ex",
@@ -100,7 +118,9 @@
       "result_sha256": "0cee266d384d8fabe1ac97b2504932a9e5015d32e90a1ed961a254e14e59165a",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 5889
+      "result_bytes": 5889,
+      "post_repair_sha256": "886487de44626ba4de76701208fb091e3037add38e4c647fdfcba341ac482576",
+      "post_repair_bytes": 5978
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/result.ex",
@@ -109,7 +129,9 @@
       "result_sha256": "4460c5db2493e8247794c2284058203914b6f3718e5b3e7efe7af33351ce4e24",
       "mode": 420,
       "original_bytes": 697,
-      "result_bytes": 697
+      "result_bytes": 697,
+      "post_repair_sha256": "e1c9ed62ab6e9742298126b9ba8aee775023642d9c5a788cbf09b908cef369b3",
+      "post_repair_bytes": 698
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/revision_intelligence.ex",
@@ -118,7 +140,9 @@
       "result_sha256": "46f9d6dc81481b4fc284a53cec8a4b184bc3c569fa9e06894b9e591d893b185e",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 16776
+      "result_bytes": 16776,
+      "post_repair_sha256": "aa98c0d119956688f8989232cae16eac9fad16fc6ae3c2c6ca1c95764f54c75e",
+      "post_repair_bytes": 17084
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/capabilities/theme_meaning.ex",
@@ -127,7 +151,9 @@
       "result_sha256": "dd6d302ebf680b91df7014b0e9c5d95feff5270ea0e538122630c752c4129d8a",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 7164
+      "result_bytes": 7164,
+      "post_repair_sha256": "4137951771dd4c6a80ad34e8a34ca51bebf4b0c11dd2d15a1cfbbdc3d020805d",
+      "post_repair_bytes": 7397
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/packs.ex",
@@ -136,7 +162,9 @@
       "result_sha256": "c0cbeb65a27b9aea6da2d09529f44385c09421025d1d29fc4b92a855697fd500",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 8722
+      "result_bytes": 8722,
+      "post_repair_sha256": "6c14173a3cd7427043009fbea97b694ccecbe1696e27f37d2c7cf7b71bdf85ea",
+      "post_repair_bytes": 9440
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/packs/catalog.ex",
@@ -145,7 +173,9 @@
       "result_sha256": "f8b859881b8c0811c6b2a937e42e115dc7880868f458359d1c10985c8b743e80",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 1974
+      "result_bytes": 1974,
+      "post_repair_sha256": "48a221f78d6722da69fa56e8bc081d3ba76f27e325a6b00ec36769289109217b",
+      "post_repair_bytes": 2019
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/packs/genre_pack.ex",
@@ -154,7 +184,9 @@
       "result_sha256": "1a2e863905c4805749a39947307d9954c701b4fb231442cbbe4a498cc5c5a8df",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 6265
+      "result_bytes": 6265,
+      "post_repair_sha256": "86a5a34831773681d9421f17245f9d6616817970d28f3c27c277c187ccf2795f",
+      "post_repair_bytes": 6286
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/playbooks/capability_runner.ex",
@@ -163,7 +195,9 @@
       "result_sha256": "7aea2bb7bdba88636815624b0f1ab38ef907dccc2570373e8cd1a7a9318d12db",
       "mode": 420,
       "original_bytes": 22137,
-      "result_bytes": 32822
+      "result_bytes": 32822,
+      "post_repair_sha256": "0853bd5d253b428871a2c62d46d6b59c1f9f5aa7183cff6615c486f0c7816d9a",
+      "post_repair_bytes": 33541
     },
     {
       "path": "packages/fount_intelligence/lib/fount/intelligence/playbooks/writer_registry.ex",
@@ -172,7 +206,9 @@
       "result_sha256": "c573d8ff8b9c4d451cfe6e0ec3bde9dff927993ed130d6e6ec3633c9aada09e4",
       "mode": 420,
       "original_bytes": 6830,
-      "result_bytes": 7040
+      "result_bytes": 7040,
+      "post_repair_sha256": "008454a493a06edbf3f406da1cb8cebd86ff2ef4be96ee47930a7eaeb58f790f",
+      "post_repair_bytes": 7041
     },
     {
       "path": "packages/fount_intelligence/mix.exs",
@@ -181,7 +217,9 @@
       "result_sha256": "707721d385abefeb0307409d0069ac295606eb9ff8fdc1a8fa682f5543997412",
       "mode": 420,
       "original_bytes": 3567,
-      "result_bytes": 3729
+      "result_bytes": 3729,
+      "post_repair_sha256": "fb49ac38ee9a4817406ebb1876ca3b16a6f1dadc78574f6f6793fb36a588b698",
+      "post_repair_bytes": 3730
     },
     {
       "path": "packages/fount_intelligence/test/phase_eight_architecture_test.exs",
@@ -190,7 +228,9 @@
       "result_sha256": "7244cef95f5a162593d5d85f59a97bc6156df4a292884b92a4875b51b7201e82",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 1557
+      "result_bytes": 1557,
+      "post_repair_sha256": "7244cef95f5a162593d5d85f59a97bc6156df4a292884b92a4875b51b7201e82",
+      "post_repair_bytes": 1557
     },
     {
       "path": "packages/fount_intelligence/test/phase_eight_capabilities_test.exs",
@@ -199,7 +239,9 @@
       "result_sha256": "da8ae09a57df8a9ccf5bf59b4368552477a82a9cdf5ccd973911818a4d16a3bc",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 5921
+      "result_bytes": 5921,
+      "post_repair_sha256": "c24dcfd5b6b7b2db212cfc0638d35af71252040d3acb843220d190c8a83e45f4",
+      "post_repair_bytes": 6058
     },
     {
       "path": "packages/fount_intelligence/test/phase_eight_packs_test.exs",
@@ -208,7 +250,9 @@
       "result_sha256": "6e93f1696bf902aeb7083e257b844a3fd922dfc2b110e23b989dca7e7d393fab",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 4573
+      "result_bytes": 4573,
+      "post_repair_sha256": "2912b093f2194f40d4039f4b32419a67437c6f3a69993bf755561b853ebdee4c",
+      "post_repair_bytes": 5047
     },
     {
       "path": "packages/fount_intelligence/test/phase_eight_runner_test.exs",
@@ -217,7 +261,9 @@
       "result_sha256": "222fd33d50ed5d7e6a155a44a639f610548fb09e59662b17d4d3bcbc86aa6b53",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 4270
+      "result_bytes": 4270,
+      "post_repair_sha256": "68d09521eea7378af66bf8f4fde0bac94cb903d12a047b62f0ce56566837e9f6",
+      "post_repair_bytes": 4479
     },
     {
       "path": "packages/fount_intelligence/test/support/phase_eight_fixture.ex",
@@ -226,7 +272,9 @@
       "result_sha256": "c4f11f2ec21f01f6d0ebf06aaf33408294ee49816fe8a1e5d6f2eae8a2627f59",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 2548
+      "result_bytes": 2548,
+      "post_repair_sha256": "f3cfeb71c7e254310b01edbbced997e7e899da8166656dc530c4e2ff3199e9eb",
+      "post_repair_bytes": 2561
     },
     {
       "path": "packages/fount_observe/CHANGELOG.md",
@@ -235,7 +283,9 @@
       "result_sha256": "271442671d04169a299f4a5881f4891c068b221592a11b161c04a7424260dccd",
       "mode": 420,
       "original_bytes": 1636,
-      "result_bytes": 1806
+      "result_bytes": 1806,
+      "post_repair_sha256": "271442671d04169a299f4a5881f4891c068b221592a11b161c04a7424260dccd",
+      "post_repair_bytes": 1806
     },
     {
       "path": "packages/fount_observe/README.md",
@@ -244,7 +294,9 @@
       "result_sha256": "285e7f41317224128b779c341817252dc992e6be1862a42e3b87ad0b2fe108f1",
       "mode": 420,
       "original_bytes": 3637,
-      "result_bytes": 4339
+      "result_bytes": 4339,
+      "post_repair_sha256": "285e7f41317224128b779c341817252dc992e6be1862a42e3b87ad0b2fe108f1",
+      "post_repair_bytes": 4339
     },
     {
       "path": "packages/fount_observe/guides/declarative-lenses.md",
@@ -253,7 +305,9 @@
       "result_sha256": "5f1e3eaad6b95139a04383605943d55d73fbe2ed3e124957942215dcdbe18dbc",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 2277
+      "result_bytes": 2277,
+      "post_repair_sha256": "5f1e3eaad6b95139a04383605943d55d73fbe2ed3e124957942215dcdbe18dbc",
+      "post_repair_bytes": 2277
     },
     {
       "path": "packages/fount_observe/lib/fount/observe.ex",
@@ -262,7 +316,9 @@
       "result_sha256": "803a807209ad5f46f66690a1e551c51ef730c8bd77628742cc8a5a03633a960c",
       "mode": 420,
       "original_bytes": 857,
-      "result_bytes": 1955
+      "result_bytes": 1955,
+      "post_repair_sha256": "3c97d8ea9798ba3ee42dfac630a9a7203f3775dc6f0174c66e6e61a93f4d4c83",
+      "post_repair_bytes": 1960
     },
     {
       "path": "packages/fount_observe/lib/fount/observe/declarative_lens.ex",
@@ -271,7 +327,9 @@
       "result_sha256": "92e03b2614e083d1344a2a3b6386e1b6b9d45b7ef51df3566ffe901c639768f7",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 8403
+      "result_bytes": 8403,
+      "post_repair_sha256": "8188c4111eeeee14498d573221108f435e77cbd1471a6b0c79b72ad6a7301ab4",
+      "post_repair_bytes": 8991
     },
     {
       "path": "packages/fount_observe/lib/fount/observe/registry.ex",
@@ -280,7 +338,9 @@
       "result_sha256": "10a17efe69a1c1da7b09da52197b6903ee514fae911177830747b6c7bce06a9c",
       "mode": 420,
       "original_bytes": 2014,
-      "result_bytes": 2091
+      "result_bytes": 2091,
+      "post_repair_sha256": "fa89835ff7e0a82378499fda1380d0e2d02aa3d7b778d0dd02f88cdca7c11433",
+      "post_repair_bytes": 2092
     },
     {
       "path": "packages/fount_observe/mix.exs",
@@ -289,7 +349,9 @@
       "result_sha256": "0431a2147df506d44c94160cb08b0cddb2ce32dbe601fe04c5ffa90740edf830",
       "mode": 420,
       "original_bytes": 3750,
-      "result_bytes": 3831
+      "result_bytes": 3831,
+      "post_repair_sha256": "ef896cf832d5537bacc6ba9ef88a2e4db50a0d2e3c3d71152e42af0d8cee4895",
+      "post_repair_bytes": 3832
     },
     {
       "path": "packages/fount_observe/priv/lenses/emotional.value_movement.json",
@@ -298,7 +360,9 @@
       "result_sha256": "27c42d894e4536e8ef390ab27a747c1cd1a85c25535d8c6d3646bac515d7de78",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 680
+      "result_bytes": 680,
+      "post_repair_sha256": "27c42d894e4536e8ef390ab27a747c1cd1a85c25535d8c6d3646bac515d7de78",
+      "post_repair_bytes": 680
     },
     {
       "path": "packages/fount_observe/priv/lenses/genre.lens_pack.json",
@@ -307,7 +371,9 @@
       "result_sha256": "98e70059190267873c48484bfe51fc893e9523b0cea0002e3c8028aac34659cd",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 671
+      "result_bytes": 671,
+      "post_repair_sha256": "98e70059190267873c48484bfe51fc893e9523b0cea0002e3c8028aac34659cd",
+      "post_repair_bytes": 671
     },
     {
       "path": "packages/fount_observe/priv/lenses/revision.intelligence.json",
@@ -316,7 +382,9 @@
       "result_sha256": "a4adbd4d843299c23c271c1f087e680334953d8d3571f75a4f0ecb28105bbcd0",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 682
+      "result_bytes": 682,
+      "post_repair_sha256": "a4adbd4d843299c23c271c1f087e680334953d8d3571f75a4f0ecb28105bbcd0",
+      "post_repair_bytes": 682
     },
     {
       "path": "packages/fount_observe/priv/lenses/theme.meaning.json",
@@ -325,7 +393,9 @@
       "result_sha256": "782286855f50251685d960616c17f34e7a689075d687ae8e606b6cad844cf388",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 670
+      "result_bytes": 670,
+      "post_repair_sha256": "782286855f50251685d960616c17f34e7a689075d687ae8e606b6cad844cf388",
+      "post_repair_bytes": 670
     },
     {
       "path": "packages/fount_observe/test/phase_eight_lens_assets_test.exs",
@@ -334,7 +404,9 @@
       "result_sha256": "4ec7252709dad74b31fdf4a922c53069795784c6164b9d49fede44cfa4ee276a",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 3769
+      "result_bytes": 3769,
+      "post_repair_sha256": "91b7302deb7078e427d3e7cab7a14ecf95fde78852585f573151ee4cac62410d",
+      "post_repair_bytes": 3805
     },
     {
       "path": "scripts/tests/test_phase_eight_source.py",
@@ -343,8 +415,27 @@
       "result_sha256": "115b6db1b078eb5e1c3d62676ebfdc218e973601bc58b34ee7490a0dc72ab2d7",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 9351
+      "result_bytes": 9351,
+      "post_repair_sha256": "21d110e35b83ce36c20709906211a5cc9e3b44c913a3fd3122d3097aeed6b39d",
+      "post_repair_bytes": 9420
     }
   ],
-  "deletions": []
+  "deletions": [],
+  "applied_fount_commit": "f4f1062dace46e9743645505b4c8ca9d4db69945",
+  "applied_fount_tree": "6d6f407ee620324d2065f550e1558e513186ef5c",
+  "repair_fount_commit": "f7f4d68f8992d5b93c32d077e13ff1901e96add7",
+  "repair_fount_tree": "5b12527bc588d545a4b3fd4a9aac3114fe7d7afc",
+  "post_repair_files": [
+    {
+      "path": "packages/fount_intelligence/test/phase_seven_architecture_test.exs",
+      "sha256": "21618155081db742d32677c3cc55d20585cc98c010b776a5c38ff371314b5fc4",
+      "bytes": 1337
+    },
+    {
+      "path": "packages/fount_intelligence/test/test_helper.exs",
+      "sha256": "2125c37470c20eb90088f943e45f4c2c537f295be2706d30c66815ca3a3905d6",
+      "bytes": 317
+    }
+  ],
+  "post_repair_note": "Original result_sha256/result_bytes preserve the 37-operation source-delivery identity; post_repair fields identify the committed runtime repair. Two additional regression/fixture-loader files are listed in post_repair_files."
 }
