@@ -86,7 +86,8 @@
 - `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` — applied source identity, engineering repairs and gates, and user-authorized Level-A validation debt.
 - `handoffs/PHASE_08_RUNTIME_QC_REPORT.md` — verified Phase-8 engineering checkpoint.
 - `handoffs/PHASE_09_RUNTIME_QC_REPORT.md` — verified Phase-9 engineering checkpoint.
-- `handoffs/PHASE_10_OFFLINE_HANDOFF.md` / `PHASE_10_RUNTIME_QC_HANDOFF.md` — current Phase-10 source delivery and Codex repair/QC instructions.
+- `handoffs/PHASE_10_OFFLINE_HANDOFF.md` / `PHASE_10_RUNTIME_QC_HANDOFF.md` — historical Phase-10 source delivery and QC instructions.
+- `handoffs/PHASE_10_RUNTIME_QC_REPORT.md` — verified Phase-10 runtime, PostgreSQL, writer-resume and full-quality evidence.
 
 ## Five XML phase inputs
 
@@ -100,7 +101,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–9 are COMPLETE on engineering QC; Phase 10 is OFFLINE_IMPLEMENTED and awaits runtime QC; Phase 11 remains NOT_STARTED. Phase 6, Phase 7 and Phase 8 runtime QC are recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`, `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. Phase 3/4/5/6/7/8 human studies are unperformed validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–10 are COMPLETE on engineering QC; Phase 11 remains NOT_STARTED. Phase 6, Phase 7 and Phase 8 runtime QC are recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`, `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. Phase 3/4/5/6/7/8 human studies are unperformed validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -241,8 +242,8 @@ Phase 9 is `COMPLETE` on runtime engineering and preservation QC at Fount `361a9
 - `handoffs/PHASE_10_STATIC_CHECKS.json`: executed offline evidence and explicit unrun runtime/database gates.
 - `handoffs/PHASE_10_OFFLINE_HANDOFF.md`: source-delivery account, risks and Phase-11 stop line.
 - `handoffs/PHASE_10_RUNTIME_QC_HANDOFF.md`: Codex instructions for the user-applied Phase-10 state.
-- `handoffs/PHASE_10_DOCSET_HASHES.json`: complete Phase-10 source-delivery docset identities, excluding recursive checksum files.
+- `handoffs/PHASE_10_DOCSET_HASHES.json`: post-QC docset identities, excluding recursive checksum files.
 
 ## Current Phase 10 checkpoint
 
-Phase 10 is `OFFLINE_IMPLEMENTED`, not COMPLETE. The strict source overlay is `Fount_Phase_10_Durable_Analysis_overlay.zip` with 27 operations and SHA-256 `95c8d53bf8eba195bce384b85f398d7bc8ca12e2ff5cbb1c4af3472b5eb92813`. Runtime migration/compile/ExUnit/preservation evidence is pending. Phase 11 is `NOT_STARTED`.
+Phase 10 is `COMPLETE` on engineering QC at Fount `6d164f6` (tree `9a94735`). The strict source overlay is `Fount_Phase_10_Durable_Analysis_overlay.zip` with 27 operations and SHA-256 `95c8d53bf8eba195bce384b85f398d7bc8ca12e2ff5cbb1c4af3472b5eb92813`. Runtime migration/compile/ExUnit/preservation evidence is in `handoffs/PHASE_10_RUNTIME_QC_REPORT.md`. Phase 11 is `NOT_STARTED`.

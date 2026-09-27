@@ -288,7 +288,172 @@
     }
   ],
   "runtime_qc": {
-    "status": "NOT_RUN",
-    "post_qc_results": []
+    "status": "COMPLETE",
+    "fount_commit": "6d164f636b6ffd0d9278c7f0ac436ce573447423",
+    "fount_tree": "9a94735238e080f6a30bdad85b61d78a69a7d9b1",
+    "post_qc_results": [
+      {
+        "path": "README.md",
+        "sha256": "4583555e144c2706ba844484e02c6e4a7f269277b6d0757994b4b7719e4bb74c",
+        "bytes": 23073,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount/CHANGELOG.md",
+        "sha256": "1db30b760f42d9bbfcc68e6de1da04649667a296d48c26f73d2d9ac971a0f797",
+        "bytes": 1573,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount/guides/persistence.md",
+        "sha256": "4eb557fad2007cfb4638a7fcc4a41f9b1b9dd1ddf4e1392167d2d6317a2c832d",
+        "bytes": 3217,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount/lib/fount/persistence/analysis.ex",
+        "sha256": "12ab03d35541d3ac75b440d4b25ea4a17ea23450026eeab664d11cc24c400f01",
+        "bytes": 21219,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount/lib/fount/persistence/schema.ex",
+        "sha256": "d2ce402498fe4303a53c6757e26a4b698ba079da73a9117a52275b7085433737",
+        "bytes": 11028,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount/mix.exs",
+        "sha256": "d81af8a57e2f0f0f660fe597da40318caf6005bbdc6322ed143e5fec6c75ed7e",
+        "bytes": 4554,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount/priv/repo/migrations/20260927000000_create_durable_analysis_state.exs",
+        "sha256": "a678b50df2c6b36ef27ded1f7def83ac74f036b9b061989cfe6ad61d99c35ff1",
+        "bytes": 4622,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/CHANGELOG.md",
+        "sha256": "4ce5e6dc7e996178876a359e9179a6b0a1cb11e7e3d8f7428f3522734961f063",
+        "bytes": 4401,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/README.md",
+        "sha256": "481913df985724761a9a59d4c046ec54c0c264705be40ba911728c2ca3f61236",
+        "bytes": 5877,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/guides/durable-analysis.md",
+        "sha256": "270a662034bcac063ebe517dc63c40b32407854584036a80eecc84e9ccc6acec",
+        "bytes": 4085,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/integration/phase_ten_durable_analysis_test.exs",
+        "sha256": "89041063a4f5f247b414fefb29d0f2d30dfb4e0028b1305c5ed6899d499f2d99",
+        "bytes": 8451,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence.ex",
+        "sha256": "cf876628fc254b2c5fae4934cc0cc9c3ed1e7557effe31401661c59ad81347c7",
+        "bytes": 10053,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/acquisition/measurements.ex",
+        "sha256": "59b9a687fcb495c8f9cb582561cc50c8f2929e8d083acfcc0598d05e37fc949d",
+        "bytes": 6716,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/persistence.ex",
+        "sha256": "92a4211c52715f41d8ffcadc7d4d4110e2535651ed5d2122a272a59d01225065",
+        "bytes": 14934,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/persistence/measurement_cache.ex",
+        "sha256": "948a1601ecd92669d618499051eb326a9be43b5cea25d63f56c6783cd3f8dad7",
+        "bytes": 4149,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/playbooks/capability_runner.ex",
+        "sha256": "2cfd1f43aef13b3885dd985d97f2a01c508d35d414dc6a9b26c145de077b5472",
+        "bytes": 35543,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/recomputation.ex",
+        "sha256": "36b5c638504605b1e74d91c71ab45ce9c710d4b6026cb5667d649b15411e7649",
+        "bytes": 3008,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/mix.exs",
+        "sha256": "ec3e6ec756e10c70643fc80b37a6ec0ab95a8ec963a293fa6a2fc420388307bc",
+        "bytes": 3854,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_intelligence/test/phase_ten_recomputation_test.exs",
+        "sha256": "5c4587715ff9eaf6140d63abface90842c243624f9251a05e47765e352b35290",
+        "bytes": 1572,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_workshop/CHANGELOG.md",
+        "sha256": "6046c18cdedf9c1cf288f27632cddfcd7ecd8be17cd1fbc67793a007d187c903",
+        "bytes": 2663,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_workshop/README.md",
+        "sha256": "8f804949fe5b236fbd26da8d393f3d752ccc691f45e0f64aa6796c97d29e7c89",
+        "bytes": 6224,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_workshop/guides/intelligence-integration.md",
+        "sha256": "9e3d6260d48714e0cf6def2717afc57966245bfbcb3f0172ff823e6bcdf4184b",
+        "bytes": 6699,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_workshop/integration/phase_ten_resume_history_test.exs",
+        "sha256": "1960db6e4b450faf41c0d2180221b1f74543dc4d1a464086d4d7c6da5908d535",
+        "bytes": 8199,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_workshop/lib/fount_workshop/session.ex",
+        "sha256": "c9d2e39789fb15f71e4b8be33c4819a948b05ac3b1cd8b2cc6f55869b34781b8",
+        "bytes": 21400,
+        "mode": 436
+      },
+      {
+        "path": "packages/fount_workshop/lib/fount_workshop/writing/intelligence.ex",
+        "sha256": "21f25327682edd68a4e23bb3dbb21b9097bf954939310c6f75566c737ef5ddd8",
+        "bytes": 15323,
+        "mode": 436
+      },
+      {
+        "path": "scripts/tests/test_phase_nine_source.py",
+        "sha256": "7372e34eed6d33bb814efd6a68536ba6bcf1f08c8b55a2947971deb741a5f083",
+        "bytes": 5239,
+        "mode": 436
+      },
+      {
+        "path": "scripts/tests/test_phase_ten_source.py",
+        "sha256": "9d7cef2a15871628007317fb3485274ea1dc284fb26292137f730b95d877a1c8",
+        "bytes": 6159,
+        "mode": 436
+      }
+    ]
   }
 }

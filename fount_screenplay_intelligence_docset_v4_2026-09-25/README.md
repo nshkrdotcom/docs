@@ -16,7 +16,7 @@ ChatGPT.com writes the current phase without claiming unrun Elixir checks and re
 
 Read `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md`, `33_WRITER_WORKFLOWS_AND_CREATIVE_CONTRACT.md`, and `34_HUMAN_JEV_AND_LLM_COLLABORATION.md` before treating the architecture below as a product brief. The new research complements the earlier reader/notes work with discovery, cinematic action and sound, voice, rehearsal, and useful alternatives.
 
-`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–9 are COMPLETE on engineering QC; Phase 10 is OFFLINE_IMPLEMENTED and awaits runtime QC/repair; Phase 11 is NOT_STARTED. The verified Phase-9 baseline is in `handoffs/PHASE_09_RUNTIME_QC_REPORT.md`; the current source-delivery records are `handoffs/PHASE_10_*`. Phase 3 Level-A, Phase 4 first-reader, Phase 5 usefulness, and Phase 6/7/8 capability-usefulness studies remain visible validation debt; D046 makes human reviews optional and nonblocking.
+`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–10 are COMPLETE on engineering QC; Phase 11 is NOT_STARTED. The verified Phase-10 checkpoint is in `handoffs/PHASE_10_RUNTIME_QC_REPORT.md`. Phase 3 Level-A, Phase 4 first-reader, Phase 5 usefulness, and Phase 6/7/8 capability-usefulness studies remain visible validation debt; D046 makes human reviews optional and nonblocking.
 
 Success means a writer can arrive with an image, a scene, or a difficult note; explore real choices; preserve what matters; see consequences; and choose what becomes the draft. No compulsory outline, universal conflict theory, or simulated audience verdict. Human-only writing remains useful without provider credentials.
 
@@ -258,7 +258,7 @@ latest QC'd source snapshots + latest docset
 
 ## Current status
 
-Read `PROGRESS.md`. Phases 1–9 are `COMPLETE` on engineering QC. Phase 10 is `NOT_STARTED`.
+Read `PROGRESS.md`. Phases 1–10 are `COMPLETE` on engineering QC. Phase 11 is `NOT_STARTED`.
 
 ## Previous verified checkpoint: Phase 7
 
@@ -277,3 +277,6 @@ Phase 8 is **COMPLETE** on engineering and preservation QC at Fount `f7f4d68`: 3
 ## Phase 9 verified runtime result
 
 Phase 9 Workshop Intelligence Integration is **COMPLETE** on engineering and preservation QC at Fount `361a9fd`: full CI passed 325 tests, 73 Python tests passed, isolated Core/Workshop PostgreSQL and a deterministic Sandbox/scripted-Inference writer loop passed, and PDF/table-read/export plus four package builds passed. Read `handoffs/PHASE_09_RUNTIME_QC_REPORT.md`. The optional human workflow study remains unperformed validation debt under D046. Phase 10 is not started.
+## Phase 10 verified runtime result
+
+Phase 10 Durable Analysis Persistence, Reuse, and Recomputation is **COMPLETE** on engineering and preservation QC at Fount `6d164f6`: full CI passed 328 tests, 82 Python tests passed, disposable PostgreSQL migrations and Core/Intelligence/Workshop integrations passed, and the deterministic rejected/unchosen writer resume-history outcome passed without a new generation call or canon change. Read `handoffs/PHASE_10_RUNTIME_QC_REPORT.md`. The optional human usefulness study remains validation debt under D046. Phase 11 is NOT_STARTED.

@@ -2,9 +2,9 @@
   "format_version": 1,
   "phase": 10,
   "date": "2026-09-27",
-  "status": "OFFLINE_IMPLEMENTED",
-  "purpose": "Phase 10 source-delivery docset file identities; self-file and SHA256SUMS.txt omitted to avoid checksum recursion",
-  "file_count": 156,
+  "status": "COMPLETE",
+  "purpose": "Phase 10 post-runtime-QC docset file identities; self-file and SHA256SUMS.txt omitted to avoid checksum recursion",
+  "file_count": 157,
   "files": {
     "00_SCOPE_AND_PRINCIPLES.md": {
       "sha256": "7622a5fd100536e11505af345559ce496684ba2d319aad867d8c93d561cf2499",
@@ -87,8 +87,8 @@
       "mode": 420
     },
     "16_PHASED_IMPLEMENTATION_PLAN.md": {
-      "sha256": "f0c2f9f566c75f77bd8b9d5af5523e33f61d3ed2e439edd3c1e1cf2935458128",
-      "bytes": 43002,
+      "sha256": "8e579531ffdd8d5bd80c3f901a3c0840d9011f6e3a6e585e912a8d2a03fd4abf",
+      "bytes": 43689,
       "mode": 420
     },
     "17_AGENT_EXECUTION_PROTOCOL.md": {
@@ -192,8 +192,8 @@
       "mode": 420
     },
     "AGENT_START_HERE.md": {
-      "sha256": "a112e900d447728a40655d688d0ac16f600f5eb121df2dc2f9c008b814167b23",
-      "bytes": 6815,
+      "sha256": "2cae9131e036c51cdf9a6e8ccb42e87d6d0f72008523da6f4b54f174201333a3",
+      "bytes": 7113,
       "mode": 420
     },
     "DECISIONS.md": {
@@ -202,18 +202,18 @@
       "mode": 420
     },
     "MANIFEST.md": {
-      "sha256": "f2fb8e3a4872c0f39cc4b6e9f36e7dcc60b7ed49690ae7da1aef8dbfb5079ed9",
-      "bytes": 16838,
+      "sha256": "6e5ee32c123b11405651eab1b6c6b80d42acfe29518cfc4eef7cf673a8fb1499",
+      "bytes": 16940,
       "mode": 420
     },
     "PROGRESS.md": {
-      "sha256": "36adf1f43c04690828a6d35c3a62fe598953ba3cfcd4ebdea9c4ef0e913ca3de",
-      "bytes": 33233,
+      "sha256": "5e57833233cdede54a092b479f9c9038a830f24563df99e77a9ea36e4c4a96ee",
+      "bytes": 34183,
       "mode": 420
     },
     "README.md": {
-      "sha256": "5b919a9aa9fbd4ce6815272be80c27eb6bf1cea829bbbc9e29e777d36c123ae9",
-      "bytes": 15635,
+      "sha256": "a8972a3bcba5bd189ea9de6fe06ca0044e653793f8f2931d02eddf849b40c9bd",
+      "bytes": 16091,
       "mode": 420
     },
     "SOURCES.md": {
@@ -222,8 +222,8 @@
       "mode": 420
     },
     "TRACEABILITY_MATRIX.md": {
-      "sha256": "ecf12b48b91a51e9cf2946ce8d4d8a564d56336928f9d60eaed0a82163761782",
-      "bytes": 46906,
+      "sha256": "d3bdcbbfeb9730e816b3609da8c804957703ede78d161e95e35b75195e15cf13",
+      "bytes": 48068,
       "mode": 420
     },
     "examples/CONCEPTUAL_CONTRACT_EXAMPLES.md": {
@@ -712,8 +712,8 @@
       "mode": 420
     },
     "handoffs/PHASE_10_FILE_INVENTORY.json": {
-      "sha256": "064a5448bb4506a05258bcdf32f710ac3355b0773d16592233ceded563e46a71",
-      "bytes": 12287,
+      "sha256": "ea6fae2b70038984125f0263501e15626f9eb53fcf7eb1f902cadbfec38232ce",
+      "bytes": 18305,
       "mode": 420
     },
     "handoffs/PHASE_10_IMPLEMENTATION_MATRIX.md": {
@@ -740,6 +740,11 @@
       "sha256": "9807f0a0b1f20f24706e5fea8d76a2d6dbd86b6ff2decc979556d4727a41088d",
       "bytes": 10026,
       "mode": 420
+    },
+    "handoffs/PHASE_10_RUNTIME_QC_REPORT.md": {
+      "sha256": "b0946341c4bba237986a31c8271d6a5b99aae263f37faf390cde790fbd262608",
+      "bytes": 9850,
+      "mode": 436
     },
     "handoffs/PHASE_10_STATIC_CHECKS.json": {
       "sha256": "44379fe0c9366a691daee9044b06585f1c7bd7f33dbe6c008802b72ffacc910f",
