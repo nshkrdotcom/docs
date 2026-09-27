@@ -1,12 +1,11 @@
 {
   "format_version": 1,
   "phase": 5,
-  "status": "OFFLINE_IMPLEMENTED",
-  "purpose": "Phase 5 source-delivery complete docset working-tree file identities; self-file and top-level checksum ledger omitted to avoid a mutual checksum cycle",
-  "input_docset_sha256": "1258f312408a6601f876a2393baf3220e6a4359c1b52f9ba098fa8199c1d3032",
+  "status": "COMPLETE",
+  "purpose": "Phase 5 post-runtime-QC complete docset working-tree identities; self-file and top-level checksum ledger omitted to avoid a mutual checksum cycle",
   "historical_phase_04_post_qc_fount_commit": "cfde46cd2f654e050cbb9b5dbe32501625510c69",
   "fount_phase_05_overlay_sha256": "654091d7ee510a05bb73e8ac1fd280da91406cfd18cc8eac19492dfa4e155142",
-  "file_count": 106,
+  "file_count": 107,
   "excluded_paths": [
     "handoffs/PHASE_05_DOCSET_HASHES.json",
     "SHA256SUMS.txt"
@@ -28,7 +27,7 @@
     "13_PERSISTENCE_PROVENANCE_CACHE_RECOMPUTATION.md": "b7ff4a1983e3cdcc987b691e4d278d1a6b42efb05012cabecf79992cbde30c33",
     "14_WORKSHOP_INTEGRATION_AND_REVISION_INTELLIGENCE.md": "07b45293cac4219bb20de75e5a4f39e9f1c269a95ccf6ed8487477675953a264",
     "15_FOUNT_PROBE_DIRECT_SUPERSESSION.md": "7e6c0a297dce69b52c94e11194c3daef37b9cf96e4dde859a6992c0053b52639",
-    "16_PHASED_IMPLEMENTATION_PLAN.md": "6a335bebaddd01e51011a052c3cd26f540a85d1b83c6b36e3fe3547fb7b58513",
+    "16_PHASED_IMPLEMENTATION_PLAN.md": "25da2a2fb6194eb0c3d59ea8f86cbd720a00e24404cf27f4e0a7f069a3fea8b8",
     "17_AGENT_EXECUTION_PROTOCOL.md": "bfa51dbd91cfff87530bfbc13ce0628c3afbdf2b2db84aac46e9e62173441089",
     "18_RUNTIME_QC_PROTOCOL.md": "dfcc21f7e4fae3c856c4624562c40b9be7c9a1c3b80ab3a67a010e15724b6d1c",
     "19_ACCEPTANCE_CRITERIA.md": "1067b568047774fdaae23994f723a89a616f34f9dfff994d111735dc076556bf",
@@ -52,10 +51,10 @@
     "AGENT_START_HERE.md": "98845250f518df097f95c2e0bf54cef402803eed88fcf51552df8b1c7171314f",
     "DECISIONS.md": "be8b3f8771e8b04943fc6bc237317810b7c41c940c3ae758b14db3c74262fff6",
     "MANIFEST.md": "f3913d935a8e5fd1fd1d7846c5151fa3fe82aa36bbc323c7508d1ed806454114",
-    "PROGRESS.md": "3e2e066cc84f3ed8e12774a90d4caaa4bc39ed6006fc5f86fbb6c32a3fd26ef8",
+    "PROGRESS.md": "53672779b7d90559242c4bf007c0c99635f231746f58eac8de08ac31ede288cf",
     "README.md": "aa964dbd38f4453f67944f5ba39caa325a8fe21ba7695a20c42a6de5f2896674",
     "SOURCES.md": "1d725a3294015e9715f5bd5004bdd0e68ffcaee712cf8b03bddd95e38ab4beb8",
-    "TRACEABILITY_MATRIX.md": "c3bbab281c704a4e902f2c1140b4717132f017cf20ffe1abc920ede3cb015a31",
+    "TRACEABILITY_MATRIX.md": "0bcf8d4d0517dadd60e5ba72df86b901527adfd2e2ec042a23a6cbbc2a9b5324",
     "examples/CONCEPTUAL_CONTRACT_EXAMPLES.md": "75a3561c54361d56f33b72bcd8b91b23550e1914093c0691b02338ce2c53aaed",
     "examples/context_schema.example.json": "9affe9bce8f24a23a6a77e027d51a93cb4b21694f67c181dadd697d022257d26",
     "examples/corpus_manifest.example.json": "0553f8800b8884a0aaaba06208c6376b56a54fc0d83de775366ec54c30bd773b",
@@ -103,12 +102,13 @@
     "handoffs/PHASE_04_RUNTIME_QC_REPORT.md": "6355353116dbbe97afce3ed4beff759696b83d9cdf69034513553c29e7d4f275",
     "handoffs/PHASE_04_STATIC_CHECKS.json": "64e5ba11ebc7acc73cd9a0ecfb00d6f54c0b9d37cca00bbf79f58107ad0521a3",
     "handoffs/PHASE_05_DOMAIN_REVIEW_PACKET.md": "192ef9d6d914b0f3792e8bac7e9ed24d192db4b68a60ae4b15c1e511219f9f64",
-    "handoffs/PHASE_05_FILE_INVENTORY.json": "7c8f29f43e0552f59edf2bdb9fede63aaa8c9c874102b65df99fcc12c40bd63c",
-    "handoffs/PHASE_05_IMPLEMENTATION_MATRIX.md": "e82c5446b2820dc4623fe71de84867192d965c4082c3c0baee8408210893e375",
+    "handoffs/PHASE_05_FILE_INVENTORY.json": "b2824b080b5580dbf86df4671971fecfe1e4a0c501123a2e13f55c230a52045b",
+    "handoffs/PHASE_05_IMPLEMENTATION_MATRIX.md": "21856be8d2203d7522f929070d2f4ec5d1886f75080207a8c022fa4597fda3aa",
     "handoffs/PHASE_05_INPUTS.json": "5cd300d99fd135f6f290e62952dbb788646bcb8156eb43df04c32634c8976e6a",
     "handoffs/PHASE_05_OFFLINE_HANDOFF.md": "a284323b6f592307a0b21d962f3a717f507e5e792b101448452ab71f3f5210f0",
     "handoffs/PHASE_05_PRESERVATION_AUDIT.md": "f12ec3052628208744b81189b45a18b4599b128bfe148e91e83bd63d185bda5e",
     "handoffs/PHASE_05_RUNTIME_QC_HANDOFF.md": "5f5ba584e38b74a7f7b878ed18c2d3c0d68aa17ac2a480274d5d0752170300f6",
+    "handoffs/PHASE_05_RUNTIME_QC_REPORT.md": "75b6e2da902e852185b887b60f3c108d1527d8e89f2483056192ad3a5b83b098",
     "handoffs/PHASE_05_STATIC_CHECKS.json": "7f68bd8d99f6897f02cca5b50068b0b4a05b3c8feca16e7cf2fb003232e5cb9b",
     "handoffs/PREPARATION_2026-09-26.md": "6fa1ef18a1fa96b23da20db5347026593d34013479a601b37d51fe3edb5374fd",
     "repomix.config.json": "70e914d35c9888d0a64ee94023c0deca94884152b243048e3c78866334c49606",
@@ -118,5 +118,7 @@
     "templates/PHASE_QC_HANDOFF_PROMPT.md": "24ab64ea8b9521f2479afa5adde87f4ee280617194c318a8e49fc04eeae62a64",
     "templates/PHASE_RUNTIME_QC_REPORT.md": "57d2077fa5abc301b4de28fc864beca160d38221bacdf78afe13892801387e1c",
     "templates/UPDATED_DOCSET_CHECKLIST.md": "610e4b2eedbb66b7a7c699b575d3135042fde977a709e71667b6e1772f5cff55"
-  }
+  },
+  "post_qc_fount_commit": "f3a56c90842d467cf57fb3a1f2123115d7f976d2",
+  "historical_input_docset_sha256": "1258f312408a6601f876a2393baf3220e6a4359c1b52f9ba098fa8199c1d3032"
 }

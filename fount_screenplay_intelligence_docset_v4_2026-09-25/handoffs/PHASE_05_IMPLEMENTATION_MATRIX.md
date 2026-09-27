@@ -1,6 +1,6 @@
 # Phase 5 implementation matrix — Diagnosis and Multi-Pass Playbook Shell
 
-**Delivery status:** `OFFLINE_IMPLEMENTED`. Source/static/archive checks are recorded in `PHASE_05_STATIC_CHECKS.json`; Elixir/runtime checks are unrun here. Phase 6 is not started.
+**Delivery status:** historical `OFFLINE_IMPLEMENTED` at source handoff; runtime QC is now `COMPLETE` at Fount `f3a56c90842d467cf57fb3a1f2123115d7f976d2`. The table below records the original offline checkpoint; executed results and repairs are in `PHASE_05_RUNTIME_QC_REPORT.md`. Phase 6 is not started.
 
 | Phase-5 requirement | Implementation | Focused evidence written | Offline status |
 |---|---|---|---|
@@ -35,3 +35,7 @@ The reference case is an interrogation scene. The writer declares that pressure 
 ## Stop line
 
 Phase 6 capability-family implementation is explicitly outside this delivery. Codex may repair Phase-5 defects exposed by runtime QC, but must stop after Phase 5.
+
+## Runtime QC result
+
+All 18 focused Phase-5 ExUnit tests and 281 four-package tests passed. Compiled architecture, strict Credo, Dialyzer, ExDoc, package inspection, isolated database/writer/PDF workflows, and the Sandbox packet passed. Runtime repairs include valid nonempty/unique hypothesis evidence IDs, preserved next investigations, formatting and strict-toolchain refactors, and a clearer two-hypothesis demonstration. The 19 post-repair payload hashes are in `PHASE_05_FILE_INVENTORY.json`. The optional human usefulness pilot remains unperformed validation debt under D046.

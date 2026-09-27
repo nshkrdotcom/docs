@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phases 1–4 COMPLETE on engineering QC; Phase 5 OFFLINE_IMPLEMENTED and awaiting runtime QC. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
+**Current state:** Phases 1–5 COMPLETE on engineering QC. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
 
 ## Status values
 
@@ -22,7 +22,7 @@ Runtime QC establishes completion when applicable engineering and other non-huma
 | 2 | Observe Measurement Substrate Hardening | COMPLETE | `fount_phase_02_overlay.zip` | `handoffs/PHASE_02_RUNTIME_QC_REPORT.md` | Engineering, persistence, writer, package, architecture and authorized narrow live gate passed; no human quality claim |
 | 3 | Story-World Pure Core | COMPLETE | `fount_phase_03_overlay.zip` | `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` | Engineering QC passed at Fount `60f989b`; user explicitly deferred Level-A human review as visible validation debt |
 | 4 | Temporal and Forward-Reader Engine | COMPLETE | `fount_phase_04_overlay.zip` | `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` | Engineering and preservation gates passed at Fount `cfde46c`; first-reader pilot skipped under D046 as visible validation debt |
-| 5 | Diagnosis and Multi-Pass Playbook Shell | OFFLINE_IMPLEMENTED | `fount_phase_05_overlay.zip` | — | Diagnosis + Acquisition + ten writer playbooks + writer packet written; runtime QC pending |
+| 5 | Diagnosis and Multi-Pass Playbook Shell | COMPLETE | `fount_phase_05_overlay.zip` | `handoffs/PHASE_05_RUNTIME_QC_REPORT.md` | 281 ExUnit tests, architecture, strict package gates, isolated DB/writer/PDF and deterministic packet passed; optional human usefulness pilot remains validation debt |
 | 6 | Capabilities A: Scene/Agency/Character/Relationship | NOT_STARTED | — | — | Families 1–4 |
 | 7 | Capabilities B: Audience/Sequence/Dialogue/Setup-Payoff | NOT_STARTED | — | — | Families 5–8 |
 | 8 | Capabilities C: Emotional/Theme/Genre/Revision | NOT_STARTED | — | — | Families 9–12 |
@@ -55,6 +55,7 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-27 | 4 | Runtime QC and repairs | Fount applied `bf20ede`, repair `cfde46c`; docset applied `a59aea6`; `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` | Engineering and preservation gates pass; first-reader pilot initially pending |
 | 2026-09-27 | 4 | User-authorized human-review policy | D046 in `DECISIONS.md` | COMPLETE; first-reader pilot skipped as visible debt; all future human reviews optional and nonblocking |
 | 2026-09-27 | 5 | Source implementation delivered | `fount_phase_05_overlay.zip`; `fount_phase_05_docset.zip`; `FOUNT_PHASE_05_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 36-file strict overlay verified offline; Elixir/runtime QC pending; optional human usefulness pilot not run |
+| 2026-09-27 | 5 | Runtime QC and repairs | applied Fount `3cd9ba4`, repair `f3a56c9`; applied docset `5393fde`; `handoffs/PHASE_05_RUNTIME_QC_REPORT.md` | COMPLETE; 281 ExUnit tests, architecture, strict quality/package, DB writer acceptance/rejection/PDF and Sandbox demonstration pass; optional human pilot skipped under D046 |
 
 ## Non-negotiable progress rule
 
@@ -135,3 +136,7 @@ Phase 5 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The strict overlay contains 36
 Offline checks include the seven-test Phase-5 Python source gate, JSON validation for both new lens assets, a direct pure-Diagnosis forbidden-boundary scan, shell syntax check, ZIP integrity, strict overlay dry-run, strict apply, and whole-tree byte comparison. Repository-wide Python discovery still has the pre-existing missing `scripts/prune_deleted_directories.py` import gap. Elixir/Mix, ExUnit, compiled architecture, Credo, Dialyzer, docs/package, DB/Workshop/PDF, live-provider, and human-review gates are unrun here.
 
 Read `handoffs/PHASE_05_OFFLINE_HANDOFF.md`, `handoffs/PHASE_05_IMPLEMENTATION_MATRIX.md`, `handoffs/PHASE_05_STATIC_CHECKS.json`, and `handoffs/PHASE_05_RUNTIME_QC_HANDOFF.md`. The user applies and commits the Phase-5 artifacts; Codex verifies the applied state, repairs and tests Phase 5, records actual evidence, and **stops before Phase 6**. The optional diagnosis/usefulness pilot was not run and remains visible validation debt under D046.
+
+## Phase 5 runtime QC completion — 2026-09-27
+
+Phase 5 is **COMPLETE** on the engineering evidence in `handoffs/PHASE_05_RUNTIME_QC_REPORT.md`. The source-delivery `OFFLINE_IMPLEMENTED` statements above remain historical. The optional human usefulness pilot was skipped under D046 and remains validation debt. Phase 6 remains `NOT_STARTED`.

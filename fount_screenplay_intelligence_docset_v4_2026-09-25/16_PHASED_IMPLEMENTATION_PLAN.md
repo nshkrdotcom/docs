@@ -488,7 +488,9 @@ Optionally run the diagnosis/playbook usefulness pilot from `28_HUMAN_VALIDATION
 
 The old Probe plan/execute/explain intent is fully superseded by multi-pass playbooks and diagnoses while the pure core remains provider/persistence free; playbooks emit the writer presentation contract; the optional Phase-5 diagnosis/usefulness pilot is recorded if performed and otherwise listed as validation debt.
 
-**Delivery checkpoint — 2026-09-27:** `OFFLINE_IMPLEMENTED`. The pure Diagnosis records/reducers, Acquisition planner/context bridge, two declarative Observe diagnosis lenses, ten writer-playbook catalog, multi-pass runner, resource/coverage accounting, normative writer packet, deterministic renderer, Sandbox example and focused tests are written. Elixir/runtime gates remain unrun in the source-writing environment. The optional human usefulness pilot was not run and is validation debt under D046. Phase 6 remains `NOT_STARTED`.
+**Historical delivery checkpoint — 2026-09-27:** `OFFLINE_IMPLEMENTED`. The pure Diagnosis records/reducers, Acquisition planner/context bridge, two declarative Observe diagnosis lenses, ten writer-playbook catalog, multi-pass runner, resource/coverage accounting, normative writer packet, deterministic renderer, Sandbox example and focused tests are written. Elixir/runtime gates remain unrun in the source-writing environment. The optional human usefulness pilot was not run and is validation debt under D046. Phase 6 remains `NOT_STARTED`.
+
+**Runtime QC checkpoint — 2026-09-27:** `COMPLETE` at Fount `f3a56c90842d467cf57fb3a1f2123115d7f976d2`; see `handoffs/PHASE_05_RUNTIME_QC_REPORT.md`. The optional usefulness pilot is unperformed validation debt under D046. Phase 6 remains `NOT_STARTED`.
 
 ---
 
