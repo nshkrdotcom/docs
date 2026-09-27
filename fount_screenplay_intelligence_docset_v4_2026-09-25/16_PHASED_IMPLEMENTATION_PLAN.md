@@ -530,6 +530,10 @@ All four families have source-grounded outputs, deterministic core fixtures, San
 
 ---
 
+**Phase 6 runtime QC checkpoint — 2026-09-27:** `COMPLETE` at Fount `51f7c5e4054f8cab641d7f67a3c4737e17fd23d2`; full evidence is in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Optional human/domain usefulness review remains unperformed validation debt under D046. Phase 7 remains `NOT_STARTED`.
+
+---
+
 # Phase 7 — Capability Completion B: Audience, Sequence, Dialogue, Setup/Payoff
 
 ## Families

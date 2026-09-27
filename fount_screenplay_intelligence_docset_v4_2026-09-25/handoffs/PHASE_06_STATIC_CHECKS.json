@@ -1,7 +1,7 @@
 {
   "phase": 6,
   "date": "2026-09-27",
-  "status": "offline_checks_complete_runtime_unrun",
+  "status": "runtime_qc_complete",
   "checks": [
     {
       "name": "phase6_python_source_gate",
@@ -67,19 +67,56 @@
       "detail": "optional under D046; validation debt only"
     }
   ],
-  "unrun_runtime_gates": [
-    "mix format",
-    "mix compile --warnings-as-errors",
-    "focused ExUnit",
-    "full four-package CI",
-    "compiled architecture/xref",
-    "Credo",
-    "Dialyzer",
-    "ExDoc/package build",
-    "PostgreSQL integration",
-    "Workshop acceptance/rejection/PDF/table-read",
-    "live provider verification",
-    "human/domain review"
-  ],
-  "overlay_sha256": "66fb1b43ad76abf6728766a2ac6f23d6278a3b375c176acc424190d38b8afb71"
+  "unrun_runtime_gates": [],
+  "overlay_sha256": "66fb1b43ad76abf6728766a2ac6f23d6278a3b375c176acc424190d38b8afb71",
+  "runtime_qc_report": "handoffs/PHASE_06_RUNTIME_QC_REPORT.md",
+  "applied_fount_commit": "c2692131fef8ac0fe3ff846736296b06d3323b92",
+  "repair_fount_commit": "51f7c5e4054f8cab641d7f67a3c4737e17fd23d2",
+  "historical_offline_checks_preserved": true,
+  "runtime_checks": [
+    {
+      "name": "four_package_ci_292_tests",
+      "status": "PASS"
+    },
+    {
+      "name": "compiled_architecture",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_credo",
+      "status": "PASS"
+    },
+    {
+      "name": "dialyzer",
+      "status": "PASS"
+    },
+    {
+      "name": "exdoc",
+      "status": "PASS"
+    },
+    {
+      "name": "isolated_core_11",
+      "status": "PASS"
+    },
+    {
+      "name": "isolated_workshop_14",
+      "status": "PASS"
+    },
+    {
+      "name": "accept_reject_pdf_table_read",
+      "status": "PASS"
+    },
+    {
+      "name": "four_hex_archives",
+      "status": "PASS"
+    },
+    {
+      "name": "phase_six_sandbox_example",
+      "status": "PASS"
+    },
+    {
+      "name": "python_discovery_46",
+      "status": "PASS"
+    }
+  ]
 }

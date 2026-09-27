@@ -335,7 +335,7 @@ The source-writing pass does not transfer Phase-4 runtime evidence to changed In
 
 Fount applied `3cd9ba4d02a2bb342a94149467a7321d8682e3b8`, repaired `f3a56c90842d467cf57fb3a1f2123115d7f976d2`; applied docset `5393fde85509e03a59a61e2af92ae7e7c1c26294`. The 36-file applied inventory and embedded manifest matched. Focused Phase-5 ExUnit: 18 passed. Full CI: Core 71, Observe 59, Intelligence 93, Workshop 58 = 281 passed; compiled architecture 283 modules/245 source files and zero violations; strict Credo, Dialyzer, ExDoc and package archives passed. Isolated Core/Workshop integration: 11/14 passed; mock writer acceptance, rejection and two-page PDF passed. The deterministic Sandbox packet preserves two competing hypotheses, supported counterevidence with high uncertainty, protected strength, next investigation, source excerpts, coverage and unknown hosted cost. See `handoffs/PHASE_05_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_05_FILE_INVENTORY.json` for the command record and post-repair hashes. Phase 5 is `COMPLETE`; optional human usefulness review is unperformed validation debt under D046. Phase 6 remains `NOT_STARTED`.
 
-## Phase 6 concrete source traceability — OFFLINE_IMPLEMENTED
+## Phase 6 concrete source traceability — COMPLETE
 
 | Requirement | Phase-6 source/test evidence | Status |
 |---|---|---|
@@ -358,3 +358,7 @@ Fount applied `3cd9ba4d02a2bb342a94149467a7321d8682e3b8`, repaired `f3a56c90842d
 | optional human/domain review | `PHASE_06_DOMAIN_REVIEW_PACKET.md` | NOT RUN; validation debt under D046 |
 
 The source-writing pass does not transfer Phase-5 runtime evidence to changed Intelligence/Observe source. Phase 6 remains `OFFLINE_IMPLEMENTED` until Codex executes and repairs the runtime/preservation gates. Phase 7 remains `NOT_STARTED`.
+
+## Phase 6 runtime verification
+
+At Fount `51f7c5e`, all four Phase-6 families and lenses, exact selected source in semantic input and provenance, partial coverage for caps, scene/agency/character/relationship reasoning, non-linear story-time separation, evidence-backed hypotheses, Sandbox playbooks and nil generated candidates are verified by 10 focused ExUnit tests, 292 workspace tests, 46 Python source tests, and source/compiled architecture inspection. Core and Workshop isolated integrations (11/14), accept/reject writer demonstrations, two-page PDF, table-read, strict Credo, Dialyzer, ExDoc and four archive builds pass. See `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Optional human/domain review is NOT RUN under D046; Phase 7 remains NOT_STARTED. Historical source-delivery statuses above remain as chronology.

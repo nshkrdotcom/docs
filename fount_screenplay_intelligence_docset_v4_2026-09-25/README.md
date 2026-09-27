@@ -16,7 +16,7 @@ ChatGPT.com writes the current phase without claiming unrun Elixir checks and re
 
 Read `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md`, `33_WRITER_WORKFLOWS_AND_CREATIVE_CONTRACT.md`, and `34_HUMAN_JEV_AND_LLM_COLLABORATION.md` before treating the architecture below as a product brief. The new research complements the earlier reader/notes work with discovery, cinematic action and sound, voice, rehearsal, and useful alternatives.
 
-`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–5 are COMPLETE on engineering QC. Phase 6 is OFFLINE_IMPLEMENTED and awaiting Codex runtime QC. Phase 3 Level-A, Phase 4 first-reader, Phase 5 usefulness and Phase 6 capability-usefulness studies remain visible validation debt; D046 makes human reviews optional and nonblocking.
+`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–6 are COMPLETE on engineering QC. Phase 6 runtime evidence is in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Phase 3 Level-A, Phase 4 first-reader, Phase 5 usefulness and Phase 6 capability-usefulness studies remain visible validation debt; D046 makes human reviews optional and nonblocking.
 
 Success means a writer can arrive with an image, a scene, or a difficult note; explore real choices; preserve what matters; see consequences; and choose what becomes the draft. No compulsory outline, universal conflict theory, or simulated audience verdict. Human-only writing remains useful without provider credentials.
 
@@ -258,10 +258,11 @@ latest QC'd source snapshots + latest docset
 
 ## Current status
 
-Read `PROGRESS.md`. Phases 1–5 are `COMPLETE`; Phase 5 runtime QC passed at Fount `f3a56c9`. Phase 6 — Capabilities A: Scene / Agency / Character / Relationship — is `OFFLINE_IMPLEMENTED` from that verified source and now awaits Codex runtime QC. Phase 7 remains `NOT_STARTED`.
+Read `PROGRESS.md`. Phases 1–6 are `COMPLETE`; Phase 6 runtime QC passed at Fount `51f7c5e`. Phase 7 remains `NOT_STARTED`.
 
 ## Current delivery: Phase 6
 
 The current source delivery makes capability families 1–4 concrete. A writer can inspect selected scenes for objective/opposition/stakes/urgency/tactics/turns/consequences and entry/exit candidates; trace explicit character decisions through causal reach, alternate support and consequence latency; compare reader-visible character movement with diegetic StoryWorld state without forcing transformation; and inspect directional pair/group relationship movement across trust, leverage, obligation, concealment and related dimensions. Exact selected excerpts participate in the semantic measurement input and remain attached as current-revision evidence. Non-linear presentation is kept separate from story time, and all diagnoses remain hypotheses with limitations.
 
 Artifacts are `fount_phase_06_overlay.zip`, `fount_phase_06_docset.zip`, and `FOUNT_PHASE_06_CODEX_QC_HANDOFF.md`. The source-writing environment executed the eight-test Phase-6 Python gate, four-lens JSON validation, pure-boundary/Phase-7 absence scans, shell syntax, ZIP integrity, strict overlay dry-run/apply and byte-for-byte tree reproduction. Repository-wide Python discovery still exposes the pre-existing missing `scripts/prune_deleted_directories.py` input gap. Elixir/Mix/runtime/provider/database/human checks are not claimed. Read `handoffs/PHASE_06_IMPLEMENTATION_MATRIX.md`, `handoffs/PHASE_06_STATIC_CHECKS.json`, and `handoffs/PHASE_06_RUNTIME_QC_HANDOFF.md`. Do not advance to Phase 7 in the QC pass.
+The Phase 6 source-delivery paragraphs above are historical. Runtime results and the optional skipped human review are recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`.

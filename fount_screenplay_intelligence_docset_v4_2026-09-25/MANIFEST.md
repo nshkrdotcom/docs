@@ -97,7 +97,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–5 are COMPLETE on engineering QC; Phase 6 is OFFLINE_IMPLEMENTED and awaiting runtime QC. Phase 3/4/5/6 human studies are unperformed validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–6 are COMPLETE on engineering QC; Phase 6 runtime QC is recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Phase 3/4/5/6 human studies are unperformed validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -179,3 +179,5 @@ Phase-3 runtime QC is recorded in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. No h
 - `handoffs/PHASE_06_OFFLINE_HANDOFF.md`: current source-delivery account and Phase-7 stop line.
 - `handoffs/PHASE_06_RUNTIME_QC_HANDOFF.md`: Codex verifies the user-applied Phase-6 state, repairs it, runs engineering/preservation QC, then stops before Phase 7.
 - `handoffs/PHASE_06_DOCSET_HASHES.json`: complete updated-docset identities, excluding itself and `SHA256SUMS.txt` to avoid a mutual checksum cycle.
+
+- `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`: applied commit/tree, repair commit/tree, engineering and preservation gates, skipped optional human review.

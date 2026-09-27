@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phases 1–5 COMPLETE on engineering QC. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
+**Current state:** Phases 1–6 COMPLETE on engineering QC. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
 
 ## Status values
 
@@ -23,7 +23,7 @@ Runtime QC establishes completion when applicable engineering and other non-huma
 | 3 | Story-World Pure Core | COMPLETE | `fount_phase_03_overlay.zip` | `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` | Engineering QC passed at Fount `60f989b`; user explicitly deferred Level-A human review as visible validation debt |
 | 4 | Temporal and Forward-Reader Engine | COMPLETE | `fount_phase_04_overlay.zip` | `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` | Engineering and preservation gates passed at Fount `cfde46c`; first-reader pilot skipped under D046 as visible validation debt |
 | 5 | Diagnosis and Multi-Pass Playbook Shell | COMPLETE | `fount_phase_05_overlay.zip` | `handoffs/PHASE_05_RUNTIME_QC_REPORT.md` | 281 ExUnit tests, architecture, strict package gates, isolated DB/writer/PDF and deterministic packet passed; optional human usefulness pilot remains validation debt |
-| 6 | Capabilities A: Scene/Agency/Character/Relationship | OFFLINE_IMPLEMENTED | `fount_phase_06_overlay.zip` | — | Families 1–4 source-written; runtime QC pending; optional human/domain review skipped as validation debt |
+| 6 | Capabilities A: Scene/Agency/Character/Relationship | COMPLETE | `fount_phase_06_overlay.zip` | `handoffs/PHASE_06_RUNTIME_QC_REPORT.md` | 292 workspace tests, architecture, strict quality/docs, isolated DB/writer/PDF and packages pass at Fount `51f7c5e`; optional human review remains validation debt |
 | 7 | Capabilities B: Audience/Sequence/Dialogue/Setup-Payoff | NOT_STARTED | — | — | Families 5–8 |
 | 8 | Capabilities C: Emotional/Theme/Genre/Revision | NOT_STARTED | — | — | Families 9–12 |
 | 9 | Workshop Intelligence Integration | NOT_STARTED | — | — | Existing creative workflows enhanced |
@@ -151,3 +151,7 @@ Scene outputs include turn candidates, entry/exit deltas, surrounding-sequence c
 Offline checks include the eight-test Phase-6 Python source gate, four lens JSON parses, pure-capability forbidden-boundary scan, explicit Phase-7 absence scan, shell syntax, ZIP integrity, strict overlay dry-run, strict apply and 503-file byte-for-byte reproduction. Repository-wide Python discovery still has the pre-existing missing `scripts/prune_deleted_directories.py` import gap. Elixir/Mix, ExUnit, compiled architecture, Credo, Dialyzer, docs/package, DB/Workshop/PDF/table-read, live-provider and human-review gates are unrun here.
 
 Read `handoffs/PHASE_06_OFFLINE_HANDOFF.md`, `handoffs/PHASE_06_IMPLEMENTATION_MATRIX.md`, `handoffs/PHASE_06_STATIC_CHECKS.json`, and `handoffs/PHASE_06_RUNTIME_QC_HANDOFF.md`. The user applies and commits the Phase-6 artifacts; Codex verifies the applied state, repairs and tests Phase 6, records actual evidence, and **stops before Phase 7**. The optional capability usefulness/domain review was not run and remains visible validation debt under D046.
+
+## Phase 6 runtime QC completion — 2026-09-27
+
+Phase 6 is **COMPLETE** on engineering and preservation evidence at applied Fount `c2692131fef8ac0fe3ff846736296b06d3323b92` (tree `e433f5f3ab0731063e64f5a505e975df7c522b60`) plus repair `51f7c5e4054f8cab641d7f67a3c4737e17fd23d2` (tree `3a704750bc5e38028a3117041618d5d1f1d82aff`). See `handoffs/PHASE_06_RUNTIME_QC_REPORT.md` for commands, defects, and results. The optional domain/usefulness study was skipped under D046 and remains validation debt. Phase 7 remains `NOT_STARTED`.
