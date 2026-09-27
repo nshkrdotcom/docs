@@ -23,7 +23,7 @@ Runtime QC establishes completion when applicable engineering and other non-huma
 | 3 | Story-World Pure Core | COMPLETE | `fount_phase_03_overlay.zip` | `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` | Engineering QC passed at Fount `60f989b`; user explicitly deferred Level-A human review as visible validation debt |
 | 4 | Temporal and Forward-Reader Engine | COMPLETE | `fount_phase_04_overlay.zip` | `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` | Engineering and preservation gates passed at Fount `cfde46c`; first-reader pilot skipped under D046 as visible validation debt |
 | 5 | Diagnosis and Multi-Pass Playbook Shell | COMPLETE | `fount_phase_05_overlay.zip` | `handoffs/PHASE_05_RUNTIME_QC_REPORT.md` | 281 ExUnit tests, architecture, strict package gates, isolated DB/writer/PDF and deterministic packet passed; optional human usefulness pilot remains validation debt |
-| 6 | Capabilities A: Scene/Agency/Character/Relationship | NOT_STARTED | — | — | Families 1–4 |
+| 6 | Capabilities A: Scene/Agency/Character/Relationship | OFFLINE_IMPLEMENTED | `fount_phase_06_overlay.zip` | — | Families 1–4 source-written; runtime QC pending; optional human/domain review skipped as validation debt |
 | 7 | Capabilities B: Audience/Sequence/Dialogue/Setup-Payoff | NOT_STARTED | — | — | Families 5–8 |
 | 8 | Capabilities C: Emotional/Theme/Genre/Revision | NOT_STARTED | — | — | Families 9–12 |
 | 9 | Workshop Intelligence Integration | NOT_STARTED | — | — | Existing creative workflows enhanced |
@@ -56,6 +56,7 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-27 | 4 | User-authorized human-review policy | D046 in `DECISIONS.md` | COMPLETE; first-reader pilot skipped as visible debt; all future human reviews optional and nonblocking |
 | 2026-09-27 | 5 | Source implementation delivered | `fount_phase_05_overlay.zip`; `fount_phase_05_docset.zip`; `FOUNT_PHASE_05_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 36-file strict overlay verified offline; Elixir/runtime QC pending; optional human usefulness pilot not run |
 | 2026-09-27 | 5 | Runtime QC and repairs | applied Fount `3cd9ba4`, repair `f3a56c9`; applied docset `5393fde`; `handoffs/PHASE_05_RUNTIME_QC_REPORT.md` | COMPLETE; 281 ExUnit tests, architecture, strict quality/package, DB writer acceptance/rejection/PDF and Sandbox demonstration pass; optional human pilot skipped under D046 |
+| 2026-09-27 | 6 | Source implementation delivered | `fount_phase_06_overlay.zip`; `fount_phase_06_docset.zip`; `FOUNT_PHASE_06_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 31-file-operation strict overlay verified offline; Elixir/runtime QC pending; optional human/domain review not run |
 
 ## Non-negotiable progress rule
 
@@ -140,3 +141,13 @@ Read `handoffs/PHASE_05_OFFLINE_HANDOFF.md`, `handoffs/PHASE_05_IMPLEMENTATION_M
 ## Phase 5 runtime QC completion — 2026-09-27
 
 Phase 5 is **COMPLETE** on the engineering evidence in `handoffs/PHASE_05_RUNTIME_QC_REPORT.md`. The source-delivery `OFFLINE_IMPLEMENTED` statements above remain historical. The optional human usefulness pilot was skipped under D046 and remains validation debt. Phase 6 remains `NOT_STARTED`.
+
+## Phase 6 offline delivery — 2026-09-27
+
+Phase 6 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The strict overlay contains 31 operations (21 additions, 10 modifications, no deletions). It implements Scene Engine, Agency/Causality, Character Trajectory and Relationship Dynamics across Observe measurements, pure StoryWorld reasoning and Phase-6 writer-playbook packets. Exact selected screenplay excerpts participate in semantic measurement state and remain attached as current-revision evidence; selection caps downgrade coverage to partial rather than manufacturing a clean result. Workshop continues to own generated pages and canonical acceptance.
+
+Scene outputs include turn candidates, entry/exit deltas, surrounding-sequence contribution and handoff/counterfactual support. Agency uses only explicit causal edges and exposes alternate support, causal reach and consequence latency without turning presentation distance into causality. Character permits steadfast/static and other non-transformational trajectories while separating reader-visible presentation from explicit story-time relations. Relationship accepts selected pairs or groups, preserves directional/asymmetric state and includes non-linear presentation cases.
+
+Offline checks include the eight-test Phase-6 Python source gate, four lens JSON parses, pure-capability forbidden-boundary scan, explicit Phase-7 absence scan, shell syntax, ZIP integrity, strict overlay dry-run, strict apply and 503-file byte-for-byte reproduction. Repository-wide Python discovery still has the pre-existing missing `scripts/prune_deleted_directories.py` import gap. Elixir/Mix, ExUnit, compiled architecture, Credo, Dialyzer, docs/package, DB/Workshop/PDF/table-read, live-provider and human-review gates are unrun here.
+
+Read `handoffs/PHASE_06_OFFLINE_HANDOFF.md`, `handoffs/PHASE_06_IMPLEMENTATION_MATRIX.md`, `handoffs/PHASE_06_STATIC_CHECKS.json`, and `handoffs/PHASE_06_RUNTIME_QC_HANDOFF.md`. The user applies and commits the Phase-6 artifacts; Codex verifies the applied state, repairs and tests Phase 6, records actual evidence, and **stops before Phase 7**. The optional capability usefulness/domain review was not run and remains visible validation debt under D046.

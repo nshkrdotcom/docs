@@ -526,6 +526,8 @@ Human-reviewed cases are optional. Product-readiness claims without them must re
 
 All four families have source-grounded outputs, deterministic core fixtures, Sandbox playbook integration, documented limitations, non-linear-story cases, Workshop usefulness mapping; optional domain-review cases are recorded if performed and otherwise listed as validation debt.
 
+**Historical source-delivery checkpoint — 2026-09-27:** `OFFLINE_IMPLEMENTED`. Four closed Observe measurement lenses, pure Scene/Agency/Character/Relationship evaluators, exact source-in-semantic-input shell integration, non-linear fixtures, deterministic Sandbox playbook tests, writer packets and Workshop usefulness mapping are written. Offline Python/JSON/source/transport checks passed except the pre-existing missing `scripts/prune_deleted_directories.py` repository-wide discovery gap. Elixir/Mix/runtime gates are unrun. The optional human/domain review was not run and is validation debt under D046. Phase 7 remains `NOT_STARTED`.
+
 ---
 
 # Phase 7 — Capability Completion B: Audience, Sequence, Dialogue, Setup/Payoff

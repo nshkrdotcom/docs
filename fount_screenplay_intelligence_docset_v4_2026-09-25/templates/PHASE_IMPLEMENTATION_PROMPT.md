@@ -7,7 +7,8 @@ You are implementing the next phase of the Fount Screenplay Intelligence program
 1. `fount.xml`, from the latest post-QC source;
 2. `system_one_sdk.xml`;
 3. `inference.xml`;
-4. `docset.xml`, the complete current docset.
+4. `agent_session_manager.xml`;
+5. `docset.xml`, the complete current docset.
 
 Read documents 32–36 before implementation. Lead with this phase's writer outcome and demonstration. This is screenplay-writing software, not an architecture showcase. Preserve human authorship, voice, and useful existing workflows. Follow document 35: the user applies and commits the output ZIPs, then Codex verifies and repairs that applied state.
 

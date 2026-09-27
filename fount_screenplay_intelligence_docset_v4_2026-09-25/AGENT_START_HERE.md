@@ -18,9 +18,9 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phases 1–4: COMPLETE. Phase 5: OFFLINE_IMPLEMENTED and awaiting runtime QC. Phase 6 remains NOT_STARTED.**
+> **Phases 1–5: COMPLETE. Phase 6: OFFLINE_IMPLEMENTED and awaiting runtime QC. Phase 7 remains NOT_STARTED.**
 
-Read `handoffs/PHASE_05_OFFLINE_HANDOFF.md`, `handoffs/PHASE_05_RUNTIME_QC_HANDOFF.md`, and `PROGRESS.md`. The user applies/commits the Phase-5 artifacts first; Codex then verifies that applied state, compiles/tests/repairs Phase 5, records runtime evidence, and stops before Phase 6. Phases 1–4 remain COMPLETE; their validation debt is historical and must not be silently converted into human-validation claims.
+Read `handoffs/PHASE_06_OFFLINE_HANDOFF.md`, `handoffs/PHASE_06_RUNTIME_QC_HANDOFF.md`, and `PROGRESS.md`. The user applies/commits the Phase-6 artifacts first; Codex then verifies that applied state, compiles/tests/repairs Phase 6, records runtime evidence, and stops before Phase 7. Phases 1–5 remain COMPLETE; historical validation debt must not be silently converted into human-validation claims.
 
 ## Read before coding
 
@@ -95,6 +95,6 @@ Before implementing any phase after Phase 2, read:
 
 Do not fabricate human validation. Under D046, human/domain pilots are optional and skipped by default. Preserve in-scope evaluation interfaces and any useful study instructions, but do not block engineering completion or later work for absent reviewers. Record skipped studies as validation debt.
 
-### Current Phase 5 checkpoint
+### Current Phase 6 checkpoint
 
-Phase 5 is `OFFLINE_IMPLEMENTED` from the post-Phase-4 source. Diagnosis, Acquisition context conversion, ten writer playbooks, resource/coverage accounting, writer result packets, deterministic rendering, Sandbox tests and the reference example are written but uncompiled here. Codex must test/repair this phase and stop before Phase 6. No human usefulness study was run.
+Phase 6 is `OFFLINE_IMPLEMENTED` from the post-Phase-5 QC source. Scene Engine, Agency/Causality, Character Trajectory and Relationship Dynamics are source-written with exact source excerpts in measurement state, pure StoryWorld reasoning, non-linear fixtures, Sandbox playbook coverage, writer packets and Workshop usefulness mapping. Elixir/Mix/runtime checks remain unrun here. Codex must test/repair Phase 6 and stop before Phase 7. No human/domain usefulness study was run.

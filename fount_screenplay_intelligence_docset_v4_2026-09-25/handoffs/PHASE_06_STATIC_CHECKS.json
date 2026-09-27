@@ -1,0 +1,85 @@
+{
+  "phase": 6,
+  "date": "2026-09-27",
+  "status": "offline_checks_complete_runtime_unrun",
+  "checks": [
+    {
+      "name": "phase6_python_source_gate",
+      "command": "python3 -m unittest scripts/tests/test_phase_six_source.py",
+      "status": "PASS",
+      "detail": "8 tests passed"
+    },
+    {
+      "name": "phase6_lens_json_parse",
+      "status": "PASS",
+      "detail": "4 JSON assets parsed"
+    },
+    {
+      "name": "pure_capabilities_forbidden_token_scan",
+      "status": "PASS",
+      "detail": "8 pure capability modules scanned; no direct provider/repo/acquisition/playbook/env/clock/random tokens"
+    },
+    {
+      "name": "phase7_absence_scan",
+      "status": "PASS",
+      "detail": "no Phase-7 capability modules present"
+    },
+    {
+      "name": "handoff_shell_syntax",
+      "command": "bash -n scripts/verify_handoff.sh",
+      "status": "PASS"
+    },
+    {
+      "name": "repository_python_discovery",
+      "command": "python3 -m unittest discover -s scripts/tests -p 'test_*.py'",
+      "status": "BASELINE_ERROR",
+      "detail": "43 tests discovered; one import error because supplied XML lacks scripts/prune_deleted_directories.py required by existing test_prune_deleted_directories.py"
+    },
+    {
+      "name": "overlay_zip_integrity",
+      "command": "unzip -t fount_phase_06_overlay.zip",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_overlay_dry_run",
+      "command": "python3 handoff/apply_overlay.py --root <decoded-baseline> --archive fount_phase_06_overlay.zip --dry-run",
+      "status": "PASS"
+    },
+    {
+      "name": "strict_overlay_apply",
+      "command": "python3 handoff/apply_overlay.py --root <clean-copy> --archive fount_phase_06_overlay.zip --apply",
+      "status": "PASS",
+      "detail": "31 declared changes applied"
+    },
+    {
+      "name": "post_apply_tree_compare",
+      "status": "PASS",
+      "detail": "applied copy matches 503-file intended tree byte-for-byte, excluding applier backup metadata"
+    },
+    {
+      "name": "elixir_mix_runtime",
+      "status": "UNAVAILABLE",
+      "detail": "elixir, mix and erl are not installed; no Elixir/runtime result claimed"
+    },
+    {
+      "name": "human_domain_review",
+      "status": "NOT_RUN",
+      "detail": "optional under D046; validation debt only"
+    }
+  ],
+  "unrun_runtime_gates": [
+    "mix format",
+    "mix compile --warnings-as-errors",
+    "focused ExUnit",
+    "full four-package CI",
+    "compiled architecture/xref",
+    "Credo",
+    "Dialyzer",
+    "ExDoc/package build",
+    "PostgreSQL integration",
+    "Workshop acceptance/rejection/PDF/table-read",
+    "live provider verification",
+    "human/domain review"
+  ],
+  "overlay_sha256": "66fb1b43ad76abf6728766a2ac6f23d6278a3b375c176acc424190d38b8afb71"
+}

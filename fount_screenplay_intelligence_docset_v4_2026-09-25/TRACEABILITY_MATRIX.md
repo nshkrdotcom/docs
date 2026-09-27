@@ -334,3 +334,27 @@ The source-writing pass does not transfer Phase-4 runtime evidence to changed In
 ## Phase 5 runtime QC trace — 2026-09-27
 
 Fount applied `3cd9ba4d02a2bb342a94149467a7321d8682e3b8`, repaired `f3a56c90842d467cf57fb3a1f2123115d7f976d2`; applied docset `5393fde85509e03a59a61e2af92ae7e7c1c26294`. The 36-file applied inventory and embedded manifest matched. Focused Phase-5 ExUnit: 18 passed. Full CI: Core 71, Observe 59, Intelligence 93, Workshop 58 = 281 passed; compiled architecture 283 modules/245 source files and zero violations; strict Credo, Dialyzer, ExDoc and package archives passed. Isolated Core/Workshop integration: 11/14 passed; mock writer acceptance, rejection and two-page PDF passed. The deterministic Sandbox packet preserves two competing hypotheses, supported counterevidence with high uncertainty, protected strength, next investigation, source excerpts, coverage and unknown hosted cost. See `handoffs/PHASE_05_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_05_FILE_INVENTORY.json` for the command record and post-repair hashes. Phase 5 is `COMPLETE`; optional human usefulness review is unperformed validation debt under D046. Phase 6 remains `NOT_STARTED`.
+
+## Phase 6 concrete source traceability — OFFLINE_IMPLEMENTED
+
+| Requirement | Phase-6 source/test evidence | Status |
+|---|---|---|
+| Scene Engine atomic measurements and derived state | `acquisition/capability_measurements.ex`, `capabilities/scene_engine.ex` | WRITTEN; Python source gate PASS; ExUnit unrun |
+| Scene turn/entry-exit/sequence/handoff outputs | `SceneEngine.turn_candidates`, entry/exit delta, surrounding-sequence contribution, handoff/counterfactual support | WRITTEN |
+| Agency explicit decision/action/consequence reasoning | `capabilities/agency_causality.ex` + StoryWorld causal APIs | WRITTEN; runtime unrun |
+| alternate support / causal reach / consequence latency | Agency derived state + nonlinear fixture | WRITTEN |
+| Character goals/beliefs/commitments/adaptation/arc hypotheses | `capabilities/character_trajectory.ex` | WRITTEN |
+| no compulsory character transformation | closed arc choices include steadfast/deliberately-static/mixed; guide/tests | WRITTEN |
+| reader-visible vs diegetic character state | separate presentation measurements and StoryWorld story-time relation packet | WRITTEN; nonlinear fixture |
+| Relationship pair/group dimensions/directionality | `capabilities/relationship_dynamics.ex` | WRITTEN |
+| relationship nonlinear presentation and story-time separation | relationship transition/interaction story-time packet + flashback fixture | WRITTEN |
+| exact source participates in measurement semantics | `CapabilityRunner.build_inputs/4` copies evidence excerpts into `state.source` and retains evidence envelope | Python source gate PASS; runtime unrun |
+| four closed Observe lenses | `scene.engine.json`, `agency.causality.json`, `character.trajectory.json`, `relationship.dynamics.json` + Registry | JSON PASS; ExUnit unrun |
+| all four families exercised through Sandbox writer playbooks | `phase_six_runner_test.exs`, `examples/phase_six.exs` | WRITTEN; runtime unrun |
+| Workshop usefulness mapping without premature integration | `guides/capabilities-a.md`; existing Workshop API names inspected | WRITTEN; no Workshop call added |
+| pure-core effect boundary | `phase_six_architecture_test.exs` + Python direct scan | source scan PASS; compiled gate unrun |
+| Phase-7 stop line | Python absence check + handoff | PASS offline |
+| five-input transport | `PHASE_06_INPUTS.json`, D047 | RECORDED |
+| optional human/domain review | `PHASE_06_DOMAIN_REVIEW_PACKET.md` | NOT RUN; validation debt under D046 |
+
+The source-writing pass does not transfer Phase-5 runtime evidence to changed Intelligence/Observe source. Phase 6 remains `OFFLINE_IMPLEMENTED` until Codex executes and repairs the runtime/preservation gates. Phase 7 remains `NOT_STARTED`.

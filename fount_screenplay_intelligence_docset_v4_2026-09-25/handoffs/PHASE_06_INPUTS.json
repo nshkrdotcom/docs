@@ -1,0 +1,132 @@
+{
+  "phase": 6,
+  "date": "2026-09-27",
+  "attachments": [
+    {
+      "role": "fount",
+      "input": "content-identified fount XML",
+      "sha256": "ea65092eee3da7aa6ec645719b97d9a247a8d269623bc3acfb4056bb3edfa221",
+      "bytes": 2292739,
+      "file_count": 482
+    },
+    {
+      "role": "system_one_sdk",
+      "input": "content-identified system one sdk XML",
+      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+      "bytes": 875342,
+      "file_count": 253
+    },
+    {
+      "role": "inference",
+      "input": "content-identified inference XML",
+      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
+      "bytes": 299421,
+      "file_count": 69
+    },
+    {
+      "role": "agent_session_manager",
+      "input": "content-identified agent session manager XML",
+      "sha256": "67988c9aec015ce189e16078b18639f60873d244da63e3275d33707add5702db",
+      "bytes": 1608267,
+      "file_count": 275
+    },
+    {
+      "role": "docset",
+      "input": "content-identified docset XML",
+      "sha256": "b03790281f57498cdea7ebb9fb80e19cc6542670b6feb4ae5be7165857617d3b",
+      "bytes": 1265529,
+      "file_count": 109
+    }
+  ],
+  "identified_by_contents": {
+    "fount": "four-package Fount workspace containing canonical Core, Observe, Intelligence and Workshop; Phase-5 QC-corrected source plus prior handoffs are present",
+    "system_one_sdk": "System One poncho workspace containing system_one_sdk, system_one_contracts, system_one_bumblebee and system_one_server; public SystemOneSDK version 0.6.0",
+    "inference": "provider-neutral Inference workspace with adapters including ASM and public package version 0.5.0",
+    "agent_session_manager": "Agent Session Manager repository with sessions, runs, provider backends/features and inference endpoint surfaces; version 0.17.1",
+    "docset": "numbered Fount Screenplay Intelligence implementation docset 00-36 plus Phase-1 through Phase-5 source/runtime handoffs; PROGRESS marks Phases 1-5 COMPLETE and Phase 6 first NOT_STARTED"
+  },
+  "sealed_snapshot_index_present": false,
+  "progress_basis": "PROGRESS.md records Phases 1-5 COMPLETE and Phase 6 Capabilities A: Scene/Agency/Character/Relationship as the first NOT_STARTED phase. D046 makes human/domain studies optional and nonblocking.",
+  "historical_verified_baseline": {
+    "phase_5_post_qc_fount_commit": "f3a56c90842d467cf57fb3a1f2123115d7f976d2",
+    "note": "historical identity recorded by the docset; the supplied raw Fount XML is not itself an authenticated Git seal"
+  },
+  "system_one_sdk_api_inspection": {
+    "version": "0.6.0",
+    "public_functions_inspected": [
+      "version/0",
+      "new_client/1",
+      "system_one/4",
+      "noul/2",
+      "choice/3",
+      "score/3",
+      "prepare/1",
+      "prepare!/1",
+      "evaluate/4",
+      "evaluate!/4",
+      "evaluate_stream/4",
+      "evaluate_many/4",
+      "system_one!/4",
+      "list_models/2"
+    ],
+    "phase_6_usage": "no new direct dependency; Phase 6 acquires semantic measurements through existing Fount.Observe provider boundaries"
+  },
+  "inference_api_inspection": {
+    "version": "0.5.0",
+    "public_functions_inspected": [
+      "client/1",
+      "client!/1",
+      "capabilities/1",
+      "complete/3",
+      "stream/3",
+      "Inference.Adapters.ASM complete/2",
+      "Inference.Adapters.ASM stream/2",
+      "Inference.Adapters.ASM capabilities/1"
+    ],
+    "phase_6_usage": "none; creative completion remains Workshop-owned and no Phase-6 pure/shell Intelligence code calls Inference directly"
+  },
+  "asm_api_inspection": {
+    "version": "0.17.1",
+    "public_functions_inspected": [
+      "ASM.start_session/1",
+      "ASM.stop_session/1",
+      "ASM.stream/3",
+      "ASM.query/3",
+      "ASM.session_id/1",
+      "ASM.session_info/1",
+      "ASM.health/1",
+      "ASM.interrupt/2",
+      "ASM.resume_run/3",
+      "ASM.ProviderFeatures.manifest/1",
+      "ASM.ProviderFeatures.common_feature/2",
+      "ASM.ProviderFeatures.require_capability/3"
+    ],
+    "phase_6_usage": "none; inspected independently to verify the Inference agent-session/provider-feature boundary and avoid invented direct Fount integration"
+  },
+  "fount_api_inspection": {
+    "actual_calls_used": [
+      "Fount.Selection.select/2",
+      "Fount.Selection.evidence/1",
+      "Fount.Observe.preflight/3",
+      "Fount.Observe.evaluate/4",
+      "Fount.Observe.Sandbox.new!/2",
+      "Fount.Intelligence.Acquisition.Measurements.preflight/3",
+      "Fount.Intelligence.Acquisition.Measurements.evaluate/4",
+      "Fount.Intelligence.StoryWorld.compile/3",
+      "Fount.Intelligence.StoryWorld.story_time_relation/3",
+      "Fount.Intelligence.StoryWorld.causal_descendants/2",
+      "Fount.Intelligence.StoryWorld.counterfactual_remove/2"
+    ],
+    "writer_usefulness_mapping_inspected": [
+      "FountWorkshop.TargetedRewrite.propose/4",
+      "FountWorkshop.SequenceRebuild.propose/5",
+      "FountWorkshop.CharacterRewrite.propose/5",
+      "FountWorkshop.Pass.propose/6"
+    ]
+  },
+  "omissions": [
+    "No Elixir/Erlang/Mix runtime is available in the source-writing environment.",
+    "The optional Phase-6 human/domain usefulness review was not run; no human result is fabricated.",
+    "The supplied Fount input contains scripts/tests/test_prune_deleted_directories.py but not scripts/prune_deleted_directories.py, so repository-wide Python discovery has one pre-existing import error unrelated to Phase 6."
+  ]
+}
