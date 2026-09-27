@@ -362,3 +362,28 @@ The source-writing pass does not transfer Phase-5 runtime evidence to changed In
 ## Phase 6 runtime verification
 
 At Fount `51f7c5e`, all four Phase-6 families and lenses, exact selected source in semantic input and provenance, partial coverage for caps, scene/agency/character/relationship reasoning, non-linear story-time separation, evidence-backed hypotheses, Sandbox playbooks and nil generated candidates are verified by 10 focused ExUnit tests, 292 workspace tests, 46 Python source tests, and source/compiled architecture inspection. Core and Workshop isolated integrations (11/14), accept/reject writer demonstrations, two-page PDF, table-read, strict Credo, Dialyzer, ExDoc and four archive builds pass. See `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Optional human/domain review is NOT RUN under D046; Phase 7 remains NOT_STARTED. Historical source-delivery statuses above remain as chronology.
+
+## Phase 7 concrete source traceability — OFFLINE_IMPLEMENTED
+
+| Requirement | Phase-7 source/test evidence | Offline state |
+|---|---|---|
+| Audience/Reader first-exposure trajectory | `capabilities/audience_reader_experience.ex`; existing `Reader.reduce/3`; `phase_seven_capabilities_test.exs` | WRITTEN; source gate PASS; ExUnit unrun |
+| no future-scene reader leakage | existing strict-forward Reader reused; Phase-7 audience code accepts only supplied validated Reader events | WRITTEN; prior Reader source unchanged; runtime regression pending |
+| reader ledgers remain separate | Audience result keeps question, anticipation, suspense, curiosity, surprise, comprehension and handoff outputs distinct | WRITTEN |
+| Sequence state vector and movement density | `capabilities/sequence_movement.ex` retains per-scene measurement IDs and separate movement dimensions | WRITTEN; source gate PASS |
+| presentation/story-time sequence separation | `Temporal.sequence_view/3` called for both orderings; non-linear fixture | WRITTEN; ExUnit unrun |
+| Dialogue adjacent-turn semantics | `CapabilityRunner` derives adjacent canonical character/dialogue turns with cue+dialogue evidence; `dialogue_interaction.ex` interprets response/evasion/subtext/tactic/status/etc. | WRITTEN; source gate PASS |
+| validated typed dialogue context | `dialogue.exchange.json` closed context contract + `ContextBuilder.validate/2`; global/per-scene neutral slots | JSON PASS; provider dispatch unrun |
+| Setup/payoff lifecycle and motifs | `setup_payoff_motifs.ex` + existing `Temporal.setup_payoff_ledger/2` + StoryWorld causal/story-time relations | WRITTEN; source gate PASS |
+| non-linear setup/payoff | five-scene fixture presents watch origin flashback after a present clue while StoryWorld places origin earlier; payoff packet records both relations | WRITTEN; ExUnit unrun |
+| four closed Observe lenses | `audience.reader_experience.json`, `sequence.movement.json`, `dialogue.exchange.json`, `setup_payoff.motifs.json` + Registry | all JSON parse PASS |
+| writer-facing playbook use | `suspense_audit`, `sequence_momentum`, `dialogue_pass`, `setup_payoff`; dialogue composes existing relationship family | WRITTEN; runner tests unrun |
+| diagnosis evidence lineage | Phase-7 evaluators retain measurement provenance/support; Sequence vectors preserve measurement IDs | source review complete; runtime assertions pending |
+| generation remains Workshop-owned | Capability runner returns analysis packets; generated `candidate` remains nil | source gate PASS; full Workshop regression pending |
+| dependency preservation | no Phase-7 direct SystemOneSDK/Inference/ASM calls; Observe and Workshop boundaries retained | source inspection PASS |
+| Phase-8 stop line | no Emotional/Theme/Genre/Revision family implementation in Phase-7 overlay | source gate PASS |
+| five-input transport | `PHASE_07_INPUTS.json`, document 35 | RECORDED |
+| optional human/domain review | `PHASE_07_DOMAIN_REVIEW_PACKET.md` | NOT RUN; validation debt under D046 |
+
+The source-writing pass does not transfer Phase-6 runtime evidence to changed Phase-7 Observe/Intelligence source. Phase 7 remains `OFFLINE_IMPLEMENTED` until Codex executes and repairs the runtime/preservation ladder. Phase 8 remains `NOT_STARTED`.
+

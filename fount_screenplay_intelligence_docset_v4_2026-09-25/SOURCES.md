@@ -239,3 +239,18 @@ This Phase-5 source-writing pass used five raw Repomix XML snapshots, identified
 - **Current docset:** documents 00–36 plus Phase-1 through Phase-4 runtime history. Its progress record made Phase 5 the first phase eligible for implementation.
 
 No web source or conversation memory substitutes for these code/API snapshots in the Phase-5 implementation record. Human usefulness validation was not run.
+
+## Phase 7 implementation-source snapshot — 2026-09-27
+
+This source-writing pass used exactly five fresh raw XML attachments and identified them by repository contents rather than filenames:
+
+- **Fount**: four-package screenplay workspace (`fount`, `fount_observe`, `fount_intelligence`, `fount_workshop`) containing the Phase-6 runtime-corrected capability baseline; raw XML SHA-256 `9afe5206449947f69b52aba19898654174ffc38a9d87c1207d351d7b50b98df6`.
+- **System One SDK**: poncho workspace containing `system_one_sdk`, `system_one_contracts`, `system_one_bumblebee`, and `system_one_server`; public SDK version 0.6.0; raw XML SHA-256 `acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d`.
+- **Inference**: provider-neutral inference workspace with adapters including ASM; version 0.5.0; raw XML SHA-256 `a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9`.
+- **Agent Session Manager**: session/run/provider-backend/provider-feature/inference-endpoint repository; version 0.17.1; raw XML SHA-256 `67988c9aec015ce189e16078b18639f60873d244da63e3275d33707add5702db`.
+- **Current docset**: documents 00–36 plus Phase-1 through Phase-6 records; `PROGRESS.md` marks Phases 1–6 COMPLETE and Phase 7 as the first NOT_STARTED phase; raw XML SHA-256 `638c52c787db4d94c271e1452ed8d8c7a65aec6d70347c2a27c75a5f2d885304`.
+
+Actual source inspection confirmed that Phase 7 requires no new direct dependency calls into SystemOneSDK, Inference, or ASM. Fount continues to acquire semantic measurements through `Fount.Observe`; `SystemOneSDK.new_client/1`, question preparation/evaluation, and provider result normalization remain owned by the existing Observe provider adapter. Inference remains Workshop-side generation infrastructure, with its 0.5.0 capability/complete/stream facade; ASM remains behind the existing Inference/agent-session boundary. Phase-7 Intelligence directly reuses real Fount APIs including `Fount.Selection.select/2`, `Fount.Selection.evidence/1`, `Fount.Intelligence.Reader.reduce/3`, `Reader.inspection_packet/1`, `Temporal.sequence_view/3`, `Temporal.setup_payoff_ledger/2`, `StoryWorld.compile/3`, `StoryWorld.story_time_relation/3`, and Observe context validation through `Fount.Intelligence.Acquisition.ContextBuilder.validate/2`.
+
+No Elixir/Mix/runtime or human-review claim is sourced from this offline pass. Exact attachment identities, API lists, omissions, and check evidence are in `handoffs/PHASE_07_INPUTS.json` and `handoffs/PHASE_07_STATIC_CHECKS.json`.
+

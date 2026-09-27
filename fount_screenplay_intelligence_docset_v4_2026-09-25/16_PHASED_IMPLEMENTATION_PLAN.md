@@ -562,6 +562,8 @@ Optional human-reviewed cases may be added for Audience/Reader, Sequence, Dialog
 
 Each family has complete sensor/intelligence/playbook coverage, representative revision/non-linear presentation fixtures; optional domain-review cases are recorded if performed and otherwise listed as validation debt.
 
+**Phase 7 source-delivery checkpoint — 2026-09-27:** `OFFLINE_IMPLEMENTED`, not COMPLETE. Four closed Observe lenses, four pure Capability-B evaluators, strict-forward Reader reuse, explicit presentation/story-time sequence views, validated neutral dialogue context, setup/payoff/motif lifecycle reasoning, a non-linear five-scene fixture, playbook wiring, and writer-facing packet coverage are source-written. The strict overlay has 30 operations (16 additions, 14 modifications, no deletions). Four lens JSON checks, 41 Phase 1–7 source-contract tests, Python compilation, ZIP integrity, strict overlay dry-run/apply, manifest hash verification, and clean-tree reproduction pass. Repository-wide Python discovery is blocked only by the supplied XML omitting the historical cleanup helper imported by its test. Elixir/Mix/runtime gates and the optional human/domain review are unrun. Phase 8 remains `NOT_STARTED`; Codex must test/repair Phase 7 and stop before Phase 8.
+
 ---
 
 # Phase 8 — Capability Completion C: Emotional/Value, Theme, Genre, Revision Intelligence

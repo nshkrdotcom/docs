@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phases 1–6 COMPLETE on engineering QC. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
+**Current state:** Phases 1–6 COMPLETE on engineering QC. Phase 7 is OFFLINE_IMPLEMENTED and awaiting runtime QC/repair; Phase 8 remains NOT_STARTED. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
 
 ## Status values
 
@@ -24,7 +24,7 @@ Runtime QC establishes completion when applicable engineering and other non-huma
 | 4 | Temporal and Forward-Reader Engine | COMPLETE | `fount_phase_04_overlay.zip` | `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` | Engineering and preservation gates passed at Fount `cfde46c`; first-reader pilot skipped under D046 as visible validation debt |
 | 5 | Diagnosis and Multi-Pass Playbook Shell | COMPLETE | `fount_phase_05_overlay.zip` | `handoffs/PHASE_05_RUNTIME_QC_REPORT.md` | 281 ExUnit tests, architecture, strict package gates, isolated DB/writer/PDF and deterministic packet passed; optional human usefulness pilot remains validation debt |
 | 6 | Capabilities A: Scene/Agency/Character/Relationship | COMPLETE | `fount_phase_06_overlay.zip` | `handoffs/PHASE_06_RUNTIME_QC_REPORT.md` | 292 workspace tests, architecture, strict quality/docs, isolated DB/writer/PDF and packages pass at Fount `51f7c5e`; optional human review remains validation debt |
-| 7 | Capabilities B: Audience/Sequence/Dialogue/Setup-Payoff | NOT_STARTED | — | — | Families 5–8 |
+| 7 | Capabilities B: Audience/Sequence/Dialogue/Setup-Payoff | OFFLINE_IMPLEMENTED | `fount_phase_07_overlay.zip` | pending | Families 5–8 source-written; offline source/transport checks pass; Elixir/runtime QC pending |
 | 8 | Capabilities C: Emotional/Theme/Genre/Revision | NOT_STARTED | — | — | Families 9–12 |
 | 9 | Workshop Intelligence Integration | NOT_STARTED | — | — | Existing creative workflows enhanced |
 | 10 | Durable Analysis Persistence, Reuse, and Recomputation | NOT_STARTED | — | — | L2 persistence + immutable result reuse + recomputation frontiers |
@@ -57,6 +57,8 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-27 | 5 | Source implementation delivered | `fount_phase_05_overlay.zip`; `fount_phase_05_docset.zip`; `FOUNT_PHASE_05_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 36-file strict overlay verified offline; Elixir/runtime QC pending; optional human usefulness pilot not run |
 | 2026-09-27 | 5 | Runtime QC and repairs | applied Fount `3cd9ba4`, repair `f3a56c9`; applied docset `5393fde`; `handoffs/PHASE_05_RUNTIME_QC_REPORT.md` | COMPLETE; 281 ExUnit tests, architecture, strict quality/package, DB writer acceptance/rejection/PDF and Sandbox demonstration pass; optional human pilot skipped under D046 |
 | 2026-09-27 | 6 | Source implementation delivered | `fount_phase_06_overlay.zip`; `fount_phase_06_docset.zip`; `FOUNT_PHASE_06_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 31-file-operation strict overlay verified offline; Elixir/runtime QC pending; optional human/domain review not run |
+| 2026-09-27 | 6 | Runtime QC and repairs | applied Fount `c2692131`, repair `51f7c5e4`; applied docset `05e9b10b`; `handoffs/PHASE_06_RUNTIME_QC_REPORT.md` | COMPLETE; 292 workspace tests plus architecture/quality/docs/package/DB/writer/PDF gates pass; optional human review skipped under D046 |
+| 2026-09-27 | 7 | Source implementation delivered | `fount_phase_07_overlay.zip`; `fount_phase_07_docset.zip`; `FOUNT_PHASE_07_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 30-operation strict overlay verified; 41 Phase 1–7 source-contract tests pass; Elixir/runtime QC pending; optional human/domain review not run |
 
 ## Non-negotiable progress rule
 
@@ -155,3 +157,16 @@ Read `handoffs/PHASE_06_OFFLINE_HANDOFF.md`, `handoffs/PHASE_06_IMPLEMENTATION_M
 ## Phase 6 runtime QC completion — 2026-09-27
 
 Phase 6 is **COMPLETE** on engineering and preservation evidence at applied Fount `c2692131fef8ac0fe3ff846736296b06d3323b92` (tree `e433f5f3ab0731063e64f5a505e975df7c522b60`) plus repair `51f7c5e4054f8cab641d7f67a3c4737e17fd23d2` (tree `3a704750bc5e38028a3117041618d5d1f1d82aff`). See `handoffs/PHASE_06_RUNTIME_QC_REPORT.md` for commands, defects, and results. The optional domain/usefulness study was skipped under D046 and remains validation debt. Phase 7 remains `NOT_STARTED`.
+
+## Phase 7 offline delivery — 2026-09-27
+
+Phase 7 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The strict 30-operation overlay adds the four Capability-B families—Audience/Reader Experience, Sequence Movement, Dialogue Interaction, and Setup/Payoff + Motifs—using four closed Observe lenses and the existing Intelligence/Observe seams. It reuses the verified strict-forward Reader and Temporal/StoryWorld models rather than creating duplicate timeline or audience state.
+
+For screenplay writers, the new source exposes first-exposure reader question/expectation/threat/suspense/curiosity/surprise/comprehension/handoff trajectories; per-scene sequence movement without collapsing movement into one score; adjacent canonical dialogue-turn analysis with typed neutral context; and setup/payoff/motif lifecycle analysis that keeps presentation relation separate from diegetic story-time relation. The synthetic five-scene fixture includes a later-presented flashback whose event occurs earlier in story time so the non-linear distinction is exercised in source/tests.
+
+Offline evidence actually executed: four new lens JSON assets parse; all 41 Phase 1–7 source-contract Python tests pass; Python compilation of the changed source-check scripts/applier/sealer passes; overlay ZIP integrity passes; strict dry-run and apply pass; all 30 result hashes match; and a clean applied tree reproduces the 519-file desired source tree when generated Python caches and the applier backup journal are excluded. Repository-wide Python discovery runs 50 tests but has one import error because the supplied Fount XML contains `test_prune_deleted_directories.py` without the implementation helper `scripts/prune_deleted_directories.py`; this is recorded as an input-snapshot limitation, not a Phase-7 pass.
+
+Elixir, Erlang and Mix are unavailable in this source-writing environment. Therefore formatter, compile, ExUnit, architecture, Credo, Dialyzer, ExDoc, archive/package, PostgreSQL, Workshop writer/PDF/table-read, and live-provider checks are **NOT_RUN** here. The optional Phase-7 human/domain usefulness review is also NOT_RUN and remains visible validation debt under D046.
+
+Read `handoffs/PHASE_07_OFFLINE_HANDOFF.md`, `handoffs/PHASE_07_IMPLEMENTATION_MATRIX.md`, `handoffs/PHASE_07_STATIC_CHECKS.json`, and `handoffs/PHASE_07_RUNTIME_QC_HANDOFF.md`. The user applies and commits the Phase-7 artifacts. Codex starts from that applied commit, does not reapply the overlay, verifies/repairs/tests Phase 7, records actual runtime evidence, and **stops before Phase 8**. Phase 8 and all later work remain NOT_STARTED.
+

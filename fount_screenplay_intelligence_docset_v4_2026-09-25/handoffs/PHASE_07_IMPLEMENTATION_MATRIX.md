@@ -1,0 +1,28 @@
+# Phase 7 implementation matrix — Capabilities B
+
+**Status:** `OFFLINE_IMPLEMENTED`. Runtime checks are pending. Phase 8 is not implemented.
+
+| Product requirement | Implementation | Deterministic source/test coverage | Writer usefulness |
+|---|---|---|---|
+| Audience / Reader Experience | `audience.reader_experience` lens; `Capabilities.AudienceReaderExperience`; optional strict-forward `Reader.reduce/3` | `phase_seven_capabilities_test.exs`, `phase_seven_runner_test.exs`, five-scene fixture | Shows what the first-exposure reader currently knows/questions/anticipates without importing later-page knowledge. |
+| question/anticipation/suspense/curiosity/surprise/comprehension/handoff outputs remain distinct | audience evaluator keeps separate ledgers/components and measurement trajectory | architecture/capability tests + source contract gate | Avoids a single audience-quality score; a writer can inspect the kind of pressure or confusion instead. |
+| no future-scene leakage | existing Reader validation/reducer reused unchanged; family accepts only supplied Reader events | existing Reader regression obligations + Phase-7 capability test | A later reveal cannot retroactively make an earlier checkpoint look clearer. |
+| Sequence Movement | `sequence.movement` lens; `Capabilities.SequenceMovement` | capability/runner tests | Shows whether consecutive scenes change objectives, constraints, stakes, knowledge, relationships, choices, tactics, outcomes, or handoff rather than calling a sequence merely fast/slow. |
+| explicit presentation vs story time | both `Temporal.sequence_view(..., ordering: :presentation)` and `:story_time` | non-linear fixture | Flashbacks/intercuts remain intentionally placed rather than being mistaken for chronological regression. |
+| Sequence evidence lineage | per-scene state vector retains measurement IDs and source evidence | source review + capability tests | Diagnoses can point back to the exact measurements/excerpts supporting them. |
+| Dialogue Interaction | `dialogue.exchange` lens; `Capabilities.DialogueInteraction`; adjacent-turn construction in `CapabilityRunner` | runner/capability tests | Examines response/evasion/redirect/attack/bargain/reveal/conceal/subtext/exposition/tactic/status/repetition/voice at exchange scale. |
+| exact adjacent canonical turns | runner derives turns from canonical character cue + dialogue units and attaches both cue/dialogue evidence | runner tests | Prevents a decontextualized line-only classifier from inventing who said what or what it answered. |
+| context-dependent dialogue sensors | closed lens slots: `known_facts`, `speaker_beliefs`, `relationship_state`, `prior_turns`; `ContextBuilder.validate/2` before acquisition | Observe lens asset test + runner validation tests | Lets a writer ask whether a line evades or deceives relative to known facts/beliefs without opening arbitrary executable context. |
+| Dialogue + relationship composition | `dialogue_pass` maps to `dialogue_interaction` and existing `relationship_dynamics` | playbook mapping tests | Tactic/status shifts can be viewed alongside the relationship state already established in Phase 6 rather than duplicated. |
+| Setup / Payoff and Motifs | `setup_payoff.motifs` lens; `Capabilities.SetupPayoffMotifs`; existing `Temporal.setup_payoff_ledger/2` | capability/runner tests | Tracks plants, reinforcement, transformation, pay/subvert/abandon candidates, callbacks, motif functions, and broken chains. |
+| nonlinear payoff semantics | payoff qualification reports presentation relation separately from `StoryWorld.story_time_relation/3` | fixture places the watch-gift flashback later in presentation but earlier in story time | Supports the common screenplay move where a later-presented flashback explains an earlier-presented clue. |
+| motif/callback analysis | StoryWorld motif records + measurement entries + lifecycle reasoning | five-scene silver-watch motif fixture | Shows how a repeated object changes function from clue to relationship origin to physical key to relinquished private bond. |
+| writer-facing playbooks | `suspense_audit`, `sequence_momentum`, `dialogue_pass`, `setup_payoff` wired to families 5–8 | writer registry/runner tests | Gives direct screenplay-analysis entry points rather than exposing only low-level sensors. |
+| source-grounded diagnoses/limitations | capability Result fields preserve evidence, measurements, diagnoses, uncertainty, investigations, limitations | capability tests | Findings are inspectable hypotheses; intentional ambiguity/stillness/exposition/repetition/subversion can remain deliberate choices. |
+| generation boundary | capability runner returns analysis packet; generated `candidate` remains nil | runner/source tests | Writer chooses whether to move from investigation to Workshop generation; analysis never silently edits canon. |
+| external dependency boundary | no new direct SystemOneSDK/Inference/ASM calls; Observe and Workshop remain owners | source inspection and architecture source guard | Preserves current provider/runtime functionality and makes Phase 7 additive. |
+| Phase-8 stop | no Emotional/Theme/Genre/Revision family implementation | source-contract guard | Delivery remains strictly within the requested current phase. |
+
+## Exit-criteria state
+
+All four Phase-7 families have source-visible sensor/intelligence/playbook coverage, evidence/provenance paths, representative deterministic fixtures including a non-linear presentation/story-time case, limitations, evaluation guidance, and writer-facing uses. This is **source coverage only** until Codex compiles, runs ExUnit and the full preservation ladder, repairs defects, and records actual runtime evidence.

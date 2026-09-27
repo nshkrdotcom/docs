@@ -18,9 +18,9 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phases 1–5: COMPLETE. Phase 6: OFFLINE_IMPLEMENTED and awaiting runtime QC. Phase 7 remains NOT_STARTED.**
+> **Phases 1–6: COMPLETE. Phase 7: OFFLINE_IMPLEMENTED and awaiting runtime QC/repair. Phase 8 remains NOT_STARTED.**
 
-Read `handoffs/PHASE_06_OFFLINE_HANDOFF.md`, `handoffs/PHASE_06_RUNTIME_QC_HANDOFF.md`, and `PROGRESS.md`. The user applies/commits the Phase-6 artifacts first; Codex then verifies that applied state, compiles/tests/repairs Phase 6, records runtime evidence, and stops before Phase 7. Phases 1–5 remain COMPLETE; historical validation debt must not be silently converted into human-validation claims.
+Read `handoffs/PHASE_07_OFFLINE_HANDOFF.md`, `handoffs/PHASE_07_RUNTIME_QC_HANDOFF.md`, `handoffs/PHASE_07_IMPLEMENTATION_MATRIX.md`, and `PROGRESS.md`. The user applies/commits the Phase-7 artifacts first; Codex then verifies that applied state, compiles/tests/repairs Phase 7, records runtime evidence, and stops before Phase 8. Phases 1–6 remain COMPLETE; historical validation debt must not be silently converted into human-validation claims.
 
 ## Read before coding
 
@@ -95,6 +95,6 @@ Before implementing any phase after Phase 2, read:
 
 Do not fabricate human validation. Under D046, human/domain pilots are optional and skipped by default. Preserve in-scope evaluation interfaces and any useful study instructions, but do not block engineering completion or later work for absent reviewers. Record skipped studies as validation debt.
 
-### Current Phase 6 checkpoint
+### Current Phase 7 checkpoint
 
-Phase 6 is `OFFLINE_IMPLEMENTED` from the post-Phase-5 QC source. Scene Engine, Agency/Causality, Character Trajectory and Relationship Dynamics are source-written with exact source excerpts in measurement state, pure StoryWorld reasoning, non-linear fixtures, Sandbox playbook coverage, writer packets and Workshop usefulness mapping. Elixir/Mix/runtime checks remain unrun here. Codex must test/repair Phase 6 and stop before Phase 7. No human/domain usefulness study was run.
+Phase 6 is COMPLETE on the runtime evidence recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Phase 7 is `OFFLINE_IMPLEMENTED` from that QC-corrected source. Audience/Reader Experience, Sequence Movement, Dialogue Interaction, and Setup/Payoff + Motifs are source-written with four closed Observe lenses, existing strict-forward Reader and Temporal/StoryWorld reuse, typed dialogue context validation, non-linear setup/payoff fixtures, playbook wiring, writer packets, and explicit claim limitations. Elixir/Mix/runtime checks remain unrun here. Codex must test/repair Phase 7 and stop before Phase 8. No human/domain usefulness study was run.
