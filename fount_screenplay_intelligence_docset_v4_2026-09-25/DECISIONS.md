@@ -348,3 +348,11 @@ reports `provider_requests: null` for that case, keeps
 was scheduled. This preserves the distinction between local scheduling and
 confirmed remote work; a timed-out local task does not prove remote cancellation.
 The focused regression and four-package CI passed after the repair.
+
+## Phase 3 runtime decision - 2026-09-26
+
+### D045 - Defer the Level-A structural/factual pilot as visible validation debt
+
+After Phase 3 engineering QC passed, the user explicitly authorized deferring the rights-cleared cases and independent human structural reviews so they do not block Phase 4: “yes make it so it wont stop phase 4, obviously.” This satisfies the explicit override path in documents 16 and 28 and the Phase-3 domain-review packet. Phase 3 is marked `COMPLETE` under this exception; Phase 4 is eligible to start in a later pass.
+
+The Level-A work remains unperformed: no three rights-cleared feature scripts/substantial excerpts, two independent reviewers, per-case evidence/query artifacts, independent reviews or reconciliation record exist. The engineering tests and synthetic example are not human validation. Keep this debt visible in progress, traceability and future claims; do not report structural/factual human validation until it actually occurs. This decision authorizes no live provider call and does not waive a later phase's own gates.

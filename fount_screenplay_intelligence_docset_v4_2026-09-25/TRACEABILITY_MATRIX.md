@@ -261,9 +261,9 @@ advanced. Prior Phase 1 runtime evidence does not transfer to changed source.
 
 Phase 2 QC verified all 19 rows in `handoffs/PHASE_02_IMPLEMENTATION_MATRIX.md` with the 232-test workspace suite, compiled boundary gate, isolated database and writer examples, one capped live SDK request and four package builds. Later W01/W11 session work remains assigned to later phases.
 
-## Phase 3 concrete source traceability - DOMAIN_REVIEW_PENDING
+## Phase 3 concrete source traceability - COMPLETE with Level-A validation debt
 
-The complete requirement/source/test mapping is `handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md`. The table below records the historical offline delivery. Engineering verification and repairs are recorded separately in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`; the required Level-A human structural/factual pilot remains pending.
+The complete requirement/source/test mapping is `handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md`. The table below records the historical offline delivery. Engineering verification and repairs are recorded separately in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. The unperformed Level-A human structural/factual pilot is visible validation debt under explicit user decision D045.
 
 | Requirement / writer usefulness | Source | Tests or demonstration | Offline status |
 |---|---|---|---|
@@ -281,4 +281,4 @@ The complete requirement/source/test mapping is `handoffs/PHASE_03_IMPLEMENTATIO
 
 W01–W12 later workflow rows are not advanced by this source delivery. Phase 4 Reader state, diagnosis, playbook-shell reasoning, durable persistence and Workshop integration remain NOT_STARTED.
 
-**Runtime trace:** Fount `60f989bcb9935b28519c908f3cd123ad6efe172f` passed 244 four-package ExUnit tests, compiled architecture on 267 modules/229 source files, strict Credo, Dialyzer, ExDoc, isolated Core/Workshop integration (11/14 tests), writer accept/reject/PDF examples, and four package inspections. `story_world_temporal_test.exs` now also proves strict-cycle constraint provenance and contradictory pair-query abstention. The Level-A corpus/reviewer/reconciliation artifacts remain unrecorded; Phase 3 is `DOMAIN_REVIEW_PENDING` and Phase 4 remains `NOT_STARTED`.
+**Runtime trace:** Fount `60f989bcb9935b28519c908f3cd123ad6efe172f` passed 244 four-package ExUnit tests, compiled architecture on 267 modules/229 source files, strict Credo, Dialyzer, ExDoc, isolated Core/Workshop integration (11/14 tests), writer accept/reject/PDF examples, and four package inspections. `story_world_temporal_test.exs` now also proves strict-cycle constraint provenance and contradictory pair-query abstention. The Level-A corpus/reviewer/reconciliation artifacts remain unrecorded; Phase 3 is `COMPLETE` under D045's explicit validation-debt override, and Phase 4 is `NOT_STARTED` but eligible to begin next.

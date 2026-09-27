@@ -15,7 +15,7 @@ ChatGPT.com writes the current phase without claiming unrun Elixir checks and re
 
 Read `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md`, `33_WRITER_WORKFLOWS_AND_CREATIVE_CONTRACT.md`, and `34_HUMAN_JEV_AND_LLM_COLLABORATION.md` before treating the architecture below as a product brief. The new research complements the earlier reader/notes work with discovery, cinematic action and sound, voice, rehearsal, and useful alternatives.
 
-`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1 and 2 are COMPLETE. Phase 3 engineering QC passed and its required Level-A structural/factual human review remains pending. Later phases are not implemented by this delivery.
+`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–3 are COMPLETE; Phase 3 carries visible Level-A human-review validation debt under explicit user override. Phase 4 is next and NOT_STARTED.
 
 Success means a writer can arrive with an image, a scene, or a difficult note; explore real choices; preserve what matters; see consequences; and choose what becomes the draft. No compulsory outline, universal conflict theory, or simulated audience verdict. Human-only writing remains useful without provider credentials.
 
@@ -257,10 +257,10 @@ latest QC'd source snapshots + latest docset
 
 ## Current status
 
-Read `PROGRESS.md`. The current source delivery is Phase 3; do not begin Phase 4.
+Read `PROGRESS.md`. Phase 3 is complete under the recorded human-review exception. Phase 4 is the next phase; begin it only in a separate implementation pass from the post-QC Fount commit.
 
 ## Current delivery: Phase 3
 
 The current source delivery adds a pure story-world reference core for screenplay writers: exact evidence-backed facts/events, event-qualified state such as possession or knowledge, reality scopes, partial diegetic chronology that can remain unknown or ambiguous, and a causal graph that is not inferred from scene order. It also provides deterministic JSON/Markdown reference packets and counterfactual support-impact inspection without generating replacement pages. Read `PROGRESS.md` and the complete matrix in `handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md`.
 
-Deliverables are `fount_phase_03_overlay.zip`, `fount_phase_03_docset.zip` and `FOUNT_PHASE_03_CODEX_QC_HANDOFF.md`. The source-writing environment has no Elixir runtime. Static source/archive checks are not runtime or human evidence. The user applies/commits; Codex verifies, formats, compiles, tests and repairs Phase 3 only. The required Level-A structural/factual human review remains a separate gate and must not be fabricated.
+The historical source-delivery artifacts were `fount_phase_03_overlay.zip`, `fount_phase_03_docset.zip` and `FOUNT_PHASE_03_CODEX_QC_HANDOFF.md`. The source-writing environment had no Elixir runtime; subsequent runtime QC is recorded in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. The Level-A structural/factual human review remains unperformed and visible as validation debt under decision D045. No reviewer or result is fabricated.

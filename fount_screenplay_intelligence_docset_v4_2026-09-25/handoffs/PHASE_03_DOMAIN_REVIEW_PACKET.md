@@ -2,6 +2,8 @@
 
 This is the required **human** validation packet for StoryWorld. It is prepared by the offline implementation pass but intentionally contains no fabricated reviews or scores.
 
+**Current disposition (2026-09-26 HST):** the user explicitly deferred this Level-A pilot as visible validation debt in decision D045 so it does not block Phase 4. No case or reviewer result has been added. Keep this packet for the eventual human review; Phase 3's `COMPLETE` status is under the recorded exception, not evidence that this pilot occurred.
+
 ## Gate target
 
 Per document 28, use at least **3 rights-cleared feature scripts or substantial feature-script excerpts** and at least **2 independent structural reviewers** for selected facts/events/relations. This is a pilot floor/target, not statistical calibration.

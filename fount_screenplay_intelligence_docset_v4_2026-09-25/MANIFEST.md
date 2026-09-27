@@ -82,7 +82,7 @@
 
 - `handoffs/` — phase-specific offline and QC handoffs are added during implementation.
 - `handoffs/PREPARATION_2026-09-26.md` — source baselines and actual preparation checks; not a completed implementation phase.
-- `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` — applied source identity, engineering repairs and gates, and pending Level-A human review.
+- `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` — applied source identity, engineering repairs and gates, and user-authorized Level-A validation debt.
 
 ## Four XML phase inputs
 
@@ -95,7 +95,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phases 1 and 2 are COMPLETE; Phase 3 engineering QC passed and human domain review is pending. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phases 1–3 are COMPLETE; Phase 3 carries visible human-review validation debt under decision D045. Phase 4 is next and NOT_STARTED. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -139,4 +139,4 @@ These are historical Phase 1 records. Its runtime-QC report records COMPLETE wit
 - `handoffs/PHASE_03_OFFLINE_HANDOFF.md`: source-delivery account and stop line.
 - `handoffs/PHASE_03_RUNTIME_QC_HANDOFF.md`: Codex verifies the user-applied Phase-3 state, repairs it, runs engineering QC, then stops before Phase 4.
 
-No Phase-3 runtime-QC or human-review result is fabricated. Add the runtime report only after actual execution; mark `DOMAIN_REVIEW_PENDING` if engineering QC passes while real reviewers remain outstanding.
+Phase-3 runtime QC is recorded in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. No human-review result is fabricated. The user explicitly deferred the Level-A pilot as visible validation debt in D045, allowing Phase 4 to start in a later pass.

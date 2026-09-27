@@ -17,9 +17,9 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phase 3 - Story-World Pure Core: DOMAIN_REVIEW_PENDING; engineering QC passed**
+> **Phase 3 - Story-World Pure Core: COMPLETE under explicit human-review validation-debt override. Phase 4 is next and NOT_STARTED.**
 
-Read `handoffs/PHASE_03_RUNTIME_QC_HANDOFF.md`, `handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md`, and `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md`. Verify and repair the user-applied Phase-3 source rather than restarting it or beginning Phase 4. Phases 1 and 2 are COMPLETE under their recorded QC evidence.
+Read `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`, decision D045, and `PROGRESS.md` for the verified Phase-3 source and visible Level-A debt. The next implementation pass may begin Phase 4 from Fount commit `60f989bcb9935b28519c908f3cd123ad6efe172f`; this override pass does not implement it. Phases 1 and 2 remain COMPLETE under their recorded QC evidence.
 
 ## Read before coding
 
@@ -96,4 +96,4 @@ Do not fabricate human validation. When a phase requires a human/domain pilot, p
 
 ### Current Phase 3 checkpoint
 
-Phase 2 is `COMPLETE` after the runtime QC recorded in `handoffs/PHASE_02_RUNTIME_QC_REPORT.md`. Phase 3 engineering QC passed at Fount `60f989bcb9935b28519c908f3cd123ad6efe172f`; see `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. Phase 3 is `DOMAIN_REVIEW_PENDING` until the real Level-A structural/factual human gate in `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md` is recorded or an explicit user override is documented as validation debt. Do not begin Phase 4 from this pending checkpoint.
+Phase 2 is `COMPLETE` after the runtime QC recorded in `handoffs/PHASE_02_RUNTIME_QC_REPORT.md`. Phase 3 engineering QC passed at Fount `60f989bcb9935b28519c908f3cd123ad6efe172f`; see `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. The user explicitly deferred Phase-3 Level-A human review as visible validation debt in D045, so Phase 3 is `COMPLETE` under that exception. Phase 4 is eligible to begin in the next implementation pass; its own requirements and gates still apply.

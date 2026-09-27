@@ -1,6 +1,6 @@
 # Phase 3 runtime QC report — Story-World Pure Core
 
-**Date:** 2026-09-26 HST. **Engineering result:** passed. **Phase status:** `DOMAIN_REVIEW_PENDING` because the required Level-A human review has not been supplied or performed. No Phase 4 work or live provider call was made.
+**Date:** 2026-09-26 HST. **Engineering result:** passed. **Current Phase status:** `COMPLETE` under the subsequent explicit user-authorized Level-A review deferral recorded below. No Phase 4 work or live provider call was made.
 
 ## Source and environment identity
 
@@ -43,6 +43,10 @@ The compiled architecture gate checked 267 modules and 229 source files with zer
 
 ## Human gate and limits
 
-The `PHASE_03_DOMAIN_REVIEW_PACKET.md` protocol remains ready, but no rights-cleared three-case corpus, two independent structural reviewers, independent forms, or reconciliation record were supplied. Synthetic ExUnit fixtures and the example are engineering evidence only. Phase 3 is therefore `DOMAIN_REVIEW_PENDING`, not `COMPLETE`. The gate needs rights/provenance/provider-export metadata before analysis, deterministic JSON/Markdown and exact evidence/query artifacts per case, independent review, then classified disagreements. No validation-debt override was requested. No live provider call was needed or made for this pure phase.
+The `PHASE_03_DOMAIN_REVIEW_PACKET.md` protocol remains ready, but no rights-cleared three-case corpus, two independent structural reviewers, independent forms, or reconciliation record were supplied. Synthetic ExUnit fixtures and the example are engineering evidence only. At the engineering-QC checkpoint, Phase 3 was `DOMAIN_REVIEW_PENDING`. The gate still needs rights/provenance/provider-export metadata before analysis, deterministic JSON/Markdown and exact evidence/query artifacts per case, independent review, then classified disagreements. No live provider call was needed or made for this pure phase.
 
 The exact next Repomix Fount source is commit `60f989bcb9935b28519c908f3cd123ad6efe172f` (tree `dceb415ceb697eabed1fb84eb091a71fe1666458`). Phase 4 remains `NOT_STARTED`.
+
+## Subsequent user-authorized human-gate override — 2026-09-26 HST
+
+After this engineering report, the user explicitly directed that skipping the rights-cleared cases and reviews must not stop Phase 4: “yes make it so it wont stop phase 4, obviously.” Under the documented exception in documents 16 and 28, Phase 3 is now `COMPLETE` with the unperformed Level-A structural/factual review recorded as **visible validation debt** (decision D045). This changes the phase gate only; the engineering evidence and Fount source identity above are unchanged. No reviewer, corpus result, source-grounding judgment, or human validation is claimed. Phase 4 is eligible to begin in a later pass and remains `NOT_STARTED` in this one.

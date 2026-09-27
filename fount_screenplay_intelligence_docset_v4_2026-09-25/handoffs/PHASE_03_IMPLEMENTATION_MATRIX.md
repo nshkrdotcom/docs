@@ -1,6 +1,6 @@
 # Phase 3 implementation matrix — Story-World Pure Core
 
-**Source-writing status:** OFFLINE_IMPLEMENTED (historical delivery). **Current phase status:** DOMAIN_REVIEW_PENDING after engineering QC at Fount `60f989b`. This matrix maps Phase-3 source scope to files/tests; the detailed executed gate record is `PHASE_03_RUNTIME_QC_REPORT.md`.
+**Source-writing status:** OFFLINE_IMPLEMENTED (historical delivery). **Current phase status:** COMPLETE under explicit user-authorized Level-A human-review validation debt after engineering QC at Fount `60f989b`. This matrix maps Phase-3 source scope to files/tests; the detailed executed gate record is `PHASE_03_RUNTIME_QC_REPORT.md`.
 
 | Phase-3 requirement | Implementation | Verification source | Offline status |
 |---|---|---|---|
@@ -35,7 +35,7 @@
 | no stale source promotion | observation/evidence screenplay/revision/excerpt checked before compile | stale-evidence test | implemented |
 | architecture gate purity | no Observe execution/provider/Repo/IO/clock/random dependencies in new pure namespace | architecture test + source scans | implemented, compiled gate unrun |
 | Phase-3 provider-free writer demo | `packages/fount_intelligence/examples/phase_three.exs` | Codex runtime handoff | written, unrun |
-| Level-A structural/factual pilot | review packet/protocol in `PHASE_03_DOMAIN_REVIEW_PACKET.md` | actual human review required | **PENDING; not fabricated** |
+| Level-A structural/factual pilot | review packet/protocol in `PHASE_03_DOMAIN_REVIEW_PACKET.md` | actual human review required | **UNPERFORMED validation debt under D045; no result fabricated** |
 
 ## Required acceptance cases represented in tests
 
@@ -56,4 +56,4 @@ Phase 4 Reader reduction/reader snapshots, diagnosis, playbook-shell acquisition
 
 The original offline-status column above records what the source-writing pass could claim at delivery; it is not the current gate result. All listed StoryWorld ExUnit files now run in the 56-test Intelligence suite; the full four-package suite totals 244 tests. Warnings-as-errors compilation, the 267-module/229-source compiled architecture gate, strict Credo, Dialyzer, ExDoc, the deterministic example, isolated DB/Workshop/PDF regression tests, and four package builds passed. The runtime repair added a strict-cycle provenance test and a contradiction query assertion, with both failures observed before repair. The original 29 overlay hashes are retained in `PHASE_03_FILE_INVENTORY.json`, with 19 post-QC changed-file identities appended separately.
 
-The Level-A domain pilot row is still **PENDING**: no rights-cleared three-case corpus, two independent human structural reviewers, or reconciliation record has been supplied. `DOMAIN_REVIEW_PENDING` is the current Phase-3 status; Phase 4 remains `NOT_STARTED`.
+The Level-A domain pilot row is still **UNPERFORMED VALIDATION DEBT**: no rights-cleared three-case corpus, two independent human structural reviewers, or reconciliation record has been supplied. The user explicitly authorized deferral in decision D045, making Phase 3 `COMPLETE` under that exception. Phase 4 remains `NOT_STARTED` and is eligible to begin in a later pass.

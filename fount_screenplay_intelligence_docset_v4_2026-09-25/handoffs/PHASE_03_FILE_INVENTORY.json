@@ -1,6 +1,6 @@
 {
   "phase": 3,
-  "status": "DOMAIN_REVIEW_PENDING",
+  "status": "COMPLETE",
   "date": "2026-09-26",
   "summary": {
     "added": 21,
@@ -390,7 +390,7 @@
     "packages/fount_intelligence/test/story_world_records_validation_test.exs"
   ],
   "identity_note": "Preimages/results are byte hashes from the supplied raw Fount XML reconstruction. The input has no current Git/snapshot seal; Codex must record actual applied commit identities.",
-  "runtime_status": "engineering QC passed; Level-A human structural/factual review pending",
+  "runtime_status": "engineering QC passed; Level-A human structural/factual review deferred as visible validation debt by explicit user override D045",
   "runtime_qc_repair": {
     "applied_fount_commit": "69b8537572c370992a47b6a8630909785eb973d1",
     "post_qc_fount_commit": "60f989bcb9935b28519c908f3cd123ad6efe172f",
@@ -535,5 +535,14 @@
     "added_test_declarations": [
       "test/story_world_temporal_test.exs: strict precedence cycles retain the supporting constraint IDs (also asserts contradiction query provenance)"
     ]
+  },
+  "human_review_validation_debt": {
+    "decision": "D045",
+    "authorized_on": "2026-09-26 HST",
+    "user_instruction": "yes make it so it wont stop phase 4, obviously.",
+    "review_performed": false,
+    "rights_cleared_cases": 0,
+    "independent_reviewers": 0,
+    "phase_4_eligible": true
   }
 }
