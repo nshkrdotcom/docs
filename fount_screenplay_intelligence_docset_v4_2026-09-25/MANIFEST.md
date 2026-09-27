@@ -82,6 +82,7 @@
 
 - `handoffs/` — phase-specific offline and QC handoffs are added during implementation.
 - `handoffs/PREPARATION_2026-09-26.md` — source baselines and actual preparation checks; not a completed implementation phase.
+- `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` — applied source identity, engineering repairs and gates, and pending Level-A human review.
 
 ## Four XML phase inputs
 
@@ -94,7 +95,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phases 1 and 2 are COMPLETE; Phase 3 is offline implemented and awaiting runtime/domain QC. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phases 1 and 2 are COMPLETE; Phase 3 engineering QC passed and human domain review is pending. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 

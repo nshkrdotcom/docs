@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phase 1 and Phase 2 COMPLETE; Phase 3 OFFLINE_IMPLEMENTED; runtime/domain QC next; do not begin Phase 4
+**Current state:** Phase 1 and Phase 2 COMPLETE; Phase 3 DOMAIN_REVIEW_PENDING after engineering QC; do not begin Phase 4
 
 ## Status values
 
@@ -20,7 +20,7 @@ Runtime QC may establish engineering completion; phases with required human/doma
 |---:|---|---|---|---|---|
 | 1 | Direct Architecture Supersession and Probe Removal | COMPLETE | `fount_phase_01_overlay.zip` | `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | Engineering, storage, writer and architecture gates pass; live Luna alternatives output failures are user-authorized validation debt |
 | 2 | Observe Measurement Substrate Hardening | COMPLETE | `fount_phase_02_overlay.zip` | `handoffs/PHASE_02_RUNTIME_QC_REPORT.md` | Engineering, persistence, writer, package, architecture and authorized narrow live gate passed; no human quality claim |
-| 3 | Story-World Pure Core | OFFLINE_IMPLEMENTED | `fount_phase_03_overlay.zip` | — | Pure StoryWorld source/tests/demo written; runtime QC and Level-A structural/factual human review pending |
+| 3 | Story-World Pure Core | DOMAIN_REVIEW_PENDING | `fount_phase_03_overlay.zip` | `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` | Engineering QC passed at Fount `60f989b`; required Level-A human structural/factual review pending |
 | 4 | Temporal and Forward-Reader Engine | NOT_STARTED | — | — | Temporal + Reader pure reducers |
 | 5 | Diagnosis and Multi-Pass Playbook Shell | NOT_STARTED | — | — | Diagnosis + Acquisition + Playbooks |
 | 6 | Capabilities A: Scene/Agency/Character/Relationship | NOT_STARTED | — | — | Families 1–4 |
@@ -49,6 +49,7 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-26 | 2 | Source implementation delivered | `fount_phase_02_overlay.zip`; `fount_phase_02_docset.zip`; `PHASE_02_RUNTIME_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; Python source/asset and strict archive checks recorded separately; runtime and live gates pending |
 | 2026-09-26 | 2 | Runtime QC and repairs | applied Fount `2eea821`, docset `819c1c6`; Fount repair `08c2c44`; `handoffs/PHASE_02_RUNTIME_QC_REPORT.md` | COMPLETE; full CI, isolated DB/writer/PDF, package builds, deterministic examples and authorized synthetic live TypeSafe measurement passed |
 | 2026-09-26 | 3 | Source implementation delivered | `fount_phase_03_overlay.zip`; `fount_phase_03_docset.zip`; `FOUNT_PHASE_03_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; pure StoryWorld source/tests/reference demo written; runtime QC and required Level-A human structural/factual review pending |
+| 2026-09-26 | 3 | Runtime QC and repairs | Fount applied `69b8537`, repair `60f989b`; docset applied `aabd58c`; `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` | Engineering ladder, isolated DB/writer/PDF and package checks passed; Level-A human gate remains pending |
 
 ## Non-negotiable progress rule
 
@@ -98,3 +99,9 @@ Phase 2 is **COMPLETE** on the evidence in `handoffs/PHASE_02_RUNTIME_QC_REPORT.
 Phase 3 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The source overlay adds the pure `Fount.Intelligence.StoryWorld` reference core: evidence-backed narrative records, reality scopes, event-qualified state, partial diegetic story-time constraints, independent causality, dependency/counterfactual primitives, and deterministic writer-facing reference JSON/Markdown. The provider-free example and new ExUnit tests are written but unrun because this source-writing environment has no Elixir/Erlang/Mix.
 
 Read `handoffs/PHASE_03_OFFLINE_HANDOFF.md`, `handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md`, and `handoffs/PHASE_03_RUNTIME_QC_HANDOFF.md`. Codex starts from the user-applied commits, verifies overlay hashes, formats/compiles/tests/repairs Phase 3, reruns full preservation gates, and records actual evidence. The required Level-A structural/factual human review is prepared in `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md` and must not be fabricated. If engineering QC passes but real reviewers are still pending, use `DOMAIN_REVIEW_PENDING`; do not mark COMPLETE unless the review is recorded or the user explicitly authorizes visible validation debt. Phase 4 and later phases remain NOT_STARTED.
+
+## Phase 3 runtime QC checkpoint - 2026-09-26
+
+Phase 3 engineering QC passed at Fount `60f989bcb9935b28519c908f3cd123ad6efe172f` (tree `dceb415ceb697eabed1fb84eb091a71fe1666458`). The original 29-file overlay hashes were verified before repair; the repair inventory is appended to `handoffs/PHASE_03_FILE_INVENTORY.json`. Four-package `mix ci`, the compiled architecture gate, 244 ExUnit tests, isolated database/Workshop writer and PDF checks, all four package builds, and the Phase-3 example passed. Details and command exit codes are in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`.
+
+The rights-cleared three-case corpus, two independent structural reviews, and reconciliation required by `handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md` have not occurred. Phase 3 is `DOMAIN_REVIEW_PENDING`; no human result or override is claimed. Phase 4 stays `NOT_STARTED`.

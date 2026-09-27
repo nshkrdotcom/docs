@@ -1,6 +1,6 @@
 # Phase 3 implementation matrix — Story-World Pure Core
 
-**Source-writing status:** OFFLINE_IMPLEMENTED. This matrix maps the complete Phase-3 source scope to concrete files/tests. Runtime and human/domain results remain separate.
+**Source-writing status:** OFFLINE_IMPLEMENTED (historical delivery). **Current phase status:** DOMAIN_REVIEW_PENDING after engineering QC at Fount `60f989b`. This matrix maps Phase-3 source scope to files/tests; the detailed executed gate record is `PHASE_03_RUNTIME_QC_REPORT.md`.
 
 | Phase-3 requirement | Implementation | Verification source | Offline status |
 |---|---|---|---|
@@ -51,3 +51,9 @@
 ## Explicitly not advanced
 
 Phase 4 Reader reduction/reader snapshots, diagnosis, playbook-shell acquisition, capability-family expansion, durable L2 persistence, and Workshop integration are not part of this overlay.
+
+## Runtime QC overlay on the source matrix
+
+The original offline-status column above records what the source-writing pass could claim at delivery; it is not the current gate result. All listed StoryWorld ExUnit files now run in the 56-test Intelligence suite; the full four-package suite totals 244 tests. Warnings-as-errors compilation, the 267-module/229-source compiled architecture gate, strict Credo, Dialyzer, ExDoc, the deterministic example, isolated DB/Workshop/PDF regression tests, and four package builds passed. The runtime repair added a strict-cycle provenance test and a contradiction query assertion, with both failures observed before repair. The original 29 overlay hashes are retained in `PHASE_03_FILE_INVENTORY.json`, with 19 post-QC changed-file identities appended separately.
+
+The Level-A domain pilot row is still **PENDING**: no rights-cleared three-case corpus, two independent human structural reviewers, or reconciliation record has been supplied. `DOMAIN_REVIEW_PENDING` is the current Phase-3 status; Phase 4 remains `NOT_STARTED`.

@@ -1,6 +1,6 @@
 {
   "phase": 3,
-  "status": "OFFLINE_IMPLEMENTED",
+  "status": "DOMAIN_REVIEW_PENDING",
   "date": "2026-09-26",
   "summary": {
     "added": 21,
@@ -390,5 +390,150 @@
     "packages/fount_intelligence/test/story_world_records_validation_test.exs"
   ],
   "identity_note": "Preimages/results are byte hashes from the supplied raw Fount XML reconstruction. The input has no current Git/snapshot seal; Codex must record actual applied commit identities.",
-  "runtime_status": "Elixir/Erlang/Mix unavailable; all Elixir tests unrun."
+  "runtime_status": "engineering QC passed; Level-A human structural/factual review pending",
+  "runtime_qc_repair": {
+    "applied_fount_commit": "69b8537572c370992a47b6a8630909785eb973d1",
+    "post_qc_fount_commit": "60f989bcb9935b28519c908f3cd123ad6efe172f",
+    "post_qc_tree": "dceb415ceb697eabed1fb84eb091a71fe1666458",
+    "changed_file_count": 19,
+    "changed_files": [
+      {
+        "path": "packages/fount_intelligence/examples/phase_three.exs",
+        "overlay_sha256": "41892eda21952ed41cd8988070f56e5968121ed27b0ea411a0113c71cb993f66",
+        "post_qc_sha256": "8f4fd5c648fe185fc9983210064be063a8eb68d6af459fb14c985c41a8bad169",
+        "post_qc_bytes": 3505,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/causal.ex",
+        "overlay_sha256": "3648874cbab03cabe7eb3b15a6d7079b3beb5e1d3a75ea47fdbd9f890fd3505b",
+        "post_qc_sha256": "55ae16373ac03d45373d29f111a520f5370615e4ba1630392b81fe7ba1d1d283",
+        "post_qc_bytes": 1635,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/compiler.ex",
+        "overlay_sha256": "e36f7f2ab488c695d186ca9503e813ba7f808d3e14aaea94de9159c4059f4bf6",
+        "post_qc_sha256": "f54856f9ddd1fab397520dbde086836c9e5a5be2df97e8cacb6c583c68a1ce2f",
+        "post_qc_bytes": 45112,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/consistency.ex",
+        "overlay_sha256": "b535272a8e292ed346970db277ab19960fe3c29f9706b867c44660a1875fc1d4",
+        "post_qc_sha256": "56fd0c9a7db5d05856381ffb21de592550d2cdd8e1421665e29b509e0a1d34a3",
+        "post_qc_bytes": 3776,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/counterfactual.ex",
+        "overlay_sha256": "46823ffcbe491cc956a4c7157f834a6cab7a83221e75b9e54eac44b914ded61f",
+        "post_qc_sha256": "cf5ff1284f1892a368d60294ba698cecffaec1292bad98ee2103f1b2c785c418",
+        "post_qc_bytes": 2778,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/dependency_index.ex",
+        "overlay_sha256": "c4b3336d88ed5d399847b64d06b99b63329575b4e028e68514fc239207f21555",
+        "post_qc_sha256": "a202adcb5d83c37ec741744aa71c196855c93c0f08682363c59fc1007a560b8d",
+        "post_qc_bytes": 2458,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/evidence.ex",
+        "overlay_sha256": "8d2df87a9aef644657cf08e0eec63577ee5d904819104084e838e9f8d3a926ee",
+        "post_qc_sha256": "c6be2d7dee8985bef4f1f18f3251a9b504d5aa5ac0a1050f33f3fc65eb649b17",
+        "post_qc_bytes": 3562,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/inspection.ex",
+        "overlay_sha256": "a0db1a7f36a0dce1bb23805af7f9a8daa09cf1c8621b1d132b4e68758959ea2e",
+        "post_qc_sha256": "d1e2d26b7b1278ddbdb84663f30593a96d83bf90402a7d70644da1a412db2408",
+        "post_qc_bytes": 6085,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/query.ex",
+        "overlay_sha256": "157861e0d5c40d6be9d60fe276ca851e8bb724c5e75b165609ca093b932c8d8a",
+        "post_qc_sha256": "0d14420cda993be1185c1652c32fb9772f3fb04d19e74121b230c11154d20aac",
+        "post_qc_bytes": 5444,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/renderer.ex",
+        "overlay_sha256": "790cdb35eb882198168f15c4a07ca6dcbbe6e2cf1f012f322b0be34516c1f290",
+        "post_qc_sha256": "a86a5799f623f442cca8011ceca247d6dcf2a878117e03e91c99f92df1207587",
+        "post_qc_bytes": 4579,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/story_time.ex",
+        "overlay_sha256": "5771250ddc00a1d497638d28c6926c9d4d6363dcc667a1084e6f769a140e6118",
+        "post_qc_sha256": "0886fcf062d1a24a7a1eb740e4511cb7ea089a6f42dd3df228792e8a437f07a5",
+        "post_qc_bytes": 9744,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/values.ex",
+        "overlay_sha256": "e07dcdccc3edf7bd6b4f6b64cca5154e6577e46d694278b6319ab2db93f03a85",
+        "post_qc_sha256": "8a4d7660f98ed442f30c832244900a8e1b58575dbabf487ce18af248c6783a92",
+        "post_qc_bytes": 7221,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/lib/fount/intelligence/story_world.ex",
+        "overlay_sha256": "dca7ea134b0e449f3e6c899af8cdf999ca330ae4e381d213a9333d867194e34d",
+        "post_qc_sha256": "f0787e0ee0977fb6155f916062926bfb3facf82c867a557c3a97eaae0b928672",
+        "post_qc_bytes": 2230,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/test/story_world_architecture_test.exs",
+        "overlay_sha256": "184a4b86dab6677a3cb770e5a163902be377af64ebfcea88a1fb9b3bb8754c97",
+        "post_qc_sha256": "4156e0fd04bc1eb6f9e767af629dc681fb0b5ffa5788a735ec4fc1929f5282ad",
+        "post_qc_bytes": 1080,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/test/story_world_records_test.exs",
+        "overlay_sha256": "0a805d391ecb7aff6193b80346c268517ac1260dde18b65b2f02bec4d21deaeb",
+        "post_qc_sha256": "e81a9e77a7739910996134892450f22822b2cdea3f2db4ee482c6ec5a71ece88",
+        "post_qc_bytes": 4111,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/test/story_world_reference_test.exs",
+        "overlay_sha256": "7289508dc2d18b589b25e24340a14803a5cd5abc175915c1fef8501430075fd1",
+        "post_qc_sha256": "192f57893aaa5a3e1d02fac1d36d2e9e87652df8bb717228a4d9e6763fb9b96d",
+        "post_qc_bytes": 3287,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/test/story_world_scope_causality_test.exs",
+        "overlay_sha256": "bd097426868d479b3e480d42d4e53269b9d4ad5c2a59efa761798a0ba16a92eb",
+        "post_qc_sha256": "226828a056a58c0a30268808aa2c398cc65176e7162894a7ffbcab651226c185",
+        "post_qc_bytes": 2702,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/test/story_world_temporal_test.exs",
+        "overlay_sha256": "04bb83f8d34bf100650c4d1353672a70daa5b2d017ea5be8347a625e0988b5fd",
+        "post_qc_sha256": "02c50dd858e245d9b043c1cfc578006de3efe2abb8410cadfca3e09ef70cb731",
+        "post_qc_bytes": 5531,
+        "post_qc_mode": 420
+      },
+      {
+        "path": "packages/fount_intelligence/mix.exs",
+        "overlay_sha256": "496c5f51e5973afcc32999595e61059c586ce979925327cf750c476a3d4c1e3a",
+        "post_qc_sha256": "ceeef4d0803c9320de5fb603e5f5c7d5dc61b795bb138f4d8f06c5f8a2c04f60",
+        "post_qc_bytes": 2992,
+        "post_qc_mode": 420
+      }
+    ],
+    "note": "Original 29-file overlay inventory above is retained unchanged as delivery authentication; these are post-QC content identities. All 29 checkout modes were normalized to 0644.",
+    "added_test_declarations": [
+      "test/story_world_temporal_test.exs: strict precedence cycles retain the supporting constraint IDs (also asserts contradiction query provenance)"
+    ]
+  }
 }
