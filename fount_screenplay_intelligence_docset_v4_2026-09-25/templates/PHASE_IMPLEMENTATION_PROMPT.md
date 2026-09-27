@@ -4,10 +4,12 @@ You are implementing the next phase of the Fount Screenplay Intelligence program
 
 ## Authoritative inputs attached
 
-1. latest post-QC Fount Repomix XML;
-2. current `typesafe_api_sdk` Repomix XML;
-3. current `inference` Repomix XML;
-4. complete current screenplay-intelligence docset ZIP.
+1. `fount.xml`, from the latest post-QC source;
+2. `system_one_sdk.xml`;
+3. `inference.xml`;
+4. `docset.xml`, the complete current docset.
+
+Read documents 32–36 before implementation. Lead with this phase's writer outcome and demonstration. This is screenplay-writing software, not an architecture showcase. Preserve human authorship, voice, and useful existing workflows. Follow document 35: the user applies and commits the output ZIPs, then Codex verifies and repairs that applied state.
 
 Read `AGENT_START_HERE.md`, `PROGRESS.md`, `DECISIONS.md`, the current phase in `16_PHASED_IMPLEMENTATION_PLAN.md`, and all referenced architecture/capability docs. Inspect actual source/tests and relevant SDK source before implementation.
 
@@ -98,10 +100,10 @@ Requirements:
 
 - paths relative to Fount repository root;
 - every and only new/modified files required by phase;
-- `DELETE_FILES.txt` for deletions in a changed-files-only overlay;
+- `handoff/fount-overlay.manifest.json` with exact hashes and explicit add/modify/delete operations;
 - no `.git`, `_build`, `deps`, node modules, repomix inputs, secrets, logs, or unchanged files.
 
-Phase 1 deletion manifest must remove `packages/fount_probe/**` and any obsolete files/references that must be deleted.
+Phase 1 must enumerate each actual Probe file to delete. No wildcard deletion, missing preimage hash, symlink, directory ZIP entry, or unlisted payload is allowed. Validate the archive using the supplied Python applier even when Elixir is unavailable.
 
 ## Required deliverable 2 — updated complete docset ZIP
 
@@ -109,7 +111,7 @@ Update at least:
 
 - `PROGRESS.md` -> current phase `OFFLINE_IMPLEMENTED`, never `COMPLETE`;
 - `TRACEABILITY_MATRIX.md` with written source/test paths/status;
-- `DECISIONS.md` only for real architecture/API corrections;
+- `DECISIONS.md` for real product, workflow, or architecture/API corrections;
 - relevant specs if source inspection disproves an assumption;
 - `handoffs/PHASE_<NN>_OFFLINE_HANDOFF.md`.
 

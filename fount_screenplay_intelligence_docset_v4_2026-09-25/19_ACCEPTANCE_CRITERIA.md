@@ -221,7 +221,7 @@ Generation remains on Inference/Workshop side and cannot bypass Fount typed edit
 
 ## S. TypeSafe/Observe provider behavior
 
-- implementation uses current supplied `typesafe_api_sdk` public APIs;
+- implementation uses current supplied `system_one_sdk` public APIs;
 - arbitrary supported endpoint/key configuration works;
 - hosted/on-prem/local deployment topology does not change the measurement contract;
 - provider-native structs do not leak to Intelligence;
@@ -313,7 +313,7 @@ selected authorized live Workshop/Inference checks
 - `25_SECOND_ORDER_REVIEW_RESOLUTIONS.md` decisions are reflected in implementation;
 - final architecture/QC handoff is complete.
 
-## X. Writer-facing product contract
+## AC. Writer-facing product contract
 
 - every writer-facing playbook can emit the semantic packet in `27_WRITER_INTERACTION_AND_PRESENTATION_CONTRACT.md`;
 - evidence, derived state, diagnosis, strategy, and candidate remain distinguishable;
@@ -321,14 +321,14 @@ selected authorized live Workshop/Inference checks
 - a deterministic reference renderer exists;
 - no polished GUI is required for acceptance.
 
-## Y. Human/domain validation
+## AD. Human/domain validation
 
 - Phase 3–9 validation artifacts/gates required by `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md` are recorded or explicitly overridden as visible debt;
 - rights/provenance manifests exist for nontrivial corpus material;
 - Reader human-valid claims are not made beyond available evidence;
 - support/validity and writer usefulness are evaluated separately.
 
-## Z. Safe lens/pack extensibility
+## AE. Safe lens/pack extensibility
 
 - data-only packs can be authored/validated/installed without Elixir changes when they only compose approved safe primitives;
 - executable primitives remain closed/registered;
@@ -336,7 +336,7 @@ selected authorized live Workshop/Inference checks
 - untrusted lens/pack text cannot acquire tool or canonical-edit authority;
 - hybrid/custom pack workflow is documented and tested.
 
-## AA. Longitudinal resource transparency
+## AF. Longitudinal resource transparency
 
 - expensive playbooks expose preflight estimates where possible;
 - caller/studio caps are enforced;
@@ -344,8 +344,20 @@ selected authorized live Workshop/Inference checks
 - repeated-revision/project scenarios can be estimated from real resource units;
 - hosted monetary cost is optional/configured rather than the only cost model.
 
-## AB. Feature-film scope
+## AG. Feature-film scope
 
 - acceptance tests/evaluation claims are scoped to feature screenplays;
 - no TV/series functionality is implied by feature-film validation;
 - unusual/nonlinear/ensemble feature structures remain supported within the feature scope.
+
+## AH. Complete writing workflows
+
+- W01–W12 in document 33 map to implemented source, tests, and runnable writer demonstrations;
+- A01–A12 in document 36 have actual results, not model self-certification;
+- drafting/discovery do not require an outline or full analytical report;
+- human-only writing, comparison, acceptance, and export work without provider credentials;
+- candidates preserve protected material and remain separate from canon until acceptance;
+- voice, cinematic choices, alternatives, rehearsal, research, notes, consequences, and session continuity follow documents 33–34;
+- human reviews required by Phases 12–15 are recorded, pending, or explicitly deferred by the user as visible debt;
+- exactly four XML inputs and the user-apply/commit → Codex-QC protocol are followed;
+- no unsupported claim of creative superiority, audience response, submission eligibility, or commercial success.

@@ -84,7 +84,7 @@ Owns:
 - canonical-to-measurement projections;
 - typed neutral context primitives and validated context envelopes;
 - lens/projection input schemas;
-- TypeSafe/Jev adapter via supplied `typesafe_api_sdk` API;
+- TypeSafe/Jev adapter via supplied `system_one_sdk` API;
 - batching/concurrency/timeout/retry/association;
 - provider-result normalization;
 - calibration assets/application;

@@ -7,17 +7,19 @@ The previous agent had no working Elixir runtime. Treat its source as an impleme
 ## Inputs
 
 - current Fount checkout/source baseline: `<BASELINE>`
+- user's applied Fount commit: `<APPLIED_FOUNT_COMMIT>`
+- user's applied docset commit: `<APPLIED_DOCSET_COMMIT>`
 - offline overlay: `<OVERLAY_ZIP>`
 - updated complete docset: `<DOCSET_ZIP>`
 - offline handoff: `<HANDOFF>`
 
-## Apply
+## Verify the already-applied phase
 
 1. preserve unrelated work;
-2. inspect overlay paths and `DELETE_FILES.txt`;
-3. apply at repository root;
-4. execute deletions intentionally;
-5. review complete diff before running build tools;
+2. inspect `handoff/fount-overlay.manifest.json` and the user-applied commits;
+3. verify intended payload hashes and explicit deletions against the applied state;
+4. do not reapply the ZIP or repeat deletion operations;
+5. review the applied commit diff before running build tools;
 6. reconcile dependency/API assumptions with real environment.
 
 ## Phase summary

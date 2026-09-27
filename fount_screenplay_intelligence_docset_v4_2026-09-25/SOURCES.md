@@ -1,6 +1,6 @@
 # Research Sources and How They Are Used
 
-This docset distinguishes **industry/professional guidance**, **narrative research**, **technical narrative-understanding research**, and **secondary craft/coverage references**. Sources inform the architecture; no single source is treated as screenplay law.
+This docset distinguishes **industry/professional guidance**, **narrative research**, **technical narrative-understanding research**, and **secondary craft/coverage references**. Sources inform writer workflows and their implementation; no single source is treated as screenplay law.
 
 ## A. Primary industry / institutional sources
 
@@ -221,3 +221,9 @@ Use boundary: demonstrates that screenplay-scale structured tasks can be defined
 - Fair Use FAQ: https://www.copyright.gov/help/faq/faq-fairuse.html
 
 Used to justify treating screenplay corpus rights as an explicit operational/legal concern rather than assuming that publicly accessible scripts may be freely redistributed, retained, or exported to model providers. This docset does not give legal advice.
+
+## Screenplay-first expansion — 2026-09-26
+
+The primary-source ledger in `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md` adds ten research themes with direct links, source limitations, and explicitly labeled product inferences: Sciamma, August, Kaufman, Reichardt, Leigh, Wordcraft, Dramatron, creativity/diversity research, working-writer affordances, and Fountain fidelity.
+
+Use those sources alongside the earlier reader/notes literature, not as a replacement canon. Practitioner methods remain optional; short-story or small co-writing studies do not validate feature-screenplay outcomes. No source provides evidence that the unbuilt Fount phases are superior to other tools.

@@ -2,6 +2,10 @@
 
 ## 1. Product intent
 
+The governing objective is useful screenplay writing, for humans and agentic collaborators. Elixir is chosen for the pleasure of building with it, not because this product needs distributed-system machinery. Documents 32–36 expand the original analytical brief into discovery, drafting, cinematic revision, voice, rehearsal, notes, and sharing. Their writer outcomes are acceptance requirements, not optional UI polish.
+
+A writer may begin with a fragment and no outline; write without model assistance; pursue stillness or cooperation rather than conflict; and keep the original after exploring alternatives. No theory, metric, or agent recommendation overrides those choices. Existing technical decisions support the writing experience rather than define its value.
+
 Fount is a screenplay substrate and revision environment. This program adds a screenplay-intelligence layer capable of understanding and comparing dramatic state across a feature screenplay without pretending that one theory of screenwriting is the screenplay itself.
 
 The system should help a writer answer questions such as:

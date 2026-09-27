@@ -13,14 +13,14 @@ The runtime-QC agent is the first environment allowed to claim compile/test/runt
 - real Elixir/OTP/PostgreSQL environment;
 - provider credentials/endpoints only when live checks are authorized.
 
-## 3. Apply overlay
+## 3. Verify the user's applied overlay
 
-1. verify ZIP paths are repository-relative;
-2. review `DELETE_FILES.txt` before removal;
-3. apply new/modified files;
-4. apply listed deletions;
-5. inspect `git diff --stat` and `git diff`;
-6. reject unrelated/generated/secrets/build output.
+1. Record the user's Fount and docset application commits and the supplied archive identities.
+2. Inspect the strict manifest and verify intended additions, modifications, and deletions in the applied checkout.
+3. Do not reapply the overlay or repeat deletions. Identify incomplete application before runtime work.
+4. Review the applied commit diff and preserve unrelated local changes.
+5. Reject unrelated/generated/secrets/build output; then compile, test, and repair phase defects.
+6. Follow `35_FOUR_XML_PROGRESSIVE_HANDOFF.md` for the next packet and responsibility split.
 
 Phase 1 must visibly delete `packages/fount_probe` rather than leaving dead code behind.
 
@@ -215,7 +215,7 @@ For Phase 10:
 
 ## 17. Functionality preservation gate
 
-Phase 1 and Phase 12 compare the source to `23_FUNCTIONALITY_PRESERVATION_AUDIT.md`.
+Phase 1 and Phase 16 compare the source to `23_FUNCTIONALITY_PRESERVATION_AUDIT.md`.
 
 Every listed current Probe behavior and Workshop workflow must be:
 

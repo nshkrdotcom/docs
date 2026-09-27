@@ -1,6 +1,6 @@
-# Architecture Decision Ledger
+# Product and Implementation Decision Ledger
 
-Future implementation agents must not silently reverse approved decisions. Amend this file only when source/runtime evidence requires a real architecture correction.
+Future implementation agents must not silently reverse approved decisions. Record genuine product, workflow, or implementation decisions when user direction, research, or source/runtime evidence requires a correction.
 
 ## D001 — Four physical packages
 
@@ -250,3 +250,45 @@ Future implementation agents must not silently reverse approved decisions. Amend
 **Decision:** STAGE and other external research may inform task/evaluation design or supply separately licensed comparisons. Their results must not be cited as validation of Fount's unbuilt or unevaluated implementation.
 
 **Status:** Approved.
+
+## D035 — Screenplay writing is the governing product objective
+
+**Decision:** Discovery, drafting, cinematic revision, voice, rehearsal, notes, and finishing are first-class workflows. Analysis supports writing decisions rather than functioning as the product's primary funnel. Human-only use remains valuable. No distributed-system requirement follows from choosing Elixir.
+
+**Basis:** User brief and research synthesis in documents 32–33. Existing engineering decisions remain supporting constraints.
+
+**Status:** Adopted for this docset revision.
+
+## D036 — Four XML inputs and user-applied overlays
+
+**Decision:** Each source-writing pass receives exactly fount.xml, system_one_sdk.xml, inference.xml, and docset.xml. It returns a strict hashed Fount overlay, complete updated docset, and QC handoff. The user applies and commits; Codex verifies and repairs that state without reapplying.
+
+**Basis:** User workflow and the actual Fount overlay applier; document 35.
+
+**Status:** Adopted for this docset revision.
+
+## D037 — Product completion phases and evidence
+
+**Decision:** Preserve Phases 1–11 and add Phases 12–15 for complete writer workflows. Final acceptance moves to Phase 16. Every phase includes a writer demonstration. Creative usefulness, human response, engineering tests, and live provider results remain distinct evidence.
+
+**Basis:** Documents 33 and 36. A specification is not evidence that the future implementation works.
+
+**Status:** Adopted for this docset revision.
+
+## D038 — Use the supplied SystemOneSDK facade
+
+**Decision:** The dependency snapshot is system_one_sdk, with actual question preparation, evaluation, answer, and provider contracts. Preserve working Jev semantics; do not invent a fifth SDK input or replace the facade with raw hosted-provider calls.
+
+**Basis:** Source inspection recorded in document 34.
+
+**Status:** Adopted for this docset revision.
+
+## Phase 1 source decisions - 2026-09-26
+
+1. **Actual provider API:** the supplied SystemOneSDK package is 0.6.0, not the older Fount lock's 0.5.0. Observe uses the real public `new_client`, `noul`, `choice`, `score`, `prepare` and `evaluate_stream` APIs. Its path override permits QC against the supplied source without claiming Hex availability. Actual dependency/lock reconciliation remains runtime work.
+2. **Canonical helpers:** existing selection, exact evidence validation, inventory and exact search are substrate concerns and now live in `fount`. Measurement projections remain Observe-owned.
+3. **Mixed helpers split by responsibility:** proposal completion and measured PDF layout are Workshop-owned services explicitly injected into Intelligence's acquisition/playbook shell. Native Inference clients/types do not become Intelligence contracts. Native SystemOneSDK types terminate in the Observe adapter.
+4. **Pure baseline, not future scaffolding:** existing record validation, reveal reduction and decision interpretation occupy StoryWorld/Reader/Capabilities. No full later-phase temporal/diagnosis engine or compatibility wrapper was introduced.
+5. **Analytical identity:** closed playbook requests and logical result/lens IDs with content digests replace superseded analytical request/report/profile generations. Existing canonical interchange and writing-proposal contracts are preserved, not gratuitously renumbered.
+6. **Transport evidence limitation:** these attachments do not contain authenticated seals. Decoded-body preimage checks remain strict; actual checkout identity is explicitly unverified. This does not waive document 35's sealing requirement for future inputs. Unseen excluded files require actual checkout inspection; no guessed deletions are authorized.
+7. **Empty directories:** the supplied full-file applier leaves directories. A separate, tested post-apply helper removes only empty ancestors of declared deletions; it cannot remove unknown content.

@@ -10,10 +10,10 @@ The agent's job is to inspect APIs, write the phase implementation, package the 
 
 The prompt must include four inputs:
 
-1. latest Fount Repomix XML containing the complete current workspace relevant to implementation;
-2. latest `typesafe_api_sdk` Repomix XML;
-3. latest `inference` Repomix XML;
-4. latest complete screenplay-intelligence docset ZIP/directory.
+1. `fount.xml`, containing the complete current workspace relevant to implementation;
+2. `system_one_sdk.xml`;
+3. `inference.xml`;
+4. `docset.xml`, containing the complete current docset and prior handoffs.
 
 Filenames may contain timestamps. Identify them by content, not an assumed literal filename.
 
@@ -168,7 +168,7 @@ Write/update the architecture gate described in `24_INTERNAL_BOUNDARY_ENFORCEMEN
 - ships deterministic Sandbox fixtures;
 - does not build whole-story dramatic diagnoses.
 
-Inspect the supplied `typesafe_api_sdk` public API before writing adapters.
+Inspect the supplied `system_one_sdk` public API before writing adapters.
 
 ## 12. Workshop discipline
 
@@ -184,9 +184,9 @@ Produce complete final contents for every new/modified file. Do not return patch
 
 Do not include generated/build/dependency directories.
 
-When deleting files in a changed-files-only overlay, include `DELETE_FILES.txt` with repository-relative paths.
+Use the strict `handoff/fount-overlay.manifest.json` contract in document 35 for every changed/new/deleted file, including exact byte hashes.
 
-Phase 1 must use it for `packages/fount_probe/**` and any other obsolete files not represented by replacement contents.
+Phase 1 enumerates each actual Probe deletion from the input inventory. No glob deletions or deletion inferred from an absent payload. Missing original hashes must be resolved before packaging.
 
 ## 14. Required overlay layout
 
@@ -200,7 +200,7 @@ packages/
   fount_observe/...
   fount_intelligence/...
   fount_workshop/...
-DELETE_FILES.txt       # when required
+handoff/fount-overlay.manifest.json
 ```
 
 Do **not** wrap repository files in an arbitrary extra directory unless the prompt explicitly requests it.
@@ -219,7 +219,7 @@ Mark requirements implemented by source files/tests, but distinguish unexecuted 
 
 ### `DECISIONS.md`
 
-Only add/update when source inspection requires an architectural correction or a deferred decision is resolved.
+Add/update for actual product, workflow, or architecture corrections supported by user direction, research, or source inspection, or when a deferred decision is resolved.
 
 ### Handoff
 

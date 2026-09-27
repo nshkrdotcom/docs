@@ -6,11 +6,11 @@
 **Offline overlay:** <filename>  
 **Status:** COMPLETE | QC_BLOCKED | DOMAIN_REVIEW_PENDING
 
-## Overlay application
+## User-applied overlay verification
 
-- repository status before apply:
+- user-applied Fount/docset commit identities and current repository status:
 - overlay paths inspected:
-- `DELETE_FILES.txt` reviewed/applied:
+- User-applied commits and strict overlay manifest verified (no reapplication):
 - unexpected/unrelated changes:
 
 ## Toolchain

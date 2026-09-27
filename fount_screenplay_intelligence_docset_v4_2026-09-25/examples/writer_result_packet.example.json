@@ -7,7 +7,7 @@
     "protected_strengths": ["Mara remains restrained", "the key reveal stays ambiguous"]
   },
   "finding": {
-    "claim_class": "derived_narrative_state",
+    "claim_class": "model_estimated_interpretation",
     "summary": "Pressure appears to flatten after the first reversal because the tactic and leverage relationship stop changing while information continues to accumulate."
   },
   "evidence": [

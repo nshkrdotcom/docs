@@ -1,0 +1,56 @@
+[
+  {
+    "role": "docset",
+    "input": "docset.raw.xml",
+    "sha256": "a26a26b2de2bbf980b4c4dee95a06d1ad2d2cd48eba23c26aecefa7c9020b61a",
+    "files": 63,
+    "format": "parsable_xml",
+    "sealed": false,
+    "attrs_sample": {
+      "path": "examples/CONCEPTUAL_CONTRACT_EXAMPLES.md"
+    },
+    "root_children": [
+      "file_summary",
+      "directory_structure",
+      "files"
+    ],
+    "byte_identity": "attachment hash plus decoded source bodies; checkout bytes and Git revision unverified"
+  },
+  {
+    "role": "fount",
+    "input": "fount(4).xml",
+    "sha256": "415c6a867c2bb00c3d860a1edb7add9cd22d2745edd9b5fccec1dc135811bc10",
+    "files": 337,
+    "format": "parsable_xml",
+    "sealed": false,
+    "attrs_sample": {
+      "path": ".github/workflows/ci.yml"
+    },
+    "root_children": [
+      "file_summary",
+      "directory_structure",
+      "files"
+    ],
+    "byte_identity": "attachment hash plus decoded source bodies; checkout bytes and Git revision unverified"
+  },
+  {
+    "role": "system_one_sdk",
+    "input": "system_one_sdk(6).xml",
+    "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+    "files": 253,
+    "format": "repomix_unescaped",
+    "sealed": false,
+    "attrs_sample": {},
+    "byte_identity": "attachment hash plus decoded source bodies; checkout bytes and Git revision unverified"
+  },
+  {
+    "role": "inference",
+    "input": "inference(2).xml",
+    "sha256": "fe8a2a4db9626803e9e1197138aa858ad426fdf24335dc2bc961f1f56c9c6e33",
+    "files": 69,
+    "format": "repomix_unescaped",
+    "sealed": false,
+    "attrs_sample": {},
+    "byte_identity": "attachment hash plus decoded source bodies; checkout bytes and Git revision unverified"
+  }
+]

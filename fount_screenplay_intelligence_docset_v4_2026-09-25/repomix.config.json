@@ -1,0 +1,27 @@
+{
+  "output": {
+    "filePath": "docset.raw.xml",
+    "style": "xml",
+    "parsableStyle": true,
+    "removeComments": false,
+    "removeEmptyLines": false,
+    "showLineNumbers": false
+  },
+  "include": [
+    "**/*.md",
+    "**/*.json",
+    "**/*.txt",
+    "**/*.py",
+    "handoffs/.gitkeep"
+  ],
+  "ignore": {
+    "useGitignore": true,
+    "useDefaultPatterns": false,
+    "customPatterns": [
+      "**/.git/**",
+      "**/.elixir_ls/**",
+      "**/.blitz/**",
+      "**/__pycache__/**"
+    ]
+  }
+}

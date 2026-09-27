@@ -18,9 +18,9 @@ Core already contains primitive semantic structs. Phase 3 must inspect their act
 
 Constraint: model-derived interpretation does not become canonical IR merely to reuse a type.
 
-## 3. TypeSafe SDK exact adapter calls
+## 3. SystemOneSDK exact adapter calls
 
-The Observe provider boundary is fixed; concrete calls are determined from the supplied `typesafe_api_sdk` snapshot.
+The Observe provider boundary is fixed; concrete calls are determined from the supplied `system_one_sdk` snapshot.
 
 Inspect:
 
@@ -32,7 +32,7 @@ Inspect:
 - test adapter facilities;
 - timeout/error semantics.
 
-Do not copy old `SystemOneSDK` calls without verification.
+The existing Fount Jev path already uses `SystemOneSDK`. Preserve its useful semantics and verify calls against the supplied source. Document 34 records the inspected facade and answer distinctions; this is not a request to replace the SDK with a raw provider client.
 
 ## 4. Architecture enforcement implementation
 
@@ -140,7 +140,7 @@ Observe must record the strongest stable provider/model identity available and e
 
 Deferred to SDK/runtime inspection:
 
-- whether `typesafe_api_sdk` exposes immutable model revision/artifact identifiers;
+- whether `system_one_sdk` exposes immutable model revision/artifact identifiers;
 - whether endpoint/provider metadata belongs in the semantic model fingerprint;
 - whether mutable aliases are allowed for L1-only reuse or disable caching entirely.
 

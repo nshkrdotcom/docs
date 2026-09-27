@@ -18,7 +18,7 @@ Every returned docset remains self-contained.
 - [ ] Reader presentation order, story-time constraints, and causal relations remain distinct.
 - [ ] Cached `MeasurementResult` reuse remains distinct from revision-bound `Observation` provenance.
 - [ ] Next agent can identify exact next phase without conversation reconstruction.
-- [ ] Four-input protocol remains explicit: Fount Repomix, `typesafe_api_sdk` Repomix, `inference` Repomix, docset.
+- [ ] Exactly four XML inputs remain explicit: `fount.xml`, `system_one_sdk.xml`, `inference.xml`, `docset.xml`.
 
 - [ ] `26_THIRD_ORDER_PRODUCT_REVIEW_RESOLUTIONS.md` remains consistent with product decisions.
 - [ ] Writer-facing result semantics remain defined independently of UI.

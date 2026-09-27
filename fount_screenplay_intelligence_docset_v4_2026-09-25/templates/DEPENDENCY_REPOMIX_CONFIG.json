@@ -1,0 +1,54 @@
+{
+  "output": {
+    "filePath": "dependency.raw.xml",
+    "style": "xml",
+    "parsableStyle": true,
+    "removeComments": false,
+    "removeEmptyLines": false,
+    "showLineNumbers": false
+  },
+  "include": [
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "AGENTS.md",
+    "mix.exs",
+    "mix.lock",
+    ".formatter.exs",
+    ".gitignore",
+    ".github/**",
+    "config/**",
+    "packages/**",
+    "apps/**",
+    "test/**",
+    "lib/**",
+    "guides/**",
+    "examples/**",
+    "scripts/**"
+  ],
+  "ignore": {
+    "useGitignore": true,
+    "useDefaultPatterns": false,
+    "customPatterns": [
+      "**/.git/**",
+      "**/.elixir_ls/**",
+      "**/.blitz/**",
+      "**/_build/**",
+      "**/deps/**",
+      "**/doc/**",
+      "**/node_modules/**",
+      "**/target/**",
+      "**/assets/*.svg",
+      "**/__pycache__/**",
+      "**/.env*",
+      "**/*.dump",
+      "**/*.tar",
+      "**/examples/_downloads/**",
+      "**/examples/_output/**",
+      "dependency.raw.xml",
+      "system_one_sdk.xml",
+      "inference.xml",
+      "repomix-output*.xml"
+    ]
+  }
+}

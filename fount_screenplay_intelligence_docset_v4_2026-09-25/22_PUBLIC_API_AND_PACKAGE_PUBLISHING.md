@@ -118,7 +118,7 @@ Normal Mix/Hex package release metadata follows ecosystem requirements if/when p
 
 ## 8. Provider dependency pinning
 
-Use dependency/path requirements found in the supplied current source. Do not guess a published `typesafe_api_sdk` or `inference` requirement when snapshots show another composition.
+Use dependency/path requirements found in the supplied current source. Do not guess a published `system_one_sdk` or `inference` requirement when snapshots show another composition.
 
 Offline implementation writes the best source-grounded dependency declaration; runtime QC resolves actual Mix/Hex constraints.
 

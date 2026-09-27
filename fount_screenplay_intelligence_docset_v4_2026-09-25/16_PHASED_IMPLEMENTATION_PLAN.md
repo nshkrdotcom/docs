@@ -1,5 +1,7 @@
 # Phased Implementation Plan
 
+The program has sixteen phases. Documents 33 and 36 define writer outcomes and demonstrations for every phase. Phases 12–15 complete discovery, cinematic/voice work, notes/research/revision, and read/share/usefulness workflows. Phase 16 is final acceptance. Preserve existing useful writing operations throughout the earlier engineering work.
+
 ## 1. Operating model
 
 This implementation program is intentionally designed for repeated handoff between two environments:
@@ -10,10 +12,10 @@ Has the complete source snapshots but **no usable Elixir runtime**. It can inspe
 
 Every phase implementation prompt supplies:
 
-1. latest complete Fount Repomix XML;
-2. latest complete `typesafe_api_sdk` Repomix XML;
-3. latest complete `inference` Repomix XML;
-4. latest complete copy of this entire docset.
+1. `fount.xml`;
+2. `system_one_sdk.xml`;
+3. `inference.xml`;
+4. `docset.xml`, containing this complete current docset.
 
 The agent implements exactly the current phase, updates the docset progress/handoff records, and returns:
 
@@ -23,7 +25,7 @@ The agent implements exactly the current phase, updates the docset progress/hand
 
 ### Runtime-QC agent/environment
 
-Has Elixir/OTP and any required Postgres/provider access. It applies the overlay, compiles/tests/fixes the phase, performs runtime checks, updates the handoff/QC report and `PROGRESS.md`, and produces the source snapshot used by the next phase.
+Has Elixir/OTP and any required Postgres/provider access. The user has already applied and committed the overlay and updated docset. Codex verifies that applied state, compiles/tests/fixes the phase, performs runtime checks, updates the handoff/QC report and `PROGRESS.md`, and produces the next source snapshot. It does not reapply the ZIP. See document 35.
 
 A phase does not advance merely because offline code was written. It advances only after runtime QC records the phase as complete.
 
@@ -111,7 +113,7 @@ Minimum complete baseline:
 - closed sensor/projection registry;
 - lens asset loader/content hashing;
 - measurement-specific projections;
-- TypeSafe provider adapter using supplied `typesafe_api_sdk` API;
+- TypeSafe provider adapter using supplied `system_one_sdk` API;
 - executor with request IDs, deterministic reassembly, concurrency/timeouts/error normalization;
 - analytical budget primitive;
 - L1 cache behavior + memory implementation;
@@ -711,7 +713,23 @@ Core lenses/capabilities have executable evaluation notes/fixtures, early-pilot 
 
 ---
 
-# Phase 12 — Final Integration, Documentation, Package Readiness, and Acceptance
+# Phase 12 — Discovery, Session Modes, and Scene Exploration
+
+Implement the complete Phase 12 brief in `36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md`: W01–W03/W11, source mappings, tests, runnable example, and human review. Exit requires the fragment-to-scene and resume demonstrations, with no mandatory outline or analysis funnel.
+
+# Phase 13 — Cinematic Revision, Rehearsal, and Voice
+
+Implement the complete Phase 13 brief in document 36: W04–W06, visual/sound passes, voice protection, and noncanonical rehearsal. Exit requires actual candidate comparisons and the stated human review, not only generated explanations of success.
+
+# Phase 14 — Research, Notes, and Consequential Revision
+
+Implement the complete Phase 14 brief in document 36: W07–W09, research provenance, conflicting/stale notes, revision consequences, and stale-candidate protection. Exit requires the note/reveal demonstrations and collaborator review.
+
+# Phase 15 — Read, Share, Resume, and Prove Usefulness
+
+Implement the complete Phase 15 brief in document 36: W01/W10–W12 and whole-workflow integration. Exit requires human-only and agent-assisted paths, clean export, session recovery, and the recorded comparison study. Missing human evidence remains pending.
+
+# Phase 16 — Final Integration, Documentation, Package Readiness, and Acceptance
 
 ## Goal
 
@@ -744,7 +762,7 @@ Close the program with one coherent four-package product and no superseded archi
 
 ## Final exit criteria
 
-Every criterion in `19_ACCEPTANCE_CRITERIA.md` passes and `23_FUNCTIONALITY_PRESERVATION_AUDIT.md` has no missing behavior.
+Every criterion in `19_ACCEPTANCE_CRITERIA.md` passes, `23_FUNCTIONALITY_PRESERVATION_AUDIT.md` has no missing behavior, and W01–W12/A01–A12 in documents 33/36 have source/test/demonstration evidence. Do not claim market leadership or creative superiority without comparative evidence.
 
 ---
 
@@ -771,13 +789,13 @@ Every offline implementation ZIP contains repository-relative paths only.
 
 New/modified files are included as files.
 
-Deletions are listed in a root manifest, e.g.:
+All operations are listed in the strict archive manifest:
 
 ```text
-DELETE_FILES.txt
+handoff/fount-overlay.manifest.json
 ```
 
-with one repository-relative path/glob per line. Phase 1 uses this to delete `packages/fount_probe/**` and obsolete references where removal cannot be represented by an absent file in a changed-files-only ZIP.
+Use exact repository-relative paths and original/result byte hashes as specified in document 35 and the actual Fount applier. Phase 1 enumerates each Probe deletion. No globs, unlisted payloads, or deletion inferred from omission.
 
 No `_build`, `deps`, secrets, generated docs, local DB dumps, or environment files are included.
 
@@ -786,7 +804,7 @@ No `_build`, `deps`, secrets, generated docs, local DB dumps, or environment fil
 At every phase, the offline agent updates:
 
 - `PROGRESS.md`;
-- `DECISIONS.md` only for actual architecture decisions/corrections;
+- `DECISIONS.md` for actual product, workflow, or architecture decisions/corrections;
 - `TRACEABILITY_MATRIX.md` for implemented requirements;
 - current phase handoff under `handoffs/`;
 - any implementation document proven inaccurate by source inspection.

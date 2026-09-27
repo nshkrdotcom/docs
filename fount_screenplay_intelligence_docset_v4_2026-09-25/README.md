@@ -1,14 +1,25 @@
 # Fount Screenplay Intelligence — Implementation Docset
 
-This docset specifies the complete phased implementation program for Fount's screenplay-intelligence architecture.
+Fount is a tool for discovering, writing, revising, and finishing feature screenplays—with humans and agents working on the same creative material. Its purpose is better writing decisions, not a screenplay score or an architecture showcase. Elixir is the chosen medium for the joy of building with it.
 
-It is designed to be handed repeatedly to implementation agents together with three fresh source snapshots:
+Every ChatGPT.com pass receives exactly four fresh XML attachments:
 
-1. Fount Repomix XML;
-2. `typesafe_api_sdk` Repomix XML;
-3. `inference` Repomix XML.
+1. `fount.xml`;
+2. `system_one_sdk.xml`;
+3. `inference.xml`;
+4. `docset.xml` containing this complete, progressively updated docset.
 
-Each offline implementation agent completes the current phase without claiming unrun Elixir checks, returns a changed/new-files overlay plus deletion manifest when needed, updates this docset, and hands the work to a runtime-QC environment. The next phase starts only from the QC-corrected source snapshot.
+ChatGPT.com writes the current phase without claiming unrun Elixir checks and returns a Fount overlay ZIP, complete updated docset ZIP, and handoff. The user applies and commits the changes. Codex verifies that applied state, runs and repairs the phase, and updates the docset. The next pass starts only from the QC-corrected baseline. Document 35 specifies the exact manifest and responsibilities.
+
+## Start with the writing experience
+
+Read `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md`, `33_WRITER_WORKFLOWS_AND_CREATIVE_CONTRACT.md`, and `34_HUMAN_JEV_AND_LLM_COLLABORATION.md` before treating the architecture below as a product brief. The new research complements the earlier reader/notes work with discovery, cinematic action and sound, voice, rehearsal, and useful alternatives.
+
+`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. The initial next phase remains Phase 1; this revision does not claim any future phase is implemented.
+
+Success means a writer can arrive with an image, a scene, or a difficult note; explore real choices; preserve what matters; see consequences; and choose what becomes the draft. No compulsory outline, universal conflict theory, or simulated audience verdict. Human-only writing remains useful without provider credentials.
+
+The retained engineering references support those workflows. They do not authorize distributed-system features, new platforms, or architectural elaboration unrelated to a writer outcome.
 
 ## Target physical architecture
 

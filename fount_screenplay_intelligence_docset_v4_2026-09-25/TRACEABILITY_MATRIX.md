@@ -193,4 +193,49 @@ Do not mark source as verified based on offline implementation alone.
 | Workshop surfaces resource preflight/actual | Workshop | 9 | integration tests |
 | per-project/rewrite resource history | Intelligence persistence | 10 | persistence/report tests |
 | feature-film-only claim boundary | docs/evaluation | all | scope/non-claim audit |
-| STAGE/external benchmark not treated as Fount validation | Evaluation/docs | 11/12 | documentation/source audit |
+| STAGE/external benchmark not treated as Fount validation | Evaluation/docs | 11/16 | documentation/source audit |
+
+## Screenplay-writing workflow expansion
+
+All rows below are specification requirements, initially NOT_STARTED. Phase handoffs replace that status with concrete source/test/demo identities and actual evidence. Existing capabilities can satisfy a row when verified; do not rebuild them unnecessarily.
+
+| Requirement | Product outcome | Primary phase | Acceptance cases |
+|---|---|---:|---|
+| W01 | Draft/explore/inspect/revise, human-only path, resume | 12/15 | A01/A10/A12 |
+| W02 | Evolving brief, fragments, optional outline/cards | 12 | A01 |
+| W03 | Scene workshop and materially different alternatives | 12 | A01/A03 |
+| W04 | Cinematic action, sound, space, rhythm | 13 | A02 |
+| W05 | Relationship rehearsal separate from canon | 13 | A05 |
+| W06 | Voice and language preservation | 13 | A04 |
+| W07 | Research provenance and intentional fiction | 14 | A08 |
+| W08 | Notes triage, disagreement, reliable anchors | 14 | A06 |
+| W09 | Revision experiments, consequences, safe acceptance | 14 | A07/A10 |
+| W10 | Read/share/export without private-material leakage | 15 | A09/A11 |
+| W11 | Useful partial results, cancellation, controlled retry | 12/15 | A10 |
+| W12 | Honest comparative usefulness evidence | 15/16 | A12 |
+| H01 | Four XML inputs with exact source identity | every pass | document 35 packet audit |
+| H02 | User applies/commits; Codex verifies/repairs | every pass | application/QC commit record |
+| H03 | Actual SystemOneSDK facade and answer semantics | 1/2/9 | document 34 SDK contract tests |
+
+Every phase also performs its demonstration from document 36. Research R01–R10 motivates W01–W12, but citations alone do not satisfy implementation or human-validation gates.
+
+## Phase 1 concrete source traceability - OFFLINE_IMPLEMENTED
+
+All Elixir rows below mean WRITTEN / UNRUN, not QC verified. See `handoffs/PHASE_01_PRESERVATION_AUDIT.md` for all 37 original modules, 26 tests, and the remaining package files. Later-phase rows above retain their original scope and status.
+
+| Requirement / preserved usefulness | Source | Tests or demonstration | Status |
+|---|---|---|---|
+| Final package graph / direct removal | root `mix.exs`; both new Mix projects; strict overlay manifest | `scripts/tests/test_phase_one_source.py`; Intelligence `architecture_test.exs`; `mix fount.architecture` | Python source checks run; Elixir gate unrun |
+| Neutral atomic questions and evidence | Observe `question.ex`, `request.ex`, `distribution.ex`, `evidence_ref.ex`, `context.ex` | `measurement_contract_test.exs` | Written / unrun |
+| Real SDK boundary and normalization | Observe `providers/system_one.ex` | `system_one_boundary_test.exs` | Written / unrun |
+| Association / partial failures / caps / timeout | Observe `executor.ex`, `association.ex`, `provider_call.ex`, `budget.ex` | `executor_sandbox_test.exs`; `system_one_boundary_test.exs` | Written / unrun |
+| Minimum L1 cache / current provenance | Observe `measurement_result.ex`, `observation.ex`, `cache/memory.ex` | `cache_integrity_test.exs`; cross-revision Sandbox test | Written / unrun; Phase 2 hardening still unstarted |
+| Closed analytical requests / no executable data | Intelligence `playbooks/registry.ex`, `playbooks/request.ex` | `request_contract_test.exs`; migrated catalog tests in Workshop | Written / unrun |
+| Pure interpretation and core-shell boundary | Intelligence `capabilities/*`, `reader/reveal.ex`, `story_world/records.ex`, `runner/architecture.ex` | `reader_replay_test.exs`; `architecture_test.exs` | Written / unrun |
+| Exact selection / evidence / search | core `selection.ex`, `source_evidence.ex`, `inventory.ex`, `search.ex` | moved inventory/search/source-evidence tests; original canonical tests | Written / unrun |
+| Knowledge, continuity, causal support, dialogue, voice, action | Intelligence `playbooks/*` and `acquisition/*`; Observe projections/lenses | 26 original analysis tests mapped to final ownership | Written / unrun |
+| Generation remains Workshop-owned | Workshop `writing/completion.ex`, `services.ex`, `writing/action_layout.ex` | moved completion/extraction tests; `completion_privacy_test.exs` | Written / unrun |
+| Document 36 Phase 1 writer demonstration; baseline W02-W06/W09-W11 | Workshop `examples/phase_one.exs`, `examples/support/phase_one_demo.exs` | `integration/phase_one_writer_demo_test.exs`; existing workflow/integration suite | Written / unrun; no human/domain result claimed |
+| Strict file transport and safe directory completion | unchanged applier; new `handoff/prune_deleted_directories.py` | Python transport checks and four cleanup tests | See actual static/transport report |
+
+The reusable MeasurementResult/Observation/context baseline is required to implement Phase 1's Observe minimum. Its presence does not mark Phase 2, Phase 10 or any expanded writer phase complete.

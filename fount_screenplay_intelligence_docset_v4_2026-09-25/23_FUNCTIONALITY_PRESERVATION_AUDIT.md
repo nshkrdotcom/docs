@@ -338,7 +338,7 @@ Preserve configurable lens wording/rubrics/calibration, immutable fingerprints, 
 
 ### `Jev`
 
-Preserve TypeSafe/System One measurement use, typed response normalization, state/context limits, and decision/calibration concepts. Reimplement in Observe against supplied `typesafe_api_sdk`.
+Preserve TypeSafe/System One measurement use, typed response normalization, state/context limits, and decision/calibration concepts. Reimplement in Observe against supplied `system_one_sdk`.
 
 ### `Writing.Executor`
 
@@ -624,3 +624,7 @@ At final acceptance, the repository must be able to demonstrate:
 6. research-driven reader/notes/evaluation functionality remains represented;
 7. no superseded package/API compatibility code remains;
 8. the implementation is simpler physically while broader functionally.
+
+## Phase 1 source audit record
+
+The concrete file-by-file disposition is in `handoffs/PHASE_01_PRESERVATION_AUDIT.md`. All supplied module/test paths have reviewed ownership and existing destination files. Behavioral equivalence remains unverified until Codex runs the preserved and new tests; there is no unreviewed source item being silently dropped. Excluded files are explicitly outside the snapshot inventory, not assumed deleted.

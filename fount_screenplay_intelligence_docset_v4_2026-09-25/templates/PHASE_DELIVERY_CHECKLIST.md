@@ -4,7 +4,7 @@
 
 - [ ] Paths are relative to Fount repo root.
 - [ ] Every required new/modified file is included.
-- [ ] `DELETE_FILES.txt` lists required deletions.
+- [ ] Strict overlay manifest lists exact add/modify/delete paths and verified byte hashes; no glob deletions.
 - [ ] No `_build`, `deps`, `.git`, node modules, logs, repomix inputs, secrets, or unrelated files.
 - [ ] Tests are included for new behavior.
 - [ ] Public docs/guides reflect changed behavior.
@@ -38,7 +38,7 @@
 ## API inspection
 
 - [ ] Relevant Fount source/tests inspected.
-- [ ] Relevant `typesafe_api_sdk` source/tests inspected if touched.
+- [ ] Relevant `system_one_sdk` source/tests inspected if touched.
 - [ ] Relevant `inference` source/tests inspected if touched.
 - [ ] No external function invented from memory.
 
@@ -67,6 +67,10 @@
 - [ ] Runtime-QC handoff tells next agent to fix failures and update source/docset.
 
 ## Writer product / domain validation
+
+- [ ] Phase writer demonstration from document 36 is implemented and its actual execution status is recorded.
+- [ ] Relevant W01–W12 requirements map to source/tests; creative claims are separate from engineering evidence.
+- [ ] Handoff starts from the user's applied commits, not a second overlay application.
 
 - [ ] Relevant writer-facing output follows `27_WRITER_INTERACTION_AND_PRESENTATION_CONTRACT.md`.
 - [ ] Required reference-renderer/evaluation artifacts are included.

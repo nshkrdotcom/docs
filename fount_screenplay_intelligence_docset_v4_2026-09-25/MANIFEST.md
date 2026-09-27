@@ -16,6 +16,11 @@
 - `01_INDUSTRY_EVALUATION_AND_READER_CRITERIA.md`
 - `02_EMERGENT_READER_EXPERIENCE_OVER_TIME.md`
 - `03_NOTES_DIAGNOSIS_AND_REVISION_PHILOSOPHY.md`
+- `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md`
+- `33_WRITER_WORKFLOWS_AND_CREATIVE_CONTRACT.md`
+- `34_HUMAN_JEV_AND_LLM_COLLABORATION.md`
+- `35_FOUR_XML_PROGRESSIVE_HANDOFF.md`
+- `36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md`
 
 ## Architecture / domain model
 
@@ -70,20 +75,26 @@
 - `templates/PHASE_DELIVERY_CHECKLIST.md`
 - `templates/PHASE_RUNTIME_QC_REPORT.md`
 - `templates/UPDATED_DOCSET_CHECKLIST.md`
+- `templates/DEPENDENCY_REPOMIX_CONFIG.json`
+- `repomix.config.json` — full-docset XML export configuration.
 
 ## Runtime handoffs
 
 - `handoffs/` — phase-specific offline and QC handoffs are added during implementation.
+- `handoffs/PREPARATION_2026-09-26.md` — source baselines and actual preparation checks; not a completed implementation phase.
 
-## External phase inputs not contained in this ZIP
+## Four XML phase inputs
 
-Every implementation phase additionally receives fresh source snapshots:
+Every implementation phase receives exactly:
 
-- Fount Repomix XML;
-- `typesafe_api_sdk` Repomix XML;
-- `inference` Repomix XML.
+- `fount.xml`;
+- `system_one_sdk.xml`;
+- `inference.xml`;
+- `docset.xml`, containing this complete current docset.
 
 The docset is an implementation specification, not a source-code snapshot.
+
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration, the user-applied ZIP protocol, and four product phases. Final acceptance is Phase 16. Phase 1 is still next.
 
 ## Current revision note
 
@@ -92,3 +103,14 @@ The docset is an implementation specification, not a source-code snapshot.
 ## Integrity
 
 - `SHA256SUMS.txt` — SHA-256 hashes for every docset file except itself.
+
+## Phase 1 delivery records
+
+- `handoffs/PHASE_01_OFFLINE_HANDOFF.md`
+- `handoffs/PHASE_01_RUNTIME_QC_HANDOFF.md`
+- `handoffs/PHASE_01_PRESERVATION_AUDIT.md`
+- `handoffs/PHASE_01_INPUTS.json`
+- `handoffs/PHASE_01_STATIC_CHECKS.json`
+- `handoffs/PHASE_01_FILE_INVENTORY.json`
+
+Phase 1 is offline implemented and awaits runtime verification/repair. These records do not advance the next phase.
