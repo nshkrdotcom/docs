@@ -1,0 +1,95 @@
+{
+  "phase": 9,
+  "date": "2026-09-27",
+  "status": "OFFLINE_IMPLEMENTED",
+  "environment": {
+    "elixir": "NOT_AVAILABLE",
+    "mix": "NOT_AVAILABLE",
+    "erl": "NOT_AVAILABLE"
+  },
+  "checks": [
+    {
+      "name": "five_input_content_identification",
+      "status": "PASS",
+      "evidence": "raw attachment SHA-256/byte/file counts recorded in PHASE_09_INPUTS.json"
+    },
+    {
+      "name": "external_api_source_inspection",
+      "status": "PASS",
+      "evidence": "SystemOneSDK 0.6.0, Inference 0.5.0, ASM 0.17.1 and the actual Fount Intelligence/Workshop surfaces used by Phase 9 were inspected; no invented direct provider API"
+    },
+    {
+      "name": "phase_source_contract_suite",
+      "status": "PASS",
+      "command": "python3 -m unittest discover -s scripts/tests -p 'test_phase_*_source.py' -v",
+      "result": "61 tests passed"
+    },
+    {
+      "name": "python_compile_changed_handoff_sources",
+      "status": "PASS",
+      "command": "python3 -m py_compile scripts/tests/test_phase_nine_source.py scripts/tests/test_phase_eight_source.py handoff/apply_overlay.py scripts/seal_handoff_snapshot.py"
+    },
+    {
+      "name": "phase_9_external_boundary_scan",
+      "status": "PASS",
+      "result": "no SystemOneSDK., ASM., or Inference.complete direct call in FountWorkshop.Writing.Intelligence"
+    },
+    {
+      "name": "repository_wide_python_discovery",
+      "status": "BLOCKED_BY_INPUT_SNAPSHOT",
+      "command": "python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v",
+      "result": "70 tests discovered; 69 passed; one import error because the supplied Fount XML omits the prune_deleted_directories implementation module imported by test_prune_deleted_directories.py"
+    },
+    {
+      "name": "overlay_zip_integrity",
+      "status": "PASS",
+      "command": "unzip -t Fount_Phase09_Overlay.zip"
+    },
+    {
+      "name": "overlay_strict_dry_run",
+      "status": "PASS",
+      "result": "19 writes accepted against a fresh decoded supplied-Fount source tree; no mismatch bypass"
+    },
+    {
+      "name": "overlay_strict_apply",
+      "status": "PASS",
+      "result": "19 changes applied; second dry-run reports all 19 unchanged"
+    },
+    {
+      "name": "whole_tree_reproduction",
+      "status": "PASS",
+      "result": "applied tree byte-matches desired implementation tree after generated Python cache/overlay-backup directories are removed"
+    },
+    {
+      "name": "phase_10_absence_guard",
+      "status": "PASS",
+      "evidence": "Phase-9 source-contract test rejects Phase-10 implementation markers in Workshop source"
+    },
+    {
+      "name": "elixir_formatter_compile_exunit",
+      "status": "NOT_RUN",
+      "reason": "Elixir/Erlang/Mix unavailable"
+    },
+    {
+      "name": "root_mix_ci_architecture_credo_dialyzer_exdoc_packages",
+      "status": "NOT_RUN",
+      "reason": "Elixir/Erlang/Mix unavailable"
+    },
+    {
+      "name": "postgres_workshop_writer_pdf_table_read",
+      "status": "NOT_RUN",
+      "reason": "runtime/database/tooling unavailable in source-writing environment"
+    },
+    {
+      "name": "deterministic_phase9_end_to_end_session",
+      "status": "NOT_RUN",
+      "reason": "requires Mix runtime; Codex must run Observe Sandbox + mock Inference session/review/acceptance preservation"
+    },
+    {
+      "name": "optional_human_domain_review",
+      "status": "NOT_RUN",
+      "reason": "D046 makes human/domain reviews optional; no participant/corpus result fabricated"
+    }
+  ],
+  "completion_rule": "This evidence supports OFFLINE_IMPLEMENTED only. Runtime QC/repair must run on the user-applied checkout before Phase 9 can become COMPLETE. Phase 10 remains NOT_STARTED."
+}

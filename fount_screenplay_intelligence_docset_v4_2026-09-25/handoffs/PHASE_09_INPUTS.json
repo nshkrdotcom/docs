@@ -1,0 +1,116 @@
+{
+  "phase": 9,
+  "date": "2026-09-27",
+  "attachments": [
+    {
+      "role": "fount",
+      "input": "content-identified Fount XML",
+      "sha256": "84caacd431153200b19d68f50ce2689fae01392067579df17d84c6b6674943c8",
+      "bytes": 2757530,
+      "file_count": 541
+    },
+    {
+      "role": "system_one_sdk",
+      "input": "content-identified System One SDK XML",
+      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+      "bytes": 875342,
+      "file_count": 253
+    },
+    {
+      "role": "inference",
+      "input": "content-identified Inference XML",
+      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
+      "bytes": 299421,
+      "file_count": 69
+    },
+    {
+      "role": "agent_session_manager",
+      "input": "content-identified Agent Session Manager XML",
+      "sha256": "67988c9aec015ce189e16078b18639f60873d244da63e3275d33707add5702db",
+      "bytes": 1608267,
+      "file_count": 275
+    },
+    {
+      "role": "docset",
+      "input": "content-identified current docset XML",
+      "sha256": "cf2ae4676bd05eeb6c7b3f6665394f4e48ea70fec0ab237ce3073c388e4530b3",
+      "bytes": 1589482,
+      "file_count": 140
+    }
+  ],
+  "identified_by_contents": {
+    "fount": "four-package Fount workspace with canonical Core, Observe, Intelligence and Workshop; Phase-8 runtime-QC-corrected source plus Workshop creative-session APIs are present",
+    "system_one_sdk": "System One poncho workspace containing system_one_sdk, system_one_contracts, system_one_bumblebee and system_one_server; SystemOneSDK 0.6.0",
+    "inference": "provider-neutral Inference workspace under apps/inference with completion/stream contracts and ASM/Gemini/ReqLLM adapters; package version 0.5.0",
+    "agent_session_manager": "Agent Session Manager repository with session/run supervision, provider backends/features, inference endpoint, provider-SDK extensions and runtime-auth surfaces; version 0.17.1",
+    "docset": "numbered screenplay-intelligence docset 00-36 with Phase-1 through Phase-8 delivery/runtime records; PROGRESS marks Phases 1-8 COMPLETE and Phase 9 Workshop Intelligence Integration first NOT_STARTED"
+  },
+  "progress_basis": "PROGRESS.md is authoritative: Phases 1-8 COMPLETE on engineering QC; Phase 9 Workshop Intelligence Integration is the first NOT_STARTED phase. D046 keeps human/domain review optional and nonblocking.",
+  "historical_verified_baseline": {
+    "phase_8_final_fount_commit": "f7f4d68f8992d5b93c32d077e13ff1901e96add7",
+    "phase_8_final_fount_tree": "5b12527bc588d545a4b3fd4a9aac3114fe7d7afc",
+    "phase_8_applied_docset_commit": "d018af2921a4fd6326677d51d6b44180ceab8400",
+    "note": "historical identities are quoted from the Phase-8 runtime report; the supplied XML attachments themselves are content snapshots, not authenticated Git seals"
+  },
+  "system_one_sdk_api_inspection": {
+    "version": "0.6.0",
+    "public_functions_inspected": [
+      "SystemOneSDK.new_client/1",
+      "SystemOneSDK.prepare/1",
+      "SystemOneSDK.evaluate_stream/4",
+      "SystemOneSDK.noul/2",
+      "SystemOneSDK.choice/3",
+      "SystemOneSDK.score/3",
+      "SystemOneSDK.list_models/2"
+    ],
+    "phase_9_usage": "no new direct Workshop dependency/call; provider-backed analytical measurements stay behind Fount.Observe/Fount.Intelligence"
+  },
+  "inference_api_inspection": {
+    "version": "0.5.0",
+    "public_functions_inspected": [
+      "Inference.capabilities/1",
+      "Inference.complete/3",
+      "Inference.stream/3",
+      "Inference.Client.new!/1",
+      "Inference.Client.agent_session!/1"
+    ],
+    "phase_9_usage": "creative generation remains on the existing Workshop Inference.Client/Completion path; the Phase-9 Intelligence bridge does not call Inference directly"
+  },
+  "asm_api_inspection": {
+    "version": "0.17.1",
+    "public_functions_inspected": [
+      "ASM.start_link/1",
+      "ASM.start_session/1",
+      "ASM.stop_session/1",
+      "ASM.query/3",
+      "ASM.stream/3",
+      "ASM.session_id/1",
+      "ASM.session_info/1"
+    ],
+    "phase_9_usage": "none directly; ASM remains behind Inference where a host selects the ASM adapter"
+  },
+  "fount_api_inspection": {
+    "actual_existing_surfaces_reused": [
+      "Fount.Intelligence.preflight_capability_playbook/4",
+      "Fount.Intelligence.run_capability_playbook/5",
+      "Fount.Intelligence.run_revision_playbook/5",
+      "Fount.Intelligence.Reporting.WriterPacket.to_map/1",
+      "Fount.Selection.select/2",
+      "Fount.Screenplay.to_fountain/2",
+      "FountWorkshop.Services.analysis/1",
+      "FountWorkshop.Store.clients/1",
+      "FountWorkshop.Candidate.check/4",
+      "Fount.Writing.ReviewGate required-severity rule"
+    ],
+    "new_phase_9_public_surface": [
+      "FountWorkshop.preflight/3",
+      "FountWorkshop.Session.preflight/3"
+    ],
+    "package_versions": "Fount workspace packages remain 0.1.0; no dependency or lockfile version change is part of the Phase-9 overlay"
+  },
+  "omissions": [
+    "Elixir/Erlang/Mix are unavailable in the source-writing environment, so formatter/compile/ExUnit/root CI/runtime gates are not claimed.",
+    "The optional Phase-9 end-to-end human writer review was not run; no usefulness or audience claim is fabricated.",
+    "The supplied Fount XML contains scripts/tests/test_prune_deleted_directories.py but omits the prune_deleted_directories implementation module imported by that test. The real Phase-8 checkout previously passed the repository-wide Python suite with the tracked helper present; Codex must verify/preserve the real checkout rather than recreating it from guesswork."
+  ]
+}

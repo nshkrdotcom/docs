@@ -18,9 +18,9 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phases 1–8: COMPLETE on engineering QC. Phase 9 remains NOT_STARTED.**
+> **Phases 1–8: COMPLETE on engineering QC. Phase 9: OFFLINE_IMPLEMENTED, runtime QC pending. Phase 10: NOT_STARTED.**
 
-Read `handoffs/PHASE_08_RUNTIME_QC_REPORT.md` and `PROGRESS.md` for the verified Phase-8 state. Fount repair commit `f7f4d68` passed engineering and preservation QC. Historical validation debt remains visible; do not claim human validation. Stop before Phase 9.
+Read `handoffs/PHASE_08_RUNTIME_QC_REPORT.md` for the verified Phase-8 baseline, then all `handoffs/PHASE_09_*` records for the current source delivery. Fount repair commit `f7f4d68` is the recorded Phase-8 verified baseline. Historical validation debt remains visible; do not claim human validation. Runtime-QC/repair Phase 9 only and stop before Phase 10.
 
 ## Read before coding
 
@@ -106,3 +106,6 @@ At source delivery, Phase 8 was `OFFLINE_IMPLEMENTED`, not COMPLETE. Families 9�
 ### Verified Phase 8 result
 
 Phase 8 is **COMPLETE** at Fount `f7f4d68` on the full engineering and preservation QC in `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. The earlier source-delivery `OFFLINE_IMPLEMENTED` statements are historical. Optional human review remains unperformed validation debt under D046. No Phase-9 implementation has begun.
+### Current Phase 9 source checkpoint
+
+Phase 9 is `OFFLINE_IMPLEMENTED`, not COMPLETE. The 19-operation Workshop overlay adds provider-free preflight, optional prewrite/postwrite Intelligence packets, diagnosis/strategy/candidate lineage, note reaction/cause/treatment separation, distinct-strategy validation, protected-strength/collateral advisory review metadata, consequence/resource reporting, and lineage preservation without changing explicit acceptance. 61 Phase 1–9 source-contract tests pass offline; Elixir/Mix/runtime gates are unrun. Codex must start from the user-applied commits, verify `PHASE_09_FILE_INVENTORY.json`, repair/test Phase 9, update the docset, and **stop before Phase 10**.

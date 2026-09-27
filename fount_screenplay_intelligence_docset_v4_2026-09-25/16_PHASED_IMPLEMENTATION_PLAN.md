@@ -659,6 +659,8 @@ Optionally run an end-to-end feature-screenplay investigation/rewrite session us
 
 Writer-facing workflows remain operational and can use Intelligence without bypassing explicit review/acceptance; the writer presentation/resource contracts survive end-to-end; the optional Phase-9 workflow review is recorded if performed and otherwise listed as validation debt.
 
+**Phase 9 source-delivery checkpoint — 2026-09-27:** `OFFLINE_IMPLEMENTED`, not COMPLETE. Workshop's integrated session lane now exposes provider-free generation/analysis preflight, optional source-grounded prewrite writer packets, note reaction/cause/treatment separation, diagnosis-to-strategy-to-candidate lineage, an exact duplicate-strategy guard, compact analysis-guided generation context, explicit post-candidate Revision Intelligence, advisory protected-strength/collateral checks, consequence/resource metadata, and lineage through review/audition/combine/rebase. Existing Store + Inference-only hosts remain valid and record analysis `not_run` when Observe is absent. Core acceptance semantics are unchanged. The strict overlay has 19 operations (4 additions, 15 modifications, no deletions); 61 Phase 1–9 source-contract tests, Python compilation, boundary scan, ZIP integrity, strict apply/idempotence and tree reproduction pass offline. Elixir/Mix/runtime/persistence/writer gates and the optional human workflow review are unrun. Phase 10 remains `NOT_STARTED`; Codex must test/repair Phase 9 and stop before Phase 10.
+
 ---
 
 # Phase 10 — Durable Analysis Persistence, Reuse, and Recomputation

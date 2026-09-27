@@ -265,3 +265,14 @@ The current implementation pass used only the supplied five snapshots as authori
 - The docset was identified by numbered documents 00–36 plus handoffs through Phase 7; its authoritative progress record made Phase 8 the first unfinished phase.
 
 Phase 8 adds no direct SystemOneSDK, Inference or ASM call. Actual Fount APIs were inspected before use; details are in `PHASE_08_INPUTS.json`. The source-writing environment had no Elixir runtime, so source inspection does not substitute for Codex runtime verification.
+## L. Phase 9 five-XML source inspection — 2026-09-27
+
+The Phase-9 implementation pass used the supplied five raw snapshots as the authority for repository/API facts and identified them by contents rather than attachment filenames. Exact SHA-256, byte counts and file counts are in `handoffs/PHASE_09_INPUTS.json`.
+
+- **Fount** is the four-package `fount` / `fount_observe` / `fount_intelligence` / `fount_workshop` workspace at the Phase-8 runtime-corrected checkpoint. Phase 9 consumes the real public Intelligence capability/revision runners and existing Workshop Session/Candidate/Review surfaces.
+- **System One SDK 0.6.0** is the poncho workspace with contracts, SDK, Bumblebee and server packages. Phase 9 adds no direct Workshop call to it; measurement provider details remain behind Observe.
+- **Inference 0.5.0** is the provider-neutral completion/stream workspace with ASM and other adapters. Existing Workshop generation continues through `Inference.Client`; the new Intelligence bridge does not call `Inference.complete` directly.
+- **Agent Session Manager 0.17.1** is the session/run/provider-backend/inference-endpoint repository. Phase 9 adds no direct ASM dependency or call; ASM remains behind the host-selected Inference adapter.
+- **Current docset** is documents 00–36 plus Phase-1 through Phase-8 runtime records. Its authoritative progress state made Phase 9 Workshop Intelligence Integration the first unfinished phase.
+
+No Elixir/Mix/runtime or human-usefulness result is inferred from source inspection. Those gates remain assigned to Codex in `handoffs/PHASE_09_RUNTIME_QC_HANDOFF.md`.

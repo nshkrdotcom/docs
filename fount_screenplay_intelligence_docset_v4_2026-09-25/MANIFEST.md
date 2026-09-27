@@ -84,7 +84,8 @@
 - `handoffs/` — phase-specific offline and QC handoffs are added during implementation.
 - `handoffs/PREPARATION_2026-09-26.md` — source baselines and actual preparation checks; not a completed implementation phase.
 - `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` — applied source identity, engineering repairs and gates, and user-authorized Level-A validation debt.
-- `handoffs/PHASE_08_OFFLINE_HANDOFF.md` / `PHASE_08_RUNTIME_QC_HANDOFF.md` — current source delivery and Codex repair/QC instructions.
+- `handoffs/PHASE_08_RUNTIME_QC_REPORT.md` — verified Phase-8 engineering checkpoint.
+- `handoffs/PHASE_09_OFFLINE_HANDOFF.md` / `PHASE_09_RUNTIME_QC_HANDOFF.md` — current Phase-9 source delivery and Codex repair/QC instructions.
 
 ## Five XML phase inputs
 
@@ -212,3 +213,18 @@ Phase-3 runtime QC is recorded in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. No h
 ## Phase 8 verified checkpoint
 
 Phase 8 runtime QC is COMPLETE at Fount `f7f4d68`; the authoritative command/repair evidence is `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`, with post-repair path identities in `handoffs/PHASE_08_FILE_INVENTORY.json`. Optional human/domain review is unperformed validation debt under D046. Phase 9 remains NOT_STARTED.
+## Phase 9 delivery records
+
+- `handoffs/PHASE_09_INPUTS.json`: five content-identified XML identities and inspected Fount/System One/Inference/ASM boundaries.
+- `handoffs/PHASE_09_FILE_INVENTORY.json`: exact 19-operation overlay inventory with preimage/result hashes, sizes and modes.
+- `handoffs/PHASE_09_IMPLEMENTATION_MATRIX.md`: Workshop Intelligence requirements mapped to source evidence and writer value.
+- `handoffs/PHASE_09_PRESERVATION_AUDIT.md`: unchanged ownership/acceptance behavior and required runtime regressions.
+- `handoffs/PHASE_09_DOMAIN_REVIEW_PACKET.md`: optional D046 end-to-end writer review; no fabricated result.
+- `handoffs/PHASE_09_STATIC_CHECKS.json`: executed offline evidence and explicit unrun runtime gates.
+- `handoffs/PHASE_09_OFFLINE_HANDOFF.md`: source-delivery account and Phase-10 stop line.
+- `handoffs/PHASE_09_RUNTIME_QC_HANDOFF.md`: Codex instructions for the user-applied Phase-9 state.
+- `handoffs/PHASE_09_DOCSET_HASHES.json`: complete source-delivery docset identities, excluding recursive checksum files.
+
+## Current Phase 9 checkpoint
+
+Phase 9 is `OFFLINE_IMPLEMENTED`. The strict 19-operation overlay and 61 Phase 1–9 source-contract tests pass offline; Elixir/runtime/persistence/writer gates remain for Codex. Phase 10 is `NOT_STARTED`.

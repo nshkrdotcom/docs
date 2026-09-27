@@ -414,3 +414,25 @@ This is source traceability only. Runtime verification/repair remains required b
 ## Phase 8 runtime QC traceability — 2026-09-27
 
 At Fount `f7f4d68` (tree `5b12527`), all twelve family IDs and four Phase-8 Observe assets, safe custom-lens/pack validation and explicit enablement, opt-in genre and Emotional/Value routing, Theme counterevidence, explicit two-revision comparison, retained Reader-state changes, separate character/relationship/causal/story-time effects, nil generated candidate and Phase-9 stop line are verified by focused and full tests. Full `mix ci` passed 320 ExUnit tests with compiled architecture, strict Credo, Dialyzer and ExDoc; 64 Python tests, four archives, isolated Core/Workshop PostgreSQL integrations (11/14), representative prior-family/Core regressions and writer accept/reject/PDF/table-read demonstrations passed. See `handoffs/PHASE_08_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_08_FILE_INVENTORY.json` for commands, defects, repairs and hashes. Optional human/domain review remains NOT RUN under D046; no human validity or usefulness claim is made. Phase 8 is **COMPLETE**; Phase 9 is **NOT_STARTED**.
+## Phase 9 source-delivery traceability — 2026-09-27
+
+| Phase-9 requirement | Delivered source surface | Offline evidence | Runtime state |
+|---|---|---|---|
+| provider-free workflow/resource preflight | `FountWorkshop.preflight/3`, `Session.preflight/3`, Intelligence bridge | focused/source tests | pending Codex |
+| prewrite diagnosis before supported revisions | `Writing.Preparation` → `Writing.Intelligence.enrich_preparation/5` → public Intelligence playbooks | source/API inspection | pending Codex |
+| Store + Inference-only preservation | Observe optional; explicit `not_run` packet | source tests | pending Codex |
+| note reaction/cause/treatment separation | Phase-9 note triage | focused/source tests | pending Codex |
+| diagnosis → strategy → candidate lineage | Strategy + Generation + Candidate provenance | source tests | pending Codex |
+| causally distinct alternatives | semantic-signature duplicate guard | source test | pending real generation |
+| analysis-guided context | compact writer packet in `Context.prompt_data/2` | source inspection | pending Codex |
+| pre/post candidate analysis | prewrite writer packet + explicit base/candidate `revision_regression` in `Candidate.check/4` | focused/source tests | pending Codex |
+| protected strengths/collateral | advisory revision checks + review packet | focused/source tests | pending Codex |
+| propagation/consequence visibility | strategy consequence proposals + revision causal ripple | source tests | pending Codex |
+| investigate without pages | preserved investigate preparation/materialization behavior | source review | pending regression |
+| writer presentation contract | separately named writer/revision packet, lineage, note/resource/consequence fields | source review | pending Codex |
+| actual resource usage | candidate/session/review/audition metadata | source review | pending Codex |
+| explicit acceptance | Core ReviewGate unchanged; Phase-9 checks advisory | source tests | pending accept/reject regression |
+| external boundaries | no direct SystemOneSDK/ASM/Inference-complete call in new bridge | boundary scan | pending compiled architecture |
+| stop before Phase 10 | no durable analysis persistence/recompute implementation | source-contract test | PASS offline |
+
+This is source-delivery traceability only. Phase 9 is **OFFLINE_IMPLEMENTED**, not COMPLETE. Runtime verification/repair remains required; Phase 10 is **NOT_STARTED**.
