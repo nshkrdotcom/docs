@@ -1,6 +1,6 @@
 {
   "phase": 9,
-  "status": "OFFLINE_IMPLEMENTED",
+  "status": "COMPLETE",
   "date": "2026-09-27",
   "overlay_sha256": "189fcc7fbb9819836cb05bfc67980ecd00790fd8bc26ab9b515f352e0b8e2d18",
   "overlay_bytes": 50693,
@@ -21,8 +21,8 @@
       "mode": 420,
       "original_bytes": 1001,
       "result_bytes": 1949,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "a37bf94d7bf99d73b90d0400282d60672d1bcbe4d55b40289611edc8272c793f",
+      "post_repair_bytes": 1949
     },
     {
       "path": "packages/fount_workshop/README.md",
@@ -33,8 +33,8 @@
       "mode": 420,
       "original_bytes": 5038,
       "result_bytes": 5908,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "e92b59b561a35a3ad836eb93b5f8704210d6f8e184f0c7c0aea2164ec61ee86c",
+      "post_repair_bytes": 5908
     },
     {
       "path": "packages/fount_workshop/guides/intelligence-integration.md",
@@ -44,7 +44,9 @@
       "result_sha256": "edda6db06bb35edb8f3976dc1208ec77725298141bcd9eac731370c0ca86dfa1",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 5494
+      "result_bytes": 5494,
+      "post_repair_sha256": "edda6db06bb35edb8f3976dc1208ec77725298141bcd9eac731370c0ca86dfa1",
+      "post_repair_bytes": 5494
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop.ex",
@@ -55,8 +57,8 @@
       "mode": 420,
       "original_bytes": 586,
       "result_bytes": 811,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "00a9af79d75176ed430e512b4e18ec9d1457f1ec3b390d301d0d6d1e4e37f9aa",
+      "post_repair_bytes": 812
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop/audition.ex",
@@ -67,8 +69,8 @@
       "mode": 420,
       "original_bytes": 2849,
       "result_bytes": 3353,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "f2eb81f415fba8375db9112a74b54b0bdca9445733a3fb3f38f4d2d8b3d5de87",
+      "post_repair_bytes": 3367
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop/candidate.ex",
@@ -79,8 +81,8 @@
       "mode": 420,
       "original_bytes": 17055,
       "result_bytes": 18796,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "2b749ccc96566019a9baab7ea12ff7ef5afd0f94af55aee4de8eca6f5753b3f2",
+      "post_repair_bytes": 19046
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop/rebase.ex",
@@ -91,8 +93,8 @@
       "mode": 420,
       "original_bytes": 7854,
       "result_bytes": 8243,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "5d0dfae08cb4b8be7e5e28461234b1b5dea3388ffc16e85b8807500f7b851cec",
+      "post_repair_bytes": 8244
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop/request.ex",
@@ -103,8 +105,8 @@
       "mode": 420,
       "original_bytes": 7079,
       "result_bytes": 7690,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "add8d3d49e21d6e41b38354d3bffa98d025d135bfff85840de6b08e24e8eb409",
+      "post_repair_bytes": 7703
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop/review.ex",
@@ -115,8 +117,8 @@
       "mode": 420,
       "original_bytes": 2640,
       "result_bytes": 3429,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "cf57a96596ec637fbddda4ece474b4cca1b5fc952bdf2b3d6597458aa4f6aef6",
+      "post_repair_bytes": 3592
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop/session.ex",
@@ -127,8 +129,8 @@
       "mode": 420,
       "original_bytes": 19102,
       "result_bytes": 21095,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "d33e7dc01a6a4ef1fa589eed02ac9d01fba82ab7d51c46954ea9351408f38607",
+      "post_repair_bytes": 21110
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop/strategy.ex",
@@ -139,8 +141,8 @@
       "mode": 420,
       "original_bytes": 3664,
       "result_bytes": 4293,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "a7dac768afa1523b924145ca444fe849d3ed2a260c49b40980fea1f52278f660",
+      "post_repair_bytes": 4293
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop/writing/context.ex",
@@ -151,8 +153,8 @@
       "mode": 420,
       "original_bytes": 7752,
       "result_bytes": 8148,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "8b77ed509b20e60bb5212df2d083968c34f5490b0f36c4eec4e95dff8dfc6df4",
+      "post_repair_bytes": 8148
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop/writing/generation.ex",
@@ -163,8 +165,8 @@
       "mode": 420,
       "original_bytes": 6548,
       "result_bytes": 6695,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "5cc657075627497fee26534bbe2f4b73bc485edbac7e609985f229c1fa4f82e4",
+      "post_repair_bytes": 6720
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop/writing/intelligence.ex",
@@ -174,7 +176,9 @@
       "result_sha256": "803937009fba7199e34a7d6cf6b8832a930ff383393d67d5d5422eb2635afcd5",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 14456
+      "result_bytes": 14456,
+      "post_repair_sha256": "740b28653b8d351edf3621246c5e5b9c40300cb990e42b3ca28c55f3581a89bb",
+      "post_repair_bytes": 14677
     },
     {
       "path": "packages/fount_workshop/lib/fount_workshop/writing/preparation.ex",
@@ -185,8 +189,8 @@
       "mode": 420,
       "original_bytes": 17439,
       "result_bytes": 17793,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "3a2f85fa2054831a44c17fc6ca06364b8d395200a7fa0cae834167730f7ee66d",
+      "post_repair_bytes": 17806
     },
     {
       "path": "packages/fount_workshop/mix.exs",
@@ -197,8 +201,8 @@
       "mode": 420,
       "original_bytes": 3282,
       "result_bytes": 3353,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "4009459964c00d2a9a4398b7129bd9a8a2f47c22741046ee827b20bdfe0e1ffd",
+      "post_repair_bytes": 3354
     },
     {
       "path": "packages/fount_workshop/test/phase_nine_intelligence_test.exs",
@@ -208,7 +212,9 @@
       "result_sha256": "465991d67b8239a1a3e272b51566f9ffd003005cd36583454f6a176cea471305",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 5739
+      "result_bytes": 5739,
+      "post_repair_sha256": "4adeb212baf4601cd818b2ebdca08823424042046487ceb1f6b7bb6882d9cc73",
+      "post_repair_bytes": 5748
     },
     {
       "path": "scripts/tests/test_phase_eight_source.py",
@@ -219,8 +225,8 @@
       "mode": 420,
       "original_bytes": 9419,
       "result_bytes": 9315,
-      "post_repair_sha256": null,
-      "post_repair_bytes": null
+      "post_repair_sha256": "4ba2fda5eb2bd0971b1bc8b12fb71eb1490b38515acccb2e9c4c510f7e1a49c1",
+      "post_repair_bytes": 9315
     },
     {
       "path": "scripts/tests/test_phase_nine_source.py",
@@ -230,8 +236,12 @@
       "result_sha256": "6730c74c3b770e9f5c0d244a5aba5c53d13154142526a7ca873a31fbb3b288d1",
       "mode": 420,
       "original_bytes": null,
-      "result_bytes": 4983
+      "result_bytes": 4983,
+      "post_repair_sha256": "6730c74c3b770e9f5c0d244a5aba5c53d13154142526a7ca873a31fbb3b288d1",
+      "post_repair_bytes": 4983
     }
   ],
-  "runtime_repair_note": "post_repair_sha256/post_repair_bytes are intentionally unset at source delivery; Codex records final applied/repaired identities after runtime QC"
+  "runtime_repair_note": "post_repair_sha256/post_repair_bytes are intentionally unset at source delivery; Codex records final applied/repaired identities after runtime QC",
+  "runtime_qc_commit": "361a9fd04752d947e0eaf12edbcf0fbd4d1bad54",
+  "runtime_qc_tree": "2d25494002d6b711185be83c6c6b0b44b92d3068"
 }

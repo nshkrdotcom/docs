@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phases 1–8 COMPLETE on engineering QC. Phase 9 is OFFLINE_IMPLEMENTED and awaiting runtime QC/repair. Phase 10 remains NOT_STARTED. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
+**Current state:** Phases 1–9 COMPLETE on engineering QC. Phase 10 remains NOT_STARTED. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
 
 ## Status values
 
@@ -26,7 +26,7 @@ Runtime QC establishes completion when applicable engineering and other non-huma
 | 6 | Capabilities A: Scene/Agency/Character/Relationship | COMPLETE | `fount_phase_06_overlay.zip` | `handoffs/PHASE_06_RUNTIME_QC_REPORT.md` | 292 workspace tests, architecture, strict quality/docs, isolated DB/writer/PDF and packages pass at Fount `51f7c5e`; optional human review remains validation debt |
 | 7 | Capabilities B: Audience/Sequence/Dialogue/Setup-Payoff | COMPLETE | `fount_phase_07_overlay.zip` | `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` | 305 workspace tests, architecture, strict quality/docs, isolated DB/writer/PDF and four packages pass at Fount `4a1c723`; optional human review remains validation debt |
 | 8 | Capabilities C: Emotional/Theme/Genre/Revision | COMPLETE | `fount_phase_08_overlay.zip` | `handoffs/PHASE_08_RUNTIME_QC_REPORT.md` | 320 workspace tests, full quality/docs/package gates and isolated DB/Workshop preservation passed at Fount `f7f4d68`; optional human review remains validation debt |
-| 9 | Workshop Intelligence Integration | OFFLINE_IMPLEMENTED | `Fount_Phase09_Overlay.zip` | `handoffs/PHASE_09_RUNTIME_QC_HANDOFF.md` | 19-op strict overlay; 61 Phase 1–9 source tests pass; runtime/Elixir QC pending |
+| 9 | Workshop Intelligence Integration | COMPLETE | `Fount_Phase09_Overlay.zip` | `handoffs/PHASE_09_RUNTIME_QC_REPORT.md` | 325 workspace tests, 73 Python tests, full CI, architecture, isolated DB/writer/PDF and four packages pass at Fount `361a9fd`; optional human review remains validation debt |
 | 10 | Durable Analysis Persistence, Reuse, and Recomputation | NOT_STARTED | — | — | L2 persistence + immutable result reuse + recomputation frontiers |
 | 11 | Scaled Calibration/Evaluation/Robustness/Live Verification | NOT_STARTED | — | — | Scales earlier domain pilots into corpus/calibration/live gates |
 | 12 | Discovery, Session Modes, and Scene Exploration | NOT_STARTED | — | — | W01–W03/W11; document 36 |
@@ -191,3 +191,6 @@ Read `handoffs/PHASE_08_OFFLINE_HANDOFF.md`, `handoffs/PHASE_08_IMPLEMENTATION_M
 ## Phase 8 runtime QC completion — 2026-09-27
 
 Phase 8 is **COMPLETE** on the engineering and preservation evidence in `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. Applied Fount `f4f1062` (tree `6d6f407`) was repaired at `f7f4d68` (tree `5b12527`); applied docset was `d018af2`. All 37 delivery paths matched before repair, and the tracked `handoff/prune_deleted_directories.py` helper remains present. Full `mix ci` passed 320 tests, 64 repository Python tests passed, compiled architecture/strict Credo/Dialyzer/ExDoc and four archives passed, isolated Core/Workshop PostgreSQL integrations passed (11/14), and writer accept/reject/PDF/table-read demonstrations passed. The optional Phase-8 human/domain review was skipped under D046 and remains visible validation debt. No live provider was called. Phase 9 remains **NOT_STARTED**.
+## Phase 9 runtime QC completion — 2026-09-27
+
+Phase 9 is **COMPLETE** on the engineering and preservation evidence in `handoffs/PHASE_09_RUNTIME_QC_REPORT.md`. Applied Fount `8c13ca3` (tree `73b9892`) was repaired at `361a9fd` (tree `2d25494`); applied docset was `b5c1dc2`. All 19 delivery paths matched before repair, and the tracked cleanup helper remains present. Full `mix ci` passed 325 tests, 73 Python tests and the offline architecture/handoff gate passed, isolated Core/Workshop PostgreSQL integrations passed (11/15), and the deterministic Phase-9 Sandbox/scripted-Inference writer loop, PDF/table-read demonstrations and four package builds passed. The optional human workflow review was skipped under D046 as visible validation debt. No live provider was called. Phase 10 remains **NOT_STARTED**.

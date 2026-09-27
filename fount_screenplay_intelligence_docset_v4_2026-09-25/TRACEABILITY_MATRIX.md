@@ -436,3 +436,7 @@ At Fount `f7f4d68` (tree `5b12527`), all twelve family IDs and four Phase-8 Obse
 | stop before Phase 10 | no durable analysis persistence/recompute implementation | source-contract test | PASS offline |
 
 This is source-delivery traceability only. Phase 9 is **OFFLINE_IMPLEMENTED**, not COMPLETE. Runtime verification/repair remains required; Phase 10 is **NOT_STARTED**.
+
+## Phase 9 runtime QC traceability — 2026-09-27
+
+The 19 delivered paths matched before repair. Focused tests, the 325-test full CI, 73 Python tests, compiled architecture, offline handoff, 11 Core and 15 Workshop PostgreSQL integration tests, and the new Sandbox/scripted-Inference two-strategy writer loop pass at Fount `361a9fd`. The writer loop verifies provider-free preflight, prewrite packet, distinct strategies, lineage, real candidate pages, exact diff, postwrite revision packet, advisory checks, explicit rejection, content-hash protection, acceptance, reload and history. Existing Workshop/Core suites preserve generation-only callers, direct legacy candidate checks, investigate without pages, audition/combine/rebase, required-only review, and PDF/table-read/export behavior. Full evidence and limits are in `handoffs/PHASE_09_RUNTIME_QC_REPORT.md`. Optional human review is NOT RUN under D046; Phase 9 is **COMPLETE** and Phase 10 **NOT_STARTED**.

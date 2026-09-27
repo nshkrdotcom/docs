@@ -99,7 +99,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–8 are COMPLETE on engineering QC; Phase 9 remains NOT_STARTED. Phase 6, Phase 7 and Phase 8 runtime QC are recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`, `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. Phase 3/4/5/6/7/8 human studies are unperformed validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–9 are COMPLETE on engineering QC; Phase 10 remains NOT_STARTED. Phase 6, Phase 7 and Phase 8 runtime QC are recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`, `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. Phase 3/4/5/6/7/8 human studies are unperformed validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -212,7 +212,8 @@ Phase-3 runtime QC is recorded in `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`. No h
 
 ## Phase 8 verified checkpoint
 
-Phase 8 runtime QC is COMPLETE at Fount `f7f4d68`; the authoritative command/repair evidence is `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`, with post-repair path identities in `handoffs/PHASE_08_FILE_INVENTORY.json`. Optional human/domain review is unperformed validation debt under D046. Phase 9 remains NOT_STARTED.
+Phase 8 runtime QC is COMPLETE at Fount `f7f4d68`; the authoritative command/repair evidence is `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`, with post-repair path identities in `handoffs/PHASE_08_FILE_INVENTORY.json`. Optional human/domain review is unperformed validation debt under D046. Phase 9 remained NOT_STARTED at that historical checkpoint.
+
 ## Phase 9 delivery records
 
 - `handoffs/PHASE_09_INPUTS.json`: five content-identified XML identities and inspected Fount/System One/Inference/ASM boundaries.
@@ -222,9 +223,10 @@ Phase 8 runtime QC is COMPLETE at Fount `f7f4d68`; the authoritative command/rep
 - `handoffs/PHASE_09_DOMAIN_REVIEW_PACKET.md`: optional D046 end-to-end writer review; no fabricated result.
 - `handoffs/PHASE_09_STATIC_CHECKS.json`: executed offline evidence and explicit unrun runtime gates.
 - `handoffs/PHASE_09_OFFLINE_HANDOFF.md`: source-delivery account and Phase-10 stop line.
-- `handoffs/PHASE_09_RUNTIME_QC_HANDOFF.md`: Codex instructions for the user-applied Phase-9 state.
-- `handoffs/PHASE_09_DOCSET_HASHES.json`: complete source-delivery docset identities, excluding recursive checksum files.
+- `handoffs/PHASE_09_RUNTIME_QC_HANDOFF.md`: historical Codex instructions for the applied Phase-9 state.
+- `handoffs/PHASE_09_RUNTIME_QC_REPORT.md`: verified runtime results, repairs, writer loop and final Fount identity.
+- `handoffs/PHASE_09_DOCSET_HASHES.json`: complete runtime-QC docset identities, excluding recursive checksum files.
 
 ## Current Phase 9 checkpoint
 
-Phase 9 is `OFFLINE_IMPLEMENTED`. The strict 19-operation overlay and 61 Phase 1–9 source-contract tests pass offline; Elixir/runtime/persistence/writer gates remain for Codex. Phase 10 is `NOT_STARTED`.
+Phase 9 is `COMPLETE` on runtime engineering and preservation QC at Fount `361a9fd`; see `handoffs/PHASE_09_RUNTIME_QC_REPORT.md` and the post-repair `PHASE_09_FILE_INVENTORY.json`. The optional human review is unperformed validation debt under D046. Phase 10 is `NOT_STARTED`.
