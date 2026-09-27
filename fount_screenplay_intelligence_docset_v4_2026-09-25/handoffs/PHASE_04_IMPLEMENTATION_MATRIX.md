@@ -1,6 +1,6 @@
 # Phase 4 implementation matrix — Temporal Views and Forward-Reader Engine
 
-**Source-writing status:** `OFFLINE_IMPLEMENTED`. Runtime QC and the real first-reader checkpoint pilot are pending. Phase 5 is not implemented by this delivery.
+**Current status:** engineering QC passed at Fount `cfde46c`; `DOMAIN_REVIEW_PENDING` for the real first-reader checkpoint pilot. Phase 5 is not implemented by this delivery.
 
 | Phase-4 requirement | Implementation | Verification source | Offline status |
 |---|---|---|---|
@@ -41,3 +41,7 @@ The fixture is intentionally a screenplay problem rather than an abstract graph 
 ## Explicitly not advanced
 
 Phase 5 Diagnosis, Acquisition, multi-pass Playbooks, resource planning, writer diagnosis packets, and all later capability/persistence/Workshop phases remain untouched. Existing pre-Phase-5 playbook code is preserved as historical functionality; this delivery does not claim it satisfies the Phase-5 architecture/specification.
+
+## Runtime QC addendum — 2026-09-27
+
+All 19 focused Phase-4 ExUnit tests pass (Temporal 5, Reader forward 12, differential 2). The new Reader regression covers boneyard and omitted-scene exclusion in addition to private notes. The full four-package CI, compiled architecture, strict Credo, Dialyzer, ExDoc and isolated persistence/writer/PDF preservation gates pass. See `PHASE_04_RUNTIME_QC_REPORT.md` for exact commands and repair hashes in `PHASE_04_FILE_INVENTORY.json`. No human first-reader result exists.

@@ -1,6 +1,6 @@
 {
   "phase": 4,
-  "status": "OFFLINE_IMPLEMENTED",
+  "status": "DOMAIN_REVIEW_PENDING",
   "date": "2026-09-26",
   "summary": {
     "added": 12,
@@ -270,5 +270,76 @@
   "new_python_source_test": "scripts/tests/test_phase_four_source.py",
   "overlay_manifest_sha256": "b680ce364dd7243b2cae21bab645858af4dbe6f4cb428e22a547139931a44317",
   "preimage_basis": "decoded Fount source bodies from the supplied content-identified raw Repomix XML; strict applier dry-run and apply-equivalence checks passed against a fresh decoded baseline",
-  "runtime_note": "Elixir tests/examples are written but unrun here; Codex must format/compile/test/repair and update this inventory if repair changes payload identities."
+  "runtime_note": "Elixir tests/examples are written but unrun here; Codex must format/compile/test/repair and update this inventory if repair changes payload identities.",
+  "applied_source_commit": "bf20ede6bd3c868fae37b1dda61061767adc7899",
+  "post_qc_source_commit": "cfde46cd2f654e050cbb9b5dbe32501625510c69",
+  "post_qc_source_tree": "2f6e7e6c9514bab1962c9195c518076646220458",
+  "repair_payloads": [
+    {
+      "path": "packages/fount_intelligence/examples/phase_four.exs",
+      "applied_sha256": "fcf3699c818641e3723f428b28f788bebed024da438e8e4fcbf7ffedd85d4d50",
+      "post_qc_sha256": "f9874cc20abe94de8b5346f701437874b1a6de147dbc5f2aee6de309a0169d30",
+      "post_qc_bytes": 4102
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/reader.ex",
+      "applied_sha256": "90d7d5f2d0b42fa45a64f1939af691c34f520062034998f94461322e0b37a1fd",
+      "post_qc_sha256": "69a881c9b6f3cc81af806ebcfbdfc0fbe46cf8051a13ad01dd792aeb09d9f4f8",
+      "post_qc_bytes": 27828
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/reader/event.ex",
+      "applied_sha256": "ccc1b7fcb2a918057092d383344290fb87331a2aeabe24effde1eb1df89c1122",
+      "post_qc_sha256": "be7ec8f66cd672375fec6ec5d173e76e82192677c8c40691135966dad83ebe46",
+      "post_qc_bytes": 2994
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/story_world/story_time.ex",
+      "applied_sha256": "7981b7fc431aecbaa4b70b9997c8bea049549449952a08e9cf34dc00201ddae7",
+      "post_qc_sha256": "5970257e7a7198835be6112ace8e535caab4a06ea4a316e419db28ffac65964e",
+      "post_qc_bytes": 10791
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/temporal.ex",
+      "applied_sha256": "8a33358e34fee207afa266e91c2b5bb28d373cb46a76ff96876e48b8c3e6fba7",
+      "post_qc_sha256": "fe95528b0d47ce0b9730c7d0c8bd4ff69648df8d56ba9827326c1a813048fa62",
+      "post_qc_bytes": 17408
+    },
+    {
+      "path": "packages/fount_intelligence/mix.exs",
+      "applied_sha256": "fb52178483f4826e6b3ae7ae11a91e611377b48bf97ff0f984c1fac8547153ec",
+      "post_qc_sha256": "da7bf6b5b80304456ec97cb6a92948e7ec788bf5aa5d76f1a386b89769159f11",
+      "post_qc_bytes": 3152
+    },
+    {
+      "path": "packages/fount_intelligence/test/reader_forward_test.exs",
+      "applied_sha256": "4aed0dde695c0057dd9bb768a1e71e031cf6064d9908381659f691e7d8c86f11",
+      "post_qc_sha256": "a9c8d376586456b90994f38b07fc262d5326ffdb4b084742bc298703510bd1e7",
+      "post_qc_bytes": 8171
+    },
+    {
+      "path": "packages/fount_intelligence/test/reader_story_world_differential_test.exs",
+      "applied_sha256": "a7e78c9488c19186843a3dbc532ac3af3ba1b53f6ef73b15fc6c5ba3f5ed0a45",
+      "post_qc_sha256": "795bac68f57b8ce85893c81516e05b5b251c37d29d6bf1db207d07b072277c54",
+      "post_qc_bytes": 2231
+    },
+    {
+      "path": "packages/fount_intelligence/test/support/phase_four_fixture.ex",
+      "applied_sha256": "b42e8120fa3b01425b93b81fe6106be5efaaae29a2f9f8025528efd303b9a992",
+      "post_qc_sha256": "762b6cef30d2b4141a08fa2bca8e8740a28330f739647c65ad2dd19c0e4ef71c",
+      "post_qc_bytes": 8436
+    },
+    {
+      "path": "packages/fount_intelligence/test/temporal_views_test.exs",
+      "applied_sha256": "9a969d44823c7a703ef3986609e82b5e0e829501fcea88ea7c3c17f61a14195f",
+      "post_qc_sha256": "c3919620a5a0865693298356593031c52bb981129e655a412eea9b5b3b0f7ba2",
+      "post_qc_bytes": 3362
+    },
+    {
+      "path": "packages/fount_intelligence/test/test_helper.exs",
+      "applied_sha256": "90c56f435b440c2c08fc54a7572ee02d5abb5b2d033ea1037fcc1ec1a228344b",
+      "post_qc_sha256": "86dbb785a500f2562d4ba9dbcdc62cab81d5ea42506c90b7c4a7147989824339",
+      "post_qc_bytes": 136
+    }
+  ]
 }
