@@ -2,6 +2,8 @@
 
 **State: OFFLINE_IMPLEMENTED. Runtime QC is not complete. Do not advance to Phase 2.**
 
+**Historical handoff notice:** This paragraph records the source-writing state. Runtime QC subsequently ran from the applied commits and is currently `QC_BLOCKED`; see `PHASE_01_RUNTIME_QC_REPORT.md` and `PROGRESS.md`. The original static checks remain historical evidence, not the current gate status.
+
 ## Writer outcome
 
 Preserve the writer's current ability to develop alternatives, revise actual pages, compare changes, keep or reject candidates, accept explicitly, recover prior writing, create a table read and export a chosen draft while replacing the analysis architecture. The source includes a stored two-alternative development and targeted-revision demonstration in `packages/fount_workshop/examples/phase_one.exs`, plus integration assertions. It uses authored Mock/Sandbox answers and real persistence/review/export operations. The demonstration was written, not executed. No human preference or creative superiority was measured.

@@ -219,9 +219,9 @@ All rows below are specification requirements, initially NOT_STARTED. Phase hand
 
 Every phase also performs its demonstration from document 36. Research R01–R10 motivates W01–W12, but citations alone do not satisfy implementation or human-validation gates.
 
-## Phase 1 concrete source traceability - OFFLINE_IMPLEMENTED
+## Phase 1 concrete source traceability - QC_BLOCKED
 
-All Elixir rows below mean WRITTEN / UNRUN, not QC verified. See `handoffs/PHASE_01_PRESERVATION_AUDIT.md` for all 37 original modules, 26 tests, and the remaining package files. Later-phase rows above retain their original scope and status.
+The source mappings below have now been checked with 198 workspace unit tests, 25 database-backed integration tests, the source/BEAM architecture gate, and the deterministic accept/reject demonstration. See `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` for exact results and the still-blocked live/release gates. The 37-module/26-test source classification remains in the preservation audit. Later-phase rows above retain their original scope and status.
 
 | Requirement / preserved usefulness | Source | Tests or demonstration | Status |
 |---|---|---|---|
@@ -235,7 +235,7 @@ All Elixir rows below mean WRITTEN / UNRUN, not QC verified. See `handoffs/PHASE
 | Exact selection / evidence / search | core `selection.ex`, `source_evidence.ex`, `inventory.ex`, `search.ex` | moved inventory/search/source-evidence tests; original canonical tests | Written / unrun |
 | Knowledge, continuity, causal support, dialogue, voice, action | Intelligence `playbooks/*` and `acquisition/*`; Observe projections/lenses | 26 original analysis tests mapped to final ownership | Written / unrun |
 | Generation remains Workshop-owned | Workshop `writing/completion.ex`, `services.ex`, `writing/action_layout.ex` | moved completion/extraction tests; `completion_privacy_test.exs` | Written / unrun |
-| Document 36 Phase 1 writer demonstration; baseline W02-W06/W09-W11 | Workshop `examples/phase_one.exs`, `examples/support/phase_one_demo.exs` | `integration/phase_one_writer_demo_test.exs`; existing workflow/integration suite | Written / unrun; no human/domain result claimed |
+| Document 36 Phase 1 writer demonstration; baseline W02-W06/W09-W11 | Workshop `examples/phase_one.exs`, `examples/support/phase_one_demo.exs` | `integration/phase_one_writer_demo_test.exs`; existing workflow/integration suite | Executed accept/reject, review, table-read and PDF/export fixtures; live Luna completion failed; no human/domain result claimed |
 | Strict file transport and safe directory completion | unchanged applier; new `handoff/prune_deleted_directories.py` | Python transport checks and four cleanup tests | See actual static/transport report |
 
 The reusable MeasurementResult/Observation/context baseline is required to implement Phase 1's Observe minimum. Its presence does not mark Phase 2, Phase 10 or any expanded writer phase complete.

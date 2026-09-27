@@ -2213,5 +2213,2370 @@
     "packages/fount_probe/test/test_helper.exs",
     "packages/fount_probe/test/typed_constraint_targets_test.exs",
     "packages/fount_probe/test/writing_policies_test.exs"
-  ]
+  ],
+  "runtime_qc": {
+    "status": "QC_BLOCKED",
+    "applied_fount_commit": "0cc296cca35d1040166bc34e5b92922b02c98c5e",
+    "applied_docset_commit": "d87ad39d3c79d4097c96d7f85c6ae2956b9afa59",
+    "source_provenance": "current working-tree bytes after runtime QC, not retroactive authentication of raw input attachments",
+    "original_operations_unchanged": true,
+    "post_qc_overlay_results": {
+      ".github/workflows/ci.yml": {
+        "state": "present",
+        "sha256": "85770e2470ccc799e78ce82530f4991c8f63485a2052c517aa2d2df546fe3999",
+        "bytes": 2945,
+        "mode": 436
+      },
+      "CHANGELOG.md": {
+        "state": "present",
+        "sha256": "3765cb71d93d22d656de0295547896dccc4c27ccd86ea46078411df9e75bfafd",
+        "bytes": 770,
+        "mode": 436
+      },
+      "README.md": {
+        "state": "present",
+        "sha256": "1489663dbe47f4dde3e298555961928de9e9d4da36407e434a84fc0ee8264fca",
+        "bytes": 22545,
+        "mode": 436
+      },
+      "handoff/PHASE_01_SOURCE_NOTES.md": {
+        "state": "present",
+        "sha256": "b2f865fe6119155e6dffcc6afba5b3c498273a7ec657b75cf0ab18f803280e19",
+        "bytes": 2569,
+        "mode": 436
+      },
+      "handoff/phase_01_ownership.json": {
+        "state": "present",
+        "sha256": "e79dd3798b94b38b08621cc647b8bd528a87cbee666b1036ef5586c596cf1be0",
+        "bytes": 16537,
+        "mode": 436
+      },
+      "handoff/prune_deleted_directories.py": {
+        "state": "present",
+        "sha256": "70fb3fc440d569acac3d4156c1d6d0e45ffc037f9cd3adcd6a8ec34713f868e3",
+        "bytes": 2247,
+        "mode": 436
+      },
+      "mix.exs": {
+        "state": "present",
+        "sha256": "622e251602f0fcbf0e17452d326a8b000033033385ca872dac9f24ca78c79d42",
+        "bytes": 2796,
+        "mode": 436
+      },
+      "packages/fount/CHANGELOG.md": {
+        "state": "present",
+        "sha256": "39929bad46c4178370264a718feb5424711af498c05ff7497e33edab565f17a8",
+        "bytes": 1037,
+        "mode": 436
+      },
+      "packages/fount/README.md": {
+        "state": "present",
+        "sha256": "6d9532dc6e6c2150cc46012d8bd2dca85c1a3b706e0632a096d15aae110562d1",
+        "bytes": 12693,
+        "mode": 436
+      },
+      "packages/fount/guides/architecture.md": {
+        "state": "present",
+        "sha256": "9b9c5d9c349f9140cc0ebc59f5300e000181a0599cc5834f5eb117bcb8d48048",
+        "bytes": 4559,
+        "mode": 436
+      },
+      "packages/fount/lib/fount/inventory.ex": {
+        "state": "present",
+        "sha256": "9c8268578cf8d5adabcb9cf82d50215249a588a13c0f99b2a66cdaf23b47df3e",
+        "bytes": 2397,
+        "mode": 436
+      },
+      "packages/fount/lib/fount/search.ex": {
+        "state": "present",
+        "sha256": "1229b437962c54d4386bd7b4a46658c6045f21ab3d5206fed7cf0b5cf0d3dcff",
+        "bytes": 3229,
+        "mode": 436
+      },
+      "packages/fount/lib/fount/selection.ex": {
+        "state": "present",
+        "sha256": "f5c3cec0d0d1548ae8f7ec1e128ffc7e23ea36585db9a40ac2b4672c4682a4f9",
+        "bytes": 6027,
+        "mode": 436
+      },
+      "packages/fount/lib/fount/source_evidence.ex": {
+        "state": "present",
+        "sha256": "2f9fbcd953ba28589f3dfb70800de614c2dd21e672b0f7c3e45791da86ddb6fd",
+        "bytes": 2249,
+        "mode": 436
+      },
+      "packages/fount/test/canonical_inventory_test.exs": {
+        "state": "present",
+        "sha256": "ea5760dfce8200c779c6693f7d05ac1b2bc107d4f8e4ae4287a8905f7d6f4185",
+        "bytes": 1005,
+        "mode": 436
+      },
+      "packages/fount/test/canonical_search_test.exs": {
+        "state": "present",
+        "sha256": "fa0e67ad39fd7eddfef6c5f8829fc074c6c98414405fa5a9a1f17699a4016259",
+        "bytes": 962,
+        "mode": 436
+      },
+      "packages/fount_intelligence/.formatter.exs": {
+        "state": "present",
+        "sha256": "4292d7be43690953cf683dc230cd25225e176f748528a478f88c56b6c2909687",
+        "bytes": 78,
+        "mode": 436
+      },
+      "packages/fount_intelligence/CHANGELOG.md": {
+        "state": "present",
+        "sha256": "5218d5c9ea7d39045cc565c2071fc9ed2fb002db21e053ed83dd6f0aa0d6a2df",
+        "bytes": 249,
+        "mode": 436
+      },
+      "packages/fount_intelligence/LICENSE": {
+        "state": "present",
+        "sha256": "c7bba84521db03d2f1c77b1593840fa942462c9044fb77233999a94c8753fc65",
+        "bytes": 1067,
+        "mode": 436
+      },
+      "packages/fount_intelligence/README.md": {
+        "state": "present",
+        "sha256": "56939498fd557d4557d1f5dc413920216ed1ab6784209683b622ce515bad0bcd",
+        "bytes": 2335,
+        "mode": 436
+      },
+      "packages/fount_intelligence/assets/fount_intelligence.svg": {
+        "state": "present",
+        "sha256": "2eca87146a4a3737919362058b8a534d660f73856dc79433cc07f22668a0145d",
+        "bytes": 1363,
+        "mode": 436
+      },
+      "packages/fount_intelligence/examples/README.md": {
+        "state": "present",
+        "sha256": "98240748a16794d26e8d7f0c7aca819ad0a465072b0870919a5de2920894b44e",
+        "bytes": 693,
+        "mode": 436
+      },
+      "packages/fount_intelligence/examples/inspect.exs": {
+        "state": "present",
+        "sha256": "c80a8ea6e6cb03d0caab31c11f983ec3aa3b54d0ba454215eb7659c9ca7f348a",
+        "bytes": 399,
+        "mode": 436
+      },
+      "packages/fount_intelligence/guides/architecture.md": {
+        "state": "present",
+        "sha256": "923319fb68398908a9724431490781f1713d7978f9e91d1aefcc0a42d8826ae8",
+        "bytes": 2539,
+        "mode": 436
+      },
+      "packages/fount_intelligence/guides/comparison-and-ablation.md": {
+        "state": "present",
+        "sha256": "735ad3c0dab83c2337d29fe2b6b78d86bbf77377274edb95127f3dd0eee35326",
+        "bytes": 2167,
+        "mode": 436
+      },
+      "packages/fount_intelligence/guides/investigations-and-evidence.md": {
+        "state": "present",
+        "sha256": "6b3be5759fc49a6f71c067a456341dedb45fae3defc6b4afac6609a2ce16d220",
+        "bytes": 2053,
+        "mode": 436
+      },
+      "packages/fount_intelligence/guides/playbook-catalog.md": {
+        "state": "present",
+        "sha256": "39509311cc81883fb61c9d758fe8e502be8b8e6f0c40af1a2e82dcde2b712908",
+        "bytes": 2634,
+        "mode": 436
+      },
+      "packages/fount_intelligence/guides/usage.md": {
+        "state": "present",
+        "sha256": "5a713365b411a39de788afebdd0f84e27eeab35869b0c2a1e3b42709eb764b56",
+        "bytes": 2906,
+        "mode": 436
+      },
+      "packages/fount_intelligence/guides/verification.md": {
+        "state": "present",
+        "sha256": "5e3673c5eb4da52ab08593eb29a6a97a4e6aadcb6297b7aa689c8be4c07e3788",
+        "bytes": 1295,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence.ex": {
+        "state": "present",
+        "sha256": "d13006b88e815b31d9935ff4269871134fb12a5f7885b62c30d625d48a57e52b",
+        "bytes": 5211,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/access.ex": {
+        "state": "present",
+        "sha256": "f9b79539511f87111717f18d51183275831ac6bb1717192d3f23277d65b6d64b",
+        "bytes": 6739,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/configuration.ex": {
+        "state": "present",
+        "sha256": "607ac82d110ef497957a069032a1a8deb7e4092aaa0d30550f24420bc04eb257",
+        "bytes": 347,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/extraction.ex": {
+        "state": "present",
+        "sha256": "96dc52022060300a60738e21ed69d3eb7caaba9e4e73568f4d6a15a9f166a094",
+        "bytes": 5340,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/input_evidence.ex": {
+        "state": "present",
+        "sha256": "215ffd9bc4e33fab4467c906b60717fd69fe0387b155e0118f7507663a521922",
+        "bytes": 1201,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/knowledge.ex": {
+        "state": "present",
+        "sha256": "175f0093a51a9d371a986dc7d738ea44db0c840a3599e4f397e1eb198d31a7a4",
+        "bytes": 3088,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/measurements.ex": {
+        "state": "present",
+        "sha256": "8e969b21492dabac9052cb4155e8e93a520a36cb5103933606d158cac9d78d8c",
+        "bytes": 4988,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/proposals.ex": {
+        "state": "present",
+        "sha256": "ad18b969e1492e426995ae472de6231a41259ef44e250ee02631686a3984a84b",
+        "bytes": 2438,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/views.ex": {
+        "state": "present",
+        "sha256": "5931b2ec33591502ee86038ab10627ca28a5b9aa0f16811a0fba7cd683a4ac31",
+        "bytes": 1574,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/capabilities/decision_policy.ex": {
+        "state": "present",
+        "sha256": "5e2d4157644a9a4852a9b707055dd84b89511f2461535f928994a7bfc1c77db6",
+        "bytes": 4960,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/capabilities/interpretation.ex": {
+        "state": "present",
+        "sha256": "1b2454f60f7abfbf9b43d3e34a32a765116c9ca733dbc77695a05a96072b17ff",
+        "bytes": 1960,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/persistence/saved_records.ex": {
+        "state": "present",
+        "sha256": "46a33bf4c411c76fbfc086792251235f75bfd2653f716a083c89e762c9a028c5",
+        "bytes": 5366,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/action.ex": {
+        "state": "present",
+        "sha256": "322ba4f6b61769ba7b81e236a60f2d6cfe2170e5d0c98bac3bca9baf229d52ee",
+        "bytes": 4321,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/comparison.ex": {
+        "state": "present",
+        "sha256": "ad39246dfd544ed03604e5bfd0cec96d023e14954f26193850837acca239ecb4",
+        "bytes": 6376,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/constraints.ex": {
+        "state": "present",
+        "sha256": "a156445743fe598f89cf14d4d331fba2f917ba9b887cdc3ef88a01b4e2fd228b",
+        "bytes": 22879,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/continuity.ex": {
+        "state": "present",
+        "sha256": "f9bd6d3b62f707a40b16bc28fbfa67d83d9eb56b0e61472a3c888e674c969a60",
+        "bytes": 7979,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/dependencies.ex": {
+        "state": "present",
+        "sha256": "514e72bbac7593bc6cb4fb9a24e262fc1cd05afc28223843b0dc16f6fedefca3",
+        "bytes": 8932,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/dialogue.ex": {
+        "state": "present",
+        "sha256": "0e525a104c55cdc83880306c77cba22071c694399085ee804e460abf9dbef978",
+        "bytes": 7680,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/investigation.ex": {
+        "state": "present",
+        "sha256": "b4c2d98f58e892ec5132ab04b862f4ae3c915ba1234e67cbc70836c09d4cfdae",
+        "bytes": 12273,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/knowledge_trace.ex": {
+        "state": "present",
+        "sha256": "c4dc5a866ab6c4632477b2387eb927b659705e146bc614e04a6f9111588855b5",
+        "bytes": 12032,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/knowledge_trace/behavior.ex": {
+        "state": "present",
+        "sha256": "9aa876e935258a1a8926304af3bd127ae4c8f8c1bfb20da4602a4403c88d7568",
+        "bytes": 6704,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/registry.ex": {
+        "state": "present",
+        "sha256": "cb236c3a1767ee88a667a73d227b8424ab4a206d4d1f4153fa8e6831e6983e2a",
+        "bytes": 11049,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/request.ex": {
+        "state": "present",
+        "sha256": "88a80951dc9cb2830b7d1ac6fb8a83245c3ae986cc5d0b5f3632d7285e406308",
+        "bytes": 1747,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/retrieval.ex": {
+        "state": "present",
+        "sha256": "c0a2ca249169c91eb962956eaa6073a8b82aaad47d46c8f4e7e07d2ddded4556",
+        "bytes": 8187,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/scene_mechanics.ex": {
+        "state": "present",
+        "sha256": "7c9ec6216d86245c01063e4e130569bd2c5b414949af1ca4d1e72c19ef200938",
+        "bytes": 4152,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/strategy_contrast.ex": {
+        "state": "present",
+        "sha256": "160824c96688c0b854db7a82363bc16da4bbc6ee750d8c8fdf14b45f5e5adcb8",
+        "bytes": 1650,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/voice.ex": {
+        "state": "present",
+        "sha256": "e9e6876a8bd108c9c206536a55a063f69df737f0ddffe2cc7ef78e76fd1abbe3",
+        "bytes": 9332,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/reader/reveal.ex": {
+        "state": "present",
+        "sha256": "6bcc0a5c17518d9c7c8c76caed3bcd3cc05d1d53b586911bb6d8ad030ad9d716",
+        "bytes": 1318,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/reporting/report.ex": {
+        "state": "present",
+        "sha256": "41c937d7b01eee9e24deb84a8f2309794991a269963c8d6cbc850d9c1e32cae1",
+        "bytes": 4503,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/runner/architecture.ex": {
+        "state": "present",
+        "sha256": "46242d328d502226b7f97a6978451e8012e6fa8b62f753661da127225c24b5b1",
+        "bytes": 16509,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/runner/resources.ex": {
+        "state": "present",
+        "sha256": "9a8f45f3cf83f2a305c16346c8d91cf83aef3cd9cc81865b8a02429271ad74fb",
+        "bytes": 803,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/runner/result_validation.ex": {
+        "state": "present",
+        "sha256": "7aa901f742bc16692258c0a4e630dcc30688e1cbbf866bfb70a9a40abdce0e87",
+        "bytes": 2178,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/story_world/records.ex": {
+        "state": "present",
+        "sha256": "169f91145a3a43b549abdff70cf668cdddbb240d1964844cb0b00b23a52253df",
+        "bytes": 2337,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/mix/tasks/fount.architecture.ex": {
+        "state": "present",
+        "sha256": "015d96fab036146fde8e673d4b7dda6ac7fde4bf28568b38fefeaf3fa73664ec",
+        "bytes": 1098,
+        "mode": 436
+      },
+      "packages/fount_intelligence/mix.exs": {
+        "state": "present",
+        "sha256": "7f37a0d35c84759c0c0856d993466a2e4f79d4c96cca1e7122433a983dabee3e",
+        "bytes": 2918,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/architecture_test.exs": {
+        "state": "present",
+        "sha256": "3bdc92a802f1b361af5bc602f9ed58093a8f06418383805de9a928a42cefe2f4",
+        "bytes": 2761,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/changed_continuity_test.exs": {
+        "state": "present",
+        "sha256": "3a7f23e5a5a0632989d9a0201a081f5b1fc1f85100c5fd0d66bb574b2c817b74",
+        "bytes": 1564,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/constraint_contract_names_test.exs": {
+        "state": "present",
+        "sha256": "39fed35ef020d2848105d60feab55e739e370d90fe24b7132956adf2dc143ccc",
+        "bytes": 1541,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/continuation_constraints_test.exs": {
+        "state": "present",
+        "sha256": "2a7ae795c3b688fbb3b7b1fef1b39a195f7d63955c9305df1c48a30f6cf97043",
+        "bytes": 2069,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/continuation_voice_test.exs": {
+        "state": "present",
+        "sha256": "4dd08c4df2be7610d9b226c5df7dfcb069c8588fc2cad18f8cc9fd1703ce5778",
+        "bytes": 1633,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/invention_policy_test.exs": {
+        "state": "present",
+        "sha256": "3b392be7bf9b634ee32eb2450cbb19af96b9de73c52c7393a864a7de6ed56064",
+        "bytes": 1049,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/investigation_contract_test.exs": {
+        "state": "present",
+        "sha256": "d1678da34cd28e5eea62dc933b9d644f298f61c6f0e7654eb05a7f2f19e8e5e7",
+        "bytes": 2896,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/knowledge_behavior_test.exs": {
+        "state": "present",
+        "sha256": "377be1481c3a53b1cb5fadb3cba92e062006b0c131b45ddb1c526ca03d565e2c",
+        "bytes": 1120,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/knowledge_reveal_test.exs": {
+        "state": "present",
+        "sha256": "25e09d8054b113e2b3fd2f37105cea26327606e3045ee501ed780d15dacda9a1",
+        "bytes": 1942,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/knowledge_test.exs": {
+        "state": "present",
+        "sha256": "c367045d87d690a477313650cb809232415d17edfb9a1aa85196593da44258e8",
+        "bytes": 1684,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/profile_threshold_test.exs": {
+        "state": "present",
+        "sha256": "e48e179d27b53a6ab20155d3be5c7f7b69467965e059ea6d77987a5ecd887c83",
+        "bytes": 1050,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/proposal_service_contract_test.exs": {
+        "state": "present",
+        "sha256": "bc0d5ccab418681c5ed3b2a1356e51e2f9338618e0c9bd6aa14039eee6820633",
+        "bytes": 1302,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/reader_replay_test.exs": {
+        "state": "present",
+        "sha256": "09394c4e4e77e80b4bed35b1b30e2c9ace6081d0faabf4a6a2c6ac8c8b2a1261",
+        "bytes": 1731,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/request_contract_test.exs": {
+        "state": "present",
+        "sha256": "68518211f48888b12b9a7fa11e1c4b7d4271d218618c7643216227b5e9ce3ca1",
+        "bytes": 1616,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/retrieval_exact_continuation_test.exs": {
+        "state": "present",
+        "sha256": "290b7af9c2070a7fef7e5182fd4815f3e200280b039ca5a824ef03403b0ab9ae",
+        "bytes": 1984,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/same_scene_dependencies_test.exs": {
+        "state": "present",
+        "sha256": "1116ef28fc198e4d94f64b6286cccb88ec34fab90383135b146fbc975871bd94",
+        "bytes": 1269,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/saved_records_test.exs": {
+        "state": "present",
+        "sha256": "078429067596e7aea3a4a2e747b6d4cab5c48affe8c3e08242df9a33d61ce658",
+        "bytes": 3989,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/scene_count_scope_test.exs": {
+        "state": "present",
+        "sha256": "6bdb568166235effb896d77c4217b53604ddc1da5ab207615337f488d7009aee",
+        "bytes": 1937,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/state_test.exs": {
+        "state": "present",
+        "sha256": "25c87b823e59e94957a16786f83cf10ee73a541aafab5e618d399abb977fad27",
+        "bytes": 1119,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/test_helper.exs": {
+        "state": "present",
+        "sha256": "b086ec47f0c6c7aaeb4cffca5ae5243dd05e0dc96ab761ced93325d5315f4b12",
+        "bytes": 15,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/typed_constraint_targets_test.exs": {
+        "state": "present",
+        "sha256": "77a4fb99ffcee5e52c22b147ef9a087d92bd56d3fe1d9a2de23b7f7497bef6e4",
+        "bytes": 942,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/writing_policies_test.exs": {
+        "state": "present",
+        "sha256": "0e0a8d88d38fdc710429e46bdad41014e9e4fad15928f381c8fb6bc8668811de",
+        "bytes": 2867,
+        "mode": 436
+      },
+      "packages/fount_observe/.formatter.exs": {
+        "state": "present",
+        "sha256": "4292d7be43690953cf683dc230cd25225e176f748528a478f88c56b6c2909687",
+        "bytes": 78,
+        "mode": 436
+      },
+      "packages/fount_observe/CHANGELOG.md": {
+        "state": "present",
+        "sha256": "c7f66800638f40a7ddaaef697005a99a723afa641538797f3bb664dcd079d568",
+        "bytes": 244,
+        "mode": 436
+      },
+      "packages/fount_observe/LICENSE": {
+        "state": "present",
+        "sha256": "c7bba84521db03d2f1c77b1593840fa942462c9044fb77233999a94c8753fc65",
+        "bytes": 1067,
+        "mode": 436
+      },
+      "packages/fount_observe/README.md": {
+        "state": "present",
+        "sha256": "2c2c43b138ccba0a04f68ba51660e001897cef9c6a414ba4f835773ed294c711",
+        "bytes": 2362,
+        "mode": 436
+      },
+      "packages/fount_observe/assets/fount_observe.svg": {
+        "state": "present",
+        "sha256": "e5f87b1823b902f2f27d33dc5729dc1d5e05d682ad402ace845edec338cb93d6",
+        "bytes": 1358,
+        "mode": 436
+      },
+      "packages/fount_observe/examples/README.md": {
+        "state": "present",
+        "sha256": "451201a3f3b09ca6bf10844c2e6031cb1c4ca7c4f6d0178eeff55755f1379bb0",
+        "bytes": 545,
+        "mode": 436
+      },
+      "packages/fount_observe/examples/sandbox.exs": {
+        "state": "present",
+        "sha256": "515cd94b6fb65e125437a586b859cdcd8eead6d7a64f37bb00fd2869581ea177",
+        "bytes": 760,
+        "mode": 436
+      },
+      "packages/fount_observe/guides/architecture.md": {
+        "state": "present",
+        "sha256": "63c225a6a57a64a0aa819575b4fd151b0b5b15b0f78d8503b113481e48f9abc0",
+        "bytes": 1617,
+        "mode": 436
+      },
+      "packages/fount_observe/guides/usage.md": {
+        "state": "present",
+        "sha256": "5d2f38c174fc128dd2e371e5561f79ed38f4fdf87f1299ba65ad87cc39038e7b",
+        "bytes": 3491,
+        "mode": 436
+      },
+      "packages/fount_observe/guides/verification.md": {
+        "state": "present",
+        "sha256": "5e3673c5eb4da52ab08593eb29a6a97a4e6aadcb6297b7aa689c8be4c07e3788",
+        "bytes": 1295,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe.ex": {
+        "state": "present",
+        "sha256": "ee5724d8e409caeab14b67f371fcf2821a32979a2b99e87abc7de63a5ea0a9e9",
+        "bytes": 663,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/association.ex": {
+        "state": "present",
+        "sha256": "0cac96656693a4e72537da04f6da9e4dd6297ff7e4eecc5f58ca72281ea07a30",
+        "bytes": 1550,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/batch.ex": {
+        "state": "present",
+        "sha256": "24f217b627967a870634048e4fea0ed12b03c95d5abde1991fb106da3ecc367b",
+        "bytes": 810,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/budget.ex": {
+        "state": "present",
+        "sha256": "c5c6e0966404d5c5c5199260e3adfb5e9b3f295883751a0f1dd9f118f796d4ac",
+        "bytes": 1242,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/cache.ex": {
+        "state": "present",
+        "sha256": "a879ac39ede48839cefea2ed647b7d0953292e3e36d2aa9ca273d186688b2543",
+        "bytes": 336,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/cache/memory.ex": {
+        "state": "present",
+        "sha256": "7fda814f180795b676ceb0c68bc7f51f4f44b3a3e13928fdc621c8bda459232c",
+        "bytes": 1797,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/cancellation.ex": {
+        "state": "present",
+        "sha256": "657e85d270f7af4eefc77e07f7988b55ced8c80d161f2a0528f26d2af32d2b24",
+        "bytes": 459,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/context.ex": {
+        "state": "present",
+        "sha256": "fae876033ad9871dd704f0f12f0973f173f6c1ce5df587f7f07be37c31566c11",
+        "bytes": 4270,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/context/belief.ex": {
+        "state": "present",
+        "sha256": "abe5814bac7aa0a4d91ce4fff51ce0129f5d44ba900bae9ec2163476bd73ab0c",
+        "bytes": 253,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/context/entity_ref.ex": {
+        "state": "present",
+        "sha256": "babc7f4a708e6fdf8e3742ff3898d31e8d526899d2dca68f939277d2ae428cd4",
+        "bytes": 213,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/context/fact.ex": {
+        "state": "present",
+        "sha256": "52663368c7fa9e86c097dfc2209bd172c17fdc64eefe48aceb7771e3eeec18bb",
+        "bytes": 265,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/context/quantity.ex": {
+        "state": "present",
+        "sha256": "4ce7ecd96ba50d8ecedf2e3ccbaf4882a3f13ee99c98b74d5ff11ef330a7a2eb",
+        "bytes": 215,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/context/relation.ex": {
+        "state": "present",
+        "sha256": "02b37aeeae76dd062d691895f218d3c048864460c9d6bcc0ed381c17cc1d54d4",
+        "bytes": 242,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/context/temporal_ref.ex": {
+        "state": "present",
+        "sha256": "3a0b80c8e3350e3f4bbb059efcbd65207c6711903a7eedba3f16383d645787ea",
+        "bytes": 232,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/context/turn.ex": {
+        "state": "present",
+        "sha256": "a6c254d126c700d2cfca37c72b9adb6b3153e3c74364c1b0ac0948ebb19ffea9",
+        "bytes": 234,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/distribution.ex": {
+        "state": "present",
+        "sha256": "b612eb84f9a464435750756b9dbe1bde453f2a47c69d505f39e1dcc010aae94c",
+        "bytes": 4579,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/error.ex": {
+        "state": "present",
+        "sha256": "bf0d45db7571d65262f015636d1349fa6b4168373baca1bbbc3aab2e678cadd1",
+        "bytes": 1217,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/evidence_ref.ex": {
+        "state": "present",
+        "sha256": "dc8e238be5e6ba53ec51386028e4d087edf3bccda91147e50619b46def60049f",
+        "bytes": 1856,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/executor.ex": {
+        "state": "present",
+        "sha256": "83d3bfb31bb75d6c0d526a4cede37998a095d12dd1240f8500d94af5e4537ee8",
+        "bytes": 13500,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/lens.ex": {
+        "state": "present",
+        "sha256": "8a18fc786789ceb7950c2db1aba9a5c962b8bf0dac8912795b35dcbd81d5f1b5",
+        "bytes": 4069,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/measurement_result.ex": {
+        "state": "present",
+        "sha256": "5431ccfdbaf68f5b1a89fd153760363a71cf590780485e2b61ffa7a81a01edba",
+        "bytes": 676,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/observation.ex": {
+        "state": "present",
+        "sha256": "7977b386f8940a855b896f9cd043b2ae289ba39e071eb1dd0eb9ef50a773b240",
+        "bytes": 571,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/options.ex": {
+        "state": "present",
+        "sha256": "3a6b396c183348dc0bde78193cf8948169ff95856f76c8820582cc6ee322685b",
+        "bytes": 3581,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/projection.ex": {
+        "state": "present",
+        "sha256": "deea44e306d4085e051410ac89d95e82990a3e95cac5fea82e969cc309db9b4b",
+        "bytes": 9631,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/provider.ex": {
+        "state": "present",
+        "sha256": "4a00bd63860f3b8dfe732df9525f45804e2667287391fb77c8110b7883cdf1a7",
+        "bytes": 1138,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/provider_call.ex": {
+        "state": "present",
+        "sha256": "4c3d0d26d1ae84cefc8753986ea4d50ba3184bf67d0cdfa5236fc740c2a8f572",
+        "bytes": 1698,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/provider_result.ex": {
+        "state": "present",
+        "sha256": "44e877ff1fd5aa26f99556993a2d42cb824ff397dfca406356b89cd8dd43978e",
+        "bytes": 279,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/providers/system_one.ex": {
+        "state": "present",
+        "sha256": "3b7b9b15b885ff80dac3214515eed0c111f3eb8dae1d6257cd1761b6090c6f85",
+        "bytes": 7206,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/question.ex": {
+        "state": "present",
+        "sha256": "f65676dfa725df1b0b8c585a77e70e3a13ea31846be534fecca3ff565ca06b03",
+        "bytes": 5492,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/registry.ex": {
+        "state": "present",
+        "sha256": "5fab5a5a34fd6428270499339caaade8437b2fa2b1e8b25cb4f1fa72d284a7eb",
+        "bytes": 1236,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/request.ex": {
+        "state": "present",
+        "sha256": "4a9ec868d425359bd663dd7a21f4093e9a73e673ac3b6267419349f3d0e34565",
+        "bytes": 2325,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/sandbox.ex": {
+        "state": "present",
+        "sha256": "54c087bd340b8d983706691bae8784d22a65b6bc62a4f0a5660b22a8d0a929b1",
+        "bytes": 3213,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/target_ref.ex": {
+        "state": "present",
+        "sha256": "1fe71bd0848fecf21706a5acc276df92127a2a972fec61da4587452e6c83aa3e",
+        "bytes": 1370,
+        "mode": 436
+      },
+      "packages/fount_observe/mix.exs": {
+        "state": "present",
+        "sha256": "2da9cf23233fdb02b76f41c22e11fbd943c240495a3d9514b51f1d9b712ea1d7",
+        "bytes": 3457,
+        "mode": 436
+      },
+      "packages/fount_observe/priv/lenses/action.visibility.json": {
+        "state": "present",
+        "sha256": "95763f10af5180e642286d86d16de825a8911405535bfa0e2804225f5afdea6a",
+        "bytes": 1247,
+        "mode": 436
+      },
+      "packages/fount_observe/priv/lenses/causality.support.json": {
+        "state": "present",
+        "sha256": "a240cbae77a6cfc87edff67c13189b279efda4d0a6a0ee8ff91441d8d12b8e9f",
+        "bytes": 1358,
+        "mode": 436
+      },
+      "packages/fount_observe/priv/lenses/continuity.transitions.json": {
+        "state": "present",
+        "sha256": "4f3e23703e5f4431ab1af2e50b32bd9efd42ef84b20a3c10639cf4c51b9b970f",
+        "bytes": 787,
+        "mode": 436
+      },
+      "packages/fount_observe/priv/lenses/dialogue.interaction.json": {
+        "state": "present",
+        "sha256": "2ee83f0c0a5ee878d68aff164f6275e917f4f33ff47079292adbf54978216315",
+        "bytes": 1461,
+        "mode": 436
+      },
+      "packages/fount_observe/priv/lenses/dialogue.voice_distinction.json": {
+        "state": "present",
+        "sha256": "8766793de833f8a073ac77d9c6fa20c2e57f0b27ab6e44c776239d8d33bc0d97",
+        "bytes": 732,
+        "mode": 436
+      },
+      "packages/fount_observe/priv/lenses/knowledge.access_evidence.json": {
+        "state": "present",
+        "sha256": "219f2bbd1d3f436829980b66d71275672aaaf8c546d35af79feb9b22bc688f16",
+        "bytes": 767,
+        "mode": 436
+      },
+      "packages/fount_observe/priv/lenses/knowledge.behavior_support.json": {
+        "state": "present",
+        "sha256": "7b24dd4034ed4cc0c6cc4919b4bf939fc03ad05ecbc5cbdbcffa74537c05b1cf",
+        "bytes": 963,
+        "mode": 436
+      },
+      "packages/fount_observe/priv/lenses/knowledge.epistemic_trace.json": {
+        "state": "present",
+        "sha256": "4d3fad72b4f2df0b97a4a5a83adf59b3b1877da3e889552a08726351d4fa5e29",
+        "bytes": 1377,
+        "mode": 436
+      },
+      "packages/fount_observe/priv/lenses/retrieval.relevance.json": {
+        "state": "present",
+        "sha256": "d96c8d908ffdb7ea3e05a26335993aa70c8530ae5baee3441e6dcf26a255d580",
+        "bytes": 730,
+        "mode": 436
+      },
+      "packages/fount_observe/priv/lenses/strategy.distinctness.json": {
+        "state": "present",
+        "sha256": "e7747e8107e3119a028a3da1402047900f557c7d7ca70e53442f01ec48515ffd",
+        "bytes": 781,
+        "mode": 436
+      },
+      "packages/fount_observe/test/cache_integrity_test.exs": {
+        "state": "present",
+        "sha256": "ab17a9f4f7f8217df9fcbcbcef997bdea8aa4bcec5bc0a028c25a4f5014791cc",
+        "bytes": 2010,
+        "mode": 436
+      },
+      "packages/fount_observe/test/continuation_projection_test.exs": {
+        "state": "present",
+        "sha256": "f6944f31c7e682f066cb3887306a8ffbfd191e4f5e1a921a88f429a2b112a01e",
+        "bytes": 2765,
+        "mode": 436
+      },
+      "packages/fount_observe/test/executor_sandbox_test.exs": {
+        "state": "present",
+        "sha256": "8e30ba06b75990f05cd9558c67339a768e8a7c3a7020c0bf494e46f51f51081b",
+        "bytes": 4237,
+        "mode": 436
+      },
+      "packages/fount_observe/test/lens_asset_test.exs": {
+        "state": "present",
+        "sha256": "4d1b113ba75985384a5c2ba64da19de55571c4792e838586e722845491a0c805",
+        "bytes": 1043,
+        "mode": 436
+      },
+      "packages/fount_observe/test/measurement_contract_test.exs": {
+        "state": "present",
+        "sha256": "9d5e20d2f924a4ea5fe1ccbfa21478e6be36ffbd5eeead84403bf8cc211fdf13",
+        "bytes": 4037,
+        "mode": 436
+      },
+      "packages/fount_observe/test/selection_boundary_continuation_test.exs": {
+        "state": "present",
+        "sha256": "d10c3d0bf16194e18ee9407214a39e098a89aee23c53701760388958fc43ce4c",
+        "bytes": 1366,
+        "mode": 436
+      },
+      "packages/fount_observe/test/system_one_boundary_test.exs": {
+        "state": "present",
+        "sha256": "31f73b8e854e5d8d3d31f7ed79565420e909e4fa856a2f851a966fc19f4379e0",
+        "bytes": 4346,
+        "mode": 436
+      },
+      "packages/fount_observe/test/test_helper.exs": {
+        "state": "present",
+        "sha256": "b086ec47f0c6c7aaeb4cffca5ae5243dd05e0dc96ab761ced93325d5315f4b12",
+        "bytes": 15,
+        "mode": 436
+      },
+      "packages/fount_probe/.formatter.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/CHANGELOG.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/LICENSE": {
+        "state": "absent"
+      },
+      "packages/fount_probe/README.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/examples/README.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/examples/live.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/guides/architecture.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/guides/comparison-and-ablation.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/guides/investigations-and-evidence.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/guides/tools-and-catalog.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/access.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/action.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/action/layout.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/budget.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/catalog.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/cli.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/comparison.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/completion.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/constraints.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/continuity.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/dependencies.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/dialogue.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/extraction.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/inventory.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/investigation.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/jev.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/knowledge.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/knowledge_trace.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/knowledge_trace/behavior.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/launcher.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/live_example.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/profile.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/projection.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/report.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/retrieval.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/saved_records.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/scene_mechanics.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/search.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/state.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/strategy_contrast.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/voice.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/writing/decision_policy.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/writing/evidence.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/writing/executor.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/mix/tasks/fount.probe.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/mix/tasks/fount.search.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/mix.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/mix.lock": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/README.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/access.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/action.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/continuity.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/dependencies.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/dialogue.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/knowledge_behavior.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/knowledge_trace.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/retrieval.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/strategy_contrast.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/voice.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/adjacent_extraction_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/catalog_continuation_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/changed_continuity_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/completion_repair_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/constraint_contract_names_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/continuation_constraints_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/continuation_projection_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/continuation_voice_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/invention_policy_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/inventory_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/investigation_contract_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/knowledge_behavior_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/knowledge_reveal_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/knowledge_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/profile_continuation_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/profile_threshold_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/retrieval_exact_continuation_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/same_scene_dependencies_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/saved_records_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/scene_count_scope_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/search_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/selection_boundary_continuation_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/state_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/test_helper.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/typed_constraint_targets_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/writing_policies_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_workshop/CHANGELOG.md": {
+        "state": "present",
+        "sha256": "62c19341655203d809d5e2954f9fd4d758fbc8eeb763ffedaae655cc91573981",
+        "bytes": 1002,
+        "mode": 436
+      },
+      "packages/fount_workshop/README.md": {
+        "state": "present",
+        "sha256": "5ab617670735e8a3aa4e92c8c940ff51531fa15aef4ab4033acbbab980cc1041",
+        "bytes": 5039,
+        "mode": 436
+      },
+      "packages/fount_workshop/examples/README.md": {
+        "state": "present",
+        "sha256": "d0b260c646e6e80053ac781f69637adf1127e3f300a81ac4ecc0ee7b8454adb8",
+        "bytes": 5053,
+        "mode": 436
+      },
+      "packages/fount_workshop/examples/analysis.exs": {
+        "state": "present",
+        "sha256": "64eb8e16467ca20d2e56d28d0f9668ff5173d4cbb66400d3c9a402099347c889",
+        "bytes": 2402,
+        "mode": 436
+      },
+      "packages/fount_workshop/examples/phase_one.exs": {
+        "state": "present",
+        "sha256": "db16c205fee7e53a072371f8277e1bcaf9c24cc087cb1017114bff7fa610e621",
+        "bytes": 787,
+        "mode": 436
+      },
+      "packages/fount_workshop/examples/support/phase_one_demo.exs": {
+        "state": "present",
+        "sha256": "2127161285a9c56bdded3739d565b2b1c3ded8d30186232e07ed3d059abeee41",
+        "bytes": 6222,
+        "mode": 436
+      },
+      "packages/fount_workshop/guides/architecture.md": {
+        "state": "present",
+        "sha256": "08f2112d8ce1223ec1a9afda5c2b4759af239d5ebefe08beb1b29ea28e9fd75f",
+        "bytes": 1048,
+        "mode": 436
+      },
+      "packages/fount_workshop/guides/creative-workflows.md": {
+        "state": "present",
+        "sha256": "89beca3edc1b55cb3505d8c1115271c861c448375c031fe3b9bac35d681ebb67",
+        "bytes": 6614,
+        "mode": 436
+      },
+      "packages/fount_workshop/integration/action_layout_test.exs": {
+        "state": "present",
+        "sha256": "960c679832a47ef5e6ce35110f5744bbe322dcae59b172ba16b0ef9e1a574e8d",
+        "bytes": 1654,
+        "mode": 436
+      },
+      "packages/fount_workshop/integration/phase_one_writer_demo_test.exs": {
+        "state": "present",
+        "sha256": "a5795ba579656df125707e2a2921eb698d2c3dcd6a2a488a21881ba7fa6febc8",
+        "bytes": 1609,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/analysis_example.ex": {
+        "state": "present",
+        "sha256": "d4b8eab1a7d6c09f427c30dec7ca7a98a75ec29215fb34035d5ed374cda39697",
+        "bytes": 5003,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/audition.ex": {
+        "state": "present",
+        "sha256": "10e3672a831045de098ec811d9d4604f0082f9e57149852bb5ab9f7067f082b4",
+        "bytes": 2850,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/candidate.ex": {
+        "state": "present",
+        "sha256": "8ecfe765111688b337982f48ef89701f505090a4b64239071204b2901676e649",
+        "bytes": 17056,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/candidate_api.ex": {
+        "state": "present",
+        "sha256": "2cc7a54ca37a4b1b3940ec7b640f9e7ee3765f285f3801fc7cb7c979d459452a",
+        "bytes": 9720,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/cli.ex": {
+        "state": "present",
+        "sha256": "1bd5823b25a29f79ecd42e02780aa3c43ede13a37081ebca467299e09c185e3e",
+        "bytes": 10245,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/inspection_cli.ex": {
+        "state": "present",
+        "sha256": "fabf3eb60d7d5d094da5e671abeaa4f1cc12216e94869d2516416de3c7f8a25a",
+        "bytes": 3514,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/launcher.ex": {
+        "state": "present",
+        "sha256": "f1e9c36b7e50e53c869e55f90e47b7e723a7fc27ef1602e6603e79068195c064",
+        "bytes": 2649,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/live_example.ex": {
+        "state": "present",
+        "sha256": "139823b44ea0c4af524b6c34057675726fb46af6fd253203b7c318c35a7ba46a",
+        "bytes": 20340,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/request.ex": {
+        "state": "present",
+        "sha256": "374fe97655c2de8a3030b72aacb9b96f904eb43714610eae879cdaf747b8d78e",
+        "bytes": 7080,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/review_export.ex": {
+        "state": "present",
+        "sha256": "08dccb4b60c578ce34812d1e40c870e55f083d2481d89a0333448c1cf31f3a14",
+        "bytes": 6591,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/services.ex": {
+        "state": "present",
+        "sha256": "6bc66a28ff327777f71f45477e79341ad01fde4b27c6df956d03f00de72b7f8f",
+        "bytes": 742,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/session.ex": {
+        "state": "present",
+        "sha256": "a84b73930c96bd41fef8bd529e95d99bf6d4f176f88b1ee1d63506922936ba57",
+        "bytes": 19103,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/store.ex": {
+        "state": "present",
+        "sha256": "983a89cfb74e4b26d1847e3246124c2f3cfdc2527a6dd003baf1e262734bdf2d",
+        "bytes": 1179,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/strategy.ex": {
+        "state": "present",
+        "sha256": "c6c1adbcaae1a6bffe7971e856f0847af46982f0d3a4563c470b5623d66ea133",
+        "bytes": 3665,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/action_layout.ex": {
+        "state": "present",
+        "sha256": "8b43ed954ac0dbc7c95828e69301bc38fbaffa2132732abbb9d1f963c28c9be0",
+        "bytes": 4417,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/budget.ex": {
+        "state": "present",
+        "sha256": "5115f460faf097f6e91814eb853723331ebe476f7b18de017145104604440367",
+        "bytes": 1545,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/completion.ex": {
+        "state": "present",
+        "sha256": "df4aafa9f12d23e45fe8f845b910280aea4427e2b0094a0c3da19822b1c13a3e",
+        "bytes": 7124,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/context.ex": {
+        "state": "present",
+        "sha256": "f885f39d02e96765d5cc0e5d63889a8bad56397ca5f18684009aa4606f28f83e",
+        "bytes": 7753,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/generation.ex": {
+        "state": "present",
+        "sha256": "d666b0bbe1e94ccb77c27e82cfa424d77c110ff3ae272135f568babb8af92bde",
+        "bytes": 6549,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/layout.ex": {
+        "state": "present",
+        "sha256": "e639d8d207b9705f54603731c3a50cfa243d12dedab93a52ea23010110022372",
+        "bytes": 2087,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/note_conflicts.ex": {
+        "state": "present",
+        "sha256": "fe7afacda733d13598e6168f66d157c65e42dafd8b86cb5fa8b8335563be3342",
+        "bytes": 784,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/preparation.ex": {
+        "state": "present",
+        "sha256": "d38791796ab0d77f61dbe59fcb62762fc3051875839680a9174bef07fca18640",
+        "bytes": 17440,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/scope.ex": {
+        "state": "present",
+        "sha256": "1a0f6057a6e02b242468c3e2c34bd127eb48886db31f4ec0edc1478ec9cc5183",
+        "bytes": 6581,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/mix/tasks/fount.analyze.ex": {
+        "state": "present",
+        "sha256": "5ef09c327ab068895d19f59ec7fe72b9673c524e45935dab965a73a5d01447ce",
+        "bytes": 316,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/mix/tasks/fount.search.ex": {
+        "state": "present",
+        "sha256": "a301cec023f8e902f200f4a0298794535fe6accf06e143aadb5dab13383ffc2e",
+        "bytes": 305,
+        "mode": 436
+      },
+      "packages/fount_workshop/mix.exs": {
+        "state": "present",
+        "sha256": "0fe9a0611141f32890aafd0dd532f75bd596b46ce8672bc17658bfa4ffaed1d9",
+        "bytes": 3283,
+        "mode": 436
+      },
+      "packages/fount_workshop/test/analysis_adjacent_extraction_test.exs": {
+        "state": "present",
+        "sha256": "46f54e775dc7bf65a6bc57ab3ac9660d1ab60529007d413a1847292e08170319",
+        "bytes": 1607,
+        "mode": 436
+      },
+      "packages/fount_workshop/test/analysis_catalog_continuation_test.exs": {
+        "state": "present",
+        "sha256": "3a7f798a2b131e15154ecffc04254432c319e60a848479ab2e7b461005e1938c",
+        "bytes": 1054,
+        "mode": 436
+      },
+      "packages/fount_workshop/test/analysis_completion_repair_test.exs": {
+        "state": "present",
+        "sha256": "9de62d73e89a426381b650422623e1084a0c2319adba1859502cbc9eeaaaf7b6",
+        "bytes": 1668,
+        "mode": 436
+      },
+      "packages/fount_workshop/test/candidate_scope_test.exs": {
+        "state": "present",
+        "sha256": "406ee2028946864d553b8ac2506966fefcda88a24ffaba55e54644adb93a9cf5",
+        "bytes": 8347,
+        "mode": 436
+      },
+      "packages/fount_workshop/test/completion_privacy_test.exs": {
+        "state": "present",
+        "sha256": "41b362e45b4aaf1c28c2ac25511be75e18e36b7c93d825a87ddf3d081471f538",
+        "bytes": 654,
+        "mode": 436
+      },
+      "scripts/tests/test_phase_one_source.py": {
+        "state": "present",
+        "sha256": "c3c61e710d9b7d2e0cb4366950b2a4f8c3dc37fc04f96125c06d88f9e9fb1a53",
+        "bytes": 1981,
+        "mode": 436
+      },
+      "scripts/tests/test_prune_deleted_directories.py": {
+        "state": "present",
+        "sha256": "b7134bba1d11c03973ffc879c11a05c195297a5c88d3bd592f6c56d4e967c8fc",
+        "bytes": 3022,
+        "mode": 436
+      },
+      "scripts/verify_handoff.sh": {
+        "state": "present",
+        "sha256": "049d30d95cf819dbdbd455c341e50df61543eec33f5ff2d0fb98b25652206834",
+        "bytes": 1639,
+        "mode": 436
+      }
+    },
+    "followup_changes": {
+      "packages/fount/lib/fount/search.ex": {
+        "state": "present",
+        "sha256": "1229b437962c54d4386bd7b4a46658c6045f21ab3d5206fed7cf0b5cf0d3dcff",
+        "bytes": 3229,
+        "mode": 436
+      },
+      "packages/fount/lib/fount/selection.ex": {
+        "state": "present",
+        "sha256": "f5c3cec0d0d1548ae8f7ec1e128ffc7e23ea36585db9a40ac2b4672c4682a4f9",
+        "bytes": 6027,
+        "mode": 436
+      },
+      "packages/fount/test/canonical_inventory_test.exs": {
+        "state": "present",
+        "sha256": "ea5760dfce8200c779c6693f7d05ac1b2bc107d4f8e4ae4287a8905f7d6f4185",
+        "bytes": 1005,
+        "mode": 436
+      },
+      "packages/fount_intelligence/examples/inspect.exs": {
+        "state": "present",
+        "sha256": "c80a8ea6e6cb03d0caab31c11f983ec3aa3b54d0ba454215eb7659c9ca7f348a",
+        "bytes": 399,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence.ex": {
+        "state": "present",
+        "sha256": "d13006b88e815b31d9935ff4269871134fb12a5f7885b62c30d625d48a57e52b",
+        "bytes": 5211,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/access.ex": {
+        "state": "present",
+        "sha256": "f9b79539511f87111717f18d51183275831ac6bb1717192d3f23277d65b6d64b",
+        "bytes": 6739,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/configuration.ex": {
+        "state": "present",
+        "sha256": "607ac82d110ef497957a069032a1a8deb7e4092aaa0d30550f24420bc04eb257",
+        "bytes": 347,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/extraction.ex": {
+        "state": "present",
+        "sha256": "96dc52022060300a60738e21ed69d3eb7caaba9e4e73568f4d6a15a9f166a094",
+        "bytes": 5340,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/input_evidence.ex": {
+        "state": "present",
+        "sha256": "215ffd9bc4e33fab4467c906b60717fd69fe0387b155e0118f7507663a521922",
+        "bytes": 1201,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/knowledge.ex": {
+        "state": "present",
+        "sha256": "175f0093a51a9d371a986dc7d738ea44db0c840a3599e4f397e1eb198d31a7a4",
+        "bytes": 3088,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/measurements.ex": {
+        "state": "present",
+        "sha256": "8e969b21492dabac9052cb4155e8e93a520a36cb5103933606d158cac9d78d8c",
+        "bytes": 4988,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/proposals.ex": {
+        "state": "present",
+        "sha256": "ad18b969e1492e426995ae472de6231a41259ef44e250ee02631686a3984a84b",
+        "bytes": 2438,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/acquisition/views.ex": {
+        "state": "present",
+        "sha256": "5931b2ec33591502ee86038ab10627ca28a5b9aa0f16811a0fba7cd683a4ac31",
+        "bytes": 1574,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/capabilities/interpretation.ex": {
+        "state": "present",
+        "sha256": "1b2454f60f7abfbf9b43d3e34a32a765116c9ca733dbc77695a05a96072b17ff",
+        "bytes": 1960,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/persistence/saved_records.ex": {
+        "state": "present",
+        "sha256": "46a33bf4c411c76fbfc086792251235f75bfd2653f716a083c89e762c9a028c5",
+        "bytes": 5366,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/action.ex": {
+        "state": "present",
+        "sha256": "322ba4f6b61769ba7b81e236a60f2d6cfe2170e5d0c98bac3bca9baf229d52ee",
+        "bytes": 4321,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/comparison.ex": {
+        "state": "present",
+        "sha256": "ad39246dfd544ed03604e5bfd0cec96d023e14954f26193850837acca239ecb4",
+        "bytes": 6376,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/constraints.ex": {
+        "state": "present",
+        "sha256": "a156445743fe598f89cf14d4d331fba2f917ba9b887cdc3ef88a01b4e2fd228b",
+        "bytes": 22879,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/continuity.ex": {
+        "state": "present",
+        "sha256": "f9bd6d3b62f707a40b16bc28fbfa67d83d9eb56b0e61472a3c888e674c969a60",
+        "bytes": 7979,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/dependencies.ex": {
+        "state": "present",
+        "sha256": "514e72bbac7593bc6cb4fb9a24e262fc1cd05afc28223843b0dc16f6fedefca3",
+        "bytes": 8932,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/dialogue.ex": {
+        "state": "present",
+        "sha256": "0e525a104c55cdc83880306c77cba22071c694399085ee804e460abf9dbef978",
+        "bytes": 7680,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/investigation.ex": {
+        "state": "present",
+        "sha256": "b4c2d98f58e892ec5132ab04b862f4ae3c915ba1234e67cbc70836c09d4cfdae",
+        "bytes": 12273,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/knowledge_trace.ex": {
+        "state": "present",
+        "sha256": "c4dc5a866ab6c4632477b2387eb927b659705e146bc614e04a6f9111588855b5",
+        "bytes": 12032,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/knowledge_trace/behavior.ex": {
+        "state": "present",
+        "sha256": "9aa876e935258a1a8926304af3bd127ae4c8f8c1bfb20da4602a4403c88d7568",
+        "bytes": 6704,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/registry.ex": {
+        "state": "present",
+        "sha256": "cb236c3a1767ee88a667a73d227b8424ab4a206d4d1f4153fa8e6831e6983e2a",
+        "bytes": 11049,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/request.ex": {
+        "state": "present",
+        "sha256": "88a80951dc9cb2830b7d1ac6fb8a83245c3ae986cc5d0b5f3632d7285e406308",
+        "bytes": 1747,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/retrieval.ex": {
+        "state": "present",
+        "sha256": "c0a2ca249169c91eb962956eaa6073a8b82aaad47d46c8f4e7e07d2ddded4556",
+        "bytes": 8187,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/scene_mechanics.ex": {
+        "state": "present",
+        "sha256": "7c9ec6216d86245c01063e4e130569bd2c5b414949af1ca4d1e72c19ef200938",
+        "bytes": 4152,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/strategy_contrast.ex": {
+        "state": "present",
+        "sha256": "160824c96688c0b854db7a82363bc16da4bbc6ee750d8c8fdf14b45f5e5adcb8",
+        "bytes": 1650,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/playbooks/voice.ex": {
+        "state": "present",
+        "sha256": "e9e6876a8bd108c9c206536a55a063f69df737f0ddffe2cc7ef78e76fd1abbe3",
+        "bytes": 9332,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/reader/reveal.ex": {
+        "state": "present",
+        "sha256": "6bcc0a5c17518d9c7c8c76caed3bcd3cc05d1d53b586911bb6d8ad030ad9d716",
+        "bytes": 1318,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/reporting/report.ex": {
+        "state": "present",
+        "sha256": "41c937d7b01eee9e24deb84a8f2309794991a269963c8d6cbc850d9c1e32cae1",
+        "bytes": 4503,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/runner/architecture.ex": {
+        "state": "present",
+        "sha256": "46242d328d502226b7f97a6978451e8012e6fa8b62f753661da127225c24b5b1",
+        "bytes": 16509,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/runner/resources.ex": {
+        "state": "present",
+        "sha256": "9a8f45f3cf83f2a305c16346c8d91cf83aef3cd9cc81865b8a02429271ad74fb",
+        "bytes": 803,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/fount/intelligence/runner/result_validation.ex": {
+        "state": "present",
+        "sha256": "7aa901f742bc16692258c0a4e630dcc30688e1cbbf866bfb70a9a40abdce0e87",
+        "bytes": 2178,
+        "mode": 436
+      },
+      "packages/fount_intelligence/lib/mix/tasks/fount.architecture.ex": {
+        "state": "present",
+        "sha256": "015d96fab036146fde8e673d4b7dda6ac7fde4bf28568b38fefeaf3fa73664ec",
+        "bytes": 1098,
+        "mode": 436
+      },
+      "packages/fount_intelligence/mix.exs": {
+        "state": "present",
+        "sha256": "7f37a0d35c84759c0c0856d993466a2e4f79d4c96cca1e7122433a983dabee3e",
+        "bytes": 2918,
+        "mode": 436
+      },
+      "packages/fount_intelligence/mix.lock": {
+        "state": "present",
+        "sha256": "3a2d8edcd896928d912081418311e058f989d7a68d3c61ed1fe608f3cc89b812",
+        "bytes": 13347,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/architecture_test.exs": {
+        "state": "present",
+        "sha256": "3bdc92a802f1b361af5bc602f9ed58093a8f06418383805de9a928a42cefe2f4",
+        "bytes": 2761,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/changed_continuity_test.exs": {
+        "state": "present",
+        "sha256": "3a7f23e5a5a0632989d9a0201a081f5b1fc1f85100c5fd0d66bb574b2c817b74",
+        "bytes": 1564,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/constraint_contract_names_test.exs": {
+        "state": "present",
+        "sha256": "39fed35ef020d2848105d60feab55e739e370d90fe24b7132956adf2dc143ccc",
+        "bytes": 1541,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/continuation_voice_test.exs": {
+        "state": "present",
+        "sha256": "4dd08c4df2be7610d9b226c5df7dfcb069c8588fc2cad18f8cc9fd1703ce5778",
+        "bytes": 1633,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/invention_policy_test.exs": {
+        "state": "present",
+        "sha256": "3b392be7bf9b634ee32eb2450cbb19af96b9de73c52c7393a864a7de6ed56064",
+        "bytes": 1049,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/investigation_contract_test.exs": {
+        "state": "present",
+        "sha256": "d1678da34cd28e5eea62dc933b9d644f298f61c6f0e7654eb05a7f2f19e8e5e7",
+        "bytes": 2896,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/knowledge_reveal_test.exs": {
+        "state": "present",
+        "sha256": "25e09d8054b113e2b3fd2f37105cea26327606e3045ee501ed780d15dacda9a1",
+        "bytes": 1942,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/knowledge_test.exs": {
+        "state": "present",
+        "sha256": "c367045d87d690a477313650cb809232415d17edfb9a1aa85196593da44258e8",
+        "bytes": 1684,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/profile_threshold_test.exs": {
+        "state": "present",
+        "sha256": "e48e179d27b53a6ab20155d3be5c7f7b69467965e059ea6d77987a5ecd887c83",
+        "bytes": 1050,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/proposal_service_contract_test.exs": {
+        "state": "present",
+        "sha256": "bc0d5ccab418681c5ed3b2a1356e51e2f9338618e0c9bd6aa14039eee6820633",
+        "bytes": 1302,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/reader_replay_test.exs": {
+        "state": "present",
+        "sha256": "09394c4e4e77e80b4bed35b1b30e2c9ace6081d0faabf4a6a2c6ac8c8b2a1261",
+        "bytes": 1731,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/request_contract_test.exs": {
+        "state": "present",
+        "sha256": "68518211f48888b12b9a7fa11e1c4b7d4271d218618c7643216227b5e9ce3ca1",
+        "bytes": 1616,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/retrieval_exact_continuation_test.exs": {
+        "state": "present",
+        "sha256": "290b7af9c2070a7fef7e5182fd4815f3e200280b039ca5a824ef03403b0ab9ae",
+        "bytes": 1984,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/same_scene_dependencies_test.exs": {
+        "state": "present",
+        "sha256": "1116ef28fc198e4d94f64b6286cccb88ec34fab90383135b146fbc975871bd94",
+        "bytes": 1269,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/saved_records_test.exs": {
+        "state": "present",
+        "sha256": "078429067596e7aea3a4a2e747b6d4cab5c48affe8c3e08242df9a33d61ce658",
+        "bytes": 3989,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/scene_count_scope_test.exs": {
+        "state": "present",
+        "sha256": "6bdb568166235effb896d77c4217b53604ddc1da5ab207615337f488d7009aee",
+        "bytes": 1937,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/state_test.exs": {
+        "state": "present",
+        "sha256": "25c87b823e59e94957a16786f83cf10ee73a541aafab5e618d399abb977fad27",
+        "bytes": 1119,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/story_world_records_validation_test.exs": {
+        "state": "present",
+        "sha256": "ef89a87e7b3339183298e43d8e8cbeaef1fce840dfcb950bc36b2373bfc7641a",
+        "bytes": 1873,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/typed_constraint_targets_test.exs": {
+        "state": "present",
+        "sha256": "77a4fb99ffcee5e52c22b147ef9a087d92bd56d3fe1d9a2de23b7f7497bef6e4",
+        "bytes": 942,
+        "mode": 436
+      },
+      "packages/fount_intelligence/test/writing_policies_test.exs": {
+        "state": "present",
+        "sha256": "0e0a8d88d38fdc710429e46bdad41014e9e4fad15928f381c8fb6bc8668811de",
+        "bytes": 2867,
+        "mode": 436
+      },
+      "packages/fount_observe/examples/sandbox.exs": {
+        "state": "present",
+        "sha256": "515cd94b6fb65e125437a586b859cdcd8eead6d7a64f37bb00fd2869581ea177",
+        "bytes": 760,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe.ex": {
+        "state": "present",
+        "sha256": "ee5724d8e409caeab14b67f371fcf2821a32979a2b99e87abc7de63a5ea0a9e9",
+        "bytes": 663,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/association.ex": {
+        "state": "present",
+        "sha256": "0cac96656693a4e72537da04f6da9e4dd6297ff7e4eecc5f58ca72281ea07a30",
+        "bytes": 1550,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/batch.ex": {
+        "state": "present",
+        "sha256": "24f217b627967a870634048e4fea0ed12b03c95d5abde1991fb106da3ecc367b",
+        "bytes": 810,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/budget.ex": {
+        "state": "present",
+        "sha256": "c5c6e0966404d5c5c5199260e3adfb5e9b3f295883751a0f1dd9f118f796d4ac",
+        "bytes": 1242,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/cache/memory.ex": {
+        "state": "present",
+        "sha256": "7fda814f180795b676ceb0c68bc7f51f4f44b3a3e13928fdc621c8bda459232c",
+        "bytes": 1797,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/context.ex": {
+        "state": "present",
+        "sha256": "fae876033ad9871dd704f0f12f0973f173f6c1ce5df587f7f07be37c31566c11",
+        "bytes": 4270,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/distribution.ex": {
+        "state": "present",
+        "sha256": "b612eb84f9a464435750756b9dbe1bde453f2a47c69d505f39e1dcc010aae94c",
+        "bytes": 4579,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/error.ex": {
+        "state": "present",
+        "sha256": "bf0d45db7571d65262f015636d1349fa6b4168373baca1bbbc3aab2e678cadd1",
+        "bytes": 1217,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/evidence_ref.ex": {
+        "state": "present",
+        "sha256": "dc8e238be5e6ba53ec51386028e4d087edf3bccda91147e50619b46def60049f",
+        "bytes": 1856,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/executor.ex": {
+        "state": "present",
+        "sha256": "83d3bfb31bb75d6c0d526a4cede37998a095d12dd1240f8500d94af5e4537ee8",
+        "bytes": 13500,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/lens.ex": {
+        "state": "present",
+        "sha256": "8a18fc786789ceb7950c2db1aba9a5c962b8bf0dac8912795b35dcbd81d5f1b5",
+        "bytes": 4069,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/measurement_result.ex": {
+        "state": "present",
+        "sha256": "5431ccfdbaf68f5b1a89fd153760363a71cf590780485e2b61ffa7a81a01edba",
+        "bytes": 676,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/observation.ex": {
+        "state": "present",
+        "sha256": "7977b386f8940a855b896f9cd043b2ae289ba39e071eb1dd0eb9ef50a773b240",
+        "bytes": 571,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/options.ex": {
+        "state": "present",
+        "sha256": "3a6b396c183348dc0bde78193cf8948169ff95856f76c8820582cc6ee322685b",
+        "bytes": 3581,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/provider.ex": {
+        "state": "present",
+        "sha256": "4a00bd63860f3b8dfe732df9525f45804e2667287391fb77c8110b7883cdf1a7",
+        "bytes": 1138,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/provider_call.ex": {
+        "state": "present",
+        "sha256": "4c3d0d26d1ae84cefc8753986ea4d50ba3184bf67d0cdfa5236fc740c2a8f572",
+        "bytes": 1698,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/providers/system_one.ex": {
+        "state": "present",
+        "sha256": "3b7b9b15b885ff80dac3214515eed0c111f3eb8dae1d6257cd1761b6090c6f85",
+        "bytes": 7206,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/question.ex": {
+        "state": "present",
+        "sha256": "f65676dfa725df1b0b8c585a77e70e3a13ea31846be534fecca3ff565ca06b03",
+        "bytes": 5492,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/registry.ex": {
+        "state": "present",
+        "sha256": "5fab5a5a34fd6428270499339caaade8437b2fa2b1e8b25cb4f1fa72d284a7eb",
+        "bytes": 1236,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/request.ex": {
+        "state": "present",
+        "sha256": "4a9ec868d425359bd663dd7a21f4093e9a73e673ac3b6267419349f3d0e34565",
+        "bytes": 2325,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/sandbox.ex": {
+        "state": "present",
+        "sha256": "54c087bd340b8d983706691bae8784d22a65b6bc62a4f0a5660b22a8d0a929b1",
+        "bytes": 3213,
+        "mode": 436
+      },
+      "packages/fount_observe/lib/fount/observe/target_ref.ex": {
+        "state": "present",
+        "sha256": "1fe71bd0848fecf21706a5acc276df92127a2a972fec61da4587452e6c83aa3e",
+        "bytes": 1370,
+        "mode": 436
+      },
+      "packages/fount_observe/mix.exs": {
+        "state": "present",
+        "sha256": "2da9cf23233fdb02b76f41c22e11fbd943c240495a3d9514b51f1d9b712ea1d7",
+        "bytes": 3457,
+        "mode": 436
+      },
+      "packages/fount_observe/mix.lock": {
+        "state": "present",
+        "sha256": "3a2d8edcd896928d912081418311e058f989d7a68d3c61ed1fe608f3cc89b812",
+        "bytes": 13347,
+        "mode": 436
+      },
+      "packages/fount_observe/test/cache_integrity_test.exs": {
+        "state": "present",
+        "sha256": "ab17a9f4f7f8217df9fcbcbcef997bdea8aa4bcec5bc0a028c25a4f5014791cc",
+        "bytes": 2010,
+        "mode": 436
+      },
+      "packages/fount_observe/test/continuation_projection_test.exs": {
+        "state": "present",
+        "sha256": "f6944f31c7e682f066cb3887306a8ffbfd191e4f5e1a921a88f429a2b112a01e",
+        "bytes": 2765,
+        "mode": 436
+      },
+      "packages/fount_observe/test/executor_sandbox_test.exs": {
+        "state": "present",
+        "sha256": "8e30ba06b75990f05cd9558c67339a768e8a7c3a7020c0bf494e46f51f51081b",
+        "bytes": 4237,
+        "mode": 436
+      },
+      "packages/fount_observe/test/measurement_contract_test.exs": {
+        "state": "present",
+        "sha256": "9d5e20d2f924a4ea5fe1ccbfa21478e6be36ffbd5eeead84403bf8cc211fdf13",
+        "bytes": 4037,
+        "mode": 436
+      },
+      "packages/fount_observe/test/selection_boundary_continuation_test.exs": {
+        "state": "present",
+        "sha256": "d10c3d0bf16194e18ee9407214a39e098a89aee23c53701760388958fc43ce4c",
+        "bytes": 1366,
+        "mode": 436
+      },
+      "packages/fount_observe/test/system_one_boundary_test.exs": {
+        "state": "present",
+        "sha256": "31f73b8e854e5d8d3d31f7ed79565420e909e4fa856a2f851a966fc19f4379e0",
+        "bytes": 4346,
+        "mode": 436
+      },
+      "packages/fount_probe/.formatter.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/CHANGELOG.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/LICENSE": {
+        "state": "absent"
+      },
+      "packages/fount_probe/README.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/assets/fount_probe.svg": {
+        "state": "absent"
+      },
+      "packages/fount_probe/examples/README.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/examples/live.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/guides/architecture.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/guides/comparison-and-ablation.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/guides/investigations-and-evidence.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/guides/tools-and-catalog.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/access.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/action.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/action/layout.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/budget.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/catalog.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/cli.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/comparison.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/completion.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/constraints.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/continuity.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/dependencies.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/dialogue.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/extraction.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/inventory.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/investigation.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/jev.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/knowledge.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/knowledge_trace.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/knowledge_trace/behavior.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/launcher.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/live_example.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/profile.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/projection.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/report.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/retrieval.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/saved_records.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/scene_mechanics.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/search.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/state.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/strategy_contrast.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/voice.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/writing/decision_policy.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/writing/evidence.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/fount_probe/writing/executor.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/mix/tasks/fount.probe.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/lib/mix/tasks/fount.search.ex": {
+        "state": "absent"
+      },
+      "packages/fount_probe/mix.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/mix.lock": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/README.md": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/access.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/action.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/continuity.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/dependencies.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/dialogue.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/knowledge_behavior.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/knowledge_trace.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/retrieval.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/strategy_contrast.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/priv/profiles/voice.json": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/adjacent_extraction_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/catalog_continuation_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/changed_continuity_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/completion_repair_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/constraint_contract_names_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/continuation_constraints_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/continuation_projection_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/continuation_voice_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/invention_policy_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/inventory_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/investigation_contract_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/knowledge_behavior_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/knowledge_reveal_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/knowledge_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/profile_continuation_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/profile_threshold_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/retrieval_exact_continuation_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/same_scene_dependencies_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/saved_records_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/scene_count_scope_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/search_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/selection_boundary_continuation_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/state_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/test_helper.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/typed_constraint_targets_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_probe/test/writing_policies_test.exs": {
+        "state": "absent"
+      },
+      "packages/fount_workshop/lib/fount_workshop/analysis_example.ex": {
+        "state": "present",
+        "sha256": "d4b8eab1a7d6c09f427c30dec7ca7a98a75ec29215fb34035d5ed374cda39697",
+        "bytes": 5003,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/candidate.ex": {
+        "state": "present",
+        "sha256": "8ecfe765111688b337982f48ef89701f505090a4b64239071204b2901676e649",
+        "bytes": 17056,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/candidate_api.ex": {
+        "state": "present",
+        "sha256": "2cc7a54ca37a4b1b3940ec7b640f9e7ee3765f285f3801fc7cb7c979d459452a",
+        "bytes": 9720,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/inspection_cli.ex": {
+        "state": "present",
+        "sha256": "fabf3eb60d7d5d094da5e671abeaa4f1cc12216e94869d2516416de3c7f8a25a",
+        "bytes": 3514,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/launcher.ex": {
+        "state": "present",
+        "sha256": "f1e9c36b7e50e53c869e55f90e47b7e723a7fc27ef1602e6603e79068195c064",
+        "bytes": 2649,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/live_example.ex": {
+        "state": "present",
+        "sha256": "139823b44ea0c4af524b6c34057675726fb46af6fd253203b7c318c35a7ba46a",
+        "bytes": 20340,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/request.ex": {
+        "state": "present",
+        "sha256": "374fe97655c2de8a3030b72aacb9b96f904eb43714610eae879cdaf747b8d78e",
+        "bytes": 7080,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/review_export.ex": {
+        "state": "present",
+        "sha256": "08dccb4b60c578ce34812d1e40c870e55f083d2481d89a0333448c1cf31f3a14",
+        "bytes": 6591,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/services.ex": {
+        "state": "present",
+        "sha256": "6bc66a28ff327777f71f45477e79341ad01fde4b27c6df956d03f00de72b7f8f",
+        "bytes": 742,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/session.ex": {
+        "state": "present",
+        "sha256": "a84b73930c96bd41fef8bd529e95d99bf6d4f176f88b1ee1d63506922936ba57",
+        "bytes": 19103,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/store.ex": {
+        "state": "present",
+        "sha256": "983a89cfb74e4b26d1847e3246124c2f3cfdc2527a6dd003baf1e262734bdf2d",
+        "bytes": 1179,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/strategy.ex": {
+        "state": "present",
+        "sha256": "c6c1adbcaae1a6bffe7971e856f0847af46982f0d3a4563c470b5623d66ea133",
+        "bytes": 3665,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/budget.ex": {
+        "state": "present",
+        "sha256": "5115f460faf097f6e91814eb853723331ebe476f7b18de017145104604440367",
+        "bytes": 1545,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/completion.ex": {
+        "state": "present",
+        "sha256": "df4aafa9f12d23e45fe8f845b910280aea4427e2b0094a0c3da19822b1c13a3e",
+        "bytes": 7124,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/generation.ex": {
+        "state": "present",
+        "sha256": "d666b0bbe1e94ccb77c27e82cfa424d77c110ff3ae272135f568babb8af92bde",
+        "bytes": 6549,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/layout.ex": {
+        "state": "present",
+        "sha256": "e639d8d207b9705f54603731c3a50cfa243d12dedab93a52ea23010110022372",
+        "bytes": 2087,
+        "mode": 436
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/preparation.ex": {
+        "state": "present",
+        "sha256": "d38791796ab0d77f61dbe59fcb62762fc3051875839680a9174bef07fca18640",
+        "bytes": 17440,
+        "mode": 436
+      },
+      "packages/fount_workshop/mix.exs": {
+        "state": "present",
+        "sha256": "0fe9a0611141f32890aafd0dd532f75bd596b46ce8672bc17658bfa4ffaed1d9",
+        "bytes": 3283,
+        "mode": 436
+      },
+      "packages/fount_workshop/mix.lock": {
+        "state": "present",
+        "sha256": "ce1bd5d752ea7ece4caff53d221c81b8de425a63ce24b46930b77d8baef0aa47",
+        "bytes": 16678,
+        "mode": 436
+      },
+      "packages/fount_workshop/test/analysis_catalog_continuation_test.exs": {
+        "state": "present",
+        "sha256": "3a7f798a2b131e15154ecffc04254432c319e60a848479ab2e7b461005e1938c",
+        "bytes": 1054,
+        "mode": 436
+      },
+      "packages/fount_workshop/test/analysis_completion_repair_test.exs": {
+        "state": "present",
+        "sha256": "9de62d73e89a426381b650422623e1084a0c2319adba1859502cbc9eeaaaf7b6",
+        "bytes": 1668,
+        "mode": 436
+      },
+      "packages/fount_workshop/test/completion_privacy_test.exs": {
+        "state": "present",
+        "sha256": "41b362e45b4aaf1c28c2ac25511be75e18e36b7c93d825a87ddf3d081471f538",
+        "bytes": 654,
+        "mode": 436
+      },
+      "packages/fount_workshop/test/session_continuation_test.exs": {
+        "state": "present",
+        "sha256": "e1d5fdf583b4c57cd1704c09e949cf739209bdeeb8ce5efd43ca83f2e605d66e",
+        "bytes": 6632,
+        "mode": 436
+      }
+    },
+    "post_qc_overlay_result_counts": {
+      "exact": 84,
+      "changed": 108,
+      "deleted": 86
+    },
+    "notes": [
+      "All 86 declared Probe deletions are absent; the separately excluded tracked SVG was reviewed and removed as the 87th file.",
+      "One applied root mix.exs result was already divergent from the offline manifest before QC.",
+      "The original 86 deletion preimages matched only the documented terminal-LF variant at intake.",
+      "Generated retired-package output and stale BEAMs were preserved outside the repository."
+    ]
+  }
 }

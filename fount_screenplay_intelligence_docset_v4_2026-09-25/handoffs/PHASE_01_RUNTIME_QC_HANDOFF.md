@@ -1,5 +1,7 @@
 # Fount Phase 1 - Codex verification, repair and completion
 
+**Execution notice (2026-09-26):** This is the original instruction handoff. Actual executed results, corrections, and remaining `QC_BLOCKED` gates are in `PHASE_01_RUNTIME_QC_REPORT.md`; planned commands below are not proof of execution.
+
 ## Start from the user's applied commits - do not reapply the overlay
 
 You are the runtime-QC implementer for **Phase 1: Direct Architecture Supersession and Probe Removal**. The user has applied and committed `fount_phase_01_overlay.zip` and the complete `fount_phase_01_docset.zip`. Start with those actual working trees and commits. Read the current `PROGRESS.md`, the Phase 1 section of document 16, document 36's first demonstration, this handoff, the offline handoff and preservation audit.

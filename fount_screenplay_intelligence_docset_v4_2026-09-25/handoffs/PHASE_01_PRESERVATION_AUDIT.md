@@ -1,6 +1,6 @@
 # Phase 1 preservation audit
 
-Status: source ownership reviewed and replacements written; all Elixir behavior checks remain UNRUN. This is not a runtime equivalence certificate. The supplied baseline contains 37 production modules, 26 test-support files (25 test files plus the test helper), and 86 total files under the removed package. Every listed destination exists in the delivered working tree.
+Status: source ownership reviewed, replacements written, and migrated behavior checked by the Phase 1 workspace and integration suites. This is not a claim of exhaustive behavioral equivalence or human validation. The supplied baseline contains 37 production modules, 26 test-support files (25 test files plus the test helper), and 86 supplied files under the removed package. Every listed destination exists in the current working tree. Runtime results and limitations are in `PHASE_01_RUNTIME_QC_REPORT.md`.
 
 ## Production modules
 
@@ -56,7 +56,7 @@ Tests retain their behavioral assertions except where the superseded SDK/report/
 | `packages/fount_probe/test/completion_repair_test.exs` | MOVED TO WORKSHOP | `packages/fount_workshop/test/analysis_completion_repair_test.exs` |
 | `packages/fount_probe/test/constraint_contract_names_test.exs` | REIMPLEMENTED | `packages/fount_intelligence/test/constraint_contract_names_test.exs` |
 | `packages/fount_probe/test/continuation_constraints_test.exs` | REIMPLEMENTED | `packages/fount_intelligence/test/continuation_constraints_test.exs` |
-| `packages/fount_probe/test/continuation_projection_test.exs` | REIMPLEMENTED | `packages/fount_observe/test/continuation_projection_test.exs` |
+| `packages/fount_probe/test/continuation_projection_test.exs` | REIMPLEMENTED | `packages/fount_observe/test/continuation_projection_test.exs`; two Intelligence-owned record-validation assertions moved to `packages/fount_intelligence/test/story_world_records_validation_test.exs` during QC |
 | `packages/fount_probe/test/continuation_voice_test.exs` | REIMPLEMENTED | `packages/fount_intelligence/test/continuation_voice_test.exs` |
 | `packages/fount_probe/test/invention_policy_test.exs` | REIMPLEMENTED | `packages/fount_intelligence/test/invention_policy_test.exs` |
 | `packages/fount_probe/test/inventory_test.exs` | MOVED TO FOUNT | `packages/fount/test/canonical_inventory_test.exs` |
@@ -109,7 +109,7 @@ Tests retain their behavioral assertions except where the superseded SDK/report/
 
 Develop/continue/bridge, alternatives/audition/combine, story propagation, sequence rebuild, character rewrite, notes/conflicts, creative passes, recovery, candidate materialization/rebase, exact review/acceptance/rejection, table reads, PDF exports and mechanical submission checks retain their existing implementation paths and tests in Workshop. Only analytical/configuration/completion ownership was changed. Canonical parser/interchange/edit/persistence tests remain.
 
-The new `examples/phase_one.exs` and `integration/phase_one_writer_demo_test.exs` exercise develop -> reject alternate -> accept selected fixture -> targeted revision -> measured strategy contrast -> compare -> explicit accept/reject -> table-read/Fountain/PDF export. They have not run. Existing integration tests remain necessary; this demonstration does not replace them.
+The new `examples/phase_one.exs` and `integration/phase_one_writer_demo_test.exs` exercise develop -> reject alternate -> accept selected fixture -> targeted revision -> measured strategy contrast -> compare -> explicit accept/reject -> table-read/Fountain/PDF export. Both decision modes and the 14 Workshop integration tests ran during QC. Existing integration tests remain necessary; this demonstration does not replace them.
 
 No full new temporal/diagnosis/genre/corpus capability is claimed. The later twelve-family expansion remains assigned to the phases already specified.
 
