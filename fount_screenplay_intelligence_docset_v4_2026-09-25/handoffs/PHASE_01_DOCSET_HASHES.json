@@ -2,7 +2,7 @@
   "format_version": 1,
   "purpose": "Phase 1 post-QC full docset working-tree file identities; self-file omitted to avoid recursion",
   "applied_docset_commit": "d87ad39d3c79d4097c96d7f85c6ae2956b9afa59",
-  "post_qc_fount_commit": "b1953288ffd8ea514f419f2be9faf4cba6f49a69",
+  "post_qc_fount_commit": "b82b6560da3fed3955e51a52f3a1d613d5141513",
   "file_count": 70,
   "files": {
     "00_SCOPE_AND_PRINCIPLES.md": {
@@ -196,8 +196,8 @@
       "mode": 420
     },
     "DECISIONS.md": {
-      "sha256": "fbe4d6a43141f3d0e10a2e23bddf46f2ca572651c6d8218a54aa408572b01792",
-      "bytes": 16592,
+      "sha256": "5bd59d82430a2e0e096c05e2f8798e0d51b9f974bb0971c53e4cee971e83833f",
+      "bytes": 16999,
       "mode": 420
     },
     "MANIFEST.md": {
@@ -206,8 +206,8 @@
       "mode": 420
     },
     "PROGRESS.md": {
-      "sha256": "b63ce467c0a54cdfe2e057921a44e69bf734aad0344af3da559ee137692ef630",
-      "bytes": 5158,
+      "sha256": "cbdef17b68566044e27c44f11eb4202bc3f90e400aa83ee724b8b26920b3f6c8",
+      "bytes": 5424,
       "mode": 420
     },
     "README.md": {
@@ -226,8 +226,8 @@
       "mode": 420
     },
     "TRACEABILITY_MATRIX.md": {
-      "sha256": "37802e575b156db7238f03c84585194c675b4e656db039104262cc7727c6dac1",
-      "bytes": 17866,
+      "sha256": "a4fa5e1cc2f9298813a08ba4972340a60e8370cba52fdfbb450f085016bc669d",
+      "bytes": 18147,
       "mode": 420
     },
     "examples/CONCEPTUAL_CONTRACT_EXAMPLES.md": {
@@ -281,8 +281,8 @@
       "mode": 420
     },
     "handoffs/PHASE_01_FILE_INVENTORY.json": {
-      "sha256": "370db70f332ed4efe13dfe6aed73ad069a6c5077cbe4932e65fe401e4104788e",
-      "bytes": 179748,
+      "sha256": "a4b4fe4c2ead5d4f3c904e7b41fa96fb7079d23d5673129c8998ab7ebaffb158",
+      "bytes": 180187,
       "mode": 420
     },
     "handoffs/PHASE_01_INPUTS.json": {
@@ -291,8 +291,8 @@
       "mode": 420
     },
     "handoffs/PHASE_01_OFFLINE_HANDOFF.md": {
-      "sha256": "b2868ff9cbc765312721686347cb9434370f6220bc15c39f50debeb332cae2e5",
-      "bytes": 17014,
+      "sha256": "c2601cf1155075f9cc5eb4cac16421c55b10a109cf14457a4a011bb6f16200c9",
+      "bytes": 17051,
       "mode": 420
     },
     "handoffs/PHASE_01_PRESERVATION_AUDIT.md": {
@@ -301,13 +301,13 @@
       "mode": 420
     },
     "handoffs/PHASE_01_RUNTIME_QC_HANDOFF.md": {
-      "sha256": "956d82ff1a9629ac2d951725c68a335f3241a50939ffcfe8cf8eb98e8a8b7a4f",
-      "bytes": 18901,
+      "sha256": "c8ebce23ec31a149a1e3564b3d295811f4de77f5d7c0442c6289977acdb6939e",
+      "bytes": 18920,
       "mode": 420
     },
     "handoffs/PHASE_01_RUNTIME_QC_REPORT.md": {
-      "sha256": "7ee9072e28760d5619f6ced6751bb3818b4c58c7c0118d90407fb4591c288f8c",
-      "bytes": 8675,
+      "sha256": "4051926b060f1fba56463526c2fa0a99359fbdfaf068949d2400a504328bf9ef",
+      "bytes": 13034,
       "mode": 436
     },
     "handoffs/PHASE_01_STATIC_CHECKS.json": {

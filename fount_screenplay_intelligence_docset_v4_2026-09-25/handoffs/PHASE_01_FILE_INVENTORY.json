@@ -2215,7 +2215,7 @@
     "packages/fount_probe/test/writing_policies_test.exs"
   ],
   "runtime_qc": {
-    "status": "QC_BLOCKED",
+    "status": "COMPLETE",
     "applied_fount_commit": "0cc296cca35d1040166bc34e5b92922b02c98c5e",
     "applied_docset_commit": "d87ad39d3c79d4097c96d7f85c6ae2956b9afa59",
     "source_provenance": "current working-tree bytes after runtime QC, not retroactive authentication of raw input attachments",
@@ -3110,262 +3110,262 @@
         "mode": 436
       },
       "packages/fount_probe/.formatter.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/CHANGELOG.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/LICENSE": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/README.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/examples/README.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/examples/live.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/guides/architecture.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/guides/comparison-and-ablation.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/guides/investigations-and-evidence.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/guides/tools-and-catalog.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/access.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/action.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/action/layout.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/budget.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/catalog.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/cli.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/comparison.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/completion.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/constraints.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/continuity.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/dependencies.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/dialogue.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/extraction.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/inventory.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/investigation.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/jev.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/knowledge.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/knowledge_trace.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/knowledge_trace/behavior.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/launcher.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/live_example.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/profile.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/projection.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/report.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/retrieval.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/saved_records.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/scene_mechanics.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/search.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/state.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/strategy_contrast.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/voice.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/writing/decision_policy.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/writing/evidence.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/writing/executor.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/mix/tasks/fount.probe.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/mix/tasks/fount.search.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/mix.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/mix.lock": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/README.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/access.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/action.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/continuity.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/dependencies.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/dialogue.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/knowledge_behavior.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/knowledge_trace.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/retrieval.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/strategy_contrast.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/voice.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/adjacent_extraction_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/catalog_continuation_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/changed_continuity_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/completion_repair_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/constraint_contract_names_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/continuation_constraints_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/continuation_projection_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/continuation_voice_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/invention_policy_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/inventory_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/investigation_contract_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/knowledge_behavior_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/knowledge_reveal_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/knowledge_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/profile_continuation_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/profile_threshold_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/retrieval_exact_continuation_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/same_scene_dependencies_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/saved_records_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/scene_count_scope_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/search_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/selection_boundary_continuation_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/state_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/test_helper.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/typed_constraint_targets_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/writing_policies_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_workshop/CHANGELOG.md": {
         "state": "present",
@@ -3579,7 +3579,7 @@
       },
       "packages/fount_workshop/mix.exs": {
         "state": "present",
-        "sha256": "0fe9a0611141f32890aafd0dd532f75bd596b46ce8672bc17658bfa4ffaed1d9",
+        "sha256": "405285368304c354982b68d79e287c5c58e32c60a0d8ebb41d2cf77218e35c43",
         "bytes": 3283,
         "mode": 436
       },
@@ -4168,265 +4168,265 @@
         "mode": 436
       },
       "packages/fount_probe/.formatter.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/CHANGELOG.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/LICENSE": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/README.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/assets/fount_probe.svg": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/examples/README.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/examples/live.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/guides/architecture.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/guides/comparison-and-ablation.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/guides/investigations-and-evidence.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/guides/tools-and-catalog.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/access.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/action.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/action/layout.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/budget.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/catalog.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/cli.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/comparison.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/completion.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/constraints.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/continuity.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/dependencies.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/dialogue.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/extraction.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/inventory.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/investigation.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/jev.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/knowledge.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/knowledge_trace.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/knowledge_trace/behavior.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/launcher.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/live_example.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/profile.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/projection.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/report.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/retrieval.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/saved_records.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/scene_mechanics.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/search.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/state.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/strategy_contrast.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/voice.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/writing/decision_policy.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/writing/evidence.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/fount_probe/writing/executor.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/mix/tasks/fount.probe.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/lib/mix/tasks/fount.search.ex": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/mix.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/mix.lock": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/README.md": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/access.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/action.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/continuity.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/dependencies.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/dialogue.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/knowledge_behavior.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/knowledge_trace.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/retrieval.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/strategy_contrast.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/priv/profiles/voice.json": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/adjacent_extraction_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/catalog_continuation_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/changed_continuity_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/completion_repair_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/constraint_contract_names_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/continuation_constraints_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/continuation_projection_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/continuation_voice_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/invention_policy_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/inventory_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/investigation_contract_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/knowledge_behavior_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/knowledge_reveal_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/knowledge_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/profile_continuation_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/profile_threshold_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/retrieval_exact_continuation_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/same_scene_dependencies_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/saved_records_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/scene_count_scope_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/search_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/selection_boundary_continuation_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/state_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/test_helper.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/typed_constraint_targets_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_probe/test/writing_policies_test.exs": {
-        "state": "absent"
+        "state": "deleted"
       },
       "packages/fount_workshop/lib/fount_workshop/analysis_example.ex": {
         "state": "present",
@@ -4532,13 +4532,13 @@
       },
       "packages/fount_workshop/mix.exs": {
         "state": "present",
-        "sha256": "0fe9a0611141f32890aafd0dd532f75bd596b46ce8672bc17658bfa4ffaed1d9",
+        "sha256": "405285368304c354982b68d79e287c5c58e32c60a0d8ebb41d2cf77218e35c43",
         "bytes": 3283,
         "mode": 436
       },
       "packages/fount_workshop/mix.lock": {
         "state": "present",
-        "sha256": "ce1bd5d752ea7ece4caff53d221c81b8de425a63ce24b46930b77d8baef0aa47",
+        "sha256": "17ab894bf96b86e0ae4ffc345d284552f8571e037200900e8371f0b9d11b68e8",
         "bytes": 16678,
         "mode": 436
       },
@@ -4576,7 +4576,9 @@
       "All 86 declared Probe deletions are absent; the separately excluded tracked SVG was reviewed and removed as the 87th file.",
       "One applied root mix.exs result was already divergent from the offline manifest before QC.",
       "The original 86 deletion preimages matched only the documented terminal-LF variant at intake.",
-      "Generated retired-package output and stale BEAMs were preserved outside the repository."
-    ]
+      "Generated retired-package output and stale BEAMs were preserved outside the repository.",
+      "Workshop now resolves published Core 0.9.1, ASM 0.17.1 and Inference 0.5.0; Mix regenerated its lock. Live Luna alternatives failures are explicit user-authorized output validation debt."
+    ],
+    "post_qc_fount_commit": "b82b6560da3fed3955e51a52f3a1d613d5141513"
   }
 }

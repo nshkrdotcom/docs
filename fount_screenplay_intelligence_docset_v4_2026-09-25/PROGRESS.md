@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current next phase:** Phase 1 — Direct Architecture Supersession and `fount_probe` Removal
+**Current state:** Phase 1 complete; Phase 2 not started
 
 ## Status values
 
@@ -18,7 +18,7 @@ Runtime QC may establish engineering completion; phases with required human/doma
 
 | Phase | Name | Status | Offline overlay | Runtime QC report | Notes |
 |---:|---|---|---|---|---|
-| 1 | Direct Architecture Supersession and Probe Removal | QC_BLOCKED | `fount_phase_01_overlay.zip` | `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | Engineering, storage and deterministic writer gates pass; tagged SDK release provenance and live Luna completion remain unresolved |
+| 1 | Direct Architecture Supersession and Probe Removal | COMPLETE | `fount_phase_01_overlay.zip` | `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | Engineering, storage, writer and architecture gates pass; live Luna alternatives output failures are user-authorized validation debt |
 | 2 | Observe Measurement Substrate Hardening | NOT_STARTED | — | — | Contracts, context schemas, calibration, L1, Sandbox |
 | 3 | Story-World Pure Core | NOT_STARTED | — | — | StoryWorld namespace |
 | 4 | Temporal and Forward-Reader Engine | NOT_STARTED | — | — | Temporal + Reader pure reducers |
@@ -45,6 +45,7 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-26 | — | Screenplay-first research and four-XML handoff revision | documents 32–36 | Specification expanded; no implementation phase completed |
 | 2026-09-26 | 1 | Source implementation delivered | `fount_phase_01_overlay.zip`; attachment identities in `handoffs/PHASE_01_INPUTS.json` | OFFLINE_IMPLEMENTED; runtime and real-checkout verification pending |
 | 2026-09-26 | 1 | Runtime QC and repairs | applied Fount `0cc296c`, docset `d87ad39`; `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | QC_BLOCKED; four-package tests, architecture, DB/PDF and deterministic writer demonstration passed; live completion and SDK release identity open |
+| 2026-09-26 | 1 | Runtime QC completion and release follow-up | Fount `b82b656`; SDK `e757598`; Inference `3750a03`; `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` | COMPLETE; Core/SDK/ASM/Inference releases verified and published; large-prompt transport fixed; Luna alternatives model-output debt retained |
 
 ## Non-negotiable progress rule
 

@@ -6,11 +6,11 @@
 
 **Applied baselines:** Fount `0cc296cca35d1040166bc34e5b92922b02c98c5e`; docset `d87ad39d3c79d4097c96d7f85c6ae2956b9afa59`
 
-**Post-QC Fount commit:** `b1953288ffd8ea514f419f2be9faf4cba6f49a69`
+**Post-QC Fount commit:** `b82b6560da3fed3955e51a52f3a1d613d5141513` (follow-up dependency repair)
 
-**Dependency source commits:** SystemOneSDK `e757598a89e549274b979f0e77c6a4b2b6667752`; Inference `a1f91ee33d082fc726b0dfdc3ccf619fca9121b9`
+**Dependency source commits:** SystemOneSDK `e757598a89e549274b979f0e77c6a4b2b6667752`; Inference `3750a03ec62a3c9da11be9caa4dc911ebbbb9801`
 
-**Status:** QC_BLOCKED
+**Status:** COMPLETE (engineering; live Luna alternatives debt explicitly accepted by user)
 
 ## Applied state and source integrity
 
@@ -21,8 +21,8 @@ The original four inputs were raw, unsealed Repomix exports. Their attachment id
 ## Toolchain and dependency resolution
 
 - Erlang/OTP 29, Elixir/Mix 1.20.3, Python 3.14.4, Node 24.19.0, npm 11.17.0, PostgreSQL 18.6, Poppler and eSpeak NG.
-- `FOUNT_SYSTEM_ONE_SDK_PATH=/home/home/p/g/n/system_one_sdk/packages/system_one_sdk` resolved the checked-out SystemOneSDK 0.6.0 source through Observe for all consumers. New Observe and Intelligence locks came from Mix. Workshop's stale `system_one_sdk` 0.5.0 lock entry was removed with `mix deps.unlock system_one_sdk` followed by `mix deps.get`; its effective dependency tree resolves the same 0.6 source through Observe. Inference remains the Hex 0.4.1 resolution.
-- `mix hex.info system_one_sdk` reported latest published release 0.5.0. Both local and remote Git tag lists were empty. The user's requested branch from a tagged Hex release therefore could not be created without inventing a tag or falsely identifying a commit. Hex 0.5.0 was fetched separately for inspection and also defaults to `jev-latest`; the local 0.6.0 source uses that same default. No sibling repository was edited.
+- `FOUNT_SYSTEM_ONE_SDK_PATH=/home/home/p/g/n/system_one_sdk/packages/system_one_sdk` resolves the checked-out SystemOneSDK 0.6.0 source through Observe for all consumers. Workshop now resolves published Inference 0.5.0, ASM 0.17.1 and Core 0.9.1 through Mix-generated locks. The SDK 0.6.0 requirement still requires the local path; it is not a published Hex release.
+- Hex 0.5.0's 94 packaged files matched Git commit `382c95978f2967591d16053c27ba0ab5071dc27b` byte-for-byte. A local plain `v0.5.0` tag was created there and branch `fount-phase1-sdk` was made from that tag and advanced to `e757598a89e549274b979f0e77c6a4b2b6667752`. Neither the SystemOneSDK branch nor tag was pushed. The local 0.6.0 source and packaged 0.5.0 both default to the single Jev model alias `jev-latest`.
 - The disposable test database was created and migrated at `127.0.0.1:55432`, database `fount_phase1_qc`, user `home`, with local trust authentication. No production or existing user database was used.
 
 ## Executed checks
@@ -44,6 +44,21 @@ The original four inputs were raw, unsealed Repomix exports. Their attachment id
 
 The final formatting, lock, compile, 198 unit-test, compiled architecture, strict Credo, docs, Dialyzer, 25 integration-test, package-build and offline-handoff reruns all exited zero after the last source refactor. The offline handoff command is `bash scripts/verify_handoff.sh --offline` because that script is not executable in this checkout. Command logs and status tables are outside the repositories under `/tmp/fount-phase1-*`.
 
+### 2026-09-26 follow-up release and runtime checks
+
+The previous ASM/Core releases exposed an oversized prompt transport failure in the real Workshop alternatives workflow: a 73,741-byte prompt was passed as a `codex exec` argv value and the erlexec port returned `:einval`. Core 0.9.1 now sends Codex prompts over 32,768 bytes on bootstrap stdin and passes `-` as the CLI prompt argument. A focused regression checks the full 73,741-byte payload and a real Core session with a roughly 70 KB prompt reached a terminal result. ASM's real Core lane with the same large prompt returned `{:ok, :end_turn, true, 2}`. The transport failure was a Core argument-size defect, not a provider/model error.
+
+| Release | Git commit/tag | Prepublish verification | Hex result |
+|---|---|---|---|
+| Core 0.9.1 | `2ea02df` / `v0.9.1` | `mix ci` passed, 404 tests, Dialyzer zero errors; real 70 KB Luna session passed | Published and pushed |
+| Codex SDK 0.21.1 | `299abad` / `v0.21.1` | 1564 tests, zero failures (4 skipped, 16 excluded); compile, Credo, Dialyzer, docs and package build passed; real `Codex.Thread.run` with Luna succeeded | Published and pushed |
+| ASM 0.17.1 | `dc28a00` / `v0.17.1` | 397 tests, zero failures (6 excluded); compile, Credo, Dialyzer, docs and package build passed; real Codex SDK lane and 70 KB Core lane succeeded | Published and pushed |
+| Inference 0.5.0 | `3750a03` / `v0.5.0` | 130 tests, zero failures; compile, Credo, Dialyzer, docs and package build passed; real ASM/Core Luna example returned text | Published and pushed |
+
+An earlier 0.9.0/0.21.0/0.17.0 release sequence had lacked direct real examples before publication. The patch releases above were verified with real examples before publication. Inference's local `Mix.install` live example required a forced fresh resolution because its prior install cache still held Core 0.9.0; the example now sets `force: true`. No exact wording from a model was used as a unit-test oracle.
+
+After upgrading Fount Workshop to these releases, the root 198 tests passed, the compiled architecture gate passed (209 source files, 230 modules, zero violations), `scripts/verify_handoff.sh --offline` passed all 17 recorded checks, both PostgreSQL integration suites passed (11 and 14), strict Credo, Dialyzer, docs, lock check and the Workshop package build passed. Logs are under `/tmp/fount-phase1-final-*` and `/tmp/fount-handoff-offline-20260926T163656-177477`.
+
 ## Corrections and preservation
 
 The repairs removed the physical retired package and stale generated BEAMs, resolved package locks through Mix, corrected warnings in the SDK boundary and architecture gate, placed Intelligence evidence tests with their owning package, retained the Workshop neutral provider-error boundary, and made local Hex builds emit versioned dependency metadata. Strict Credo fixes used ordinary aliases and extracted control-flow helpers without removing meaningful assertions or weakening the gate. The 37 production and 26 test mappings in the preservation audit remain represented by source and migrated tests. Existing development, revision, comparison, review, acceptance, recovery, table-read, speech and export paths remain present. Unit and integration suites exercised them; additional live modes that require successful completion were not claimed as passed.
@@ -54,6 +69,12 @@ The deterministic Phase 1 demonstration ran in both decisions against the dispos
 
 The measurement-only `examples/analysis.exs --mode knowledge` completed three perspectives with the official TypeSafe endpoint and the SDK's `jev-latest` default; no private screenplay was sent. In the live alternatives run, provider response metadata identified `jev-1.13.0` while the request fingerprint retained mutable alias `jev-latest`. This is model identity evidence, not a quality judgment.
 
-The authorized small Workshop attempt used `FOUNT_CODEX_MODEL=gpt-6-luna` and `FOUNT_CODEX_REASONING_EFFORT=low` on the repository's public fixture. It ended `partial_live_run` after two inference calls, with the neutral stored error `{:completion_provider_error, :invalid}` during preparation. No candidate was generated or accepted. The run artifact is under `/tmp/fount-phase1-luna-alternatives`; it is an actual failure, not a pass and not a test of creative quality. The deterministic Mock/Sandbox writer demonstration supplies output-independent contract coverage. This live route still needs a supported ASM model/configuration or an explicit user waiver recorded as debt.
+The first authorized Workshop attempt used `FOUNT_CODEX_MODEL=gpt-6-luna` and low effort on the repository's public fixture. It ended `partial_live_run` with `{:completion_provider_error, :invalid}` because ASM 0.16.0 lacked that model. After the model-catalog updates, a smaller live `bridge` run completed in 94,045 ms with three inference calls, generated review/PDF artifacts and no acceptance (`/tmp/fount-phase1-luna6-bridge`). This proves the public writing path can reach the real provider and leave output as a candidate.
 
-The requested SDK branch from a tagged Hex release remains unresolved because no upstream Git tag exists and 0.6.0 has not been published to Hex. A future release/tag or an explicit source identity decision is needed before this can be claimed. The original raw-input provenance limitation also remains disclosed. Phase 1 is therefore **QC_BLOCKED**, despite passing engineering and writer fixture gates. Phase 2 has not started.
+The subsequent live `alternatives` retry used Core 0.9.1. Process inspection showed `codex exec ... -`, proving the previously failing 73,741-byte prompt moved over stdin. The run lasted 348,428 ms and ended `partial_live_run`: `approach_practical_evasion` had `{:completion_provider_error, :timeout}`; `approach_costly_admission` produced `{:invalid_completion, {:uninspected_citations, [...]}}`. Fount correctly rejected the uninspected evidence references. It produced no accepted candidate. The exact run record is `/tmp/fount-phase1-luna-alternatives-core091/alternatives-b6f1b0d0-d741-473f-a994-4192d44564b4/run.json`. This is a live model-output failure, not a pass. The user explicitly directed low-effort Luna testing with expected model-output failures and deferred stronger-model comparison; this remains validation debt, not a creative or audience result. Deterministic Mock/Sandbox tests and stored writer demonstrations establish output-independent contract behavior.
+
+The tagged SDK provenance concern is resolved locally by the package-byte comparison, plain `v0.5.0` tag and `fount-phase1-sdk` branch described above. The current 0.6.0 SDK remains a local-path dependency and is not published. The original four raw, unsealed attachments remain unauthenticated as historical checkout snapshots; fresh sealed current-source snapshots establish the next handoff baseline, without retroactive provenance claims. No unknown retired-package file remains. Phase 1 engineering is **COMPLETE** under the user's explicit Luna-output waiver; Phase 2 remains NOT_STARTED.
+
+## Final source handoff
+
+The current source was packed and sealed with `scripts/seal_handoff_snapshot.py` into `/tmp/fount-phase1-final-packet`. The Fount seal covers 408 files at `b82b656` (SHA-256 `d800f285584d8257030a5b189d146fdf23a247b4b56d0dff9eaa439b77c5c36f`); the SystemOneSDK seal covers 254 files at `e757598` (SHA-256 `bc12acf58c0902f261b3f505b34473b1be77053f52015d405a5f022ab7f7917d`); the Inference seal covers 69 files at `3750a03` (SHA-256 `7f44e4d69f86201f01f38d48f0f7b866d424cf28468dcc2d5ffdeebd7e333d86`). The SDK client configuration test was reviewed and explicitly included after Repomix's conservative security exclusion; its strings use dummy `example.test` credentials, not live secrets. The docset seal and complete ZIP are recorded in the packet's preparation record after this report is committed. `PHASE_01_DOCSET_HASHES.json` records exact current docset file identities and omits itself to avoid recursion.

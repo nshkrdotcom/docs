@@ -2,7 +2,7 @@
 
 **State: OFFLINE_IMPLEMENTED. Runtime QC is not complete. Do not advance to Phase 2.**
 
-**Historical handoff notice:** This paragraph records the source-writing state. Runtime QC subsequently ran from the applied commits and is currently `QC_BLOCKED`; see `PHASE_01_RUNTIME_QC_REPORT.md` and `PROGRESS.md`. The original static checks remain historical evidence, not the current gate status.
+**Historical handoff notice:** This paragraph records the source-writing state. Runtime QC subsequently ran from the applied commits and completed Phase 1 under the user's explicit Luna-output waiver; see `PHASE_01_RUNTIME_QC_REPORT.md` and `PROGRESS.md`. The original static checks remain historical evidence, not the current gate status.
 
 ## Writer outcome
 
