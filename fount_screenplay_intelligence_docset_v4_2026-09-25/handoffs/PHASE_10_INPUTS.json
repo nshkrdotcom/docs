@@ -1,0 +1,86 @@
+{
+  "phase": 10,
+  "date": "2026-09-27",
+  "identification_rule": "Inputs were identified by repository contents, package topology, modules, docs and progress records; attachment filenames were not used as authority.",
+  "inputs": [
+    {
+      "role": "Fount",
+      "raw_xml_sha256": "aac97f2d6f745756ec3b023bcd477ddd9d27e011dfb5691228cadc90f3fcc410",
+      "raw_bytes": 2813603,
+      "extracted_files": 546,
+      "content_identity": "Four-package Fount workspace: packages/fount, packages/fount_observe, packages/fount_intelligence and packages/fount_workshop, with Phase-9 Workshop Intelligence integration and handoff/QC state.",
+      "documented_verified_commit": "361a9fd04752d947e0eaf12edbcf0fbd4d1bad54",
+      "documented_verified_tree": "2d25494002d6b711185be83c6c6b0b44b92d3068"
+    },
+    {
+      "role": "SystemOneSDK",
+      "raw_xml_sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+      "raw_bytes": 875342,
+      "extracted_files": 253,
+      "content_identity": "System One poncho workspace containing system_one_contracts, system_one_sdk, system_one_bumblebee and system_one_server.",
+      "inspected_version": "0.6.0"
+    },
+    {
+      "role": "Inference",
+      "raw_xml_sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
+      "raw_bytes": 299421,
+      "extracted_files": 69,
+      "content_identity": "Provider-neutral Inference workspace under apps/inference with adapters including ASM.",
+      "inspected_version": "0.5.0"
+    },
+    {
+      "role": "Agent Session Manager",
+      "raw_xml_sha256": "67988c9aec015ce189e16078b18639f60873d244da63e3275d33707add5702db",
+      "raw_bytes": 1608267,
+      "extracted_files": 275,
+      "content_identity": "ASM repository with lib/asm session, run, provider backend, provider-feature and inference-endpoint boundaries.",
+      "inspected_version": "0.17.1"
+    },
+    {
+      "role": "Current docset",
+      "raw_xml_sha256": "c55b995dd00d3f9602a2974a58e99dd58effeaa0687fcf539b206bc1e4ed18cc",
+      "raw_bytes": 1692409,
+      "extracted_files": 150,
+      "content_identity": "Fount implementation docset documents 00–36 plus handoffs through Phase 9; PROGRESS.md marks Phases 1–9 COMPLETE and Phase 10 first NOT_STARTED."
+    }
+  ],
+  "progress_authority": {
+    "first_unfinished_phase": 10,
+    "name": "Durable Analysis Persistence, Reuse, and Recomputation",
+    "prior_phase": "Phase 9 COMPLETE on engineering QC"
+  },
+  "external_apis_inspected": {
+    "SystemOneSDK 0.6.0": [
+      "SystemOneSDK.version/0",
+      "SystemOneSDK.new_client/1",
+      "SystemOneSDK.system_one/4",
+      "SystemOneSDK.noul/2",
+      "SystemOneSDK.choice/3",
+      "SystemOneSDK.score/3",
+      "SystemOneSDK.prepare/1",
+      "SystemOneSDK.evaluate/4",
+      "SystemOneSDK.evaluate_stream/4",
+      "SystemOneSDK.evaluate_many/4",
+      "SystemOneSDK.list_models/2"
+    ],
+    "Inference 0.5.0": [
+      "Inference.client/1",
+      "Inference.capabilities/1",
+      "Inference.client!/1",
+      "Inference.complete/3",
+      "Inference.stream/3"
+    ],
+    "ASM 0.17.1": [
+      "ASM.start_session/1",
+      "ASM.stop_session/1",
+      "ASM.query/3",
+      "ASM.stream/3",
+      "ASM.session_id/1",
+      "ASM.session_info/1"
+    ]
+  },
+  "phase_boundary_notes": [
+    "Phase 10 adds no direct SystemOneSDK, Inference or ASM calls. System One remains behind Observe; Inference remains Workshop generation infrastructure; ASM remains behind Inference.",
+    "Existing Observe cache identity/model-stability contracts and existing pure Intelligence recomputation APIs are reused rather than replaced."
+  ]
+}

@@ -85,7 +85,8 @@
 - `handoffs/PREPARATION_2026-09-26.md` — source baselines and actual preparation checks; not a completed implementation phase.
 - `handoffs/PHASE_03_RUNTIME_QC_REPORT.md` — applied source identity, engineering repairs and gates, and user-authorized Level-A validation debt.
 - `handoffs/PHASE_08_RUNTIME_QC_REPORT.md` — verified Phase-8 engineering checkpoint.
-- `handoffs/PHASE_09_OFFLINE_HANDOFF.md` / `PHASE_09_RUNTIME_QC_HANDOFF.md` — current Phase-9 source delivery and Codex repair/QC instructions.
+- `handoffs/PHASE_09_RUNTIME_QC_REPORT.md` — verified Phase-9 engineering checkpoint.
+- `handoffs/PHASE_10_OFFLINE_HANDOFF.md` / `PHASE_10_RUNTIME_QC_HANDOFF.md` — current Phase-10 source delivery and Codex repair/QC instructions.
 
 ## Five XML phase inputs
 
@@ -99,7 +100,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–9 are COMPLETE on engineering QC; Phase 10 remains NOT_STARTED. Phase 6, Phase 7 and Phase 8 runtime QC are recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`, `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. Phase 3/4/5/6/7/8 human studies are unperformed validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–9 are COMPLETE on engineering QC; Phase 10 is OFFLINE_IMPLEMENTED and awaits runtime QC; Phase 11 remains NOT_STARTED. Phase 6, Phase 7 and Phase 8 runtime QC are recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`, `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. Phase 3/4/5/6/7/8 human studies are unperformed validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -227,6 +228,21 @@ Phase 8 runtime QC is COMPLETE at Fount `f7f4d68`; the authoritative command/rep
 - `handoffs/PHASE_09_RUNTIME_QC_REPORT.md`: verified runtime results, repairs, writer loop and final Fount identity.
 - `handoffs/PHASE_09_DOCSET_HASHES.json`: complete runtime-QC docset identities, excluding recursive checksum files.
 
-## Current Phase 9 checkpoint
+## Phase 9 verified checkpoint
 
-Phase 9 is `COMPLETE` on runtime engineering and preservation QC at Fount `361a9fd`; see `handoffs/PHASE_09_RUNTIME_QC_REPORT.md` and the post-repair `PHASE_09_FILE_INVENTORY.json`. The optional human review is unperformed validation debt under D046. Phase 10 is `NOT_STARTED`.
+Phase 9 is `COMPLETE` on runtime engineering and preservation QC at Fount `361a9fd`; see `handoffs/PHASE_09_RUNTIME_QC_REPORT.md` and the post-repair `PHASE_09_FILE_INVENTORY.json`. The optional human review is unperformed validation debt under D046.
+
+## Phase 10 delivery records
+
+- `handoffs/PHASE_10_INPUTS.json`: five content-identified XML identities, hashes, versions and inspected external public APIs.
+- `handoffs/PHASE_10_FILE_INVENTORY.json`: exact 27-operation overlay inventory with preimage/result hashes, sizes and modes.
+- `handoffs/PHASE_10_IMPLEMENTATION_MATRIX.md`: durable persistence/reuse/recomputation and writer outcome mapped to source/tests.
+- `handoffs/PHASE_10_PRESERVATION_AUDIT.md`: writer/canon/package-boundary preservation and runtime regressions.
+- `handoffs/PHASE_10_STATIC_CHECKS.json`: executed offline evidence and explicit unrun runtime/database gates.
+- `handoffs/PHASE_10_OFFLINE_HANDOFF.md`: source-delivery account, risks and Phase-11 stop line.
+- `handoffs/PHASE_10_RUNTIME_QC_HANDOFF.md`: Codex instructions for the user-applied Phase-10 state.
+- `handoffs/PHASE_10_DOCSET_HASHES.json`: complete Phase-10 source-delivery docset identities, excluding recursive checksum files.
+
+## Current Phase 10 checkpoint
+
+Phase 10 is `OFFLINE_IMPLEMENTED`, not COMPLETE. The strict source overlay is `Fount_Phase_10_Durable_Analysis_overlay.zip` with 27 operations and SHA-256 `95c8d53bf8eba195bce384b85f398d7bc8ca12e2ff5cbb1c4af3472b5eb92813`. Runtime migration/compile/ExUnit/preservation evidence is pending. Phase 11 is `NOT_STARTED`.

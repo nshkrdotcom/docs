@@ -276,3 +276,15 @@ The Phase-9 implementation pass used the supplied five raw snapshots as the auth
 - **Current docset** is documents 00–36 plus Phase-1 through Phase-8 runtime records. Its authoritative progress state made Phase 9 Workshop Intelligence Integration the first unfinished phase.
 
 No Elixir/Mix/runtime or human-usefulness result is inferred from source inspection. Those gates remain assigned to Codex in `handoffs/PHASE_09_RUNTIME_QC_HANDOFF.md`.
+
+## M. Phase 10 five-XML source inspection — 2026-09-27
+
+The Phase-10 implementation pass used only the supplied five snapshots as authority for repository/API facts and identified them by contents rather than attachment filenames. Exact raw SHA-256, byte counts, file counts and API lists are in `handoffs/PHASE_10_INPUTS.json`.
+
+- **Fount** is the four-package `fount` / `fount_observe` / `fount_intelligence` / `fount_workshop` workspace at the Phase-9 runtime-corrected checkpoint recorded as Fount `361a9fd` / tree `2d25494`. The source already separates reusable Observe `MeasurementResult` from fresh `Observation`, has durable-cache model stability policy, and exposes pure StoryWorld/Reader recomputation boundaries.
+- **System One SDK 0.6.0** is the poncho workspace with contracts, SDK, Bumblebee and server packages. The inspected public SDK includes `new_client`, semantic question helpers, preparation/evaluation/streaming/batch and model-listing functions. Phase 10 adds no direct call to it.
+- **Inference 0.5.0** is the provider-neutral workspace under `apps/inference`, including the ASM adapter. Its public client/capabilities/complete/stream facade remains Workshop generation infrastructure; Phase 10 adds no direct Intelligence/Core call.
+- **Agent Session Manager 0.17.1** is the session/run/provider-backend/inference-endpoint repository. Public session/query/stream lifecycle was inspected; Phase 10 adds no direct ASM dependency.
+- **Current docset** is documents 00–36 plus handoffs through Phase 9. `PROGRESS.md` makes Phase 10 Durable Analysis Persistence, Reuse, and Recomputation the first unfinished phase.
+
+A source-order correction was required: Workshop performs Revision Intelligence before persisting the candidate. Phase-10 analysis identity therefore records exact candidate/revision UUID plus revision content hash without a premature candidate/revision FK; D048 records the decision. No Elixir/Mix/PostgreSQL or human-usefulness result is inferred from source inspection.

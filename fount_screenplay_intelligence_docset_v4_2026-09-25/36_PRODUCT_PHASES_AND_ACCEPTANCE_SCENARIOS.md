@@ -207,3 +207,9 @@ Fountain. It also shows an unavailable-provider result with no false finding.
 Execution status: NOT_RUN in the source-writing environment. Codex must run and
 inspect the actual artifacts before this demonstration satisfies the phase exit.
 No human usefulness or screenplay-quality claim is made.
+
+## Phase 10 demonstration delivery record
+
+Written: `packages/fount_workshop/integration/phase_ten_resume_history_test.exs` plus the durable-analysis persistence integration in `packages/fount_intelligence/integration/phase_ten_durable_analysis_test.exs`. The writer regression uses the actual Session/Candidate/Review/Core persistence surfaces: two alternatives exist, one is explicitly rejected, the other is left unchosen, a durable analysis record remains historical, and `Session.resume/3` must preserve both decisions without a new scripted generation call or canonical head change.
+
+Execution status: **NOT_RUN** in the source-writing environment because Elixir/Mix/PostgreSQL are unavailable. Codex must execute and inspect the actual database/session state before the Phase-10 writer demonstration satisfies the exit gate. No human usefulness or screenplay-quality claim is made. Phase 11 is not implemented in this delivery.

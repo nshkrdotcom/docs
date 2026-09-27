@@ -375,3 +375,15 @@ ASM is included because Inference exposes an actual ASM agent-session adapter an
 **Basis:** Current five-input handoff and inspection of Inference 0.5.0 `Inference.Adapters.ASM` against Agent Session Manager 0.17.1 public `query/3`, `stream/3`, `start_session/1`, `stop_session/1`, and `ASM.ProviderFeatures` APIs.
 
 **Status:** Adopted; supersedes D036 for all new transport packets.
+
+## Phase 10 persistence decision — 2026-09-27
+
+### D048 — Exact durable-analysis identity follows the existing Workshop save order
+
+**Decision:** Durable analysis records use exact screenplay ID, revision UUID **and revision content hash**, plus session/candidate lineage where present. Phase 10 does not require a revision/candidate foreign key for derived analysis that Workshop creates before `save_candidate/3`, because the existing verified writer loop runs post-candidate Revision Intelligence before persisting the candidate row. Reordering that loop solely to satisfy storage would risk changing working generation/review behavior.
+
+Historical analysis dependencies are keyed per analysis run and are never overwritten by a later run for the same diagnosis/report subject. Recomputation selects the latest applicable subject run while older rows remain available for audit. Reusable L2 cache eviction is independent of session/candidate/analysis history and canonical edit retention.
+
+**Reason:** This preserves existing screenplay-writing sequencing and explicit review semantics while retaining exact derived-analysis identity and auditability. UUID + content hash detects identity mismatch without pretending a not-yet-persisted candidate row already exists.
+
+**Status:** Adopted in the Phase-10 offline implementation; runtime PostgreSQL verification remains pending.

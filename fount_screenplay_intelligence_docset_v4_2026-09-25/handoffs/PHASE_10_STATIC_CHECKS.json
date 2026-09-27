@@ -1,0 +1,83 @@
+{
+  "phase": 10,
+  "date": "2026-09-27",
+  "environment": {
+    "elixir_available": false,
+    "mix_available": false,
+    "erlang_available": false
+  },
+  "checks": [
+    {
+      "name": "five XML inputs identified by contents and hashed",
+      "status": "PASS",
+      "evidence": "PHASE_10_INPUTS.json"
+    },
+    {
+      "name": "actual dependency APIs inspected",
+      "status": "PASS",
+      "evidence": "SystemOneSDK 0.6.0, Inference 0.5.0, ASM 0.17.1 source snapshots; no new direct Phase-10 dependency call introduced"
+    },
+    {
+      "name": "Phase 9 + Phase 10 source-contract tests",
+      "status": "PASS",
+      "command": "python3 -m unittest scripts.tests.test_phase_ten_source scripts.tests.test_phase_nine_source -v",
+      "result": "18 tests passed"
+    },
+    {
+      "name": "Python source-check compilation",
+      "status": "PASS",
+      "command": "python3 -m compileall -q scripts/tests"
+    },
+    {
+      "name": "repository-wide Python discovery",
+      "status": "BLOCKED_INPUT_SNAPSHOT",
+      "command": "python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v",
+      "result": "79 tests discovered/run path; one import error: supplied Fount XML omits handoff/prune_deleted_directories.py required by test_prune_deleted_directories.py. Other reached tests passed. This is not recorded as a suite pass."
+    },
+    {
+      "name": "overlay strict dry-run",
+      "status": "PASS",
+      "command": "python3 handoff/apply_overlay.py --root <fresh-baseline> --archive Fount_Phase_10_Durable_Analysis_overlay.zip --dry-run"
+    },
+    {
+      "name": "overlay strict apply and result hashes",
+      "status": "PASS",
+      "result": "27 manifest operations applied to a fresh extracted baseline; archive payload hashes matched manifest"
+    },
+    {
+      "name": "applied-tree reproduction",
+      "status": "PASS",
+      "result": "Applied repository matches desired 556-file source tree byte-for-byte after ignoring the applier backup journal/directory"
+    },
+    {
+      "name": "overlay idempotence preflight",
+      "status": "PASS",
+      "result": "Second dry-run reports every declared path unchanged"
+    },
+    {
+      "name": "Mix formatter/compile/ExUnit",
+      "status": "NOT_RUN",
+      "reason": "Elixir/Mix unavailable in source-writing environment"
+    },
+    {
+      "name": "PostgreSQL migration/integration",
+      "status": "NOT_RUN",
+      "reason": "Runtime/database phase assigned to Codex"
+    },
+    {
+      "name": "compiled architecture/Credo/Dialyzer/ExDoc/Hex package checks",
+      "status": "NOT_RUN",
+      "reason": "Elixir/Mix unavailable"
+    },
+    {
+      "name": "live provider checks",
+      "status": "NOT_RUN",
+      "reason": "Phase 10 does not require a live provider call for offline source delivery"
+    },
+    {
+      "name": "human writer review",
+      "status": "NOT_RUN_OPTIONAL",
+      "reason": "D046; no human usefulness claim"
+    }
+  ]
+}

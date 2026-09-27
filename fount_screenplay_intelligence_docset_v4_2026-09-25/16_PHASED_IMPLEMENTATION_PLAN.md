@@ -706,6 +706,8 @@ Include database integration tests and scenarios proving:
 - reader/StoryWorld recomputation frontiers are correct;
 - historical audit identity remains exact.
 
+**Phase 10 source-delivery checkpoint — 2026-09-27:** `OFFLINE_IMPLEMENTED`, not COMPLETE. The 27-operation overlay adds Core durable derived-analysis tables/API, an optional Intelligence L2 adapter that stores reusable MeasurementResults while Observe rematerializes fresh current-revision Observations, content-addressed safe data assets, exact run/audit/resource history, persisted dependency lookup, and recomputation composed from the existing StoryWorld connected region and Reader presentation suffix. Workshop durable analysis is opt-in and keeps the verified Phase-9 generation/review/acceptance order. The required resume/history writer regression is written. 18 targeted Phase-9/10 Python source-contract tests and strict overlay application/tree/idempotence checks pass offline. Elixir/Mix/PostgreSQL/runtime gates are unrun. Codex must verify/repair Phase 10 and stop before Phase 11.
+
 ---
 
 # Phase 11 — Scaled Calibration, Evaluation Corpus, Robustness, and Live Verification

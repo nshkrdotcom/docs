@@ -1,0 +1,294 @@
+{
+  "phase": 10,
+  "phase_name": "Durable Analysis Persistence, Reuse, and Recomputation",
+  "generated_at": "2026-09-27",
+  "baseline": {
+    "fount_raw_xml_sha256": "aac97f2d6f745756ec3b023bcd477ddd9d27e011dfb5691228cadc90f3fcc410",
+    "documented_verified_fount_commit": "361a9fd04752d947e0eaf12edbcf0fbd4d1bad54",
+    "documented_verified_fount_tree": "2d25494002d6b711185be83c6c6b0b44b92d3068"
+  },
+  "overlay": {
+    "filename": "Fount_Phase_10_Durable_Analysis_overlay.zip",
+    "sha256": "95c8d53bf8eba195bce384b85f398d7bc8ca12e2ff5cbb1c4af3472b5eb92813",
+    "operation_count": 27,
+    "additions": 10,
+    "modifications": 17,
+    "deletions": 0
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "action": "modify",
+      "original_sha256": "6e20ed6b56457f6d52e6938bc0b6fa7fcc4fd248baf2d3aa561d64d625f4a512",
+      "original_terminal_lf_sha256": "bcae22c6b39e64a154c765eaaead6e459a35dcd1a767590dc0506b59a4c904f3",
+      "result_sha256": "4583555e144c2706ba844484e02c6e4a7f269277b6d0757994b4b7719e4bb74c",
+      "mode": 420,
+      "original_bytes": 22990,
+      "result_bytes": 23073
+    },
+    {
+      "path": "packages/fount/CHANGELOG.md",
+      "action": "modify",
+      "original_sha256": "2eab777646257e7d789e199899e0037b2e7429dd651e5651cafb1fd32c4599ba",
+      "original_terminal_lf_sha256": "39929bad46c4178370264a718feb5424711af498c05ff7497e33edab565f17a8",
+      "result_sha256": "1db30b760f42d9bbfcc68e6de1da04649667a296d48c26f73d2d9ac971a0f797",
+      "mode": 420,
+      "original_bytes": 1036,
+      "result_bytes": 1573
+    },
+    {
+      "path": "packages/fount/guides/persistence.md",
+      "action": "modify",
+      "original_sha256": "370632469af7d583b639636829cc10a5e662dd9d2ac4aca93ab0802973702513",
+      "original_terminal_lf_sha256": "6c993a96a30b14963a5282a64ac01230057336f9f7c5526912e8c55eb431b153",
+      "result_sha256": "4eb557fad2007cfb4638a7fcc4a41f9b1b9dd1ddf4e1392167d2d6317a2c832d",
+      "mode": 420,
+      "original_bytes": 2036,
+      "result_bytes": 3217
+    },
+    {
+      "path": "packages/fount/lib/fount/persistence/analysis.ex",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "12723683322b5929d5b275fa1a92599bd7e918c6a2ae0de05939a1ecf806aa74",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 21019
+    },
+    {
+      "path": "packages/fount/lib/fount/persistence/schema.ex",
+      "action": "modify",
+      "original_sha256": "17b54fd2ba465ad3a990f5322cbe8f2b1d942fab265a68ea4ed6992b3682928b",
+      "original_terminal_lf_sha256": "a2eb11dae409310e6a8c0b24d760e6a39acb6bc5ac0ba1d1e84f37a8345cb84b",
+      "result_sha256": "8eb769e57cc41049975fb8c5a3d02cb65ae50b1d304226f6f5bf7f1af39ed7df",
+      "mode": 420,
+      "original_bytes": 7769,
+      "result_bytes": 11027
+    },
+    {
+      "path": "packages/fount/mix.exs",
+      "action": "modify",
+      "original_sha256": "f5142b3728921467bef19a22fb7c45b4323c8bf165782b06efd97bf8de41749f",
+      "original_terminal_lf_sha256": "ad53e24550eeaa089a8447d42a5b77065e8db4fc3b6a1682e7a1547b9dd53a03",
+      "result_sha256": "f701840434d90de8267dd3e01983bd1a0c0d648eb6962f9e3516642e852b8532",
+      "mode": 420,
+      "original_bytes": 4515,
+      "result_bytes": 4553
+    },
+    {
+      "path": "packages/fount/priv/repo/migrations/20260927000000_create_durable_analysis_state.exs",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "a678b50df2c6b36ef27ded1f7def83ac74f036b9b061989cfe6ad61d99c35ff1",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 4622
+    },
+    {
+      "path": "packages/fount_intelligence/CHANGELOG.md",
+      "action": "modify",
+      "original_sha256": "3ffa2552e5ff74760ca02f79f0b2a20b7b7819203c883cafebd90762d41b8606",
+      "original_terminal_lf_sha256": "3c2b40af4d9bcff23a3e2d1912b3dc0cf5ecd28bf4cf199efd0c6547754a138f",
+      "result_sha256": "4ce5e6dc7e996178876a359e9179a6b0a1cb11e7e3d8f7428f3522734961f063",
+      "mode": 420,
+      "original_bytes": 3625,
+      "result_bytes": 4401
+    },
+    {
+      "path": "packages/fount_intelligence/README.md",
+      "action": "modify",
+      "original_sha256": "a563cc02da593322bae2194a8cc37ab6d3bf9864d08bc212532f237332181b8b",
+      "original_terminal_lf_sha256": "edca119c50a91a851962c25d79bf3e8b0b3b2fe1aeeb00d6d93876a0d951077d",
+      "result_sha256": "481913df985724761a9a59d4c046ec54c0c264705be40ba911728c2ca3f61236",
+      "mode": 420,
+      "original_bytes": 5159,
+      "result_bytes": 5877
+    },
+    {
+      "path": "packages/fount_intelligence/guides/durable-analysis.md",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "270a662034bcac063ebe517dc63c40b32407854584036a80eecc84e9ccc6acec",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 4085
+    },
+    {
+      "path": "packages/fount_intelligence/integration/phase_ten_durable_analysis_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "89041063a4f5f247b414fefb29d0f2d30dfb4e0028b1305c5ed6899d499f2d99",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 8451
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence.ex",
+      "action": "modify",
+      "original_sha256": "e88a9c3906ff384cf98cd2d6f8c54a7ce16f8337cc2f2ea514adba06f0075a3d",
+      "original_terminal_lf_sha256": "50cf733b3f8c61e28664054980ca6c188e391cafd53397e81914580809c1fb42",
+      "result_sha256": "713a6a5f84aaeb1816b665da7a3c4a6a71c38e958cf0d135369879472631557a",
+      "mode": 420,
+      "original_bytes": 9112,
+      "result_bytes": 10053
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/acquisition/measurements.ex",
+      "action": "modify",
+      "original_sha256": "032f7d29edaf41053a506b8807cf0d12de192d2b57011c4b1ef0c690f2c9764a",
+      "original_terminal_lf_sha256": "b9576ea8cf1284fbddd63e1995c5804dd09ab4c3ace2839547b4d32e5b055a46",
+      "result_sha256": "6840785bba21880127f8fdcb3c9072ade3d7b6f2469a5cf6a5682099f855acb9",
+      "mode": 420,
+      "original_bytes": 6363,
+      "result_bytes": 6842
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/persistence.ex",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "daca87219f8c2f3f4cf75f9f48c5707244b90aa8d327f9e19dbab522cbbe21d2",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 14700
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/persistence/measurement_cache.ex",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "3d143a824d6959e4f4deec36bb7755d09c0c969379d0ab5820bca69a832779cd",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 4081
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/playbooks/capability_runner.ex",
+      "action": "modify",
+      "original_sha256": "33e0a6154b7fe011c6294c1df24b7ee80e98beee91415e08e9836cecafb7e0b4",
+      "original_terminal_lf_sha256": "0853bd5d253b428871a2c62d46d6b59c1f9f5aa7183cff6615c486f0c7816d9a",
+      "result_sha256": "e5b1eb58cb92deb279f3f24a6bc645c9228f922e74f4b6390ddd1362d1bbd784",
+      "mode": 420,
+      "original_bytes": 33540,
+      "result_bytes": 35597
+    },
+    {
+      "path": "packages/fount_intelligence/lib/fount/intelligence/recomputation.ex",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "a50fec74e935b413f1a01e7e7c9ef98ec9bbe9d2489083b4167f6fbc4fff02bd",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 2953
+    },
+    {
+      "path": "packages/fount_intelligence/mix.exs",
+      "action": "modify",
+      "original_sha256": "707721d385abefeb0307409d0069ac295606eb9ff8fdc1a8fa682f5543997412",
+      "original_terminal_lf_sha256": "fb49ac38ee9a4817406ebb1876ca3b16a6f1dadc78574f6f6793fb36a588b698",
+      "result_sha256": "f4a9822265962a74ca2efeebf818b351a658770023f12309b70130f4314022aa",
+      "mode": 420,
+      "original_bytes": 3729,
+      "result_bytes": 3853
+    },
+    {
+      "path": "packages/fount_intelligence/test/phase_ten_recomputation_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "5c4587715ff9eaf6140d63abface90842c243624f9251a05e47765e352b35290",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 1572
+    },
+    {
+      "path": "packages/fount_workshop/CHANGELOG.md",
+      "action": "modify",
+      "original_sha256": "a37bf94d7bf99d73b90d0400282d60672d1bcbe4d55b40289611edc8272c793f",
+      "original_terminal_lf_sha256": "12241d55de8ce222a375b53a1dd77640f0ced199a5ba7139acd3de5e1d8c864f",
+      "result_sha256": "6046c18cdedf9c1cf288f27632cddfcd7ecd8be17cd1fbc67793a007d187c903",
+      "mode": 420,
+      "original_bytes": 1949,
+      "result_bytes": 2663
+    },
+    {
+      "path": "packages/fount_workshop/README.md",
+      "action": "modify",
+      "original_sha256": "e92b59b561a35a3ad836eb93b5f8704210d6f8e184f0c7c0aea2164ec61ee86c",
+      "original_terminal_lf_sha256": "cb7768e52c5ec09e6bc14ce260412abadb2f81e872c68758186c117b48e52f83",
+      "result_sha256": "8f804949fe5b236fbd26da8d393f3d752ccc691f45e0f64aa6796c97d29e7c89",
+      "mode": 420,
+      "original_bytes": 5908,
+      "result_bytes": 6224
+    },
+    {
+      "path": "packages/fount_workshop/guides/intelligence-integration.md",
+      "action": "modify",
+      "original_sha256": "fe4b6bd0770f368169eec3a88909013e49d3e3f2f7bcc30b728353bb8fe1e5f8",
+      "original_terminal_lf_sha256": "edda6db06bb35edb8f3976dc1208ec77725298141bcd9eac731370c0ca86dfa1",
+      "result_sha256": "9e3d6260d48714e0cf6def2717afc57966245bfbcb3f0172ff823e6bcdf4184b",
+      "mode": 420,
+      "original_bytes": 5493,
+      "result_bytes": 6699
+    },
+    {
+      "path": "packages/fount_workshop/integration/phase_ten_resume_history_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "7c683578d3ecc0b02db53ae18716a80442e4915dd8e45ea12a5b26eb499da512",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 8193
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/session.ex",
+      "action": "modify",
+      "original_sha256": "af655e6bc8d348388db38d3c7a04b52f2e5bf8fe223d31b056e2a068461f156a",
+      "original_terminal_lf_sha256": "d33e7dc01a6a4ef1fa589eed02ac9d01fba82ab7d51c46954ea9351408f38607",
+      "result_sha256": "136d9ca3651f696819af7cc1f05c57fb0d27a6fb0a39f50a11c83047845b59c9",
+      "mode": 420,
+      "original_bytes": 21109,
+      "result_bytes": 21399
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/writing/intelligence.ex",
+      "action": "modify",
+      "original_sha256": "b09baef7636bbf61473970bfbdb573b8299bedc379b32231ec18c02799c1920f",
+      "original_terminal_lf_sha256": "740b28653b8d351edf3621246c5e5b9c40300cb990e42b3ca28c55f3581a89bb",
+      "result_sha256": "5f26f31a8f04022bd41d9f4ef38ec926754eba18d26039e3374450ad29987145",
+      "mode": 420,
+      "original_bytes": 14676,
+      "result_bytes": 15322
+    },
+    {
+      "path": "scripts/tests/test_phase_nine_source.py",
+      "action": "modify",
+      "original_sha256": "734313d72d0f208396c97319709d604e0365af9137f925166200a8e34d363a92",
+      "original_terminal_lf_sha256": "6730c74c3b770e9f5c0d244a5aba5c53d13154142526a7ca873a31fbb3b288d1",
+      "result_sha256": "7372e34eed6d33bb814efd6a68536ba6bcf1f08c8b55a2947971deb741a5f083",
+      "mode": 420,
+      "original_bytes": 4982,
+      "result_bytes": 5239
+    },
+    {
+      "path": "scripts/tests/test_phase_ten_source.py",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "5bd297d61b3662bf0a30411fe18e65ab28a252b91f59d5b4d1b254898597b9d0",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 6145
+    }
+  ],
+  "runtime_qc": {
+    "status": "NOT_RUN",
+    "post_qc_results": []
+  }
+}

@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phases 1–9 COMPLETE on engineering QC. Phase 10 remains NOT_STARTED. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
+**Current state:** Phases 1–9 COMPLETE on engineering QC. Phase 10 is OFFLINE_IMPLEMENTED and awaits runtime QC/repair. Phase 11 remains NOT_STARTED. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
 
 ## Status values
 
@@ -27,7 +27,7 @@ Runtime QC establishes completion when applicable engineering and other non-huma
 | 7 | Capabilities B: Audience/Sequence/Dialogue/Setup-Payoff | COMPLETE | `fount_phase_07_overlay.zip` | `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` | 305 workspace tests, architecture, strict quality/docs, isolated DB/writer/PDF and four packages pass at Fount `4a1c723`; optional human review remains validation debt |
 | 8 | Capabilities C: Emotional/Theme/Genre/Revision | COMPLETE | `fount_phase_08_overlay.zip` | `handoffs/PHASE_08_RUNTIME_QC_REPORT.md` | 320 workspace tests, full quality/docs/package gates and isolated DB/Workshop preservation passed at Fount `f7f4d68`; optional human review remains validation debt |
 | 9 | Workshop Intelligence Integration | COMPLETE | `Fount_Phase09_Overlay.zip` | `handoffs/PHASE_09_RUNTIME_QC_REPORT.md` | 325 workspace tests, 73 Python tests, full CI, architecture, isolated DB/writer/PDF and four packages pass at Fount `361a9fd`; optional human review remains validation debt |
-| 10 | Durable Analysis Persistence, Reuse, and Recomputation | NOT_STARTED | — | — | L2 persistence + immutable result reuse + recomputation frontiers |
+| 10 | Durable Analysis Persistence, Reuse, and Recomputation | OFFLINE_IMPLEMENTED | `Fount_Phase_10_Durable_Analysis_overlay.zip` | — | 27-operation strict overlay; durable analysis/L2/recomputation + writer resume-history regression written; runtime/PostgreSQL QC pending |
 | 11 | Scaled Calibration/Evaluation/Robustness/Live Verification | NOT_STARTED | — | — | Scales earlier domain pilots into corpus/calibration/live gates |
 | 12 | Discovery, Session Modes, and Scene Exploration | NOT_STARTED | — | — | W01–W03/W11; document 36 |
 | 13 | Cinematic Revision, Rehearsal, and Voice | NOT_STARTED | — | — | W04–W06; document 36 |
@@ -62,6 +62,8 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-27 | 8 | Source implementation delivered | `fount_phase_08_overlay.zip`; `fount_phase_08_docset.zip`; `PHASE_08_RUNTIME_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 37-operation strict overlay verified; 52 Phase 1–8 source-contract tests pass; Elixir/runtime QC pending; optional human/domain review not run |
 | 2026-09-27 | 8 | Runtime QC and repairs | applied Fount `f4f1062`, repair `f7f4d68`; applied docset `d018af2`; `handoffs/PHASE_08_RUNTIME_QC_REPORT.md` | COMPLETE; 320 ExUnit tests, 64 Python tests, full architecture/quality/docs/package gates and isolated Core/Workshop DB/writer/PDF checks pass; optional human review skipped under D046 |
 | 2026-09-27 | 9 | Source implementation delivered | `Fount_Phase09_Overlay.zip`; complete Phase-9 docset; `PHASE_09_RUNTIME_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 19-operation strict overlay verified; 61 Phase 1–9 source-contract tests pass; Elixir/runtime QC pending; optional human/domain review not run |
+| 2026-09-27 | 9 | Runtime QC and repairs | applied Fount `8c13ca3`, repair `361a9fd`; applied docset `b5c1dc2`; `handoffs/PHASE_09_RUNTIME_QC_REPORT.md` | COMPLETE; 325 workspace tests, 73 Python tests, architecture, isolated Core/Workshop PostgreSQL, deterministic writer loop, PDF/table-read and package gates pass; optional human review skipped under D046 |
+| 2026-09-27 | 10 | Source implementation delivered | `Fount_Phase_10_Durable_Analysis_overlay.zip`; complete Phase-10 docset; `PHASE_10_RUNTIME_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 27-operation strict overlay verified; 18 targeted Phase-9/10 source-contract tests pass; Elixir/PostgreSQL/runtime gates unrun; Phase 11 not started |
 
 ## Non-negotiable progress rule
 
@@ -194,3 +196,13 @@ Phase 8 is **COMPLETE** on the engineering and preservation evidence in `handoff
 ## Phase 9 runtime QC completion — 2026-09-27
 
 Phase 9 is **COMPLETE** on the engineering and preservation evidence in `handoffs/PHASE_09_RUNTIME_QC_REPORT.md`. Applied Fount `8c13ca3` (tree `73b9892`) was repaired at `361a9fd` (tree `2d25494`); applied docset was `b5c1dc2`. All 19 delivery paths matched before repair, and the tracked cleanup helper remains present. Full `mix ci` passed 325 tests, 73 Python tests and the offline architecture/handoff gate passed, isolated Core/Workshop PostgreSQL integrations passed (11/15), and the deterministic Phase-9 Sandbox/scripted-Inference writer loop, PDF/table-read demonstrations and four package builds passed. The optional human workflow review was skipped under D046 as visible validation debt. No live provider was called. Phase 10 remains **NOT_STARTED**.
+## Phase 10 offline delivery — 2026-09-27
+
+Phase 10 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The strict overlay has 27 operations (10 additions, 17 modifications, no deletions). It adds Core durable derived-analysis storage; an optional Intelligence L2 cache adapter that reuses immutable `MeasurementResult` while Observe rematerializes current `Observation` provenance; content-addressed data-only project assets; exact analysis-run/audit/resource history; persisted dependency lookup; and recomputation that composes the existing StoryWorld connected region with the existing Reader presentation suffix. Workshop durable analysis is opt-in and does not change generation or explicit acceptance semantics.
+
+The required writer outcome is represented by `packages/fount_workshop/integration/phase_ten_resume_history_test.exs`: one candidate is rejected, another remains unchosen, durable analysis is retained as history, resume consumes no new scripted completion, and canon remains unchanged. The test is written but **NOT_RUN** here.
+
+Offline evidence actually executed: 18 targeted Phase-9/Phase-10 Python source-contract tests pass; Python source-check compilation passes; strict overlay dry-run, apply, payload/result verification, applied-tree reproduction and idempotence preflight pass. Repository-wide Python discovery is **not a pass** because the supplied Fount XML omits tracked `handoff/prune_deleted_directories.py` while retaining its import test; the run reaches 79 tests and stops with that one import error. Elixir/Erlang/Mix and PostgreSQL/runtime gates are unavailable and **NOT_RUN**.
+
+Read `handoffs/PHASE_10_INPUTS.json`, `PHASE_10_IMPLEMENTATION_MATRIX.md`, `PHASE_10_PRESERVATION_AUDIT.md`, `PHASE_10_STATIC_CHECKS.json`, `PHASE_10_OFFLINE_HANDOFF.md`, and `PHASE_10_RUNTIME_QC_HANDOFF.md`. The user applies/commits the overlay and complete docset; Codex verifies, compiles, migrates, tests and repairs **Phase 10 only**, updates the docset, and stops before Phase 11. Phase 11 remains `NOT_STARTED`.
+

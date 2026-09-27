@@ -440,3 +440,21 @@ This is source-delivery traceability only. Phase 9 is **OFFLINE_IMPLEMENTED**, n
 ## Phase 9 runtime QC traceability — 2026-09-27
 
 The 19 delivered paths matched before repair. Focused tests, the 325-test full CI, 73 Python tests, compiled architecture, offline handoff, 11 Core and 15 Workshop PostgreSQL integration tests, and the new Sandbox/scripted-Inference two-strategy writer loop pass at Fount `361a9fd`. The writer loop verifies provider-free preflight, prewrite packet, distinct strategies, lineage, real candidate pages, exact diff, postwrite revision packet, advisory checks, explicit rejection, content-hash protection, acceptance, reload and history. Existing Workshop/Core suites preserve generation-only callers, direct legacy candidate checks, investigate without pages, audition/combine/rebase, required-only review, and PDF/table-read/export behavior. Full evidence and limits are in `handoffs/PHASE_09_RUNTIME_QC_REPORT.md`. Optional human review is NOT RUN under D046; Phase 9 is **COMPLETE** and Phase 10 **NOT_STARTED**.
+
+## Phase 10 source-delivery traceability — 2026-09-27
+
+| Requirement | Source / test evidence | Source-delivery status |
+|---|---|---|
+| durable analysis runs + audit identity | `Fount.Persistence.Analysis`; Phase-10 migration/schema; `Fount.Intelligence.Persistence` | WRITTEN; runtime unrun |
+| immutable cross-revision MeasurementResult reuse + fresh current Observation | `Persistence.MeasurementCache`, `record_batch/3`, existing Observe cache semantics; `phase_ten_durable_analysis_test.exs` | WRITTEN; runtime unrun |
+| privacy/output/model/context identity | namespace-scoped L2 rows; output-contract digests; Observe durable fingerprint gate | STATIC inspected; runtime regressions pending |
+| cache retention distinct from history | explicit `evict_cache`; separate runs/observations/dependencies/candidates | WRITTEN; runtime unrun |
+| connected StoryWorld + Reader suffix recomputation | `Fount.Intelligence.Recomputation`; `phase_ten_recomputation_test.exs` | WRITTEN; runtime unrun |
+| diagnosis/report dependency history | `analysis_dependencies`; `affected_records/3` latest-applicable selection with per-run rows | WRITTEN; runtime unrun |
+| candidate/session analysis history + report export | Workshop session/candidate lineage; `export_analysis_run/2`; usage history | WRITTEN; runtime unrun |
+| safe project/studio assets | host-gated `save_lens`, `save_genre_pack`, `save_data_asset`; content hash/trust/source + executable-key rejection | WRITTEN; runtime unrun |
+| Phase-10 writer outcome | `packages/fount_workshop/integration/phase_ten_resume_history_test.exs` | WRITTEN; NOT_RUN |
+| Phase-9 writing functionality preserved | opt-in durable analysis, unchanged acceptance/rejection code, retained Phase-9 source tests | 18 targeted Phase-9/10 Python source tests PASS; Elixir runtime pending |
+| Phase-11 stop line | source guard + overlay inventory contain no Phase-11 implementation | PASS offline |
+
+Overlay/static evidence: 27-operation strict archive, dry-run/apply/result hashes/tree reproduction/idempotence PASS. Repository-wide Python discovery is not claimed as passed because the supplied XML omits the tracked cleanup helper imported by its test. Elixir/Mix/PostgreSQL/compiled architecture/Credo/Dialyzer/ExDoc/package/writer runtime gates are **NOT_RUN**. Phase 10 is **OFFLINE_IMPLEMENTED**, not COMPLETE; Phase 11 is **NOT_STARTED**.
