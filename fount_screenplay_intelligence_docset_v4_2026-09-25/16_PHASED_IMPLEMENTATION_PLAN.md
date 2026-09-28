@@ -766,6 +766,8 @@ Implement the complete Phase 14 brief in document 36: W07–W09, research proven
 
 **Phase 14 source-delivery checkpoint — 2026-09-27:** `OFFLINE_IMPLEMENTED`, not COMPLETE. The 18-operation overlay implements W07–W09 with noncanonical research dossiers, explicit factual/fictional status, hostile-source instruction isolation, raw conflicting-note triage, exact anchor states, note-linked writer candidates, mechanical consequence review, and stale/rebase/undo regressions. 8/8 Phase-14 and 49/49 focused Phase-9–14 Python source checks pass; strict archive/apply/tree verification passes. Repository-wide Python discovery has one known supplied-snapshot missing-helper import error. Elixir/Mix/PostgreSQL/runtime/live/human checks are unrun. Codex must verify/repair Phase 14 and stop before Phase 15.
 
+**Phase 14 runtime QC checkpoint — 2026-09-27:** `COMPLETE` on applicable non-human engineering gates at Fount repair commit `37a25ca` (tree `52c259b`). All 18 overlay paths matched before repair. Full `mix ci` passes 351 workspace tests plus architecture, strict Credo, Dialyzer and ExDoc; 113 Python tests, 34 PostgreSQL integrations, focused writer/PDF/table-read regressions and four Hex builds pass. See `handoffs/PHASE_14_RUNTIME_QC_REPORT.md`. Optional D046 human/domain review, live providers and external web research remain `NOT_RUN`; Phase 15 is `NOT_STARTED`.
+
 # Phase 15 — Read, Share, Resume, and Prove Usefulness
 
 Implement the complete Phase 15 brief in document 36: W01/W10–W12 and whole-workflow integration. Exit requires human-only and agent-assisted paths, clean export, and session recovery. The human comparison study is optional; if skipped, record no human usefulness claim.

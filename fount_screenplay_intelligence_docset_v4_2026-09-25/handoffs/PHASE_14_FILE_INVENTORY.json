@@ -2705,5 +2705,95 @@
       "sha256": "685f169348bf4fef5604017d0392c51c77c597da1692a44085aad48731b0d18f",
       "bytes": 139
     }
+  },
+  "runtime_qc": {
+    "status": "COMPLETE",
+    "applied_head": "660fcaded5caba0f30c8b53e764e4250469cee0a",
+    "applied_tree": "999a1614c04783e58b7439ea9ee3bc7f9dc85310",
+    "repair_head": "37a25cae9cbee8408188d83cfa55f55d6f32d491",
+    "repair_tree": "52c259bc5373083eb05172113dadc56d21351307",
+    "pre_repair_matches": 18,
+    "pre_repair_mismatches": [],
+    "note": "Original files[].result_sha256 values remain immutable overlay identities; post_repair_paths records current checkout bytes. Workshop mix.exs was an additional repair path for ExDoc registration.",
+    "post_repair_paths": {
+      "CHANGELOG.md": {
+        "sha256": "4cabd61ecf1e0ab68be84800df12a2ce063a4424ecfc296acfbff147bde7185a",
+        "bytes": 5928
+      },
+      "packages/fount_workshop/CHANGELOG.md": {
+        "sha256": "393cee40b63eda119b564723de8f327aab0008b017f1cb6861b9e720b8556f2a",
+        "bytes": 5714
+      },
+      "packages/fount_workshop/README.md": {
+        "sha256": "d0df2c5c207a6e99a7c2d3b3d566d1975d1546e2f59b4419f8022b2d456e327f",
+        "bytes": 8210
+      },
+      "packages/fount_workshop/examples/README.md": {
+        "sha256": "badf0ad02add0a4ada7fbf809961ddb13e3f13d8bc943c265d0cb68ce008fa2b",
+        "bytes": 6860
+      },
+      "packages/fount_workshop/examples/phase_fourteen/README.md": {
+        "sha256": "5a342886f1e4df9ad0475b7db1cf6ba6b8302b13bc22a983136e84bebb204677",
+        "bytes": 2502
+      },
+      "packages/fount_workshop/guides/research-notes-and-consequences.md": {
+        "sha256": "7764ede644447bce5647fb3d2eda65811700be39543fe3272c64cc06018bac00",
+        "bytes": 4157
+      },
+      "packages/fount_workshop/integration/phase_fourteen_research_notes_durability_test.exs": {
+        "sha256": "4cfdb6a4d0a7fb2a6c47d52ce29e44f357ae6d5f8f8c1e8ffa3d90c6ff2e59ce",
+        "bytes": 5890
+      },
+      "packages/fount_workshop/lib/fount_workshop/candidate_api.ex": {
+        "sha256": "bef1431228072dbb0337c3ea10fcb3e503a4307b37e873fe0cf9436fc9a54e4f",
+        "bytes": 11892
+      },
+      "packages/fount_workshop/lib/fount_workshop/comparison.ex": {
+        "sha256": "921406cac51c13f85d4d51b5a317291a0b5b4a7bcf6fb0249f009f873d45cc31",
+        "bytes": 4380
+      },
+      "packages/fount_workshop/lib/fount_workshop/consequence_review.ex": {
+        "sha256": "2675aaa372ea5176c1ecf3fa34befddf97eee0f5c99eaaf534cf7f5c0eeca704",
+        "bytes": 3244
+      },
+      "packages/fount_workshop/lib/fount_workshop/note_triage.ex": {
+        "sha256": "516ce9fb8dca0b362e769864246cd5a9d57a3e23adcf28de5ce804fcb25e3462",
+        "bytes": 15074
+      },
+      "packages/fount_workshop/lib/fount_workshop/research.ex": {
+        "sha256": "bc3baebbabdad2d02914f90b089f6d0f77f195fec863eeff7df4542eb070d782",
+        "bytes": 7684
+      },
+      "packages/fount_workshop/lib/fount_workshop/review.ex": {
+        "sha256": "108d0ce9df22acc5b8d60aaa5ae95d007321f3a927100e4cfff37cc770467a01",
+        "bytes": 3844
+      },
+      "packages/fount_workshop/test/writer_workflows/phase_fourteen_consequence_test.exs": {
+        "sha256": "9545626d93d555c8688d12938ce46f2804cf6497aced66fae53ea8152ea7fd87",
+        "bytes": 5777
+      },
+      "packages/fount_workshop/test/writer_workflows/phase_fourteen_notes_test.exs": {
+        "sha256": "250ac8bdd79db1ee10f484962fbf32b5a94666a772eceb0f093880c0081e5ed1",
+        "bytes": 5125
+      },
+      "packages/fount_workshop/test/writer_workflows/phase_fourteen_rebase_test.exs": {
+        "sha256": "ae61c94f18c1d00049feb476693e9ac1dbba6294b9996bd15c4ffa0416e48a2b",
+        "bytes": 3386
+      },
+      "packages/fount_workshop/test/writer_workflows/phase_fourteen_research_test.exs": {
+        "sha256": "81da27cd3f2a53b1c93042ab846416a0dc296ed3413e5bce4daeff92734d017d",
+        "bytes": 3817
+      },
+      "scripts/tests/test_phase_fourteen_source.py": {
+        "sha256": "3496e624b5f56a671ed770c8f7b0037d8eaa339a4b39bf2fbabfc0291be64c1b",
+        "bytes": 6789
+      }
+    },
+    "additional_repair_paths": {
+      "packages/fount_workshop/mix.exs": {
+        "sha256": "c05d4cad3f068ddc7171bacc945464a5a8f0f427c65abcd14722a35166d4401c",
+        "bytes": 4047
+      }
+    }
   }
 }

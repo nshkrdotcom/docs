@@ -101,7 +101,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–13 are COMPLETE on recorded applicable engineering QC; Phase 14 is OFFLINE_IMPLEMENTED and awaits runtime/repair QC; Phase 15 remains NOT_STARTED. Phase-14 source-delivery records are under `handoffs/PHASE_14_*`. Earlier optional human studies remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–14 are COMPLETE on recorded applicable engineering QC; Phase 15 remains NOT_STARTED. Phase-14 source-delivery records are under `handoffs/PHASE_14_*`. Earlier optional human studies remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -313,10 +313,14 @@ Phase 13 is `COMPLETE` on applicable non-human engineering gates at Fount repair
 - `handoffs/PHASE_14_STATIC_CHECKS.json`: executed offline evidence and explicit runtime NOT_RUN states.
 - `handoffs/PHASE_14_OFFLINE_HANDOFF.md`: current source-delivery account and Phase-15 stop line.
 - `handoffs/PHASE_14_RUNTIME_QC_HANDOFF.md`: Codex instructions for the user's applied Phase-14 state.
-- `handoffs/PHASE_14_RUNTIME_QC_REPORT.md`: NOT_RUN placeholder awaiting applied-checkout runtime evidence.
+- `handoffs/PHASE_14_RUNTIME_QC_REPORT.md`: applied-checkout runtime evidence, repairs and completion limits.
 - `handoffs/PHASE_14_DOCSET_HASHES.json`: regenerated complete docset identities excluding recursive checksum files.
 
 ## Phase 14 source-delivery checkpoint
 
 Phase 14 is `OFFLINE_IMPLEMENTED`, not `COMPLETE`. The strict overlay is `fount_phase_14_overlay.zip`, 18 operations (11 additions, 7 modifications, no deletions), SHA-256 `586b3192fcdf6447ff85736b2d18e45eb5e1871f331f43442438f4833df922b6`. Strict dry-run/apply/second-dry-run, ZIP integrity and 626-file desired/applied tree identity pass. Focused Phase-9–14 Python source checks pass 49/49. Repository-wide discovery has one supplied-snapshot missing-helper import error; Elixir/Mix/PostgreSQL/live/human gates are NOT_RUN. Phase 15 is `NOT_STARTED`.
 
+
+## Phase 14 runtime checkpoint
+
+Phase 14 is `COMPLETE` on applicable non-human engineering gates at Fount repair commit `37a25ca` (tree `52c259b`). The original 18 overlay hashes matched before repair; current identities are recorded separately in `PHASE_14_FILE_INVENTORY.json`. Full CI passes 351 workspace tests and architecture/strict quality/docs; 113 Python tests, 34 PostgreSQL integrations, focused writer/PDF/table-read checks and four package builds pass. Optional D046 human/domain review, live provider calls and external web research are `NOT_RUN`. Phase 15 is `NOT_STARTED`.
