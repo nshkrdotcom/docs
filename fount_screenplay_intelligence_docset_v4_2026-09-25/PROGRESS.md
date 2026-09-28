@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phases 1–10 COMPLETE on engineering QC. Phase 11 is OFFLINE_IMPLEMENTED and awaits runtime/live QC; Phase 12 remains NOT_STARTED. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
+**Current state:** Phases 1–10 COMPLETE on engineering QC. Phase 11 engineering QC passed, but its authorized live gates are NOT_RUN; status QC_BLOCKED. Phase 12 remains NOT_STARTED. Phase-3 Level-A and Phase-4 first-reader studies remain unperformed validation debt. Under D046, all future human reviews are optional and never block work.
 
 ## Status values
 
@@ -28,7 +28,7 @@ Runtime QC establishes completion when applicable engineering and other non-huma
 | 8 | Capabilities C: Emotional/Theme/Genre/Revision | COMPLETE | `fount_phase_08_overlay.zip` | `handoffs/PHASE_08_RUNTIME_QC_REPORT.md` | 320 workspace tests, full quality/docs/package gates and isolated DB/Workshop preservation passed at Fount `f7f4d68`; optional human review remains validation debt |
 | 9 | Workshop Intelligence Integration | COMPLETE | `Fount_Phase09_Overlay.zip` | `handoffs/PHASE_09_RUNTIME_QC_REPORT.md` | 325 workspace tests, 73 Python tests, full CI, architecture, isolated DB/writer/PDF and four packages pass at Fount `361a9fd`; optional human review remains validation debt |
 | 10 | Durable Analysis Persistence, Reuse, and Recomputation | COMPLETE | `Fount_Phase_10_Durable_Analysis_overlay.zip` | `handoffs/PHASE_10_RUNTIME_QC_REPORT.md` | 328 workspace tests, 82 Python tests, full CI, disposable PostgreSQL, writer resume/history and four packages pass at Fount `6d164f6`; optional human review remains validation debt |
-| 11 | Scaled Calibration/Evaluation/Robustness/Live Verification | OFFLINE_IMPLEMENTED | `fount_phase_11_overlay.zip` | `handoffs/PHASE_11_RUNTIME_QC_REPORT.md` | 36-operation strict source overlay; 27 targeted Phase-9/10/11 Python tests pass; Elixir/PostgreSQL/live gates unrun; optional human study not run |
+| 11 | Scaled Calibration/Evaluation/Robustness/Live Verification | QC_BLOCKED | `fount_phase_11_overlay.zip` | `handoffs/PHASE_11_RUNTIME_QC_REPORT.md` | 36 overlay paths verified; 337 workspace, 91 Python and disposable PostgreSQL integrations pass; authorized Observe/Workshop live gates NOT_RUN; optional human study NOT_RUN |
 | 12 | Discovery, Session Modes, and Scene Exploration | NOT_STARTED | — | — | W01–W03/W11; document 36 |
 | 13 | Cinematic Revision, Rehearsal, and Voice | NOT_STARTED | — | — | W04–W06; document 36 |
 | 14 | Research, Notes, and Consequential Revision | NOT_STARTED | — | — | W07–W09; document 36 |
@@ -66,6 +66,7 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-27 | 10 | Source implementation delivered | `Fount_Phase_10_Durable_Analysis_overlay.zip`; complete Phase-10 docset; `PHASE_10_RUNTIME_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 27-operation strict overlay verified; 18 targeted Phase-9/10 source-contract tests pass; Elixir/PostgreSQL/runtime gates unrun; Phase 11 not started |
 | 2026-09-27 | 10 | Runtime QC and repairs | applied Fount `f18cf39`, repair `6d164f6`; `handoffs/PHASE_10_RUNTIME_QC_REPORT.md` | COMPLETE; 328 workspace tests, 82 Python tests, full CI, Core/Intelligence/Workshop PostgreSQL, writer resume/history, examples and package archives pass; optional human review skipped under D046 |
 | 2026-09-27 | 11 | Source implementation delivered | `fount_phase_11_overlay.zip`; complete Phase-11 docset; `PHASE_11_RUNTIME_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 36-operation strict overlay verified offline; 27 targeted Phase-9/10/11 source tests pass; Elixir/PostgreSQL/live/human checks unrun; Phase 12 not started |
+| 2026-09-27 | 11 | Runtime QC and repairs | applied Fount `32e4057`, applied docset `3479002`; `handoffs/PHASE_11_RUNTIME_QC_REPORT.md` | Engineering PASS: 337 workspace tests, 91 Python tests, full CI, architecture, PostgreSQL integrations, example and four archives. QC_BLOCKED: Phase-11 live Observe/Workshop gates NOT_RUN without authorization/configuration; human study optional debt. |
 
 ## Non-negotiable progress rule
 
@@ -218,3 +219,7 @@ Phase 10 is **COMPLETE** on the non-human engineering and preservation evidence 
 Phase 11 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The 36-operation overlay adds a rights/provenance evaluation corpus contract, independent semantic human annotation/disagreement preservation, calibration/abstention/ordinal metrics, descriptive drift, frozen current-output-contract MeasurementResult/Observation benchmarks with explicit stale-fixture regeneration, all-12-family suite coverage, a non-linear Reader/StoryWorld regression, longitudinal preflight-versus-actual resource calibration, an opt-in synthetic Observe live check, and a one-scene/one-candidate noncanonical Workshop live check. It preserves the System One → Observe and Inference/ASM → Workshop boundaries and does not begin Phase 12.
 
 Offline evidence: 27 targeted Phase-9/10/11 Python tests pass; strict overlay ZIP validation/dry-run/apply/tree reproduction/idempotence pass. Repository-wide Python discovery ran 88 tests with one import error caused by the supplied XML omitting `scripts/prune_deleted_directories.py` while including its test, so a full Python pass is not claimed. Elixir/Erlang/Mix are unavailable here; compilation, ExUnit, PostgreSQL, architecture/quality/docs/package, provider-free Mix examples, live Observe, live Workshop and human studies are **NOT_RUN**. Read `handoffs/PHASE_11_RUNTIME_QC_HANDOFF.md`; Codex must test/repair Phase 11 and stop before Phase 12.
+
+## Phase 11 runtime QC checkpoint — 2026-09-27
+
+The applied overlay matched all 36 inventory hashes before repair. Runtime QC repaired formatting, a compile warning, independent annotation summarization, strict Credo findings and the Observe example boundary. Full `mix ci` passed 337 workspace tests; Python discovery passed 91 tests; disposable PostgreSQL Core, Intelligence and Workshop integrations, the provider-free Phase-11 example, architecture and four archive checks passed. See `handoffs/PHASE_11_RUNTIME_QC_REPORT.md` for commands and limits. Authorized Phase-11 Observe and Workshop live checks were NOT_RUN because authorization/configuration is absent, so status is `QC_BLOCKED` under `18_RUNTIME_QC_PROTOCOL.md`. Optional human review is NOT_RUN validation debt under D046. Phase 12 remains NOT_STARTED.
