@@ -409,3 +409,16 @@ Historical analysis dependencies are keyed per analysis run and are never overwr
 ### D053 — Provider-free Phase-12 CLI still requires durable persistence
 
 **Decision:** The human-only Phase-12 CLI path may run without Inference, Observe, System One or ASM credentials, but it is a real durable Workshop session and therefore uses the existing Fount persistence/database boundary. Generated alternatives continue through Inference; measurements continue through Observe/System One; ASM remains behind Inference.
+
+## Phase 14 source decision — 2026-09-27
+
+### D054 — Research and note triage remain noncanonical session records; consequence declarations remain hypotheses until evidenced
+
+**Decision:** Phase-14 research dossiers and raw-note triage use the existing durable Workshop session-progress store. They do not become screenplay canon, StoryWorld facts, or provider instructions merely because they are recorded. A note decision may create an ordinary writer-origin candidate through the existing candidate/review/acceptance path; there is no second authoring authority or Phase-14 migration.
+
+Research records keep source provenance, rights/confidentiality/export policy, claim origin and factual/fictional status separate. Retrieved/supplied text is `untrusted_content` with no instruction authority. Note anchors relocate only on stable identity or unique exact-text evidence; duplicate/no-match states remain ambiguous/orphaned rather than using fuzzy guessing. Consequence plans distinguish supported dependencies from hypotheses, unresolved work and not-analyzed scenes; actual changed pages are independently derived with `Screenplay.diff/2`.
+
+**Reason:** This reuses the existing verified persistence/candidate boundaries, preserves writer authority, and prevents research, collaborator notes, speculative consequences, or model prose from silently becoming canon or evidence.
+
+**Status:** Adopted in the Phase-14 offline implementation; runtime/PostgreSQL verification is pending. Phase 15 is not authorized by this decision.
+

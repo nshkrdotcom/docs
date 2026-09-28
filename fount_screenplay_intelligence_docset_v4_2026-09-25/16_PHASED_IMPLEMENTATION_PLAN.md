@@ -764,6 +764,8 @@ Implement the complete Phase 13 brief in document 36: W04–W06, visual/sound pa
 
 Implement the complete Phase 14 brief in document 36: W07–W09, research provenance, conflicting/stale notes, revision consequences, and stale-candidate protection. Exit requires the note/reveal demonstrations; collaborator review is optional.
 
+**Phase 14 source-delivery checkpoint — 2026-09-27:** `OFFLINE_IMPLEMENTED`, not COMPLETE. The 18-operation overlay implements W07–W09 with noncanonical research dossiers, explicit factual/fictional status, hostile-source instruction isolation, raw conflicting-note triage, exact anchor states, note-linked writer candidates, mechanical consequence review, and stale/rebase/undo regressions. 8/8 Phase-14 and 49/49 focused Phase-9–14 Python source checks pass; strict archive/apply/tree verification passes. Repository-wide Python discovery has one known supplied-snapshot missing-helper import error. Elixir/Mix/PostgreSQL/runtime/live/human checks are unrun. Codex must verify/repair Phase 14 and stop before Phase 15.
+
 # Phase 15 — Read, Share, Resume, and Prove Usefulness
 
 Implement the complete Phase 15 brief in document 36: W01/W10–W12 and whole-workflow integration. Exit requires human-only and agent-assisted paths, clean export, and session recovery. The human comparison study is optional; if skipped, record no human usefulness claim.

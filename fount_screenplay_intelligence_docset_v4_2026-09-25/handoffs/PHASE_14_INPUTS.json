@@ -1,0 +1,83 @@
+{
+  "format_version": 1,
+  "phase": 14,
+  "date": "2026-09-27",
+  "timezone": "Pacific/Honolulu",
+  "inputs": [
+    {
+      "role": "Agent Session Manager",
+      "sha256": "67988c9aec015ce189e16078b18639f60873d244da63e3275d33707add5702db",
+      "version": "0.17.1",
+      "identified_by": "repository rooted at lib/asm with session/run/store/provider SDK/inference-endpoint surfaces and the ASM public facade",
+      "inspected_apis": [
+        "ASM.start_link/1",
+        "ASM.start_session/1",
+        "ASM.query/3",
+        "ASM.stream/3",
+        "ASM.stop_session/1",
+        "ASM.session_info/1",
+        "ASM.health/1"
+      ],
+      "phase14_use": "No new direct ASM calls. Existing Workshop generation remains behind Inference.Adapters.ASM; Phase 14 research/note/consequence records are provider-free."
+    },
+    {
+      "role": "SystemOneSDK",
+      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+      "version": "0.6.0",
+      "identified_by": "monorepo containing packages/system_one_sdk plus contracts, bumblebee and server, with the SystemOneSDK public facade",
+      "inspected_apis": [
+        "SystemOneSDK.new_client/1",
+        "SystemOneSDK.system_one/4",
+        "SystemOneSDK.noul/2",
+        "SystemOneSDK.choice/3",
+        "SystemOneSDK.score/3",
+        "SystemOneSDK.prepare/1",
+        "SystemOneSDK.evaluate/4",
+        "SystemOneSDK.evaluate_stream/4"
+      ],
+      "phase14_use": "No new SDK call. Existing Observe/System One analytical boundary remains unchanged."
+    },
+    {
+      "role": "Inference",
+      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
+      "version": "0.5.0",
+      "identified_by": "apps/inference provider-neutral client/request/response package with ASM and Gemini adapters",
+      "inspected_apis": [
+        "Inference.client/1",
+        "Inference.client!/1",
+        "Inference.capabilities/1",
+        "Inference.complete/3",
+        "Inference.stream/3",
+        "Inference.Client.agent_session/1",
+        "Inference.Client.agent_session!/1"
+      ],
+      "phase14_use": "No invented generation API. Phase 14 writer-origin note experiments use the existing provider-free CandidateAPI.manual path; generative work remains behind Inference."
+    },
+    {
+      "role": "Fount",
+      "sha256": "d1ceb2492df1ad90f21dc9a308bc55b8012e40d6e341e6f2f4bb72d45e606083",
+      "identified_by": "four-package repository containing fount, fount_observe, fount_intelligence and fount_workshop, including the completed Phase-13 runtime-repaired state",
+      "inspected_apis": [
+        "FountWorkshop.Session.open/4",
+        "FountWorkshop.Session.resume_view/2",
+        "FountWorkshop.Store.call/3",
+        "FountWorkshop.CandidateAPI.manual/4",
+        "FountWorkshop.Review.packet/2",
+        "FountWorkshop.Review.accept/4",
+        "FountWorkshop.Rebase",
+        "FountWorkshop.Writing.NoteConflicts.detect/2",
+        "Fount.Screenplay.diff/2",
+        "Fount.Screenplay.undo/2",
+        "Fount.Persistence.accept_candidate/3"
+      ],
+      "phase14_use": "Implementation baseline. Existing durable session progress, ordinary candidates, stable-ID comparison, explicit stale acceptance/rebase and exact undo are reused instead of adding a second authoring or persistence system."
+    },
+    {
+      "role": "Current docset",
+      "sha256": "933b977689e917bf03fa73336a0844153f03ce27b1ebc5feea554e309dbd612e",
+      "identified_by": "documents 00-36, PROGRESS, DECISIONS, TRACEABILITY_MATRIX and handoffs through completed Phase 13",
+      "phase14_use": "Authoritative progress/specification baseline."
+    }
+  ],
+  "determination": "PROGRESS.md marks Phases 1-13 COMPLETE and Phase 14 Research, Notes, and Consequential Revision as the first NOT_STARTED phase. Document 36 scopes Phase 14 to W07-W09 and A06-A08 plus stale-candidate/manual-edit protection. Phase 15 is not authorized in this delivery."
+}

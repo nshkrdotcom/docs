@@ -1,0 +1,79 @@
+{
+  "format_version": 1,
+  "phase": 14,
+  "status": "OFFLINE_IMPLEMENTED",
+  "date": "2026-09-27",
+  "environment": {
+    "mix": "NOT_FOUND",
+    "elixir": "NOT_FOUND",
+    "erl": "NOT_FOUND"
+  },
+  "executed": [
+    {
+      "check": "Focused Phase 14 Python source contracts",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest scripts.tests.test_phase_fourteen_source -v",
+      "result": "PASS",
+      "tests": 8
+    },
+    {
+      "check": "Focused Phase 9-14 Python source contracts",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest scripts.tests.test_phase_nine_source scripts.tests.test_phase_ten_source scripts.tests.test_phase_eleven_source scripts.tests.test_phase_twelve_source scripts.tests.test_phase_thirteen_source scripts.tests.test_phase_fourteen_source -v",
+      "result": "PASS",
+      "tests": 49
+    },
+    {
+      "check": "Phase 14 Python syntax",
+      "command": "python3 -m py_compile scripts/tests/test_phase_fourteen_source.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Repository-wide Python discovery",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -v",
+      "result": "PARTIAL",
+      "tests_run": 110,
+      "errors": 1,
+      "detail": "The supplied XML snapshot includes scripts/tests/test_prune_deleted_directories.py but omits scripts/prune_deleted_directories.py. 109 discovered tests pass; the remaining import error is baseline snapshot validation debt, not a Phase-14 failure."
+    },
+    {
+      "check": "Strict overlay dry-run",
+      "result": "PASS",
+      "operations": 18
+    },
+    {
+      "check": "Strict overlay apply to clean extracted Fount XML baseline",
+      "result": "PASS",
+      "changed": 18
+    },
+    {
+      "check": "Second strict dry-run",
+      "result": "PASS",
+      "unchanged": 18
+    },
+    {
+      "check": "Whole-tree comparison after apply",
+      "result": "PASS",
+      "file_count": 626
+    },
+    {
+      "check": "ZIP integrity",
+      "command": "unzip -t fount_phase_14_overlay.zip",
+      "result": "PASS"
+    }
+  ],
+  "not_run": [
+    "mix format --check-formatted",
+    "warnings-as-errors compile",
+    "Phase-14 ExUnit",
+    "full mix ci",
+    "compiled architecture gate",
+    "Credo",
+    "Dialyzer",
+    "ExDoc",
+    "Hex package builds",
+    "PostgreSQL integration",
+    "live Inference/ASM generation",
+    "live System One measurement",
+    "optional D046 human/domain review"
+  ],
+  "claim_limit": "Source-contract and transport checks do not establish Elixir compilation, runtime behavior, database behavior, live model quality, web research, or human usefulness."
+}

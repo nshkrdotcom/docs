@@ -542,3 +542,27 @@ Offline execution: Phase-13 Python source checks 7/7 PASS; focused Phase-9–13 
 ## Phase 13 runtime QC trace — 2026-09-27
 
 The source-delivery table above records the historical offline state. At Fount repair commit `26da17e`, Phase 13 is `COMPLETE` on applicable non-human gates. W04/A02: four pass profiles validate and two real quiet-scene page diffs have distinct action changes and zero language change; a generic explanatory control is rejected. W06/A04: required exact `pin_text` checks pass an action-only edit and hard-block altered repeated/multilingual text through `ReviewGate`, including an attempted override; the human language-competence limit stays visible. W05/A05: active/rejected rehearsal inventions are absent from generation context, while explicit actor/note adoption is persisted as noncanonical project material; fresh PostgreSQL resume retains both decisions and unchanged canon. `Comparison` derives changes through stable-ID `Screenplay.diff/2` and labels proposal summaries as non-evidence. Full `mix ci` (347 tests), Python (105), PostgreSQL integrations (33), four package builds and writer/PDF/table-read regressions pass. Optional D046 human/domain review and live-provider calls are `NOT_RUN`. See `handoffs/PHASE_13_RUNTIME_QC_REPORT.md`. Phase 14 is `NOT_STARTED`.
+
+## Phase 14 source implementation trace — 2026-09-27
+
+Status: **OFFLINE_IMPLEMENTED; runtime NOT_RUN; Phase 15 NOT_STARTED.**
+
+| Requirement / acceptance case | Phase-14 source surface | Evidence written | Current status |
+|---|---|---|---|
+| W07 provenance / fiction status | `FountWorkshop.Research` session dossier | A08 research test + guide | WRITTEN; ExUnit NOT_RUN |
+| W07 untrusted retrieved text | source trust/authority/export fields; no web/tool API | hostile quoted-upload fixture | WRITTEN |
+| A08 disputed date + deliberate fiction | separate disputed source claim and deliberately-fictionalized invention | `phase_fourteen_research_test.exs` | WRITTEN; ExUnit NOT_RUN |
+| W08 raw note/source/draft preservation | `FountWorkshop.NoteTriage.capture/4` | A06 notes fixture | WRITTEN |
+| W08 disagreement + concern/treatment split | existing `NoteConflicts`; explicit decision fields | A06 accepts concern/rejects fix | WRITTEN; ExUnit NOT_RUN |
+| W08 anchor integrity | stable ID / unique exact-text relocation / ambiguous / orphaned | split/duplicate/no-match A06 assertions | WRITTEN; ExUnit NOT_RUN |
+| W09 note-linked experiment | `NoteTriage.candidate/5` -> existing `CandidateAPI.manual/4` with `addresses_notes` | A07 fixture | WRITTEN |
+| W09 consequence visibility | `ConsequenceReview` + existing `Screenplay.diff/2`; Review includes Comparison | A07 supported/uncertain/unresolved assertions | WRITTEN; ExUnit NOT_RUN |
+| W09 no unrelated rewrite | approved vs actual changed-scene IDs, unrelated list | unchanged bus-stop assertion | WRITTEN; ExUnit NOT_RUN |
+| durable noncanonical source/notes | existing Session/Store progress + ordinary candidate | Phase-14 PostgreSQL integration | WRITTEN; PostgreSQL NOT_RUN |
+| stale concurrent edit | existing acceptance refuses old sibling after head change | Phase-14 rebase test | WRITTEN; ExUnit NOT_RUN |
+| rebase/undo | existing Rebase conflict + `Screenplay.undo/2` exact Fountain restoration | rebase test | WRITTEN; ExUnit NOT_RUN |
+| actual dependency use | no new dependency/direct ASM/SystemOne call | Phase-14 inputs + source test | SOURCE INSPECTION |
+| Phase-15 stop line | no W10/W12 read/share/usefulness implementation | inventory + source test | PASS |
+
+Offline execution: Phase-14 Python source checks 8/8 PASS; focused Phase-9–14 checks 49/49 PASS; strict 18-operation overlay transport and 626-file applied-tree identity PASS. Repository-wide Python discovery attempts 110 tests; 109 pass and one supplied-snapshot missing-helper import error remains. Mix/Elixir/Erlang are unavailable, so no runtime/ExUnit/PostgreSQL/live/human result is claimed. Optional D046 review is NOT_RUN.
+

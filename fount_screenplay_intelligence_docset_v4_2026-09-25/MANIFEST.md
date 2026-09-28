@@ -101,7 +101,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–13 are COMPLETE on recorded applicable engineering QC; Phase 14 remains NOT_STARTED. Phase-13 source-delivery records are under `handoffs/PHASE_13_*`. Earlier optional human studies remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–13 are COMPLETE on recorded applicable engineering QC; Phase 14 is OFFLINE_IMPLEMENTED and awaits runtime/repair QC; Phase 15 remains NOT_STARTED. Phase-14 source-delivery records are under `handoffs/PHASE_14_*`. Earlier optional human studies remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -302,3 +302,21 @@ At source delivery, Phase 13 was `OFFLINE_IMPLEMENTED`, not `COMPLETE`. The stri
 ## Phase 13 runtime checkpoint
 
 Phase 13 is `COMPLETE` on applicable non-human engineering gates at Fount repair commit `26da17e` (tree `fd17e72`). The original 24 overlay hashes matched before repair; current identities are separate in `PHASE_13_FILE_INVENTORY.json`. Full CI passes 347 workspace tests and architecture/strict quality/docs; 105 Python tests, 33 PostgreSQL integrations, focused writer/PDF/table-read checks and four package builds pass. The optional D046 human/domain study and live providers remain `NOT_RUN`. Phase 14 is `NOT_STARTED`.
+
+## Phase 14 delivery records
+
+- `handoffs/PHASE_14_INPUTS.json`: five content-identified XML roles, hashes, actual dependency versions and inspected public boundaries.
+- `handoffs/PHASE_14_FILE_INVENTORY.json`: exact 18-operation overlay inventory plus desired-tree identities and transport verification.
+- `handoffs/PHASE_14_IMPLEMENTATION_MATRIX.md`: W07–W09/A06–A08 and stale/rebase/undo mapped to source/tests.
+- `handoffs/PHASE_14_PRESERVATION_AUDIT.md`: canon, research, notes, scope, rollback and dependency preservation obligations.
+- `handoffs/PHASE_14_DOMAIN_REVIEW_PACKET.md`: optional D046 collaborator/writer review protocol; NOT_RUN.
+- `handoffs/PHASE_14_STATIC_CHECKS.json`: executed offline evidence and explicit runtime NOT_RUN states.
+- `handoffs/PHASE_14_OFFLINE_HANDOFF.md`: current source-delivery account and Phase-15 stop line.
+- `handoffs/PHASE_14_RUNTIME_QC_HANDOFF.md`: Codex instructions for the user's applied Phase-14 state.
+- `handoffs/PHASE_14_RUNTIME_QC_REPORT.md`: NOT_RUN placeholder awaiting applied-checkout runtime evidence.
+- `handoffs/PHASE_14_DOCSET_HASHES.json`: regenerated complete docset identities excluding recursive checksum files.
+
+## Phase 14 source-delivery checkpoint
+
+Phase 14 is `OFFLINE_IMPLEMENTED`, not `COMPLETE`. The strict overlay is `fount_phase_14_overlay.zip`, 18 operations (11 additions, 7 modifications, no deletions), SHA-256 `586b3192fcdf6447ff85736b2d18e45eb5e1871f331f43442438f4833df922b6`. Strict dry-run/apply/second-dry-run, ZIP integrity and 626-file desired/applied tree identity pass. Focused Phase-9–14 Python source checks pass 49/49. Repository-wide discovery has one supplied-snapshot missing-helper import error; Elixir/Mix/PostgreSQL/live/human gates are NOT_RUN. Phase 15 is `NOT_STARTED`.
+
