@@ -1,0 +1,82 @@
+{
+  "format_version": 1,
+  "phase": 15,
+  "date": "2026-09-27",
+  "timezone": "Pacific/Honolulu",
+  "inputs": [
+    {
+      "role": "Agent Session Manager",
+      "sha256": "67988c9aec015ce189e16078b18639f60873d244da63e3275d33707add5702db",
+      "version": "0.17.1",
+      "identified_by": "repository rooted at lib/asm with OTP session/run/store/provider-SDK/inference-endpoint surfaces and ASM public facade",
+      "inspected_apis": [
+        "ASM.start_link/1",
+        "ASM.start_session/1",
+        "ASM.query/3",
+        "ASM.stream/3",
+        "ASM.stop_session/1",
+        "ASM.session_info/1",
+        "ASM.health/1"
+      ],
+      "phase15_use": "No new direct ASM call. Existing Workshop generation remains behind Inference; provider-free human read/share/resume paths do not acquire an ASM client."
+    },
+    {
+      "role": "SystemOneSDK",
+      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+      "version": "0.6.0",
+      "identified_by": "poncho containing system_one_sdk plus system_one_contracts, system_one_bumblebee and system_one_server",
+      "inspected_apis": [
+        "SystemOneSDK.new_client/1",
+        "SystemOneSDK.system_one/4",
+        "SystemOneSDK.noul/2",
+        "SystemOneSDK.choice/3",
+        "SystemOneSDK.score/3",
+        "SystemOneSDK.prepare/1",
+        "SystemOneSDK.evaluate/4",
+        "SystemOneSDK.evaluate_stream/4"
+      ],
+      "phase15_use": "No new SDK call or dependency. Observe/System One analytical boundary is unchanged."
+    },
+    {
+      "role": "Inference",
+      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
+      "version": "0.5.0",
+      "identified_by": "apps/inference provider-neutral client/request/response package with ASM and Gemini adapters",
+      "inspected_apis": [
+        "Inference.client/1",
+        "Inference.client!/1",
+        "Inference.capabilities/1",
+        "Inference.complete/3",
+        "Inference.stream/3",
+        "Inference.Response.text/1"
+      ],
+      "phase15_use": "The guide documents the actual client!/complete/Response.text facade for the optional basic-unstructured-LLM comparison. Phase-15 read/share itself is provider-free."
+    },
+    {
+      "role": "Fount",
+      "sha256": "4d31512305b7c5045d5cd1a46c48be175c6ade230c935f6b9a2321c2282a2d8e",
+      "identified_by": "four-package screenplay repository: fount, fount_observe, fount_intelligence and fount_workshop, with Phase-14 runtime-complete state already present",
+      "inspected_apis": [
+        "Fount.Selection.selected_ids/2",
+        "Fount.Screenplay.Editor.spec_ir/1",
+        "Fount.Screenplay.export_fountain/2",
+        "Fount.Screenplay.to_fdx/1",
+        "Fount.Screenplay.diff/2",
+        "FountWorkshop.TableRead.export/3",
+        "FountWorkshop.Session.open/4",
+        "FountWorkshop.Session.resume_view/2",
+        "FountWorkshop.CandidateAPI.manual/4",
+        "FountWorkshop.Review.accept/4",
+        "FountWorkshop.Review.reject/3"
+      ],
+      "phase15_use": "Implementation baseline. Existing canonical selection/export, table-read, candidate review/acceptance and durable session surfaces are extended or exercised rather than replaced."
+    },
+    {
+      "role": "Current docset",
+      "sha256": "b07aabdd0b0d453f54a37f02c55c8f6e23dcaa73106ed63dd43e3032658f1ba8",
+      "identified_by": "documents 00-36, PROGRESS, DECISIONS, TRACEABILITY_MATRIX, and handoffs through completed Phase 14",
+      "phase15_use": "Authoritative progress/specification baseline."
+    }
+  ],
+  "determination": "PROGRESS.md marks Phases 1-14 COMPLETE and Phase 15 Read, Share, Resume, and Prove Usefulness as the first non-COMPLETE phase. Document 36 scopes it to W01/W10-W12, A09-A12 and whole-workflow integration. Phase 16 is not authorized in this delivery."
+}

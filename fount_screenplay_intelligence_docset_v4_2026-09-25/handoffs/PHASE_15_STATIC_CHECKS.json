@@ -1,0 +1,77 @@
+{
+  "format_version": 1,
+  "phase": 15,
+  "status": "OFFLINE_IMPLEMENTED",
+  "date": "2026-09-27",
+  "environment": {
+    "mix": "NOT_FOUND",
+    "elixir": "NOT_FOUND",
+    "erl": "NOT_FOUND"
+  },
+  "executed": [
+    {
+      "check": "Focused Phase 13-15 Python source contracts",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest scripts.tests.test_phase_fifteen_source scripts.tests.test_phase_fourteen_source scripts.tests.test_phase_thirteen_source -q",
+      "result": "PASS",
+      "tests": 24
+    },
+    {
+      "check": "All phase-source Python contracts",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -p 'test_phase_*_source.py' -q",
+      "result": "PASS",
+      "tests": 110
+    },
+    {
+      "check": "Repository-wide Python discovery",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -q",
+      "result": "PARTIAL",
+      "tests_run": 119,
+      "passed": 118,
+      "errors": 1,
+      "detail": "Supplied XML snapshot includes scripts/tests/test_prune_deleted_directories.py but omits scripts/prune_deleted_directories.py; import fails before that one module runs. This is known snapshot validation debt, not a Phase-15 failure."
+    },
+    {
+      "check": "Strict overlay dry-run",
+      "result": "PASS",
+      "operations": 17
+    },
+    {
+      "check": "Strict overlay apply to clean extracted Fount XML baseline",
+      "result": "PASS",
+      "changed": 17
+    },
+    {
+      "check": "Second strict dry-run",
+      "result": "PASS",
+      "unchanged": 17
+    },
+    {
+      "check": "Whole-tree comparison after apply",
+      "result": "PASS",
+      "file_count": 634
+    },
+    {
+      "check": "ZIP integrity",
+      "command": "unzip -t fount_phase_15_overlay.zip",
+      "result": "PASS"
+    }
+  ],
+  "not_run": [
+    "mix format --check-formatted",
+    "warnings-as-errors compile",
+    "Phase-15 ExUnit",
+    "full mix ci",
+    "compiled architecture gate",
+    "Credo",
+    "Dialyzer",
+    "ExDoc",
+    "Hex package builds",
+    "PostgreSQL integration",
+    "live Inference/ASM generation",
+    "live System One measurement",
+    "speech/TTS runtime",
+    "PDF runtime",
+    "optional D046 comparative human writer study"
+  ],
+  "claim_limit": "Source-contract and transport checks do not establish Elixir compilation, ExUnit/runtime behavior, PostgreSQL durability, live provider output quality, TTS behavior, PDF behavior, or human usefulness."
+}

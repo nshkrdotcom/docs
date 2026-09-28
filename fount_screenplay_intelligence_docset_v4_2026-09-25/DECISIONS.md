@@ -421,4 +421,3 @@ Research records keep source provenance, rights/confidentiality/export policy, c
 **Reason:** This reuses the existing verified persistence/candidate boundaries, preserves writer authority, and prevents research, collaborator notes, speculative consequences, or model prose from silently becoming canon or evidence.
 
 **Status:** Adopted in the Phase-14 offline implementation; runtime/PostgreSQL verification is pending. Phase 15 is not authorized by this decision.
-

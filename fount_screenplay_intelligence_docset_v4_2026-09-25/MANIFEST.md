@@ -324,3 +324,19 @@ Phase 14 is `OFFLINE_IMPLEMENTED`, not `COMPLETE`. The strict overlay is `fount_
 ## Phase 14 runtime checkpoint
 
 Phase 14 is `COMPLETE` on applicable non-human engineering gates at Fount repair commit `37a25ca` (tree `52c259b`). The original 18 overlay hashes matched before repair; current identities are recorded separately in `PHASE_14_FILE_INVENTORY.json`. Full CI passes 351 workspace tests and architecture/strict quality/docs; 113 Python tests, 34 PostgreSQL integrations, focused writer/PDF/table-read checks and four package builds pass. Optional D046 human/domain review, live provider calls and external web research are `NOT_RUN`. Phase 15 is `NOT_STARTED`.
+
+## Phase 15 delivery records
+
+- `handoffs/PHASE_15_INPUTS.json`: five content-identified snapshot identities, versions and inspected APIs.
+- `handoffs/PHASE_15_FILE_INVENTORY.json`: exact 17-operation Fount overlay preimage/result identities and artifact hash.
+- `handoffs/PHASE_15_IMPLEMENTATION_MATRIX.md`: W01/W10–W12 and A09–A12 mapped to source/tests/writer value.
+- `handoffs/PHASE_15_PRESERVATION_AUDIT.md`: canon/privacy/export/session/dependency preservation obligations.
+- `handoffs/PHASE_15_DOMAIN_REVIEW_PACKET.md`: optional D046 comparative writer study protocol; NOT_RUN.
+- `handoffs/PHASE_15_STATIC_CHECKS.json`: actual source/transport evidence and explicit runtime/database/human NOT_RUN states.
+- `handoffs/PHASE_15_OFFLINE_HANDOFF.md`: source-delivery account and Phase-16 stop line.
+- `handoffs/PHASE_15_RUNTIME_QC_HANDOFF.md`: Codex runtime/database repair instructions for the user-applied Phase-15 state.
+- `handoffs/PHASE_15_DOCSET_HASHES.json`: complete updated-docset identities excluding recursive checksum files.
+
+## Current Phase 15 checkpoint
+
+Phase 15 is `OFFLINE_IMPLEMENTED`, not COMPLETE. The strict source overlay is `fount_phase_15_overlay.zip`, 17 operations (8 additions, 9 modifications, no deletions), SHA-256 `420cdaf39153461981eb350648cdc1e6230d47c613109fbd9c956e0946b60322`. Source-contract and strict transport checks pass; Elixir/Mix/PostgreSQL/runtime/provider checks and the optional D046 comparative human study are NOT_RUN. Codex must verify/repair the user-applied state and **stop before Phase 16**.

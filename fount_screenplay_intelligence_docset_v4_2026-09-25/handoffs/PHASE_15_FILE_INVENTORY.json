@@ -1,0 +1,193 @@
+{
+  "format_version": 1,
+  "phase": 15,
+  "artifact": "fount_phase_15_overlay.zip",
+  "artifact_sha256": "420cdaf39153461981eb350648cdc1e6230d47c613109fbd9c956e0946b60322",
+  "artifact_bytes": 42607,
+  "operation_count": 17,
+  "counts": {
+    "add": 8,
+    "modify": 9,
+    "delete": 0
+  },
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "action": "modify",
+      "original_sha256": "4cabd61ecf1e0ab68be84800df12a2ce063a4424ecfc296acfbff147bde7185a",
+      "original_terminal_lf_sha256": "1b1c42aaa4a80ea5257b698b9a82b1a1ed4a51af16161bcd0d077ad73c104809",
+      "result_sha256": "ea54397720731dba3426fe02d1f38c697a00768b9a8b4d6bec0f2979138c03e7",
+      "mode": 420,
+      "original_bytes": 5928,
+      "result_bytes": 6832
+    },
+    {
+      "path": "packages/fount_workshop/CHANGELOG.md",
+      "action": "modify",
+      "original_sha256": "393cee40b63eda119b564723de8f327aab0008b017f1cb6861b9e720b8556f2a",
+      "original_terminal_lf_sha256": "e78363ccfd2471a79d82c8389a3eae2472f13ca33761e35a9d62238fb1d0ebb8",
+      "result_sha256": "7f13fe59ca7a43a26eb447d87b7fbb7f7ab7b3953f5495ad4fffd45fc547371e",
+      "mode": 420,
+      "original_bytes": 5714,
+      "result_bytes": 6829
+    },
+    {
+      "path": "packages/fount_workshop/README.md",
+      "action": "modify",
+      "original_sha256": "d0df2c5c207a6e99a7c2d3b3d566d1975d1546e2f59b4419f8022b2d456e327f",
+      "original_terminal_lf_sha256": "9114bab9e1ae97aaed01d143e08e1e9aa85eef4e943da62a5d917f3943453ec0",
+      "result_sha256": "58bbf3ea8317b10e6b64bb4a4a8b8458b14a2fc5b2be9b632ffa8fea1925b901",
+      "mode": 420,
+      "original_bytes": 8210,
+      "result_bytes": 8803
+    },
+    {
+      "path": "packages/fount_workshop/examples/README.md",
+      "action": "modify",
+      "original_sha256": "0a169d8736e64756b902b7ec34462e55a7dd08c1339f7ef9be6ed13aa865cf78",
+      "original_terminal_lf_sha256": "badf0ad02add0a4ada7fbf809961ddb13e3f13d8bc943c265d0cb68ce008fa2b",
+      "result_sha256": "029daba202bea0183c70499e684930e5880d308a4843729c42fbe31a7f2eea10",
+      "mode": 420,
+      "original_bytes": 6859,
+      "result_bytes": 7331
+    },
+    {
+      "path": "packages/fount_workshop/examples/phase_fifteen/README.md",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "7f1a69fe8c8b3a60c57118aca0fbaf856a3073d4b93a6e3528ad004ec721cc64",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 1363
+    },
+    {
+      "path": "packages/fount_workshop/guides/read-share-resume-and-usefulness.md",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "85e78482840038ed1741aaa22f6069cc55480e4e5a67455975fa36480b876f9a",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 6155
+    },
+    {
+      "path": "packages/fount_workshop/guides/table-reads-and-audio.md",
+      "action": "modify",
+      "original_sha256": "c5845ec6e629de169058a7adcc94772c9d10575e270dc4f4146afa98c8196fa1",
+      "original_terminal_lf_sha256": "0738198ee2a2c51a63140d131f4caa97fae8093287159586d9f128721240beb9",
+      "result_sha256": "a56b0f33796654c778769a88c217215bdbdee4d2df8e9636bdc64fc58d04ee1e",
+      "mode": 420,
+      "original_bytes": 2506,
+      "result_bytes": 3324
+    },
+    {
+      "path": "packages/fount_workshop/integration/phase_fifteen_read_share_resume_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "30d4512a8e68d21be841b4c35c81f2d2e19f356567d90d081b853c492747075b",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 3853
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop.ex",
+      "action": "modify",
+      "original_sha256": "4c094ca0d77ece2e30b65374d9bedb69dec1048effaf8ce5592659ddb22670cc",
+      "original_terminal_lf_sha256": "00a9af79d75176ed430e512b4e18ec9d1457f1ec3b390d301d0d6d1e4e37f9aa",
+      "result_sha256": "2b7e713f0f52e985a349fee6821b0dab702f341a2cde1d6ada145e20442dce8a",
+      "mode": 420,
+      "original_bytes": 811,
+      "result_bytes": 1646
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/cli.ex",
+      "action": "modify",
+      "original_sha256": "a744f7ab30040c68100e7c0f1cd38defac0571c49c8c7724e572fc49fed39b8b",
+      "original_terminal_lf_sha256": "81d4c847a48a6571cfa6b2c02a2da371d72dbeb19bc1a3bcfe7bdefc54ada759",
+      "result_sha256": "ab2e2025b9546c913749536ae7373ab7d2d44863471c18d252349ed7283f45cd",
+      "mode": 420,
+      "original_bytes": 16534,
+      "result_bytes": 16965
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/share.ex",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "5a7f0112a53bb0250beb915fb47a3995d8fabed6d95c84c7e87988904683355e",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 6349
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/table_read.ex",
+      "action": "modify",
+      "original_sha256": "a7f68abc05bbf6bdb35e2e3ff1e610514d6f0c84cf8d666c952c4c2b86dac601",
+      "original_terminal_lf_sha256": "da9f5a7af9bf51fcbf025ac43ca253f4212c91b726f4e20e20d8ce7ad0fb9c1a",
+      "result_sha256": "89fdae714e31ef31a11e2880b56b201a5eea5f920b5c6a730b09742cc66051bd",
+      "mode": 420,
+      "original_bytes": 6705,
+      "result_bytes": 13010
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/usefulness.ex",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "51c87119e87bb76e06861ef70dfccb03b699e864a5a3e99cda3e5252b9c5d42f",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 6232
+    },
+    {
+      "path": "packages/fount_workshop/mix.exs",
+      "action": "modify",
+      "original_sha256": "65d475fee3a7a27522989efa6c1988fb099a4efd1df298c90ade4127644218f6",
+      "original_terminal_lf_sha256": "c05d4cad3f068ddc7171bacc945464a5a8f0f427c65abcd14722a35166d4401c",
+      "result_sha256": "234afadb20b3f61d790f3e46a622be70a07275bc8f441c051a95bfdaefafb39a",
+      "mode": 420,
+      "original_bytes": 4046,
+      "result_bytes": 4319
+    },
+    {
+      "path": "packages/fount_workshop/test/writer_workflows/phase_fifteen_read_share_resume_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "80f84a1f59cafad65582e323a2ffe5587685a1ecb7bd0871a5eca475adfd9295",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 7176
+    },
+    {
+      "path": "packages/fount_workshop/test/writer_workflows/phase_fifteen_usefulness_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "baff99004175dc238bcd19f0d5a935c9e04ac1f9593bda454fc63b4f450c4e0b",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 3252
+    },
+    {
+      "path": "scripts/tests/test_phase_fifteen_source.py",
+      "action": "add",
+      "original_sha256": null,
+      "original_terminal_lf_sha256": null,
+      "result_sha256": "2d4e8804c1d0e3e57c110f440b04588eda2e402ee80ddedd39fb3980faeccfec",
+      "mode": 420,
+      "original_bytes": null,
+      "result_bytes": 5828
+    }
+  ],
+  "deletions": [],
+  "transport": {
+    "strict_dry_run": "PASS",
+    "strict_apply_changed": 17,
+    "second_strict_dry_run_unchanged": 17,
+    "desired_applied_tree_identity": "PASS",
+    "zip_integrity": "PASS"
+  }
+}

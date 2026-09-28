@@ -402,3 +402,7 @@ Current source-delivery state: `OFFLINE_IMPLEMENTED`. Elixir/PostgreSQL/live/run
 ## Phase 12 offline acceptance state — 2026-09-27
 
 Phase 12 source for W01–W03/W11 and A01–A03/A10 is written and transport-verified, but the phase is **OFFLINE_IMPLEMENTED**, not COMPLETE. Elixir compile/ExUnit, real PostgreSQL persistence, full regression/quality/package gates and the required writer demonstration execution remain for Codex. Optional human review is nonblocking under D046. Phase 13 remains NOT_STARTED.
+
+## Phase 15 source-delivery checkpoint — 2026-09-27
+
+W01/W10–W12 and A09–A12 now have source/test/documentation evidence in the Phase-15 overlay, including provider-free human read/share, exact-source human reaction linkage, stale/idempotent resume coverage, clean accepted-canonical Fountain/FDX sharing, and separate usefulness dimensions/conditions without a screenplay score or winner. This is **OFFLINE_IMPLEMENTED**, not runtime acceptance: Elixir formatting/compile/ExUnit, real PostgreSQL durability, full CI/package/preservation gates and artifact inspection remain for Codex. Optional D046 human comparison remains NOT_RUN. Phase 16 is not authorized by this checkpoint.

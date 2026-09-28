@@ -263,7 +263,7 @@ latest QC'd source snapshots + latest docset
 
 ## Current status
 
-Read `PROGRESS.md`. Phases 1–10 are `COMPLETE` on engineering QC. Phase 11 is `OFFLINE_IMPLEMENTED` with runtime/live QC pending. Phase 12 is `NOT_STARTED`.
+Read `PROGRESS.md`. Phases 1–14 are `COMPLETE` on applicable non-human engineering QC. Phase 15 is `OFFLINE_IMPLEMENTED` with runtime/database QC pending. Phase 16 is `NOT_STARTED`.
 
 ## Previous verified checkpoint: Phase 7
 
@@ -289,3 +289,11 @@ Phase 10 Durable Analysis Persistence, Reuse, and Recomputation is **COMPLETE** 
 ## Phase 11 source delivery
 
 Phase 11 Scaled Calibration, Evaluation Corpus, Robustness, and Live Verification is **OFFLINE_IMPLEMENTED**, not COMPLETE. The new Intelligence evaluation surface keeps rights/provider-export policy, independent reader disagreement, calibration/abstention, descriptive drift, frozen current-contract reasoning fixtures, capability-suite coverage and longitudinal resource calibration explicit and separately inspectable. It ships a nonlinear first-exposure/story-time regression and opt-in live QC paths: Observe sends only a synthetic scene; Workshop generates one noncanonical candidate for one scene with Observe disabled and never accepts it. No human calibration/usefulness or live-provider result is claimed by this source handoff. Read `handoffs/PHASE_11_OFFLINE_HANDOFF.md` and `handoffs/PHASE_11_RUNTIME_QC_HANDOFF.md`. Phase 12 remains `NOT_STARTED`.
+
+## Phase 15 source delivery — 2026-09-27
+
+Phase 15 **Read, Share, Resume, and Prove Usefulness** is `OFFLINE_IMPLEMENTED`, not COMPLETE. The source delivery keeps the existing text/CLI workflow and adds a provider-free human table-read packet/reaction record, clean accepted-canonical Fountain/FDX sharing with explicit privacy and loss reporting, a durable read/share/resume regression, and non-scoring usefulness evidence for human-only, basic unstructured LLM, and Fount-assisted conditions. A writer keeping the original is representable as a valid outcome.
+
+Offline evidence: focused Phase-13–15 source contracts pass 24/24; all `test_phase_*_source.py` contracts pass 110/110; strict 17-operation overlay dry-run/apply/idempotence/tree reproduction and ZIP integrity pass. Full Python discovery attempts 119 tests: 118 pass and the supplied XML baseline still lacks `scripts/prune_deleted_directories.py`, causing the known unrelated import error. `mix`, `elixir`, and `erl` are unavailable, so format/compile/ExUnit/PostgreSQL/full-CI/package/provider results are NOT_RUN. The optional D046 comparative writer study is NOT_RUN and no human-usefulness result is claimed.
+
+Read `handoffs/PHASE_15_OFFLINE_HANDOFF.md` and `handoffs/PHASE_15_RUNTIME_QC_HANDOFF.md`. The user applies and commits; Codex verifies/repairs Phase 15 and **stops before Phase 16**.

@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phases 1–14 COMPLETE on applicable non-human engineering QC. Phase 15 remains NOT_STARTED. Optional human studies remain NOT_RUN validation debt under D046.
+**Current state:** Phases 1–14 COMPLETE on applicable non-human engineering QC. Phase 15 is OFFLINE_IMPLEMENTED and awaits runtime/database QC. Phase 16 remains NOT_STARTED. Optional human studies remain NOT_RUN validation debt under D046.
 
 ## Status values
 
@@ -32,7 +32,7 @@ Runtime QC establishes completion when applicable engineering and other non-huma
 | 12 | Discovery, Session Modes, and Scene Exploration | COMPLETE | `fount_phase_12_overlay.zip` | `handoffs/PHASE_12_RUNTIME_QC_REPORT.md` | 343 workspace tests, 98 Python tests, compiled quality/docs, 32 PostgreSQL integration tests, real CLI writer path and four packages pass; optional human study NOT_RUN |
 | 13 | Cinematic Revision, Rehearsal, and Voice | COMPLETE | `fount_phase_13_overlay.zip` | `handoffs/PHASE_13_RUNTIME_QC_REPORT.md` | 24 overlay hashes match before repair; 347 workspace, 105 Python, 33 PostgreSQL integrations, four Hex builds and writer/PDF/table-read gates pass; optional D046 review NOT_RUN |
 | 14 | Research, Notes, and Consequential Revision | COMPLETE | `fount_phase_14_overlay.zip` | `handoffs/PHASE_14_RUNTIME_QC_REPORT.md` | 18/18 pre-repair hashes; 351 workspace, 113 Python, 34 PostgreSQL integrations, four Hex builds and preservation gates pass; optional D046 review NOT_RUN |
-| 15 | Read, Share, Resume, and Prove Usefulness | NOT_STARTED | — | — | W01/W10–W12; document 36 |
+| 15 | Read, Share, Resume, and Prove Usefulness | OFFLINE_IMPLEMENTED | `fount_phase_15_overlay.zip` | — | W01/W10–W12 + A09–A12 source written; 110 phase-source Python tests pass; Elixir/runtime/PostgreSQL NOT_RUN; optional D046 study NOT_RUN |
 | 16 | Final Integration and Acceptance | NOT_STARTED | — | — | Full engineering and writer-workflow acceptance |
 
 ## Phase handoff log
@@ -73,6 +73,7 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-27 | 13 | Runtime QC and repairs | Fount applied `9ac5148`, repair `26da17e`; `handoffs/PHASE_13_RUNTIME_QC_REPORT.md` | COMPLETE; 24/24 pre-repair hashes, full CI, 347 workspace tests, 105 Python tests, 33 PostgreSQL integrations and four packages pass; Phase 14 NOT_STARTED |
 | 2026-09-27 | 14 | Source implementation delivered | `fount_phase_14_overlay.zip`; complete Phase-14 docset; `FOUNT_PHASE_14_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; W07–W09/A06–A08 + stale/rebase/undo written; strict 18-operation overlay/apply/tree verification and 49 focused Phase-9–14 Python checks pass; Elixir/runtime/PostgreSQL/live/human gates NOT_RUN; Phase 15 NOT_STARTED |
 | 2026-09-27 | 14 | Runtime QC and repairs | Fount applied `660fcad`, repair `37a25ca`; `handoffs/PHASE_14_RUNTIME_QC_REPORT.md` | COMPLETE; 18/18 pre-repair hashes, full CI with 351 workspace tests, 113 Python tests, 34 PostgreSQL integrations and four packages pass; Phase 15 NOT_STARTED |
+| 2026-09-27 | 15 | Source implementation delivered | `fount_phase_15_overlay.zip`; `fount_phase_15_docset.zip`; `FOUNT_PHASE_15_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 17-operation strict overlay verified; focused 24 and phase-source 110 Python tests pass; Elixir/Mix/PostgreSQL/runtime and optional human study NOT_RUN; Phase 16 locked |
 
 ## Non-negotiable progress rule
 
