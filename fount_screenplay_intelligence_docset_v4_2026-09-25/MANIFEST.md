@@ -101,7 +101,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–11 are COMPLETE on recorded engineering QC; Phase 12 is COMPLETE on runtime/repair engineering QC; Phase 13 remains NOT_STARTED. Phase-12 source-delivery records are under `handoffs/PHASE_12_*`. Earlier optional human studies remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–12 are COMPLETE on recorded engineering QC; Phase 13 is OFFLINE_IMPLEMENTED and awaits runtime/repair QC; Phase 14 remains NOT_STARTED. Phase-13 source-delivery records are under `handoffs/PHASE_13_*`. Earlier optional human studies remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -281,3 +281,20 @@ Phase 11 is `COMPLETE` on recorded engineering and authorized live QC; see `hand
 ## Current Phase 12 checkpoint
 
 Phase 12 is `COMPLETE` on applicable engineering gates. The strict source overlay is `fount_phase_12_overlay.zip`, 36 operations (23 additions, 13 modifications, no deletions), SHA-256 `51ca6d00d7c1e7a871b08f2657127264886a63df8a0485b6a3a958b61b01bc2b`. The original 36 overlay hashes matched before repair. Full CI, 98 Python tests, 32 PostgreSQL integrations, the CLI example and four archives pass; live-provider and optional human studies remain NOT_RUN. Phase 13 is `NOT_STARTED`.
+
+## Phase 13 delivery records
+
+- `handoffs/PHASE_13_INPUTS.json`: five content-identified XML roles, hashes, real dependency versions and inspected public boundaries.
+- `handoffs/PHASE_13_FILE_INVENTORY.json`: exact 24-operation Fount overlay inventory plus transport verification.
+- `handoffs/PHASE_13_IMPLEMENTATION_MATRIX.md`: W04–W06 and A02–A05 mapped to source/tests and writer outcome.
+- `handoffs/PHASE_13_PRESERVATION_AUDIT.md`: canon, session, dependency and prior-phase preservation obligations.
+- `handoffs/PHASE_13_DOMAIN_REVIEW_PACKET.md`: optional D046 original/candidate/generic-control and language/voice tradeoff review; NOT_RUN.
+- `handoffs/PHASE_13_STATIC_CHECKS.json`: executed offline checks and explicit runtime NOT_RUN states.
+- `handoffs/PHASE_13_OFFLINE_HANDOFF.md`: source-delivery account and Phase-14 stop line.
+- `handoffs/PHASE_13_RUNTIME_QC_HANDOFF.md`: Codex instructions for the user-applied Phase-13 state.
+- `handoffs/PHASE_13_RUNTIME_QC_REPORT.md`: NOT_RUN placeholder for Codex execution evidence.
+- `handoffs/PHASE_13_DOCSET_HASHES.json`: complete updated-docset identities excluding recursive checksum files.
+
+## Current Phase 13 checkpoint
+
+Phase 13 is `OFFLINE_IMPLEMENTED`, not `COMPLETE`. The strict overlay is `fount_phase_13_overlay.zip`, 24 operations (13 additions, 11 modifications, no deletions), SHA-256 `204775aabc11810e381bcc53bccb43b644ef19a8a5eb2d5fede3b3666b96ea39`. Strict dry-run/apply/second-dry-run, ZIP integrity and 614-file desired/applied tree identity pass. Focused Phase-9–13 Python source checks pass 41/41. Elixir/Mix/PostgreSQL/live/human gates are NOT_RUN. Phase 14 is `NOT_STARTED`.

@@ -510,10 +510,31 @@ The user supplied `gpt-6-luna` for Workshop and the default JEV for System One. 
 | A10 stale/idempotent resume | manual/edit/accept retry/stale sibling/reject/resume | discovery test | NOT_RUN |
 | W11 finite/capped work | existing Session budgets/preflight retained; provider-free paths make no paid-client request | source review PASS | full runtime regression pending |
 | dependency boundaries | Workshop→Inference generation; Observe→SystemOne measurement; ASM only behind Inference | API/source inspection PASS | compiled architecture pending |
-| Phase-13 stop line | no rehearsal/voice-exemplar/cinematic Phase-13 implementation | source contract PASS | Phase 13 NOT_STARTED |
+| Phase-12 stop line | Phase-12 delivery itself contains no Phase-13 implementation | source contract PASS | historical Phase-12 stop satisfied; Phase 13 implemented separately in the next delivery |
 
 Phase 12 remains `OFFLINE_IMPLEMENTED`: creative usefulness and runtime correctness are not inferred from the static checks.
 
 ## Phase 12 runtime QC closure — 2026-09-27
 
 The five focused Phase-12 ExUnit tests plus a treatment-validation regression pass; a new real PostgreSQL integration test proves W02 effective-brief execution and A10 stale/idempotent acceptance. Full `mix ci` passes 343 tests, compiled architecture, strict Credo, Dialyzer and ExDoc. The disposable-database CLI example verifies W01/W02 writer capture through accepted edited pages and fresh resume; Core/Intelligence/Workshop integration counts are 11/4/17. A01/A02/A03 remain deterministic scripted engineering evidence, not a live-model quality or human-usefulness claim. W11 finite preflight and provider-free command behavior remain visible; no generation or measurement credentials were used for CLI. Phase 12 `COMPLETE`; Phase 13 `NOT_STARTED`. Detailed checks and artifact identities: `handoffs/PHASE_12_RUNTIME_QC_REPORT.md`.
+
+## Phase 13 source implementation trace — 2026-09-27
+
+Status: **OFFLINE_IMPLEMENTED; runtime NOT_RUN; Phase 14 NOT_STARTED.**
+
+| Requirement / acceptance case | Phase-13 source surface | Evidence written | Current status |
+|---|---|---|---|
+| W04 visual/sound/space/rhythm/transition | Workshop pass profiles + Request/Preparation/Generation/Pass | `phase_thirteen_pass_profiles_test.exs`; A02 comparison fixture | WRITTEN; ExUnit NOT_RUN |
+| A02 quiet unresolved tenderness | actual visual/stillness and offscreen-sound candidate pages; untouched base retained | `phase_thirteen_comparison_test.exs` | WRITTEN; ExUnit NOT_RUN |
+| A02 reject explanatory generic control | explicit saved generic dialogue candidate rejected | comparison test | WRITTEN; ExUnit NOT_RUN |
+| W06 exact voice protection | `Writing.VoiceProtection` -> required `pin_text` constraints on existing Constraints/ReviewGate path | voice test | WRITTEN; ExUnit NOT_RUN |
+| A04 repeated/multilingual/clipped text | exact protected repeated multilingual dialogue + cue survive action edit; normalized dialogue fails | `phase_thirteen_voice_test.exs` | WRITTEN; ExUnit NOT_RUN |
+| W06 language competence limit | context says similarity is not quality and does not certify language/cultural authenticity | VoiceProtection + guide | SOURCE INSPECTION |
+| W05 noncanonical rehearsal | Session progress only; explicit adopt/reject; only adopted material enters later exploration context and remains `canonical: false` | `FountWorkshop.Rehearsal`; rehearsal test | WRITTEN; ExUnit NOT_RUN |
+| A05 invented boat history isolation | active/rejected claim absent from later context; adopt is traceable | rehearsal test | WRITTEN; ExUnit NOT_RUN |
+| mechanical candidate comparison | stable-ID `Fount.Screenplay.diff/2`; generator summary labeled claim/non-evidence | `FountWorkshop.Comparison`; comparison test | SOURCE INSPECTION / ExUnit NOT_RUN |
+| canon authority | Acceptance/ReviewGate remain sole canonical gate; rehearsal/comparison do not accept | preservation audit | SOURCE INSPECTION |
+| actual API/dependency use | Workshop generation through Inference/ASM adapter; analysis through Observe/SystemOneSDK; no new dependency | Phase-13 inputs + source | SOURCE INSPECTION |
+| Phase-14 stop line | no W07–W09 implementation | inventory + source test | PASS |
+
+Offline execution: Phase-13 Python source checks 7/7 PASS; focused Phase-9–13 checks 41/41 PASS; strict 24-operation overlay transport and 614-file applied-tree identity PASS. Repository-wide Python discovery has one known supplied-snapshot missing-helper import error. Mix/Elixir/Erlang are unavailable, so no runtime/ExUnit/PostgreSQL/live/human result is claimed. Optional human review is NOT_RUN under D046.

@@ -1,0 +1,80 @@
+{
+  "format_version": 1,
+  "phase": 13,
+  "date": "2026-09-27",
+  "timezone": "Pacific/Honolulu",
+  "inputs": [
+    {
+      "role": "Agent Session Manager",
+      "sha256": "67988c9aec015ce189e16078b18639f60873d244da63e3275d33707add5702db",
+      "version": "0.17.1",
+      "identified_by": "repository rooted at lib/asm with run/session/store/provider SDK/inference endpoint surfaces and ASM public facade",
+      "inspected_apis": [
+        "ASM.start_link/1",
+        "ASM.start_session/1",
+        "ASM.query/3",
+        "ASM.stream/3",
+        "ASM.stop_session/1",
+        "ASM.session_info/1",
+        "ASM.health/1"
+      ],
+      "phase13_use": "Existing Workshop dependency retained because Inference.Adapters.ASM is selected by FountWorkshop.Launcher; Phase 13 adds no direct ASM calls or replacement session API."
+    },
+    {
+      "role": "SystemOneSDK",
+      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+      "version": "0.6.0",
+      "identified_by": "monorepo containing packages/system_one_sdk plus contracts, bumblebee and server; public SystemOneSDK facade",
+      "inspected_apis": [
+        "SystemOneSDK.new_client/1",
+        "SystemOneSDK.noul/2",
+        "SystemOneSDK.choice/3",
+        "SystemOneSDK.score/3",
+        "SystemOneSDK.prepare/1",
+        "SystemOneSDK.evaluate/4",
+        "SystemOneSDK.evaluate_stream/4"
+      ],
+      "phase13_use": "No new SDK call. Existing Fount.Observe.Providers.SystemOne boundary is preserved for analytical measurements."
+    },
+    {
+      "role": "Inference",
+      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
+      "version": "0.5.0",
+      "identified_by": "apps/inference provider-neutral request/client/adapter package with ASM and Gemini adapters",
+      "inspected_apis": [
+        "Inference.client/1",
+        "Inference.client!/1",
+        "Inference.capabilities/1",
+        "Inference.complete/3",
+        "Inference.stream/3",
+        "Inference.Client.agent_session/1",
+        "Inference.Client.agent_session!/1"
+      ],
+      "phase13_use": "Existing Workshop generation path remains Inference.Client.agent_session! with Inference.Adapters.ASM; no invented generation API."
+    },
+    {
+      "role": "Fount",
+      "sha256": "f2458d37f9a7f21243c923d1218979f5ee2327e5f345a556902f0c31b09ed57d",
+      "identified_by": "four-package repository containing fount, fount_observe, fount_intelligence and fount_workshop, including completed Phase-12 source/QC state",
+      "inspected_apis": [
+        "Fount.Intelligence.Playbooks.Constraints.resolve/2",
+        "Fount.Intelligence.Playbooks.Constraints.deterministic/4",
+        "Fount.Writing.ReviewGate.validate/3",
+        "Fount.Screenplay.diff/2",
+        "Fount.Query.scene_for/2",
+        "FountWorkshop.Request.validate/2",
+        "FountWorkshop.Session",
+        "FountWorkshop.Store",
+        "FountWorkshop.Acceptance"
+      ],
+      "phase13_use": "Implementation baseline. Existing deterministic pin checks, explicit canonical acceptance, durable session progress and stable-ID diff surfaces are reused."
+    },
+    {
+      "role": "Current docset",
+      "sha256": "fc6f421068ba1bf08206e490fff3fc20263ce54e3a0f7d9c032f632f5476edab",
+      "identified_by": "documents 00-36, PROGRESS, DECISIONS, TRACEABILITY_MATRIX and handoffs through completed Phase 12",
+      "phase13_use": "Authoritative phase/progress baseline."
+    }
+  ],
+  "determination": "PROGRESS.md marks Phase 12 COMPLETE and Phase 13 as the first not-started phase. Document 36 and the Phase-13 section of document 16 authorize only Cinematic Revision, Rehearsal, and Voice: W04-W06 and A02-A05. Phase 14 is not authorized in this delivery."
+}

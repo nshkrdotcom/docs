@@ -1,6 +1,6 @@
 # Agent Start Here
 
-> **Current handoff (2026-09-27): Phase 12 is OFFLINE_IMPLEMENTED.** Phases 1–11 are COMPLETE on recorded engineering QC. The next agent is Codex runtime QC for the user-applied Phase-12 commit: test/repair Phase 12, update evidence, and stop before Phase 13. Do not reapply the overlay.
+> **Current handoff (2026-09-27): Phase 13 is OFFLINE_IMPLEMENTED.** Phases 1–12 are COMPLETE on recorded engineering QC. The next agent is Codex runtime QC for the user-applied Phase-13 commit: verify, test/repair Phase 13, update evidence, and stop before Phase 14. Do not reapply the overlay.
 
 You are implementing a screenplay-writing tool for humans and agentic collaborators, from source snapshots in an environment assumed to lack a usable Elixir runtime. Read the writer outcome before the technical constraints. Do not substitute architectural activity for useful writing behavior.
 
@@ -20,9 +20,9 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phases 1–11: COMPLETE on recorded engineering QC. Phase 12: OFFLINE_IMPLEMENTED; runtime/repair QC pending. Phase 13: NOT_STARTED.**
+> **Phases 1–12: COMPLETE on recorded engineering QC. Phase 13: OFFLINE_IMPLEMENTED; runtime/repair QC pending. Phase 14: NOT_STARTED.**
 
-Read `handoffs/PHASE_11_RUNTIME_QC_REPORT.md` for the verified Phase-11 checkpoint, then `handoffs/PHASE_12_OFFLINE_HANDOFF.md` and `handoffs/PHASE_12_RUNTIME_QC_HANDOFF.md` for the current source delivery. Historical validation debt remains visible; do not claim human validation or unrun Phase-12 runtime results. Do not advance to Phase 13.
+Read `handoffs/PHASE_12_RUNTIME_QC_REPORT.md` for the verified Phase-12 checkpoint, then `handoffs/PHASE_13_OFFLINE_HANDOFF.md` and `handoffs/PHASE_13_RUNTIME_QC_HANDOFF.md` for the current source delivery. Historical validation debt remains visible; do not claim human validation or unrun Phase-13 runtime results. Do not advance to Phase 14.
 
 ## Read before coding
 
@@ -120,6 +120,10 @@ Phase 10 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The 27-operation overlay adds
 
 Phase 10 is **COMPLETE** at Fount `6d164f6` (tree `9a94735`) on the engineering and preservation QC recorded in `handoffs/PHASE_10_RUNTIME_QC_REPORT.md`. Full CI passed 328 tests; 82 Python tests, disposable PostgreSQL, writer resume/history, compiled architecture, strict quality/docs, PDF/table-read and four package builds passed. The optional human usefulness study was skipped under D046 as validation debt. That stop line is historical; Phase 11 is now source-written.
 
-### Current Phase 11 source checkpoint
+### Historical Phase 11 source checkpoint
 
 Phase 11 is **OFFLINE_IMPLEMENTED**, not COMPLETE. Read `handoffs/PHASE_11_INPUTS.json`, `PHASE_11_IMPLEMENTATION_MATRIX.md`, `PHASE_11_STATIC_CHECKS.json`, `PHASE_11_PRESERVATION_AUDIT.md`, and `PHASE_11_RUNTIME_QC_HANDOFF.md`. The source delivery adds the evaluation/corpus/calibration/robustness/live-QC layer while preserving current package boundaries. Runtime, PostgreSQL, live-provider and human-study evidence is not claimed. Codex must verify/repair Phase 11 from the user's applied commits and **stop before Phase 12**.
+
+### Current Phase 13 source checkpoint
+
+Phase 13 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The current 24-operation overlay adds cinematic pass profiles, required exact voice pins, noncanonical rehearsal with explicit adoption/rejection, actual page-diff comparison, Phase-13 tests and writer-facing documentation. Focused Phase-9–13 Python source checks and strict overlay transport checks pass; Elixir/Mix/PostgreSQL/runtime checks are unrun. Codex starts from the user-applied commit, follows `handoffs/PHASE_13_RUNTIME_QC_HANDOFF.md`, repairs actual failures, records executed evidence, and **stops before Phase 14**.

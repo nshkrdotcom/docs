@@ -14,14 +14,14 @@ ChatGPT.com writes the current phase without claiming unrun Elixir checks and re
 
 ## Current checkpoint
 
-Phases 1–11 are COMPLETE on the recorded engineering QC. **Phase 12 — Discovery, Session Modes, and Scene Exploration — is OFFLINE_IMPLEMENTED and awaits Codex runtime/repair QC. Phase 13 is NOT_STARTED.** See `PROGRESS.md` and `handoffs/PHASE_12_RUNTIME_QC_HANDOFF.md`.
+Phases 1–12 are COMPLETE on the recorded engineering QC. **Phase 13 — Cinematic Revision, Rehearsal, and Voice — is OFFLINE_IMPLEMENTED and awaits Codex runtime/repair QC. Phase 14 is NOT_STARTED.** See `PROGRESS.md` and `handoffs/PHASE_13_RUNTIME_QC_HANDOFF.md`.
 
 
 ## Start with the writing experience
 
 Read `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md`, `33_WRITER_WORKFLOWS_AND_CREATIVE_CONTRACT.md`, and `34_HUMAN_JEV_AND_LLM_COLLABORATION.md` before treating the architecture below as a product brief. The new research complements the earlier reader/notes work with discovery, cinematic action and sound, voice, rehearsal, and useful alternatives.
 
-`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–11 are COMPLETE on recorded engineering QC; Phase 12 is OFFLINE_IMPLEMENTED and awaits runtime/repair QC; Phase 13 is NOT_STARTED. The verified Phase-11 checkpoint is in `handoffs/PHASE_11_RUNTIME_QC_REPORT.md`, and the current Phase-12 source delivery is in `handoffs/PHASE_12_OFFLINE_HANDOFF.md`. Earlier optional human studies remain visible validation debt; D046 makes human reviews optional and nonblocking.
+`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–12 are COMPLETE on recorded engineering QC; Phase 13 is OFFLINE_IMPLEMENTED and awaits runtime/repair QC; Phase 14 is NOT_STARTED. The verified Phase-12 checkpoint is in `handoffs/PHASE_12_RUNTIME_QC_REPORT.md`, and the current Phase-13 source delivery is in `handoffs/PHASE_13_OFFLINE_HANDOFF.md`. Earlier optional human studies remain visible validation debt; D046 makes human reviews optional and nonblocking.
 
 Success means a writer can arrive with an image, a scene, or a difficult note; explore real choices; preserve what matters; see consequences; and choose what becomes the draft. No compulsory outline, universal conflict theory, or simulated audience verdict. Human-only writing remains useful without provider credentials.
 
@@ -46,7 +46,7 @@ The retained engineering references support those workflows. They do not authori
              creative generation / revision
 ```
 
-`fount_workshop` also depends directly on `fount` for canonical screenplay operations and on `inference` for generation.
+`fount_workshop` also depends directly on `fount` for canonical screenplay operations and on `inference` for generation. The current Workshop package also retains its existing `agent_session_manager` dependency because its launcher selects `Inference.Adapters.ASM`; generation still enters through the Inference client rather than a new direct ASM execution API.
 
 `fount_probe` is **directly superseded and deleted in Phase 1**. There is no compatibility layer, legacy-data program, or slow cutover.
 
