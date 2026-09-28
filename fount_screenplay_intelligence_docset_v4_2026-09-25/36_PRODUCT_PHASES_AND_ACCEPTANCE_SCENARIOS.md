@@ -259,3 +259,12 @@ Source-delivery execution status: **OFFLINE_IMPLEMENTED / Elixir runtime NOT_RUN
 
 
 **Phase 15 runtime QC checkpoint — 2026-09-27:** `COMPLETE` on applicable non-human gates at Fount `72c583a` (tree `30df207`). All 17 source overlay hashes matched before repair; post-repair identities are separate. A09–A12 focused tests, fresh PostgreSQL resume/privacy integration, full 353-test `mix ci` with architecture/strict quality/docs, 122 Python tests, 35 database integrations, Core lossless Fountain/FDX, writer/PDF/Submission preservation, provider-free capture-through-resume CLI path, and four Hex builds pass. Resume review export now shows persisted accepted/rejected decisions. Deterministic records are engineering fixtures, not human preference data. Live providers and the optional D046 four-writer study are `NOT_RUN`. See `handoffs/PHASE_15_RUNTIME_QC_REPORT.md`. Phase 16 remains `NOT_STARTED`.
+
+## Phase 16 source-delivery record — 2026-09-27
+
+Written: `scripts/final_acceptance.py`, `scripts/final_acceptance.sh`, `packages/fount_intelligence/test/phase_sixteen_final_architecture_test.exs`, `packages/fount_workshop/test/writer_workflows/phase_sixteen_acceptance_matrix_test.exs`, `packages/fount_workshop/examples/phase_sixteen/README.md`, `acceptance_matrix.json`, and `guides/final-acceptance.md`. The final matrix covers every W01–W12 and A01–A12 with owned evidence paths and proposed execution records; it deliberately reuses actual Phase-12–15 workflows instead of adding a bypassing “final demo.”
+
+Source-delivery execution status: **OFFLINE_IMPLEMENTED / Elixir runtime NOT_RUN**. Final source audit 16/16, focused Phase-16 Python 4/4 and all phase-source Python 114/114 pass; strict 17-operation overlay transport/tree reproduction passes. Repository-wide Python discovery attempts 123 tests: 122 pass plus the known supplied-XML missing prune-helper import. Runtime/database/package/provider/PDF/TTS checks are NOT_RUN. Optional D046 human work is NOT_RUN; no creative-superiority or human-usefulness claim is made.
+
+Codex must execute each case/requirement map on the exact final revision, record source identity/command/artifact/assertions/result/human status, repair defects, and only then mark Phase 16 COMPLETE on applicable non-human gates. There is no Phase 17.
+

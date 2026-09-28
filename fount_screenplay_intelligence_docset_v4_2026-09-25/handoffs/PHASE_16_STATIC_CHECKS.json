@@ -1,0 +1,87 @@
+{
+  "format_version": 1,
+  "phase": 16,
+  "status": "OFFLINE_IMPLEMENTED",
+  "date": "2026-09-27",
+  "environment": {
+    "mix": "NOT_FOUND",
+    "elixir": "NOT_FOUND",
+    "erl": "NOT_FOUND",
+    "python": "3.13.5",
+    "git": "2.47.3"
+  },
+  "executed": [
+    {
+      "check": "Phase-16 final source acceptance audit",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 scripts/final_acceptance.py",
+      "result": "PASS",
+      "checks": 16,
+      "detail": "four-package set, removed-package residue, provider ownership, dependency graph, W01-W12/A01-A12 evidence, matrix schema, domain asset identity, package allowlists, current docs, and final surfaces all pass"
+    },
+    {
+      "check": "Focused Phase-16 Python source contracts",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest scripts.tests.test_phase_sixteen_source -q",
+      "result": "PASS",
+      "tests": 4
+    },
+    {
+      "check": "All phase-source Python contracts",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -p 'test_phase_*_source.py' -q",
+      "result": "PASS",
+      "tests": 114
+    },
+    {
+      "check": "Repository-wide Python discovery",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts/tests -q",
+      "result": "PARTIAL",
+      "tests_run": 123,
+      "passed": 122,
+      "errors": 1,
+      "detail": "Supplied XML snapshot includes scripts/tests/test_prune_deleted_directories.py but omits scripts/prune_deleted_directories.py; the known snapshot-only import error remains outside Phase 16."
+    },
+    {
+      "check": "Strict overlay dry-run against extracted supplied Fount baseline",
+      "result": "PASS",
+      "operations": 17
+    },
+    {
+      "check": "Strict overlay apply to a clean extracted supplied Fount baseline",
+      "result": "PASS",
+      "changed": 17
+    },
+    {
+      "check": "Second strict dry-run after apply",
+      "result": "PASS",
+      "unchanged": 17
+    },
+    {
+      "check": "Whole-tree byte/mode comparison after apply",
+      "result": "PASS",
+      "file_count": 642
+    },
+    {
+      "check": "ZIP integrity",
+      "command": "unzip -t fount_phase_16_overlay.zip",
+      "result": "PASS"
+    }
+  ],
+  "not_run": [
+    "mix format --check-formatted",
+    "warnings-as-errors compile",
+    "Phase-16 ExUnit",
+    "full mix ci",
+    "compiled architecture/xref gate",
+    "Credo",
+    "Dialyzer",
+    "ExDoc",
+    "four Hex package builds",
+    "PostgreSQL integration",
+    "provider-free CLI re-demonstration",
+    "live Inference/ASM generation",
+    "live System One measurement",
+    "speech/TTS runtime",
+    "PDF runtime",
+    "optional D046 human/domain comparison"
+  ],
+  "claim_limit": "Offline source and transport checks establish only the written Phase-16 source/audit contract. They do not establish Elixir compilation, ExUnit/runtime behavior, PostgreSQL durability, package contents, live-provider behavior, PDF/TTS behavior, or human usefulness."
+}

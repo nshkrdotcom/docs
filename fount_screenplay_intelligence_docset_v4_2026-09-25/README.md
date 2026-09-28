@@ -14,14 +14,14 @@ ChatGPT.com writes the current phase without claiming unrun Elixir checks and re
 
 ## Current checkpoint
 
-Phases 1–13 are COMPLETE on recorded engineering QC. **Phase 14 — Research, Notes, and Consequential Revision — is OFFLINE_IMPLEMENTED and awaits Codex runtime/repair QC. Phase 15 is NOT_STARTED.** See `PROGRESS.md` and `handoffs/PHASE_14_RUNTIME_QC_HANDOFF.md`.
+Phases 1–15 are COMPLETE on recorded applicable non-human engineering QC. **Phase 16 — Final Integration and Acceptance — is OFFLINE_IMPLEMENTED and awaits Codex runtime/repair/publication QC.** There is no Phase 17. See `PROGRESS.md`, `handoffs/PHASE_15_RUNTIME_QC_REPORT.md`, and `handoffs/PHASE_16_RUNTIME_QC_HANDOFF.md`.
 
 
 ## Start with the writing experience
 
 Read `32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md`, `33_WRITER_WORKFLOWS_AND_CREATIVE_CONTRACT.md`, and `34_HUMAN_JEV_AND_LLM_COLLABORATION.md` before treating the architecture below as a product brief. The new research complements the earlier reader/notes work with discovery, cinematic action and sound, voice, rehearsal, and useful alternatives.
 
-`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15. Final integration is Phase 16. Phases 1–13 are COMPLETE on recorded engineering QC; Phase 14 is OFFLINE_IMPLEMENTED and awaits runtime/repair QC; Phase 15 is NOT_STARTED. The verified Phase-13 checkpoint is in `handoffs/PHASE_13_RUNTIME_QC_REPORT.md`, and the current Phase-14 source delivery is in `handoffs/PHASE_14_OFFLINE_HANDOFF.md`. Earlier optional human studies remain visible validation debt; D046 makes human reviews optional and nonblocking.
+`36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md` supplies a writer demonstration for every phase and detailed Phases 12–15; Phase 16 closes final integration. Phases 1–15 are COMPLETE on recorded engineering QC. Phase 16 is OFFLINE_IMPLEMENTED and awaits runtime/repair/publication QC. The verified baseline is `handoffs/PHASE_15_RUNTIME_QC_REPORT.md`; the current source handoff is `handoffs/PHASE_16_OFFLINE_HANDOFF.md`. Earlier optional human studies remain visible validation debt; D046 makes human reviews optional and nonblocking.
 
 Success means a writer can arrive with an image, a scene, or a difficult note; explore real choices; preserve what matters; see consequences; and choose what becomes the draft. No compulsory outline, universal conflict theory, or simulated audience verdict. Human-only writing remains useful without provider credentials.
 
@@ -263,7 +263,7 @@ latest QC'd source snapshots + latest docset
 
 ## Current status
 
-Read `PROGRESS.md`. Phases 1–14 are `COMPLETE` on applicable non-human engineering QC. Phase 15 is `OFFLINE_IMPLEMENTED` with runtime/database QC pending. Phase 16 is `NOT_STARTED`.
+Read `PROGRESS.md`. Phases 1–15 are `COMPLETE` on applicable non-human engineering QC. Phase 16 is `OFFLINE_IMPLEMENTED` with runtime/database/package/publication QC pending. There is no later implementation phase.
 
 ## Previous verified checkpoint: Phase 7
 
@@ -297,3 +297,13 @@ Phase 15 **Read, Share, Resume, and Prove Usefulness** is `OFFLINE_IMPLEMENTED`,
 Offline evidence: focused Phase-13–15 source contracts pass 24/24; all `test_phase_*_source.py` contracts pass 110/110; strict 17-operation overlay dry-run/apply/idempotence/tree reproduction and ZIP integrity pass. Full Python discovery attempts 119 tests: 118 pass and the supplied XML baseline still lacks `scripts/prune_deleted_directories.py`, causing the known unrelated import error. `mix`, `elixir`, and `erl` are unavailable, so format/compile/ExUnit/PostgreSQL/full-CI/package/provider results are NOT_RUN. The optional D046 comparative writer study is NOT_RUN and no human-usefulness result is claimed.
 
 Read `handoffs/PHASE_15_OFFLINE_HANDOFF.md` and `handoffs/PHASE_15_RUNTIME_QC_HANDOFF.md`. The user applies and commits; Codex verifies/repairs Phase 15 and **stops before Phase 16**.
+
+## Phase 15 verified runtime checkpoint — 2026-09-27
+
+Phase 15 is `COMPLETE` on applicable non-human engineering gates at Fount `72c583a`: 353 workspace tests, 122 Python tests, 35 PostgreSQL integrations, the provider-free capture-through-resume writer path, Core fidelity/preservation checks and four Hex builds pass. See `handoffs/PHASE_15_RUNTIME_QC_REPORT.md`. Optional D046 human comparison and live providers remain `NOT_RUN`.
+
+## Phase 16 source delivery — 2026-09-27
+
+Phase 16 **Final Integration and Acceptance** is `OFFLINE_IMPLEMENTED`, not COMPLETE. The 17-operation source overlay does not change production `lib/**` code. It adds a final source/runtime acceptance runner, final four-package architecture regression, machine-readable W01–W12/A01–A12 traceability, final Workshop acceptance documentation and stale-status cleanup. Source audit 16/16, focused Phase-16 Python 4/4, all phase-source Python 114/114, strict dry-run/apply/idempotence/tree reproduction and ZIP integrity pass. Repository-wide Python discovery attempts 123 tests: 122 pass and one known supplied-XML missing-helper import remains. `mix`, `elixir`, and `erl` are unavailable here, so compile/ExUnit/PostgreSQL/full-CI/Hex/provider/PDF/TTS results are `NOT_RUN`; optional human evidence is also `NOT_RUN`.
+
+Read `handoffs/PHASE_16_OFFLINE_HANDOFF.md` and `handoffs/PHASE_16_RUNTIME_QC_HANDOFF.md`. The user applies and commits; Codex verifies/repairs the final phase and records actual W/A evidence. **There is no Phase 17.**

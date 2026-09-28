@@ -406,3 +406,10 @@ Phase 12 source for W01–W03/W11 and A01–A03/A10 is written and transport-ver
 ## Phase 15 source-delivery checkpoint — 2026-09-27
 
 W01/W10–W12 and A09–A12 now have source/test/documentation evidence in the Phase-15 overlay, including provider-free human read/share, exact-source human reaction linkage, stale/idempotent resume coverage, clean accepted-canonical Fountain/FDX sharing, and separate usefulness dimensions/conditions without a screenplay score or winner. This is **OFFLINE_IMPLEMENTED**, not runtime acceptance: Elixir formatting/compile/ExUnit, real PostgreSQL durability, full CI/package/preservation gates and artifact inspection remain for Codex. Optional D046 human comparison remains NOT_RUN. Phase 16 is not authorized by this checkpoint.
+
+## Phase 16 source-delivery acceptance checkpoint — 2026-09-27
+
+The Phase-16 source handoff satisfies the offline-writing portion of final acceptance: exact four-package shape/provider ownership, Probe/old-package scans, safe asset identity checks, package allowlist/docs registration, W01–W12/A01–A12 owned evidence mapping, final claim limits, and strict overlay transport are written and source-checked. No production `lib/**` module changes, so existing canonical/generation/analysis/session behaviors are preserved by construction at source level.
+
+This checkpoint is **OFFLINE_IMPLEMENTED only**. It does not satisfy runtime acceptance. Codex must execute formatting/compile/ExUnit/full CI/compiled architecture/Credo/Dialyzer/ExDoc, PostgreSQL/persistence and prior fidelity/privacy/security regressions, four package builds with content inspection, provider-free writer demonstrations, and per-case W/A trace records on the exact revision. Authorized live checks and optional D046 human studies remain separate evidence. Phase 16 may be COMPLETE only after applicable non-human source-fidelity, acceptance, privacy, creative-control and publication gates pass. No Phase 17 follows.
+

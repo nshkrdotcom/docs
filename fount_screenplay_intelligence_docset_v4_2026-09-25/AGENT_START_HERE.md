@@ -1,6 +1,6 @@
 # Agent Start Here
 
-> **Current handoff (2026-09-27): Phase 15 is OFFLINE_IMPLEMENTED.** Phases 1–14 are COMPLETE on recorded non-human engineering QC. The next agent is Codex runtime QC for the user-applied Phase-15 commit: verify, test/repair Phase 15, update evidence, and stop before Phase 16. Do not reapply the overlay.
+> **Current handoff (2026-09-27): Phase 16 is OFFLINE_IMPLEMENTED.** Phases 1–15 are COMPLETE on recorded non-human engineering QC. The next agent is Codex runtime QC for the user-applied Phase-16 commit: verify the final acceptance overlay, test/repair Phase 16, update evidence, and stop. There is no Phase 17. Do not reapply the overlay.
 
 You are implementing a screenplay-writing tool for humans and agentic collaborators, from source snapshots in an environment assumed to lack a usable Elixir runtime. Read the writer outcome before the technical constraints. Do not substitute architectural activity for useful writing behavior.
 
@@ -20,9 +20,9 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phases 1–14: COMPLETE on recorded engineering QC. Phase 15: OFFLINE_IMPLEMENTED; runtime/database/repair QC pending. Phase 16: NOT_STARTED.**
+> **Phases 1–15: COMPLETE on recorded engineering QC. Phase 16: OFFLINE_IMPLEMENTED; runtime/database/repair/publication QC pending. No later phase exists.**
 
-Read `handoffs/PHASE_14_RUNTIME_QC_REPORT.md` for the verified Phase-14 checkpoint, then `handoffs/PHASE_15_OFFLINE_HANDOFF.md` and `handoffs/PHASE_15_RUNTIME_QC_HANDOFF.md` for the current source delivery. Historical validation debt remains visible; do not claim human validation or unrun Phase-15 runtime/database results. Do not advance to Phase 16.
+Read `handoffs/PHASE_15_RUNTIME_QC_REPORT.md` for the verified Phase-15 baseline, then `handoffs/PHASE_16_OFFLINE_HANDOFF.md` and `handoffs/PHASE_16_RUNTIME_QC_HANDOFF.md` for the current final source delivery. Historical validation debt remains visible; do not claim human validation or unrun Phase-16 runtime/database/package results. Repair/finish Phase 16 only; do not invent a later phase.
 
 ## Read before coding
 
@@ -82,7 +82,7 @@ Return:
 2. updated complete docset ZIP;
 3. runtime-QC handoff prompt/report.
 
-Then stop. The user applies the ZIPs and commits; Codex checks that applied state and completes runtime QC before the next phase starts. Do not tell Codex to reapply the overlay.
+Then stop. The user applies the ZIPs and commits; Codex checks that applied state, repairs if needed, completes Phase 16 runtime QC, records the final evidence, and stops. There is no Phase 17. Do not tell Codex to reapply the overlay.
 
 ## Product-validation additions in this docset
 
@@ -128,6 +128,10 @@ Phase 11 is **OFFLINE_IMPLEMENTED**, not COMPLETE. Read `handoffs/PHASE_11_INPUT
 
 Phase 14 is **COMPLETE** at Fount repair commit `37a25cae9cbee8408188d83cfa55f55d6f32d491` (tree `52c259bc5373083eb05172113dadc56d21351307`) on the applicable non-human engineering and preservation evidence in `handoffs/PHASE_14_RUNTIME_QC_REPORT.md`. Optional D046 human/domain review remains NOT_RUN.
 
-### Current Phase 15 source checkpoint
+### Phase 15 verified runtime result
 
-Phase 15 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The 17-operation overlay extends the existing writer path with a provider-free human table-read packet, explicit human reaction records, accepted-canonical clean Fountain/FDX sharing with privacy/fidelity manifests, an end-to-end read/share/resume regression, and usefulness evidence that keeps human-only/basic-LLM/Fount conditions and dimensions separate without scoring or choosing a winner. Focused Phase-13–15 Python source checks pass 24/24 and all phase-source checks pass 110/110; strict overlay transport checks pass. Elixir/Mix/PostgreSQL/runtime/provider checks are NOT_RUN. The optional D046 comparative writer study is NOT_RUN. Codex starts from the user-applied commit, follows `handoffs/PHASE_15_RUNTIME_QC_HANDOFF.md`, repairs actual failures, records executed evidence, and **stops before Phase 16**.
+Phase 15 is **COMPLETE** on applicable non-human engineering gates. `handoffs/PHASE_15_RUNTIME_QC_REPORT.md` records 353 workspace tests, 122 Python tests, 35 PostgreSQL integrations, provider-free CLI/read/share/resume evidence, four Hex builds and preservation gates. Optional D046 human comparison and live providers remain NOT_RUN.
+
+### Current Phase 16 source checkpoint
+
+Phase 16 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The 17-operation overlay adds the final source/runtime acceptance harness, exact four-package/provider-boundary scans, final architecture/traceability regressions, a machine-readable W01–W12/A01–A12 evidence matrix, and current final-acceptance documentation without modifying any production `lib/**` module. The final source audit passes 16/16, focused Phase-16 source contracts 4/4, all phase-source contracts 114/114, and strict overlay transport/tree reproduction passes. Elixir/Mix/PostgreSQL/Hex/runtime/provider/PDF/TTS checks are NOT_RUN here; optional D046 human work is NOT_RUN. Codex starts from the user-applied commit, follows `handoffs/PHASE_16_RUNTIME_QC_HANDOFF.md`, repairs actual failures, records executed evidence, and stops. There is no Phase 17.

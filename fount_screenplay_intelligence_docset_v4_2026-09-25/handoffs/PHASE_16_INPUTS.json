@@ -1,0 +1,76 @@
+{
+  "format_version": 1,
+  "phase": 16,
+  "date": "2026-09-27",
+  "timezone": "Pacific/Honolulu",
+  "inputs": [
+    {
+      "role": "Agent Session Manager",
+      "sha256": "67988c9aec015ce189e16078b18639f60873d244da63e3275d33707add5702db",
+      "version": "0.17.1",
+      "identified_by": "repository rooted at lib/asm with run/session/store/provider-SDK/inference-endpoint modules and the ASM public facade",
+      "inspected_apis": [
+        "ASM.start_session/1",
+        "ASM.stop_session/1",
+        "ASM.query/3",
+        "ASM.stream/3",
+        "ASM.session_info/1",
+        "ASM.health/1",
+        "ASM.interrupt/1"
+      ],
+      "phase16_use": "Inspection-only boundary input. Final integration confirms ASM remains Workshop-side through the existing Inference/agent-session path; no new Intelligence/Observe ASM dependency is introduced."
+    },
+    {
+      "role": "SystemOneSDK",
+      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+      "version": "0.6.0",
+      "identified_by": "System One poncho containing system_one_sdk, system_one_contracts, system_one_bumblebee, and system_one_server",
+      "inspected_apis": [
+        "SystemOneSDK.version/0",
+        "SystemOneSDK.new_client/1",
+        "SystemOneSDK.system_one/4",
+        "SystemOneSDK.noul/2",
+        "SystemOneSDK.choice/3",
+        "SystemOneSDK.score/3",
+        "SystemOneSDK.prepare/1",
+        "SystemOneSDK.evaluate/4",
+        "SystemOneSDK.evaluate_stream/4",
+        "SystemOneSDK.evaluate_many/4",
+        "SystemOneSDK.list_models/2"
+      ],
+      "phase16_use": "No new SDK call. Final source audit verifies native SystemOneSDK production use remains owned by fount_observe/providers/system_one.ex."
+    },
+    {
+      "role": "Inference",
+      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
+      "version": "0.5.0",
+      "identified_by": "apps/inference provider-neutral request/client/response package with ASM and Gemini adapters",
+      "inspected_apis": [
+        "Inference.client/1",
+        "Inference.client!/1",
+        "Inference.capabilities/1",
+        "Inference.complete/3",
+        "Inference.stream/3"
+      ],
+      "phase16_use": "No new completion path. Final source audit verifies direct Inference production references remain Workshop-owned."
+    },
+    {
+      "role": "Fount",
+      "sha256": "791275af646a284cb773405a1cf9252c0e1e7ed06a34ca96a5939063fe2b3451",
+      "identified_by": "four-package screenplay workspace containing fount, fount_observe, fount_intelligence, and fount_workshop plus Phase-15 runtime-complete tests/guides/handoffs",
+      "inspected_apis": [
+        "Fount.Intelligence.Runner.Architecture.check/2",
+        "existing Workshop Session/Candidate/Review/Acceptance paths referenced by Phase-12 through Phase-15 tests",
+        "existing Core Fountain/FDX export paths referenced by Phase-15 clean-share tests"
+      ],
+      "phase16_use": "Implementation baseline. Phase 16 adds only final acceptance/audit surfaces, documentation cleanup, and tests; it does not add a new canonical edit, analysis, generation, or session path."
+    },
+    {
+      "role": "Current docset",
+      "sha256": "24b5c64a100fac04c5dbb091645570e65a041691c05c66f4b9a7076e53506fbf",
+      "identified_by": "documents 00-36 plus PROGRESS, DECISIONS, TRACEABILITY_MATRIX, MANIFEST, and handoffs through Phase-15 runtime completion",
+      "phase16_use": "Authoritative progress/specification baseline. PROGRESS marks Phases 1-15 COMPLETE and Phase 16 Final Integration and Acceptance as the first non-COMPLETE phase."
+    }
+  ],
+  "determination": "Phase 16 \u2014 Final Integration and Acceptance is the current and final implementation phase. This delivery stops at OFFLINE_IMPLEMENTED; no later phase exists or is started."
+}

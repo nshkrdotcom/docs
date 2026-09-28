@@ -853,3 +853,12 @@ At every phase, the offline agent updates:
 - any implementation document proven inaccurate by source inspection.
 
 The runtime-QC agent then updates the same progress/handoff with actual executed results and corrections before producing the next source snapshot.
+
+## Phase 16 source-delivery checkpoint — 2026-09-27
+
+Phase 16 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The source delivery implements the final acceptance harness, exact four-package/provider-boundary/status scans, final architecture and W/A traceability tests, machine-readable W01–W12/A01–A12 ownership, current documentation/ExDoc registration, and no-Phase-17 stop line. No production `lib/**` file changes and no new compatibility path are introduced.
+
+Offline evidence: final source audit 16/16 PASS; focused Phase-16 Python 4/4 PASS; all phase-source Python 114/114 PASS; strict 17-operation overlay transport, idempotence, 642-file tree identity and ZIP integrity PASS. Mix/Elixir/Erlang are absent, so runtime/DB/package/provider/PDF/TTS gates are NOT_RUN. Codex must run/repair every applicable final engineering, preservation, writer-workflow, privacy and publication gate before setting COMPLETE. Optional D046 human/live evidence remains explicit and cannot be fabricated.
+
+**Stop:** Phase 16 is the final implementation phase. Do not create Phase 17 work.
+

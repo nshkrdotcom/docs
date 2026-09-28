@@ -101,7 +101,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–14 are COMPLETE on recorded applicable engineering QC; Phase 15 remains NOT_STARTED. Phase-14 source-delivery records are under `handoffs/PHASE_14_*`. Earlier optional human studies remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–15 are COMPLETE on recorded applicable engineering QC; Phase 16 is OFFLINE_IMPLEMENTED and awaits runtime/repair/publication QC. Current source-delivery records are under `handoffs/PHASE_16_*`. Earlier optional human studies remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -337,14 +337,31 @@ Phase 14 is `COMPLETE` on applicable non-human engineering gates at Fount repair
 - `handoffs/PHASE_15_RUNTIME_QC_HANDOFF.md`: Codex runtime/database repair instructions for the user-applied Phase-15 state.
 - `handoffs/PHASE_15_DOCSET_HASHES.json`: complete updated-docset identities excluding recursive checksum files.
 
-## Current Phase 15 checkpoint
+## Historical Phase 15 source checkpoint
 
 Phase 15 is `OFFLINE_IMPLEMENTED`, not COMPLETE. The strict source overlay is `fount_phase_15_overlay.zip`, 17 operations (8 additions, 9 modifications, no deletions), SHA-256 `420cdaf39153461981eb350648cdc1e6230d47c613109fbd9c956e0946b60322`. Source-contract and strict transport checks pass; Elixir/Mix/PostgreSQL/runtime/provider checks and the optional D046 comparative human study are NOT_RUN. Codex must verify/repair the user-applied state and **stop before Phase 16**.
 
 
-## Phase 15 runtime checkpoint
+## Verified Phase 15 runtime checkpoint
 
 - `handoffs/PHASE_15_RUNTIME_QC_REPORT.md`: applied checkout verification, repairs, commands, artifacts, and claim limits.
 - `handoffs/PHASE_15_RUNTIME_FILE_HASHES.json`: current repaired Fount bytes separately from the immutable overlay inventory.
 
 Phase 15 is `COMPLETE` on applicable non-human engineering gates: 353 workspace, 122 Python and 35 PostgreSQL integration tests, provider-free CLI path, four Hex builds, and preservation checks pass. Optional D046 human comparison and live providers remain `NOT_RUN`. Phase 16 is `NOT_STARTED`.
+
+## Phase 16 delivery records
+
+- `handoffs/PHASE_16_INPUTS.json`: five content-identified snapshot identities, versions, inspected APIs, and current-phase determination.
+- `handoffs/PHASE_16_FILE_INVENTORY.json`: exact 17-operation overlay preimage/result identities and artifact hash.
+- `handoffs/PHASE_16_IMPLEMENTATION_MATRIX.md`: final engineering/publication gates plus W01–W12/A01–A12 evidence ownership.
+- `handoffs/PHASE_16_PRESERVATION_AUDIT.md`: no-production-code-change preservation analysis and runtime obligations.
+- `handoffs/PHASE_16_STATIC_CHECKS.json`: actual source/transport evidence and explicit runtime/database/live/human NOT_RUN states.
+- `handoffs/PHASE_16_OFFLINE_HANDOFF.md`: final source-delivery account and no-Phase-17 stop line.
+- `handoffs/PHASE_16_RUNTIME_QC_HANDOFF.md`: Codex final runtime/repair/acceptance instructions.
+- `handoffs/PHASE_16_RUNTIME_QC_REPORT.md`: source-delivery placeholder; Codex replaces it with executed evidence.
+- `handoffs/PHASE_16_DOCSET_HASHES.json`: regenerated complete docset identities excluding recursive checksum files.
+
+## Current Phase 16 checkpoint
+
+Phase 16 is `OFFLINE_IMPLEMENTED`, not COMPLETE. The strict overlay is `fount_phase_16_overlay.zip`, 17 operations (8 additions, 9 modifications, no deletions), SHA-256 `24c78ce6dde3476ed9418c43ca65028c9bebf84717913e9e6c01f9b53c40b98b`. The final source audit, 114 phase-source Python contracts, strict overlay application/idempotence, whole-tree reproduction and ZIP integrity pass. Elixir/Mix/PostgreSQL/Hex/provider/PDF/TTS and optional human gates are NOT_RUN. Codex must verify/repair the user-applied final phase, record actual W01–W12/A01–A12 evidence, and stop. There is no Phase 17.
+

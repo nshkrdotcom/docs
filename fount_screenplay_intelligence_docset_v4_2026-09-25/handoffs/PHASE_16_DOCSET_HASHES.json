@@ -1,12 +1,13 @@
 {
   "format_version": 1,
-  "phase": 15,
+  "phase": 16,
   "date": "2026-09-27",
+  "checkpoint": "source_delivery",
   "exclusions": [
-    "handoffs/PHASE_15_DOCSET_HASHES.json",
-    "SHA256SUMS.txt"
+    "SHA256SUMS.txt",
+    "handoffs/PHASE_16_DOCSET_HASHES.json"
   ],
-  "file_count": 206,
+  "file_count": 218,
   "files": [
     {
       "path": "00_SCOPE_AND_PRINCIPLES.md",
@@ -90,8 +91,8 @@
     },
     {
       "path": "16_PHASED_IMPLEMENTATION_PLAN.md",
-      "sha256": "69b9e9a905b6dfe84096889f63ac08401f8dbe3700df8cd5b136e58488ada386",
-      "bytes": 46563
+      "sha256": "3fadba366e6ee2d485cc039f221cc7b55b4768a409ede864d21cac6216237191",
+      "bytes": 47643
     },
     {
       "path": "17_AGENT_EXECUTION_PROTOCOL.md",
@@ -105,8 +106,8 @@
     },
     {
       "path": "19_ACCEPTANCE_CRITERIA.md",
-      "sha256": "7625afd5ef86df372d993474dfd9f7a092431961dfab99a88dfaf28c5e48bc4a",
-      "bytes": 20650
+      "sha256": "f178974849acad8dd9be2d0a66299e7b43c23766c720b2225755300e446daa77",
+      "bytes": 21848
     },
     {
       "path": "20_OPEN_QUESTIONS_AND_DEFERRED_DECISIONS.md",
@@ -125,8 +126,8 @@
     },
     {
       "path": "23_FUNCTIONALITY_PRESERVATION_AUDIT.md",
-      "sha256": "b3c475d4dbf20b587791687a06d4799c976c97f83f9a12e3a00f10e681de2441",
-      "bytes": 20309
+      "sha256": "420b798789eb5c3f1273d12e5a8125f92bff524a451e5b6e513eef16ad2dd5e4",
+      "bytes": 21447
     },
     {
       "path": "24_INTERNAL_BOUNDARY_ENFORCEMENT.md",
@@ -190,13 +191,13 @@
     },
     {
       "path": "36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md",
-      "sha256": "96008173b2413c161a1770bb0e904c5b8de9b628253d785efec64e3ea042ee06",
-      "bytes": 27581
+      "sha256": "7e5519df05803d0ee9208c00a702a82d77e249f1bae6fdf683fe001ae6d04f6d",
+      "bytes": 29808
     },
     {
       "path": "AGENT_START_HERE.md",
-      "sha256": "703867717d319610c8af0a3b4cade48cbada8420a4af90a9d6ba163206bd1f34",
-      "bytes": 9482
+      "sha256": "c499e16a535710e91e53f6664349d231890f1e77fb9bbe4ded29586270a3679a",
+      "bytes": 9955
     },
     {
       "path": "DECISIONS.md",
@@ -205,18 +206,18 @@
     },
     {
       "path": "MANIFEST.md",
-      "sha256": "aaaef0c23567bd7d8642e7aa7e17aad4f4dafaffb1f86809da0f1ec61b2dfff5",
-      "bytes": 26051
+      "sha256": "edfcbbe8d6441b774dc9f36faa59baccd0449720678dbd57ed87c702e3f4955f",
+      "bytes": 28415
     },
     {
       "path": "PROGRESS.md",
-      "sha256": "54b83387b6476b9401c8eda230864fe7c01134752fd90ee53de56ef27a377f5d",
-      "bytes": 48636
+      "sha256": "8dc7d0cd49420eab04783e1ab2d23c088f4775c4f486ebab292d578ee7cc420b",
+      "bytes": 50291
     },
     {
       "path": "README.md",
-      "sha256": "1a60afa65121aa3d3e92c5261fefe377e1d0a3e496f573c737a1e57b6ab2dcac",
-      "bytes": 19074
+      "sha256": "991c5f9537ef7095e1754e9aa9adf0ed2637983b18732e118b2fa2f3ff8e1599",
+      "bytes": 20652
     },
     {
       "path": "SOURCES.md",
@@ -225,8 +226,8 @@
     },
     {
       "path": "TRACEABILITY_MATRIX.md",
-      "sha256": "8351e49274d592df3eba9c666640485cfbb901f98b0c9164b0b00a453581b16a",
-      "bytes": 67072
+      "sha256": "859323496bc3d5d81f56b1da894d51aaad827a967fd7ffa5403375fbf850011d",
+      "bytes": 69001
     },
     {
       "path": "examples/CONCEPTUAL_CONTRACT_EXAMPLES.md",
@@ -959,44 +960,104 @@
       "bytes": 2648
     },
     {
+      "path": "handoffs/PHASE_15_DOCSET_HASHES.json",
+      "sha256": "84b79d6eebf8a1256f7192963820dbdc318ca5d56302550b7918625f79d81e08",
+      "bytes": 36070
+    },
+    {
       "path": "handoffs/PHASE_15_DOMAIN_REVIEW_PACKET.md",
-      "sha256": "a85804a243d46cfcd84d2ef0a2157125c24b1fd733cc321d0119774a9a52b9a9",
-      "bytes": 1377
+      "sha256": "dfc028e6c870bd9b13db616f1af9846377f75ecc6ab8a09dee40e31359f8d574",
+      "bytes": 1376
     },
     {
       "path": "handoffs/PHASE_15_FILE_INVENTORY.json",
-      "sha256": "139599652dab5b038eaa65bad3e29314ff6b1e475773fe35a3d24009c0408fec",
-      "bytes": 7559
+      "sha256": "ef61ffd2336f7d992923e8dc7c0c3e9e10e367657157b75737f40dd44c7480cc",
+      "bytes": 7558
     },
     {
       "path": "handoffs/PHASE_15_IMPLEMENTATION_MATRIX.md",
-      "sha256": "d1750f1b7f37ed492fe6ec5d97ba48d28b0dd4436a0bdac18885da1f523b9677",
-      "bytes": 3262
+      "sha256": "751b0a5c727f345a25244743212f72ef5333b626f43704ef728aeb08ca78d0c6",
+      "bytes": 3261
     },
     {
       "path": "handoffs/PHASE_15_INPUTS.json",
-      "sha256": "7e15cf063d1d17b7f746853ebe94522c245313319b4e5c6f82b563fd025cc3a5",
-      "bytes": 3810
+      "sha256": "d43f03d5fbba9b29fdaebc81f246e6f61c5a7bbbb4499329e2a4a7d56db03cd5",
+      "bytes": 3809
     },
     {
       "path": "handoffs/PHASE_15_OFFLINE_HANDOFF.md",
-      "sha256": "e23e6f0fc833024707a2058a74b5224e12f5474988ba5fc67b424fc21c5495a1",
-      "bytes": 3777
+      "sha256": "d985a46cdfc9d242251c5e780eadb2cc4e1066381e578eb41697946cde064554",
+      "bytes": 3776
     },
     {
       "path": "handoffs/PHASE_15_PRESERVATION_AUDIT.md",
-      "sha256": "e04b5df232bb9c944b20f7f08a53ae9be8e4f2640cbd7e22593a0be5514e66a2",
-      "bytes": 2874
+      "sha256": "d9a5aabef37bb644015e7b5880a128b55dbbfbfa5b30484d781e9c77a6f08353",
+      "bytes": 2873
+    },
+    {
+      "path": "handoffs/PHASE_15_RUNTIME_FILE_HASHES.json",
+      "sha256": "70ef97bd18ae18eb55d11ce860483c2ce95079e4360458a6dbc10352dd0b5681",
+      "bytes": 6995
     },
     {
       "path": "handoffs/PHASE_15_RUNTIME_QC_HANDOFF.md",
-      "sha256": "5bfe651e963313e1a020352d6f682a128b8c0cc5b65d1d22eb0e68a80372fcd1",
-      "bytes": 5624
+      "sha256": "d2c921769a5c317da32360eb27a1f9bb826fc13bcea996268126f1c04d728116",
+      "bytes": 5623
+    },
+    {
+      "path": "handoffs/PHASE_15_RUNTIME_QC_REPORT.md",
+      "sha256": "6b266671126db4717f201e6778d60b687ec8ae9536175abfff5a000fcf858f03",
+      "bytes": 9361
+    },
+    {
+      "path": "handoffs/PHASE_15_SOURCE_DOCSET_HASHES.json",
+      "sha256": "e7954f923d3e2a46d2ff382bb0d1922c85d02ec0af6edfb594ab6014895ac7c5",
+      "bytes": 35511
     },
     {
       "path": "handoffs/PHASE_15_STATIC_CHECKS.json",
-      "sha256": "e42c3dbaa73e312815827cbb08994829aae1ad5e30d0ba4bec87fd290b7a3180",
-      "bytes": 2482
+      "sha256": "57f29be9183789cb4775e890e17c118a43d6adeb93d83cba12f0f771aa165dc2",
+      "bytes": 2481
+    },
+    {
+      "path": "handoffs/PHASE_16_FILE_INVENTORY.json",
+      "sha256": "c575c79f306d07a81b8b79b1ed6e47fcf691e7585bdb8d00ead089efcd4df044",
+      "bytes": 7168
+    },
+    {
+      "path": "handoffs/PHASE_16_IMPLEMENTATION_MATRIX.md",
+      "sha256": "d3e2f23d9f0ad2ba1af0349abbc7682ddbbb54fd2e8677ac834084ca94f1a8df",
+      "bytes": 9643
+    },
+    {
+      "path": "handoffs/PHASE_16_INPUTS.json",
+      "sha256": "13ac534ef7002be609bd14cd57c01b43fb7eb0d3b935c8ad0f79054b769dd878",
+      "bytes": 3817
+    },
+    {
+      "path": "handoffs/PHASE_16_OFFLINE_HANDOFF.md",
+      "sha256": "fba5e5d5d6589f2648502e8489e2b87611d67b217242217793970537620a98fb",
+      "bytes": 3704
+    },
+    {
+      "path": "handoffs/PHASE_16_PRESERVATION_AUDIT.md",
+      "sha256": "e005c3126346b6608540ab2f0b37afa4c727ef3dd8d770592b26a18306fa00cd",
+      "bytes": 2342
+    },
+    {
+      "path": "handoffs/PHASE_16_RUNTIME_QC_HANDOFF.md",
+      "sha256": "bbb20a868cabc3140550a48a0cb2697c7595817082ca55e1e338c05a3776ca1a",
+      "bytes": 6315
+    },
+    {
+      "path": "handoffs/PHASE_16_RUNTIME_QC_REPORT.md",
+      "sha256": "a1808e0e7e9ef4adb46b2b9c27e39bce45d67be3cd7f811a8ee7a98be988145d",
+      "bytes": 737
+    },
+    {
+      "path": "handoffs/PHASE_16_STATIC_CHECKS.json",
+      "sha256": "f6deea88ab7150c46034e16dff4b5a77966009559b4bd4f3b1396351f96ff516",
+      "bytes": 3000
     },
     {
       "path": "handoffs/PREPARATION_2026-09-26.md",

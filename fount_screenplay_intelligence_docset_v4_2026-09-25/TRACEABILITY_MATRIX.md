@@ -591,3 +591,14 @@ The deterministic A09–A12 fixtures are engineering evidence only. The optional
 ## Phase 15 runtime QC traceability — 2026-09-27
 
 A09 provider-free packet and separate human reaction, A10 idempotent/stale/resumed decisions, A11 clean accepted Fountain/FDX with reported page-break loss, and A12 unscored separate usefulness records pass focused ExUnit and the applicable PostgreSQL/preservation ladder. The full provider-free CLI path and current artifact identities are recorded in `handoffs/PHASE_15_RUNTIME_QC_REPORT.md` and `PHASE_15_RUNTIME_FILE_HASHES.json`. Phase 15 is `COMPLETE` on non-human engineering gates; optional human/provider work is `NOT_RUN`, with no comparative human claim. Phase 16 remains `NOT_STARTED`.
+
+## Phase 16 source-delivery traceability — 2026-09-27
+
+Status: **OFFLINE_IMPLEMENTED; runtime NOT_RUN; final phase only.**
+
+The source overlay adds no production `lib/**` path. `packages/fount_workshop/examples/phase_sixteen/acceptance_matrix.json` records W01–W12 and A01–A12 ownership, fixture/source identity, proposed public command, output class, assertions, source revision placeholder and human-review status. `PHASE_16_IMPLEMENTATION_MATRIX.md` expands that map across final architecture, package, privacy, publication, resource, safety and nonclaim gates.
+
+Source evidence actually executed here: final audit 16/16 PASS; Phase-16 Python 4/4 PASS; all phase-source Python 114/114 PASS; strict 17-operation overlay dry-run/apply/second-dry-run, 642-file byte/mode reproduction and ZIP integrity PASS. Repository-wide Python discovery is 122/123 passing with the known supplied-XML missing prune-helper import. Elixir/Mix/PostgreSQL/Hex/live/provider/PDF/TTS/human evidence is NOT_RUN.
+
+Runtime QC must turn the W/A map into execution records on the exact applied/repaired revision. Deterministic fixtures prove engineering behavior, not creative superiority, human preference, audience response, marketability or representative usefulness. There is no Phase 17.
+
