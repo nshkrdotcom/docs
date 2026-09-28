@@ -387,3 +387,25 @@ Historical analysis dependencies are keyed per analysis run and are never overwr
 **Reason:** This preserves existing screenplay-writing sequencing and explicit review semantics while retaining exact derived-analysis identity and auditability. UUID + content hash detects identity mismatch without pretending a not-yet-persisted candidate row already exists.
 
 **Status:** Adopted in the Phase-10 offline implementation; runtime PostgreSQL verification remains pending.
+
+## Phase 12 source decisions — 2026-09-27
+
+### D049 — Discovery state is session progress, not screenplay canon
+
+**Decision:** Evolving briefs, fragments, reverse outlines, reorder proposals, mode history and writer decisions are durable Workshop session progress. They do not become screenplay source or StoryWorld facts merely by being captured. The opening request/base remain immutable provenance; saved brief values may overlay the effective later request without rewriting that provenance.
+
+### D050 — Provider-free writing uses the existing candidate/review boundary
+
+**Decision:** Human capture and manual writer edits do not require Inference or Observe clients. Writer-origin typed edit operations compile into ordinary candidates and pass existing checks/review/Acceptance. This is not a second canonical editing system.
+
+### D051 — Inspect is the writer-facing mode; legacy diagnose remains input-compatible
+
+**Decision:** The four Phase-12 writer modes are Draft, Explore, Inspect and Revise. Existing `diagnose` request values remain accepted and are presented/resumed as Inspect; no duplicate analysis architecture is introduced.
+
+### D052 — Treatment constraints are opt-in and describe mechanisms, not winners
+
+**Decision:** A request that supplies Phase-12 treatments binds alternatives to explicit action/revelation/relationship/mixed mechanisms, tradeoffs and brief-departure disclosure. Existing strategy payloads without treatment metadata remain valid when no treatment contract is requested. No strategy winner or universal quality score is added.
+
+### D053 — Provider-free Phase-12 CLI still requires durable persistence
+
+**Decision:** The human-only Phase-12 CLI path may run without Inference, Observe, System One or ASM credentials, but it is a real durable Workshop session and therefore uses the existing Fount persistence/database boundary. Generated alternatives continue through Inference; measurements continue through Observe/System One; ASM remains behind Inference.

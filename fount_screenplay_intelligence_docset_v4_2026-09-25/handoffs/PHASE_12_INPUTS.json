@@ -1,0 +1,71 @@
+{
+  "format_version": 1,
+  "phase": 12,
+  "date": "2026-09-27",
+  "inputs": [
+    {
+      "role": "Agent Session Manager",
+      "sha256": "67988c9aec015ce189e16078b18639f60873d244da63e3275d33707add5702db",
+      "identified_by": "lib/asm, ASM public/session/provider surfaces",
+      "version": "0.17.1",
+      "inspected_apis": [
+        "ASM.start_session/1",
+        "ASM.query/3",
+        "ASM.stream/3",
+        "ASM.stop_session/1"
+      ],
+      "phase12_use": "boundary inspection only; no direct Fount dependency introduced"
+    },
+    {
+      "role": "SystemOneSDK",
+      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
+      "identified_by": "packages/system_one_sdk and SystemOneSDK question/evaluation facade",
+      "version": "0.6.0",
+      "inspected_apis": [
+        "SystemOneSDK.new_client/1",
+        "SystemOneSDK.noul",
+        "SystemOneSDK.choice",
+        "SystemOneSDK.score",
+        "SystemOneSDK.prepare",
+        "SystemOneSDK.evaluate",
+        "SystemOneSDK.evaluate_stream"
+      ],
+      "phase12_use": "existing Observe boundary preserved; no direct Workshop dependency"
+    },
+    {
+      "role": "Inference",
+      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
+      "identified_by": "apps/inference and Inference.Client/adapters",
+      "version": "0.5.0",
+      "inspected_apis": [
+        "Inference.client/1",
+        "Inference.client!/1",
+        "Inference.complete/3",
+        "Inference.stream/3",
+        "Inference.Client.agent_session/1"
+      ],
+      "phase12_use": "existing Workshop generation path reused for deterministic/generated alternatives"
+    },
+    {
+      "role": "Fount",
+      "sha256": "6565f479c58774649c3036b900f620a576b93920741bacd4d4d50bf4be6ffd27",
+      "identified_by": "four-package Fount monorepo with fount/fount_observe/fount_intelligence/fount_workshop and Phase-11 source/tests",
+      "inspected_apis": [
+        "FountWorkshop.Session",
+        "FountWorkshop.Request",
+        "FountWorkshop.Candidate",
+        "FountWorkshop.Acceptance",
+        "FountWorkshop.Store",
+        "FountWorkshop.CLI"
+      ],
+      "phase12_use": "implementation baseline"
+    },
+    {
+      "role": "Current docset",
+      "sha256": "f11643468fef1587320fec76cace093ad29973f38b6c72b3fb8d745f08feac0c",
+      "identified_by": "documents 00-36, PROGRESS, DECISIONS, prior handoffs through Phase 11",
+      "phase12_use": "authoritative progress/specification baseline"
+    }
+  ],
+  "determination": "PROGRESS and document 36 authorize Phase 12 only: Discovery, Session Modes, and Scene Exploration; W01-W03/W11; A01-A03/A10. Phase 13 is not authorized."
+}

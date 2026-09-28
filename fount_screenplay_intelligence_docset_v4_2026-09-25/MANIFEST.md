@@ -101,7 +101,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–10 are COMPLETE on engineering QC; Phase 11 is OFFLINE_IMPLEMENTED and awaits runtime/live QC; Phase 12 remains NOT_STARTED. Phase 11 source-delivery records are under `handoffs/PHASE_11_*`. Earlier human studies and any skipped Phase-11 human study remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–11 are COMPLETE on recorded engineering QC; Phase 12 is OFFLINE_IMPLEMENTED and awaits runtime/repair QC; Phase 13 remains NOT_STARTED. Phase-12 source-delivery records are under `handoffs/PHASE_12_*`. Earlier optional human studies remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -263,4 +263,21 @@ Phase 10 is `COMPLETE` on engineering QC at Fount `6d164f6` (tree `9a94735`). Th
 
 ## Current Phase 11 checkpoint
 
-Phase 11 is `OFFLINE_IMPLEMENTED`. The strict source overlay is `fount_phase_11_overlay.zip` with 36 operations (21 additions, 15 modifications, no deletions). Runtime/live/PostgreSQL/human evidence is not claimed. Phase 12 is `NOT_STARTED`.
+Phase 11 is `COMPLETE` on recorded engineering and authorized live QC; see `handoffs/PHASE_11_RUNTIME_QC_REPORT.md`. Its optional human study remains NOT_RUN validation debt under D046.
+
+## Phase 12 delivery records
+
+- `handoffs/PHASE_12_INPUTS.json`: five content-identified XML roles, hashes and inspected public API boundaries.
+- `handoffs/PHASE_12_FILE_INVENTORY.json`: exact 36-operation Fount overlay inventory with preimage/result hashes, sizes and modes.
+- `handoffs/PHASE_12_IMPLEMENTATION_MATRIX.md`: W01–W03/W11 and A01–A03/A10 mapped to source/tests.
+- `handoffs/PHASE_12_PRESERVATION_AUDIT.md`: canonical/Workshop/dependency preservation obligations.
+- `handoffs/PHASE_12_DOMAIN_REVIEW_PACKET.md`: optional D046 writer-process review protocol; NOT_RUN.
+- `handoffs/PHASE_12_STATIC_CHECKS.json`: actual offline source/transport checks and explicit runtime NOT_RUN states.
+- `handoffs/PHASE_12_OFFLINE_HANDOFF.md`: current source-delivery account and Phase-13 stop line.
+- `handoffs/PHASE_12_RUNTIME_QC_HANDOFF.md`: Codex instructions for the user's applied Phase-12 state.
+- `handoffs/PHASE_12_RUNTIME_QC_REPORT.md`: NOT_RUN placeholder for actual runtime evidence.
+- `handoffs/PHASE_12_DOCSET_HASHES.json`: regenerated complete docset identities excluding recursive checksum files.
+
+## Current Phase 12 checkpoint
+
+Phase 12 is `OFFLINE_IMPLEMENTED`. The strict source overlay is `fount_phase_12_overlay.zip`, 36 operations (23 additions, 13 modifications, no deletions), SHA-256 `51ca6d00d7c1e7a871b08f2657127264886a63df8a0485b6a3a958b61b01bc2b`. Focused Phase-9–12 source checks pass 34/34; Elixir/PostgreSQL/runtime/provider gates remain NOT_RUN. Phase 13 is `NOT_STARTED`.

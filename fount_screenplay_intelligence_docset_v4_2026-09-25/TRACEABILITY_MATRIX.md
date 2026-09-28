@@ -491,3 +491,25 @@ Offline strict archive evidence: 36 operations, ZIP CRC PASS, dry-run PASS, appl
 The preceding source-delivery table remains historical. The applied 36 overlay paths matched delivered hashes before QC repair. Root `mix ci` passed 337 ExUnit tests, compiled architecture, strict Credo, Dialyzer and ExDoc; Python discovery passed 91 tests and focused Phase-9/10/11 source checks passed 27. Focused Intelligence Phase-11 tests passed 9, Observe robustness tests 21, and disposable PostgreSQL Core/Intelligence/Workshop suites passed 11/4/16 respectively. The Intelligence database run includes the Phase-11 resource-history test and three Phase-10 durability tests. Four package archives contained the new evaluation JSON and guide without build or secret files. The provider-free example emitted rights policy, independent disagreement, exact metrics, current frozen contract, all 12 families, nonlinear fixture and resource comparison. See `handoffs/PHASE_11_RUNTIME_QC_REPORT.md` for exact commands, digest, repairs and limitations.
 
 The user supplied `gpt-6-luna` for Workshop and the default JEV for System One. Live Observe passed three synthetic `jev-latest` measurements (reported `jev-1.13.0`) with current output-contract digest and per-run resource accounting; baseline-to-last L1 was zero with unchanged selection/identity. The first Workshop live run failed exact strategy-ID validation; after a Phase-11-only prompt repair, `gpt-6-luna` produced exactly one nonaccepted candidate, review/export artifacts, four inference calls, zero measurement states, and an unchanged accepted head. Final full CI passed. Human/domain study is `NOT_RUN` optional D046 validation debt. Phase 11 is `COMPLETE`; Phase 12 remains `NOT_STARTED`. Live repeatability is not empirical calibration, reader agreement or writer usefulness.
+
+## Phase 12 source-delivery traceability — 2026-09-27
+
+| Requirement | Phase-12 source evidence | Offline status | Runtime state |
+|---|---|---|---|
+| W01 Draft/Explore/Inspect/Revise | workflow schema + `Discovery.current_mode`/mode history + resume view | source check PASS | pending Codex |
+| W01 no forced analysis in Draft | store-only `Session.open/4`; develop has no prewrite playbook | written regression | ExUnit NOT_RUN |
+| W01 provider-free capture/edit/accept | new discovery/manual CLI surfaces; paid client acquisition excludes them | source check PASS | PostgreSQL example NOT_RUN |
+| W02 evolving brief | `Discovery.update_brief/4`; effective request overlay on later work | source review PASS | pending Codex |
+| W02 fragments/adoption/retirement | fragment lifecycle and history | written regression | ExUnit NOT_RUN |
+| W02 reverse outline/reorder noncanonical | source IDs + interpretation label; exact permutation branch proposal | written regressions | ExUnit NOT_RUN |
+| W03 action/revelation/relationship treatments | Request treatment validation + Strategy binding/tradeoffs/departure | source check PASS | ExUnit NOT_RUN |
+| W03 reject-all/keep-both/no winner | durable writer decisions; acceptance unchanged | written regression | ExUnit NOT_RUN |
+| A01 pool/map resume | generated 3 routes; one accepted, one rejected, one proposed; protected map + pending question survive | `phase_twelve_a01_demo_test.exs` | NOT_RUN |
+| A02 fact vs interpretation | quiet key source fact; forgiveness only interpretation; untouched source retained | `phase_twelve_inspect_test.exs` | NOT_RUN |
+| A03 paraphrase control | three material mechanisms vs three confession paraphrases rejected | scene exploration test | NOT_RUN |
+| A10 stale/idempotent resume | manual/edit/accept retry/stale sibling/reject/resume | discovery test | NOT_RUN |
+| W11 finite/capped work | existing Session budgets/preflight retained; provider-free paths make no paid-client request | source review PASS | full runtime regression pending |
+| dependency boundaries | Workshop→Inference generation; Observe→SystemOne measurement; ASM only behind Inference | API/source inspection PASS | compiled architecture pending |
+| Phase-13 stop line | no rehearsal/voice-exemplar/cinematic Phase-13 implementation | source contract PASS | Phase 13 NOT_STARTED |
+
+Phase 12 remains `OFFLINE_IMPLEMENTED`: creative usefulness and runtime correctness are not inferred from the static checks.

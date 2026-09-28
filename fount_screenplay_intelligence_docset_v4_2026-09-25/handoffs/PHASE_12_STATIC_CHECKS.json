@@ -1,0 +1,88 @@
+{
+  "format_version": 1,
+  "phase": 12,
+  "date": "2026-09-27",
+  "status": "OFFLINE_IMPLEMENTED",
+  "checks": [
+    {
+      "check": "focused Python source-contract suite",
+      "command": "python3 -m unittest scripts.tests.test_phase_twelve_source scripts.tests.test_phase_eleven_source scripts.tests.test_phase_ten_source scripts.tests.test_phase_nine_source -v",
+      "result": "PASS",
+      "count": 34
+    },
+    {
+      "check": "repository Python discovery",
+      "command": "python3 -m unittest discover -s scripts/tests -v",
+      "result": "PARTIAL",
+      "tests_run": 95,
+      "errors": 1,
+      "detail": "pre-existing/snapshot-only import error: test_prune_deleted_directories cannot import scripts/prune_deleted_directories.py from the supplied XML"
+    },
+    {
+      "check": "changed Python compile",
+      "command": "python3 -m py_compile scripts/tests/test_phase_twelve_source.py scripts/tests/test_phase_eleven_source.py",
+      "result": "PASS"
+    },
+    {
+      "check": "Phase-12 JSON parse",
+      "result": "PASS",
+      "count": 7,
+      "detail": "workflow schema plus six Phase-12 JSON example files"
+    },
+    {
+      "check": "strict overlay dry-run on extracted baseline",
+      "result": "PASS",
+      "operations": 36
+    },
+    {
+      "check": "strict overlay apply to clean extracted baseline",
+      "result": "PASS",
+      "operations": 36
+    },
+    {
+      "check": "post-apply strict dry-run",
+      "result": "PASS",
+      "detail": "all 36 operations unchanged"
+    },
+    {
+      "check": "applied tree reproduction",
+      "result": "PASS",
+      "detail": "600 files match desired source excluding manifest/backups/cache"
+    },
+    {
+      "check": "ZIP integrity",
+      "command": "unzip -t fount_phase_12_overlay.zip",
+      "result": "PASS"
+    },
+    {
+      "check": "Elixir/Erlang/Mix availability",
+      "result": "UNAVAILABLE",
+      "detail": "command -v elixir/mix/erl returned no executable"
+    },
+    {
+      "check": "Mix/formatter/compile/ExUnit/Credo/Dialyzer/ExDoc/package",
+      "result": "NOT_RUN"
+    },
+    {
+      "check": "PostgreSQL migrations/integration/CLI example",
+      "result": "NOT_RUN"
+    },
+    {
+      "check": "live Inference/Observe/System One/ASM",
+      "result": "NOT_RUN"
+    },
+    {
+      "check": "optional writer/domain study",
+      "result": "NOT_RUN",
+      "detail": "nonblocking validation debt under D046"
+    }
+  ],
+  "overlay": {
+    "sha256": "51ca6d00d7c1e7a871b08f2657127264886a63df8a0485b6a3a958b61b01bc2b",
+    "bytes": 67027,
+    "operations": 36,
+    "additions": 23,
+    "modifications": 13,
+    "deletions": 0
+  }
+}

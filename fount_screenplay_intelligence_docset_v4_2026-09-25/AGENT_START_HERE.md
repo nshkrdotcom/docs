@@ -1,5 +1,7 @@
 # Agent Start Here
 
+> **Current handoff (2026-09-27): Phase 12 is OFFLINE_IMPLEMENTED.** Phases 1–11 are COMPLETE on recorded engineering QC. The next agent is Codex runtime QC for the user-applied Phase-12 commit: test/repair Phase 12, update evidence, and stop before Phase 13. Do not reapply the overlay.
+
 You are implementing a screenplay-writing tool for humans and agentic collaborators, from source snapshots in an environment assumed to lack a usable Elixir runtime. Read the writer outcome before the technical constraints. Do not substitute architectural activity for useful writing behavior.
 
 ## Required inputs
@@ -18,9 +20,9 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phases 1–10: COMPLETE on engineering QC. Phase 11: OFFLINE_IMPLEMENTED; runtime QC pending. Phase 12: NOT_STARTED.**
+> **Phases 1–11: COMPLETE on recorded engineering QC. Phase 12: OFFLINE_IMPLEMENTED; runtime/repair QC pending. Phase 13: NOT_STARTED.**
 
-Read `handoffs/PHASE_10_RUNTIME_QC_REPORT.md` for the verified Phase-10 checkpoint at Fount `6d164f6`, then `handoffs/PHASE_11_OFFLINE_HANDOFF.md` and `handoffs/PHASE_11_RUNTIME_QC_HANDOFF.md` for the current source delivery. Historical validation debt remains visible; do not claim human validation or unrun live/runtime results. Phase 12 is NOT_STARTED.
+Read `handoffs/PHASE_11_RUNTIME_QC_REPORT.md` for the verified Phase-11 checkpoint, then `handoffs/PHASE_12_OFFLINE_HANDOFF.md` and `handoffs/PHASE_12_RUNTIME_QC_HANDOFF.md` for the current source delivery. Historical validation debt remains visible; do not claim human validation or unrun Phase-12 runtime results. Do not advance to Phase 13.
 
 ## Read before coding
 

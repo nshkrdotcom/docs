@@ -398,3 +398,7 @@ The Phase-11 source handoff is acceptable for runtime QC when:
 - Phase 12 remains NOT_STARTED.
 
 Current source-delivery state: `OFFLINE_IMPLEMENTED`. Elixir/PostgreSQL/live/runtime acceptance is not claimed.
+
+## Phase 12 offline acceptance state — 2026-09-27
+
+Phase 12 source for W01–W03/W11 and A01–A03/A10 is written and transport-verified, but the phase is **OFFLINE_IMPLEMENTED**, not COMPLETE. Elixir compile/ExUnit, real PostgreSQL persistence, full regression/quality/package gates and the required writer demonstration execution remain for Codex. Optional human review is nonblocking under D046. Phase 13 remains NOT_STARTED.
