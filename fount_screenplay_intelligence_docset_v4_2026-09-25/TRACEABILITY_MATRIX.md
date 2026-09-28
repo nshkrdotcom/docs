@@ -586,3 +586,8 @@ The source-delivery table above is historical. At Fount repair commit `37a25ca`,
 | Phase-16 stop line | no final-integration implementation added | source-contract scan | PASS |
 
 The deterministic A09–A12 fixtures are engineering evidence only. The optional D046 comparative writer study remains **NOT_RUN**; no human usefulness, preference, marketability, expert endorsement, representative-sample or workflow-winner claim is made. Phase 15 remains `OFFLINE_IMPLEMENTED` pending runtime/database QC; Phase 16 remains `NOT_STARTED`.
+
+
+## Phase 15 runtime QC traceability — 2026-09-27
+
+A09 provider-free packet and separate human reaction, A10 idempotent/stale/resumed decisions, A11 clean accepted Fountain/FDX with reported page-break loss, and A12 unscored separate usefulness records pass focused ExUnit and the applicable PostgreSQL/preservation ladder. The full provider-free CLI path and current artifact identities are recorded in `handoffs/PHASE_15_RUNTIME_QC_REPORT.md` and `PHASE_15_RUNTIME_FILE_HASHES.json`. Phase 15 is `COMPLETE` on non-human engineering gates; optional human/provider work is `NOT_RUN`, with no comparative human claim. Phase 16 remains `NOT_STARTED`.

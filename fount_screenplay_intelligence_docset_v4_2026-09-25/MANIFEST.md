@@ -340,3 +340,11 @@ Phase 14 is `COMPLETE` on applicable non-human engineering gates at Fount repair
 ## Current Phase 15 checkpoint
 
 Phase 15 is `OFFLINE_IMPLEMENTED`, not COMPLETE. The strict source overlay is `fount_phase_15_overlay.zip`, 17 operations (8 additions, 9 modifications, no deletions), SHA-256 `420cdaf39153461981eb350648cdc1e6230d47c613109fbd9c956e0946b60322`. Source-contract and strict transport checks pass; Elixir/Mix/PostgreSQL/runtime/provider checks and the optional D046 comparative human study are NOT_RUN. Codex must verify/repair the user-applied state and **stop before Phase 16**.
+
+
+## Phase 15 runtime checkpoint
+
+- `handoffs/PHASE_15_RUNTIME_QC_REPORT.md`: applied checkout verification, repairs, commands, artifacts, and claim limits.
+- `handoffs/PHASE_15_RUNTIME_FILE_HASHES.json`: current repaired Fount bytes separately from the immutable overlay inventory.
+
+Phase 15 is `COMPLETE` on applicable non-human engineering gates: 353 workspace, 122 Python and 35 PostgreSQL integration tests, provider-free CLI path, four Hex builds, and preservation checks pass. Optional D046 human comparison and live providers remain `NOT_RUN`. Phase 16 is `NOT_STARTED`.

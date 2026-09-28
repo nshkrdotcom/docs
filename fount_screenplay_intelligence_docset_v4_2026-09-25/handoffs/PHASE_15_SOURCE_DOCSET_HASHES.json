@@ -2,12 +2,11 @@
   "format_version": 1,
   "phase": 15,
   "date": "2026-09-27",
-  "checkpoint": "runtime_qc",
   "exclusions": [
-    "SHA256SUMS.txt",
-    "handoffs/PHASE_15_DOCSET_HASHES.json"
+    "handoffs/PHASE_15_DOCSET_HASHES.json",
+    "SHA256SUMS.txt"
   ],
-  "file_count": 209,
+  "file_count": 206,
   "files": [
     {
       "path": "00_SCOPE_AND_PRINCIPLES.md",
@@ -191,8 +190,8 @@
     },
     {
       "path": "36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md",
-      "sha256": "3b32bcf394eeb5e1efd88161ee59382198d8e3e26ebe0361a5bbfec9c241db87",
-      "bytes": 28407
+      "sha256": "96008173b2413c161a1770bb0e904c5b8de9b628253d785efec64e3ea042ee06",
+      "bytes": 27581
     },
     {
       "path": "AGENT_START_HERE.md",
@@ -206,13 +205,13 @@
     },
     {
       "path": "MANIFEST.md",
-      "sha256": "ab25986e389fd3f4eb01a1d585979a3ccb879220fe3341dc8940a0d04320f305",
-      "bytes": 26630
+      "sha256": "aaaef0c23567bd7d8642e7aa7e17aad4f4dafaffb1f86809da0f1ec61b2dfff5",
+      "bytes": 26051
     },
     {
       "path": "PROGRESS.md",
-      "sha256": "696cc72c7bd33d07744ba07128e028cbdf8ab18d7056343efada065f1c4f3f09",
-      "bytes": 49368
+      "sha256": "54b83387b6476b9401c8eda230864fe7c01134752fd90ee53de56ef27a377f5d",
+      "bytes": 48636
     },
     {
       "path": "README.md",
@@ -226,8 +225,8 @@
     },
     {
       "path": "TRACEABILITY_MATRIX.md",
-      "sha256": "ff50beda91657e0ad3d92342aa261d37efe6388f720883f211c69160b8187469",
-      "bytes": 67724
+      "sha256": "8351e49274d592df3eba9c666640485cfbb901f98b0c9164b0b00a453581b16a",
+      "bytes": 67072
     },
     {
       "path": "examples/CONCEPTUAL_CONTRACT_EXAMPLES.md",
@@ -990,24 +989,9 @@
       "bytes": 2874
     },
     {
-      "path": "handoffs/PHASE_15_RUNTIME_FILE_HASHES.json",
-      "sha256": "cfe0bf221cb679745153a84f256fea5e8a203226daa9ee3b00faa811d6dfd80b",
-      "bytes": 6996
-    },
-    {
       "path": "handoffs/PHASE_15_RUNTIME_QC_HANDOFF.md",
       "sha256": "5bfe651e963313e1a020352d6f682a128b8c0cc5b65d1d22eb0e68a80372fcd1",
       "bytes": 5624
-    },
-    {
-      "path": "handoffs/PHASE_15_RUNTIME_QC_REPORT.md",
-      "sha256": "224340221edf6c75d1c9b597c8a637011ec2d02fae1ab8051484648346115776",
-      "bytes": 9362
-    },
-    {
-      "path": "handoffs/PHASE_15_SOURCE_DOCSET_HASHES.json",
-      "sha256": "70d7f1003967f626151aa71263fa08c6f71bc9ee0688e6077c45b18d70394603",
-      "bytes": 35512
     },
     {
       "path": "handoffs/PHASE_15_STATIC_CHECKS.json",

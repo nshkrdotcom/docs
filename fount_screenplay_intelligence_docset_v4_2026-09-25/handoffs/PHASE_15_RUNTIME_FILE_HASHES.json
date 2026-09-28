@@ -1,0 +1,147 @@
+{
+  "format_version": 1,
+  "phase": 15,
+  "base_commit": "ae5b5eb38e15e68c02d6a5d1fcfe14a0bf777353",
+  "base_tree": "554a83815d3937f124dc7ce8581a251a7c1eb453",
+  "overlay_inventory": "PHASE_15_FILE_INVENTORY.json",
+  "original_overlay_hashes_preserved": true,
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "overlay_result_sha256": "ea54397720731dba3426fe02d1f38c697a00768b9a8b4d6bec0f2979138c03e7",
+      "current_sha256": "ea54397720731dba3426fe02d1f38c697a00768b9a8b4d6bec0f2979138c03e7",
+      "current_bytes": 6832,
+      "changed_after_overlay": false
+    },
+    {
+      "path": "packages/fount_workshop/CHANGELOG.md",
+      "overlay_result_sha256": "7f13fe59ca7a43a26eb447d87b7fbb7f7ab7b3953f5495ad4fffd45fc547371e",
+      "current_sha256": "7f13fe59ca7a43a26eb447d87b7fbb7f7ab7b3953f5495ad4fffd45fc547371e",
+      "current_bytes": 6829,
+      "changed_after_overlay": false
+    },
+    {
+      "path": "packages/fount_workshop/README.md",
+      "overlay_result_sha256": "58bbf3ea8317b10e6b64bb4a4a8b8458b14a2fc5b2be9b632ffa8fea1925b901",
+      "current_sha256": "58bbf3ea8317b10e6b64bb4a4a8b8458b14a2fc5b2be9b632ffa8fea1925b901",
+      "current_bytes": 8803,
+      "changed_after_overlay": false
+    },
+    {
+      "path": "packages/fount_workshop/examples/README.md",
+      "overlay_result_sha256": "029daba202bea0183c70499e684930e5880d308a4843729c42fbe31a7f2eea10",
+      "current_sha256": "029daba202bea0183c70499e684930e5880d308a4843729c42fbe31a7f2eea10",
+      "current_bytes": 7331,
+      "changed_after_overlay": false
+    },
+    {
+      "path": "packages/fount_workshop/examples/phase_fifteen/README.md",
+      "overlay_result_sha256": "7f1a69fe8c8b3a60c57118aca0fbaf856a3073d4b93a6e3528ad004ec721cc64",
+      "current_sha256": "7f1a69fe8c8b3a60c57118aca0fbaf856a3073d4b93a6e3528ad004ec721cc64",
+      "current_bytes": 1363,
+      "changed_after_overlay": false
+    },
+    {
+      "path": "packages/fount_workshop/guides/read-share-resume-and-usefulness.md",
+      "overlay_result_sha256": "85e78482840038ed1741aaa22f6069cc55480e4e5a67455975fa36480b876f9a",
+      "current_sha256": "85e78482840038ed1741aaa22f6069cc55480e4e5a67455975fa36480b876f9a",
+      "current_bytes": 6155,
+      "changed_after_overlay": false
+    },
+    {
+      "path": "packages/fount_workshop/guides/table-reads-and-audio.md",
+      "overlay_result_sha256": "a56b0f33796654c778769a88c217215bdbdee4d2df8e9636bdc64fc58d04ee1e",
+      "current_sha256": "a56b0f33796654c778769a88c217215bdbdee4d2df8e9636bdc64fc58d04ee1e",
+      "current_bytes": 3324,
+      "changed_after_overlay": false
+    },
+    {
+      "path": "packages/fount_workshop/integration/phase_fifteen_read_share_resume_test.exs",
+      "overlay_result_sha256": "30d4512a8e68d21be841b4c35c81f2d2e19f356567d90d081b853c492747075b",
+      "current_sha256": "30d4512a8e68d21be841b4c35c81f2d2e19f356567d90d081b853c492747075b",
+      "current_bytes": 3853,
+      "changed_after_overlay": false
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop.ex",
+      "overlay_result_sha256": "2b7e713f0f52e985a349fee6821b0dab702f341a2cde1d6ada145e20442dce8a",
+      "current_sha256": "2b7e713f0f52e985a349fee6821b0dab702f341a2cde1d6ada145e20442dce8a",
+      "current_bytes": 1646,
+      "changed_after_overlay": false
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/cli.ex",
+      "overlay_result_sha256": "ab2e2025b9546c913749536ae7373ab7d2d44863471c18d252349ed7283f45cd",
+      "current_sha256": "7bf9e3ec05a8a09013fe0a6705da8655bd7ab29a7819af54290018bd4d8c5ba3",
+      "current_bytes": 16966,
+      "changed_after_overlay": true
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/share.ex",
+      "overlay_result_sha256": "5a7f0112a53bb0250beb915fb47a3995d8fabed6d95c84c7e87988904683355e",
+      "current_sha256": "54b5f5a4c163aa16b0107d6723498d7a2ac9decf8d76109c29d85a1383f85d99",
+      "current_bytes": 6285,
+      "changed_after_overlay": true
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/table_read.ex",
+      "overlay_result_sha256": "89fdae714e31ef31a11e2880b56b201a5eea5f920b5c6a730b09742cc66051bd",
+      "current_sha256": "1e02d12210f22d1669bc5ecc9ef39fd4960addd549db385ca55a6e8200340db0",
+      "current_bytes": 13103,
+      "changed_after_overlay": true
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/usefulness.ex",
+      "overlay_result_sha256": "51c87119e87bb76e06861ef70dfccb03b699e864a5a3e99cda3e5252b9c5d42f",
+      "current_sha256": "3646c22ae5eddab471371c9deabf98277251b37352d5ed5e37fea97fc402ca4f",
+      "current_bytes": 6304,
+      "changed_after_overlay": true
+    },
+    {
+      "path": "packages/fount_workshop/mix.exs",
+      "overlay_result_sha256": "234afadb20b3f61d790f3e46a622be70a07275bc8f441c051a95bfdaefafb39a",
+      "current_sha256": "155ac9878ef80f9afb28ef26896843361222179a0a3a49577765d6b328b87f68",
+      "current_bytes": 4320,
+      "changed_after_overlay": true
+    },
+    {
+      "path": "packages/fount_workshop/test/writer_workflows/phase_fifteen_read_share_resume_test.exs",
+      "overlay_result_sha256": "80f84a1f59cafad65582e323a2ffe5587685a1ecb7bd0871a5eca475adfd9295",
+      "current_sha256": "10405089004db9b316b72b591e6cea6b209f1a1c0708eac13d40e7acf2d61db8",
+      "current_bytes": 7216,
+      "changed_after_overlay": true
+    },
+    {
+      "path": "packages/fount_workshop/test/writer_workflows/phase_fifteen_usefulness_test.exs",
+      "overlay_result_sha256": "baff99004175dc238bcd19f0d5a935c9e04ac1f9593bda454fc63b4f450c4e0b",
+      "current_sha256": "dd9d7f135722572413a2119694f9544af899fb2cb96dc7d04d4af9c3acfd07c6",
+      "current_bytes": 3253,
+      "changed_after_overlay": true
+    },
+    {
+      "path": "scripts/tests/test_phase_fifteen_source.py",
+      "overlay_result_sha256": "2d4e8804c1d0e3e57c110f440b04588eda2e402ee80ddedd39fb3980faeccfec",
+      "current_sha256": "2d4e8804c1d0e3e57c110f440b04588eda2e402ee80ddedd39fb3980faeccfec",
+      "current_bytes": 5828,
+      "changed_after_overlay": false
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/review_export.ex",
+      "overlay_result_sha256": null,
+      "current_sha256": "61d8fae4a2bb87291eaf625ff683626b056d2d819b349e4d003c055a94ca0e1c",
+      "current_bytes": 6616,
+      "changed_after_overlay": true,
+      "note": "Existing surface repaired after CLI resume exposed stale decision labels; not one of 17 overlay paths."
+    },
+    {
+      "path": "packages/fount_observe/test/system_one_boundary_test.exs",
+      "overlay_result_sha256": null,
+      "current_sha256": "a5e6b055dbccab8abe5c553710fa0c09448cf8396801f97ef2615689137e2842",
+      "current_bytes": 4038,
+      "changed_after_overlay": true,
+      "note": "Existing Observe preservation timeout test made deterministic after transient full-CI failure; outside 17 Phase-15 overlay paths."
+    }
+  ],
+  "repair_commit": "72c583a665c076ce809e453516f23351f50d0386",
+  "repair_tree": "30df207a16798de4f0e4fa794bf6a6ea175de325"
+}
