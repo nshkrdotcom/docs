@@ -299,3 +299,11 @@ Before Phase 11, capability phases produce small human-review artifacts as speci
 - Phase 9: end-to-end writer workflow review.
 
 These pilots are exploratory and must not be marketed as population-level validation. Their purpose is to catch wrong constructs, unusable output, and obvious mismatch with writer/reader experience before large implementation investment compounds the error.
+
+## Phase 11 source-delivery checkpoint — 2026-09-27
+
+The source now implements the Phase-11 evaluation substrate in `Fount.Intelligence.Evaluation`: fail-closed corpus rights/use policy, stable semantic annotations, disagreement-preserving summaries, Noul/Choice distributional Brier/log-loss/ECE and abstention curves, ordinal score MAE/RMSE, descriptive drift, current-output-contract frozen reasoning fixtures, all-12-family benchmark catalog validation and longitudinal resource estimate-vs-actual comparison. Shipped assets live under `packages/fount_intelligence/priv/evaluation/` and are included in the package allowlist.
+
+The frozen concealment fixture pins the exact current `observe.distribution` output-contract digest. A contract-shape change is a visible stale-fixture error and the documented regeneration plan requires a new MeasurementResult and fresh current-revision Observation; there is no compatibility decoder. Human annotations deliberately reject provider/model/logit/token/output-contract/probability-shaped fields so long-lived labels remain semantic rather than coupled to an obsolete model encoding.
+
+This checkpoint contains synthetic annotations only. No real reader agreement, empirical calibration, audience prediction, creative-quality or writer-usefulness finding is claimed. Support/validity and writer usefulness remain separate evaluation lanes.

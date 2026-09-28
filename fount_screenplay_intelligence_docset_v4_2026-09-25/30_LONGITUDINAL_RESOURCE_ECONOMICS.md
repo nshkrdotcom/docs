@@ -180,3 +180,9 @@ reported usage. Unavailable wire/cost/retry totals are unknown, not guessed valu
 A finite initial-provider-request cap forces retries off. Durable longitudinal
 history and marginal-rewrite economics remain later Intelligence-shell work.
 The source and tests are written; real runtime/live accounting is not yet verified.
+
+## Phase 11 source-delivery checkpoint — 2026-09-27
+
+`Fount.Intelligence.Evaluation.Resources` now compares provider-free preflight estimates with actual recorded resource units and summarizes Phase-10 durable usage history. It keeps unknown dimensions unknown: absent hosted monetary cost remains `nil`, never zero. Reuse is evaluated from actual cache hits relative to scheduled states; base/contextual stage usage is combined only when both contributing values are known.
+
+`packages/fount_intelligence/integration/phase_eleven_resource_history_test.exs` writes one durable analysis run with the existing writer resource packet shape, reads it through `usage_history/4`, and checks estimate-vs-actual request/reuse accounting. The integration is written but **NOT_RUN** in the source-writing environment because PostgreSQL/Elixir/Mix are unavailable.

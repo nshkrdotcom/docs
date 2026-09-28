@@ -18,9 +18,9 @@ Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is alrea
 
 The current checkpoint is:
 
-> **Phases 1–10: COMPLETE on engineering QC. Phase 11: NOT_STARTED.**
+> **Phases 1–10: COMPLETE on engineering QC. Phase 11: OFFLINE_IMPLEMENTED; runtime QC pending. Phase 12: NOT_STARTED.**
 
-Read `handoffs/PHASE_10_RUNTIME_QC_REPORT.md` for the verified Phase-10 checkpoint at Fount `6d164f6`. The Phase-9 baseline was `361a9fd`. Historical validation debt remains visible; do not claim human validation. Phase 11 is NOT_STARTED.
+Read `handoffs/PHASE_10_RUNTIME_QC_REPORT.md` for the verified Phase-10 checkpoint at Fount `6d164f6`, then `handoffs/PHASE_11_OFFLINE_HANDOFF.md` and `handoffs/PHASE_11_RUNTIME_QC_HANDOFF.md` for the current source delivery. Historical validation debt remains visible; do not claim human validation or unrun live/runtime results. Phase 12 is NOT_STARTED.
 
 ## Read before coding
 
@@ -111,9 +111,13 @@ Phase 8 is **COMPLETE** at Fount `f7f4d68` on the full engineering and preservat
 
 Phase 9 is **COMPLETE** at Fount `361a9fd` on the full engineering and preservation QC in `handoffs/PHASE_09_RUNTIME_QC_REPORT.md`. All 19 original paths matched before repair; 325 workspace tests, 73 Python tests, architecture, isolated Core/Workshop PostgreSQL integrations and the deterministic Sandbox/scripted-Inference writer loop passed. The optional human workflow review remains unperformed validation debt under D046. That stop line is historical; Phase 10 has since been source-written.
 
-### Current Phase 10 source checkpoint
+### Historical Phase 10 source checkpoint
 
 Phase 10 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The 27-operation overlay adds durable analysis runs, L2 reusable MeasurementResults, fresh current-revision Observation persistence, content-addressed safe data assets, recomputation/dependency history, usage/audit export and opt-in Workshop session integration. The required resume/history writer regression is written. Offline Python/overlay checks are recorded in `handoffs/PHASE_10_STATIC_CHECKS.json`; Elixir/Mix/PostgreSQL/runtime gates are unrun. Codex must verify/repair Phase 10 from the user-applied commits and **stop before Phase 11**.
 ### Phase 10 verified runtime result
 
-Phase 10 is **COMPLETE** at Fount `6d164f6` (tree `9a94735`) on the engineering and preservation QC recorded in `handoffs/PHASE_10_RUNTIME_QC_REPORT.md`. Full CI passed 328 tests; 82 Python tests, disposable PostgreSQL, writer resume/history, compiled architecture, strict quality/docs, PDF/table-read and four package builds passed. The optional human usefulness study was skipped under D046 as validation debt. Stop before Phase 11.
+Phase 10 is **COMPLETE** at Fount `6d164f6` (tree `9a94735`) on the engineering and preservation QC recorded in `handoffs/PHASE_10_RUNTIME_QC_REPORT.md`. Full CI passed 328 tests; 82 Python tests, disposable PostgreSQL, writer resume/history, compiled architecture, strict quality/docs, PDF/table-read and four package builds passed. The optional human usefulness study was skipped under D046 as validation debt. That stop line is historical; Phase 11 is now source-written.
+
+### Current Phase 11 source checkpoint
+
+Phase 11 is **OFFLINE_IMPLEMENTED**, not COMPLETE. Read `handoffs/PHASE_11_INPUTS.json`, `PHASE_11_IMPLEMENTATION_MATRIX.md`, `PHASE_11_STATIC_CHECKS.json`, `PHASE_11_PRESERVATION_AUDIT.md`, and `PHASE_11_RUNTIME_QC_HANDOFF.md`. The source delivery adds the evaluation/corpus/calibration/robustness/live-QC layer while preserving current package boundaries. Runtime, PostgreSQL, live-provider and human-study evidence is not claimed. Codex must verify/repair Phase 11 from the user's applied commits and **stop before Phase 12**.

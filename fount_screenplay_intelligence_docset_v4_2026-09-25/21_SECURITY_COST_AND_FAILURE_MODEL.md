@@ -138,3 +138,9 @@ Retries must preserve request identity and avoid duplicate observations.
 ## 8. Live-test spending
 
 Runtime QC should use small representative cases. Full-screenplay live sweeps are not required merely to prove connectivity and should not be run casually when a compact fixture verifies the integration contract.
+
+## Phase 11 source-delivery checkpoint — 2026-09-27
+
+Phase 11 adds a fail-closed evaluation corpus boundary rather than weakening existing provider security. Corpus manifests reject credential-like keys recursively and separate human-review permission from hosted Observe/Inference export permission. The live examples read existing environment configuration but serialize only provider-neutral results/fingerprints/resource usage, not keys.
+
+The Phase-11 QC gate explicitly reruns existing Observe regressions where malformed/missing associations cannot become negative evidence, acquisition/budget failures remain explicit, credential-like provider extras are rejected and resource caps are enforced. These runtime regressions are required by the handoff but are **NOT_RUN** by the source-writing pass. Intelligence still has no direct SystemOneSDK, Inference or ASM dependency.

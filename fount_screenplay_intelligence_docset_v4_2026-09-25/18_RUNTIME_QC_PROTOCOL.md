@@ -213,7 +213,26 @@ For Phase 10:
 - StoryWorld recomputes the correct connected temporal/state region;
 - source-span evidence is not silently reused across incompatible revisions.
 
-## 17. Functionality preservation gate
+## 17. Phase-11 evaluation, robustness and live-verification QC
+
+For Phase 11, runtime QC must additionally verify:
+
+- corpus rights/use manifests fail closed and distinguish human review from hosted Observe/Inference export;
+- semantic human annotations preserve independent disagreement and first-exposure Reader checkpoints;
+- Noul/Choice calibration metrics, abstention curves and ordinal Score errors are hand-checkable on deterministic fixtures;
+- drift output is descriptive and does not rank providers/models or turn repeatability into accuracy;
+- frozen MeasurementResult/Observation fixtures pin the current output-contract digest, stale contracts fail visibly, and regeneration creates a new current fixture with no compatibility decoder;
+- nonlinear Reader presentation order remains separate from partial/unknown StoryWorld story time;
+- all twelve capability families resolve to installed evaluation lenses;
+- existing malformed-association, failure, timeout, budget, credential-redaction and privacy regressions remain green;
+- durable usage history calibrates preflight estimates against actual resource units without converting unknown cost to zero;
+- the provider-free Phase-11 example produces inspectable evaluation output;
+- authorized Observe live QC uses only the small synthetic scene and records resource/drift evidence without secrets;
+- authorized Workshop live QC generates exactly one noncanonical one-scene candidate, leaves Observe disabled in that mode, and leaves accepted head unchanged.
+
+If a live gate cannot be run because authorization/configuration is absent, record `NOT_RUN` and follow this protocol's applicable-gate completion rule. Human/domain review remains optional under D046 and must never be fabricated.
+
+## 18. Functionality preservation gate
 
 Phase 1 and Phase 16 compare the source to `23_FUNCTIONALITY_PRESERVATION_AUDIT.md`.
 
@@ -226,7 +245,7 @@ or explicitly superseded by verified stronger behavior
 
 Nothing may be "temporarily available through old Probe" because old Probe no longer exists.
 
-## 18. Fix policy
+## 19. Fix policy
 
 The runtime agent may directly fix:
 
@@ -241,7 +260,7 @@ The runtime agent may directly fix:
 
 If a fix changes architecture materially, update `DECISIONS.md` and relevant implementation docs.
 
-## 19. QC report
+## 20. QC report
 
 Create/update:
 
@@ -251,7 +270,7 @@ handoffs/PHASE_<NN>_RUNTIME_QC_REPORT.md
 
 Include command, exit status, concise result, fixes applied, residual warnings, live checks, and exact Git/source state.
 
-## 20. Progress transition
+## 21. Progress transition
 
 Possible transitions:
 
@@ -264,7 +283,7 @@ QC_BLOCKED -> QC_IN_PROGRESS
 
 Only runtime-QC changes a phase to `COMPLETE`.
 
-## 21. Next baseline
+## 22. Next baseline
 
 After `COMPLETE`:
 

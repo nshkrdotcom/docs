@@ -1,0 +1,102 @@
+{
+  "phase": 11,
+  "date": "2026-09-27",
+  "status": "OFFLINE_IMPLEMENTED",
+  "checks": [
+    {
+      "name": "targeted_phase_9_10_11_python_source_contracts",
+      "command": "python3 -m unittest scripts.tests.test_phase_eleven_source scripts.tests.test_phase_ten_source scripts.tests.test_phase_nine_source -v",
+      "status": "PASS",
+      "tests_run": 27,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "repository_python_discovery",
+      "command": "python3 -m unittest discover -s scripts/tests -v",
+      "status": "ERROR",
+      "tests_run": 88,
+      "failures": 0,
+      "errors": 1,
+      "reason": "Supplied Fount XML includes scripts/tests/test_prune_deleted_directories.py but omits imported scripts/prune_deleted_directories.py; ModuleNotFoundError. Full discovery is not claimed green."
+    },
+    {
+      "name": "frozen_output_contract_digest",
+      "status": "PASS",
+      "sha256": "79b0afc9ef4518c7a2834a6ffddbb42812724cd371a691d8152e1c032de87c9",
+      "method": "Python independently canonicalized the fixture output-contract shape and recomputed SHA-256."
+    },
+    {
+      "name": "frozen_fixture_digest",
+      "status": "PASS",
+      "sha256": "66e8dd845a6ea4538ef3b4ea3ad51340a754bcd7a618278444c69cc1a4d42e62",
+      "method": "Python independently canonicalized the fixture body without fixture_sha256 and recomputed SHA-256."
+    },
+    {
+      "name": "strict_overlay_zip_crc",
+      "status": "PASS",
+      "members": 37,
+      "payload_operations": 36
+    },
+    {
+      "name": "strict_overlay_dry_run_exact_xml_baseline",
+      "status": "PASS",
+      "operations": 36
+    },
+    {
+      "name": "strict_overlay_apply",
+      "status": "PASS",
+      "operations_applied": 36
+    },
+    {
+      "name": "post_apply_tree_reproduction",
+      "status": "PASS",
+      "files_compared": 577,
+      "notes": "Installer backup directory and Python bytecode ignored; all source file hashes equal intended Phase-11 tree."
+    },
+    {
+      "name": "overlay_second_dry_run_idempotence",
+      "status": "PASS",
+      "unchanged_operations": 36
+    },
+    {
+      "name": "elixir_runtime",
+      "status": "NOT_RUN",
+      "reason": "elixir, mix and erl are not installed in this source-writing environment"
+    },
+    {
+      "name": "postgresql_phase11_integration",
+      "status": "NOT_RUN",
+      "reason": "requires Elixir/Mix and runtime database"
+    },
+    {
+      "name": "observe_live_qc",
+      "status": "NOT_RUN",
+      "reason": "live provider call is explicit opt-in and was not executed"
+    },
+    {
+      "name": "workshop_live_qc",
+      "status": "NOT_RUN",
+      "reason": "live Inference/ASM generation is explicit opt-in and was not executed"
+    },
+    {
+      "name": "human_reader_writer_study",
+      "status": "NOT_RUN",
+      "reason": "optional under D046; no human results fabricated"
+    },
+    {
+      "name": "phase_12_boundary",
+      "status": "PASS",
+      "reason": "Phase-11 source guard confirms no Phase-12 implementation in evaluation roots; docset keeps Phase 12 NOT_STARTED"
+    }
+  ],
+  "overlay": {
+    "archive": "fount_phase_11_overlay.zip",
+    "sha256": "4c0c46f2d9f552ae476be79dce132ec286983acbc2d99acd5c7842588d291779",
+    "manifest_sha256": "f3871b58dca861654cc11dd917bce5f0a73b98466261cf9b129a515bbb2e3434",
+    "operations": 36,
+    "additions": 21,
+    "modifications": 15,
+    "deletions": 0
+  }
+}

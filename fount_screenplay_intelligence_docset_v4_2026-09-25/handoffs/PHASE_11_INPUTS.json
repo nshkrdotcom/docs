@@ -1,16 +1,16 @@
 {
-  "phase": 10,
+  "phase": 11,
   "date": "2026-09-27",
   "identification_rule": "Inputs were identified by repository contents, package topology, modules, docs and progress records; attachment filenames were not used as authority.",
   "inputs": [
     {
       "role": "Fount",
-      "raw_xml_sha256": "aac97f2d6f745756ec3b023bcd477ddd9d27e011dfb5691228cadc90f3fcc410",
-      "raw_bytes": 2813603,
-      "extracted_files": 546,
-      "content_identity": "Four-package Fount workspace: packages/fount, packages/fount_observe, packages/fount_intelligence and packages/fount_workshop, with Phase-9 Workshop Intelligence integration and handoff/QC state.",
-      "documented_verified_commit": "361a9fd04752d947e0eaf12edbcf0fbd4d1bad54",
-      "documented_verified_tree": "2d25494002d6b711185be83c6c6b0b44b92d3068"
+      "raw_xml_sha256": "eb09383e7a592439071ea3420f9f0ca8cd30d0f5239ed1e8cb030e877c77137a",
+      "raw_bytes": 2913074,
+      "extracted_files": 556,
+      "content_identity": "Four-package Fount workspace: packages/fount, packages/fount_observe, packages/fount_intelligence and packages/fount_workshop, with Phase-10 durable analysis persistence/reuse/recomputation and strict handoff tooling.",
+      "documented_verified_commit": "6d164f636b6ffd0d9278c7f0ac436ce573447423",
+      "documented_verified_tree": "9a94735238e080f6a30bdad85b61d78a69a7d9b1"
     },
     {
       "role": "SystemOneSDK",
@@ -38,16 +38,16 @@
     },
     {
       "role": "Current docset",
-      "raw_xml_sha256": "c55b995dd00d3f9602a2974a58e99dd58effeaa0687fcf539b206bc1e4ed18cc",
-      "raw_bytes": 1692409,
-      "extracted_files": 150,
-      "content_identity": "Fount implementation docset documents 00–36 plus handoffs through Phase 9; PROGRESS.md marks Phases 1–9 COMPLETE and Phase 10 first NOT_STARTED."
+      "raw_xml_sha256": "39e1b465829e2a19829289de176c9a911f8ff1488db8db77c749f677e3eabdf4",
+      "raw_bytes": 1814782,
+      "extracted_files": 159,
+      "content_identity": "Fount implementation docset documents 00–36 plus handoffs through Phase 10; PROGRESS.md marks Phases 1–10 COMPLETE and Phase 11 first NOT_STARTED."
     }
   ],
   "progress_authority": {
-    "first_unfinished_phase": 10,
-    "name": "Durable Analysis Persistence, Reuse, and Recomputation",
-    "prior_phase": "Phase 9 COMPLETE on engineering QC"
+    "first_unfinished_phase": 11,
+    "name": "Scaled Calibration, Evaluation Corpus, Robustness, and Live Verification",
+    "prior_phase": "Phase 10 COMPLETE on engineering QC at Fount 6d164f636b6ffd0d9278c7f0ac436ce573447423"
   },
   "external_apis_inspected": {
     "SystemOneSDK 0.6.0": [
@@ -64,9 +64,8 @@
       "SystemOneSDK.list_models/2"
     ],
     "Inference 0.5.0": [
-      "Inference.client/1",
-      "Inference.capabilities/1",
-      "Inference.client!/1",
+      "Inference.Client.agent_session/1",
+      "Inference.Client.agent_session!/1",
       "Inference.complete/3",
       "Inference.stream/3"
     ],
@@ -80,7 +79,8 @@
     ]
   },
   "phase_boundary_notes": [
-    "Phase 10 adds no direct SystemOneSDK, Inference or ASM calls. System One remains behind Observe; Inference remains Workshop generation infrastructure; ASM remains behind Inference.",
-    "Existing Observe cache identity/model-stability contracts and existing pure Intelligence recomputation APIs are reused rather than replaced."
+    "Phase 11 adds no direct SystemOneSDK, Inference or ASM dependency to Fount.Intelligence. System One remains behind Observe; generative Inference/ASM remains behind Workshop.",
+    "Observe live QC uses the existing Fount.Observe provider/SceneQuestion path. Workshop live QC uses the existing FountWorkshop.Launcher Inference.Client.agent_session! path with Observe disabled for that mode.",
+    "No Phase-12 discovery/session-mode implementation is included."
   ]
 }

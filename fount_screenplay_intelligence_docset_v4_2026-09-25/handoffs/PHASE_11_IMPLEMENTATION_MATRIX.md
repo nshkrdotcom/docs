@@ -1,0 +1,31 @@
+# Phase 11 implementation matrix — Scaled Calibration, Evaluation Corpus, Robustness, and Live Verification
+
+**Delivery status:** OFFLINE_IMPLEMENTED on 2026-09-27. Runtime/live/PostgreSQL/Elixir QC and any real human study have not run in this source-writing environment.
+
+| Phase-11 requirement | Source implementation | Test / demonstration | Offline status |
+|---|---|---|---|
+| Representative screenplay/corpus fixture framework | `Fount.Intelligence.Evaluation.CorpusManifest`; `priv/evaluation/corpus_manifest.synthetic.json`; suite/fixture assets | Phase-11 evaluation tests + Python source contract | WRITTEN; synthetic only |
+| Rights/provenance and provider-export policy | fail-closed per-use permissions for local storage, human review, Observe hosted, Inference hosted, local model, redistribution; aggregate provider-export/human/redistribution upper bounds; secret-like key rejection | `phase_eleven_evaluation_test.exs`; Python source checks | WRITTEN; runtime unrun |
+| Multiple independent human annotations | `Evaluation.Annotation`; semantic labels, reader checkpoints, writer-usefulness records; original annotations retained | `reader_annotations.synthetic.json`; evaluation tests | WRITTEN; **no real readers claimed** |
+| Preserve disagreement | empirical label distribution + agreement + mean confidence while retaining each reader record | evaluation tests | WRITTEN; runtime unrun |
+| Metrics by lens kind | `Evaluation.Metrics`: categorical Brier/log loss/ECE; ordinal MAE/RMSE plus distributional metrics | evaluation tests | WRITTEN; runtime unrun |
+| Abstention policy | threshold series reports retained count, coverage, and retained human support | evaluation tests | WRITTEN; runtime unrun |
+| Model/provider drift | `Evaluation.Drift`: aligned-case L1, selection change, missing/new cases, exact identity changes | evaluation tests; Observe live repeatability path | WRITTEN; live unrun; explicitly not a quality ranking |
+| Frozen MeasurementResult/Observation reasoning benchmarks | `Evaluation.Benchmark`; frozen concealment fixture stores current question/output contract/result/observation/expected reasoning | fixture digest source test + ExUnit stale-contract test | STATIC DIGEST PASS; Elixir unrun |
+| Pin output-contract digest / visible stale failure | fixture pins `observe.distribution` current digest; `validate/2` returns `stale_output_contract_fixture` | phase-eleven evaluation test | WRITTEN; runtime unrun |
+| Explicit regeneration, no compatibility decoding | `benchmark_regeneration_plan/2` requires rerun measurement, fresh current Observation, provider-free reasoning review, then `freeze/6`; `compatibility_decode=false` | evaluation test + source guard | WRITTEN |
+| Human labels at stable semantic level | annotation schema rejects provider/model/logit/token/output-contract/probability-shaped keys | evaluation test + source test | WRITTEN |
+| Reader first-exposure checkpoints | reader checkpoint annotations require presentation index, `first_exposure=true`, prompt, optional timestamp | synthetic annotations + evaluation tests | WRITTEN; no human reader study run |
+| Non-linear story-time/continuity benchmark | `nonlinear_story_time.synthetic.json`; Reader presentation reduction plus partial StoryWorld/Temporal relation regression | `phase_eleven_nonlinear_benchmark_test.exs` | WRITTEN; runtime unrun |
+| Capability-specific suites | `Evaluation.Suite` maps all 12 capability families to installed lenses and marks nonlinear requirements | `phase_eleven_suite.json`; tests/source contract | WRITTEN; runtime unrun |
+| Failure/timeout/budget/security hardening | Phase 11 makes prior Observe malformed-association, explicit acquisition-error, resource cap, credential-extra regressions part of the permanent Phase-11 gate; corpus manifest adds fail-closed export/secret policy | existing Observe tests + Phase-11 source guard; QC handoff enumerates focused runtime tests | EXISTING + SOURCE-GATED; runtime pending |
+| Observe live QC | `packages/fount_observe/examples/phase_eleven_live.exs`: explicit opt-in, synthetic scene, 3 runs, one state/request per run, descriptive drift + resource usage | authorized live command in QC handoff | WRITTEN; **NOT_RUN** |
+| Workshop small live generation QC | `phase_eleven_qc` LiveExample mode; one first-scene pass, one candidate, Observe disabled, accepted head invariant; explicit opt-in wrapper | authorized live command in QC handoff | WRITTEN; **NOT_RUN** |
+| Longitudinal estimate vs actual usage | `Evaluation.Resources`; understands existing writer packet resource shape and durable usage history; unknown dimensions remain nil | `phase_eleven_resource_history_test.exs` | WRITTEN; PostgreSQL unrun |
+| Support/validity separate from writer usefulness | suite requires `support_validity=true` and a separate optional/recorded writer-usefulness state; metrics never turn usefulness into calibration | suite fixture/tests/docs | WRITTEN |
+| No secret leakage | corpus manifests reject credential-like keys; live examples read environment values but do not serialize them; existing provider redaction boundaries remain | source tests + runtime security gate | STATIC INSPECTED; runtime pending |
+| Screenplay-writing usefulness | evaluation packets are anchored to scene/reader/story-time/capability behavior; Workshop live path revises actual screenplay pages without canon acceptance | provider-free Phase-11 example + one-scene live path | WRITTEN; provider-free example unrun because Mix unavailable |
+| Preserve existing functionality | no Core source edits; no Observe engine edits; Workshop change is one conditional LiveExample mode; Phase-9/10 source-contract regressions retained | 27 targeted Phase-9/10/11 Python tests | PASS offline |
+| Stop before Phase 12 | no Phase-12 implementation in evaluation roots; Phase 12 remains NOT_STARTED | Phase-11 Python source guard | PASS offline |
+
+The source delivery deliberately does **not** claim empirical human calibration, reader agreement, creative superiority, live-provider stability, or Workshop generation quality. Those claims require actual recorded evidence.

@@ -748,6 +748,8 @@ Core lenses/capabilities have executable evaluation notes/fixtures, any actual e
 
 ---
 
+**Phase 11 source-delivery checkpoint — 2026-09-27:** `OFFLINE_IMPLEMENTED`, not COMPLETE. The 36-operation overlay adds rights/provenance/provider-export corpus policy, independent semantic annotations with disagreement preservation, per-kind calibration/abstention/ordinal metrics, descriptive provider/model drift, frozen current-contract MeasurementResult/Observation fixtures with explicit stale-fixture regeneration, all-12-family evaluation suite coverage, a nonlinear presentation/story-time regression, durable estimate-vs-actual resource calibration, and narrowly scoped opt-in Observe/Workshop live checks. The Workshop live path is one scene/one candidate, Observe-disabled and noncanonical. 27 targeted Phase-9/10/11 Python source-contract tests plus strict overlay/archive checks pass offline. Repository-wide Python discovery has one snapshot-omission import error; Elixir/Mix/PostgreSQL/runtime/live/human checks are unrun. Codex must verify/repair Phase 11 and stop before Phase 12.
+
 # Phase 12 — Discovery, Session Modes, and Scene Exploration
 
 Implement the complete Phase 12 brief in `36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md`: W01–W03/W11, source mappings, tests, and runnable example; human review is optional. Exit requires the fragment-to-scene and resume demonstrations, with no mandatory outline or analysis funnel.

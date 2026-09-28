@@ -462,3 +462,26 @@ Overlay/static evidence: 27-operation strict archive, dry-run/apply/result hashe
 ## Phase 10 runtime QC traceability — 2026-09-27
 
 All 27 overlay paths matched their delivered hashes and byte counts before repair. Fount `6d164f6` (tree `9a94735`) passes full `mix ci` with 328 tests, 82 Python tests, the offline handoff and compiled architecture checks, strict Credo/Dialyzer/ExDoc, four package archives, disposable PostgreSQL migrations and Core/Intelligence/Workshop integration suites. Focused tests prove same immutable MeasurementResult reuse across revisions with a fresh current Observation, context and namespace misses, output-contract/cache poisoning and mutable-alias policy, retained audit/resource history after explicit cache eviction, StoryWorld connected-region plus Reader suffix recomputation, and host-gated data-only assets. The writer resume test preserves a rejected branch, a proposed unchosen branch, its durable analysis history, no generation call and unchanged accepted head. Full commands, limitations and repair history are in `handoffs/PHASE_10_RUNTIME_QC_REPORT.md`. Optional human usefulness review was skipped under D046 and remains validation debt. Phase 10 is **COMPLETE**; Phase 11 is **NOT_STARTED**.
+
+## Phase 11 source-delivery traceability — 2026-09-27
+
+| Requirement | Source / asset | Current evidence |
+|---|---|---|
+| rights-cleared corpus and provider-export policy | `Evaluation.CorpusManifest`; `corpus_manifest.synthetic.json` | source-written; synthetic fixture only |
+| independent human semantic labels and disagreement | `Evaluation.Annotation`; `reader_annotations.synthetic.json` | source-written; no real readers claimed |
+| calibration/abstention/ordinal metrics | `Evaluation.Metrics` | ExUnit written; Python source contract PASS; Elixir unrun |
+| descriptive model/provider drift | `Evaluation.Drift` | ExUnit written; live Observe path written, not run |
+| frozen current-contract MeasurementResult/Observation benchmark | `Evaluation.Benchmark`; `frozen_concealment_fixture.json` | exact output-contract and fixture digests independently recomputed by Python PASS; Elixir unrun |
+| stale contract fails / explicit regeneration / no compatibility decoding | `Benchmark.validate/2`, `regeneration_plan/2` | ExUnit written; static source contract PASS |
+| nonlinear first-exposure/story-time regression | `nonlinear_story_time.synthetic.json`; `phase_eleven_nonlinear_benchmark_test.exs` | written; runtime unrun |
+| all 12 capability families covered | `Evaluation.Suite`; `phase_eleven_suite.json` | Python source contract PASS; ExUnit written |
+| robustness/security/budget regression permanence | existing Observe sandbox/execution/provider tests referenced by Phase-11 source gate | source guard PASS; runtime regressions pending |
+| longitudinal estimate vs actual resource units | `Evaluation.Resources`; Phase-11 durable-history integration | written; PostgreSQL unrun |
+| Observe live QC | `packages/fount_observe/examples/phase_eleven_live.exs` | explicit opt-in; NOT_RUN |
+| Workshop small live generation QC | `phase_eleven_qc` LiveExample + wrapper | explicit opt-in; NOT_RUN; no canon acceptance |
+| support/validity separate from writer usefulness | evaluation suite contract/docs | source-written; no human usefulness claim |
+| package/dependency boundaries preserved | no direct SystemOneSDK/Inference/ASM calls from evaluation layer | Python boundary source check PASS; compile/architecture pending |
+| preserve Phase 9/10 | Phase-9/10 Python source-contract suites | 18/18 prior-phase targeted tests PASS within 27-test combined run |
+| stop before Phase 12 | no Phase-12 implementation in delivered evaluation roots; progress remains NOT_STARTED | source check PASS |
+
+Offline strict archive evidence: 36 operations, ZIP CRC PASS, dry-run PASS, apply PASS, intended 577-file tree reproduction PASS, second dry-run all `unchanged` PASS. Repository-wide Python discovery is **not** claimed green: 88 tests ran with one import error because the supplied XML omitted `scripts/prune_deleted_directories.py` while including its test. Elixir/Mix/PostgreSQL/compiled architecture/Credo/Dialyzer/ExDoc/package/provider-free Mix examples/live Observe/live Workshop/human study are **NOT_RUN**. Phase 11 is **OFFLINE_IMPLEMENTED**, not COMPLETE; Phase 12 is **NOT_STARTED**.

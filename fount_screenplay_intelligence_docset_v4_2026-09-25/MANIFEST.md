@@ -101,7 +101,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–10 are COMPLETE on engineering QC; Phase 11 remains NOT_STARTED. Phase 6, Phase 7 and Phase 8 runtime QC are recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`, `handoffs/PHASE_07_RUNTIME_QC_REPORT.md` and `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. Phase 3/4/5/6/7/8 human studies are unperformed validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–10 are COMPLETE on engineering QC; Phase 11 is OFFLINE_IMPLEMENTED and awaits runtime/live QC; Phase 12 remains NOT_STARTED. Phase 11 source-delivery records are under `handoffs/PHASE_11_*`. Earlier human studies and any skipped Phase-11 human study remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -246,4 +246,21 @@ Phase 9 is `COMPLETE` on runtime engineering and preservation QC at Fount `361a9
 
 ## Current Phase 10 checkpoint
 
-Phase 10 is `COMPLETE` on engineering QC at Fount `6d164f6` (tree `9a94735`). The strict source overlay is `Fount_Phase_10_Durable_Analysis_overlay.zip` with 27 operations and SHA-256 `95c8d53bf8eba195bce384b85f398d7bc8ca12e2ff5cbb1c4af3472b5eb92813`. Runtime migration/compile/ExUnit/preservation evidence is in `handoffs/PHASE_10_RUNTIME_QC_REPORT.md`. Phase 11 is `NOT_STARTED`.
+Phase 10 is `COMPLETE` on engineering QC at Fount `6d164f6` (tree `9a94735`). The strict source overlay is `Fount_Phase_10_Durable_Analysis_overlay.zip` with 27 operations and SHA-256 `95c8d53bf8eba195bce384b85f398d7bc8ca12e2ff5cbb1c4af3472b5eb92813`. Runtime migration/compile/ExUnit/preservation evidence is in `handoffs/PHASE_10_RUNTIME_QC_REPORT.md`. Phase 11 has since been source-written.
+
+## Phase 11 delivery records
+
+- `handoffs/PHASE_11_INPUTS.json`: exact five input identities, content-based role identification and inspected external APIs.
+- `handoffs/PHASE_11_IMPLEMENTATION_MATRIX.md`: Phase-11 requirement → source/test/evidence mapping.
+- `handoffs/PHASE_11_OFFLINE_HANDOFF.md`: source-delivery account and explicit unrun claims.
+- `handoffs/PHASE_11_PRESERVATION_AUDIT.md`: preservation risks and runtime proof obligations.
+- `handoffs/PHASE_11_STATIC_CHECKS.json`: machine-readable offline checks.
+- `handoffs/PHASE_11_FILE_INVENTORY.json`: strict overlay file identities.
+- `handoffs/PHASE_11_RUNTIME_QC_HANDOFF.md`: Codex runtime/live repair instructions and Phase-12 stop line.
+- `handoffs/PHASE_11_RUNTIME_QC_REPORT.md`: NOT_RUN placeholder to be replaced with actual runtime evidence.
+- `handoffs/PHASE_11_DOMAIN_REVIEW_PACKET.md`: optional real human support/validity and writer-usefulness study protocol.
+- `handoffs/PHASE_11_DOCSET_HASHES.json`: regenerated complete docset identities excluding itself/SHA256SUMS recursion.
+
+## Current Phase 11 checkpoint
+
+Phase 11 is `OFFLINE_IMPLEMENTED`. The strict source overlay is `fount_phase_11_overlay.zip` with 36 operations (21 additions, 15 modifications, no deletions). Runtime/live/PostgreSQL/human evidence is not claimed. Phase 12 is `NOT_STARTED`.

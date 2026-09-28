@@ -636,3 +636,9 @@ The Phase-8 overlay modifies only Observe/Intelligence/docs/tests and adds no de
 The ten writer-playbook IDs remain intact, and `character_trajectory` keeps its prior default family routing; Emotional/Value is opt-in rather than a silent provider/cost expansion. Genre analysis requires an explicit pack. Revision regression requires explicit before/after models rather than overloading ordinary one-model playbook execution. No direct SystemOneSDK/Inference/ASM integration is added.
 
 Offline transport/source checks support preservation but do not prove runtime behavior. Codex must rerun the full Core/Observe/Intelligence/Workshop regression ladder described in `handoffs/PHASE_08_PRESERVATION_AUDIT.md` before marking Phase 8 COMPLETE.
+
+## Phase 11 preservation checkpoint — 2026-09-27
+
+The Phase-11 overlay does not modify Core production source and does not replace Observe execution, cache/provenance, StoryWorld/Reader/Temporal, any of the twelve capability implementations, Workshop review/acceptance semantics, or Phase-10 durable persistence/recomputation. Intelligence receives a data/pure evaluation layer; Observe receives only an opt-in synthetic live example plus docs; Workshop receives one conditional `LiveExample` QC mode plus wrapper/docs. No file is deleted.
+
+The source-delivery preservation evidence is the combined 27-test Phase-9/10/11 Python contract run plus strict overlay reproduction. This is not runtime proof. Codex must rerun the complete four-package engineering ladder, the prior Observe robustness/cache/provider suites, Phase-10 durable DB regressions, Phase-9 Workshop writer loop, and the Phase-11 focused tests before marking the phase complete. The Workshop live QC candidate remains outside canon unless a separate writer acceptance action occurs; the Phase-11 wrapper explicitly disables acceptance.

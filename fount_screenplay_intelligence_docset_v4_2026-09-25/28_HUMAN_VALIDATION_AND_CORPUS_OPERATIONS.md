@@ -219,3 +219,9 @@ Use rights-cleared lanes and obtain legal review where the use requires it.
 External benchmarks such as STAGE may inform task design and provide separately licensed comparison material.
 
 Their existence demonstrates that screenplay-scale structured tasks can be evaluated. It does **not** validate Fount's implementation or reader/diagnosis claims.
+
+## Phase 11 source-delivery checkpoint — 2026-09-27
+
+Phase 11 now has an executable corpus/annotation policy and an optional study packet, but **no actual human study was run by the source-writing pass**. `Fount.Intelligence.Evaluation.CorpusManifest` requires explicit rights evidence and independent permissions for local storage, human review, hosted Observe, hosted Inference, local model use and redistribution. Hosted-provider permissions remain subordinate to `provider_export_allowed`; public availability never implies provider export or redistribution.
+
+`Evaluation.Annotation` stores independent semantic responses and first-exposure reader checkpoints and preserves disagreement. The shipped reader annotation file is synthetic protocol/test data, not human evidence. Under D046 a real Phase-11 reader/writer study is optional and nonblocking; if skipped it remains visible validation debt and no human-calibration/usefulness claim may be made.

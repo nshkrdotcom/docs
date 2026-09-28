@@ -379,3 +379,22 @@ The Phase-8 source delivery is acceptable for handoff when all of the following 
 - actual offline evidence and all unrun runtime checks are recorded in `handoffs/PHASE_08_STATIC_CHECKS.json`.
 
 Current source-delivery state: `OFFLINE_IMPLEMENTED`. Elixir/runtime acceptance is not claimed.
+
+## AJ. Phase 11 source-delivery checkpoint
+
+The Phase-11 source handoff is acceptable for runtime QC when:
+
+- rights/provenance/provider-export policy is fail-closed and separate by use lane;
+- independent semantic human annotations and first-exposure reader checkpoints preserve disagreement;
+- Noul/Choice and ordinal Score evaluation expose calibration/error plus abstention without conflating these with writer usefulness;
+- provider/model drift is descriptive rather than a quality ranking;
+- frozen MeasurementResult/Observation fixtures pin the current output-contract digest and stale contracts require explicit regeneration without compatibility decoding;
+- nonlinear presentation/reader/story-time semantics have a permanent regression;
+- all twelve capability families map to installed evaluation lenses/suites;
+- prior failure/timeout/budget/security regressions remain part of runtime QC;
+- longitudinal estimates compare with actual durable resource units while unknown cost remains unknown;
+- Observe and Workshop live paths are explicit opt-in, minimal, and do not leak secrets or auto-accept generated pages;
+- no human, live-provider, creative-quality or empirical calibration result is claimed unless actually run and recorded;
+- Phase 12 remains NOT_STARTED.
+
+Current source-delivery state: `OFFLINE_IMPLEMENTED`. Elixir/PostgreSQL/live/runtime acceptance is not claimed.
