@@ -23,3 +23,7 @@ Status: **OFFLINE_IMPLEMENTED / runtime NOT_RUN**. This maps document 36 Phase 1
 ## Required demonstration status
 
 The A02/A04/A05 deterministic fixtures and comparison/voice/rehearsal tests are written. The optional human tradeoff packet preserves the required original/candidate/generic-control comparison but is **NOT_RUN** under D046. Because Mix/Elixir are unavailable here, no Phase-13 ExUnit/runtime/database result is claimed.
+
+## Runtime QC update — 2026-09-27
+
+The source-delivery statuses above remain historical. Phase 13 is now `COMPLETE` on applicable non-human gates at Fount repair commit `26da17e`: 4/4 focused Phase-13 tests, real `Constraints`/`ReviewGate` hard-pin assertions, actual stable-ID A02 page comparison, and 1/1 new PostgreSQL rehearsal-resume regression pass. Full `mix ci` passes 347 workspace tests and architecture/strict quality/docs; 105 Python tests, 33 database integration tests and four Hex package builds pass. D046 human/domain review and live provider evidence remain `NOT_RUN`. See `PHASE_13_RUNTIME_QC_REPORT.md`.

@@ -260,5 +260,121 @@
     "zip_integrity": "PASS",
     "applied_changed_files": 24,
     "desired_and_applied_file_count": 614
+  },
+  "runtime_qc": {
+    "status": "COMPLETE",
+    "applied_head": "9ac5148c1d140b4ca2f077dfd5d0fe316c7881a8",
+    "applied_tree": "55e0216cd8c1ec12eb15fd4c2f0e683f3f4fd827",
+    "repair_head": "26da17e9ddb34d0d933f4389da0036c77490767a",
+    "repair_tree": "fd17e722b52121fe2b7447c0d8161420f71f3994",
+    "pre_repair_matches": 24,
+    "pre_repair_mismatches": [],
+    "note": "The original files[].result_sha256 values are the immutable applied-overlay baseline; post_repair_paths contains the verified current file bytes.",
+    "post_repair_paths": {
+      "CHANGELOG.md": {
+        "sha256": "21fcdde14d89bed6bad8fe84f1eef536770b1658613a5dcf565937d9896f0085",
+        "bytes": 4892
+      },
+      "packages/fount_workshop/CHANGELOG.md": {
+        "sha256": "48b5e546e3602ba7e221f438ed62d08d6fe62601abcc82894f90578bc09f1d05",
+        "bytes": 4678
+      },
+      "packages/fount_workshop/README.md": {
+        "sha256": "91aee225fe9e9dcc53eb848c7625c987739658cfe90b5ef0eb88a08307f35b01",
+        "bytes": 7692
+      },
+      "packages/fount_workshop/examples/README.md": {
+        "sha256": "ea8c5af8e1f5f7c3faaef91a37fe03d2cb901cf689436eb94bc9f993aad8a9fa",
+        "bytes": 6396
+      },
+      "packages/fount_workshop/examples/phase_thirteen/README.md": {
+        "sha256": "34e169cb754fa3d4c9461f70c768de59ac6b6359a3ced2ceaba20c5ec522fba1",
+        "bytes": 2644
+      },
+      "packages/fount_workshop/guides/cinematic-revision-rehearsal-and-voice.md": {
+        "sha256": "4f738b84743ae2409e4b98a4aac034dfbc2ef4b85a1f331c50460ca2867ba0eb",
+        "bytes": 5930
+      },
+      "packages/fount_workshop/integration/phase_thirteen_rehearsal_durability_test.exs": {
+        "sha256": "3bdd41993c252b259c42db58af7b525abe6ceaeb1269be34ff01e8e4987b6dfa",
+        "bytes": 3320
+      },
+      "packages/fount_workshop/lib/fount_workshop/comparison.ex": {
+        "sha256": "121b8108ff1890aaaa452b4138ac6f5d834f09c5cbb14140ba6695f5c7165fa1",
+        "bytes": 4268
+      },
+      "packages/fount_workshop/lib/fount_workshop/pass.ex": {
+        "sha256": "b1be324596ea496d4d5ce771319a10541b7fd3935dc12fd88446bc233dd4f084",
+        "bytes": 5726
+      },
+      "packages/fount_workshop/lib/fount_workshop/rehearsal.ex": {
+        "sha256": "fef96191ab1a9fbab343e945e821248f43649f0084ad16fca889e3b15ad3ea7d",
+        "bytes": 5700
+      },
+      "packages/fount_workshop/lib/fount_workshop/request.ex": {
+        "sha256": "f3263532e860da2a9b32eb31bd7d3cdf2ee6fe6f8c2900d559d0e02660b35374",
+        "bytes": 9641
+      },
+      "packages/fount_workshop/lib/fount_workshop/session.ex": {
+        "sha256": "4226e1310c848610c70366c5355e95b66769abe1557f7456ea383cd6aca36619",
+        "bytes": 24486
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/context.ex": {
+        "sha256": "ec8905842d13d1df3d4180a73671b290fdeacf5db743950fe684c2304fe11eae",
+        "bytes": 8382
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/generation.ex": {
+        "sha256": "1e53a60ebb526a49015ba3eda512c536f7fb02eef25de138584e2bdd1a57e510",
+        "bytes": 7585
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/preparation.ex": {
+        "sha256": "fd59a86335d11fbae19955f7a954b64e7484eccdf6e1746c1799b2a24eb75c10",
+        "bytes": 19570
+      },
+      "packages/fount_workshop/lib/fount_workshop/writing/voice_protection.ex": {
+        "sha256": "e4045c79f6c116a1eb187d63866730d0a2a82743a467127253383a1d434ef026",
+        "bytes": 5980
+      },
+      "packages/fount_workshop/mix.exs": {
+        "sha256": "5df6f536d3db1aaea927e52f6281234faa1caedd280a6bbe0e53251bfdc161d7",
+        "bytes": 3843
+      },
+      "packages/fount_workshop/priv/writing_profiles/cinematic_rhythm.json": {
+        "sha256": "917f575ab50681832eb2bd0d10c585951f721cf86546371ef2f0ffa5d4559fc1",
+        "bytes": 712
+      },
+      "packages/fount_workshop/priv/writing_profiles/sound_space.json": {
+        "sha256": "0394c27b84c2b1bbaed3ba336f19b2a2733c8e000855c93058be47b73ff7e756",
+        "bytes": 726
+      },
+      "packages/fount_workshop/priv/writing_profiles/transition.json": {
+        "sha256": "d9af1e135c0dfd0d2878e17c54f15983e43864e1ca58bb4c4f586c59f0f8428e",
+        "bytes": 694
+      },
+      "packages/fount_workshop/test/pass_test.exs": {
+        "sha256": "a9c3031cc3d14b03d312928c6fc822f671f9bed52c9d9e5843b6d0fd9e60106a",
+        "bytes": 3451
+      },
+      "packages/fount_workshop/test/writer_workflows/phase_thirteen_comparison_test.exs": {
+        "sha256": "7ec2001f733aff07d95457aefb935f7e6f8f772c8aee19007bc99d4609c16235",
+        "bytes": 4580
+      },
+      "packages/fount_workshop/test/writer_workflows/phase_thirteen_pass_profiles_test.exs": {
+        "sha256": "abd246b901620ad11122a65e6df51a2c9ad60ebec48a1ddc428f2e9f1af9e138",
+        "bytes": 1134
+      },
+      "packages/fount_workshop/test/writer_workflows/phase_thirteen_rehearsal_test.exs": {
+        "sha256": "b65d2831b22f3ecfeb80e4e147b4f7896b1af334980083b2ce239e879545673f",
+        "bytes": 3490
+      },
+      "packages/fount_workshop/test/writer_workflows/phase_thirteen_voice_test.exs": {
+        "sha256": "44472b84ee7202758554b6f0a156789493c69adaf300b9936c158f5f10f18caa",
+        "bytes": 4785
+      },
+      "scripts/tests/test_phase_thirteen_source.py": {
+        "sha256": "b930031c8a6e35e27a1ac98de969477da2fa34d246a9c1410bf13f9137192b85",
+        "bytes": 5503
+      }
+    }
   }
 }

@@ -758,6 +758,8 @@ Implement the complete Phase 12 brief in `36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENA
 
 Implement the complete Phase 13 brief in document 36: W04–W06, visual/sound passes, voice protection, and noncanonical rehearsal. Exit requires actual candidate comparisons and mechanical evidence, not only generated explanations of success; human review is optional.
 
+**Phase 13 runtime QC checkpoint — 2026-09-27:** `COMPLETE` at Fount repair commit `26da17e` (tree `fd17e72`). The applied overlay matched 24/24 pre-repair hashes. Actual A02 stable-ID comparisons, A04 required ReviewGate pin failure, and A05 PostgreSQL rehearsal resume passed. Full `mix ci` passed 347 tests with architecture/Credo/Dialyzer/ExDoc; 105 Python tests, 33 database integrations and four Hex builds passed. See `handoffs/PHASE_13_RUNTIME_QC_REPORT.md`. Optional D046 human/domain review and live providers remain `NOT_RUN`. Phase 14 is `NOT_STARTED`.
+
 # Phase 14 — Research, Notes, and Consequential Revision
 
 Implement the complete Phase 14 brief in document 36: W07–W09, research provenance, conflicting/stale notes, revision consequences, and stale-candidate protection. Exit requires the note/reveal demonstrations; collaborator review is optional.

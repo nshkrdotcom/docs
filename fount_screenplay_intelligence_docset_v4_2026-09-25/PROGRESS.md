@@ -1,7 +1,7 @@
 # Implementation Progress
 
 **Target architecture:** `fount` + `fount_observe` + `fount_intelligence` + `fount_workshop`  
-**Current state:** Phases 1–12 COMPLETE on engineering QC. Phase 13 is OFFLINE_IMPLEMENTED and awaits runtime/repair QC. Phase 14 remains NOT_STARTED. Earlier optional human studies remain NOT_RUN validation debt under D046.
+**Current state:** Phases 1–13 COMPLETE on applicable non-human engineering QC. Phase 14 remains NOT_STARTED. Optional human studies remain NOT_RUN validation debt under D046.
 
 ## Status values
 
@@ -30,7 +30,7 @@ Runtime QC establishes completion when applicable engineering and other non-huma
 | 10 | Durable Analysis Persistence, Reuse, and Recomputation | COMPLETE | `Fount_Phase_10_Durable_Analysis_overlay.zip` | `handoffs/PHASE_10_RUNTIME_QC_REPORT.md` | 328 workspace tests, 82 Python tests, full CI, disposable PostgreSQL, writer resume/history and four packages pass at Fount `6d164f6`; optional human review remains validation debt |
 | 11 | Scaled Calibration/Evaluation/Robustness/Live Verification | COMPLETE | `fount_phase_11_overlay.zip` | `handoffs/PHASE_11_RUNTIME_QC_REPORT.md` | 36 overlay paths verified; 337 workspace, 91 Python, PostgreSQL, three-run live Observe and one-candidate live Workshop QC pass; optional human study NOT_RUN |
 | 12 | Discovery, Session Modes, and Scene Exploration | COMPLETE | `fount_phase_12_overlay.zip` | `handoffs/PHASE_12_RUNTIME_QC_REPORT.md` | 343 workspace tests, 98 Python tests, compiled quality/docs, 32 PostgreSQL integration tests, real CLI writer path and four packages pass; optional human study NOT_RUN |
-| 13 | Cinematic Revision, Rehearsal, and Voice | OFFLINE_IMPLEMENTED | `fount_phase_13_overlay.zip` | `handoffs/PHASE_13_RUNTIME_QC_REPORT.md` (NOT_RUN placeholder) | W04–W06 / A02–A05 source-written; 24-operation strict overlay verified offline; Elixir/runtime QC pending |
+| 13 | Cinematic Revision, Rehearsal, and Voice | COMPLETE | `fount_phase_13_overlay.zip` | `handoffs/PHASE_13_RUNTIME_QC_REPORT.md` | 24 overlay hashes match before repair; 347 workspace, 105 Python, 33 PostgreSQL integrations, four Hex builds and writer/PDF/table-read gates pass; optional D046 review NOT_RUN |
 | 14 | Research, Notes, and Consequential Revision | NOT_STARTED | — | — | W07–W09; document 36 |
 | 15 | Read, Share, Resume, and Prove Usefulness | NOT_STARTED | — | — | W01/W10–W12; document 36 |
 | 16 | Final Integration and Acceptance | NOT_STARTED | — | — | Full engineering and writer-workflow acceptance |
@@ -70,6 +70,7 @@ Add one row after every offline delivery and runtime-QC completion.
 | 2026-09-27 | 12 | Source implementation delivered | `fount_phase_12_overlay.zip`; complete Phase-12 docset; `PHASE_12_RUNTIME_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; 36-operation overlay, strict apply/tree reproduction, 34 focused Python source checks pass; Elixir/PostgreSQL/runtime/live/human checks NOT_RUN; Phase 13 not started |
 | 2026-09-27 | 12 | Runtime QC and repairs | Fount applied `344bbc6`, repair `39a3afa`; `handoffs/PHASE_12_RUNTIME_QC_REPORT.md` | COMPLETE; 36 pre-repair hashes match, full CI and PostgreSQL writer evidence pass; Phase 13 NOT_STARTED |
 | 2026-09-27 | 13 | Source implementation delivered | `fount_phase_13_overlay.zip`; complete Phase-13 docset; `FOUNT_PHASE_13_CODEX_QC_HANDOFF.md` | OFFLINE_IMPLEMENTED; W04–W06/A02–A05 written; strict 24-operation overlay/apply/tree verification and 41 focused Phase-9–13 Python checks pass; Elixir/runtime/PostgreSQL/live/human gates NOT_RUN; Phase 14 NOT_STARTED |
+| 2026-09-27 | 13 | Runtime QC and repairs | Fount applied `9ac5148`, repair `26da17e`; `handoffs/PHASE_13_RUNTIME_QC_REPORT.md` | COMPLETE; 24/24 pre-repair hashes, full CI, 347 workspace tests, 105 Python tests, 33 PostgreSQL integrations and four packages pass; Phase 14 NOT_STARTED |
 
 ## Non-negotiable progress rule
 
@@ -248,3 +249,7 @@ The required A02/A04/A05 source fixtures are written: two quiet cinematic revisi
 Offline evidence: Phase-13 Python source-contract checks 7/7 PASS; focused Phase-9–13 checks 41/41 PASS; strict overlay dry-run/apply/second-dry-run, ZIP integrity and 614-file desired/applied tree identity PASS. Repository-wide Python discovery attempts 102 tests with one existing supplied-snapshot import error because `scripts/prune_deleted_directories.py` is absent. `mix`, `elixir`, and `erl` are unavailable, so formatter/compile/ExUnit/full-CI/PostgreSQL/package/live-provider results are **NOT_RUN** and not claimed.
 
 Read `handoffs/PHASE_13_OFFLINE_HANDOFF.md`, `PHASE_13_IMPLEMENTATION_MATRIX.md`, `PHASE_13_PRESERVATION_AUDIT.md`, and `PHASE_13_RUNTIME_QC_HANDOFF.md`. The user applies and commits; Codex verifies hashes, repairs and executes Phase 13, updates actual runtime evidence, and **stops before Phase 14**.
+
+## Phase 13 runtime QC checkpoint — 2026-09-27
+
+Phase 13 is **COMPLETE** on applicable non-human engineering and preservation gates at Fount repair commit `26da17e9ddb34d0d933f4389da0036c77490767a` (tree `fd17e722b52121fe2b7447c0d8161420f71f3994`). All 24 overlay paths matched their original result hashes before repair; current hashes are separately recorded in the inventory. Full `mix ci` passes 347 workspace tests, compiled architecture, strict Credo, Dialyzer and ExDoc. Python discovery passes 105 tests. Disposable PostgreSQL migrations and Core/Intelligence/Workshop integrations pass 11/4/18 tests. Four Hex packages build; focused Phase-13 and Phase-12 writer tests, real-store rehearsal resume, stale/idempotent acceptance, PDF and table read pass. The exact protected-text ReviewGate hard fail and actual A02 screenplay comparisons were executed. No live provider or optional D046 human/domain study ran; those are not inferred from deterministic evidence. See `handoffs/PHASE_13_RUNTIME_QC_REPORT.md`. Phase 14 remains `NOT_STARTED`.

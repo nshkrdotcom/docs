@@ -25,3 +25,7 @@
 ## Source-writing limitations
 
 `mix`, `elixir`, and `erl` are absent. No formatter, compile, ExUnit, PostgreSQL, live provider, documentation/package or human-review result is claimed. Repository-wide Python discovery has the pre-existing supplied-snapshot `scripts/prune_deleted_directories.py` import gap; focused Phase-9–13 source checks pass.
+
+## Runtime QC result — 2026-09-27
+
+All 24 applied overlay paths matched their original result hashes before repair. Current source hashes, including the legacy profile-test repair and new PostgreSQL rehearsal regression, are recorded separately in `PHASE_13_FILE_INVENTORY.json`. Full `mix ci`, compiled architecture, strict Credo, Dialyzer, ExDoc, 105 Python tests, 33 PostgreSQL integration tests, four Hex builds, focused Phase-12/13 writer tests, PDF and table-read regressions passed. The PostgreSQL rehearsal resume check preserved adopted/rejected decisions and unchanged canonical head without a migration. Workshop Inference/ASM and Observe/System One boundaries were retained. See `PHASE_13_RUNTIME_QC_REPORT.md` for commands, transient failures, repairs and evidence limits. Phase 14 remains `NOT_STARTED`.
