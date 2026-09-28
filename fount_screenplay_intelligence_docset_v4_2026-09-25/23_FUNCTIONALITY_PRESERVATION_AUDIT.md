@@ -649,3 +649,7 @@ The final source overlay changes **zero production `lib/**` modules**, deletes n
 
 The 17-operation manifest passes strict apply/idempotence/tree reproduction. Source scans find exactly four package directories, no production Probe/superseded-package references, native SystemOneSDK only at the Observe boundary, and direct Inference only under Workshop. These are source-preservation checks, not runtime proof. Codex must rerun all prior preservation suites plus the final architecture/W/A matrix and inspect actual writer/export/package artifacts before final completion.
 
+
+## Phase 16 runtime preservation result — 2026-09-27
+
+No production `lib/**` file changed in Phase 16 or its two-file formatting repair. Core Fountain/FDX fidelity, Observe provider/cache/timeout/security, Intelligence forward-reader/StoryWorld/temporal/durable analysis, and Workshop candidate/undo/rebase/privacy/Submission/PDF/table-read workflows passed the full and focused runtime ladder. The provider-free CLI artifact inspection confirmed explicit acceptance, accepted-only sharing and persistent resume. See `handoffs/PHASE_16_RUNTIME_QC_REPORT.md` for commands, counts and limits.

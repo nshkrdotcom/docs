@@ -312,3 +312,6 @@ An architecture-gate failure blocks phase completion just like a compile/test fa
 If the pure core later gains genuine independent consumers, publishing/deployment requirements, or repeatedly cannot remain clean inside the application despite mechanical boundaries, it may be extracted into its own package.
 
 That is a future evidence-based decision, not part of this implementation program.
+## Phase 16 final compiled boundary result — 2026-09-27
+
+The final source audit passed 16/16 checks and `mix ci` compiled architecture scanned 297 source files with zero violations at Fount `6becd6e8a753df7709d7c47e169cf9f4496d88d1`. Warnings-as-errors compilation, strict Credo, Dialyzer and ExDoc passed. The resolved production tree places SystemOneSDK `~> 0.6.0` under Observe and direct Inference `~> 0.5.0` plus ASM `~> 0.17.1` under Workshop; ASM is absent as an Observe/Intelligence analysis dependency. Full evidence is in `handoffs/PHASE_16_RUNTIME_QC_REPORT.md`.

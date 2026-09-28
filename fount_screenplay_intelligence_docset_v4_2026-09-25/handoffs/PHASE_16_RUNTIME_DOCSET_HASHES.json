@@ -1,0 +1,1113 @@
+{
+  "format_version": 1,
+  "phase": 16,
+  "date": "2026-09-27",
+  "checkpoint": "runtime_complete",
+  "exclusions": [
+    "SHA256SUMS.txt",
+    "handoffs/PHASE_16_RUNTIME_DOCSET_HASHES.json"
+  ],
+  "file_count": 220,
+  "files": [
+    {
+      "path": "00_SCOPE_AND_PRINCIPLES.md",
+      "sha256": "7622a5fd100536e11505af345559ce496684ba2d319aad867d8c93d561cf2499",
+      "bytes": 10258
+    },
+    {
+      "path": "01_INDUSTRY_EVALUATION_AND_READER_CRITERIA.md",
+      "sha256": "8ebaeeae2de83cbd03c06291039888ff92479f94fe0a6c8b4f511bd3a851497e",
+      "bytes": 14846
+    },
+    {
+      "path": "02_EMERGENT_READER_EXPERIENCE_OVER_TIME.md",
+      "sha256": "2e2a0422f3f2f34b06a98241b290ac1134e9f06fc8f57676bd0e8c48dc43cfdd",
+      "bytes": 13100
+    },
+    {
+      "path": "03_NOTES_DIAGNOSIS_AND_REVISION_PHILOSOPHY.md",
+      "sha256": "d100cb7983d52c06f121fcea0df5fd57a22f8f6b7245c27d7588c126f24a9183",
+      "bytes": 10304
+    },
+    {
+      "path": "04_TARGET_PACKAGE_ARCHITECTURE.md",
+      "sha256": "b16c0e58562cd5f915d8028f0cb11114b40eb8c5cd9fef8c44eeb862d368025c",
+      "bytes": 17617
+    },
+    {
+      "path": "05_ANALYSIS_CONTRACTS_AND_DATA_MODEL.md",
+      "sha256": "4a72b4337237d7a30eefc99e3d13f8b86c4e6309633b6700e067d73039dcba36",
+      "bytes": 15786
+    },
+    {
+      "path": "06_SEMANTIC_STORY_WORLD.md",
+      "sha256": "1267397e442876128c1cd002715e2bae06d34833dde91cf5f38cd29b9e3cfd78",
+      "bytes": 10071
+    },
+    {
+      "path": "07_OBSERVATION_SENSOR_AND_LENS_SYSTEM.md",
+      "sha256": "1231cc5065356d4ff68c6f0d5e7d90b804455f5a285ab2ac23a1454c7e76fa9e",
+      "bytes": 12153
+    },
+    {
+      "path": "08_TEMPORAL_AND_READER_STATE.md",
+      "sha256": "1304ba4c36054b1d62f2014531c0339ee9bea4f1a1dac77ca94f3608fabb70b8",
+      "bytes": 12318
+    },
+    {
+      "path": "09_DIAGNOSIS_SYSTEM.md",
+      "sha256": "c11b64bc5d06dc82db05e77e3e7115ff3e0b3c2d6e4451f6f9660621131105d9",
+      "bytes": 6825
+    },
+    {
+      "path": "10_PLAYBOOKS_AND_WRITER_WORKFLOWS.md",
+      "sha256": "9f04a406939c66c1d72646ff5e47e665285dc7ca5d3b0a94ae138f0fc1f5c356",
+      "bytes": 6982
+    },
+    {
+      "path": "11_CAPABILITY_CATALOG_12_FAMILIES.md",
+      "sha256": "646480fdab6df94a21ee5543572bc4e67f06e733bf9a18632f9b067f7cade88b",
+      "bytes": 7748
+    },
+    {
+      "path": "12_CALIBRATION_EVALUATION_AND_CORPUS.md",
+      "sha256": "b281eb6815db9605431047ac8b2113a90d35f7850a9dcb30f5d2f30ae8ef774e",
+      "bytes": 11485
+    },
+    {
+      "path": "13_PERSISTENCE_PROVENANCE_CACHE_RECOMPUTATION.md",
+      "sha256": "b7ff4a1983e3cdcc987b691e4d278d1a6b42efb05012cabecf79992cbde30c33",
+      "bytes": 11617
+    },
+    {
+      "path": "14_WORKSHOP_INTEGRATION_AND_REVISION_INTELLIGENCE.md",
+      "sha256": "07b45293cac4219bb20de75e5a4f39e9f1c269a95ccf6ed8487477675953a264",
+      "bytes": 5516
+    },
+    {
+      "path": "15_FOUNT_PROBE_DIRECT_SUPERSESSION.md",
+      "sha256": "7e6c0a297dce69b52c94e11194c3daef37b9cf96e4dde859a6992c0053b52639",
+      "bytes": 10085
+    },
+    {
+      "path": "16_PHASED_IMPLEMENTATION_PLAN.md",
+      "sha256": "3fadba366e6ee2d485cc039f221cc7b55b4768a409ede864d21cac6216237191",
+      "bytes": 47643
+    },
+    {
+      "path": "17_AGENT_EXECUTION_PROTOCOL.md",
+      "sha256": "bfa51dbd91cfff87530bfbc13ce0628c3afbdf2b2db84aac46e9e62173441089",
+      "bytes": 9469
+    },
+    {
+      "path": "18_RUNTIME_QC_PROTOCOL.md",
+      "sha256": "2eed37ccf8299db2da539f102e9c781bf222c16fe735d2ce26f2e102b72352b5",
+      "bytes": 10788
+    },
+    {
+      "path": "19_ACCEPTANCE_CRITERIA.md",
+      "sha256": "2545b896a42002980c6469644d4ec311a334b5640a5b6f96dba127cf4513cf1c",
+      "bytes": 22409
+    },
+    {
+      "path": "20_OPEN_QUESTIONS_AND_DEFERRED_DECISIONS.md",
+      "sha256": "d56846a5b1a6fb687c13a55fb523f24d2445254766966149e5a63fc41c8b0806",
+      "bytes": 7873
+    },
+    {
+      "path": "21_SECURITY_COST_AND_FAILURE_MODEL.md",
+      "sha256": "271a738c3a7c5f3b793d3de441bf64a8466e01f0a3fe31a3eaef1f168b4704b0",
+      "bytes": 5606
+    },
+    {
+      "path": "22_PUBLIC_API_AND_PACKAGE_PUBLISHING.md",
+      "sha256": "c64e6746adc2bf2a6c4de73bcc97d29a79d6d51e9253d1d953f6ec358e035e45",
+      "bytes": 5708
+    },
+    {
+      "path": "23_FUNCTIONALITY_PRESERVATION_AUDIT.md",
+      "sha256": "a0de5e81a290325f12c978ec544b15d8475c2b707a084997fe8409bf97c23721",
+      "bytes": 22041
+    },
+    {
+      "path": "24_INTERNAL_BOUNDARY_ENFORCEMENT.md",
+      "sha256": "28c99c649ca25833b09c2893f4034c6a1865ed655906894ae34963156e8f7333",
+      "bytes": 11010
+    },
+    {
+      "path": "25_SECOND_ORDER_REVIEW_RESOLUTIONS.md",
+      "sha256": "a6e24a28d899d9d120cbed1623555f7df499aa7cf9854d4791e68e8598723446",
+      "bytes": 17963
+    },
+    {
+      "path": "26_THIRD_ORDER_PRODUCT_REVIEW_RESOLUTIONS.md",
+      "sha256": "7fef7995b07ba7649954b0746a341bd7177b40c8fd007d38c37a0309c7d13923",
+      "bytes": 9632
+    },
+    {
+      "path": "27_WRITER_INTERACTION_AND_PRESENTATION_CONTRACT.md",
+      "sha256": "f2b0d319ada29ff50865f5e592433d93d1879d20947e9c5a4ffd542efb1e5f48",
+      "bytes": 6773
+    },
+    {
+      "path": "28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md",
+      "sha256": "3b3c6bc3611ec3c889799871513baa2e53df1d11dcb140281f46ae9a842f0270",
+      "bytes": 8949
+    },
+    {
+      "path": "29_SAFE_LENS_AND_PACK_EXTENSIBILITY.md",
+      "sha256": "9c6adb005ad2d0f006bd5d26b215ea32393e075e517778ba4f7f8be73f71c421",
+      "bytes": 6743
+    },
+    {
+      "path": "30_LONGITUDINAL_RESOURCE_ECONOMICS.md",
+      "sha256": "df65e8cf672b5126d03b9f186c6311f6c479362013fc1b61c54104cb0482c24a",
+      "bytes": 5996
+    },
+    {
+      "path": "31_FEATURE_SCREENPLAY_PRODUCT_SCOPE.md",
+      "sha256": "14a3a6dd9afd25d035f026f398dbcf8249961c86e6bf7fb8a38e7ad1a65004d0",
+      "bytes": 2005
+    },
+    {
+      "path": "32_SCREENPLAY_FIRST_RESEARCH_EXPANSION.md",
+      "sha256": "aea3d366a1c75bdd271d5b31244d8887cf4159057b1120c16edc14a973a41c93",
+      "bytes": 8085
+    },
+    {
+      "path": "33_WRITER_WORKFLOWS_AND_CREATIVE_CONTRACT.md",
+      "sha256": "ca3c3871ea383b33cadba9ebc53744d1cc5ec132c9c4941c1a2058a589db82ce",
+      "bytes": 13360
+    },
+    {
+      "path": "34_HUMAN_JEV_AND_LLM_COLLABORATION.md",
+      "sha256": "c216493ef87fe2b9cce613505a82777254d40376fb1b1835ffc49707600d8c18",
+      "bytes": 7810
+    },
+    {
+      "path": "35_FOUR_XML_PROGRESSIVE_HANDOFF.md",
+      "sha256": "eb07f6a7d630aa4ad277523fa95f933006eb6b0203d2ac6bafc92f7e80479a42",
+      "bytes": 12843
+    },
+    {
+      "path": "36_PRODUCT_PHASES_AND_ACCEPTANCE_SCENARIOS.md",
+      "sha256": "ec881dfe33b3d70bee9c8b7760ad54364050e89e2347b1d685ca79d19b81e366",
+      "bytes": 30468
+    },
+    {
+      "path": "AGENT_START_HERE.md",
+      "sha256": "c499e16a535710e91e53f6664349d231890f1e77fb9bbe4ded29586270a3679a",
+      "bytes": 9955
+    },
+    {
+      "path": "DECISIONS.md",
+      "sha256": "9837f30c5054685ed6ccea6ce00e8376cfebfc014a682b2ec17475fae0fc2da7",
+      "bytes": 28776
+    },
+    {
+      "path": "MANIFEST.md",
+      "sha256": "edfcbbe8d6441b774dc9f36faa59baccd0449720678dbd57ed87c702e3f4955f",
+      "bytes": 28415
+    },
+    {
+      "path": "PROGRESS.md",
+      "sha256": "d63133e3169db0ac3ba3ecacbb7008f498a5e030b23b92b36dd08f7a493877ed",
+      "bytes": 51391
+    },
+    {
+      "path": "README.md",
+      "sha256": "991c5f9537ef7095e1754e9aa9adf0ed2637983b18732e118b2fa2f3ff8e1599",
+      "bytes": 20652
+    },
+    {
+      "path": "SOURCES.md",
+      "sha256": "2890ae2f0ef4353ff4a27d648424195680e10fbd076d654ba799984637c8a52e",
+      "bytes": 21031
+    },
+    {
+      "path": "TRACEABILITY_MATRIX.md",
+      "sha256": "5e6d07bb34b207a6b22aa11503b5b265850771a004f34753b2b561472ba9e274",
+      "bytes": 69716
+    },
+    {
+      "path": "examples/CONCEPTUAL_CONTRACT_EXAMPLES.md",
+      "sha256": "3a540ff9f19283c3cc0e7709453e1dd15e77d030eb40348798f2df809a697dd7",
+      "bytes": 4631
+    },
+    {
+      "path": "examples/context_schema.example.json",
+      "sha256": "9affe9bce8f24a23a6a77e027d51a93cb4b21694f67c181dadd697d022257d26",
+      "bytes": 314
+    },
+    {
+      "path": "examples/corpus_manifest.example.json",
+      "sha256": "0553f8800b8884a0aaaba06208c6376b56a54fc0d83de775366ec54c30bd773b",
+      "bytes": 415
+    },
+    {
+      "path": "examples/declarative_lens.example.json",
+      "sha256": "94370e2d0c862a7c5bb2aa800cc71395905668fcd8a2c4194808832d5b82dfc8",
+      "bytes": 1393
+    },
+    {
+      "path": "examples/diagnosis.example.json",
+      "sha256": "70d22ac5802928c6f99ce4763b8f7ef5bc4df063425cf156a1aebe42079bfdf8",
+      "bytes": 665
+    },
+    {
+      "path": "examples/genre_pack.example.json",
+      "sha256": "87b0e1495a07abe248259d8a9c64aecb06274790c50e3fb1d7a0491cf502fdaf",
+      "bytes": 1456
+    },
+    {
+      "path": "examples/lens_asset.example.json",
+      "sha256": "34ec476fe882396a13258ba50ab0f0bd5dfd112aa34021684452a4f53bbe6e7d",
+      "bytes": 454
+    },
+    {
+      "path": "examples/playbook.example.json",
+      "sha256": "428b708aee2598c4279556c6038191fcee0bdae9c4c04a777df459cedfaca3c6",
+      "bytes": 505
+    },
+    {
+      "path": "examples/resource_preflight.example.json",
+      "sha256": "5788ee436faccfbb83a902bb78124edb5cbe9ef74aefb15f8d6cc92ba62170b4",
+      "bytes": 449
+    },
+    {
+      "path": "examples/writer_result_packet.example.json",
+      "sha256": "0d3d3a5bf0438c136954cf38053d00b28d5cc4f0693155a978b16bfc8d0f6ed1",
+      "bytes": 1432
+    },
+    {
+      "path": "handoffs/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "handoffs/PHASE_01_DOCSET_HASHES.json",
+      "sha256": "4909889f2ed6b7452b6894c77a4395bfe73456dbb4c4359ac869fd3532ae87ee",
+      "bytes": 12501
+    },
+    {
+      "path": "handoffs/PHASE_01_FILE_INVENTORY.json",
+      "sha256": "7235036de7e3d1df0a466dc8d4c19db0f0ec7030177fb445b01ef5a2501d6e94",
+      "bytes": 180186
+    },
+    {
+      "path": "handoffs/PHASE_01_INPUTS.json",
+      "sha256": "6726eca1a55717eecd08bde6a437035994fcf06f02f8a3d7a6dc65bb7a1ab3a4",
+      "bytes": 1713
+    },
+    {
+      "path": "handoffs/PHASE_01_OFFLINE_HANDOFF.md",
+      "sha256": "b95bb108b9e5cc57f15d9b5b41568b2d869c52dcffc9974d535ba88c5eb1e3e5",
+      "bytes": 17050
+    },
+    {
+      "path": "handoffs/PHASE_01_PRESERVATION_AUDIT.md",
+      "sha256": "1dbc47226adc7b34103abfc7e86a675318e8828ee986a96cf35a2cc851d6d4ff",
+      "bytes": 15808
+    },
+    {
+      "path": "handoffs/PHASE_01_RUNTIME_QC_HANDOFF.md",
+      "sha256": "ba2035eaa190ddfd072751559e0d437dc8a75e4859b25502d0efc774ecf9a7c3",
+      "bytes": 18919
+    },
+    {
+      "path": "handoffs/PHASE_01_RUNTIME_QC_REPORT.md",
+      "sha256": "a036a7eeaf1f6a8ac88636f6b85ab86dd63054e422ed71082ad1e8504489dc33",
+      "bytes": 13033
+    },
+    {
+      "path": "handoffs/PHASE_01_STATIC_CHECKS.json",
+      "sha256": "b12d52ebce92afb323f9e14f4f5fb37e3a9bb1c205a0865c777ef67477fbf7f6",
+      "bytes": 4823
+    },
+    {
+      "path": "handoffs/PHASE_02_FILE_INVENTORY.json",
+      "sha256": "519ed6b21dea52fbee7689d53bb886831fa2db371c90f79a21d2c00f6776f359",
+      "bytes": 36380
+    },
+    {
+      "path": "handoffs/PHASE_02_IMPLEMENTATION_MATRIX.md",
+      "sha256": "3135861890f19efeec453356c1ac5edf1e433c5fb044b33b39410a74e7c74047",
+      "bytes": 5709
+    },
+    {
+      "path": "handoffs/PHASE_02_INPUTS.json",
+      "sha256": "6730d36577b744c9897efc5b4dbf74ca9038c6ef0e2a42f117f355810720c1a8",
+      "bytes": 2857
+    },
+    {
+      "path": "handoffs/PHASE_02_OFFLINE_HANDOFF.md",
+      "sha256": "4a363549645baddc4b008dc8fbcdbda9a142347ef1ab3232215ce24815fb558f",
+      "bytes": 6878
+    },
+    {
+      "path": "handoffs/PHASE_02_PACKET_RECORD.md",
+      "sha256": "916b9031db56f0f860305283848ea859c7d364ec79f13106cfaf96cf3d9a895a",
+      "bytes": 2284
+    },
+    {
+      "path": "handoffs/PHASE_02_PRESERVATION_AUDIT.md",
+      "sha256": "13f0eaa47c99923af4cff0ffd912dfcffe30bc17bf36f52eb3a5faea25700be2",
+      "bytes": 2104
+    },
+    {
+      "path": "handoffs/PHASE_02_RUNTIME_QC_HANDOFF.md",
+      "sha256": "a2fdbe8985238f93b54df5335f18af39ac95a1d8fc52278a8281513caafd3706",
+      "bytes": 13825
+    },
+    {
+      "path": "handoffs/PHASE_02_RUNTIME_QC_REPORT.md",
+      "sha256": "eb027092ad7463c147716cbfcb0743c23c5796078bc76b9d9ee7b0bb41433c22",
+      "bytes": 7884
+    },
+    {
+      "path": "handoffs/PHASE_02_STATIC_CHECKS.json",
+      "sha256": "2c6ba7754e5beb9394d7eaf48f8079a73c94fdc6c9955f1a02ffcf30202985b4",
+      "bytes": 11668
+    },
+    {
+      "path": "handoffs/PHASE_03_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "7b848f1167c632b634a06ec8c34b67630b201588d1b829ee7d001da4ae04f7fe",
+      "bytes": 3499
+    },
+    {
+      "path": "handoffs/PHASE_03_FILE_INVENTORY.json",
+      "sha256": "ef57305f77cc21323f132f60cf51b0c0b8bd9fdc765f3d4d6cc7bd5c1c849ee9",
+      "bytes": 23004
+    },
+    {
+      "path": "handoffs/PHASE_03_IMPLEMENTATION_MATRIX.md",
+      "sha256": "3c46360ef999e4258893b7809dd3d034b35c15edb0333b38bffdafe41d901b33",
+      "bytes": 6896
+    },
+    {
+      "path": "handoffs/PHASE_03_INPUTS.json",
+      "sha256": "ba6322acdff64604091a75d4aeef0571c635d7afa8935db474bad25b511ac9b3",
+      "bytes": 2770
+    },
+    {
+      "path": "handoffs/PHASE_03_OFFLINE_HANDOFF.md",
+      "sha256": "15f81a46fdce126fb963239160fd38bfe1be9b4605fd6f5544ea3608cc935ae7",
+      "bytes": 6604
+    },
+    {
+      "path": "handoffs/PHASE_03_PRESERVATION_AUDIT.md",
+      "sha256": "a08e61cd17322384c23d081681fe145fd0a29475a8c50fc0e2d992f566b8d287",
+      "bytes": 2326
+    },
+    {
+      "path": "handoffs/PHASE_03_RUNTIME_QC_HANDOFF.md",
+      "sha256": "13f0097522d5d126958c7a248daa1d6ca0388367d56c4b396f7afa937ebd3eb1",
+      "bytes": 10056
+    },
+    {
+      "path": "handoffs/PHASE_03_RUNTIME_QC_REPORT.md",
+      "sha256": "6dad8012d5fc34cf2b849b90cdefbd6550dad76f41970b1b1b55c71fe2cef259",
+      "bytes": 9792
+    },
+    {
+      "path": "handoffs/PHASE_03_STATIC_CHECKS.json",
+      "sha256": "a989ee3f66f8442f946e37fa68aa0c3ecbfdddc239830505833c11f652d5ee43",
+      "bytes": 18293
+    },
+    {
+      "path": "handoffs/PHASE_04_DOCSET_HASHES.json",
+      "sha256": "56434ccce2de06d24fe4df3d1fc3a2cc99a9325991cb6a0a3cfa78f039f3e5a8",
+      "bytes": 11148
+    },
+    {
+      "path": "handoffs/PHASE_04_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "1e2afadeec14cb993608f935d08a7c1093173b11b7e070ab74deeb661fd75ac0",
+      "bytes": 3735
+    },
+    {
+      "path": "handoffs/PHASE_04_FILE_INVENTORY.json",
+      "sha256": "0aff84f5609c1582c37777fa30ca3d8394f5371f45678a77489198f5febfa3e3",
+      "bytes": 14947
+    },
+    {
+      "path": "handoffs/PHASE_04_IMPLEMENTATION_MATRIX.md",
+      "sha256": "41b7f3dfe913c940f8988262f8d71ee4bd7283032c09ddbe49663d4c87670665",
+      "bytes": 5952
+    },
+    {
+      "path": "handoffs/PHASE_04_INPUTS.json",
+      "sha256": "2b84c735670c05ea4b2579f78150f03e0e3fb65bc4b9b1d06ff0f319c028a1ba",
+      "bytes": 3464
+    },
+    {
+      "path": "handoffs/PHASE_04_OFFLINE_HANDOFF.md",
+      "sha256": "14ec645816d17dd6c1bc22fa79888670540a254d93cb1d0812cb8563b2996b55",
+      "bytes": 3408
+    },
+    {
+      "path": "handoffs/PHASE_04_PRESERVATION_AUDIT.md",
+      "sha256": "6ab43801b083b0bf274e63a176969d673410ab3f3fd579c785d2b21328556fbd",
+      "bytes": 2845
+    },
+    {
+      "path": "handoffs/PHASE_04_RUNTIME_QC_HANDOFF.md",
+      "sha256": "29b03fd83b0797f33f8f467b71bf6a06c7557247c243be667c9e6a38de741840",
+      "bytes": 6999
+    },
+    {
+      "path": "handoffs/PHASE_04_RUNTIME_QC_REPORT.md",
+      "sha256": "6355353116dbbe97afce3ed4beff759696b83d9cdf69034513553c29e7d4f275",
+      "bytes": 7562
+    },
+    {
+      "path": "handoffs/PHASE_04_STATIC_CHECKS.json",
+      "sha256": "64e5ba11ebc7acc73cd9a0ecfb00d6f54c0b9d37cca00bbf79f58107ad0521a3",
+      "bytes": 2249
+    },
+    {
+      "path": "handoffs/PHASE_05_DOCSET_HASHES.json",
+      "sha256": "cda932f3fc6c72c9007b6cab2de73cf4583f256c0ce2f1001527743e2ca899d1",
+      "bytes": 12630
+    },
+    {
+      "path": "handoffs/PHASE_05_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "a577f95e5ff1862762afa40c16118207007e5ba28dd8b8a97680d0f448cedfc8",
+      "bytes": 1845
+    },
+    {
+      "path": "handoffs/PHASE_05_FILE_INVENTORY.json",
+      "sha256": "d4fd56b9b8a958c96a09d1f41ba61e6c598fcf7714899ee06d29dafab13ce95e",
+      "bytes": 22393
+    },
+    {
+      "path": "handoffs/PHASE_05_IMPLEMENTATION_MATRIX.md",
+      "sha256": "3e9c4755c322c6c3f53b274a6e33697d16e1c7bcd71a6c90667c8b9f2c2fe883",
+      "bytes": 6274
+    },
+    {
+      "path": "handoffs/PHASE_05_INPUTS.json",
+      "sha256": "4c6dd78e403dd3fecb3dedd321b16d156ab92ca040685d9179a06961ab2bbf76",
+      "bytes": 5198
+    },
+    {
+      "path": "handoffs/PHASE_05_OFFLINE_HANDOFF.md",
+      "sha256": "cb4cd4b5b495f31b78c90159d1a05e1d1454fb89874003f11c145827fa0e29a7",
+      "bytes": 3710
+    },
+    {
+      "path": "handoffs/PHASE_05_PRESERVATION_AUDIT.md",
+      "sha256": "fb4bb2a1dce874eead8dbb76d5e1974276364a741b4b1d7d0cf2d641a67acb25",
+      "bytes": 3262
+    },
+    {
+      "path": "handoffs/PHASE_05_RUNTIME_QC_HANDOFF.md",
+      "sha256": "c2b44fe2cc5a4550ae65df1898672bb175186c95a9d6ea8bbe71359efc94a734",
+      "bytes": 9538
+    },
+    {
+      "path": "handoffs/PHASE_05_RUNTIME_QC_REPORT.md",
+      "sha256": "c768634c33762f01174d1c7812b032495ae845a5355adb33076484bee7c511af",
+      "bytes": 10515
+    },
+    {
+      "path": "handoffs/PHASE_05_STATIC_CHECKS.json",
+      "sha256": "97658070ba35e029e31389e44e1a7dde071a26f2cff31bc2b92c4a5593ad5dbe",
+      "bytes": 2776
+    },
+    {
+      "path": "handoffs/PHASE_06_DOCSET_HASHES.json",
+      "sha256": "cc445acfa297887aa79ce4c5eda9f055ec469d2a236fe1bcdf40590ec0580b5a",
+      "bytes": 13703
+    },
+    {
+      "path": "handoffs/PHASE_06_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "300230ea9390ef1c17d23e94b4051b9a2a09988c90c4f997f9a6f68d295cb09f",
+      "bytes": 1758
+    },
+    {
+      "path": "handoffs/PHASE_06_FILE_INVENTORY.json",
+      "sha256": "efc9654828d888ea8ded346e18a33aa04f7daab0e3ade1c9565682c764469b24",
+      "bytes": 20023
+    },
+    {
+      "path": "handoffs/PHASE_06_IMPLEMENTATION_MATRIX.md",
+      "sha256": "d410f9f96ff4b8f2d07a8d1787339492ad0f31c05d8880393b27357c01b13e18",
+      "bytes": 6318
+    },
+    {
+      "path": "handoffs/PHASE_06_INPUTS.json",
+      "sha256": "2eef1cc69b1651e0022f0b2cfd53b47db3d5119cff66f8a53b3f3592cf26d3ac",
+      "bytes": 5478
+    },
+    {
+      "path": "handoffs/PHASE_06_OFFLINE_HANDOFF.md",
+      "sha256": "c2d18e4e12cb5071b9ae2e704b8985154f3a26b299ade328b751cc21d935596a",
+      "bytes": 3113
+    },
+    {
+      "path": "handoffs/PHASE_06_PRESERVATION_AUDIT.md",
+      "sha256": "0c205a4733390b32086ae268f82b859c7106e86bed03c5dba03e0e0ebe9edffb",
+      "bytes": 3245
+    },
+    {
+      "path": "handoffs/PHASE_06_RUNTIME_QC_HANDOFF.md",
+      "sha256": "f05947e2360f6350f8739ebed06c9735005551c5a12285d39fc0a70749fc648c",
+      "bytes": 5737
+    },
+    {
+      "path": "handoffs/PHASE_06_RUNTIME_QC_REPORT.md",
+      "sha256": "9e4acc3962a607d3ab1676fe24089cd8568d50a0c107eb375a8616356f19b3fc",
+      "bytes": 6370
+    },
+    {
+      "path": "handoffs/PHASE_06_STATIC_CHECKS.json",
+      "sha256": "a970050ffd93a83be74e33dcf9b471528799240f8cf448ce4b6d9b2210f92d60",
+      "bytes": 3474
+    },
+    {
+      "path": "handoffs/PHASE_07_DOCSET_HASHES.json",
+      "sha256": "94201dac1bd0f32b9e62212b7acb3c6f5c0aaf1206f16a43e9357b834fedc16a",
+      "bytes": 22612
+    },
+    {
+      "path": "handoffs/PHASE_07_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "1934df3a7b5c353035618687230726171fa945e553ba9ec019fbd79bf37d051d",
+      "bytes": 1765
+    },
+    {
+      "path": "handoffs/PHASE_07_FILE_INVENTORY.json",
+      "sha256": "5a6bc04e7b22283b7b6cbf3f84481ca8acbfed9ed15e4b02ec9b85fbc3d32c6b",
+      "bytes": 21222
+    },
+    {
+      "path": "handoffs/PHASE_07_IMPLEMENTATION_MATRIX.md",
+      "sha256": "66d57350f44adc4728a0b6ea92b7b069e67da1806f02ae087ec4539a5079b615",
+      "bytes": 5723
+    },
+    {
+      "path": "handoffs/PHASE_07_INPUTS.json",
+      "sha256": "f03219c598a8fe3da57f755f62739b64c0917fddd467eeb4c19c1265da5e985e",
+      "bytes": 5222
+    },
+    {
+      "path": "handoffs/PHASE_07_OFFLINE_HANDOFF.md",
+      "sha256": "bb880cccef415594c8fec1711a551b35278fb72d2671c321ae84064f2d8aa5c0",
+      "bytes": 3568
+    },
+    {
+      "path": "handoffs/PHASE_07_PRESERVATION_AUDIT.md",
+      "sha256": "dabefcf27cf672941765d4fde344b3c4516c8c1ec21bbde383f728e491458e71",
+      "bytes": 3212
+    },
+    {
+      "path": "handoffs/PHASE_07_RUNTIME_QC_HANDOFF.md",
+      "sha256": "0a06211b36150c6f932027b0b97f1d32815007f8b47d4bbcab9a3def8eae233c",
+      "bytes": 7318
+    },
+    {
+      "path": "handoffs/PHASE_07_RUNTIME_QC_REPORT.md",
+      "sha256": "c894b10f946158f89339d7304db9791e3d926de66fe72797fde7b8f33f7a28d2",
+      "bytes": 6712
+    },
+    {
+      "path": "handoffs/PHASE_07_STATIC_CHECKS.json",
+      "sha256": "8ac042e590e5be3a973dc338d82ecd8d8637a747697e1d8f7e86d846093b48b1",
+      "bytes": 4314
+    },
+    {
+      "path": "handoffs/PHASE_08_DOCSET_HASHES.json",
+      "sha256": "6bd5e5b28ed9756e15318983fb7cb14bba5cbbd06fbff41fcd65ad03b6385b42",
+      "bytes": 24541
+    },
+    {
+      "path": "handoffs/PHASE_08_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "df3f7fe6955d99273fa7f60a403aaaf3c072d160004259728694c5b322ce1f12",
+      "bytes": 1574
+    },
+    {
+      "path": "handoffs/PHASE_08_FILE_INVENTORY.json",
+      "sha256": "fcc83a576600b866c06210d3147fbc76a38a7f6598bda9bb5d35f4d68295a88d",
+      "bytes": 18637
+    },
+    {
+      "path": "handoffs/PHASE_08_IMPLEMENTATION_MATRIX.md",
+      "sha256": "423dc39bc0ea65e2dab734196ae921a368f3182a14cb9ed0da4ad4c0b39ea190",
+      "bytes": 5828
+    },
+    {
+      "path": "handoffs/PHASE_08_INPUTS.json",
+      "sha256": "ead59459f8959656d3f91ffeb5efefaebc0a2da3ee2eef900e49700c96aaf39f",
+      "bytes": 5882
+    },
+    {
+      "path": "handoffs/PHASE_08_OFFLINE_HANDOFF.md",
+      "sha256": "8eb43b24b7e9017cd6788b2798f0fb97b7e19b8943ff06bf99ddc561c2aba58d",
+      "bytes": 4214
+    },
+    {
+      "path": "handoffs/PHASE_08_PRESERVATION_AUDIT.md",
+      "sha256": "1c2800047ac6f96bfac45fbe71879f87c0230f0393fe76dec994c2db7aa7cbb7",
+      "bytes": 3015
+    },
+    {
+      "path": "handoffs/PHASE_08_RUNTIME_QC_HANDOFF.md",
+      "sha256": "fbac8a9d256667357b9e98ff4da63d4c2a7493f061387d4e67e84ebf078ebaa6",
+      "bytes": 7025
+    },
+    {
+      "path": "handoffs/PHASE_08_RUNTIME_QC_REPORT.md",
+      "sha256": "f0e10c78fd3b51144acee547e876e41a9f8934953a528fbece365a927b17238b",
+      "bytes": 8850
+    },
+    {
+      "path": "handoffs/PHASE_08_STATIC_CHECKS.json",
+      "sha256": "ab4800487e10c447e267056348b066c9d8ffe7158a2f2e4427f4c9e4665967fa",
+      "bytes": 3714
+    },
+    {
+      "path": "handoffs/PHASE_09_DOCSET_HASHES.json",
+      "sha256": "fac88453e51145dd1d51a449a06a0937b97fa28f90ccd5c1da4bdb7d98a0d09d",
+      "bytes": 26307
+    },
+    {
+      "path": "handoffs/PHASE_09_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "0ffd4f53383ffc19f5a4845b6c07d3dabe247947ed60d7f7a4c06fdd3b94c6ed",
+      "bytes": 1436
+    },
+    {
+      "path": "handoffs/PHASE_09_FILE_INVENTORY.json",
+      "sha256": "c2196adfb3c12daabfbaffcbb70d8865e78ff5aebfa06aae6b06799e689ed251",
+      "bytes": 11657
+    },
+    {
+      "path": "handoffs/PHASE_09_IMPLEMENTATION_MATRIX.md",
+      "sha256": "1b8ddbc1f6985cebc0da706c401af8881783672a22e8ca07233898f3be241a11",
+      "bytes": 6432
+    },
+    {
+      "path": "handoffs/PHASE_09_INPUTS.json",
+      "sha256": "34510a67e2b8e64f8e9ff759e5cfe377a23f281adbddbf40269d8bbfab06e5f2",
+      "bytes": 5635
+    },
+    {
+      "path": "handoffs/PHASE_09_OFFLINE_HANDOFF.md",
+      "sha256": "671cbf8fcb67a047552d6bc06d103966fc8afe6107cbe396407fc33a4be13aba",
+      "bytes": 3587
+    },
+    {
+      "path": "handoffs/PHASE_09_PRESERVATION_AUDIT.md",
+      "sha256": "3110a2bc7f98e8d505e55107082105e4205bd2bc3545ae9b4cf86f36fb77c2e0",
+      "bytes": 3721
+    },
+    {
+      "path": "handoffs/PHASE_09_RUNTIME_QC_HANDOFF.md",
+      "sha256": "68b42203d6243fb6a9baf5fa349a74b89db95e16af5d572c22b02acabeed31b4",
+      "bytes": 6940
+    },
+    {
+      "path": "handoffs/PHASE_09_RUNTIME_QC_REPORT.md",
+      "sha256": "a027ed02b455f6e212dc9f3add3b27042d64382d70a6dea6944d2d7fe77be5dc",
+      "bytes": 7593
+    },
+    {
+      "path": "handoffs/PHASE_09_STATIC_CHECKS.json",
+      "sha256": "d9b6af2d71b4949cf1a2e45bd1b7c03f7150d7d3d2425be2d475151eb408f283",
+      "bytes": 3687
+    },
+    {
+      "path": "handoffs/PHASE_10_DOCSET_HASHES.json",
+      "sha256": "c3d8057c043a3023c32b70e0e4e2d3d0fd371eb14a974763e622c74152e130e1",
+      "bytes": 27909
+    },
+    {
+      "path": "handoffs/PHASE_10_FILE_INVENTORY.json",
+      "sha256": "f231bcf5be4e92fdbe776c93a3ae2f42f4757d5288f3930f680a8f547df5c9e8",
+      "bytes": 18304
+    },
+    {
+      "path": "handoffs/PHASE_10_IMPLEMENTATION_MATRIX.md",
+      "sha256": "4b6d142ca664edcf7f5afc3d31b4f292676d4186f6e56f0dc149d397492cd2c8",
+      "bytes": 6985
+    },
+    {
+      "path": "handoffs/PHASE_10_INPUTS.json",
+      "sha256": "72ff2d633dfe579167410de692ae36a5c8607dd09392b396db88062399b25db0",
+      "bytes": 3631
+    },
+    {
+      "path": "handoffs/PHASE_10_OFFLINE_HANDOFF.md",
+      "sha256": "9bf592e05e3379eeac9896e71153f4d8174760a5f2811e1ed8a728e88f559c71",
+      "bytes": 5669
+    },
+    {
+      "path": "handoffs/PHASE_10_PRESERVATION_AUDIT.md",
+      "sha256": "d3480b55dba93bfb6a40166990f4219906c1a54df00efee9c319eabfcbdb3f15",
+      "bytes": 3767
+    },
+    {
+      "path": "handoffs/PHASE_10_RUNTIME_QC_HANDOFF.md",
+      "sha256": "6482d1a91042ea76ff010e86deef9cd3e6ea278f3089b5121fec743b2c4075c2",
+      "bytes": 10025
+    },
+    {
+      "path": "handoffs/PHASE_10_RUNTIME_QC_REPORT.md",
+      "sha256": "a1a6094e019c2d92610b95e17be96c1b76d52f6a44c08d397ed3a4ded7da6316",
+      "bytes": 9849
+    },
+    {
+      "path": "handoffs/PHASE_10_STATIC_CHECKS.json",
+      "sha256": "88478efcc8a9814fe42cd57ce2a11909fa1f0ac74830afcff3ea83e1c8b50b4e",
+      "bytes": 2937
+    },
+    {
+      "path": "handoffs/PHASE_11_DOCSET_HASHES.json",
+      "sha256": "0b82af15bd2d897b742cf3b3cf2cba4bc041b105d81cbfc128f4be0b0080a4d6",
+      "bytes": 29676
+    },
+    {
+      "path": "handoffs/PHASE_11_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "0330bd9c943f95487fbc1453fce5debd133ce00367dc7364c2327eb1c134568a",
+      "bytes": 2514
+    },
+    {
+      "path": "handoffs/PHASE_11_FILE_INVENTORY.json",
+      "sha256": "8317821a641e2c20c46ec7042eab82abc0d7b235df28f8d10f3ef0220fe7bb32",
+      "bytes": 14657
+    },
+    {
+      "path": "handoffs/PHASE_11_IMPLEMENTATION_MATRIX.md",
+      "sha256": "02124988ec6d6642a0d9a88eac375ac9fbfb4100831f801cfaa0380f6938e5cf",
+      "bytes": 6143
+    },
+    {
+      "path": "handoffs/PHASE_11_INPUTS.json",
+      "sha256": "02fc9da70b91cc83b9d59c48a1930e919060c9ccbf7af7df136e62f2496a7680",
+      "bytes": 3849
+    },
+    {
+      "path": "handoffs/PHASE_11_OFFLINE_HANDOFF.md",
+      "sha256": "56f5d79bf025d64e66643611d81a6eecefa781f770b459509bebb0e042d7e139",
+      "bytes": 4314
+    },
+    {
+      "path": "handoffs/PHASE_11_PRESERVATION_AUDIT.md",
+      "sha256": "ccab6a9b2ee8c3c923df773dcbe638a8e4269dfe3bceee67ba0a1a43a7cf60df",
+      "bytes": 2486
+    },
+    {
+      "path": "handoffs/PHASE_11_RUNTIME_QC_HANDOFF.md",
+      "sha256": "205d8b98345788d3d84211a39f5f9706b00bd72c0f953437b192ec9c30393117",
+      "bytes": 8311
+    },
+    {
+      "path": "handoffs/PHASE_11_RUNTIME_QC_REPORT.md",
+      "sha256": "4d625c1edbbe748d3b805baac3b000f4965bef78d3548ac830a23edccaf9b9ff",
+      "bytes": 12647
+    },
+    {
+      "path": "handoffs/PHASE_11_STATIC_CHECKS.json",
+      "sha256": "88839e4e5672109b13a8a32aaa0f3db2bf6f99d655fabd04333658414981e7c9",
+      "bytes": 3405
+    },
+    {
+      "path": "handoffs/PHASE_12_DOCSET_HASHES.json",
+      "sha256": "3ed19e280c6d560bbb6077b9a771cf6fbc209247903fed491ae4c67a1bc5de30",
+      "bytes": 31450
+    },
+    {
+      "path": "handoffs/PHASE_12_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "3b341d8beab16706a91bb69a99b744bd95cac8b8c752ddd43db358cf4afbd53a",
+      "bytes": 801
+    },
+    {
+      "path": "handoffs/PHASE_12_FILE_INVENTORY.json",
+      "sha256": "0402dda60ec132b2107d828608406fced3077c967229a119c9bcb92dd774b8ee",
+      "bytes": 22093
+    },
+    {
+      "path": "handoffs/PHASE_12_IMPLEMENTATION_MATRIX.md",
+      "sha256": "6877912240ee0299f93fef972714eca91150aa6958b1134ee43f7a7452637171",
+      "bytes": 4597
+    },
+    {
+      "path": "handoffs/PHASE_12_INPUTS.json",
+      "sha256": "a11c86f5e219640b5ffdfbde6a69117bc2f035d5b63dbc70c4dfe6b349952173",
+      "bytes": 2682
+    },
+    {
+      "path": "handoffs/PHASE_12_OFFLINE_HANDOFF.md",
+      "sha256": "0cedcbb7f6057d1b6214175cc03014c5e62456b19e7c6962a27ab7c8fb2826f5",
+      "bytes": 4063
+    },
+    {
+      "path": "handoffs/PHASE_12_PRESERVATION_AUDIT.md",
+      "sha256": "608d19223d67563c536b35eec6340f41639e0950effb84826691d40ea9d924ff",
+      "bytes": 2838
+    },
+    {
+      "path": "handoffs/PHASE_12_RUNTIME_QC_HANDOFF.md",
+      "sha256": "041999972b351ea70c551f8e1660c60a5efe87e370d310ae639610756e259ea9",
+      "bytes": 4365
+    },
+    {
+      "path": "handoffs/PHASE_12_RUNTIME_QC_REPORT.md",
+      "sha256": "75c95d8bd623250727e9d73c935cf39e6de422a3512d33c9be0acdbbee58b8e9",
+      "bytes": 7434
+    },
+    {
+      "path": "handoffs/PHASE_12_STATIC_CHECKS.json",
+      "sha256": "6aad769260aa204a5d1b6d801b7d29b71aae8402fd95bc806ecf68022451001d",
+      "bytes": 2638
+    },
+    {
+      "path": "handoffs/PHASE_13_DOCSET_HASHES.json",
+      "sha256": "5ffbfb614d3bf82e1c2d728c42ac681a61707303ed0a02b4ffe77a45b21540aa",
+      "bytes": 32234
+    },
+    {
+      "path": "handoffs/PHASE_13_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "7818d4cb2fb9cf2afa01376b816ddb74b681725c63b5ceb8540c26a2705dfc8b",
+      "bytes": 1258
+    },
+    {
+      "path": "handoffs/PHASE_13_FILE_INVENTORY.json",
+      "sha256": "27bbb283961fbd14389d2fd3fe6a7103475bdffcec87bfcb0f1f24ff6abf65d1",
+      "bytes": 15829
+    },
+    {
+      "path": "handoffs/PHASE_13_IMPLEMENTATION_MATRIX.md",
+      "sha256": "c94ef07b91db81b601c351c285e92a999d6f0284dcd20db53bc623ad4f3ca00a",
+      "bytes": 5044
+    },
+    {
+      "path": "handoffs/PHASE_13_INPUTS.json",
+      "sha256": "af5eaf735471dc8215c48bcc450e954c53fe34f8a6635c86e3dbf0ed9269393f",
+      "bytes": 3725
+    },
+    {
+      "path": "handoffs/PHASE_13_OFFLINE_HANDOFF.md",
+      "sha256": "a72cbfb2a3b94fbda12cf7ec7bdadae93e676c881eb887abe5a13fa96ac89423",
+      "bytes": 3048
+    },
+    {
+      "path": "handoffs/PHASE_13_PRESERVATION_AUDIT.md",
+      "sha256": "c432c05054b49c2270baddfb585d0a081af77c35487b244356c27550ef257807",
+      "bytes": 3723
+    },
+    {
+      "path": "handoffs/PHASE_13_RUNTIME_QC_HANDOFF.md",
+      "sha256": "da71624221db0f9aea1d9541b46987e7ff0b775d366de840499cb58a558ef5a9",
+      "bytes": 4583
+    },
+    {
+      "path": "handoffs/PHASE_13_RUNTIME_QC_REPORT.md",
+      "sha256": "ca3ce050c621a007a14bd34407fb4a2045e4a21c491f545af88b5e0c29656fa7",
+      "bytes": 7973
+    },
+    {
+      "path": "handoffs/PHASE_13_STATIC_CHECKS.json",
+      "sha256": "1e8dc13260e2a231770ce88171b4a4bdc0445d2900f62b6b7646d7241b7c626b",
+      "bytes": 2559
+    },
+    {
+      "path": "handoffs/PHASE_14_DOCSET_HASHES.json",
+      "sha256": "545b9846bf735af40406ab9d6242ad3f573e932f57f1a598d535f14ed717dd18",
+      "bytes": 33960
+    },
+    {
+      "path": "handoffs/PHASE_14_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "bb1a1011c79a3c63b2b9ca643fbc23fd5778e30a4eb92c8f36ee5baeb20c522e",
+      "bytes": 1386
+    },
+    {
+      "path": "handoffs/PHASE_14_FILE_INVENTORY.json",
+      "sha256": "3f0a20845e6030c30b7fd5b925358a081343db00e972e932828155a57e580aac",
+      "bytes": 122074
+    },
+    {
+      "path": "handoffs/PHASE_14_IMPLEMENTATION_MATRIX.md",
+      "sha256": "d1aa190a40704aae7863ef6c13439280a0d233f37fc2d6deee899b835cf36a92",
+      "bytes": 5599
+    },
+    {
+      "path": "handoffs/PHASE_14_INPUTS.json",
+      "sha256": "6a2a451b5e9ced815415369fcd842e4533c663476b0e3a2a91111dee3df6fe50",
+      "bytes": 3937
+    },
+    {
+      "path": "handoffs/PHASE_14_OFFLINE_HANDOFF.md",
+      "sha256": "5893d8d6ae18d4a35eda48514e3f05cce06a93b73f1525f274575100248c0f74",
+      "bytes": 3402
+    },
+    {
+      "path": "handoffs/PHASE_14_PRESERVATION_AUDIT.md",
+      "sha256": "b7edf186cad8f536b48dbb0c229d597ae7f541c2806758fe0782df36ecf20f89",
+      "bytes": 3112
+    },
+    {
+      "path": "handoffs/PHASE_14_RUNTIME_QC_HANDOFF.md",
+      "sha256": "5df33f78db728b37261fb5b7eddba97d04780451d403e8170e60c9e6c18c6818",
+      "bytes": 4988
+    },
+    {
+      "path": "handoffs/PHASE_14_RUNTIME_QC_REPORT.md",
+      "sha256": "714fe0c41da8f90675b1b8e6fd5ba37aa8dfb43ff09a71e2a682463e3b74a4b1",
+      "bytes": 6637
+    },
+    {
+      "path": "handoffs/PHASE_14_STATIC_CHECKS.json",
+      "sha256": "dbf9c256f8d09812c4600fa7f918b456ab2ab789803f85ab48e0d1d0c6321f15",
+      "bytes": 2648
+    },
+    {
+      "path": "handoffs/PHASE_15_DOCSET_HASHES.json",
+      "sha256": "84b79d6eebf8a1256f7192963820dbdc318ca5d56302550b7918625f79d81e08",
+      "bytes": 36070
+    },
+    {
+      "path": "handoffs/PHASE_15_DOMAIN_REVIEW_PACKET.md",
+      "sha256": "dfc028e6c870bd9b13db616f1af9846377f75ecc6ab8a09dee40e31359f8d574",
+      "bytes": 1376
+    },
+    {
+      "path": "handoffs/PHASE_15_FILE_INVENTORY.json",
+      "sha256": "ef61ffd2336f7d992923e8dc7c0c3e9e10e367657157b75737f40dd44c7480cc",
+      "bytes": 7558
+    },
+    {
+      "path": "handoffs/PHASE_15_IMPLEMENTATION_MATRIX.md",
+      "sha256": "751b0a5c727f345a25244743212f72ef5333b626f43704ef728aeb08ca78d0c6",
+      "bytes": 3261
+    },
+    {
+      "path": "handoffs/PHASE_15_INPUTS.json",
+      "sha256": "d43f03d5fbba9b29fdaebc81f246e6f61c5a7bbbb4499329e2a4a7d56db03cd5",
+      "bytes": 3809
+    },
+    {
+      "path": "handoffs/PHASE_15_OFFLINE_HANDOFF.md",
+      "sha256": "d985a46cdfc9d242251c5e780eadb2cc4e1066381e578eb41697946cde064554",
+      "bytes": 3776
+    },
+    {
+      "path": "handoffs/PHASE_15_PRESERVATION_AUDIT.md",
+      "sha256": "d9a5aabef37bb644015e7b5880a128b55dbbfbfa5b30484d781e9c77a6f08353",
+      "bytes": 2873
+    },
+    {
+      "path": "handoffs/PHASE_15_RUNTIME_FILE_HASHES.json",
+      "sha256": "70ef97bd18ae18eb55d11ce860483c2ce95079e4360458a6dbc10352dd0b5681",
+      "bytes": 6995
+    },
+    {
+      "path": "handoffs/PHASE_15_RUNTIME_QC_HANDOFF.md",
+      "sha256": "d2c921769a5c317da32360eb27a1f9bb826fc13bcea996268126f1c04d728116",
+      "bytes": 5623
+    },
+    {
+      "path": "handoffs/PHASE_15_RUNTIME_QC_REPORT.md",
+      "sha256": "6b266671126db4717f201e6778d60b687ec8ae9536175abfff5a000fcf858f03",
+      "bytes": 9361
+    },
+    {
+      "path": "handoffs/PHASE_15_SOURCE_DOCSET_HASHES.json",
+      "sha256": "e7954f923d3e2a46d2ff382bb0d1922c85d02ec0af6edfb594ab6014895ac7c5",
+      "bytes": 35511
+    },
+    {
+      "path": "handoffs/PHASE_15_STATIC_CHECKS.json",
+      "sha256": "57f29be9183789cb4775e890e17c118a43d6adeb93d83cba12f0f771aa165dc2",
+      "bytes": 2481
+    },
+    {
+      "path": "handoffs/PHASE_16_DOCSET_HASHES.json",
+      "sha256": "4310573721a2608ab75b9dc1c58fcba756ba4e6337ddefea43040ddd0882dca2",
+      "bytes": 37623
+    },
+    {
+      "path": "handoffs/PHASE_16_FILE_INVENTORY.json",
+      "sha256": "c575c79f306d07a81b8b79b1ed6e47fcf691e7585bdb8d00ead089efcd4df044",
+      "bytes": 7168
+    },
+    {
+      "path": "handoffs/PHASE_16_IMPLEMENTATION_MATRIX.md",
+      "sha256": "d3e2f23d9f0ad2ba1af0349abbc7682ddbbb54fd2e8677ac834084ca94f1a8df",
+      "bytes": 9643
+    },
+    {
+      "path": "handoffs/PHASE_16_INPUTS.json",
+      "sha256": "13ac534ef7002be609bd14cd57c01b43fb7eb0d3b935c8ad0f79054b769dd878",
+      "bytes": 3817
+    },
+    {
+      "path": "handoffs/PHASE_16_OFFLINE_HANDOFF.md",
+      "sha256": "fba5e5d5d6589f2648502e8489e2b87611d67b217242217793970537620a98fb",
+      "bytes": 3704
+    },
+    {
+      "path": "handoffs/PHASE_16_PRESERVATION_AUDIT.md",
+      "sha256": "e005c3126346b6608540ab2f0b37afa4c727ef3dd8d770592b26a18306fa00cd",
+      "bytes": 2342
+    },
+    {
+      "path": "handoffs/PHASE_16_RUNTIME_FILE_HASHES.json",
+      "sha256": "f25780bf81c7bd64fc5bec3de7f357ac7e38269780d4d5facc7b73c206067872",
+      "bytes": 5648
+    },
+    {
+      "path": "handoffs/PHASE_16_RUNTIME_QC_HANDOFF.md",
+      "sha256": "bbb20a868cabc3140550a48a0cb2697c7595817082ca55e1e338c05a3776ca1a",
+      "bytes": 6315
+    },
+    {
+      "path": "handoffs/PHASE_16_RUNTIME_QC_REPORT.md",
+      "sha256": "de2180d8425f506e67670f628ad76da0ba5b4f9d1b19e8c5ce491acda1994bf1",
+      "bytes": 21255
+    },
+    {
+      "path": "handoffs/PHASE_16_STATIC_CHECKS.json",
+      "sha256": "f6deea88ab7150c46034e16dff4b5a77966009559b4bd4f3b1396351f96ff516",
+      "bytes": 3000
+    },
+    {
+      "path": "handoffs/PREPARATION_2026-09-26.md",
+      "sha256": "6fa1ef18a1fa96b23da20db5347026593d34013479a601b37d51fe3edb5374fd",
+      "bytes": 3613
+    },
+    {
+      "path": "repomix.config.json",
+      "sha256": "70e914d35c9888d0a64ee94023c0deca94884152b243048e3c78866334c49606",
+      "bytes": 500
+    },
+    {
+      "path": "templates/DEPENDENCY_REPOMIX_CONFIG.json",
+      "sha256": "63fed84eb6bcd10a3b237ffec70abe6b811939613a88ca91eb16a22e20e94cee",
+      "bytes": 1074
+    },
+    {
+      "path": "templates/PHASE_DELIVERY_CHECKLIST.md",
+      "sha256": "18cbc01fa5c58e6ae343312470da6aee22664a0ab462d23f51eb09ba70407e45",
+      "bytes": 4173
+    },
+    {
+      "path": "templates/PHASE_IMPLEMENTATION_PROMPT.md",
+      "sha256": "e311c1d4481f1e06865632cf10a4ebfce13bfef0528135e7f66dd53272115764",
+      "bytes": 8151
+    },
+    {
+      "path": "templates/PHASE_QC_HANDOFF_PROMPT.md",
+      "sha256": "24ab64ea8b9521f2479afa5adde87f4ee280617194c318a8e49fc04eeae62a64",
+      "bytes": 4403
+    },
+    {
+      "path": "templates/PHASE_RUNTIME_QC_REPORT.md",
+      "sha256": "57d2077fa5abc301b4de28fc864beca160d38221bacdf78afe13892801387e1c",
+      "bytes": 2764
+    },
+    {
+      "path": "templates/UPDATED_DOCSET_CHECKLIST.md",
+      "sha256": "610e4b2eedbb66b7a7c699b575d3135042fde977a709e71667b6e1772f5cff55",
+      "bytes": 2050
+    }
+  ]
+}

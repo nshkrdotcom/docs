@@ -602,3 +602,7 @@ Source evidence actually executed here: final audit 16/16 PASS; Phase-16 Python 
 
 Runtime QC must turn the W/A map into execution records on the exact applied/repaired revision. Deterministic fixtures prove engineering behavior, not creative superiority, human preference, audience response, marketability or representative usefulness. There is no Phase 17.
 
+
+## Phase 16 final runtime traceability — 2026-09-27
+
+All W01–W12 and A01–A12 ownership rows in `packages/fount_workshop/examples/phase_sixteen/acceptance_matrix.json` were executed at Fount `6becd6e8a753df7709d7c47e169cf9f4496d88d1`. The per-ID fixture, public command, output path, assertion, result and human-review status are in `handoffs/PHASE_16_RUNTIME_QC_REPORT.md`. The final 356-test workspace CI, 126 Python contracts, 35 PostgreSQL integrations, provider-free writer artifacts, compiled architecture and four archive inspections pass. The matrix remains the source-delivery ownership map; the runtime report is the actual evidence. Optional live and human studies are NOT_RUN. No Phase 17 exists.
