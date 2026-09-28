@@ -1,164 +1,161 @@
-# Fount Phase 1 - Codex verification, repair and completion
+# Phase 01 — runtime QC and completion
 
-**Execution notice (2026-09-26):** This is the original instruction handoff. Actual executed results, corrections, completion criteria and Luna-output validation debt are in `PHASE_01_RUNTIME_QC_REPORT.md`; planned commands below are not proof of execution.
+The user has already applied both Phase 01 ZIPs to their respective repositories, committed and pushed both repositories. **Do not reapply either ZIP.** Start from the installed commits and repair/certify only Phase 01.
 
-## Start from the user's applied commits - do not reapply the overlay
+## Runtime destinations
 
-You are the runtime-QC implementer for **Phase 1: Direct Architecture Supersession and Probe Removal**. The user has applied and committed `fount_phase_01_overlay.zip` and the complete `fount_phase_01_docset.zip`. Start with those actual working trees and commits. Read the current `PROGRESS.md`, the Phase 1 section of document 16, document 36's first demonstration, this handoff, the offline handoff and preservation audit.
+- fount: `/home/home/p/g/n/fount`
+- docset: `/home/home/jb/docs/20260928/fount`
+- docset_canonical: `/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount`
+- docset_git_root: `/home/home/p/g/n/brainstorms`
+- system_one_sdk: `/home/home/p/g/n/system_one_sdk`
+- inference: `/home/home/p/g/n/inference`
+- agent_session_manager: `/home/home/p/g/n/agent_session_manager`
 
-Your job is to **test, repair and complete this same phase**, not merely list failures. Do not begin Phase 2, recreate Probe, introduce compatibility wrappers, remove meaningful tests to obtain a pass, or replace a useful writing workflow with an architectural placeholder. Preserve human authorship and explicit candidate acceptance. Do not publish packages or push commits unless separately authorized.
+## Phase identity and source delivery
 
-Locate the actual Fount and docset repositories from the user's applied state. Relevant development repositories may be under `~/p/g/n` and `~/p/g/North-Shore-AI`; inspect rather than assume a dependency path. Record `git status --short`, `git rev-parse HEAD` and relevant local changes in both repositories. Do not impose an invented historical SHA guard. Verify the applied file inventory against current tracked files, accounting explicitly for any user-approved follow-up changes.
+- Phase: **01 — Core approval safety**
+- Current docset state on delivery: `OFFLINE_IMPLEMENTED`
+- Fount input Repomix SHA-256: `e0c159ccc415a4d85478360088d1509aa45a88361fe66c839a6f9a3f2f23ba44`
+- Docset input Repomix SHA-256: `92451fc693a7cdd1db8f5922fcd4cf262cba796d8b00ba866b4b71e5b674dd61`
+- Delivered Fount overlay: `fount_run_phase_01_overlay.zip`, SHA-256 `0187847138ff2cb50e04a4b6d87e97aba0732025a7cda0fc06f6dfbb0b30ec9a`
+- Copied overlay manifest: `handoffs/PHASE_01_OVERLAY_MANIFEST.json`, SHA-256 `88f3356983f534b0d46173bf12c3aa86f9af665e2d639c0b4b9987238f9e3c17`
+- Source operations: 53 (45 modify, 8 add), deletions: 0
+- Dependency XMLs were not required for this phase; no dependency source was changed or guessed.
 
-The phase remains `OFFLINE_IMPLEMENTED` until you start runtime work. Use `QC_IN_PROGRESS`, `QC_BLOCKED` and finally `COMPLETE` honestly. Missing infrastructure is not a successful test. No new human/domain pilot is required for Phase 1, but no creative superiority or audience-validation claim is authorized.
+Read `AGENT_START_HERE.md`, `state.json`, `phases/01_CORE_APPROVAL_SAFETY.md`, `RUNTIME_QC.md`, `handoffs/PHASE_01_INPUTS.json`, `handoffs/PHASE_01_IMPLEMENTATION_MATRIX.md`, this handoff, and the copied overlay manifest before running tests.
 
-## Input and application integrity - read before running anything
+## What was implemented
 
-The four supplied attachments were identified by packed paths, modules, package definitions and progress contents. All are **unsealed raw Repomix exports**. The attachment hashes and file counts are recorded in `handoffs/PHASE_01_INPUTS.json`. Mentions of a sealing helper inside source text are not a snapshot seal. Historical preparation commits are not authenticated identities of these attachments.
+Phase 01 enforces the invariant that every post-genesis canonical advance consumes a typed authorized approval through the existing candidate-acceptance transaction. It blocks changed `Persistence.save/4` and `save_edit/4`, adds `save_edit_candidate/4`, typed principal/authority/review/approval contracts, stable caller-owned approval IDs, authoritative required-check snapshots/fingerprints, strict human-vs-automated override rules, forward approval-audit migration/constraints, stable replay/conflict behavior, and the corresponding Workshop/CLI/test/doc conversion. No Run package exists yet.
 
-This does not satisfy document 35's requested sealed-source provenance. The overlay manifest records exact **decoded snapshot-body** preimages and results, not a claim about the user's checkout bytes. A separately computed body-plus-one-terminal-LF hash is present when appropriate. The original applier remains unchanged: strict preflight is mandatory; the LF alternative needs explicit human review and its existing `--allow-terminal-newline` switch. CRLF differences, modified content, new-file collisions and every other mismatch must be reconciled from actual source, never forced. Transport tests proved application against a reconstruction, not the real checkout.
+The first implementation intentionally requires review principal == approval principal. Existing architecture permits a later explicit adoption flow but no caller silently rewrites reviewer identity.
 
-All 86 supplied files in `packages/fount_probe` are explicit hash-checked deletions. Excluded files, such as a decorative SVG or local build/dependency output, were not supplied and cannot be safely enumerated or hashed here. Inspect any remaining physical directory. Do not erase an unknown file merely to make a gate green.
+A migrated pending candidate has no old check fingerprint. It remains recoverable only by exact idempotent `save_candidate/3` replay, which attaches the new authoritative check snapshot; altered payloads conflict. Migrated acceptance rows are `historical` with principal types left null rather than guessed.
 
-The original applier leaves empty directories. The added `handoff/prune_deleted_directories.py` removes only empty ancestors of manifest-deleted files after successful application; it never removes a file or symlink. It reports nonempty ancestors. After the user's application, the physical retired package must be absent before Phase 1 can complete. The architecture gate checks this explicitly.
+## Validate the already-applied payload
 
-## What was written
-
-The physical workspace is `fount`, `fount_observe`, `fount_intelligence`, `fount_workshop`. The overlay contains **159 added files, 33 modified files and 86 explicit deletions**. Every operation and byte hash is in the archive's `handoff/fount-overlay.manifest.json`, mirrored in the docset's `handoffs/PHASE_01_FILE_INVENTORY.json`.
-
-Observe owns neutral request/answer/evidence contracts, closed lens/sensor/projection selection, model normalization, request association, partial errors, resource limits, cancellation, L1 measurement reuse and deterministic Sandbox. Intelligence owns the 16 preserved inspection playbooks, source-grounded reporting, investigation orchestration and a small pure interpretation core. Workshop owns completion, generated pages, review/acceptance/rejection, optional measured layout and speech. Fount owns generic canonical queries and exact-source validation.
-
-The complete 37-production-module and 26-test-file classification is in `handoffs/PHASE_01_PRESERVATION_AUDIT.md` and repository `handoff/phase_01_ownership.json`. It is a source mapping, not proof of behavioral equivalence. Check every row while running the migrated tests. Existing Workshop development, alternatives, sequence/character/targeted revision, notes, recovery, audition, table read and export paths remain in source.
-
-## Actual dependency APIs inspected
-
-The supplied SystemOneSDK package source declares `0.6.0`; existing Fount lockfiles include the earlier `0.5.0` resolution. The new Observe dependency expresses `~> 0.6.0` and supports `FOUNT_SYSTEM_ONE_SDK_PATH` pointing at the **package** directory. This does not claim the release exists on Hex. Resolve and record the actual source used by all consumers; regenerate locks through Mix, not hand-edited hashes.
-
-The Observe adapter uses the supplied public `SystemOneSDK.new_client/1`, `noul/2`, `choice/3`, `score/3`, `prepare/1` and `evaluate_stream/4` surfaces, and reads the actual response/answer structs inside `Fount.Observe.Providers.SystemOne`. Tests use the supplied `SystemOneSDK.Test` client and stubbing helpers. Noul has probability and no fabricated confidence; choices preserve ordered options; score retains the expected scalar. Batch association uses the SDK's actual batch index. Timeout, partial-failure and cleanup semantics require verification with the resolved SDK.
-
-Inference source declares `0.4.0`. Workshop retains `Inference.Client.agent_session!/1`, the ASM adapter and `Inference.complete/3`; fixture examples use the actual `Inference.Client.new!/1` and `Inference.Adapters.Mock`. The public response-format union is `:text`, `{:json, :object}` or `{:json_schema, %{name: ..., schema: ..., strict: ...}}`. No provider-specific completion route is invented. Intelligence receives a trusted host `propose` function, not the Inference client. Completion traces/errors are reduced to neutral data before crossing back into analysis.
-
-Exact local canonical APIs used include `Fount.Screenplay.new/1`, `from_document/2`, `apply/3`, `diff/2`, `to_fountain/1`, `Fount.ID.v4/0`, and the existing persistence/candidate/review APIs. New generic `Fount.Selection`, `SourceEvidence`, `Inventory` and `Search` helpers own canonical selection, evidence validation and retrieval rather than importing a retired analysis package.
-
-## First risks to examine
-
-1. **Syntax, formatting, warnings and dependency resolution.** No Elixir executable was available to the source-writing agent. New files have not been parsed, compiled or formatted by Mix. Resolve the supplied SDK API versus the earlier locks first; do not roll back the adapter to an old API to avoid the mismatch. Check optional ASM runtime/provider installation in the actual environment.
-2. **Cross-package ownership and return shapes.** Compare migrated assertions with the actual new `Distribution`, `Observation`, `Report` and request values. Exercise single-request, streamed batch, out-of-order, duplicate, missing, malformed and timed-out results. `{:ok, batch}` may be partial; errors are never negative findings. Prove shared budgets and cancellation clean up actual SDK tasks.
-3. **Evidence and cache identity.** Exercise Unicode spans, clipped input, candidate versus original revision, explicit history, missing/stale citations, cross-project namespace isolation, changed lens/context/question/options/model inputs, cache corruption and mutable provider identities. Reuse must create fresh revision-bound observations without rewriting immutable measurements. Any source ID visible to the model remains semantic input.
-4. **Architecture enforcement.** Run the real AST and BEAM gate, not only the Python checks. Test aliases, grouped imports, captures, nested modules, structs and dynamic dispatch. Check compiled dependency closure and the intended Observe leaf allowlist. Do not weaken the gate to accommodate a misplaced effect. The scaffold is an enforcement mechanism, not a proof that arbitrary Elixir code is pure.
-5. **Writer-visible preservation.** Run existing candidate/review/concurrency/recovery tests and the new stored writer demonstration. Check that analysis and generation do not advance the accepted head, that stale acceptance stays rejected, that actual candidate text appears in diffs/exports, and that keeping the original works as well as acceptance.
-6. **Transport limitations and excluded files.** Confirm actual applied source/deletions, inspect retired-package remnants and record fresh post-QC exact-source seals. Do not hide the raw-input identity limitation in the runtime report.
-
-## Focused checks first
-
-Run from the actual Fount repository after inspecting dependency configuration. Commands below are a ladder, not results already obtained. Keep each failure visible and repair its cause before claiming the next gate. Use a directory outside the committed source for logs. Inspect each command's exit status; avoid a logging pipe that loses failures.
+Record the actual user-applied Fount commit and docset commit first:
 
 ```bash
-elixir --version
-mix --version
-python3 --version
-node --version
-npm --version
-
+cd /home/home/p/g/n/fount
 git status --short
 git rev-parse HEAD
-python3 -m unittest discover -s scripts/tests -v
-bash -n scripts/verify_handoff.sh
+git branch --show-current
+cd /home/home/p/g/n/brainstorms
+git status --short -- docs/20260928/fount
+git rev-parse HEAD
+git branch --show-current
 ```
 
-When the supplied SDK checkout is the intended source, set `FOUNT_SYSTEM_ONE_SDK_PATH` to its actual `packages/system_one_sdk` directory, not the ecosystem root. Do not change unrelated sibling repositories. Inspect both the resolved dependency version and the checked-out adapter functions. Use targeted Mix dependency reconciliation as needed and commit resulting legitimate lock changes. New package locks were deliberately not fabricated offline.
+Do not run the applier again. Verify the installed Fount paths against `handoffs/PHASE_01_OVERLAY_MANIFEST.json` from the docset (result hashes only; zero deletions). If user formatting or an intentional post-apply edit changed a delivered hash, inspect it, record the deviation, and reconcile rather than overwriting blindly.
+
+For reference only, the user-side application path is compatible with:
+
+```bash
+cd /home/home/p/g/n/fount
+python3 handoff/apply_overlay.py --root . --archive /absolute/download/fount_run_phase_01_overlay.zip --allow-terminal-newline --dry-run
+python3 handoff/apply_overlay.py --root . --archive /absolute/download/fount_run_phase_01_overlay.zip --allow-terminal-newline --apply
+```
+
+Those commands are **not** local-agent instructions now that the ZIP is already applied.
+
+## Execute and repair
+
+First record the actual toolchain (`elixir --version`, `mix --version`, PostgreSQL version) and use an isolated test database. Then run the common ladder from `RUNTIME_QC.md` in `/home/home/p/g/n/fount`:
 
 ```bash
 mix setup
-mix format
-mix blitz.workspace format
-mix blitz.workspace compile --warnings-as-errors
-
-(cd packages/fount_observe && mix test)
-(cd packages/fount_intelligence && mix test)
-(cd packages/fount_workshop && mix test)
-(cd packages/fount && mix test)
-
-mix test
-mix fount.architecture
-```
-
-The root `fount.architecture` alias first compiles the workspace and then invokes the Intelligence Mix task. Review `packages/fount_intelligence/lib/fount/intelligence/runner/architecture.ex` and the task's actual flags; the full gate must examine compiled artifacts. A source-only check is not equivalent. Test the gate's negative fixtures as well as the current positive tree.
-
-## Complete engineering ladder
-
-```bash
 mix format --check-formatted
-mix blitz.workspace format --check-formatted
 mix deps.unlock --check-unused
+mix blitz.workspace format --check-formatted
 mix blitz.workspace lock_check
-mix blitz.workspace compile --warnings-as-errors
+mix blitz.workspace compile
 mix test
 mix fount.architecture
 mix blitz.workspace credo --strict
 mix blitz.workspace dialyzer
 mix blitz.workspace docs
+python3 -m unittest discover -s scripts/tests -p 'test_*.py'
 ```
 
-Inspect actual xref/dependency output for every package and verify the four-package dependency direction. Build/inspect each intended package with its package-local `mix hex.build`; check README/license/assets/guides and package file allowlists without publishing. Original decorative assets for existing packages were excluded from the source input and should already exist in the user's checkout; distinguish that from a missing newly added asset. Run the updated CI-equivalent paths and the repository's `scripts/verify_handoff.sh --offline` as applicable. Its offline mode disables live providers, not dependency downloading; provision dependencies first for a disconnected run.
+If this repository's checked-in `mix ci` is the canonical aggregate, run it as well and record exactly what it covers.
 
-For residue checks, inspect tracked production/config/task/example/documentation references. The retained audit and negative architecture/source-test fixtures intentionally mention the retired name. Those historical or negative-test strings are not compatibility implementations. There must be no old production module, dependency, task wrapper or physical package remaining.
+### Core PostgreSQL / A01–A05
 
-## PostgreSQL and real writer demonstration
-
-Use a disposable test database with a known actual host/port and migration state. Do not assume localhost port 5432 or operate on a production/user writing database. Set `FOUNT_DATABASE_URL` through the environment; do not print or commit credentials. Record redacted connection identity and migration results.
+From `/home/home/p/g/n/fount/packages/fount`, with `FOUNT_DATABASE_URL` pointing at the isolated test database:
 
 ```bash
-(cd packages/fount && MIX_ENV=test mix ecto.create -r Fount.Repo)
-(cd packages/fount && MIX_ENV=test mix ecto.migrate -r Fount.Repo)
-(cd packages/fount && MIX_ENV=test mix test integration)
-
-(cd packages/fount_workshop && npm ci)
-(cd packages/fount_workshop && MIX_ENV=test mix test integration)
+MIX_ENV=test mix ecto.create
+MIX_ENV=test mix ecto.migrate
+MIX_ENV=test mix test integration/approval_migration_test.exs
+MIX_ENV=test mix test integration/writing_persistence_test.exs integration/continuation_concurrency_test.exs
+MIX_ENV=test mix test integration
+mix test
 ```
 
-The Workshop integration directory includes actual PDF/action-layout tests. Install/verify the declared Node/Afterwriting dependencies and Poppler executables before running those tests; do not replace them with fake page counts. Resolve any existing integration failure, including concurrency and stale revision behavior.
+`approval_migration_test.exs` creates disposable per-test PostgreSQL schemas and must prove both full fresh migration and upgrade from version `20260927000000` through `20260928000000`. Repair ordinary Ecto/Postgrex/migration syntax or prefix issues if the no-Elixir source delivery missed one; do not weaken the identity constraints to make the test pass.
 
-Run the new demonstration in **both decision modes**, with unique output directories. It uses real PostgreSQL and actual public writing/review/export APIs with explicit `Inference.Adapters.Mock` and `Observe.Sandbox` answers. It is not a live-model or human-preference test.
+Required behavior to attest:
+
+- **A01:** genesis plus direct authenticated human, agent and service acceptance through the same Core transaction, no provider credentials.
+- **A02:** changed `save/4` and `save_edit/4` return an approval-required error and do not persist/move canon; manual-edit candidate path works. Confirm only genesis and candidate acceptance can call `set_head/3`.
+- **A03:** candidate/base/content/report/check mismatches, missing required checks, forged authority and invalid overrides leave head/audit unchanged. Deterministic failures block every principal; agent/service cannot override subjective failures; declared human subjective override requires nonblank reason.
+- **A04:** use independent PostgreSQL connections for the competing candidate acceptance test. Exactly one head advance wins; identical stable approval replay returns recorded result; changed same-ID payload conflicts; stale base fails.
+- **A05:** fresh and baseline-upgrade migrations preserve history, classify migrated rows without guessed principal types, enforce exact candidate/result/approval identity, and roll back failed acceptance without partial head/audit changes. Exercise the exact pending-candidate replay upgrade seam if practical.
+
+### Workshop / A06
+
+From `/home/home/p/g/n/fount/packages/fount_workshop`:
 
 ```bash
-(cd packages/fount_observe && mix run examples/sandbox.exs)
-(cd packages/fount_intelligence && mix run examples/inspect.exs)
-(cd packages/fount_workshop && mix run examples/phase_one.exs --out examples/_output/phase_one_reject --decision reject)
-(cd packages/fount_workshop && mix run examples/phase_one.exs --out examples/_output/phase_one_accept --decision accept --pdf)
+MIX_ENV=test mix test integration
+mix test
 ```
 
-The demonstration must produce original/candidate/accepted Fountain, a real structural/source comparison, review JSON, strategy-contrast JSON, an HTML table read and a manifest of actual identities/results. The accepted head stays unchanged during development and revision generation. Rejecting a candidate keeps the prior accepted text. Acceptance installs the selected revision through the existing review contract. Inspect rendered PDF pages visually, not only `pdfinfo`; inspect the table-read content and the exported selected draft. Unsupported rendering must be reported, not silently dropped.
+Also exercise `mix fount.accept --help` and a scripted/local candidate acceptance with a caller-retained UUID using `--principal-type human --approval-id <stable-uuid>`. Verify the old actor-string argument shape is not a writable compatibility path. Existing rejection, candidate-only workflows, exports and non-mutating edit/review behavior must remain green.
 
-Run the existing recover/alternatives/sequence/character/notes/pass examples relevant to these paths; verify their actual current CLI modes from source. A new demonstration does not replace that preservation work. Exercise the existing optional speech adapter when the host supports it and authorization is present, but keep the non-speech table-read path independent. Do not invent timing, audience reactions or actor endorsement from synthesis.
+### Existing four-package boundary
 
-## Authorized small live checks
+Phase 01 must still have exactly the existing four library projects; `packages/fount_run` must not exist. Build each package with the existing package-build convention:
 
-Only after deterministic and storage checks pass, use approved credentials/material and the smallest useful fixture. Keep resource caps explicit. Do not send a private screenplay merely because credentials exist.
+```bash
+for package in fount fount_observe fount_intelligence fount_workshop; do
+  (cd /home/home/p/g/n/fount/packages/$package && FOUNT_PACKAGE_BUILD=1 mix hex.build)
+done
+```
 
-The measurement-only runner is `packages/fount_workshop/examples/analysis.exs --mode knowledge`; it loads the supplied fixture and requests explicit perspectives through Observe. Launcher reads `SYSTEM_ONE_API_KEY`, `SYSTEM_ONE_BASE_URL`, `SYSTEM_ONE_MODEL` and `FOUNT_SYSTEM_ONE_ENDPOINT_KIND` (`typesafe` or `endpoint`). Each configured endpoint/key pair must remain independent. A generic endpoint may omit bearer credentials; this is not an excuse to omit a required key on an official endpoint.
+Confirm `fount` has no Run dependency and no provider credential is required by A01–A06.
 
-Use the existing small Workshop live mode with its real `FOUNT_CODEX_MODEL`/ASM configuration, inspecting source before selecting a mode. Test actual structured output/repair and prove generation is still candidate-only until acceptance. Record provider/model/source identity, actual usage, explicit errors and redacted traces. No live check was executed in the offline environment. A missing service must remain `NOT_RUN` or blocked according to the phase's authorized gate, never `PASS`.
+## Source-only checks already performed
 
-## Evidence and exit criteria
+- Phase 01 source checks: PASS 10/10.
+- All phase source checks present in the supplied snapshot: PASS 118/118.
+- Snapshot-sealing checks: PASS 8/8.
+- Overlay dry-run/apply + byte comparison: PASS, 53 operations, 0 deletions.
+- Broad Python discovery in the extracted Repomix tree reached 126 passing tests but could not import `test_prune_deleted_directories` because `handoff/prune_deleted_directories.py` is outside the supplied Repomix include set. On the full checkout this is a required retry, not a waiver.
+- All Elixir/Ecto/PostgreSQL/format/Credo/Dialyzer/docs/package checks: NOT_RUN in web chat.
 
-Write `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` using the supplied report template. Record commands, actual exit status/test counts, versions, redacted environment prerequisites, source/docset commits, fixes, rendered artifacts and remaining limitations. Keep executed checks separate from plans and earlier preparation results.
+## Repair boundaries
 
-Phase 1 can be `COMPLETE` only when:
+Fix compile/API/migration/test defects required by A01–A06 in the installed source. Update affected Core/Workshop docs/tests if signatures settle. Preserve unrelated work. Do not create `packages/fount_run`, implement workers, or advance any Phase 02 behavior. Do not use paid/live providers; they are unnecessary here.
 
-- the retired package is physically absent and the final four packages are the only relevant workspace packages;
-- no compatibility/deprecation/dual-path replacement exists;
-- every preservation row has reviewed source/test evidence and the existing writing workflows still work;
-- dependencies, formatting, compilation, full tests, architecture gate and the required quality/package checks pass;
-- actual PostgreSQL/concurrency/candidate/review and required PDF/export paths pass;
-- document 36's Phase 1 demonstration has executed results for develop, revise, compare, accept/reject, table-read and export;
-- authorized live gates are recorded honestly, with any explicit user waiver/debt distinguished from success;
-- source identity, unknown excluded remnants and all important runtime findings are resolved or explicitly keep the phase blocked.
+Likely first-runtime-risk areas because this environment lacked Elixir:
 
-Update `PROGRESS.md`, traceability, decisions where real corrections were made, the offline/runtime handoffs, manifest inventory and docset hashes. Produce fresh **sealed** Fount/SystemOneSDK/Inference snapshots and the full updated docset for the subsequent handoff, following document 35 and the actual snapshot helper. Creating the next input packet is not authorization to implement Phase 2.
+1. Ecto migration DSL/default-expression and isolated-schema MigrationRepo options in `approval_migration_test.exs`.
+2. Formatter/warnings-as-errors in the newly added typed modules and converted tests/examples.
+3. PostgreSQL composite/FK constraint ordering during fresh and upgrade migrations.
+4. Workshop test helper call-shape conversions and any missed old acceptance caller in the full checkout omitted by Repomix.
 
-Stop after completing or accurately blocking Phase 1. Return repairs and evidence; do not start the next phase.
+Treat those as repair targets, not reasons to weaken the approval invariant.
 
-## Offline verification record
+## Record evidence and finish the phase
 
-The source-writing environment ran 18 Python tests, shell syntax checking, ownership-destination checks and strict original-applier transport tests. Actual transport application preserved all untouched files and matched every declared result hash/mode; replay changed zero files. Conflicting preimages, unauthorized CRLF normalization, symlinks and tampered payloads were rejected. Unknown excluded files were retained and reported. See `handoffs/PHASE_01_STATIC_CHECKS.json`. None of these results establishes Elixir correctness or applicability to the actual user checkout.
+Create `handoffs/PHASE_01_RUNTIME_QC_REPORT.md` from the runtime report template. Record actual commands, versions, counts, DB evidence, user-applied code/doc commits, repair commits, final verified Fount commit/tree, and branch/push results. Map every A01–A06 item to executed evidence.
+
+Set Phase 01 `COMPLETE` only when all required engineering gates pass. Otherwise set `QC_FAILED` with actionable evidence and stop on Phase 01. On success:
+
+1. Commit/push Phase 01 repairs in `/home/home/p/g/n/fount`.
+2. Update `state.json`, `TRACEABILITY_MATRIX.md`, decisions/reporting as needed in `/home/home/jb/docs/20260928/fount` (canonical `/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount`), run `python3 scripts/docset.py refresh` and `validate`, commit from `/home/home/p/g/n/brainstorms`, and push.
+3. Generate the next **five** sealed XMLs from the corrected committed source using `scripts/prepare_inputs.py`; Phase 02 begins only from that verified baseline.
+4. Stop after returning the fresh packet paths and generated `NEXT_HANDOFF.md`. Do not implement Phase 02 in this cycle.

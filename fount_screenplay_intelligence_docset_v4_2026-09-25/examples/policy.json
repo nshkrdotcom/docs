@@ -1,0 +1,25 @@
+{
+  "gates": {
+    "investigation_scope": "automatic",
+    "strategy_choice": "human",
+    "candidate_generation": "automatic",
+    "iteration": "automatic"
+  },
+  "completion": "accept",
+  "approver": {
+    "type": "human",
+    "id": "owner-fixture-1"
+  },
+  "fallback_approver": null,
+  "route_choice": {
+    "rule": "pause_on_material_tradeoff"
+  },
+  "limits": {
+    "max_iterations": 3,
+    "max_malformed_repairs_per_call": 1,
+    "max_transient_retries": 2,
+    "max_inference_calls": 12,
+    "max_measurement_states": 500,
+    "money": null
+  }
+}

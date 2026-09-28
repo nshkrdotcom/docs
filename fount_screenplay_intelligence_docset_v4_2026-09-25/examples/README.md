@@ -1,0 +1,9 @@
+# Policy example
+
+`policy.json` is the resolved guided preset: a real host resolves the configured owner in place of fixture identity `owner-fixture-1`. It pauses for route selection and human final approval. Null money ceiling means calls/measurement limits apply and monetary cost may be unknown; it does not mean zero spend.
+
+`max_iterations` bounds creative write/check cycles, including the initial write. `max_malformed_repairs_per_call` bounds additional completions to repair malformed/schema-invalid output for one logical request; its counter survives transport retry/restart. `max_transient_retries` bounds transport retries separately, and every actual dispatch consumes the global call budget. Run has no `max_repair_rounds` policy field. Its Workshop adapter maps formatting allowance to `:decode_repairs` and disables Session's internal creative repair loop for Run-managed work so creative repairs are durable Run iterations.
+
+For candidate-only completion, set `completion` to `candidate`, and both approver fields to null. For autonomous acceptance use an explicitly host-authorized `{type: agent, id: editorial-reviewer}` or service identity; all gates can be automatic. The host registry resolves the callback, never arbitrary JSON code/module names. Use `route_choice.rule` values `pause_on_material_tradeoff` or `registered_reviewer`; the latter additionally requires an allowlisted `reviewer_id` and its calls count against limits.
+
+An optional monetary limit has shape `{"currency":"USD","max_microunits":10000000}` (USD 10). This is a configured limit, not a price quote. Reserve from a trusted call bound as specified in DATA_AND_EXECUTION.md. Closed schemas reject unknown fields and incompatible values. Presets are defaults over the same policy evaluator, not separate execution engines.

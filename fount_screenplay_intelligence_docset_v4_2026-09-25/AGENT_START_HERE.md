@@ -1,137 +1,38 @@
-# Agent Start Here
+# Agent entry point
 
-> **Current handoff (2026-09-27): Phase 16 is OFFLINE_IMPLEMENTED.** Phases 1–15 are COMPLETE on recorded non-human engineering QC. The next agent is Codex runtime QC for the user-applied Phase-16 commit: verify the final acceptance overlay, test/repair Phase 16, update evidence, and stop. There is no Phase 17. Do not reapply the overlay.
+Read this file, `state.json`, `NEXT_HANDOFF.md`, the selected phase, and its referenced contracts before editing code. The state file is the only mutable authority for phase selection. Historical handoffs are evidence, not current instructions. The active plan has six phases. Older phase-file paths are redirects; select only the specs listed in state. Phase 01 covers Core approval safety; all new Run package/schema work begins in Phase 02.
 
-You are implementing a screenplay-writing tool for humans and agentic collaborators, from source snapshots in an environment assumed to lack a usable Elixir runtime. Read the writer outcome before the technical constraints. Do not substitute architectural activity for useful writing behavior.
+Web chat receives this entire docset as a **Repomix XML** (`docset.xml`) and the Fount source as **Repomix `fount.xml`**, alongside the dependency XMLs. It has **no Elixir**: its phase work is creating/editing code, tests and docs, static inspection and packaging. It returns the complete revised docset ZIP, Fount overlay ZIP and local runtime-QC handoff. By the time the local agent receives that handoff, the user has already applied both ZIPs to their respective repositories, committed and pushed both. Start QC from that installed state. Both agents must update the docset themselves so it is ready for the next step; the user only transfers/applies artifacts, never edits progress or phase instructions.
 
-## Required inputs
+## Select role and phase automatically
 
-You must have:
+Select the first phase whose status is not `COMPLETE`. If none exists, report completion; never invent a seventh phase.
 
-1. `fount.xml`;
-2. `system_one_sdk.xml`;
-3. `inference.xml`;
-4. `agent_session_manager.xml`;
-5. `docset.xml`, containing this complete updated docset.
+| State | Web chat with source attachments and no Elixir | Agent in the local Elixir checkout |
+| --- | --- | --- |
+| `NOT_STARTED` | Implement this phase from the fresh XML baseline | Prepare/verify the five XMLs and handoff for web chat; do not start a different phase |
+| `OFFLINE_IMPLEMENTED` | Preserve the pending handoff; do not start the next phase | Verify user's applied overlay; QC and repair this phase |
+| `QC_IN_PROGRESS` / `QC_FAILED` | Preserve the current phase; only make a requested repair overlay | Continue runtime QC/repair of this phase |
+| All `COMPLETE` | Report finished | Report finished; retain final evidence |
 
-## Determine your phase
+Explicit user instructions can assign local implementation or a repair to web chat. Otherwise use the table. Having a shell or Python in web chat does not make it the runtime role. Inspect `mix --version` locally; never infer Elixir execution from source checks.
 
-Read `PROGRESS.md`. Select the first phase not marked `COMPLETE`. If it is already offline-implemented or awaiting QC/domain review, repair or finish that handoff rather than starting the next phase or rewriting it from scratch.
+## Fixed working paths
 
-The current checkpoint is:
+- Code: `/home/home/p/g/n/fount`.
+- Docs: `/home/home/jb/docs/20260928/fount`.
+- Same docs: `/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount`.
+- Docs Git root: `/home/home/p/g/n/brainstorms`.
+- Dependencies: `/home/home/p/g/n/system_one_sdk`, `/home/home/p/g/n/inference`, `/home/home/p/g/n/agent_session_manager`.
 
-> **Phases 1–15: COMPLETE on recorded engineering QC. Phase 16: OFFLINE_IMPLEMENTED; runtime/database/repair/publication QC pending. No later phase exists.**
+Copy this entire path block into every offline handoff and runtime QC report. Do not replace paths with `~/...`, placeholders, or sandbox extraction paths. Record sandbox paths separately when useful.
 
-Read `handoffs/PHASE_15_RUNTIME_QC_REPORT.md` for the verified Phase-15 baseline, then `handoffs/PHASE_16_OFFLINE_HANDOFF.md` and `handoffs/PHASE_16_RUNTIME_QC_HANDOFF.md` for the current final source delivery. Historical validation debt remains visible; do not claim human validation or unrun Phase-16 runtime/database/package results. Repair/finish Phase 16 only; do not invent a later phase.
+## Required reading and behavior
 
-## Read before coding
+Read `PRODUCT.md`, `ARCHITECTURE.md`, `REVIEW_AND_APPROVAL_MODEL.md`, `DATA_AND_EXECUTION.md`, `HANDOFF_PROTOCOL.md`, `RUNTIME_QC.md`, and the current phase. Read the last runtime QC report when one exists. Inspect actual source definitions before using an API.
 
-For every phase:
+Complete one phase per cycle. Web chat labels its result `OFFLINE_IMPLEMENTED`, never `COMPLETE`. Runtime agents repair ordinary failures and may mark `COMPLETE` only with the required executed evidence. Update state, traceability, reports and checksums yourselves; do not ask the user to maintain the docset.
 
-First read documents 32–36: research, writer workflows, collaboration, five-XML handoff (document 35 retains its historical filename), and phase demonstrations. Phases 12–15 have their detailed scope in document 36; Phase 16 is final integration.
+The web agent returns `fount_run_phase_NN_overlay.zip`, `fount_run_phase_NN_docset.zip`, and `PHASE_NN_RUNTIME_QC_HANDOFF.md`. The latter is also in `handoffs/` in the docset ZIP. Runtime QC starts from the user's already applied, committed and pushed repository state and **does not reapply the overlay**. Preserve unrelated work and do not force-push.
 
-1. `00_SCOPE_AND_PRINCIPLES.md`
-2. `04_TARGET_PACKAGE_ARCHITECTURE.md`
-3. `25_SECOND_ORDER_REVIEW_RESOLUTIONS.md`
-4. `DECISIONS.md`
-5. current phase in `16_PHASED_IMPLEMENTATION_PLAN.md`
-6. `17_AGENT_EXECUTION_PROTOCOL.md`
-7. `24_INTERNAL_BOUNDARY_ENFORCEMENT.md`
-8. capability/contract docs referenced by the current phase
-9. most recent handoff/QC report
-
-For Phase 1 also read:
-
-- `15_FOUNT_PROBE_DIRECT_SUPERSESSION.md`
-- `23_FUNCTIONALITY_PRESERVATION_AUDIT.md`
-
-## Hard architecture rules
-
-Final physical packages:
-
-```text
-fount
-fount_observe
-fount_intelligence
-fount_workshop
-```
-
-Phase 1 deletes `fount_probe`; do not create shims.
-
-Do not create the superseded granular analysis packages.
-
-Do not introduce old/new compatibility layers or numeric analytical schema generations.
-
-Keep these distinctions explicit:
-
-```text
-presentation order != story-time constraints != causal graph
-MeasurementResult != current Observation provenance
-measurement semantics != longitudinal dramatic interpretation
-```
-
-## Environment limitation
-
-You may inspect and write code, but **do not claim an Elixir/runtime check passed** unless your actual environment unexpectedly provides it and you truly execute it. Standard workflow assumes you cannot.
-
-## Required output
-
-Return:
-
-1. phase overlay ZIP containing complete new/modified files and `handoff/fount-overlay.manifest.json` with exact hashed file operations;
-2. updated complete docset ZIP;
-3. runtime-QC handoff prompt/report.
-
-Then stop. The user applies the ZIPs and commits; Codex checks that applied state, repairs if needed, completes Phase 16 runtime QC, records the final evidence, and stops. There is no Phase 17. Do not tell Codex to reapply the overlay.
-
-## Product-validation additions in this docset
-
-Before implementing any phase after Phase 2, read:
-
-- `26_THIRD_ORDER_PRODUCT_REVIEW_RESOLUTIONS.md`;
-- `27_WRITER_INTERACTION_AND_PRESENTATION_CONTRACT.md`;
-- `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md`;
-- `29_SAFE_LENS_AND_PACK_EXTENSIBILITY.md`;
-- `30_LONGITUDINAL_RESOURCE_ECONOMICS.md`;
-- `31_FEATURE_SCREENPLAY_PRODUCT_SCOPE.md`.
-
-Do not fabricate human validation. Under D046, human/domain pilots are optional and skipped by default. Preserve in-scope evaluation interfaces and any useful study instructions, but do not block engineering completion or later work for absent reviewers. Record skipped studies as validation debt.
-
-### Previous verified Phase 7 checkpoint
-
-Phase 6 is COMPLETE on the runtime evidence recorded in `handoffs/PHASE_06_RUNTIME_QC_REPORT.md`. Phase 7 is `COMPLETE` after runtime QC at Fount `4a1c723`. Audience/Reader Experience, Sequence Movement, Dialogue Interaction, and Setup/Payoff + Motifs are source-written with four closed Observe lenses, existing strict-forward Reader and Temporal/StoryWorld reuse, typed dialogue context validation, non-linear setup/payoff fixtures, playbook wiring, writer packets, and explicit claim limitations. The 305-test workspace CI, 53 Python tests, isolated DB/writer/PDF checks and four package builds passed; see `handoffs/PHASE_07_RUNTIME_QC_REPORT.md`. No human/domain usefulness study was run. At that verified checkpoint Phase 8 was NOT_STARTED; the current source handoff is the Phase-8 checkpoint below.
-
-### Historical Phase 8 source checkpoint
-
-At source delivery, Phase 8 was `OFFLINE_IMPLEMENTED`, not COMPLETE. Families 9–12, the constrained declarative-lens/genre-pack path, and explicit two-revision analysis are delivered in a strict 37-operation overlay. 52 Phase 1–8 source-contract tests pass offline; Elixir/runtime checks are unrun. Read all `handoffs/PHASE_08_*` records. For the next action, Codex tests/repairs **Phase 8 only** from the user-applied commits and stops before Phase 9.
-
-### Verified Phase 8 result
-
-Phase 8 is **COMPLETE** at Fount `f7f4d68` on the full engineering and preservation QC in `handoffs/PHASE_08_RUNTIME_QC_REPORT.md`. The earlier source-delivery `OFFLINE_IMPLEMENTED` statements are historical. Optional human review remains unperformed validation debt under D046. No Phase-9 implementation had begun at that historical checkpoint.
-
-### Phase 9 verified runtime result
-
-Phase 9 is **COMPLETE** at Fount `361a9fd` on the full engineering and preservation QC in `handoffs/PHASE_09_RUNTIME_QC_REPORT.md`. All 19 original paths matched before repair; 325 workspace tests, 73 Python tests, architecture, isolated Core/Workshop PostgreSQL integrations and the deterministic Sandbox/scripted-Inference writer loop passed. The optional human workflow review remains unperformed validation debt under D046. That stop line is historical; Phase 10 has since been source-written.
-
-### Historical Phase 10 source checkpoint
-
-Phase 10 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The 27-operation overlay adds durable analysis runs, L2 reusable MeasurementResults, fresh current-revision Observation persistence, content-addressed safe data assets, recomputation/dependency history, usage/audit export and opt-in Workshop session integration. The required resume/history writer regression is written. Offline Python/overlay checks are recorded in `handoffs/PHASE_10_STATIC_CHECKS.json`; Elixir/Mix/PostgreSQL/runtime gates are unrun. Codex must verify/repair Phase 10 from the user-applied commits and **stop before Phase 11**.
-### Phase 10 verified runtime result
-
-Phase 10 is **COMPLETE** at Fount `6d164f6` (tree `9a94735`) on the engineering and preservation QC recorded in `handoffs/PHASE_10_RUNTIME_QC_REPORT.md`. Full CI passed 328 tests; 82 Python tests, disposable PostgreSQL, writer resume/history, compiled architecture, strict quality/docs, PDF/table-read and four package builds passed. The optional human usefulness study was skipped under D046 as validation debt. That stop line is historical; Phase 11 is now source-written.
-
-### Historical Phase 11 source checkpoint
-
-Phase 11 is **OFFLINE_IMPLEMENTED**, not COMPLETE. Read `handoffs/PHASE_11_INPUTS.json`, `PHASE_11_IMPLEMENTATION_MATRIX.md`, `PHASE_11_STATIC_CHECKS.json`, `PHASE_11_PRESERVATION_AUDIT.md`, and `PHASE_11_RUNTIME_QC_HANDOFF.md`. The source delivery adds the evaluation/corpus/calibration/robustness/live-QC layer while preserving current package boundaries. Runtime, PostgreSQL, live-provider and human-study evidence is not claimed. Codex must verify/repair Phase 11 from the user's applied commits and **stop before Phase 12**.
-
-### Phase 14 verified runtime result
-
-Phase 14 is **COMPLETE** at Fount repair commit `37a25cae9cbee8408188d83cfa55f55d6f32d491` (tree `52c259bc5373083eb05172113dadc56d21351307`) on the applicable non-human engineering and preservation evidence in `handoffs/PHASE_14_RUNTIME_QC_REPORT.md`. Optional D046 human/domain review remains NOT_RUN.
-
-### Phase 15 verified runtime result
-
-Phase 15 is **COMPLETE** on applicable non-human engineering gates. `handoffs/PHASE_15_RUNTIME_QC_REPORT.md` records 353 workspace tests, 122 Python tests, 35 PostgreSQL integrations, provider-free CLI/read/share/resume evidence, four Hex builds and preservation gates. Optional D046 human comparison and live providers remain NOT_RUN.
-
-### Current Phase 16 source checkpoint
-
-Phase 16 is **OFFLINE_IMPLEMENTED**, not COMPLETE. The 17-operation overlay adds the final source/runtime acceptance harness, exact four-package/provider-boundary scans, final architecture/traceability regressions, a machine-readable W01–W12/A01–A12 evidence matrix, and current final-acceptance documentation without modifying any production `lib/**` module. The final source audit passes 16/16, focused Phase-16 source contracts 4/4, all phase-source contracts 114/114, and strict overlay transport/tree reproduction passes. Elixir/Mix/PostgreSQL/Hex/runtime/provider/PDF/TTS checks are NOT_RUN here; optional D046 human work is NOT_RUN. Codex starts from the user-applied commit, follows `handoffs/PHASE_16_RUNTIME_QC_HANDOFF.md`, repairs actual failures, records executed evidence, and stops. There is no Phase 17.
+After successful QC, commit and push the phase's code repairs and docset changes, then generate the next five XMLs from those corrected commits. Record exact source commits in the QC report; use the containing docset commit for docset identity rather than trying to embed its own future hash. Stop after preparing the next handoff. Paid provider calls and optional writer studies need explicit existing authorization and are not prerequisites for deterministic engineering completion.

@@ -1,126 +1,67 @@
-# Phase 2 offline implementation handoff
+# Phase 02 offline implementation handoff
 
-**Phase:** Observe Measurement Substrate Hardening. **Date:** 2026-09-26 (Pacific/Honolulu).
-**Status:** OFFLINE_IMPLEMENTED. **Next action:** runtime QC and repair of Phase 2,
-not Phase 3 and not another implementation plan.
+Status: **OFFLINE_IMPLEMENTED** on 2026-09-28. Runtime certification is pending.
 
-## Deliverables
+## Runtime destinations
 
-`fount_phase_02_overlay.zip` contains 21 additions and 25
-modifications, no deletions, and the strict archive manifest. The separate
-`fount_phase_02_docset.zip` contains the complete supplied docset plus these records.
-`PHASE_02_RUNTIME_QC_HANDOFF.md` is both a standalone download and included here.
+- fount: `/home/home/p/g/n/fount`
+- docset: `/home/home/jb/docs/20260928/fount`
+- docset_canonical: `/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount`
+- docset_git_root: `/home/home/p/g/n/brainstorms`
+- system_one_sdk: `/home/home/p/g/n/system_one_sdk`
+- inference: `/home/home/p/g/n/inference`
+- agent_session_manager: `/home/home/p/g/n/agent_session_manager`
 
-## Writer outcome and implementation
+## Phase and inputs
 
-Ask a concrete scene question and inspect the exact passages supplied for an answer,
-or see an honest unavailable result. The screenplay remains unchanged. The source
-hardens output/context contracts, semantic versus provenance identity, calibration,
-model stability, ETS/private L1 reuse, request/budget/resource controls, completed
-partial results, human/rule/import recording and data-only fixture loading.
-The full scope mapping is `PHASE_02_IMPLEMENTATION_MATRIX.md`.
+`state.json` selected the first non-`COMPLETE` phase: **02 — Run foundation**. Phase 01 is retained as `COMPLETE` with verified code commit `e79510008735220545f4ee9322bade127c868d40`; it was not reopened.
 
-## Inputs and preimage evidence
+All five supplied sealed XMLs are recorded byte-for-byte in [PHASE_02_INPUTS.json](PHASE_02_INPUTS.json). The Fount and docset Repomix XMLs do not embed a reliable current Git commit identity, so none is invented. The dependency XMLs do embed clean source commits; they were inspected as references and remain unchanged.
 
-`PHASE_02_INPUTS.json` records all four attachment byte hashes and content-based
-identification. Fount supplies four packages; SDK supplies the inspected 0.6.0
-semantic facade; Inference supplies the 0.5.0 completion boundary; the docset selects
-Phase 2 after historical Phase 1 COMPLETE. Current raw XMLs lack seals.
-Every modified preimage matches a supplied post-QC hash; the manifest never uses a
-guessed newline variant. This does not authenticate absent files or current Git
-commits. The actual user-applied Fount/docset commits are not known here.
+## Implemented behavior
 
-## SDK/API inspection
+- Added `packages/fount_run` as the fifth Fount library, with Mix metadata, docs, host-free application startup, exported migration path, tests and PostgreSQL integration harness.
+- Added all ten required Run tables in one forward migration: runs, plans, policies, steps, attempts, events, decisions, approval attempts, usage and deliveries. Composite FKs/constraints keep run/screenplay/plan/policy/step identities coherent; append-only/immutable data is guarded in the database.
+- Added trusted `FountRun.ActorContext`, closed canonical plan/policy validation/fingerprints, and owner/authorized-principal resolution without accepting identity claims from untrusted request data.
+- Added public Phase 02 commands `start_run/4`, `get_run/3` and `list_runs/3`. Initial run + plan/policy v1 persistence is atomic and caller-bound idempotency conflicts on altered content. Start performs no provider work.
+- Added persistence primitives for immutable plan/policy snapshots and events, controlled step/attempt state, storage-only lease/fence identity, exact pending decision resolution, durable approval attempts, usage reservation/settlement and delivery identity/result replay.
+- Approval-attempt storage deliberately refuses an `accepted` outcome with `:acceptance_bridge_required`; Phase 02 cannot advance Core canon. Future Run commands are not exposed as successful no-ops.
+- Updated five-library workspace/CI/architecture/final-acceptance/package-count surfaces while preserving Core/Observe/Intelligence/Workshop boundaries and existing Phase 01 approval safety.
+- Did **not** implement Phase 03 worker behavior, provider execution/recovery, screenplay orchestration, policy callback dispatch, the shared acceptance bridge, or delivery IO.
 
-Read the supplied `packages/system_one_sdk/lib/system_one_sdk.ex`, `client.ex`,
-`system_one_response.ex`, `request_budget.ex`, `test.ex`, provider/client/batch
-implementations and relevant boundary tests. Used existing public `new_client/1`,
-`noul/2`, `choice/3`, `score/3`, `prepare/1`, `evaluate_stream/4`, and `version/0`.
-The adapter reads actual response `model`, `request_id`, `usage`,
-`prepared_fingerprint`, `batch_index`, `retries`, `elapsed_ms` and
-`runtime_elapsed_ms`; `request_too_large` is a verified source error type.
-No native SDK structs cross into Intelligence values.
+Detailed R01–R06 source/test mapping is in [PHASE_02_IMPLEMENTATION_MATRIX.md](PHASE_02_IMPLEMENTATION_MATRIX.md).
 
-Read Inference's `apps/inference/lib/inference.ex`, `client.ex`, `request.ex`,
-`response.ex` and response-format/adapter contracts. The real completion boundary
-is `Inference.complete/3`; Phase 2 adds no Inference call and does not alter
-Workshop generation, SDK/Inference repositories or dependency versions/locks.
+## Overlay and docset
 
-## Tests and verification
+Delivered artifacts:
 
-Five new ExUnit files contain 32 test declarations, listed exactly in
-`PHASE_02_FILE_INVENTORY.json`. They were written before the corresponding source
-passes where possible, but no runtime RED/GREEN was observed. Elixir, Mix and Erlang
-are absent. No runtime, formatter, compiler, Credo, Dialyzer, docs, DB, PDF, speech,
-live provider, or writer-example success is claimed.
+- `fount_run_phase_02_overlay.zip` — SHA-256 `cdeb0480d4852d4da643d2e60237879abf1e89a8ce43aefe2211e3e60658541b`.
+- `fount_run_phase_02_docset.zip` — final hash is reported outside the archive after deterministic packaging to avoid self-reference.
+- `PHASE_02_RUNTIME_QC_HANDOFF.md` — also present here as [PHASE_02_RUNTIME_QC_HANDOFF.md](PHASE_02_RUNTIME_QC_HANDOFF.md).
 
-Executed checks, including the full-Python-discovery missing-helper error and
-strict archive application tests, are listed in `PHASE_02_STATIC_CHECKS.json`.
-They establish only their stated source/asset/transport properties.
+The Fount overlay contains **45** declared source operations: 17 modifications and 28 additions, with **0 deletions**. Its copied manifest is [PHASE_02_OVERLAY_MANIFEST.json](PHASE_02_OVERLAY_MANIFEST.json), SHA-256 `9c9f228b60c0352b0a70f001a2512b2577f1327219068a1f480ed94b0ba8e062`. The existing Fount overlay applier dry-ran the archive against the exact extracted sealed baseline and then applied it to a clean copy successfully.
 
-## Review and remaining runtime risks
+The docset ZIP remains a complete `fount/` tree. Historical Phase 01 evidence and superseded phase paths are retained; no docset file is deleted or renamed.
 
-Self-review only; no independent subagent/reviewer was available. Review tightened
-provenance maps, contradictory distribution fields, cache metadata validation,
-import projection binding and installed-fixture checks. Those fixes are not runtime
-verified. Codex must especially check formatting/warnings, active output shapes
-against real SDK answers, cancellation/worker cleanup and partial ordering,
-cache identity/ETS lifecycle, typed-context source-pointer validation, record
-imports, and all four packages' existing regressions. Do not weaken assertions or
-silence warnings to hide defects.
+## Source-only checks actually run
 
-The absent cleanup helper and SDK client configuration test are snapshot omissions,
-not permission to invent replacements. No deleted files, schema migration, public
-release or Phase 3 work is included. Historical Luna-output debt remains explicit.
+| Check | Result |
+| --- | --- |
+| `python3 -m unittest scripts.tests.test_run_foundation_source scripts.tests.test_phase_one_source` | **PASS — 19 tests** |
+| `python3 scripts/final_acceptance.py` | **PASS — 16 source-only checks**; script explicitly states no Mix/BEAM/PostgreSQL proof |
+| `python3 -m unittest discover -s scripts/tests -p 'test_phase_*_source.py'` | **PASS — 118 tests** |
+| `python3 -m unittest scripts.tests.test_seal_handoff_snapshot` | **PASS — 8 tests** |
+| `PYTHONDONTWRITEBYTECODE=1 python3 scripts/test_docset.py` | **PASS — 9 docset transport/tooling tests**; temporary fixtures no longer assume live state is Phase 01 |
+| `python3 scripts/docset.py refresh` / `validate` on revised complete docset | **PASS — 53 files** |
+| CI YAML parse | **PASS** |
+| Existing overlay applier dry-run against exact sealed Fount baseline | **PASS — 45 operations accepted** |
+| Overlay apply to a clean extracted baseline | **PASS** |
+| Broad `python3 -m unittest discover -s scripts/tests -p 'test_*.py'` in the Repomix-extracted tree | **INCOMPLETE** — 135 tests passed and one loader error occurred because `scripts/prune_deleted_directories.py` is outside the supplied Repomix include set. Retry on the full checkout. |
+| Elixir format/compile/ExUnit/Ecto/PostgreSQL/Credo/Dialyzer/docs/Hex builds | **NOT_RUN — no Elixir/Erlang environment** |
+| Live providers / PDF / browser / human creative-quality checks | **NOT_RUN or not applicable to this storage phase** |
 
-## Complete file inventory
+Static/source checks do not certify R01–R06. The new package and migration require the local Elixir/PostgreSQL runtime pass.
 
-Machine-readable hashes, authenticated preimages and test names are in
-`PHASE_02_FILE_INVENTORY.json`. New files are listed first, then modifications.
+## Next action
 
-- `handoff/PHASE_02_SOURCE_NOTES.md`
-- `packages/fount_observe/examples/fixture_file.exs`
-- `packages/fount_observe/examples/live.exs`
-- `packages/fount_observe/examples/phase_two.exs`
-- `packages/fount_observe/guides/measurement-substrate.md`
-- `packages/fount_observe/lib/fount/observe/cache/ets.ex`
-- `packages/fount_observe/lib/fount/observe/calibration.ex`
-- `packages/fount_observe/lib/fount/observe/fingerprint.ex`
-- `packages/fount_observe/lib/fount/observe/measurement_spec.ex`
-- `packages/fount_observe/lib/fount/observe/output_contract.ex`
-- `packages/fount_observe/lib/fount/observe/recording.ex`
-- `packages/fount_observe/lib/fount/observe/resources.ex`
-- `packages/fount_observe/lib/fount/observe/scene_question.ex`
-- `packages/fount_observe/priv/calibrations/identity.json`
-- `packages/fount_observe/priv/fixtures/scene_visibility.json`
-- `packages/fount_observe/test/phase_two_contracts_test.exs`
-- `packages/fount_observe/test/phase_two_execution_test.exs`
-- `packages/fount_observe/test/phase_two_provider_test.exs`
-- `packages/fount_observe/test/phase_two_scene_question_test.exs`
-- `packages/fount_observe/test/phase_two_sources_test.exs`
-- `scripts/tests/test_phase_two_source.py`
-- `packages/fount_intelligence/lib/fount/intelligence/acquisition/measurements.ex`
-- `packages/fount_observe/CHANGELOG.md`
-- `packages/fount_observe/README.md`
-- `packages/fount_observe/examples/README.md`
-- `packages/fount_observe/guides/architecture.md`
-- `packages/fount_observe/guides/usage.md`
-- `packages/fount_observe/guides/verification.md`
-- `packages/fount_observe/lib/fount/observe/batch.ex`
-- `packages/fount_observe/lib/fount/observe/budget.ex`
-- `packages/fount_observe/lib/fount/observe/context.ex`
-- `packages/fount_observe/lib/fount/observe/distribution.ex`
-- `packages/fount_observe/lib/fount/observe/executor.ex`
-- `packages/fount_observe/lib/fount/observe/lens.ex`
-- `packages/fount_observe/lib/fount/observe/measurement_result.ex`
-- `packages/fount_observe/lib/fount/observe/options.ex`
-- `packages/fount_observe/lib/fount/observe/projection.ex`
-- `packages/fount_observe/lib/fount/observe/provider.ex`
-- `packages/fount_observe/lib/fount/observe/provider_call.ex`
-- `packages/fount_observe/lib/fount/observe/providers/system_one.ex`
-- `packages/fount_observe/lib/fount/observe/question.ex`
-- `packages/fount_observe/lib/fount/observe/registry.ex`
-- `packages/fount_observe/lib/fount/observe/request.ex`
-- `packages/fount_observe/lib/fount/observe/sandbox.ex`
-- `packages/fount_observe/lib/fount/observe.ex`
-- `packages/fount_observe/mix.exs`
+Before the runtime agent receives [PHASE_02_RUNTIME_QC_HANDOFF.md](PHASE_02_RUNTIME_QC_HANDOFF.md), the user applies **both** Phase 02 ZIPs to their respective repositories and commits/pushes them. The runtime agent then starts from that installed state, verifies hashes/commits, **does not reapply either ZIP**, runs and repairs only R01–R06, updates the Phase 02 runtime report/state/traceability, and prepares fresh Phase 03 inputs only after the required engineering gates pass. It must not implement the Phase 03 worker during Phase 02 QC.

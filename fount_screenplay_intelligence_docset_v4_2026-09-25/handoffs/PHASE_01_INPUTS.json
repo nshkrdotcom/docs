@@ -1,56 +1,40 @@
-[
-  {
-    "role": "docset",
-    "input": "docset.raw.xml",
-    "sha256": "a26a26b2de2bbf980b4c4dee95a06d1ad2d2cd48eba23c26aecefa7c9020b61a",
-    "files": 63,
-    "format": "parsable_xml",
-    "sealed": false,
-    "attrs_sample": {
-      "path": "examples/CONCEPTUAL_CONTRACT_EXAMPLES.md"
+{
+  "format_version": 1,
+  "phase": 1,
+  "selection": {
+    "status_at_input": "NOT_STARTED",
+    "spec": "phases/01_CORE_APPROVAL_SAFETY.md",
+    "selected_by": "first non-COMPLETE phase in state.json"
+  },
+  "supplied_inputs": {
+    "fount": {
+      "uploaded_name": "fount(20260928-202841).xml",
+      "bytes": 3396668,
+      "sha256": "e0c159ccc415a4d85478360088d1509aa45a88361fe66c839a6f9a3f2f23ba44",
+      "source_root": "/home/home/p/g/n/fount",
+      "git_commit": "not_embedded_in_supplied_repomix"
     },
-    "root_children": [
-      "file_summary",
-      "directory_structure",
-      "files"
-    ],
-    "byte_identity": "attachment hash plus decoded source bodies; checkout bytes and Git revision unverified"
+    "docset": {
+      "uploaded_name": "docset.raw(20260928-202846).xml",
+      "bytes": 197059,
+      "sha256": "92451fc693a7cdd1db8f5922fcd4cf262cba796d8b00ba866b4b71e5b674dd61",
+      "source_root": "/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount",
+      "git_commit": "not_embedded_in_supplied_repomix"
+    }
   },
-  {
-    "role": "fount",
-    "input": "fount(4).xml",
-    "sha256": "415c6a867c2bb00c3d860a1edb7add9cd22d2745edd9b5fccec1dc135811bc10",
-    "files": 337,
-    "format": "parsable_xml",
-    "sealed": false,
-    "attrs_sample": {
-      "path": ".github/workflows/ci.yml"
+  "not_supplied": {
+    "system_one_sdk": {
+      "source_root": "/home/home/p/g/n/system_one_sdk",
+      "status": "not_supplied_not_required_for_phase_01"
     },
-    "root_children": [
-      "file_summary",
-      "directory_structure",
-      "files"
-    ],
-    "byte_identity": "attachment hash plus decoded source bodies; checkout bytes and Git revision unverified"
+    "inference": {
+      "source_root": "/home/home/p/g/n/inference",
+      "status": "not_supplied_not_required_for_phase_01"
+    },
+    "agent_session_manager": {
+      "source_root": "/home/home/p/g/n/agent_session_manager",
+      "status": "not_supplied_not_required_for_phase_01"
+    }
   },
-  {
-    "role": "system_one_sdk",
-    "input": "system_one_sdk(6).xml",
-    "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
-    "files": 253,
-    "format": "repomix_unescaped",
-    "sealed": false,
-    "attrs_sample": {},
-    "byte_identity": "attachment hash plus decoded source bodies; checkout bytes and Git revision unverified"
-  },
-  {
-    "role": "inference",
-    "input": "inference(2).xml",
-    "sha256": "fe8a2a4db9626803e9e1197138aa858ad426fdf24335dc2bc961f1f56c9c6e33",
-    "files": 69,
-    "format": "repomix_unescaped",
-    "sealed": false,
-    "attrs_sample": {},
-    "byte_identity": "attachment hash plus decoded source bodies; checkout bytes and Git revision unverified"
-  }
-]
+  "reason_dependencies_not_requested": "Phase 01 changes Core/Workshop canonical approval safety only; the supplied Fount snapshot contains every API touched. No System One, Inference, or ASM API had to be guessed or changed."
+}

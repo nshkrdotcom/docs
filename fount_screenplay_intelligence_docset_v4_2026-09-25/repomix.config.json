@@ -8,20 +8,20 @@
     "showLineNumbers": false
   },
   "include": [
+    ".gitignore",
     "**/*.md",
     "**/*.json",
     "**/*.txt",
-    "**/*.py",
-    "handoffs/.gitkeep"
+    "**/*.py"
   ],
   "ignore": {
     "useGitignore": true,
     "useDefaultPatterns": false,
     "customPatterns": [
       "**/.git/**",
-      "**/.elixir_ls/**",
-      "**/.blitz/**",
-      "**/__pycache__/**"
+      "**/__pycache__/**",
+      "**/*.xml",
+      "**/*.zip"
     ]
   }
 }

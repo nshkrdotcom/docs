@@ -1,34 +1,34 @@
-# Phase 2 implementation and acceptance matrix
+# Phase 02 implementation matrix — Run foundation
 
-All 19 Phase 2 rows are **QC_VERIFIED** by the commands below and `PHASE_02_RUNTIME_QC_REPORT.md`. The original 32 ExUnit tests plus two runtime regressions pass.
-`O/` below means `packages/fount_observe/`. Existing tests remain in place. This
-matrix maps the complete Phase 2 brief in document 16 and its document 36 demo;
-it does not advance later capability, persistence or writer-product phases.
+Status: **OFFLINE_IMPLEMENTED**. Runtime certification remains pending; no R01–R06 row is marked passed by source-only work.
 
-| Requirement | Implementation | Actual runtime evidence |
-|---|---|---|
-| Leaf result/observation/distribution/target/evidence/error contracts | Existing neutral structs retained; `distribution.ex`, `measurement_result.ex`, `request.ex`; exact source resolvers retained | Observe contract suite 59/59; compiled architecture 0 violations. |
-| Logical output identity plus canonical data-shape digest | `output_contract.ex`, `question.ex`, `measurement_spec.ex`; closed shape grammar, ordered domains, 64 KiB shape cap | `phase_two_contracts_test.exs` passed; fixture digest Python/ExUnit checks passed. |
-| Stale output fails closed or reacquires | `executor.ex` hit validation; `recording.ex` active contract import; `sandbox.ex` fixture output binding | Cache poison, stale import and stale fixture tests passed in Observe 59/59. |
-| Reusable result versus current Observation provenance | Request semantic serializer and dependencies; Executor measurement/result IDs and fresh Observation envelope | Cross-revision cache/evidence tests passed; scene packet refs match current revision. |
-| Projection registry and source minimization | `registry.ex` declarative projection identity; new `Projection.request/5` over preserved `at/4`; no hidden/future material from canonical selection | Projection and hidden-note tests passed; live/fixture scene packet cites six visible refs. |
-| Neutral typed serializable closed context | `context.ex`: schema validation, `from_map/2`, storage/semantic maps, content hash, evidence-pointer binding, per-run shape memoization | Context shape/roundtrip and closed-slot tests passed. |
-| Calibration assets and raw preservation | `calibration.ex`, identity asset, optional separate MeasurementResult view; raw probabilities and reported confidence untouched | Calibration/raw tests passed; live packet has raw answers and null calibration. |
-| Exact spec/input/model/parameter identity | `measurement_spec.ex`, `Request.semantic_input/1`, `fingerprint.ex`, SystemOne adapter; Intelligence bridge hashes same semantic context | Identity sensitivity tests passed; SDK live requested/reported model identities captured. |
-| Mutable model identity cannot enable durable reuse | Fingerprint classification; requested/reported model fields separated; endpoint digest and SDK version recorded | Mutable alias policy tests passed; live `jev-latest` remains mutable alias. |
-| DB-free L1 cache with privacy/quota/TTL | `cache/ets.ex`; existing Memory implementation unchanged; explicit namespace required | ETS quota/TTL/namespace/tamper tests passed; Memory tests retained. |
-| State/question/wire-size limits and budget | `options.ex`, `measurement_spec.ex`, `budget.ex`, `executor.ex`; SDK wire guard; finite request cap disables retries | State/question/wire cap and atomic budget tests passed; SDK transport size test passed. |
-| Timeout/retry/partial association semantics | `provider_call.ex` coordinator; SystemOne progress relay; complete states survive later timeout/cancel/failure | SDK partial-timeout test preserved first state; association, cancel and timeout tests passed. |
-| Provider normalization and secret redaction | SDK types terminate in adapter; opaque Provider inspect; safe extras; cache metadata validation | SDK Test normalization/security suite passed; live log secret scan clear; SDK 141 checks passed. |
-| Deterministic/human/imported observation paths | `recording.ex`: literal values, explicit producer, no fake probability; input/projection-bound imports and fresh evidence | Human/rule/import tests passed; values had no fabricated probabilities. |
-| First-class Sandbox fixture loader | Existing direct fixtures retained; `fixture/3`, `load/2`; local regular JSON, size/duplicate/contract guards | Fixture loader tests and `examples/fixture_file.exs` passed. |
-| Resource preflight and honest actual metadata | `resources.ex`, facade `preflight/3`, `Batch.resource_usage`; exact semantic sizes and active caps; unknown money/retries remain nil | Preflight/usage tests passed; unknown remote count regression passed; live usage 499/69 tokens. |
-| Safe declarative extensibility hooks | Lens static validation, registered sensors/projections, closed contexts/overrides, cap intersection, no remote/executable names | Custom declaration/host-cap tests passed; no executable or remote asset loading. |
-| One useful scene question or honest unavailable result | `scene_question.ex`, `examples/phase_two.exs`, `examples/live.exs` | `examples/phase_two.exs` showed available/unavailable and unchanged Fountain; live scene gave three available answers. |
-| Useful workflows and four-package boundaries preserved | No canonical/Workshop/dependency/schema changes; all pre-existing tests and lens files retained | Root `mix ci` passed: 232 tests, compiled architecture, Credo, Dialyzer, ExDoc; DB 11+14, writer reject/accept/PDF, four Hex builds passed. |
+## Runtime destinations
 
-The neutral preflight and scene-question surface support inspect/cancel/retry
-requirements W01/W11, but the complete session modes and later writer workflows
-remain in their assigned phases. The one authorized live TypeSafe measurement is
-recorded in the QC report; no human response, improved screenplay quality or
-calibration population is claimed.
+- fount: `/home/home/p/g/n/fount`
+- docset: `/home/home/jb/docs/20260928/fount`
+- docset_canonical: `/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount`
+- docset_git_root: `/home/home/p/g/n/brainstorms`
+- system_one_sdk: `/home/home/p/g/n/system_one_sdk`
+- inference: `/home/home/p/g/n/inference`
+- agent_session_manager: `/home/home/p/g/n/agent_session_manager`
+
+## Acceptance mapping
+
+| ID | Source implementation | Written proof | Runtime status |
+| --- | --- | --- | --- |
+| R01 | New `packages/fount_run` package, host-free `FountRun.Application`, migration export in `FountRun.migrations_path/0`; root `mix.exs`, CI, architecture/final-acceptance surfaces and package-count assertions updated from four to five libraries while Core remains Run-independent. | `packages/fount_run/test/storage_contract_test.exs`; updated architecture tests; `scripts/tests/test_run_foundation_source.py`; source-only final-acceptance inventory. | **NOT_RUN** — needs Mix/BEAM/docs/Hex/runtime startup evidence. |
+| R02 | Forward migration `20260928010000_create_run_foundation.exs` creates all ten prefixed Run tables with composite same-run/same-screenplay bindings, indexes, state/resource checks, deferred current plan/policy/active-step bindings and immutability guards. Caller-owned Repo is used; no second DB configuration is introduced. | `packages/fount_run/integration/storage_constraints_test.exs`; `run_foundation_test.exs` Core→Run migration harness and invalid cross-reference cases. | **NOT_RUN** — needs fresh + prior-Core-schema PostgreSQL migration/constraint execution. |
+| R03 | `FountRun.start_run/4`, `get_run/3`, `list_runs/3`; trusted `ActorContext`; closed plan/policy input; atomic run + plan/policy v1 persistence; caller-bound idempotency key/fingerprint; unsupported future start options fail closed; no provider dependency or dispatch. | `plan_policy_test.exs`; `run_foundation_test.exs` authorized create/read/list, exact replay/conflict and provider-free cases. | **NOT_RUN** — needs ExUnit/PostgreSQL execution. |
+| R04 | Canonical closed-map hashing in `Plan`/`Policy`; append-only plan/policy snapshots and events; owner-authorized expected-version pointer changes preserve history; step/attempt identity is retained on events. | `plan_policy_test.exs`; `run_foundation_test.exs` snapshot append/history/immutability tests; migration append-only triggers. | **NOT_RUN** — needs formatter/compile/PostgreSQL execution. |
+| R05 | Atomic pending-decision insert/resolve storage with authenticated response identity and replay/conflict semantics; durable `ApprovalAttempt` lifecycle stores immutable received review and approval identity/payload; nonaccepted outcomes persist; `accepted` is explicitly blocked with `:acceptance_bridge_required`, so Phase 02 cannot move Core canon. | `run_foundation_test.exs` single-resolution, competing-task concurrency and approval-attempt immutability/no-canon cases. | **NOT_RUN** — needs real concurrent PostgreSQL connections and Core head verification. |
+| R06 | Controlled step/attempt start/finish storage, active lease/fence identity fields, usage reservation/settlement identity and delivery candidate-vs-accepted-revision identity/result replay. No worker claim/reclaim/provider recovery algorithm is implemented. | `run_foundation_test.exs` step/attempt/event, usage, lease identity and delivery reload/conflict cases. | **NOT_RUN** — needs PostgreSQL execution/reload proof; Phase 03 behavior is intentionally absent. |
+
+## Phase boundary
+
+Implemented here: durable schema and persistence primitives required by Phase 02, plus the only public commands the phase makes real (`start_run`, `get_run`, `list_runs`).
+
+Deliberately absent: worker claim/reclaim/renew, provider dispatch or reconciliation, supervised polling, Workshop operation execution, strategy materialization, canonical `submit_decision`, policy-driven callback dispatch, Core acceptance bridge, and delivery IO. Those belong to Phases 03–05 and are not successful no-ops in this package.
+
+## Dependency disposition
+
+System One SDK, Inference and Agent Session Manager were supplied and inspected as sealed references. Phase 02 adds no source changes to them and `fount_run` declares no provider/ASM/SystemOne/Inference dependency. Their exact snapshot identities are recorded in [PHASE_02_INPUTS.json](PHASE_02_INPUTS.json).

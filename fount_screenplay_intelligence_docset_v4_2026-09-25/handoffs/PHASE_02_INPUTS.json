@@ -1,59 +1,57 @@
 {
+  "format_version": 1,
   "phase": 2,
-  "date": "2026-09-26",
-  "attachments": [
-    {
-      "role": "fount",
-      "input": "fount(5).xml",
-      "sha256": "6a31e350383a7de7d7303c6737d0cd72423e3f59eece99767810c5865f739605",
-      "bytes": 1787377,
-      "file_count": 408
-    },
-    {
-      "role": "inference",
-      "input": "inference(3).xml",
-      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
-      "bytes": 299421,
-      "file_count": 69
-    },
-    {
-      "role": "docset",
-      "input": "docset.raw(1).xml",
-      "sha256": "8a57526fbdedfa04c88c2b407229feda56bd61d35c7cf1acf33295b2536812ff",
-      "bytes": 854766,
-      "file_count": 71
-    },
-    {
-      "role": "system_one_sdk",
-      "input": "system_one_sdk(7).xml",
-      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
-      "bytes": 875342,
-      "file_count": 253
+  "selection": {
+    "status_at_input": "NOT_STARTED",
+    "spec": "phases/02_RUN_FOUNDATION.md",
+    "selected_by": "first non-COMPLETE phase in state.json",
+    "prior_phase": {
+      "id": 1,
+      "status": "COMPLETE",
+      "verified_code_commit": "e79510008735220545f4ee9322bade127c868d40"
     }
-  ],
-  "identified_by_contents": {
-    "fount": "packages/fount/lib/fount.ex plus fount_observe, fount_intelligence and fount_workshop packages",
-    "docset": "AGENT_START_HERE.md, PROGRESS.md, numbered implementation specifications and Phase 1 QC evidence",
-    "system_one_sdk": "packages/system_one_sdk/lib/system_one_sdk.ex; question, provider, batch and Test APIs; version 0.6.0",
-    "inference": "apps/inference/lib/inference.ex and Client/Request/Response/adapter contracts; version 0.5.0"
   },
-  "sealed_snapshot_index_present": false,
-  "historical_declared_post_qc_commits": {
-    "fount": "b82b6560da3fed3955e51a52f3a1d613d5141513",
-    "system_one_sdk": "e757598a89e549274b979f0e77c6a4b2b6667752",
-    "inference": "3750a03ec62a3c9da11be9caa4dc911ebbbb9801"
+  "supplied_inputs": {
+    "fount": {
+      "uploaded_name": "fount(20260928-214212).xml",
+      "bytes": 3485104,
+      "sha256": "27aaf9c0059cb8a4093a63e8caaa98d1598e9afc7d9d908b2e29ae777d04130e",
+      "source_root": "/home/home/p/g/n/fount",
+      "git_commit": "not_embedded_in_supplied_repomix"
+    },
+    "docset": {
+      "uploaded_name": "docset(1).xml",
+      "bytes": 263126,
+      "sha256": "08f521d050e104244f8acf6b88dec80c1e6ca7a6407b7aa9fba96b2cf01ace68",
+      "source_root": "/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount",
+      "git_commit": "not_embedded_in_supplied_repomix"
+    },
+    "system_one_sdk": {
+      "uploaded_name": "system_one_sdk(20260928-214142).xml",
+      "bytes": 981679,
+      "sha256": "ce3fcec597edcf82bf11dfd227a2a483c57d4ef2dc140f27816f1799a0c31942",
+      "source_root": "/home/home/p/g/n/system_one_sdk",
+      "git_commit": "e757598a89e549274b979f0e77c6a4b2b6667752"
+    },
+    "inference": {
+      "uploaded_name": "inference(20260928-214141).xml",
+      "bytes": 320605,
+      "sha256": "2b1906c46181a3d90efbb898a262467594430ab3907530d8b99a4ef6f6e1e06e",
+      "source_root": "/home/home/p/g/n/inference",
+      "git_commit": "3750a03ec62a3c9da11be9caa4dc911ebbbb9801"
+    },
+    "agent_session_manager": {
+      "uploaded_name": "agent_session_manager(5).xml",
+      "bytes": 1670906,
+      "sha256": "d2a9aec681b2cfc3f0766af2849fd397f76a3de8ee5c2c448f01aa6a35f61854",
+      "source_root": "/home/home/p/g/n/agent_session_manager",
+      "git_commit": "dc28a00e5ff6ad6932411334241ec8d9efda8857"
+    }
   },
-  "commit_identity_caveat": "These commits are recorded by the supplied Phase 1 QC report, not authenticated seals on the current four XML attachments.",
-  "modified_preimage_authentication": {
-    "count": 25,
-    "basis": "Matching runtime_qc.post_qc_overlay_results or runtime_qc.followup_changes hashes in supplied handoffs/PHASE_01_FILE_INVENTORY.json",
-    "reconstruction": "Use decoded bytes exactly, or restore terminal LF only when the supplied post-QC hash matches the reconstructed bytes. Never normalize any other difference.",
-    "allow_terminal_newline_bypass": false
+  "dependency_disposition": {
+    "system_one_sdk": "inspected_reference_only_no_changes",
+    "inference": "inspected_reference_only_no_changes",
+    "agent_session_manager": "inspected_reference_only_no_changes"
   },
-  "omissions": [
-    "handoff/prune_deleted_directories.py absent from Fount XML, while its original Python test is present; preserve/check actual checkout file, do not invent it.",
-    "Fount SVGs and generated/build/provider material excluded by snapshot policy.",
-    "SystemOneSDK snapshot has 253 files, versus 254 in the historical sealed report; client_configuration_test.exs is absent. Re-review the known dummy-credential exclusion on the actual SDK checkout before sealing.",
-    "No live checkout, repository history, runtime dependencies, database or provider credentials are available here."
-  ]
+  "reason_dependencies_unchanged": "Phase 02 is the Run storage/authorization foundation. It must perform zero provider work; the dependency XMLs were inspected to avoid inventing interfaces, but no dependency repository change is required or authorized for R01-R06."
 }
