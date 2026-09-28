@@ -22,3 +22,7 @@
 ## Known source-writing limitation
 
 Elixir/Erlang/Mix are absent here. No compile/formatter/ExUnit/database/provider result is claimed. Repository-wide Python discovery also retains the supplied-snapshot import error for `scripts/prune_deleted_directories.py`; focused Phase-9–12 source checks pass.
+
+## Runtime preservation result — 2026-09-27
+
+Compiled architecture reports zero violations across 289 source files. The real-store Phase-12 regression and CLI run keep the opening request immutable, persist noncanonical discovery and advance only the explicitly accepted candidate. Core/Intelligence/Workshop PostgreSQL integration passes 11/4/17. `mix ci` passes 343 tests, strict quality and docs. Four Hex archive builds pass with the repository package-build switch. No direct Workshop SystemOneSDK/ASM dependency was added; Inference 0.5.0 remains the generated-alternative boundary. No live provider or human study was run.

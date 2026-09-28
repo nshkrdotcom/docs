@@ -513,3 +513,7 @@ The user supplied `gpt-6-luna` for Workshop and the default JEV for System One. 
 | Phase-13 stop line | no rehearsal/voice-exemplar/cinematic Phase-13 implementation | source contract PASS | Phase 13 NOT_STARTED |
 
 Phase 12 remains `OFFLINE_IMPLEMENTED`: creative usefulness and runtime correctness are not inferred from the static checks.
+
+## Phase 12 runtime QC closure — 2026-09-27
+
+The five focused Phase-12 ExUnit tests plus a treatment-validation regression pass; a new real PostgreSQL integration test proves W02 effective-brief execution and A10 stale/idempotent acceptance. Full `mix ci` passes 343 tests, compiled architecture, strict Credo, Dialyzer and ExDoc. The disposable-database CLI example verifies W01/W02 writer capture through accepted edited pages and fresh resume; Core/Intelligence/Workshop integration counts are 11/4/17. A01/A02/A03 remain deterministic scripted engineering evidence, not a live-model quality or human-usefulness claim. W11 finite preflight and provider-free command behavior remain visible; no generation or measurement credentials were used for CLI. Phase 12 `COMPLETE`; Phase 13 `NOT_STARTED`. Detailed checks and artifact identities: `handoffs/PHASE_12_RUNTIME_QC_REPORT.md`.

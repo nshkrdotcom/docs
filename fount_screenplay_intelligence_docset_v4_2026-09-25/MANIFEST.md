@@ -101,7 +101,7 @@ Every implementation phase receives exactly:
 
 The docset is an implementation specification, not a source-code snapshot.
 
-Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–11 are COMPLETE on recorded engineering QC; Phase 12 is OFFLINE_IMPLEMENTED and awaits runtime/repair QC; Phase 13 remains NOT_STARTED. Phase-12 source-delivery records are under `handoffs/PHASE_12_*`. Earlier optional human studies remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
+Documents 32–36 add screenplay-first research, writer workflows, actual SDK collaboration and the user-applied ZIP protocol. Final acceptance is Phase 16. Phases 1–11 are COMPLETE on recorded engineering QC; Phase 12 is COMPLETE on runtime/repair engineering QC; Phase 13 remains NOT_STARTED. Phase-12 source-delivery records are under `handoffs/PHASE_12_*`. Earlier optional human studies remain visible validation debt. D046 makes human reviews optional and nonblocking. Use PROGRESS.md for the authoritative checkpoint.
 
 ## Current revision note
 
@@ -275,9 +275,9 @@ Phase 11 is `COMPLETE` on recorded engineering and authorized live QC; see `hand
 - `handoffs/PHASE_12_STATIC_CHECKS.json`: actual offline source/transport checks and explicit runtime NOT_RUN states.
 - `handoffs/PHASE_12_OFFLINE_HANDOFF.md`: current source-delivery account and Phase-13 stop line.
 - `handoffs/PHASE_12_RUNTIME_QC_HANDOFF.md`: Codex instructions for the user's applied Phase-12 state.
-- `handoffs/PHASE_12_RUNTIME_QC_REPORT.md`: NOT_RUN placeholder for actual runtime evidence.
+- `handoffs/PHASE_12_RUNTIME_QC_REPORT.md`: applied checkout identity, repairs, full CI, PostgreSQL, CLI writer artifacts and completion evidence.
 - `handoffs/PHASE_12_DOCSET_HASHES.json`: regenerated complete docset identities excluding recursive checksum files.
 
 ## Current Phase 12 checkpoint
 
-Phase 12 is `OFFLINE_IMPLEMENTED`. The strict source overlay is `fount_phase_12_overlay.zip`, 36 operations (23 additions, 13 modifications, no deletions), SHA-256 `51ca6d00d7c1e7a871b08f2657127264886a63df8a0485b6a3a958b61b01bc2b`. Focused Phase-9–12 source checks pass 34/34; Elixir/PostgreSQL/runtime/provider gates remain NOT_RUN. Phase 13 is `NOT_STARTED`.
+Phase 12 is `COMPLETE` on applicable engineering gates. The strict source overlay is `fount_phase_12_overlay.zip`, 36 operations (23 additions, 13 modifications, no deletions), SHA-256 `51ca6d00d7c1e7a871b08f2657127264886a63df8a0485b6a3a958b61b01bc2b`. The original 36 overlay hashes matched before repair. Full CI, 98 Python tests, 32 PostgreSQL integrations, the CLI example and four archives pass; live-provider and optional human studies remain NOT_RUN. Phase 13 is `NOT_STARTED`.

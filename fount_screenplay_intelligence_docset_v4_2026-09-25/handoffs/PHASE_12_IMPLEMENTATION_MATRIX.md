@@ -21,3 +21,7 @@ Status: **OFFLINE_IMPLEMENTED / runtime NOT_RUN**. This maps the Phase-12 requir
 | Provider-free writer path | open/capture/brief/mode/outline/reorder/manual/edit/decision flow uses persistence + existing typed candidate/review acceptance without Inference/Observe/System One/ASM credentials | new Mix tasks, `examples/phase_twelve/README.md` | WRITTEN; runtime NOT_RUN |
 | Generated path boundary | generated alternatives continue through existing Inference client; semantic measurements continue only through Observe/System One; ASM remains behind Inference | existing package DAG + Phase-12 source | SOURCE INSPECTION PASS |
 | Phase-13 stop line | no rehearsal/voice-exemplar/cinematic Phase-13 implementation | source contract check | PASS |
+
+## Runtime QC result
+
+All listed Phase-12 engineering rows were executed and pass. Focused ExUnit: 6 tests after the added negative treatment case; real-store integration: 1 new Phase-12 test within 17 Workshop integration tests. W02 effective request is asserted from the later scripted Inference prompt while immutable opening options remain unchanged. A10 is verified with actual PostgreSQL head and candidate decisions. Full command evidence is in `PHASE_12_RUNTIME_QC_REPORT.md`. Phase 13 remains `NOT_STARTED`.
