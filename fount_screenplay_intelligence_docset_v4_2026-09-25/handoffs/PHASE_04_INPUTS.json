@@ -1,79 +1,55 @@
 {
+  "format_version": 1,
   "phase": 4,
-  "date": "2026-09-26",
-  "attachments": [
-    {
-      "role": "fount",
-      "input": "content-identified Fount XML",
-      "sha256": "8a7221ec431e5caa58eca416f545ad24061014f8663c8fd3e8f5b6404516e4db",
-      "bytes": 2056671,
-      "file_count": 448
+  "packet_manifest_sha256": "e0e5d1a7f7b9732c476ecb4e71e9a5ff2e19ba32d7ebf35099f371f9a073793a",
+  "verified_baselines": {
+    "fount_commit": "a3b9d8fe5d009dad15b6d3d354cc470560ec1c0b",
+    "docset_commit": "61f0137533cc1c8824c3edffc16a9200dbbf9409",
+    "system_one_sdk_commit": "e757598a89e549274b979f0e77c6a4b2b6667752",
+    "inference_commit": "3750a03ec62a3c9da11be9caa4dc911ebbbb9801",
+    "agent_session_manager_commit": "dc28a00e5ff6ad6932411334241ec8d9efda8857"
+  },
+  "inputs": {
+    "fount": {
+      "path": "/home/home/fount_phase04_packet_20260929T0230Z/fount.xml",
+      "source_root": "/home/home/p/g/n/fount",
+      "git_commit": "a3b9d8fe5d009dad15b6d3d354cc470560ec1c0b",
+      "sha256": "03e0a994748f00f8f670497ee74e94cd316b26af99a78d918994fff8eee91fd8",
+      "bytes": 4017799,
+      "reviewed_exclusions": []
     },
-    {
-      "role": "system_one_sdk",
-      "input": "content-identified System One SDK XML",
-      "sha256": "acf283c1d254293cf1fe634f037c0f861bab298f3d524b4db9c5d37bd639fd2d",
-      "bytes": 875342,
-      "file_count": 253
+    "system_one_sdk": {
+      "path": "/home/home/fount_phase04_packet_20260929T0230Z/system_one_sdk.xml",
+      "source_root": "/home/home/p/g/n/system_one_sdk",
+      "git_commit": "e757598a89e549274b979f0e77c6a4b2b6667752",
+      "sha256": "ce3fcec597edcf82bf11dfd227a2a483c57d4ef2dc140f27816f1799a0c31942",
+      "bytes": 981679,
+      "reviewed_exclusions": []
     },
-    {
-      "role": "inference",
-      "input": "content-identified Inference XML",
-      "sha256": "a7e30d9b4dccc106923367725d4d9dd4ad01a57105b4684e1becd03e6cc84ee9",
-      "bytes": 299421,
-      "file_count": 69
+    "inference": {
+      "path": "/home/home/fount_phase04_packet_20260929T0230Z/inference.xml",
+      "source_root": "/home/home/p/g/n/inference",
+      "git_commit": "3750a03ec62a3c9da11be9caa4dc911ebbbb9801",
+      "sha256": "2b1906c46181a3d90efbb898a262467594430ab3907530d8b99a4ef6f6e1e06e",
+      "bytes": 320605,
+      "reviewed_exclusions": []
     },
-    {
-      "role": "docset",
-      "input": "content-identified current implementation docset XML",
-      "sha256": "2179f1c8bb4eff53b1f89897c9774d7162b7675b8366acb27787e90178302a63",
-      "bytes": 1078151,
-      "file_count": 89
+    "agent_session_manager": {
+      "path": "/home/home/fount_phase04_packet_20260929T0230Z/agent_session_manager.xml",
+      "source_root": "/home/home/p/g/n/agent_session_manager",
+      "git_commit": "dc28a00e5ff6ad6932411334241ec8d9efda8857",
+      "sha256": "d2a9aec681b2cfc3f0766af2849fd397f76a3de8ee5c2c448f01aa6a35f61854",
+      "bytes": 1670906,
+      "reviewed_exclusions": []
+    },
+    "docset": {
+      "path": "/home/home/fount_phase04_packet_20260929T0230Z/docset.xml",
+      "source_root": "/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount",
+      "git_commit": "61f0137533cc1c8824c3edffc16a9200dbbf9409",
+      "sha256": "b3c038d7834b4b2cf82d33877c4b0b2b6adaaeffe08bf5a87b0d296f1b9395ef",
+      "bytes": 353106,
+      "reviewed_exclusions": []
     }
-  ],
-  "identified_by_contents": {
-    "fount": "four-package Fount workspace containing packages/fount, fount_observe, fount_intelligence, and fount_workshop; Phase-3 StoryWorld QC-corrected source is present",
-    "system_one_sdk": "System One poncho workspace containing system_one_sdk, system_one_contracts, system_one_bumblebee, and system_one_server; public SystemOneSDK version 0.6.0",
-    "inference": "provider-neutral Inference repository containing apps/inference; public package version 0.5.0",
-    "docset": "numbered implementation documents 00-36 plus PROGRESS.md and Phase-1/2/3 handoff/QC history"
   },
-  "sealed_snapshot_index_present": false,
-  "progress_basis": "PROGRESS.md records Phases 1-3 COMPLETE, with Phase-3 Level-A human review as explicit D045 validation debt, and Phase 4 Temporal and Forward-Reader Engine as the first phase not complete.",
-  "commit_identity_caveat": "The supplied raw Repomix XMLs do not contain current Git metadata or a sealed snapshot index. No current source commit is invented. The docset records the prior verified Phase-3 Fount commit as historical context only; Codex must record the user-applied Phase-4 commit during runtime QC.",
-  "sdk_api_inspection": {
-    "version": "0.6.0",
-    "public_functions_inspected": [
-      "version/0",
-      "new_client/1",
-      "system_one/4",
-      "noul/2",
-      "choice/3",
-      "score/3",
-      "prepare/1",
-      "prepare!/1",
-      "evaluate/4",
-      "evaluate!/4",
-      "evaluate_stream/4",
-      "evaluate_many/4",
-      "system_one!/4",
-      "list_models/2"
-    ],
-    "phase_4_usage": "none; Phase 4 remains pure Intelligence and System One remains behind Observe acquisition"
-  },
-  "inference_api_inspection": {
-    "version": "0.5.0",
-    "public_functions_inspected": [
-      "client/1",
-      "capabilities/1",
-      "client!/1",
-      "complete/3",
-      "stream/3"
-    ],
-    "phase_4_usage": "none; Inference remains Workshop-owned and outside pure Temporal/Reader reduction"
-  },
-  "omissions": [
-    "No Elixir/Erlang/Mix runtime is available in the source-writing environment.",
-    "No first-reader human checkpoint corpus or actual reader responses were supplied; the Phase-4 domain pilot remains pending and no human result is fabricated.",
-    "The Fount input contains scripts/tests/test_prune_deleted_directories.py but not scripts/prune_deleted_directories.py, so the repository-wide Python source suite has one pre-existing import failure unrelated to Phase 4."
-  ]
+  "note": "All six attached packet files were hash-verified against PACKET_MANIFEST before Phase 04 editing."
 }

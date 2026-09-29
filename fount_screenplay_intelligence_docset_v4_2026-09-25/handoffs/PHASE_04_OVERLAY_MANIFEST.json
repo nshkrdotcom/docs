@@ -1,0 +1,125 @@
+{
+  "format_version": 1,
+  "files": [
+    {
+      "path": "packages/fount_run/CHANGELOG.md",
+      "action": "modify",
+      "original_sha256": "03b7b23611036156ea1d9a6dc6d48c5b740749b3c2e7c8c7c1482f205a9a68e8",
+      "result_sha256": "28a9c80766cbef05a6203331087c42bcc1eb332e1e747784f10de811d85bbf75",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/README.md",
+      "action": "modify",
+      "original_sha256": "bce63e334ff426c0f30366779ba89cfd7acb0d06b3b478e2319cdbb99559c91b",
+      "result_sha256": "733302464726fc8bd280be32db865f659b34d50b6782e1f56005b9e11754b6ef",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/guides/architecture.md",
+      "action": "modify",
+      "original_sha256": "e857ab658707f0930831192d837cbe550f33ae98636fb27278554cac2c8b4e06",
+      "result_sha256": "a4aa09fdee1b5f28d771701f36d9548e0d1155826e32b04cd5b24a157f6490a9",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/integration/durable_execution_test.exs",
+      "action": "modify",
+      "original_sha256": "ad73985c0e3ba30702f85e3edcdc859b2ec736c8edbf9107b11b4e2b4790b968",
+      "result_sha256": "d1058f944b660488c4bd26f0d119665319f6467b31a47f759ab02c3f483c16c0",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/integration/screenplay_pipeline_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "dd31d9bc5a20ea35aae5126ed1b085cd7c8666e6426667f7914cd40d1c4dbae0",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/lib/fount_run.ex",
+      "action": "modify",
+      "original_sha256": "939d6dbdfc33ac30d33504a07484a04e98f107607328caab12700e2c134f214b",
+      "result_sha256": "e02dcb5888c8cb1a42abee4d8cb49075f2b1c65345fae42411cf943af5c6bafd",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/lib/fount_run/engine.ex",
+      "action": "modify",
+      "original_sha256": "446aace83e439cddda68f0dfdac8fe98cdba9e4da30739372bebcc4a5e20a412",
+      "result_sha256": "ba4cb87aa168ac36ce037806b6aa38787934e14c4e8c3e6b84c1b7a21fe4b823",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/lib/fount_run/execution_store.ex",
+      "action": "modify",
+      "original_sha256": "69a642a0921f21b1b98270477261d69d797b1e0e87354a7776a815f2d0e3d9b5",
+      "result_sha256": "bf41c38557df8c3d8413c555dcd2c6412ff63b70fe2d115e4af8fb68861985a6",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/lib/fount_run/persistence.ex",
+      "action": "modify",
+      "original_sha256": "08678dfae782755336c4f1927e57e5905655c08466eaeaee120baba039e4d28d",
+      "result_sha256": "5d3d0a9b779ed2ed6c3493628f66306ffc8b09155e65b92fae08f6a7b47ac7a6",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/lib/fount_run/pipeline_handler.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "bb18231af75ef5d21c3506d4bf624705c843ee1c0537e5602cbb402590555354",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/lib/fount_run/pipeline_request.ex",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "a29fc56dc0185e682b085918f5769662169390c8e96e48ddcf9029fdcfafb4a9",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/lib/fount_run/stage_registry.ex",
+      "action": "modify",
+      "original_sha256": "08933318cf6ad605daafa6ef0d586ef2a92fd358a7a524a49fffc8764fa74ff6",
+      "result_sha256": "cba66c67aef6452494ff57bf60a7f371b8b0e0d3a549793823f4d3a9047be7f9",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/lib/fount_run/workshop_handler.ex",
+      "action": "modify",
+      "original_sha256": "1137d7307c21978c861e71134cce996799497362d93a060d397ebc932fa2c94b",
+      "result_sha256": "281551a0ab9f44f885180c09a71e2ef4e371d01bd3bd3b426963826c39009cb7",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/test/durable_execution_test.exs",
+      "action": "modify",
+      "original_sha256": "b6a25d4493468a80a11e22e4eac0cebd45b39f47ae93a65c3cace48a47ed43f2",
+      "result_sha256": "4fe33a55bbd6f8bb181f0292e2e881ee35bda6021582ac0abd89537d9e7b311a",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_run/test/screenplay_pipeline_test.exs",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "82baab05cbd26e9ed73108b2b2a2c20607383b8538e446f0b4ed074480fcb10f",
+      "mode": 420
+    },
+    {
+      "path": "packages/fount_workshop/lib/fount_workshop/session.ex",
+      "action": "modify",
+      "original_sha256": "b77bea10ff5d971602330ec0c2573b354ed53d6dc96dd79929730c8fc91363b2",
+      "result_sha256": "9ee19cce41d6d97462a49436f777b14432c16362c624aa625e10115f15a9b9ce",
+      "mode": 420
+    },
+    {
+      "path": "scripts/tests/test_screenplay_pipeline_source.py",
+      "action": "add",
+      "original_sha256": null,
+      "result_sha256": "1c780e80dd5cefc082591badb3268ac053ed1f8b3fbd24d9aaa35a2ba69c45bc",
+      "mode": 420
+    }
+  ],
+  "deletions": []
+}

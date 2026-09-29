@@ -1,49 +1,66 @@
-# Phase 4 runtime QC — Temporal Views and Forward-Reader Engine
+# Phase 04 runtime QC report — Screenplay pipeline
 
-**Date:** 2026-09-27 HST. **Engineering result:** passed. **Phase status:** `COMPLETE` under D046; first-reader pilot unperformed validation debt. No Phase-5 work, hosted-provider call, or human pilot was performed.
+## Runtime destinations
 
-## Source identity and baseline
+- fount: `/home/home/p/g/n/fount`
+- docset: `/home/home/jb/docs/20260928/fount`
+- docset_canonical: `/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount`
+- docset_git_root: `/home/home/p/g/n/brainstorms`
+- system_one_sdk: `/home/home/p/g/n/system_one_sdk`
+- inference: `/home/home/p/g/n/inference`
+- agent_session_manager: `/home/home/p/g/n/agent_session_manager`
 
-- Applied Fount commit: `bf20ede6bd3c868fae37b1dda61061767adc7899`; applied complete docset commit: `a59aea645547975122fea11af0ceabe675979c99`. Both checkouts were clean at entry.
-- All 23 applied Phase-4 files matched `PHASE_04_FILE_INVENTORY.json` byte hashes. The embedded overlay manifest SHA-256 was `b680ce364dd7243b2cae21bab645858af4dbe6f4cb428e22a547139931a44317`, matching the inventory. No mismatch bypass or baseline overwrite was needed. The supplied raw Repomix XML was unsealed and carries no current source Git identity; none is inferred.
-- Post-repair Fount commit: `cfde46cd2f654e050cbb9b5dbe32501625510c69`; tree `2f6e7e6c9514bab1962c9195c518076646220458`, clean checkout. Eleven changed-file applied and post-QC hashes/lengths are in the inventory's `repair_payloads`. The manifest remains the historical *applied overlay* identity; it is not relabeled as the post-QC payload.
-- Package resolution used `FOUNT_SYSTEM_ONE_SDK_PATH=/home/home/p/g/n/system_one_sdk/packages/system_one_sdk` from the established Phase-3 checkout policy. No dependency declaration was changed.
+## Identity and outcome
 
-## Executed gates
+Phase 04 is **COMPLETE** after executed local QC. P01–P07 each passed. Phase 05 remains `NOT_STARTED`; acceptance, delivery and the web app were not implemented here.
 
-Commands ran from Fount root unless a package directory is shown. `SDK` below abbreviates the exact environment assignment above. Exit codes are observed. The first runs matter: bare `bash scripts/verify_handoff.sh --offline` exited 1 for missing SDK resolution and Phase-4 syntax; the exact same command with `SDK` exited 0 after repair.
+- Verified Phase 03 Fount baseline: `a3b9d8fe5d009dad15b6d3d354cc470560ec1c0b`; Phase 04 docset source baseline: `61f0137533cc1c8824c3edffc16a9200dbbf9409`.
+- User-applied commits at QC entry: Fount `2586e5eae3baf8817c6c6efafd78ec6189d81a32`; docset `74c2225af44e1d7d898064731b9f08469b218b41`. Both were clean `main` branches tracking `origin/main`. Neither ZIP was reapplied.
+- Supplied overlay archive SHA-256: `48316fd07c0c496038addf6ff0f116f03d837a9c74c534c0aade5999943b2401`. Copied manifest SHA-256: `2d9eab9764a60fb6ed02b09deefd62dd76dde9c97a23d9fa9c89c662a9c23f55`. All 17 installed result hashes matched the manifest before repairs; it declared zero deletions. The installed Git diff from the Phase 03 baseline contained the 17 payload paths and the copied manifest, with no unrelated overwrite or deletion. Subsequent differences are the reviewed QC repairs below.
+- Input packet manifest SHA-256: `e0e5d1a7f7b9732c476ecb4e71e9a5ff2e19ba32d7ebf35099f371f9a073793a`.
+- Final verified Fount repair commit: `c3af2d662198aaf15dd8e754f2d25c109c2707c1`; tree `7236d35c2cf352b556e8b15ae876060c84fd39b5`. `git diff --check` passed, the Fount worktree was clean, and normal `origin/main` push succeeded (`2586e5e..c3af2d6`). The containing docset commit supplies this report's docset identity.
 
-| Command | Exit | Evidence |
-|---|---:|---|
-| `mix format --check-formatted`; `mix compile --warnings-as-errors` (root) | 0, 0 | Workspace root baseline. Package source required repairs below. |
-| `SDK mix ci` (root, final) | 0 | Four-package format, lock, warnings-as-errors compile, test, architecture, strict Credo, Dialyzer, and ExDoc warnings-as-errors passed. Final log `/tmp/fount-phase4-root-ci-final.log`. |
-| `SDK mix test`; `SDK mix fount.architecture` (root) | 0, 0 | Core 71, Observe 59, Intelligence 74 before final extra regression / 75 in final CI, Workshop 58: **263 final tests**. Architecture: 272 compiled modules, 234 source files, zero violations. |
-| `python3 scripts/tests/test_phase_four_source.py`; `python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v` | 0, 0 | Five Phase-4 source checks; 31 Python tests. The actual checkout contains `handoff/prune_deleted_directories.py`, imported by the old cleanup test; the offline XML-only missing-helper issue does not apply here. |
-| `SDK bash scripts/verify_handoff.sh --offline` | 0 | All 17 package dependency/format/compile/test/architecture rows passed; `/tmp/fount-handoff-offline-20260927T060214-383762/status.tsv`. |
-| `(cd packages/fount_intelligence && SDK mix format --check-formatted; mix compile --warnings-as-errors; mix credo --strict; mix dialyzer; mix docs --warnings-as-errors)` | 0 each | Strict Credo zero issues; Dialyzer zero errors; ExDoc clean. CI also ran these across all four packages. |
-| `(cd packages/fount_intelligence && SDK mix test test/temporal_views_test.exs)` | 0 | 5 passed. |
-| `(cd packages/fount_intelligence && SDK mix test test/reader_forward_test.exs)` | 0 | 12 passed after adding boneyard/omitted regression. |
-| `(cd packages/fount_intelligence && SDK mix test test/reader_story_world_differential_test.exs)` | 0 | 2 passed. |
-| `(cd packages/fount_intelligence && SDK mix run examples/phase_four.exs)` | 0 | Provider-free non-linear Reader/Temporal demonstration ran. |
-| `FOUNT_DATABASE_URL=postgres://home@127.0.0.1:55432/fount_phase4_qc MIX_ENV=test mix ecto.create`; `mix ecto.migrate` in Core | 0 each | Isolated Phase-4 database only; no user database reset/drop. |
-| Same URL, `MIX_ENV=test mix test integration` in Core and Workshop (`SDK` set for Workshop) | 0, 0 | Core 11; Workshop 14, including persistence, writer and export checks. |
-| Same URL/SDK, `MIX_ENV=test mix run examples/phase_one.exs --out /tmp/fount-phase4-writer-accept --decision accept --pdf` in Workshop | 0 | Mock/Observe Sandbox writer acceptance and two-page PDF. No hosted provider. |
-| `(cd packages/<package> && SDK FOUNT_PACKAGE_BUILD=1 mix hex.build --output /tmp/fount-phase4-<package>.tar)` for all four packages | 0 each | Archives inspected: 117/67/68/81 members. Intelligence contains new guide and example; no build/deps/node_modules/.env/PDF/nested archive content. Nothing published. |
+## Toolchain and isolated database
 
-## Repairs
+Erlang/OTP 29, Elixir/Mix 1.20.3, PostgreSQL client/server 18.6, Node.js 24.19.0, npm 11.17.0, `pdfinfo` 26.01.0 and Repomix 1.18.0 were available. `FOUNT_SYSTEM_ONE_SDK_PATH=/home/home/p/g/n/system_one_sdk/packages/system_one_sdk` supplied the local unpublished SDK. The disposable test database was `fount_phase04_qc_20260928`, reached as `postgresql://home@localhost:5433/fount_phase04_qc_20260928?socket_dir=/var/run/postgresql`; no provider credential or production connection was used.
 
-1. Repaired malformed Reader default argument and corrected its primary function to `reduce/3`, preserving `compile/3` as the documented convenience call. The original declaration could not format or compile.
-2. Split joined `test_helper.exs` calls onto separate lines. The delivered helper could not parse.
-3. Formatted eleven delivered Intelligence files, then refactored new Reader/Temporal functions and event validation to satisfy strict Credo without weakening checks. The future-evidence revision, visibility, point-order, and provenance guards remain active.
-4. Used a deterministic plain-list graph walk for `StoryTime.connected_nodes/2` to clear Dialyzer opaque `MapSet` errors while preserving connected-region semantics.
-5. Added a focused Reader regression proving that boneyards and omitted scenes are absent from ordinary checkpoints. Private notes and future evidence already had executed tests.
+The explicit named schemas `phase04_qc_fresh_20260929` and `phase04_qc_upgrade_20260929` each applied Core versions `20260924000000`, `20260924010000`, `20260924020000`, `20260927000000`, `20260928000000`, `20260928011000`, followed by Run versions `20260928010000`, `20260928020000`. Reapplying current Run migrations returned `[]`. No migration file changed from the verified Phase 03 Fount baseline. The populated `run_upgrade_test.exs` independently verified the Phase 02→Phase 03 upgrade path, and the final Phase 04 integration suites created fresh isolated `phase04_<UUID>` schemas and dropped them. Distinct PostgreSQL connections were used by the inherited competing-claim, budget and recovery tests; the Phase 04 restart tests stopped and restarted their Repo on the same schema. `MIX_ENV=test mix ecto.migrate` in `packages/fount_run` exited zero but warned that no Ecto Repo is configured for that application; the named-schema migration script and integration setup are the executed Run migration evidence.
 
-The Phase-4 correctness ladder is exercised by the 19 targeted tests: frozen earlier snapshots under future mutation; unseen future evidence rejection; note/boneyard/omitted exclusion; deterministic replay; later-presented flashback versus diegetic chronology; reader/diegetic knowledge differential; directional relationships; setup/payoff and question lifecycles; presentation-suffix versus story-time connected recomputation; trajectory semantics. Compiled architecture and source checks verify that pure Reader/Temporal modules have no acquisition, persistence, or provider effect dependency. Trajectories expose presentation-relative or qualified/partial diegetic semantics as applicable. These are deterministic software checks, not creative-quality validation.
+## Executed checks
 
-## First-reader gate and remaining limits
+All final commands below exited `0` with the SDK and database environment above. Final logs are under `/tmp/fount_phase04_qc_logs/final2_*.log`; they are local execution logs, not sealed packet inputs.
 
-`PHASE_04_DOMAIN_REVIEW_PACKET.md` still has no rights-cleared corpus manifest, first-exposure checkpoint records, independent readers, or disagreement analysis. Fixtures, Codex inspection, and model output do not satisfy that pilot. At the original engineering checkpoint Phase 4 was `DOMAIN_REVIEW_PENDING`. The later D046 authorization marks it `COMPLETE` with this study skipped as visible validation debt; Phase 3's D045 override remains a separate historical decision. No Phase-5 Diagnosis, Acquisition, or multi-pass Playbooks were implemented.
+| Commands and directory | Executed result |
+| --- | --- |
+| Fount root: `mix setup`; `mix format --check-formatted`; `mix deps.unlock --check-unused`; `mix blitz.workspace format --check-formatted`; `mix blitz.workspace lock_check`; `mix blitz.workspace compile`; `mix fount.architecture` | PASS. |
+| Fount root: `mix test`; `mix blitz.workspace credo --strict`; `mix blitz.workspace dialyzer`; `mix blitz.workspace docs`; `mix ci` | PASS. Each root test and CI run covered Core 73 (one property), Observe 65, Intelligence 141, Workshop 80 and Run 13. Strict Credo found no issues; Dialyzer found zero errors in all five libraries. |
+| Fount root: `python3 -m unittest discover -s scripts/tests -p 'test_*.py'`; `python3 scripts/final_acceptance.py` | PASS, 155 Python tests and 16 source acceptance checks. The latter is source-only and is not treated as runtime evidence. |
+| `packages/fount_run`: `MIX_ENV=test mix ecto.migrate`; `mix test`; `MIX_ENV=test mix test integration/screenplay_pipeline_test.exs`; `MIX_ENV=test mix test integration/durable_execution_test.exs`; `MIX_ENV=test mix test integration/storage_constraints_test.exs integration/run_foundation_test.exs integration/run_upgrade_test.exs`; `MIX_ENV=test mix test integration` | PASS. Counts 13, 6, 12, 11 and 29 respectively. The migrate command's no-configured-Repo warning is explained above. |
+| `packages/fount`: `MIX_ENV=test mix ecto.migrate`; `mix test`; `MIX_ENV=test mix test integration` | PASS. Core migration command exited zero; 73 unit/property and 16 integration tests passed. |
+| `packages/fount_workshop`: `mix test`; `MIX_ENV=test mix test integration` | PASS, 80 unit and 21 integration tests. |
+| Each of `packages/fount`, `fount_observe`, `fount_intelligence`, `fount_workshop`, `fount_run`: `FOUNT_PACKAGE_BUILD=1 mix hex.build` after tests | PASS, five archives built and hashed, then generated archives removed. |
+| `MIX_ENV=test mix run /tmp/fount_phase04_named_migrations.exs` in `packages/fount_run`; `git diff --check` | PASS. Both named fresh/upgrade schemas had all eight migration versions; rerun was empty. |
 
-## Subsequent user authorization — D046
+Hex archive SHA-256 values: Core `5d2ea25df1c481dfcc722355d53963d07dc2f31da3dc158864b6264a064eaad3`; Observe `d7c29a06dbcc93eacd3c91cc774259fef80b3379962ef582d23393023668f088`; Intelligence `c6d16a35c59139461af1019b6378eb490ea057bfd69935ce198063921efd6ba1`; Workshop `726787d6aab313cdbad937e6f1aa5f582b7ca4b416eef68df16f17de1273b8e5`; Run `7cb78ba8e97246a15068d7c89c59ef37de186d5ce4e0f8e3a2516e467b41b11e`. Building archives does not certify published dependency installation.
 
-After the engineering checkpoint, the user authorized marking Phase 4 complete with the first-reader pilot skipped, then made all future human reviews optional and nonblocking. The study packet remains available, but no participant, corpus result, human-calibrated interpretation, or usefulness finding is claimed. Phase 4 is `COMPLETE` on the engineering evidence above; the unperformed study remains visible validation debt. This addendum supersedes the earlier pending-status conclusion without changing any test result or Fount source identity.
+## P01–P07 executed acceptance
+
+| ID | PostgreSQL and deterministic runtime evidence | Result |
+| --- | --- | --- |
+| P01 | `screenplay_pipeline_test.exs` ran brief→opening and selected-scene dialogue journeys through intake, investigation, page-free strategy gate, write and check. Both saved changed page text, candidate/base IDs, reports/checks and a pending review; Core canonical head remained at the initial revision. | PASS |
+| P02 | Reveal/train fixture saved exactly three distinct routes before any candidate rows, retained the stated antagonist-motive uncertainty in the strategy step, and recorded the protected-material failure. One targeted repair preserved the train action and added the evidence-cabinet consequence; the first failed check scheduled repair and did not accept an intermediate candidate. | PASS |
+| P03 | Public `FountRun.submit_decision/4` covered success, identical replay, competing response, wrong actor, stale context, stale plan and stale policy. SQL confirmed one resolved decision row and one idempotent write step; replay returned the same successor. | PASS |
+| P04 | The first failed check scheduled one separate durable `iterate` step, with three provider dispatches and zero malformed/transport retries on that step. Another fixture exhausted `max_iterations: 1`, stopped after one iterate and retained a pending `iteration` decision. Provider requests grew cumulatively from 2 at the strategy gate to 3 after the first write/check and 6 after iteration; Workshop options under Run set `max_repair_rounds: 0`. Phase 03 budget/retry tests remained green. | PASS |
+| P05 | SQL found zero accepted writing candidates. The repaired candidate's parent was the failed candidate, both candidates bound to the original Core base revision, and the final check retained lineage, report IDs and passing checks. Full `Screenplay.diff` showed the protected train action changed only in the rejected first candidate and the final candidate added a scene/elements; canon did not move. | PASS |
+| P06 | Repo stop/restart at strategy and check checkpoints preserved the pending route decision and reused saved provider requests and successor work. Identical submission replay reused the write step. The unchanged Phase 03 durable execution suite passed 12/12, including known-success reuse and ambiguous paid-outcome recovery with distinct connections. | PASS |
+| P07 | All nine Workshop request contracts validated in the Phase 04 integration test; standalone Workshop 80-unit/21-integration suites and Core 73-unit/16-integration approval-safety surfaces passed. The registry returned `stage_handler_unavailable` for both `decide` and `deliver`; demonstrated runs ended at saved `candidate_review` or unresolved `iteration`, with no final acceptance or delivery. | PASS |
+
+## Repairs and preservation
+
+The applied source required formatting and had an undefined iteration `envelope`, an invalid Workshop guard, a miswrapped request fixture and mismatched scripted repair/provider expectations. The strategy submission initially read a stale plan-step request rather than reconstructing its persisted successful session/result bindings; this was fixed within the same SQL transaction. Core candidate row decoding now converts `parent_candidate_id` to a UUID. Investigation uncertainty now includes the Workshop `uncertainties` field and survives the saved route gate. A pre-existing Workshop test cleanup race was corrected after an intermittent teardown failure. Focused journey assertions were strengthened for decision row/write-step uniqueness, uncertainty, page-free routing, complete candidate diff, cumulative provider usage and restart reuse. The full gate ladder above was rerun after the final fixes. No Core canonical acceptance bypass or later-stage success handler was introduced.
+
+Optional live paid providers and human screenplay-quality assessment were **NOT_RUN**; they are not Phase 04 engineering gates. The deterministic fixtures establish state transitions and constraints, not creative quality. Phase 05 control/completion and Phase 06 browser/PDF journeys remain future work.
+
+## Next handoff
+
+The Fount repair commit was pushed to `origin/main`. Phase 04 state, traceability, decisions and implementation matrix were updated after runtime evidence. The docset refresh/validation, docset push and five fresh sealed Phase 05 XMLs are recorded by the final containing docset commit and the external packet manifest, which holds exact source commits and attachment hashes. Stop before Phase 05 implementation.

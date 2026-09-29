@@ -1,156 +1,114 @@
-# Codex QC handoff — Fount Phase 5
+# Phase 05 runtime QC handoff — Control and completion
 
-You are the runtime/QC agent for **Phase 5 — Diagnosis and Multi-Pass Playbook Shell**. The user has already applied and committed the Phase-5 Fount overlay and complete docset before handing the checkouts to you.
+The user has already applied the Phase 05 Fount overlay and complete docset, then committed and pushed both repositories before this handoff reaches the local runtime agent. **Do not reapply either ZIP.** Verify the installed result, run/repair Phase 05, update the same repositories, and stop after preparing the Phase 06 packet.
 
-**Do not reapply the overlay. Do not implement Phase 6.** Compile, test, inspect, repair and complete Phase 5 only.
+Current phase state from the offline agent: **OFFLINE_IMPLEMENTED**. C01–C07 application runtime acceptance is **NOT_RUN** and Phase 05 is not certified.
 
-## 1. Establish the applied source
+## Runtime destinations
 
-Record the exact Fount and docset commits you received. Compare the applied Phase-5 files with `handoffs/PHASE_05_FILE_INVENTORY.json` and the embedded overlay manifest. The offline Fount input was a raw Repomix export without a current authenticated Git seal; the docset's Phase-4 commit `cfde46cd2f654e050cbb9b5dbe32501625510c69` is historical baseline context only.
+Fount repository: `/home/home/p/g/n/fount`
+Operational docset: `/home/home/jb/docs/20260928/fount`
+Canonical docset: `/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount`
+Docset Git root: `/home/home/p/g/n/brainstorms`
+System One SDK: `/home/home/p/g/n/system_one_sdk`
+Inference: `/home/home/p/g/n/inference`
+Agent Session Manager: `/home/home/p/g/n/agent_session_manager`
 
-If an applied file differs from the manifest payload, inspect the user commit and any legitimate baseline repair. Preserve unrelated work; do not bypass a preimage/payload mismatch with blind extraction.
+## Exact baselines and offline artifact identity
 
-## 2. Read the exact Phase-5 contracts
+- Verified Phase 04 Fount baseline: `c3af2d662198aaf15dd8e754f2d25c109c2707c1`.
+- Verified Phase 04 docset baseline: `e3369f4bba8e977d83d5091126c9261488893a98`.
+- Sealed packet manifest SHA-256: `77a51ef4f078b01758b692488e2347bc900016be8eff8069f96ace87896602de`.
+- Phase 05 overlay SHA-256: `81a620d81d1e99b5812aaff9f8076e991aeb07715b926979f09a6fc891e8f75e`.
+- Embedded/copied overlay manifest SHA-256: `cc2c8339e7d9750514676f5d352106639b5ac36a625f6338cc5731e11334ed35`.
+- Overlay operations: 31 writes (18 modified, 13 added), zero deletions.
+- Exact input hashes/commits: [PHASE_05_INPUTS.json](PHASE_05_INPUTS.json).
+- Requirement/source/test mapping: [PHASE_05_IMPLEMENTATION_MATRIX.md](PHASE_05_IMPLEMENTATION_MATRIX.md).
 
-Before repair, read:
+Before runtime repair, verify the installed Phase 05 result hashes against [PHASE_05_OVERLAY_MANIFEST.json](PHASE_05_OVERLAY_MANIFEST.json) and confirm no unrelated paths were overwritten or removed. Do not require the installed tree to have a particular post-apply commit hash; record the user's containing commits instead.
 
-- `PROGRESS.md`;
-- Phase 5 in `16_PHASED_IMPLEMENTATION_PLAN.md`;
-- `09_DIAGNOSIS_SYSTEM.md`;
-- `10_PLAYBOOKS_AND_WRITER_WORKFLOWS.md`;
-- `27_WRITER_INTERACTION_AND_PRESENTATION_CONTRACT.md`;
-- `30_LONGITUDINAL_RESOURCE_ECONOMICS.md`;
-- `24_INTERNAL_BOUNDARY_ENFORCEMENT.md`;
-- `handoffs/PHASE_05_IMPLEMENTATION_MATRIX.md`;
-- `handoffs/PHASE_05_PRESERVATION_AUDIT.md`;
-- `handoffs/PHASE_05_STATIC_CHECKS.json`.
+Offline source checks passed `git diff --check`, 7/7 Phase 05 source-contract tests, 154 supported Python source tests and 16/16 `final_acceptance.py` checks. The sealed Repomix snapshot omits `scripts/prune_deleted_directories.py`, so the offline agent could not execute `test_prune_deleted_directories.py`; the installed repository must run the complete Python suite during local QC. These are source-only checks, not runtime acceptance.
 
-The central boundary is:
+## Read first
+
+Read `AGENT_START_HERE.md`, `state.json`, `RUNTIME_QC.md`, `HANDOFF_PROTOCOL.md`, `phases/05_CONTROL_AND_COMPLETION.md`, `DATA_AND_EXECUTION.md`, `REVIEW_AND_APPROVAL_MODEL.md`, `WORKFLOWS_AND_UI.md`, this handoff, `PHASE_05_IMPLEMENTATION_MATRIX.md`, and the Phase 04 runtime QC report. Inspect the Phase 05 migration and all new/changed `packages/fount_run` modules before running tests.
+
+## Required gate ladder
+
+Use the local unpublished SDK path and isolated PostgreSQL database/schema conventions from prior QC. Record exact commands, tool versions, database/schema names and exit status. At minimum run, repair and rerun:
 
 ```text
-pure Diagnosis: explicit data in -> diagnosis / evidence need out; no acquisition/provider/persistence
-shell: plan -> Observe -> pure reduce/query -> closed Context -> Observe -> pure diagnosis -> writer packet
-Workshop: creative candidate pages and canonical acceptance
-```
-
-## 3. Focused compile/test first
-
-Use the checkout's real toolchain and repository-native aliases. First make the new source format/compile clean and run the focused Phase-5 tests:
-
-```bash
+# Fount root common gates
+mix setup
 mix format --check-formatted
-mix compile --warnings-as-errors
-
-cd packages/fount_intelligence
-mix test test/diagnosis_test.exs
-mix test test/context_builder_test.exs
-mix test test/writer_registry_test.exs
-mix test test/writer_packet_test.exs
-mix test test/writer_runner_test.exs
-mix test test/phase_five_architecture_test.exs
-mix run examples/phase_five.exs
-cd ../..
-```
-
-Repair actual failures rather than weakening the contracts. In particular, do not turn partial coverage into a clean result, let future capability-family assumptions leak into Phase 5, or make provider/session code part of the pure core.
-
-The source-writing environment did not have Elixir/Mix, so syntax, formatting, structs/specs, runtime behavior and all ExUnit assertions require real verification now.
-
-## 4. Phase-5 correctness ladder
-
-Verify with executed tests:
-
-1. `Diagnosis.evaluate/4` is deterministic and provider/persistence free;
-2. an unassessed hypothesis returns an explicit `EvidenceNeed`, not an invented conclusion;
-3. competing supported hypotheses can coexist without choosing a single winner;
-4. supported counterevidence remains visible and raises uncertainty rather than disappearing;
-5. uncertain/unsupported hypotheses produce abstention records that preserve alternatives, evidence and next investigations;
-6. the base Observe relevance pass never filters source evidence out of the diagnosis request;
-7. hypothesis evidence IDs must be nonempty, unique and inside the selected source evidence;
-8. default source selection that exceeds `max_evidence_fragments` is explicitly partial even if every scheduled provider call succeeds;
-9. Intelligence structs and any other runtime structs are rejected before Observe context construction;
-10. unknown context slots fail before provider dispatch;
-11. `ContextBuilder` uses the installed lens contract and Observe-owned Fact/Belief/Relation/etc. primitives rather than mirrored Intelligence structs;
-12. preflight makes no provider call and reserves no analysis budget;
-13. the playbook-level provider-request cap and shared measurement-state budget apply across both acquisition passes;
-14. exhausted/skipped/failed contextual work leaves missing evidence and `partial` coverage;
-15. actual usage records base/contextual acquisition and budget consumption; unknown hosted cost stays unknown rather than becoming zero;
-16. `Sandbox` can drive the entire multi-pass path deterministically with a fixed run ID;
-17. exactly the ten Phase-5 writer playbooks are exposed by `writer_playbooks/0`;
-18. the existing low-level playbook registry and `run/execute/plan/explain` paths still work;
-19. the writer packet keeps source evidence, derived state, diagnoses, strategies and candidate material separate;
-20. acquisition/reduction execution trace is provenance, not mislabeled screenplay trajectory;
-21. candidate pages remain Workshop-owned (`candidate` is nil in this investigative phase);
-22. no Phase-6 Scene/Agency/Character/Relationship capability-family implementation has been smuggled into this phase.
-
-Add focused regressions if a repair reveals a gap.
-
-## 5. Architecture and dependency audit
-
-Run the compiled architecture gate and inspect dependency graphs. At minimum prove:
-
-- pure `Fount.Intelligence.Diagnosis*` has no Observe execution, acquisition, Repo/persistence, SystemOneSDK, Inference, ASM, filesystem/network/environment, clock/random or hidden mutable-state dependency;
-- the shell may call `Fount.Observe`, but provider-native types terminate behind Observe;
-- `fount_intelligence` still has no direct SystemOneSDK, Inference or ASM dependency;
-- Inference remains Workshop-owned;
-- ASM remains behind Inference/its consuming application and is not a new Fount runtime dependency;
-- the two new diagnosis lenses remain closed declarative assets and cannot name arbitrary executable modules/functions;
-- the four-package Fount DAG remains intact.
-
-The five attached dependency snapshots were inspected offline: SystemOneSDK 0.6.0, Inference 0.5.0 and ASM 0.17.1. Phase 5 itself uses none of those public facades directly.
-
-## 6. Full preservation ladder
-
-After focused fixes, run the current repository equivalents of:
-
-```bash
-python3 scripts/tests/test_phase_five_source.py
-python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v
-bash scripts/verify_handoff.sh --offline
-mix format --check-formatted
-mix compile --warnings-as-errors
-mix test
-mix ci
+mix deps.unlock --check-unused
+mix blitz.workspace format --check-formatted
+mix blitz.workspace lock_check
+mix blitz.workspace compile
 mix fount.architecture
+mix test
+mix blitz.workspace credo --strict
+mix blitz.workspace dialyzer
+mix blitz.workspace docs
+mix ci
+python3 -m unittest discover -s scripts/tests -p 'test_*.py'
+python3 scripts/final_acceptance.py
+git diff --check
+
+# Run package / migrations / integration
+cd packages/fount_run
+MIX_ENV=test mix ecto.migrate
+mix test
+MIX_ENV=test mix test integration/control_completion_test.exs
+MIX_ENV=test mix test integration/screenplay_pipeline_test.exs
+MIX_ENV=test mix test integration/durable_execution_test.exs
+MIX_ENV=test mix test integration/storage_constraints_test.exs integration/run_foundation_test.exs integration/run_upgrade_test.exs
+MIX_ENV=test mix test integration
+
+# Core / Workshop regression
+cd ../fount
+MIX_ENV=test mix ecto.migrate
+mix test
+MIX_ENV=test mix test integration
+cd ../fount_workshop
+mix test
+MIX_ENV=test mix test integration
+
+# Package builds after tests
+FOUNT_PACKAGE_BUILD=1 mix hex.build   # run in each of fount, fount_observe, fount_intelligence, fount_workshop, fount_run
 ```
 
-Also run package-local strict Credo, Dialyzer, ExDoc warnings-as-errors and Hex/package inspection as required by the current checkout. Re-run the existing StoryWorld/Temporal/Reader/low-level-playbook tests and Observe context/measurement/cache/provider/Sandbox tests.
+Also perform fresh-schema and populated-upgrade migration proof through the new Phase 05 migration. Reapplying current migrations must be empty/idempotent. If `mix ecto.migrate` has the prior no-configured-Repo limitation in `fount_run`, retain the named-schema script as the actual migration evidence and report the warning truthfully.
 
-Run the current isolated Core/Workshop persistence and writer-preservation gates, including DB-backed workflows, acceptance/rejection and PDF/export checks when the repository's QC policy requires them. Phase 5 intentionally changes no Core or Workshop source, but earlier green results do not automatically transfer across a new Intelligence/Observe build.
+## C01–C07 executed acceptance proof
 
-### Known offline Python gap
+### C01 — canonical decision/approval replay
+Use distinct PostgreSQL connections to race two responses to one final approval decision. Prove exactly one resolution, one linked durable approval identity and one Core acceptance. Exercise the same decision via public `submit_decision/4`, `approve_run/4`, CLI `decide` and CLI `approve`; identical replay must return the same outcome. Wrong principal, stale tab/context fingerprint, altered option/candidate/check fingerprint/plan/policy and cross-run decision must fail without scheduling or accepting work.
 
-The supplied Fount XML contains `scripts/tests/test_prune_deleted_directories.py` but omits `scripts/prune_deleted_directories.py`. Offline discovery therefore ran 35 tests with 34 successful and one import error. Inspect the real applied checkout. If the helper legitimately exists there, rerun normally. If it is still absent, reconcile it from repository history/current policy; do not attribute it to Phase 5 without evidence and do not fabricate a passing result.
+### C02 — pause/resume/stop and delayed work
+Pause at saved work, restart Repo/processes on the same schema, resume and continue. Race `stop` with an active worker and with an approval callback using distinct connections. Record deterministic outcome, fencing token/attempt state and retained candidate. Release a delayed callback only after stop: safe evidence may be appended, but the attempt must remain fenced/terminal and there must be no Core acceptance. Export the stopped candidate without resuming acceptance.
 
-## 7. Screenwriter-facing demonstration
+### C03 — completion modes and provenance
+Run candidate-only completion and prove canonical head unchanged while reading exported Fountain/FDX/review/diff/provenance files. Then complete human, registered agent and registered service paths and query Core acceptance rows: one acceptance each with authentic origin, approver and Run provenance. An unregistered agent/service approver must fail before Core. Acceptance followed by export failure must retain canon and acceptance while Run remains nonterminal/partial until delivery succeeds.
 
-Run `packages/fount_intelligence/examples/phase_five.exs` and inspect the rendered packet, not merely the exit code. The interrogation case should make the writing decision clearer by showing the writer concern/intended effect/protected strength, exact evidence, more than one testable explanation, counterpoint/uncertainty, coverage/resource usage and next investigation while avoiding a screenplay score or automatic rewrite.
+### C04 — checks, overrides and fallback
+Force automated required fail and unknown outcomes; neither may accept. Exercise an authorized human semantic override only for a check declared `overridable`, including nonblank reason, and prove deterministic/nonoverridable required failures block every principal. Deliver rejected, malformed and post-stop/fenced callbacks; inspect exact safe review/outcome evidence and prove no acceptance. Trigger fallback after a terminal failed automated attempt and show it creates a fresh human decision and a distinct child attempt linked to the parent; the failed review must not be converted into an acceptable automated attempt.
 
-If the output is technically valid but confusing or semantically mislabeled, repair the Phase-5 packet/renderer within this phase.
+### C05 — plan/policy fencing and rebase
+While an approver is active, change plan then policy, including a change that leaves generated pages byte-identical. The old attempt must fence. Inspect immutable snapshot history, old step bindings, inherited provider/cost/iteration commitments and idempotent command replay. Move canonical head after review to force stale-head compare/rebase. Use actual Workshop three-way conflict resolution; verify a fresh candidate and fresh check/review binding, then prove the old approval cannot accept. Inspect full composition/diff against the accepted base so unrelated prior candidate edits were not dropped.
 
-No hosted provider call is required merely to complete the deterministic Sandbox demonstration. Do not expose screenplay text or spend provider resources unless a current explicit gate requires it and the user authorizes it.
+### C06 — crash recovery and delivery retry
+Inject and persist evidence around all required boundaries: (1) before callback dispatch, (2) after callback response but before durable response/review persistence, (3) after review persistence, (4) after stable approval ID/payload persistence and (5) after acceptance commit but before acknowledgement/export. Saved review must resume without callback redispatch; saved approval must reuse the same approval ID; unknown callback outcome must reconcile or pause rather than blindly call again; Core rejection must retain attempt history; lost acceptance acknowledgement must yield one Core acceptance on retry. Separately force one configured PDF export failure, inspect its failed delivery row while other formats remain ready, restore PDF configuration and retry only the failed/missing format. Read every generated file and compare recorded checksum/revision identity; a return tuple alone is not acceptance proof. Run `pdfinfo`/equivalent on the successful configured PDF and record output.
 
-## 8. Optional human usefulness pilot
+### C07 — public API and CLI journeys
+Configure Repo, `FountRun.ActorContext`, scripted provider/services, artifact root and PDF options through trusted application/host configuration, not request JSON. Run all three product journeys end-to-end through `mix fount.run`, including start/show/step/decisions/decide or approve, steering/control and export as applicable. Record CLI exit codes for success, usage/input, trusted-config/auth, conflict/stale/fenced and runtime/partial cases. Rerun standalone Workshop acceptance through the authorized typed Core approval API and existing export. Verify the old Core actor-string signature cannot mutate canon.
 
-`PHASE_05_DOMAIN_REVIEW_PACKET.md` is retained under D046. It was not run offline. You may skip it without blocking Phase-5 engineering completion; record it as validation debt. Do not invent screenwriters/reviewers, usefulness findings, human agreement or calibration.
+## PDF and provider truthfulness
 
-## 9. Required QC record
+PDF and provider application checks are required when the selected/configured Phase 05 path uses them. If the configured PDF runtime or required scripted runtime dependency is unavailable, do not substitute an inspection binary or source review and do not mark the affected C06/C07 acceptance passed. Record the blocker and leave Phase 05 in `QC_FAILED`/`QC_IN_PROGRESS` as appropriate.
 
-Create `handoffs/PHASE_05_RUNTIME_QC_REPORT.md` containing:
+Paid live-provider calls and human screenplay-quality judgments are not required for deterministic engineering acceptance unless the local configuration explicitly selects them. Do not claim creative quality from scripted providers.
 
-- exact applied Fount/docset commits;
-- toolchain versions;
-- exact commands, exit codes and test counts;
-- every repair and why it was required;
-- post-repair file/source identity;
-- focused correctness-ladder evidence;
-- full architecture/preservation/package evidence;
-- writer demonstration result;
-- status of the optional human pilot;
-- remaining limitations/debt.
+## Completion procedure
 
-Update `PROGRESS.md`, `TRACEABILITY_MATRIX.md`, `PHASE_05_IMPLEMENTATION_MATRIX.md`, `PHASE_05_FILE_INVENTORY.json` if repair payloads change, and regenerate docset integrity records.
-
-Set Phase 5 to `COMPLETE` only when applicable engineering gates pass. Otherwise use the appropriate blocked/in-progress status with exact blockers.
-
-**STOP AFTER PHASE 5. Do not implement Phase 6 in this QC pass.**
+After all required gates pass, write `handoffs/PHASE_05_RUNTIME_QC_REPORT.md` with exact executed evidence, repairs, installed/result hashes, toolchain, database proof, acceptance evidence and final containing commits. Update Phase 05 in `state.json` to `COMPLETE` only then, set `verified_code_commit` to the tested Fount commit, `required_gates_passed: true`, update traceability/decisions/matrix, run `scripts/docset.py refresh` and `validate`, commit/push Fount and docset, and create the fresh sealed Phase 06 packet from those corrected commits. Stop after that handoff; do not implement Phase 06 in the Phase 05 runtime pass.

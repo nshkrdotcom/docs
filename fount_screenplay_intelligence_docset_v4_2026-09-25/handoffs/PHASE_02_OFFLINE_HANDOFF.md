@@ -1,6 +1,4 @@
-# Phase 02 offline implementation handoff
-
-Status: **OFFLINE_IMPLEMENTED** on 2026-09-28. Runtime certification is pending.
+# Phase 02 offline implementation handoff — Run foundation
 
 ## Runtime destinations
 
@@ -12,56 +10,22 @@ Status: **OFFLINE_IMPLEMENTED** on 2026-09-28. Runtime certification is pending.
 - inference: `/home/home/p/g/n/inference`
 - agent_session_manager: `/home/home/p/g/n/agent_session_manager`
 
-## Phase and inputs
+## Delivery identity and provenance
 
-`state.json` selected the first non-`COMPLETE` phase: **02 — Run foundation**. Phase 01 is retained as `COMPLETE` with verified code commit `e79510008735220545f4ee9322bade127c868d40`; it was not reopened.
+This handoff was reconstructed during runtime QC from the user-supplied Phase 02 handoff, the installed Fount source, and the installed overlay manifest. The docset checkout at `ecbbf4c46387a984d1af170d99f6560e19242a07` had no Phase 02 handoff files and still marked Phase 02 `NOT_STARTED`; the original delivered docset ZIP could not be compared byte for byte. This record does not claim to be the original offline handoff. Input identities are in [PHASE_02_INPUTS.json](PHASE_02_INPUTS.json).
 
-All five supplied sealed XMLs are recorded byte-for-byte in [PHASE_02_INPUTS.json](PHASE_02_INPUTS.json). The Fount and docset Repomix XMLs do not embed a reliable current Git commit identity, so none is invented. The dependency XMLs do embed clean source commits; they were inspected as references and remain unchanged.
+The Fount input was `fount(20260928-214212).xml` (SHA-256 `27aaf9c0059cb8a4093a63e8caaa98d1598e9afc7d9d908b2e29ae777d04130e`, 3485104 bytes); no reliable Git commit was embedded. The docset input was `docset(1).xml` (SHA-256 `08f521d050e104244f8acf6b88dec80c1e6ca7a6407b7aa9fba96b2cf01ace68`, 263126 bytes). Dependency snapshot commits are recorded in the inputs JSON. The prior verified Phase 01 Fount commit was `e79510008735220545f4ee9322bade127c868d40`.
 
-## Implemented behavior
+## Implemented source
 
-- Added `packages/fount_run` as the fifth Fount library, with Mix metadata, docs, host-free application startup, exported migration path, tests and PostgreSQL integration harness.
-- Added all ten required Run tables in one forward migration: runs, plans, policies, steps, attempts, events, decisions, approval attempts, usage and deliveries. Composite FKs/constraints keep run/screenplay/plan/policy/step identities coherent; append-only/immutable data is guarded in the database.
-- Added trusted `FountRun.ActorContext`, closed canonical plan/policy validation/fingerprints, and owner/authorized-principal resolution without accepting identity claims from untrusted request data.
-- Added public Phase 02 commands `start_run/4`, `get_run/3` and `list_runs/3`. Initial run + plan/policy v1 persistence is atomic and caller-bound idempotency conflicts on altered content. Start performs no provider work.
-- Added persistence primitives for immutable plan/policy snapshots and events, controlled step/attempt state, storage-only lease/fence identity, exact pending decision resolution, durable approval attempts, usage reservation/settlement and delivery identity/result replay.
-- Approval-attempt storage deliberately refuses an `accepted` outcome with `:acceptance_bridge_required`; Phase 02 cannot advance Core canon. Future Run commands are not exposed as successful no-ops.
-- Updated five-library workspace/CI/architecture/final-acceptance/package-count surfaces while preserving Core/Observe/Intelligence/Workshop boundaries and existing Phase 01 approval safety.
-- Did **not** implement Phase 03 worker behavior, provider execution/recovery, screenplay orchestration, policy callback dispatch, the shared acceptance bridge, or delivery IO.
+The delivered Fount overlay, `fount_run_phase_02_overlay.zip` (SHA-256 `cdeb0480d4852d4da643d2e60237879abf1e89a8ce43aefe2211e3e60658541b`), added `packages/fount_run` as a fifth library. Its public Phase 02 API is `migrations_path/0`, `start_run/4`, `get_run/3`, and `list_runs/3`. It provides trusted actor context, closed plan/policy validation and fingerprints, caller-bound idempotent creation, ten Run tables, append-only snapshots/events, decision and approval-attempt storage, and usage/step/attempt/lease/delivery identity primitives. It does not expose Phase 03 commands or perform provider work. Accepted approval attempts remain blocked by `:acceptance_bridge_required` pending a future Core bridge.
 
-Detailed R01–R06 source/test mapping is in [PHASE_02_IMPLEMENTATION_MATRIX.md](PHASE_02_IMPLEMENTATION_MATRIX.md).
+The copied [overlay manifest](PHASE_02_OVERLAY_MANIFEST.json) has SHA-256 `9c9f228b60c0352b0a70f001a2512b2577f1327219068a1f480ed94b0ba8e062`, 45 source operations (17 modify, 28 add) and zero deletions. All declared result hashes matched the installed Fount commit `3fc3aea5c73d1b9df7ee4bfc26e56a42a7de2aa2` before runtime repairs. The overlay was not reapplied. Source-to-requirement mapping is in [the implementation matrix](PHASE_02_IMPLEMENTATION_MATRIX.md).
 
-## Overlay and docset
+## Source-only checks and limits
 
-Delivered artifacts:
-
-- `fount_run_phase_02_overlay.zip` — SHA-256 `cdeb0480d4852d4da643d2e60237879abf1e89a8ce43aefe2211e3e60658541b`.
-- `fount_run_phase_02_docset.zip` — final hash is reported outside the archive after deterministic packaging to avoid self-reference.
-- `PHASE_02_RUNTIME_QC_HANDOFF.md` — also present here as [PHASE_02_RUNTIME_QC_HANDOFF.md](PHASE_02_RUNTIME_QC_HANDOFF.md).
-
-The Fount overlay contains **45** declared source operations: 17 modifications and 28 additions, with **0 deletions**. Its copied manifest is [PHASE_02_OVERLAY_MANIFEST.json](PHASE_02_OVERLAY_MANIFEST.json), SHA-256 `9c9f228b60c0352b0a70f001a2512b2577f1327219068a1f480ed94b0ba8e062`. The existing Fount overlay applier dry-ran the archive against the exact extracted sealed baseline and then applied it to a clean copy successfully.
-
-The docset ZIP remains a complete `fount/` tree. Historical Phase 01 evidence and superseded phase paths are retained; no docset file is deleted or renamed.
-
-## Source-only checks actually run
-
-| Check | Result |
-| --- | --- |
-| `python3 -m unittest scripts.tests.test_run_foundation_source scripts.tests.test_phase_one_source` | **PASS — 19 tests** |
-| `python3 scripts/final_acceptance.py` | **PASS — 16 source-only checks**; script explicitly states no Mix/BEAM/PostgreSQL proof |
-| `python3 -m unittest discover -s scripts/tests -p 'test_phase_*_source.py'` | **PASS — 118 tests** |
-| `python3 -m unittest scripts.tests.test_seal_handoff_snapshot` | **PASS — 8 tests** |
-| `PYTHONDONTWRITEBYTECODE=1 python3 scripts/test_docset.py` | **PASS — 9 docset transport/tooling tests**; temporary fixtures no longer assume live state is Phase 01 |
-| `python3 scripts/docset.py refresh` / `validate` on revised complete docset | **PASS — 53 files** |
-| CI YAML parse | **PASS** |
-| Existing overlay applier dry-run against exact sealed Fount baseline | **PASS — 45 operations accepted** |
-| Overlay apply to a clean extracted baseline | **PASS** |
-| Broad `python3 -m unittest discover -s scripts/tests -p 'test_*.py'` in the Repomix-extracted tree | **INCOMPLETE** — 135 tests passed and one loader error occurred because `scripts/prune_deleted_directories.py` is outside the supplied Repomix include set. Retry on the full checkout. |
-| Elixir format/compile/ExUnit/Ecto/PostgreSQL/Credo/Dialyzer/docs/Hex builds | **NOT_RUN — no Elixir/Erlang environment** |
-| Live providers / PDF / browser / human creative-quality checks | **NOT_RUN or not applicable to this storage phase** |
-
-Static/source checks do not certify R01–R06. The new package and migration require the local Elixir/PostgreSQL runtime pass.
+The supplied handoff reported 19 Phase 01/02 source tests, 16 final-acceptance source checks, 118 phase source tests, eight sealer tests, nine docset transport tests, YAML parse and lexical sanity, and a 45-operation overlay dry run passing in the web environment. Broad Python discovery loaded 135 passing tests but had one import error because the Repomix input omitted `scripts/prune_deleted_directories.py`. Elixir, Mix, ExUnit, Ecto, PostgreSQL, Credo, Dialyzer, docs and Hex builds were **NOT_RUN** there. None of those source-only checks certified R01–R06. The full-checkout Python suite and all runtime gates were run during local QC and are recorded separately.
 
 ## Next action
 
-Before the runtime agent receives [PHASE_02_RUNTIME_QC_HANDOFF.md](PHASE_02_RUNTIME_QC_HANDOFF.md), the user applies **both** Phase 02 ZIPs to their respective repositories and commits/pushes them. The runtime agent then starts from that installed state, verifies hashes/commits, **does not reapply either ZIP**, runs and repairs only R01–R06, updates the Phase 02 runtime report/state/traceability, and prepares fresh Phase 03 inputs only after the required engineering gates pass. It must not implement the Phase 03 worker during Phase 02 QC.
+The user had already applied and pushed source before local QC. Verify installed commits and source hashes, repair only Phase 02, run common and R01–R06 gates, then complete the report and prepare Phase 03 inputs. Do not apply either ZIP again or implement the Phase 03 worker.

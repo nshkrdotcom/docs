@@ -1,57 +1,30 @@
 {
   "format_version": 1,
   "phase": 2,
-  "selection": {
-    "status_at_input": "NOT_STARTED",
-    "spec": "phases/02_RUN_FOUNDATION.md",
-    "selected_by": "first non-COMPLETE phase in state.json",
-    "prior_phase": {
-      "id": 1,
-      "status": "COMPLETE",
-      "verified_code_commit": "e79510008735220545f4ee9322bade127c868d40"
-    }
-  },
-  "supplied_inputs": {
+  "source_delivery": "user-supplied Phase 02 runtime QC handoff; original docset ZIP files were absent from the installed docset commit",
+  "prior_verified_fount_commit": "e79510008735220545f4ee9322bade127c868d40",
+  "inputs": {
     "fount": {
-      "uploaded_name": "fount(20260928-214212).xml",
-      "bytes": 3485104,
+      "filename": "fount(20260928-214212).xml",
       "sha256": "27aaf9c0059cb8a4093a63e8caaa98d1598e9afc7d9d908b2e29ae777d04130e",
-      "source_root": "/home/home/p/g/n/fount",
-      "git_commit": "not_embedded_in_supplied_repomix"
+      "bytes": 3485104,
+      "git_commit_embedded": null
     },
     "docset": {
-      "uploaded_name": "docset(1).xml",
-      "bytes": 263126,
+      "filename": "docset(1).xml",
       "sha256": "08f521d050e104244f8acf6b88dec80c1e6ca7a6407b7aa9fba96b2cf01ace68",
-      "source_root": "/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount",
-      "git_commit": "not_embedded_in_supplied_repomix"
+      "bytes": 263126
     },
-    "system_one_sdk": {
-      "uploaded_name": "system_one_sdk(20260928-214142).xml",
-      "bytes": 981679,
-      "sha256": "ce3fcec597edcf82bf11dfd227a2a483c57d4ef2dc140f27816f1799a0c31942",
-      "source_root": "/home/home/p/g/n/system_one_sdk",
-      "git_commit": "e757598a89e549274b979f0e77c6a4b2b6667752"
-    },
-    "inference": {
-      "uploaded_name": "inference(20260928-214141).xml",
-      "bytes": 320605,
-      "sha256": "2b1906c46181a3d90efbb898a262467594430ab3907530d8b99a4ef6f6e1e06e",
-      "source_root": "/home/home/p/g/n/inference",
-      "git_commit": "3750a03ec62a3c9da11be9caa4dc911ebbbb9801"
-    },
-    "agent_session_manager": {
-      "uploaded_name": "agent_session_manager(5).xml",
-      "bytes": 1670906,
-      "sha256": "d2a9aec681b2cfc3f0766af2849fd397f76a3de8ee5c2c448f01aa6a35f61854",
-      "source_root": "/home/home/p/g/n/agent_session_manager",
-      "git_commit": "dc28a00e5ff6ad6932411334241ec8d9efda8857"
-    }
+    "system_one_sdk": {"git_commit": "e757598a89e549274b979f0e77c6a4b2b6667752"},
+    "inference": {"git_commit": "3750a03ec62a3c9da11be9caa4dc911ebbbb9801"},
+    "agent_session_manager": {"git_commit": "dc28a00e5ff6ad6932411334241ec8d9efda8857"}
   },
-  "dependency_disposition": {
-    "system_one_sdk": "inspected_reference_only_no_changes",
-    "inference": "inspected_reference_only_no_changes",
-    "agent_session_manager": "inspected_reference_only_no_changes"
-  },
-  "reason_dependencies_unchanged": "Phase 02 is the Run storage/authorization foundation. It must perform zero provider work; the dependency XMLs were inspected to avoid inventing interfaces, but no dependency repository change is required or authorized for R01-R06."
+  "delivered_fount_overlay": {
+    "filename": "fount_run_phase_02_overlay.zip",
+    "sha256": "cdeb0480d4852d4da643d2e60237879abf1e89a8ce43aefe2211e3e60658541b",
+    "copied_manifest_sha256": "9c9f228b60c0352b0a70f001a2512b2577f1327219068a1f480ed94b0ba8e062",
+    "modify": 17,
+    "add": 28,
+    "delete": 0
+  }
 }

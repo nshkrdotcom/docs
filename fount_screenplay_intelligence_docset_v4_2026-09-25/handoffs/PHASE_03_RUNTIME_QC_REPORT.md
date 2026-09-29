@@ -1,52 +1,71 @@
-# Phase 3 runtime QC report — Story-World Pure Core
+# Phase 03 runtime QC report — Durable execution
 
-**Date:** 2026-09-26 HST. **Engineering result:** passed. **Current Phase status:** `COMPLETE` under the subsequent explicit user-authorized Level-A review deferral recorded below. No Phase 4 work or live provider call was made.
+## Runtime destinations
 
-## Source and environment identity
+- fount: `/home/home/p/g/n/fount`
+- docset: `/home/home/jb/docs/20260928/fount`
+- docset_canonical: `/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount`
+- docset_git_root: `/home/home/p/g/n/brainstorms`
+- system_one_sdk: `/home/home/p/g/n/system_one_sdk`
+- inference: `/home/home/p/g/n/inference`
+- agent_session_manager: `/home/home/p/g/n/agent_session_manager`
 
-- Applied Fount overlay commit: `69b8537572c370992a47b6a8630909785eb973d1`; applied complete docset commit: `aabd58c9e0e814c6a62a18df23399151cbcc4920`. Both repositories were clean at entry. Fount Phase-3 QC repair commit: `60f989bcb9935b28519c908f3cd123ad6efe172f`; tree: `dceb415ceb697eabed1fb84eb091a71fe1666458`. The Fount checkout is clean after that commit.
-- The installed overlay manifest and `PHASE_03_FILE_INVENTORY.json` agree on **21 additions, 8 modifications, zero deletions**. All 29 applied file SHA-256 values and byte lengths matched both records before repairs. Git recorded `100644` for all 29. The checkout initially exposed `0664` permissions despite those Git modes; permissions were normalized to manifest `0644` after content verification. The original ZIP was unavailable here, so ZIP container bytes were not revalidated. The supplied XML preimage hashes describe an unsealed reconstruction, not the live pre-overlay commit.
-- SDK source: `/home/home/p/g/n/system_one_sdk`, commit `e757598a89e549274b979f0e77c6a4b2b6667752`, package 0.6.0, clean. Inference source: `/home/home/p/g/n/inference`, commit `3750a03ec62a3c9da11be9caa4dc911ebbbb9801`, package 0.5.0, clean. Observe dependency resolution used `FOUNT_SYSTEM_ONE_SDK_PATH=/home/home/p/g/n/system_one_sdk/packages/system_one_sdk`; no dependency was changed to avoid resolution.
-- Lock identities (SHA-256): root Mix `0b3edda815861ea063b140bf0700874b512cdca86e9ca305d60b2d9dc85a069e`; Core `eb1fff53893a36c21edfd22809b6f2f22873dd32dd3ac2734554ef5c9ca58685`; Observe and Intelligence `3a2d8edcd896928d912081418311e058f989d7a68d3c61ed1fe608f3cc89b812`; Workshop `17ab894bf96b86e0ae4ffc345d284552f8571e037200900e8371f0b9d11b68e8`; Workshop npm `e05f86b538cb65ebcc826508fe0bde47652bf1d63b5bcc911cc12f52b8e31b7c`.
-- Host: Linux 6.18.33.2 WSL2 x86_64; Erlang/OTP 29.0.5; Elixir and Mix 1.20.3; Python 3.14.4; Node 24.19.0; PostgreSQL client and isolated test server 18.6.
+## Identity and outcome
 
-## Executed commands and results
+Phase 03 is **COMPLETE** after executed local QC. Phase 04 remains `NOT_STARTED`; no Phase 04 pipeline or strategy decision implementation was added.
 
-Commands below ran from Fount root unless a package directory is stated. `SDK=...` in this table means the exact `FOUNT_SYSTEM_ONE_SDK_PATH` assignment above. Exit codes are observed, including failed pre-repair runs.
+- Verified Phase 02 baseline: Fount `228a76081871a273f49888f9530f3f805e0f4a4f`; docset `ae04a9d5dd553eca97ec52d5befa414bda251560`.
+- User-applied Phase 03 commits at QC entry: Fount `a3b8fbc930f2837c4514f234633ac8987f3da6d6`, docset `b9e8dc69e46f91074ad0f395a04fdea24c0c9aea`, both `main` tracking `origin/main`, both clean. Neither ZIP was reapplied.
+- Copied Fount manifest SHA-256 `f941a226b7c3b36ce667853a6d62ad7c83e85db35caf4d2e5c7e52fb64c58575`: all 33 installed result byte hashes matched, with zero declared deletions. The installed filesystem reported mode `0664` for those files versus manifest `0644` because of the shared checkout permissions; Git recorded ordinary non-executable files. This is a reviewed mode discrepancy, not a payload mismatch.
+- Final verified Fount repair commit `a3b9d8fe5d009dad15b6d3d354cc470560ec1c0b`; tree `971580ed16d4ad443a9933efc6fbed1885f7a952`. The Fount worktree was clean and `origin/main` push succeeded (`a3b8fbc..a3b9d8f`). The containing docset commit supplies this report's docset identity.
+- The supplied overlay archive SHA-256 was `c063c0b2d66bd2466885231c26a5f14719109fc15dac3e969454ce700c14c6e6`; the archive was not reapplied or revalidated from a local ZIP, so the installed file/manifest checks above are the local evidence.
 
-| Command | Exit | Result |
-|---|---:|---|
-| `(cd packages/fount_intelligence && mix format)` | 0 | Elixir's changed-file cache left delivered files untouched. `mix format --check-formatted` exposed them; subsequent `(cd packages/fount_intelligence && mix format --force)` and `mix format --check-formatted` both exited 0. |
-| `SDK mix setup` | 0 | Four package dependencies resolved and Workshop `npm ci` completed. A transient Hex ETS cache `:badfile` line appeared for Core; resolution completed and all later gates passed. npm reported three critical audit findings; no dependency changes were made in this Phase-3 pass. |
-| `(cd packages/fount_intelligence && SDK MIX_ENV=test mix compile --warnings-as-errors)` | 0 after repair | Initial exit 1 for an unused `record_id/3` parameter; final compile has no warnings. |
-| `(cd packages/fount_intelligence && SDK MIX_ENV=test mix test test/story_world_architecture_test.exs test/story_world_records_test.exs test/story_world_records_validation_test.exs test/story_world_reference_test.exs test/story_world_scope_causality_test.exs test/story_world_temporal_test.exs)` | 0 after repair | Initial exit 2: cycle conflict lacked constraint IDs. After regression and repair, 14 passed. |
-| `(cd packages/fount_intelligence && SDK MIX_ENV=test mix test)` | 0 | 56 passed. Mix emits a harmless discovery warning for `test/support/story_world_fixture.ex`, which `test_helper.exs` loads explicitly. |
-| `(cd packages/fount_intelligence && SDK MIX_ENV=test mix run examples/phase_three.exs)` | 0 | Flashback possession `:unknown`, later possession known, causal descendants shown, limitations rendered. Repeated after final repairs. |
-| `python3 -m unittest discover -s scripts/tests -v`; `bash -n scripts/verify_handoff.sh` | 0 each | 26 Python tests and shell syntax passed. |
-| `SDK mix ci` | 0 final | Root setup, format/lock checks, four-package warnings-as-errors compile, ExUnit, compiled architecture, strict Credo, Dialyzer and ExDoc passed. Previous attempts failed at formatting (1), architecture (1), Credo (10), Dialyzer (2), ExDoc (1), then Credo (8) after the cycle query change; each defect was repaired and the full command rerun. Final log: `/tmp/fount-phase3-mix-ci-final.log`. |
-| `SDK FOUNT_VERIFY_OUT=/tmp/fount-phase3-verify-handoff bash scripts/verify_handoff.sh --offline` | 0 | All 17 package dependency/format/compile/test/architecture rows passed; status table at `/tmp/fount-phase3-verify-handoff/status.tsv`. |
-| `FOUNT_DATABASE_URL=postgres://home@127.0.0.1:55432/fount_phase3_qc MIX_ENV=test mix ecto.create`; same `mix ecto.migrate` in `packages/fount` | 0 each | Created and migrated only the isolated `fount_phase3_qc` database. No user database reset/drop. |
-| Same URL, `MIX_ENV=test mix test integration` in `packages/fount`; `SDK` plus same URL in `packages/fount_workshop` | 0 each | Core 11 and Workshop 14 integration tests passed, including persistence, writer and PDF/export regressions. |
-| `SDK FOUNT_DATABASE_URL=... MIX_ENV=test mix run examples/phase_one.exs --out /tmp/fount-phase3-writer-reject --decision reject` in Workshop | 0 | Mock completion and Observe Sandbox; accepted revision equals base revision, one table-read turn. |
-| Same command with `--out /tmp/fount-phase3-writer-accept --decision accept --pdf` | 0 | Accepted revision equals candidate revision; two-page PDF produced. |
-| `SDK FOUNT_PACKAGE_BUILD=1 mix hex.build --output /tmp/fount-phase3-<package>.tar` in each of `fount`, `fount_observe`, `fount_intelligence`, `fount_workshop` | 0 each | Four archives inspected: 117, 67, 61, 81 content members respectively. No `_build`, `deps`, `node_modules`, `.env`, PDF, or nested archive content. Intelligence archive rebuilt after the final source repair. Nothing published. |
+## Toolchain and isolated database
 
-`SDK` is a table abbreviation only; every executed command used the full assignment `FOUNT_SYSTEM_ONE_SDK_PATH=/home/home/p/g/n/system_one_sdk/packages/system_one_sdk`.
+Erlang/OTP 29, Elixir 1.20.3, Mix 1.20.3, PostgreSQL client/server 18.6, Node.js 24.19.0, npm 11.17.0, `pdfinfo` 26.01.0 and Repomix 1.18.0 were available. PostgreSQL used `/var/run/postgresql`, port `5433`, peer-authenticated user `home`. No password or provider credential was used. `FOUNT_SYSTEM_ONE_SDK_PATH` pointed to `/home/home/p/g/n/system_one_sdk/packages/system_one_sdk`, because SDK 0.6.0 is not on Hex. Test `FOUNT_DATABASE_URL` used `postgresql://home@localhost:5433/<database>?socket_dir=/var/run/postgresql`.
 
-## Repairs and architecture findings
+Disposable databases were `fount_phase03_qc_20260928`, `fount_phase03_isolation_qc_20260928` and `fount_phase03_fresh_qc_20260928`. The first exposed an initial migration collision before repair. A fresh Core migration chain in the third database applied versions `20260924000000`, `20260924010000`, `20260924020000`, `20260927000000`, `20260928000000` and corrected Phase 03 `20260928011000`. Run integration created unique `phase02_*` and `phase03_*` schemas in the isolation database, applied Core then Run `20260928010000` and `20260928020000`, and dropped each schema. A final query found zero such schemas. The populated upgrade test first applied the verified Phase 02 Core and Run versions, inserted a screenplay/revision/head, then applied the Phase 03 Core and Run versions while retaining those rows. All three disposable databases were dropped after checks.
 
-The repair commit changes only `packages/fount_intelligence`. It formats delivered files, removes one unused parameter warning, replaces grouped Observe aliases with explicit allowed leaf aliases for the existing architecture scanner, and refactors new functions to satisfy strict Credo without changing thresholds. Graph walkers use plain visited maps to avoid Dialyzer's opaque `MapSet` warnings; PLT refresh alone did not clear them. The publicly referenced `StoryTime.Graph` type now has visible documentation for ExDoc.
+## Executed checks
 
-Two temporal correctness repairs have regressions. Strict-cycle conflicts now include the supporting constraint IDs in `involved_ids`. A pair participating in opposing strict paths now returns a source-backed `:contradiction` packet instead of promoting one direct `before` edge to known chronology; direct contradictions retain their own direct evidence packet. All revised tests passed before and after the final full CI run.
+All commands exited `0` in their final run. The common environment included `FOUNT_SYSTEM_ONE_SDK_PATH` above; PostgreSQL commands also used the test `FOUNT_DATABASE_URL` above. `mix ci` itself includes setup, format and lock checks, warnings-as-errors compile, all five unit suites, architecture, strict Credo, Dialyzer and warnings-as-errors docs.
 
-The compiled architecture gate checked 267 modules and 229 source files with zero violations. It confirmed the four-package DAG: Core has no Observe/Intelligence/Workshop dependency; Observe depends on Core and SDK providers; Intelligence depends on Core and Observe leaf contracts; Workshop owns Inference and writing. No Probe wrapper returned. Pure StoryWorld has no provider, Repo, shell, filesystem/network/environment, clock/random or process-state semantic dependency. Existing Phase-2 `StoryWorld.Records`, extraction kinds and playbook contracts remain; Observe `MeasurementResult` and current `Observation` provenance remain separate. Story-time, presentation and causality are separately represented, and the counterfactual API reports support/dependency impact only.
+| Command | Directory | Executed result |
+| --- | --- | --- |
+| `mix setup` | Fount root | PASS with local SDK path. Initial unconfigured attempt failed Hex resolution for unpublished SDK 0.6.0; configured rerun passed. |
+| `mix ci` | Fount root | PASS: Core 73 (including one property), Observe 65, Intelligence 141, Workshop 80, Run 6; architecture zero violations, strict Credo zero issues, Dialyzer zero errors in all five, docs built in all five. |
+| `python3 -m unittest discover -s scripts/tests -p 'test_*.py'` | Fount root | PASS, 148 tests. |
+| `python3 scripts/final_acceptance.py` | Fount root | PASS, 16 source-only checks. The script is not runtime evidence. |
+| `MIX_ENV=test mix ecto.migrate` | `packages/fount` | PASS on fresh disposable database, six Core migrations including corrected Phase 03 version. |
+| `MIX_ENV=test mix test integration` | `packages/fount` | PASS, 16 integration tests. |
+| `mix test`; `MIX_ENV=test mix test integration` | `packages/fount_workshop` | PASS, 80 standalone unit and 21 standalone integration tests. |
+| `mix test` | `packages/fount_run` | PASS, 6 unit tests. |
+| `MIX_ENV=test mix test integration/durable_execution_test.exs` | `packages/fount_run` | PASS, 12 Phase 03 integration tests. |
+| `MIX_ENV=test mix test integration/storage_constraints_test.exs integration/run_foundation_test.exs integration/run_upgrade_test.exs` | `packages/fount_run` | PASS, 11 regression/upgrade tests. |
+| `MIX_ENV=test mix test integration` | `packages/fount_run` | PASS, 23 total integration tests on final source. |
+| `FOUNT_PACKAGE_BUILD=1 mix hex.build` in each library | Five package directories | PASS, five archives built after tests and inspected for Core/Run Phase 03 migrations; archives removed after hashing, none published. |
+| `git diff --check`; docset refresh/validate/tests | Respective roots | PASS; docset commands and final publication recorded below. |
 
-## Human gate and limits
+Final Hex archive SHA-256 values: Core `b36c3171bd022f821b605c69e09733b42badc30cc0f76f2db2b5b19f445e9fd2`; Observe `d7c29a06dbcc93eacd3c91cc774259fef80b3379962ef582d23393023668f088`; Intelligence `c6d16a35c59139461af1019b6378eb490ea057bfd69935ce198063921efd6ba1`; Workshop `98a2113cce485f8407a02bcda2bd63716fd18c0986353eab724ab3abb5742093`; Run `a49e07b7e93472b8e95cb92032ed6262a40ae6b11401cad9d7278b216bd1cc82`. Hex archive creation verifies package contents, not unpublished sibling installation.
 
-The `PHASE_03_DOMAIN_REVIEW_PACKET.md` protocol remains ready, but no rights-cleared three-case corpus, two independent structural reviewers, independent forms, or reconciliation record were supplied. Synthetic ExUnit fixtures and the example are engineering evidence only. At the engineering-QC checkpoint, Phase 3 was `DOMAIN_REVIEW_PENDING`. The gate still needs rights/provenance/provider-export metadata before analysis, deterministic JSON/Markdown and exact evidence/query artifacts per case, independent review, then classified disagreements. No live provider call was needed or made for this pure phase.
+## W01–W07 executed acceptance
 
-The exact next Repomix Fount source is commit `60f989bcb9935b28519c908f3cd123ad6efe172f` (tree `dceb415ceb697eabed1fb84eb091a71fe1666458`). Phase 4 remains `NOT_STARTED`.
+| ID | PostgreSQL/runtime evidence | Result |
+| --- | --- | --- |
+| W01 | Real scripted Workshop `write` step saved one linked session, one candidate, checks, two provider requests and two settled inference usages; Workshop spent count was two and Core head stayed at the input revision. Re-entry after completion returned `:no_work`. | PASS |
+| W02 | Fault injector exercised claim, session open, session link, provider intent, dispatch, post-provider/pre-response storage, response storage, candidate storage and step completion. Pre-dispatch faults resumed; saved successes reused without extra provider calls; an expired dispatched request with no saved response became unknown/partial, kept its reservation and did not replay. | PASS |
+| W03 | Two single-connection Repos had different `pg_backend_pid()` values and raced for one claim; one won, one received `:busy`. Expiry/reclaim advanced the token; old heartbeat and Core session/candidate writes through the transaction guard were rejected. While a scripted provider was blocked, a distinct connection acquired `FOR UPDATE NOWAIT` on both Run and Step rows, proving provider I/O held neither row lock. | PASS |
+| W04 | Independent connections raced money reservations under the Run lock: one fit, one hit the ceiling. Exact replay returned the same operation; a changed duplicate settlement conflicted. Failed dispatched calls consumed inference allowance. Separate-connection reload preserved provider, malformed and transient counters; measurement and inference limits exhausted. Workshop's cumulative spent count matched Run usage. Monetary estimates were required under a ceiling; actual overrun and unknown actual cost retained charges and paused further dispatch. | PASS |
+| W05 | Persisted pause and stop requests prevented new dispatch. New plan and policy snapshots fenced old claims. Late provider responses still settled usage after stop/plan/policy invalidation. `progress/3` returned status and usage metadata without provider response bodies. | PASS |
+| W06 | Operation-key replay created one session and one candidate across restarts. A stale token could not commit either Core session or candidate through the generic guard. Full standalone Workshop unit/integration suites remained green. | PASS |
+| W07 | Missing intake handler, unavailable Inference service, unsupported registry override and invalid handler result returned explicit errors; the relevant steps persisted `failed`. No later-stage placeholder reported success. Scripted/local providers only. | PASS |
 
-## Subsequent user-authorized human-gate override — 2026-09-26 HST
+## Repairs and preservation
 
-After this engineering report, the user explicitly directed that skipping the rights-cleared cases and reviews must not stop Phase 4: “yes make it so it wont stop phase 4, obviously.” Under the documented exception in documents 16 and 28, Phase 3 is now `COMPLETE` with the unperformed Level-A structural/factual review recorded as **visible validation debt** (decision D045). This changes the phase gate only; the engineering evidence and Fount source identity above are unchanged. No reviewer, corpus result, source-grounding judgment, or human validation is claimed. Phase 4 is eligible to begin in a later pass and remains `NOT_STARTED` in this one.
+Formatter changes, two stale Core helper arities, unused variables, registry default-argument syntax and the Phase 03 Run→Workshop architecture allowance were corrected. The delivered Core operation-key migration collided with the existing Run foundation at version `20260928010000`; it was renamed byte-for-byte to `20260928011000`, and the populated Phase 02 upgrade test now proves the migration order. Claim validation now decodes `active_step_id` as a UUID and treats nullable control timestamps safely. Scripted response enums/maps are converted to JSON before persistence. Failed dispatched calls consume inference allowance, and Run can reserve/settle estimated/actual microunit cost, pause on overrun or unknown actual cost, and reject changed duplicate settlement. Fault-injection and concurrent connection tests were expanded. Docs and source contracts were updated. Core still imports no Run code; the Phase 03 stage registry still has only the real Workshop write handler.
+
+Optional paid providers and human creative-quality studies were **NOT_RUN** and are not Phase 03 engineering gates. Phase 04 screenplay orchestration, decisions and full journeys remain unimplemented by design.
+
+## Next handoff
+
+The Fount repair commit was pushed to `origin/main`. Phase 03 state/traceability/decisions were updated, the complete docset refreshed, validated, committed and pushed, and five new sealed XMLs were prepared only after both committed trees were final. The external packet manifest records exact source commits and attachment byte hashes. Stop before Phase 04 implementation.

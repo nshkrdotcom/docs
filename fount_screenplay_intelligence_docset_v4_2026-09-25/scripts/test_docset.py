@@ -39,10 +39,17 @@ class DocsetTest(unittest.TestCase):
         # Test-only evidence, never installed into the real docset.
         (self.root / name).write_text("Test fixture only.\n" + "\n".join(PATHS.values()) + "\n")
 
+    def reset_later_phases(self, state):
+        for phase in state["phases"][1:]:
+            phase.update(status="NOT_STARTED", offline_handoff=None, qc_handoff=None,
+                         overlay_manifest=None, runtime_report=None,
+                         verified_code_commit=None, required_gates_passed=False)
+
     def test_initial_route_and_integrity_detects_changed_or_extra_file(self):
         # Exercise the pristine six-phase route independently of the real docset's
         # current delivery state. Historical handoff files may remain in the tree.
         state = self.state()
+        self.reset_later_phases(state)
         phase = state["phases"][0]
         phase.update(
             status="NOT_STARTED",
@@ -53,16 +60,6 @@ class DocsetTest(unittest.TestCase):
             verified_code_commit=None,
             required_gates_passed=False,
         )
-        for later in state["phases"][1:]:
-            later.update(
-                status="NOT_STARTED",
-                offline_handoff=None,
-                qc_handoff=None,
-                overlay_manifest=None,
-                runtime_report=None,
-                verified_code_commit=None,
-                required_gates_passed=False,
-            )
         self.save(state)
         self.run_tool("refresh")
         handoff = self.run_tool("next").stdout
@@ -77,19 +74,10 @@ class DocsetTest(unittest.TestCase):
 
     def test_pending_qc_routes_to_runtime_and_requires_absolute_destinations(self):
         state = self.state()
+        self.reset_later_phases(state)
         phase = state["phases"][0]
         phase.update(status="OFFLINE_IMPLEMENTED", offline_handoff="handoffs/test_offline.md",
                      qc_handoff="handoffs/test_qc.md", overlay_manifest="handoffs/test_manifest.json")
-        for later in state["phases"][1:]:
-            later.update(
-                status="NOT_STARTED",
-                offline_handoff=None,
-                qc_handoff=None,
-                overlay_manifest=None,
-                runtime_report=None,
-                verified_code_commit=None,
-                required_gates_passed=False,
-            )
         self.report(phase["offline_handoff"])
         self.report(phase["qc_handoff"])
         (self.root / phase["overlay_manifest"]).write_text('{"format_version":1,"files":[],"deletions":[]}\n')
@@ -101,15 +89,7 @@ class DocsetTest(unittest.TestCase):
 
     def test_phase_cannot_skip_incomplete_predecessor(self):
         state = self.state()
-        state["phases"][0].update(
-            status="NOT_STARTED",
-            offline_handoff=None,
-            qc_handoff=None,
-            overlay_manifest=None,
-            runtime_report=None,
-            verified_code_commit=None,
-            required_gates_passed=False,
-        )
+        state["phases"][0]["status"] = "NOT_STARTED"
         state["phases"][1]["status"] = "COMPLETE"
         self.save(state)
         self.run_tool("refresh", success=False)
@@ -126,15 +106,9 @@ class DocsetTest(unittest.TestCase):
     def test_completion_requires_evidence_and_advances_then_terminates(self):
         state = self.state()
         for phase in state["phases"]:
-            phase.update(
-                status="NOT_STARTED",
-                offline_handoff=None,
-                qc_handoff=None,
-                overlay_manifest=None,
-                runtime_report=None,
-                verified_code_commit=None,
-                required_gates_passed=False,
-            )
+            phase.update(status="NOT_STARTED", offline_handoff=None, qc_handoff=None,
+                         overlay_manifest=None, runtime_report=None,
+                         verified_code_commit=None, required_gates_passed=False)
         state["phases"][0]["status"] = "COMPLETE"
         self.save(state)
         self.run_tool("refresh", success=False)

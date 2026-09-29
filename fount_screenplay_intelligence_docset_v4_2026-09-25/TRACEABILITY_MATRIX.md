@@ -1,6 +1,6 @@
 # Requirement traceability
 
-Agents replace pending source/test/evidence cells as work proceeds. Written tests and executed tests are distinct. Active requirement IDs are defined in the six phase specifications. Phase 01 is `COMPLETE` after local runtime QC. Phase 02 is `OFFLINE_IMPLEMENTED`: source/tests are delivered, but R01–R06 remain unexecuted runtime gates. Executed evidence for A01–A06 is in [the Phase 01 runtime QC report](handoffs/PHASE_01_RUNTIME_QC_REPORT.md); Phase 02 runtime evidence is pending [the Phase 02 QC handoff](handoffs/PHASE_02_RUNTIME_QC_HANDOFF.md). Later phases remain `NOT_STARTED`.
+Agents replace pending source/test/evidence cells as work proceeds. Written tests and executed tests are distinct. Active requirement IDs are defined in the six phase specifications. Phases 01–04 are `COMPLETE` after local runtime QC. Executed evidence for A01–A06 is in [the Phase 01 runtime QC report](handoffs/PHASE_01_RUNTIME_QC_REPORT.md); R01–R06 evidence is in [the Phase 02 runtime QC report](handoffs/PHASE_02_RUNTIME_QC_REPORT.md). Phase 05 is `OFFLINE_IMPLEMENTED` with authored source/tests and local runtime evidence still `NOT_RUN`; Phase 06 remains `NOT_STARTED`. Phase 04 executed evidence is in [the Phase 04 runtime QC report](handoffs/PHASE_04_RUNTIME_QC_REPORT.md). Phase 05 source/test mapping is expanded in [the Phase 05 implementation matrix](handoffs/PHASE_05_IMPLEMENTATION_MATRIX.md).
 
 | Requirement | Phase | Source / tests | Runtime evidence |
 | --- | --- | --- | --- |
@@ -10,33 +10,33 @@ Agents replace pending source/test/evidence cells as work proceeds. Written test
 | A04 | [01](phases/01_CORE_APPROVAL_SAFETY.md) | Stable approval ID/hash in `persistence.ex`; retry/conflict tests in `writing_persistence_test.exs`; PostgreSQL race in `continuation_concurrency_test.exs` | [PASS](handoffs/PHASE_01_RUNTIME_QC_REPORT.md) |
 | A05 | [01](phases/01_CORE_APPROVAL_SAFETY.md) | `20260928000000_authorize_canonical_acceptance.exs`; `approval_migration_test.exs` fresh + baseline-upgrade schemas and identity constraints | [PASS](handoffs/PHASE_01_RUNTIME_QC_REPORT.md) |
 | A06 | [01](phases/01_CORE_APPROVAL_SAFETY.md) | Workshop Review/Acceptance/CLI/fake store/examples/docs/tests converted to typed approval; legacy shapes fail closed; no `packages/fount_run` | [PASS](handoffs/PHASE_01_RUNTIME_QC_REPORT.md) |
-| R01 | [02](phases/02_RUN_FOUNDATION.md) | `packages/fount_run`; root workspace/CI/architecture/final-acceptance five-library registration; host-free application + package contract tests | NOT_RUN — runtime QC pending |
-| R02 | [02](phases/02_RUN_FOUNDATION.md) | `20260928010000_create_run_foundation.exs`; `integration/{storage_constraints,run_foundation}_test.exs` Core→Run migration, FK/constraint and invalid cross-link coverage | NOT_RUN — PostgreSQL QC pending |
-| R03 | [02](phases/02_RUN_FOUNDATION.md) | `FountRun.start_run/get_run/list_runs`; `ActorContext`, `Plan`, `Policy`, `Persistence`; authorization/idempotency/provider-free written tests | NOT_RUN — runtime QC pending |
-| R04 | [02](phases/02_RUN_FOUNDATION.md) | Closed canonical plan/policy fingerprints; append-only snapshot/event persistence; expected-version pointer changes and immutability tests | NOT_RUN — runtime QC pending |
-| R05 | [02](phases/02_RUN_FOUNDATION.md) | Pending decision single-resolution/concurrency storage; immutable approval review/payload lifecycle; accepted outcome blocked pending later acceptance bridge | NOT_RUN — concurrent PostgreSQL QC pending |
-| R06 | [02](phases/02_RUN_FOUNDATION.md) | Controlled step/attempt + lease/fence identity, usage reservation/settlement and delivery identity/replay persistence tests | NOT_RUN — PostgreSQL reload/constraint QC pending |
-| W01 | [03](phases/03_DURABLE_EXECUTION.md) | NOT_STARTED | NOT_RUN |
-| W02 | [03](phases/03_DURABLE_EXECUTION.md) | NOT_STARTED | NOT_RUN |
-| W03 | [03](phases/03_DURABLE_EXECUTION.md) | NOT_STARTED | NOT_RUN |
-| W04 | [03](phases/03_DURABLE_EXECUTION.md) | NOT_STARTED | NOT_RUN |
-| W05 | [03](phases/03_DURABLE_EXECUTION.md) | NOT_STARTED | NOT_RUN |
-| W06 | [03](phases/03_DURABLE_EXECUTION.md) | NOT_STARTED | NOT_RUN |
-| W07 | [03](phases/03_DURABLE_EXECUTION.md) | NOT_STARTED | NOT_RUN |
-| P01 | [04](phases/04_SCREENPLAY_PIPELINE.md) | NOT_STARTED | NOT_RUN |
-| P02 | [04](phases/04_SCREENPLAY_PIPELINE.md) | NOT_STARTED | NOT_RUN |
-| P03 | [04](phases/04_SCREENPLAY_PIPELINE.md) | NOT_STARTED | NOT_RUN |
-| P04 | [04](phases/04_SCREENPLAY_PIPELINE.md) | NOT_STARTED | NOT_RUN |
-| P05 | [04](phases/04_SCREENPLAY_PIPELINE.md) | NOT_STARTED | NOT_RUN |
-| P06 | [04](phases/04_SCREENPLAY_PIPELINE.md) | NOT_STARTED | NOT_RUN |
-| P07 | [04](phases/04_SCREENPLAY_PIPELINE.md) | NOT_STARTED | NOT_RUN |
-| C01 | [05](phases/05_CONTROL_AND_COMPLETION.md) | NOT_STARTED | NOT_RUN |
-| C02 | [05](phases/05_CONTROL_AND_COMPLETION.md) | NOT_STARTED | NOT_RUN |
-| C03 | [05](phases/05_CONTROL_AND_COMPLETION.md) | NOT_STARTED | NOT_RUN |
-| C04 | [05](phases/05_CONTROL_AND_COMPLETION.md) | NOT_STARTED | NOT_RUN |
-| C05 | [05](phases/05_CONTROL_AND_COMPLETION.md) | NOT_STARTED | NOT_RUN |
-| C06 | [05](phases/05_CONTROL_AND_COMPLETION.md) | NOT_STARTED | NOT_RUN |
-| C07 | [05](phases/05_CONTROL_AND_COMPLETION.md) | NOT_STARTED | NOT_RUN |
+| R01 | [02](phases/02_RUN_FOUNDATION.md) | Five-library workspace/CI/architecture/build, Core independence and host-free `fount_run` startup | [PASS](handoffs/PHASE_02_RUNTIME_QC_REPORT.md) |
+| R02 | [02](phases/02_RUN_FOUNDATION.md) | Ten-table migration; `integration/storage_constraints_test.exs`, `run_upgrade_test.exs`, `run_foundation_test.exs` fresh and populated Core→Run paths | [PASS](handoffs/PHASE_02_RUNTIME_QC_REPORT.md) |
+| R03 | [02](phases/02_RUN_FOUNDATION.md) | ActorContext, closed Plan/Policy and `start_run`/`get_run`/`list_runs`; Run unit and PostgreSQL tests | [PASS](handoffs/PHASE_02_RUNTIME_QC_REPORT.md) |
+| R04 | [02](phases/02_RUN_FOUNDATION.md) | Fingerprints, append-only plan/policy/events, version pointers; Run unit and PostgreSQL snapshot tests | [PASS](handoffs/PHASE_02_RUNTIME_QC_REPORT.md) |
+| R05 | [02](phases/02_RUN_FOUNDATION.md) | Decision/ApprovalAttempt persistence, distinct-backend race, immutable payload and blocked Core acceptance bridge | [PASS](handoffs/PHASE_02_RUNTIME_QC_REPORT.md) |
+| R06 | [02](phases/02_RUN_FOUNDATION.md) | Budget/Step/Attempt/Delivery identity, lease fields, replay and cross-link PostgreSQL tests | [PASS](handoffs/PHASE_02_RUNTIME_QC_REPORT.md) |
+| W01 | [03](phases/03_DURABLE_EXECUTION.md) | `FountRun.Engine` + `WorkshopHandler`; real scripted Workshop durable smoke in `integration/durable_execution_test.exs` | [PASS](handoffs/PHASE_03_RUNTIME_QC_REPORT.md) |
+| W02 | [03](phases/03_DURABLE_EXECUTION.md) | `DispatchHook`/provider request reconciliation; known-response reuse and ambiguous-response crash tests | [PASS](handoffs/PHASE_03_RUNTIME_QC_REPORT.md) |
+| W03 | [03](phases/03_DURABLE_EXECUTION.md) | run-row claim/reclaim, PostgreSQL-time leases, fencing/heartbeat/domain guard; competing-connection test | [PASS](handoffs/PHASE_03_RUNTIME_QC_REPORT.md) |
+| W04 | [03](phases/03_DURABLE_EXECUTION.md) | atomic provider/measurement reservations and durable dispatch/retry counters; cap/idempotency tests | [PASS](handoffs/PHASE_03_RUNTIME_QC_REPORT.md) |
+| W05 | [03](phases/03_DURABLE_EXECUTION.md) | persisted control/binding fences, late-result reconciliation and safe `progress/3`; pause test | [PASS](handoffs/PHASE_03_RUNTIME_QC_REPORT.md) |
+| W06 | [03](phases/03_DURABLE_EXECUTION.md) | Core/Workshop operation keys + guarded persistence; duplicate session/candidate and stale-domain tests | [PASS](handoffs/PHASE_03_RUNTIME_QC_REPORT.md) |
+| W07 | [03](phases/03_DURABLE_EXECUTION.md) | closed stage registry and explicit unavailable handler/service errors; unit/integration tests | [PASS](handoffs/PHASE_03_RUNTIME_QC_REPORT.md) |
+| P01 | [04](phases/04_SCREENPLAY_PIPELINE.md) | `PipelineHandler`, selected-route `WorkshopHandler`; opening/dialogue integration + unit/source tests | [PASS](handoffs/PHASE_04_RUNTIME_QC_REPORT.md) |
+| P02 | [04](phases/04_SCREENPLAY_PIPELINE.md) | saved investigation→plan evidence/routes; train/reveal repair integration + unit/source tests | [PASS](handoffs/PHASE_04_RUNTIME_QC_REPORT.md) |
+| P03 | [04](phases/04_SCREENPLAY_PIPELINE.md) | `submit_decision/4`, exact transactional strategy resolver; success/replay/conflict/stale integration | [PASS](handoffs/PHASE_04_RUNTIME_QC_REPORT.md) |
+| P04 | [04](phases/04_SCREENPLAY_PIPELINE.md) | durable iterate scheduling/cap/accounting; no hidden repair loop; cap integration | [PASS](handoffs/PHASE_04_RUNTIME_QC_REPORT.md) |
+| P05 | [04](phases/04_SCREENPLAY_PIPELINE.md) | canonical-base composition, lineage, scope/protected checks/reports; repair integration | [PASS](handoffs/PHASE_04_RUNTIME_QC_REPORT.md) |
+| P06 | [04](phases/04_SCREENPLAY_PIPELINE.md) | persisted progress/decisions/idempotent successors + Phase 03 ambiguity regression | [PASS](handoffs/PHASE_04_RUNTIME_QC_REPORT.md) |
+| P07 | [04](phases/04_SCREENPLAY_PIPELINE.md) | nine Workshop workflow validation, closed Phase 04 registry, Core/Phase 03 regressions | [PASS](handoffs/PHASE_04_RUNTIME_QC_REPORT.md) |
+| C01 | [05](phases/05_CONTROL_AND_COMPLETION.md) | canonical `DecisionCommand` + durable `ApprovalBridge`; concurrent/replay/stale/principal integration + CLI decision tests; `scripts/tests/test_control_completion_source.py` | NOT_RUN — local PostgreSQL/runtime QC required |
+| C02 | [05](phases/05_CONTROL_AND_COMPLETION.md) | `Control` pause/resume/stop + fencing; restart and delayed-callback-after-stop integration; `scripts/tests/test_control_completion_source.py` | NOT_RUN — local PostgreSQL/runtime QC required |
+| C03 | [05](phases/05_CONTROL_AND_COMPLETION.md) | `CompletionHandler`, shared Core acceptance bridge, candidate-only/accepted `DeliveryBundle`; provenance/export tests; `scripts/tests/test_control_completion_source.py` | NOT_RUN — local Core/PostgreSQL/runtime QC required |
+| C04 | [05](phases/05_CONTROL_AND_COMPLETION.md) | Run/Core check gates, safe callback evidence and fallback lineage; malformed/rejected/fenced tests + retained Core ReviewGate tests; `scripts/tests/test_control_completion_source.py` | NOT_RUN — local Core/PostgreSQL/runtime QC required |
+| C05 | [05](phases/05_CONTROL_AND_COMPLETION.md) | plan/policy invalidation; actual Workshop rebase and replacement candidates; fresh check/approval binding tests; `scripts/tests/test_control_completion_source.py` | NOT_RUN — local Workshop/PostgreSQL/runtime QC required |
+| C06 | [05](phases/05_CONTROL_AND_COMPLETION.md) | durable callback/review/payload/acceptance recovery; delivery checksum/retry; crash-boundary/reconciliation/artifact tests; `scripts/tests/test_control_completion_source.py` | NOT_RUN — local provider/PostgreSQL/PDF runtime QC required |
+| C07 | [05](phases/05_CONTROL_AND_COMPLETION.md) | complete public `FountRun` API, `FountRun.CLI`, `mix fount.run`; parser/exit/direct CLI tests and prior workflow regressions; `scripts/tests/test_control_completion_source.py` | NOT_RUN — local Mix/CLI/runtime QC required |
 | U01 | [06](phases/06_WEB_APP_AND_INTEGRATION.md) | NOT_STARTED | NOT_RUN |
 | U02 | [06](phases/06_WEB_APP_AND_INTEGRATION.md) | NOT_STARTED | NOT_RUN |
 | U03 | [06](phases/06_WEB_APP_AND_INTEGRATION.md) | NOT_STARTED | NOT_RUN |

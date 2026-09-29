@@ -1,112 +1,101 @@
-# Codex QC handoff — Fount Phase 4
+# Phase 04 runtime QC handoff
 
-**Historical handoff, superseded:** Phase 4 runtime QC passed at Fount `cfde46c`; the phase is `COMPLETE` under D046. Its optional first-reader pilot was skipped as visible validation debt. See `PHASE_04_RUNTIME_QC_REPORT.md` and current `PROGRESS.md`. The instructions below describe the original pre-QC task and must not be rerun as a new Phase-4 implementation pass.
+The user will apply `fount_run_phase_04_overlay.zip` and `fount_run_phase_04_docset.zip`, commit and push both repositories, then give this handoff to the local runtime agent. **Do not reapply either ZIP.** Verify the installed result and preserve unrelated work.
 
-You are the runtime/QC agent for **Phase 4 — Temporal Views and Forward-Reader Engine**. The user has already applied and committed the Phase-4 Fount overlay and complete docset before handing the checkout to you. **Do not reapply the overlay. Do not implement Phase 5.**
+Phase 04 status is **OFFLINE_IMPLEMENTED**. P01–P07 are **NOT_RUN** until this local QC executes. Do not mark the phase COMPLETE from the web source checks.
 
-## 1. Establish the applied source
+## Runtime destinations
 
-Record the actual Fount and docset commits you received. Compare the applied Phase-4 files with `handoffs/PHASE_04_FILE_INVENTORY.json` and the embedded overlay manifest. The original XMLs were raw Repomix exports without current Git metadata, so do not invent a source commit for the offline input.
+- fount: `/home/home/p/g/n/fount`
+- docset: `/home/home/jb/docs/20260928/fount`
+- docset_canonical: `/home/home/p/g/n/brainstorms/nshkrdotcom/docs/20260928/fount`
+- docset_git_root: `/home/home/p/g/n/brainstorms`
+- system_one_sdk: `/home/home/p/g/n/system_one_sdk`
+- inference: `/home/home/p/g/n/inference`
+- agent_session_manager: `/home/home/p/g/n/agent_session_manager`
 
-If the real checkout differs from the supplied decoded preimage, determine whether the difference is a legitimate user/Codex baseline repair before changing anything. Do not bypass manifest mismatches by overwriting unrelated edits.
+## Exact baselines and delivered payload
 
-## 2. Read the phase contracts
+- Fount source baseline before overlay: `a3b9d8fe5d009dad15b6d3d354cc470560ec1c0b`
+- Docset source baseline: `61f0137533cc1c8824c3edffc16a9200dbbf9409`
+- Overlay archive SHA-256: `48316fd07c0c496038addf6ff0f116f03d837a9c74c534c0aade5999943b2401`
+- Copied overlay manifest SHA-256: `2d9eab9764a60fb6ed02b09deefd62dd76dde9c97a23d9fa9c89c662a9c23f55`
+- Overlay operations: 17 writes, zero deletions.
+- Input packet manifest SHA-256: `e0e5d1a7f7b9732c476ecb4e71e9a5ff2e19ba32d7ebf35099f371f9a073793a`
 
-Before repair, read:
+Read `AGENT_START_HERE.md`, `state.json`, `phases/04_SCREENPLAY_PIPELINE.md`, `RUNTIME_QC.md`, `handoffs/PHASE_03_RUNTIME_QC_REPORT.md`, `handoffs/PHASE_04_INPUTS.json`, `handoffs/PHASE_04_IMPLEMENTATION_MATRIX.md`, `handoffs/PHASE_04_OFFLINE_HANDOFF.md` and `handoffs/PHASE_04_OVERLAY_MANIFEST.json` before testing.
 
-- `PROGRESS.md`;
-- Phase 4 in `16_PHASED_IMPLEMENTATION_PLAN.md`;
-- `08_TEMPORAL_AND_READER_STATE.md`;
-- `19_ACCEPTANCE_CRITERIA.md`;
-- `24_INTERNAL_BOUNDARY_ENFORCEMENT.md`;
-- `28_HUMAN_VALIDATION_AND_CORPUS_OPERATIONS.md`;
-- `handoffs/PHASE_04_IMPLEMENTATION_MATRIX.md`;
-- `handoffs/PHASE_04_PRESERVATION_AUDIT.md`;
-- `handoffs/PHASE_04_STATIC_CHECKS.json`;
-- `handoffs/PHASE_04_DOMAIN_REVIEW_PACKET.md`.
+## First verify the applied state
 
-Preserve the central invariant: **presentation order, partial diegetic story time, and causality are different coordinate systems.** Reader state is first-exposure/presentation-relative. StoryWorld/Temporal state is event/story-time-qualified and may remain unknown or ambiguous.
+From `/home/home/p/g/n/fount`, record `git status --short`, `git rev-parse HEAD`, branch/upstream, and actual `elixir --version`, `mix --version`, PostgreSQL version. Confirm every overlay manifest result hash (or document any intentional repair) and confirm no unrelated file was overwritten/deleted. Record the user-applied Fount and docset commits separately.
 
-## 3. Format, compile, test, and repair Phase 4
+## Required commands
 
-Use the repository's current aliases/scripts rather than assuming historical commands still match. At minimum capture exact command/exit evidence for the appropriate equivalents of:
+Run the repository common gates from `/home/home/p/g/n/fount`:
 
-```bash
+```sh
+mix setup
 mix format --check-formatted
-mix compile --warnings-as-errors
+mix deps.unlock --check-unused
+mix blitz.workspace format --check-formatted
+mix blitz.workspace lock_check
+mix blitz.workspace compile
 mix test
-mix ci
 mix fount.architecture
-python3 scripts/tests/test_phase_four_source.py
-python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v
-bash scripts/verify_handoff.sh --offline
+mix blitz.workspace credo --strict
+mix blitz.workspace dialyzer
+mix blitz.workspace docs
+python3 -m unittest discover -s scripts/tests -p 'test_*.py'
+python3 scripts/final_acceptance.py
+mix ci
 ```
 
-Also run package-local `fount_intelligence` checks required by the checkout, including strict Credo, Dialyzer, ExDoc warnings-as-errors and package inspection/build. Run the new targeted Phase-4 tests explicitly so failures are easy to attribute:
+Run the Run package and Phase 04 journey tests explicitly with the configured disposable PostgreSQL test database:
 
-```bash
-cd packages/fount_intelligence
-mix test test/temporal_views_test.exs
-mix test test/reader_forward_test.exs
-mix test test/reader_story_world_differential_test.exs
-mix run examples/phase_four.exs
+```sh
+cd /home/home/p/g/n/fount/packages/fount_run
+MIX_ENV=test mix ecto.migrate
+mix test
+MIX_ENV=test mix test integration/screenplay_pipeline_test.exs
+MIX_ENV=test mix test integration/durable_execution_test.exs
+MIX_ENV=test mix test integration/storage_constraints_test.exs integration/run_foundation_test.exs integration/run_upgrade_test.exs
+MIX_ENV=test mix test integration
 ```
 
-Repair actual failures. Do not weaken future-leak checks, private-material exclusion, story-time ambiguity, evidence provenance, or package boundaries merely to make a test pass.
+Run the unchanged Core and Workshop regression surfaces:
 
-### Known offline-only issue to reconcile
+```sh
+cd /home/home/p/g/n/fount/packages/fount
+MIX_ENV=test mix ecto.migrate
+mix test
+MIX_ENV=test mix test integration
+cd /home/home/p/g/n/fount/packages/fount_workshop
+mix test
+MIX_ENV=test mix test integration
+```
 
-In the supplied Fount XML, `scripts/tests/test_prune_deleted_directories.py` exists but `scripts/prune_deleted_directories.py` does not, so offline repository-wide Python discovery has one import error. Inspect the actual applied checkout. If the helper legitimately exists there, rerun and record. If it is still absent, determine from repository history/current policy whether it should be restored; do not silently attribute the gap to Phase 4 or fabricate a passing result.
+Build all five libraries after tests:
 
-## 4. Required Phase-4 correctness ladder
+```sh
+cd /home/home/p/g/n/fount/packages/fount && FOUNT_PACKAGE_BUILD=1 mix hex.build
+cd /home/home/p/g/n/fount/packages/fount_observe && FOUNT_PACKAGE_BUILD=1 mix hex.build
+cd /home/home/p/g/n/fount/packages/fount_intelligence && FOUNT_PACKAGE_BUILD=1 mix hex.build
+cd /home/home/p/g/n/fount/packages/fount_workshop && FOUNT_PACKAGE_BUILD=1 mix hex.build
+cd /home/home/p/g/n/fount/packages/fount_run && FOUNT_PACKAGE_BUILD=1 mix hex.build
+```
 
-Verify, with executed tests rather than source inspection alone:
+## P01–P07 runtime proof required
 
-1. future presentation mutations cannot change earlier Reader snapshots;
-2. later Reader evidence cannot cite unseen future screenplay material;
-3. notes/boneyards/omitted material do not leak into ordinary first-reader checkpoints;
-4. deterministic replay returns identical points/snapshots;
-5. a later-presented flashback may change Reader interpretation while StoryWorld chronology remains independently constrained;
-6. Reader character knowledge can differ from diegetic character knowledge;
-7. relationship state remains directional/asymmetric;
-8. setup/payoff lifecycle is inspectable without forcing one theory of dramatic quality;
-9. question open/reinforce/resolve/abandon behavior is preserved;
-10. Reader recomputation starts at the earliest affected presentation checkpoint and recomputes only the suffix;
-11. Temporal recomputation follows the story-time connected region, not a screenplay-order suffix;
-12. every public trajectory declares `presentation_relative`, `diegetic_story_time_qualified`, or `diegetic_story_time_partial` semantics as appropriate;
-13. pure Temporal/Reader modules have no acquisition/persistence/provider effect dependency.
+- **P01:** execute both deterministic Phase 04 integration journeys: brief→opening and selected-scene dialogue. Confirm meaningful page changes, persisted reports/checks/base/candidate IDs and unchanged Core canonical head.
+- **P02:** run the reveal/train fixture. Confirm exactly three saved routes before pages, uncertainty retained, train-platform protected beat preserved, consequence repaired and no hidden intermediate acceptance.
+- **P03:** execute success, identical replay, competing response, wrong actor, stale context, stale plan and stale policy cases through public `FountRun.submit_decision/4`. Inspect the DB transaction result to confirm one resolved decision and one idempotent write step.
+- **P04:** prove one creative repair is accounted as its own durable `iterate` work, malformed/transport counters remain distinct, `max_iterations` stops further creative work, spend does not reset and Workshop `max_repair_rounds` remains zero under Run.
+- **P05:** inspect final candidate lineage/base/report/check bindings and complete Core diff; prove all unaccepted candidate revisions were composed from the canonical base and canon did not move.
+- **P06:** interrupt/restart at strategy and check/iteration checkpoints; prove successful steps/sessions/provider usage and pending decisions are reused. Re-run Phase 03 known-success and ambiguous-paid-outcome crash cases unchanged.
+- **P07:** run all nine Workshop workflow unit/integration surfaces, Core approval-safety tests and Phase 03 recovery gates. Confirm the Phase 04 registry has no successful `decide`/`deliver` handler and the demonstrated run ends at saved `candidate_review` or unresolved `iteration` checkpoint.
 
-Add focused regression tests when a runtime repair exposes an uncovered bug.
+Use distinct PostgreSQL connections where concurrency matters. Test both a fresh Core→Run migration chain and upgrade from the verified Phase 03 schema. Repair ordinary Phase 04 defects in place, rerun the affected and full gates, and record exact commands/counts/DB schema names.
 
-## 5. Preservation gates
+## Completion rule
 
-Phase 4 intentionally changes only Intelligence plus root/package documentation. Rerun the current repository preservation ladder for canonical Fount, Observe, StoryWorld and Workshop. Include the existing isolated database/writer acceptance/PDF/export checks the current `verify_handoff`/CI policy requires. Previous green Phase-3 evidence does not transfer to changed Intelligence source.
-
-No new hosted-provider call is required merely to validate this pure phase. Do not spend tokens or expose screenplay text to a provider unless a current repository gate truly requires it and the user authorizes it.
-
-## 6. Human first-reader gate
-
-Engineering QC is not the first-reader pilot. `PHASE_04_DOMAIN_REVIEW_PACKET.md` requires rights-cleared first-exposure checkpoints and real independent readers. Do not pretend Codex review, fixtures, or model output satisfy it.
-
-After engineering QC:
-
-- if the real pilot is recorded, evaluate it under the docset and mark the phase accordingly;
-- if engineering is green but no real pilot exists, set Phase 4 to `DOMAIN_REVIEW_PENDING`;
-- mark `COMPLETE` without the pilot only if the user explicitly authorizes a visible validation-debt override, as was separately done for Phase 3.
-
-## 7. Required QC outputs
-
-Create/update `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` with:
-
-- exact applied source/docset commits;
-- exact commands and exit results;
-- every repair and why it was needed;
-- post-repair file/source identity;
-- Phase-4 targeted and full preservation evidence;
-- architecture/package evidence;
-- status of the first-reader pilot;
-- remaining limitations/debt.
-
-Update `PROGRESS.md`, `TRACEABILITY_MATRIX.md`, `PHASE_04_IMPLEMENTATION_MATRIX.md`, `PHASE_04_FILE_INVENTORY.json` if repair payloads change, and docset integrity hashes. Produce a complete corrected docset for the next four-XML handoff.
-
-**STOP AFTER PHASE 4. Do not implement Phase 5 Diagnosis, Acquisition, or multi-pass Playbooks in this QC pass.**
+Write `handoffs/PHASE_04_RUNTIME_QC_REPORT.md` only after executed evidence exists. Mark P01–P07 PASS individually, set Phase 04 `COMPLETE`, and record the verified final Fount commit only if all required engineering gates pass. If any required gate fails or remains unavailable, set `QC_FAILED` and do not advance. After successful QC, refresh/validate the docset, commit/push code and docs, then prepare five fresh sealed XMLs for Phase 05. Stop before implementing Phase 05.
