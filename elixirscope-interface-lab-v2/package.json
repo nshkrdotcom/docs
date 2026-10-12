@@ -1,0 +1,14 @@
+{
+  "name": "elixirscope-interface-lab-v2",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 8765 --bind 127.0.0.1",
+    "build": "esbuild src/app.ts --bundle --format=iife --target=es2020 --outfile=app.js",
+    "test": "node scripts/smoke.cjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "playwright": "1.61.1"
+  }
+}
