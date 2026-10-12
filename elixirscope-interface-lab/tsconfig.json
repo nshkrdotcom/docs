@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "none",
+    "outFile": "./app.js",
+    "lib": ["DOM", "ES2020"],
+    "strict": true,
+    "noUncheckedIndexedAccess": false,
+    "skipLibCheck": true,
+    "removeComments": false
+  },
+  "files": ["src/types.ts", "src/fixtures.ts", "src/content.ts", "src/app.ts"]
+}

@@ -1,0 +1,39 @@
+{
+  "synthetic": true,
+  "schemaVersion": "1.0",
+  "runA": "run-pass",
+  "runB": "run-fail",
+  "alignmentPlan": {
+    "scope": {
+      "correlationId": "cmd-42"
+    },
+    "alignBy": "semantic_milestones",
+    "matchBasis": "shared_command_id_and_symbol"
+  },
+  "anchors": [
+    {
+      "label": "command_accepted",
+      "runA": "run-pass-node-a-boot-1-001",
+      "runB": "run-fail-node-a-boot-1-001",
+      "basis": "same_command_id"
+    },
+    {
+      "label": "first_effect_attempted",
+      "runA": "run-pass-node-b-boot-1-004",
+      "runB": "run-fail-node-b-boot-1-004",
+      "basis": "logical_role_and_effect_kind"
+    }
+  ],
+  "differences": [
+    {
+      "kind": "additional_observed_event",
+      "runAEvent": null,
+      "runBEvent": "run-fail-node-b-boot-1-009",
+      "finding": "Second external write attempt recorded in failing run",
+      "qualifier": "The first attempt outcome was not recorded; cannot assert duplicate committed effect."
+    }
+  ],
+  "gaps": [
+    "run-fail initial external outcome unknown; no global event order implied"
+  ]
+}
