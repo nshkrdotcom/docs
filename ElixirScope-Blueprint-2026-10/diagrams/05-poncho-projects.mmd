@@ -1,0 +1,9 @@
+flowchart TB
+  Root[Root tooling Mix\nBlitz + mise] -.-> Engine[apps/elixir_scope\nindependent Mix library]
+  Root -.-> Server[apps/elixir_scope_server\nindependent Mix Phoenix/Ash]
+  Engine --> Server
+  Server --> REST[JSON API / Channels]
+  REST --> Web[web/\nReact + TS + Node toolchain]
+  Web --> Perf[Timeline adapter\nPerfetto or Canvas]
+  Web --> Code[Diff + source editors]
+  Web --> Nav[Shared focus reducer + pins]

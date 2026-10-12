@@ -1,0 +1,1132 @@
+source_snapshot,file_path,category,lines_in_repomix,bytes_in_repomix
+Atlas research,0001.md,documentation,75,3495
+Atlas research,0002_not_beam_specific_distsys_debug.md,documentation,235,13537
+Atlas research,0003.md,documentation,197,12961
+Atlas research,0004.md,documentation,302,9779
+Atlas research,0005_the_fractal_sw_atlas.md,documentation,706,27504
+Atlas research,0006.md,documentation,515,23939
+Atlas research,0006a.md,documentation,125,15242
+Atlas research,0007.md,documentation,668,28242
+Atlas research,0010_code_review_gpt_deepResearch.md,documentation,699,42355
+Atlas research,0020_code_review_gemini_deepResearch.md,documentation,180,42234
+ElixirScope older monolith,config/prod.exs,other,42,1227
+ElixirScope older monolith,docs/docs/003-g-elixirls-responseToClaude.md,documentation,141,14897
+ElixirScope older monolith,docs/docs/006-g-foundation-responseToClaude.md,documentation,169,15362
+ElixirScope older monolith,docs/docs/008-g-prd.md,documentation,250,20425
+ElixirScope older monolith,docs/docs/009-g-prd-responseToGrok.md,documentation,111,13337
+ElixirScope older monolith,docs/docs/100-c.md,documentation,213,7327
+ElixirScope older monolith,docs/docs/101-c-elixirls.md,documentation,671,22285
+ElixirScope older monolith,docs/docs/104-c-foundation.md,documentation,346,12411
+ElixirScope older monolith,docs/docs/105-c-layers.md,documentation,587,24654
+ElixirScope older monolith,docs/docs/200-grok-plan.md,documentation,176,11264
+ElixirScope older monolith,docs/docs/DIAGS.md,documentation,524,13199
+ElixirScope older monolith,docs/docs/FOUNDATION_IMPLEMENTATION_GUIDE.md,documentation,5909,188370
+ElixirScope older monolith,docs/docs/NEXT_STEPS_gemini.md,documentation,253,17761
+ElixirScope older monolith,docs/docs/NEXT_STEPS.md,documentation,701,19417
+ElixirScope older monolith,docs/docs_extra/002-g-elixirls.md,documentation,196,15257
+ElixirScope older monolith,docs/docs_extra/010-g-AfterThePRD.md,documentation,185,16460
+ElixirScope older monolith,docs/docs_extra/011-g-checklist.md,documentation,285,17012
+ElixirScope older monolith,docs/docs_extra/012-g-layers.md,documentation,160,13788
+ElixirScope older monolith,docs/docs_extra/202-grok-inspiredByLiveDebugger.md,documentation,108,10063
+ElixirScope older monolith,docs/docs_extra/203-grok-prd.md,documentation,232,9080
+ElixirScope older monolith,docs/docs_extra/CLINE.md,documentation,18,820
+ElixirScope older monolith,docs/docs_extra/CURSOR_LAYER2.md,documentation,335,12991
+ElixirScope older monolith,docs/docs_extra/CURSOR_PROG_LAYER2.md,documentation,219,9720
+ElixirScope older monolith,docs/docs_extra/CURSOR_PROG.md,documentation,236,10355
+ElixirScope older monolith,docs/docs_extra/CURSOR_TESTS.md,documentation,105,3487
+ElixirScope older monolith,docs/docs_extra/CURSOR.md,documentation,235,11042
+ElixirScope older monolith,docs/docs_extra/DIAGS_DOCS_LAYER2.md,documentation,1401,38391
+ElixirScope older monolith,docs/docs_extra/DIAGS_LAYER2.md,documentation,480,13490
+ElixirScope older monolith,docs/docs_extra/DIAGS_PHASE2_COMPLETE.md,documentation,344,7957
+ElixirScope older monolith,docs/docs_extra/MISSING_FOUNDATIONAL.md,documentation,302,8801
+ElixirScope older monolith,docs/docs_extra/README_old.md,documentation,126,12892
+ElixirScope older monolith,docs/docs_extra/WHY_ELIXIRSCOPE_claude4.md,documentation,264,10551
+ElixirScope older monolith,docs/docs_extra/WHY_ELIXIRSCOPE_gemini25.md,documentation,74,9248
+ElixirScope older monolith,docs/docs20250525/01-LOCK_FREE_RING_BUFFER.md,documentation,343,26240
+ElixirScope older monolith,docs/docs20250525/02-ASYNCHRONOUS_EVENT_PROCESSING_PIPELINE.md,documentation,345,25535
+ElixirScope older monolith,docs/docs20250525/03-EVENT_CORRELATION_ENGINE.md,documentation,347,26285
+ElixirScope older monolith,docs/docs20250525/04-COMPILE_TIME_AST_TRANSFORMATION_ENGINE.md,documentation,376,26083
+ElixirScope older monolith,docs/docs20250525/05-STORAGE_LAYER.md,documentation,317,22059
+ElixirScope older monolith,docs/docs20250525/06-INSTRUMENTATION_RUNTIME_ENGINE.md,documentation,316,24261
+ElixirScope older monolith,docs/docs20250525/07-AI_CODE_ANALYSIS.md,documentation,293,21753
+ElixirScope older monolith,docs/docs20250525/08-PHOENIX_INTEGRATION_LAYER.md,documentation,287,20051
+ElixirScope older monolith,docs/docs20250525/09-CONFIGURATION_MANAGEMENT_AND_APP_LIFECYCLE.md,documentation,251,18064
+ElixirScope older monolith,docs/docs20250525/10-CORE_EVENT_STRUCTURES_AND_UTILITY_FNS.md,documentation,232,20322
+ElixirScope older monolith,docs/docs20250525/11-AI-ORCHESTRATOR.md,documentation,312,24034
+ElixirScope older monolith,docs/docs20250525/12-DATA_LIFECYCLE_MANAGEMENT.md,documentation,285,20114
+ElixirScope older monolith,docs/docs20250525/13-DISTRIBUTED_SYSTEMS_SUPPORT_LAYER.md,documentation,322,24840
+ElixirScope older monolith,docs/docs20250525/ADVANCED_AI_PRD_CURSOR.md,documentation,492,18941
+ElixirScope older monolith,docs/docs20250525/ADVANCED_AI_TESTS_CURSOR.md,documentation,874,27635
+ElixirScope older monolith,docs/docs20250525/AI_IMPLEMENTATION_SUMMARY.md,documentation,178,7891
+ElixirScope older monolith,docs/docs20250525/AST_TRANSFORMATION_COMPILE_VS_RUNTIME.md,documentation,122,4088
+ElixirScope older monolith,docs/docs20250525/CURSOR.md,documentation,354,17055
+ElixirScope older monolith,docs/docs20250525/DIAGS_TECH_DOC.md,documentation,381,29392
+ElixirScope older monolith,docs/docs20250525/DIAGS.md,documentation,474,11967
+ElixirScope older monolith,docs/docs20250525/DIAGS2.md,documentation,661,16165
+ElixirScope older monolith,docs/docs20250525/FOUNDATION_REVIEW.md,documentation,262,11266
+ElixirScope older monolith,docs/docs20250525/IS_THIS_AI_LAYER_DONE_QUESTION_MARK_CURSOR.md,documentation,249,8557
+ElixirScope older monolith,docs/docs20250525/LAYER_9_COMPLETION_SUMMARY.md,documentation,215,7379
+ElixirScope older monolith,docs/docs20250525/LAYER10_CURSOR_PRD_TEST_PLAN_COMPREHENSIVE.md,documentation,475,15606
+ElixirScope older monolith,docs/docs20250525/MULTIPROVIDER.md,documentation,897,27060
+ElixirScope older monolith,docs/docs20250525/OPUS_CRITIQUE.md,documentation,261,10413
+ElixirScope older monolith,docs/docs20250525/OPUS_PROD_RUNTIME_INSTRUMENTATION_API_SKETCH.md,documentation,470,12910
+ElixirScope older monolith,docs/docs20250525/OPUS_RINGBUFFER_REVAMP.md,documentation,226,6511
+ElixirScope older monolith,docs/docs20250525/PROGRESS.md,documentation,254,10521
+ElixirScope older monolith,docs/docs20250525/WARNINGS.md,documentation,176,6824
+ElixirScope older monolith,docs/docs20250525_2/API.md,documentation,413,28039
+ElixirScope older monolith,docs/docs20250525_2/AST_MERGE_CURSOR_geminiResponse.md,documentation,230,18282
+ElixirScope older monolith,docs/docs20250525_2/AST_MERGE_CURSOR_geminiResponse2.md,documentation,178,17023
+ElixirScope older monolith,docs/docs20250525_2/CURSOR_INTEGRATION_TESTS.md,documentation,1004,51823
+ElixirScope older monolith,docs/docs20250525_2/CURSOR_PHASE_2_AI_ENGINE.md,documentation,201,7099
+ElixirScope older monolith,docs/docs20250525_2/CURSOR_REVAMP_DEBUG_PLAN.md,documentation,1032,44282
+ElixirScope older monolith,docs/docs20250525_2/CURSOR_SAMPLE_DEBUG_APP.md,documentation,235,19598
+ElixirScope older monolith,docs/docs20250525_2/diagram_update_plan.md,documentation,103,5572
+ElixirScope older monolith,docs/docs20250525_2/DIAGS.md,documentation,581,21535
+ElixirScope older monolith,docs/docs20250525_2/GETTING_STARTED.md,documentation,306,16384
+ElixirScope older monolith,docs/docs20250525_2/OPUS_DONT_REINVENT_AND_USE_BUILTIN_DEBUG.md,documentation,435,11717
+ElixirScope older monolith,docs/docs20250525_2/OPUS_GEMINI_DESIGN_DEBUGGING_REVAMP.md,documentation,1643,83488
+ElixirScope older monolith,docs/docs20250525_2/ORIGINAL_COMPILED_AST.md,documentation,159,14753
+ElixirScope older monolith,docs/docs20250525_2/PROGRESS_SUMMARY.md,documentation,157,5975
+ElixirScope older monolith,docs/docs20250525_2/README_.md,documentation,414,13119
+ElixirScope older monolith,docs/docs20250525_2/REVAMP_PROGRESS.md,documentation,47,2180
+ElixirScope older monolith,docs/docs20250525_2/REVAMP_WARNING2.md,documentation,193,6438
+ElixirScope older monolith,docs/docs20250525_2/REVAMP_WARNING3.md,documentation,349,11339
+ElixirScope older monolith,docs/docs20250525_2/REVAMP_WARNINGS.md,documentation,688,27449
+ElixirScope older monolith,docs/docs20250525_2/TEST_CURSOR.md,documentation,382,10733
+ElixirScope older monolith,docs/docs20250525_3/API_DESIGN.md,documentation,1235,37171
+ElixirScope older monolith,docs/docs20250525_3/ARCHITECTURE_STATUS.md,documentation,399,12979
+ElixirScope older monolith,docs/docs20250525_3/AST_MERGE_CURSOR.md,documentation,1103,40829
+ElixirScope older monolith,docs/docs20250525_3/DIAGS.md,documentation,298,8138
+ElixirScope older monolith,docs/docs20250525_3/ERROR_CURSOR.md,documentation,309,9176
+ElixirScope older monolith,docs/docs20250525_4_redo/REDO_GEM_abstractions.md,documentation,304,20285
+ElixirScope older monolith,docs/docs20250525_4_redo/REDO_GEM_AI_UI.md,documentation,300,17313
+ElixirScope older monolith,docs/docs20250525_4_redo/REDO_GEM_diags.md,documentation,347,16168
+ElixirScope older monolith,docs/docs20250525_4_redo/REDO_GEM_instrumentationPlan.md,documentation,283,17962
+ElixirScope older monolith,docs/docs20250525_4_redo/REDO_GEM_instrumentationPlan2.md,documentation,241,16895
+ElixirScope older monolith,docs/docs20250525_4_redo/REDO_GEM.md,documentation,111,16977
+ElixirScope older monolith,docs/docs20250526/AST_DEBUGGER_WITH_LLM_STATUS.md,documentation,146,10887
+ElixirScope older monolith,docs/docs20250526/AST_DEBUGGER_WITH_LLM.md,documentation,1644,57789
+ElixirScope older monolith,docs/docs20250526/AST_DIAGS_REVISED_STATUS.md,documentation,206,15572
+ElixirScope older monolith,docs/docs20250526/AST_DIAGS_REVISED.md,documentation,554,21999
+ElixirScope older monolith,docs/docs20250526/AST_DIAGS.md,documentation,346,6656
+ElixirScope older monolith,docs/docs20250526/CURSOR_ASSESSMENT.md,documentation,317,14597
+ElixirScope older monolith,docs/docs20250526/CURSOR_BIGBOY_ENHANCED_AST_TECH_STATUS.md,documentation,317,13107
+ElixirScope older monolith,docs/docs20250526/CURSOR_BIGBOY_ENHANCED_AST_TECH.md,documentation,2005,68466
+ElixirScope older monolith,docs/docs20250526/CURSOR_BIGBOY_ENHANCED_testsAndImplPlan_STATUS.md,documentation,238,11727
+ElixirScope older monolith,docs/docs20250526/CURSOR_BIGBOY_ENHANCED_testsAndImplPlan.md,documentation,1555,53488
+ElixirScope older monolith,docs/docs20250526/CURSOR_BIGBOY_ENHANCED.md,documentation,651,26957
+ElixirScope older monolith,docs/docs20250526/CURSOR_BIGBOY.md,documentation,681,27277
+ElixirScope older monolith,docs/docs20250526/CURSOR_CODE_MAPPING.md,documentation,875,28271
+ElixirScope older monolith,docs/docs20250526/CURSOR_GAP.md,documentation,400,15709
+ElixirScope older monolith,docs/docs20250526/CURSOR_IMPLEMENTATION_GUIDE.md,documentation,516,17722
+ElixirScope older monolith,docs/docs20250526/CURSOR_PROMPT_GUIDE.md,documentation,633,26156
+ElixirScope older monolith,docs/docs20250526/CURSOR_TESTPLAN.md,documentation,450,15690
+ElixirScope older monolith,docs/docs20250526/CURSOR_WARNING_ANALYSIS.md,documentation,774,27572
+ElixirScope older monolith,lib/elixir_scope/ai/analysis/intelligent_code_analyzer.ex,application source,830,24912
+ElixirScope older monolith,lib/elixir_scope/ai/llm/providers/gemini.ex,application source,405,14169
+ElixirScope older monolith,lib/elixir_scope/ai/llm/providers/mock.ex,application source,225,7592
+ElixirScope older monolith,lib/elixir_scope/ai/llm/providers/vertex.ex,application source,531,18916
+ElixirScope older monolith,lib/elixir_scope/ai/llm/client.ex,application source,164,5016
+ElixirScope older monolith,lib/elixir_scope/ai/llm/config.ex,application source,194,5664
+ElixirScope older monolith,lib/elixir_scope/ai/llm/provider.ex,application source,70,1968
+ElixirScope older monolith,lib/elixir_scope/ai/llm/response.ex,application source,103,2568
+ElixirScope older monolith,lib/elixir_scope/ai/predictive/execution_predictor.ex,application source,557,17194
+ElixirScope older monolith,lib/elixir_scope/ai/code_analyzer.ex,application source,652,20541
+ElixirScope older monolith,lib/elixir_scope/ai/complexity_analyzer.ex,application source,421,13799
+ElixirScope older monolith,lib/elixir_scope/ai/orchestrator.ex,application source,348,10261
+ElixirScope older monolith,lib/elixir_scope/ai/pattern_recognizer.ex,application source,345,11227
+ElixirScope older monolith,lib/elixir_scope/ast/enhanced_transformer.ex,application source,299,9990
+ElixirScope older monolith,lib/elixir_scope/ast/injector_helpers.ex,application source,355,9257
+ElixirScope older monolith,lib/elixir_scope/ast/transformer.ex,application source,278,10146
+ElixirScope older monolith,lib/elixir_scope/ast_repository/function_data.ex,application source,367,12350
+ElixirScope older monolith,lib/elixir_scope/capture/async_writer_pool.ex,application source,357,10563
+ElixirScope older monolith,lib/elixir_scope/capture/async_writer.ex,application source,251,6662
+ElixirScope older monolith,lib/elixir_scope/capture/event_correlator.ex,application source,665,20662
+ElixirScope older monolith,lib/elixir_scope/capture/pipeline_manager.ex,application source,165,4036
+ElixirScope older monolith,lib/elixir_scope/capture/ring_buffer.ex,application source,312,9532
+ElixirScope older monolith,lib/elixir_scope/compile_time/orchestrator.ex,application source,314,9280
+ElixirScope older monolith,lib/elixir_scope/compiler/mix_task.ex,application source,311,9693
+ElixirScope older monolith,lib/elixir_scope/distributed/event_synchronizer.ex,application source,215,5833
+ElixirScope older monolith,lib/elixir_scope/distributed/global_clock.ex,application source,196,5062
+ElixirScope older monolith,lib/elixir_scope/distributed/node_coordinator.ex,application source,271,6787
+ElixirScope older monolith,lib/elixir_scope/storage/data_access.ex,application source,559,18039
+ElixirScope older monolith,lib/elixir_scope/config.ex,application source,401,13115
+ElixirScope older monolith,lib/elixir_scope/events.ex,application source,537,20396
+ElixirScope older monolith,lib/elixir_scope/utils.ex,application source,443,12186
+ElixirScope older monolith,test/elixir_scope/ai/llm/providers/gemini_live_test.exs,test,277,8212
+ElixirScope older monolith,test/elixir_scope/ai/llm/providers/mock_test.exs,test,597,17768
+ElixirScope older monolith,test/elixir_scope/ai/llm/providers/vertex_live_test.exs,test,475,14879
+ElixirScope older monolith,test/elixir_scope/ai/llm/providers/vertex_test.exs,test,209,7147
+ElixirScope older monolith,test/elixir_scope/ai/llm/client_test.exs,test,159,5668
+ElixirScope older monolith,test/elixir_scope/ai/llm/config_test.exs,test,433,15906
+ElixirScope older monolith,test/elixir_scope/ai/llm/provider_compliance_test.exs,test,398,14259
+ElixirScope older monolith,test/elixir_scope/ai/llm/response_test.exs,test,1,0
+ElixirScope older monolith,test/elixir_scope/ai/code_analyzer_test.exs,test,254,7977
+ElixirScope older monolith,test/elixir_scope/ast/enhanced_transformer_test.exs,test,331,10762
+ElixirScope older monolith,test/elixir_scope/ast/transformer_test.exs,test,242,8051
+ElixirScope older monolith,test/elixir_scope/ast_repository/test_support/helpers.ex,test,264,7392
+ElixirScope older monolith,test/elixir_scope/ast_repository/module_data_integration_test.exs,test,298,9756
+ElixirScope older monolith,test/elixir_scope/ast_repository/parser_test.exs,test,66,2855
+ElixirScope older monolith,test/elixir_scope/capture/async_writer_pool_test.exs,test,378,10739
+ElixirScope older monolith,test/elixir_scope/capture/async_writer_test.exs,test,394,10572
+ElixirScope older monolith,test/elixir_scope/capture/event_correlator_test.exs,test,534,17408
+ElixirScope older monolith,test/elixir_scope/capture/ingestor_test.exs,test,495,15839
+ElixirScope older monolith,test/elixir_scope/capture/instrumentation_runtime_enhanced_test.exs,test,406,12228
+ElixirScope older monolith,test/elixir_scope/capture/instrumentation_runtime_integration_test.exs,test,77,3457
+ElixirScope older monolith,test/elixir_scope/capture/pipeline_manager_test.exs,test,150,4655
+ElixirScope older monolith,test/elixir_scope/capture/ring_buffer_test.exs,test,553,17712
+ElixirScope older monolith,test/elixir_scope/compiler/mix_task_test.exs,test,331,9467
+ElixirScope older monolith,test/elixir_scope/distributed/multi_node_test.exs,test,338,11541
+ElixirScope older monolith,test/elixir_scope/integration/end_to_end_hybrid_test.exs,test,46,1840
+ElixirScope older monolith,test/elixir_scope/llm/context_builder_test.exs,test,74,3261
+ElixirScope older monolith,test/elixir_scope/llm/hybrid_analyzer_test.exs,test,45,2122
+ElixirScope older monolith,test/elixir_scope/performance/hybrid_benchmarks_test.exs,test,47,1742
+ElixirScope older monolith,test/elixir_scope/phoenix/integration_test.exs,test,91,2863
+ElixirScope older monolith,test/elixir_scope/storage/data_access_test.exs,test,688,22846
+ElixirScope older monolith,test/elixir_scope/events_test.exs,test,566,17417
+ElixirScope older monolith,test/elixir_scope/utils_test.exs,test,476,14262
+ElixirScope older monolith,test/fixtures/sample_elixir_project/lib/genserver_module.ex,test,20,408
+ElixirScope older monolith,test/fixtures/sample_elixir_project/lib/phoenix_controller.ex,test,13,286
+ElixirScope older monolith,test/fixtures/sample_elixir_project/lib/supervisor.ex,test,17,358
+ElixirScope older monolith,test/fixtures/sample_project/_build/dev/lib/test_project/ebin/test_project.app,test,7,274
+ElixirScope older monolith,test/fixtures/sample_project/lib/test_module.ex,test,18,250
+ElixirScope older monolith,test/fixtures/sample_project/mix.exs,test,16,218
+ElixirScope older monolith,test/integration/production_phoenix_test.exs,test,62,2084
+ElixirScope older monolith,test/support/ai_test_helpers.ex,test,271,8063
+ElixirScope older monolith,test/support/test_phoenix_app.ex,test,173,3916
+ElixirScope older monolith,LICENSE,other,21,1067
+ElixirScope older monolith,test_runner.sh,other,59,1754
+ElixirScope older monolith,config/config.exs,other,141,3681
+ElixirScope older monolith,config/dev.exs,other,55,1510
+ElixirScope older monolith,docs/docs20250525/VERTEX_DIAGS_202505261256HST.md,documentation,362,10313
+ElixirScope older monolith,docs/docs20250526_2/CURSOR_ACTION_PLAN_DAY_2.md,documentation,138,5226
+ElixirScope older monolith,docs/docs20250526_2/CURSOR_ACTION_PLAN_DAY_3.md,documentation,260,12249
+ElixirScope older monolith,docs/docs20250526_2/CURSOR_ACTION_PLAN_DAY_4.md,documentation,336,12737
+ElixirScope older monolith,docs/docs20250526_2/CURSOR_ACTION_PLAN.md,documentation,383,14756
+ElixirScope older monolith,docs/docs20250526_2/DBG.md,documentation,429,13457
+ElixirScope older monolith,docs/docs20250526_2/ELIXIRSCOPE_API_REFERENCE_AND_IMPLEMENTATION_GUIDE.md,documentation,1524,43442
+ElixirScope older monolith,docs/docs20250526_2/ELIXIRSCOPE_DEVELOPMENT_ROADMAP_AND_IMPLMENTATION_STRATEGY.md,documentation,810,33777
+ElixirScope older monolith,docs/docs20250526_2/ELIXIRSCOPE_DIAGS_cs4.md,documentation,667,20192
+ElixirScope older monolith,docs/docs20250526_2/ELIXIRSCOPE_DIAGS.md,documentation,637,21065
+ElixirScope older monolith,docs/docs20250526_2/ELIXIRSCOPE_DOCS.md,documentation,56,2943
+ElixirScope older monolith,docs/docs20250526_2/ELIXIRSCOPE_QUICK_START_AND_IMPLEMENTATION_GUIDE.md,documentation,1187,28994
+ElixirScope older monolith,docs/docs20250526_2/ELIXIRSCOPE_UNIFIED_DOCUMENT_SET.md,documentation,595,17209
+ElixirScope older monolith,docs/docs20250526_2/NEWTESTS.md,documentation,679,45312
+ElixirScope older monolith,docs/docs20250526_2/NOT_YET_IMPL.md,documentation,128,7226
+ElixirScope older monolith,docs/docs20250526_2/SUP.md,documentation,251,8011
+ElixirScope older monolith,docs/docs20250527/CURRENT_PHASE.md,documentation,645,21836
+ElixirScope older monolith,docs/docs20250527/TDD_IMPLEMENTATION_SUMMARY.md,documentation,267,8458
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/1.md,documentation,208,6209
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/10-enhanced-data-structures-cpg_data.ex,documentation,207,8122
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/11-ast_repository.ex,documentation,390,16545
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/12-project_populator.ex,documentation,250,11461
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/13-file_watcher.ex,documentation,298,12085
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/14-synchronizer.ex,documentation,250,12565
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/15-query_builder.ex,documentation,257,9946
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/16-query_executor.ex,documentation,241,11029
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/17-temporal_bridge_enhancements.ex,documentation,266,12791
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/18-ai_bridge.ex,documentation,262,13097
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/19-ast_node_id_manager.ex,documentation,288,13970
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/2.md,documentation,1753,56153
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/20-test_data_generator.ex,documentation,305,12983
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/21-runtime_bridge.ex,documentation,202,10112
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/22-ast_repository_config.ex,documentation,136,7035
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/23-API_reference.md,documentation,230,12699
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/24-architecture_ast_repository.md,documentation,179,15307
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/25-usage_cookbook_ast.md,documentation,394,16301
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/26-mix_task_integration.md,documentation,205,14357
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/27-supervision_strategy_ast_repo.md,documentation,156,10196
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/28-performance_scalability_ast.md,documentation,129,11246
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/29-gap_analysis.md,documentation,173,20313
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/3-cfg_generator.ex,documentation,773,35740
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/4-dfg_generator.ex,documentation,586,31271
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/5-cpg_builder.ex,documentation,411,19639
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/6-testing-strats.exs,documentation,373,14137
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/7-integration_architecture.ex,documentation,262,11742
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/8-ast_analyzer.ex,documentation,553,25945
+ElixirScope older monolith,docs/docs20250527_2/CODE_PROPERTY_GRAPH_DESIGN_ENHANCE/9-ast_extensions.ex,documentation,280,13941
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR/1.md,documentation,132,5394
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR/2-enhanced-data-structures-cfg_data.ex,documentation,129,4287
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR/2-enhanced-data-structures-dfg_data.ex,documentation,183,6416
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR/3-cfg_generator.ex,documentation,398,12290
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR/4-dfg_generator.ex,documentation,461,15290
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR/5-cpg_builder.ex,documentation,610,18286
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR/6-testing-strats.exs,documentation,477,15981
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR/7-integration_architecture.ex,documentation,1,0
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR/CURSOR_EXISTING.md,documentation,281,12599
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR/CURSOR_SKETCH.md,documentation,215,8594
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR/CURSOR_SOPHISTICATED.md,documentation,222,7854
+ElixirScope older monolith,docs/docs20250527_2/AST_CURSOR_NEXT.md,documentation,246,7802
+ElixirScope older monolith,docs/docs20250527_2/AST_CURSOR_PROG.md,documentation,211,7384
+ElixirScope older monolith,docs/docs20250527_2/AST_DEPENDENCIES.md,documentation,129,4535
+ElixirScope older monolith,docs/docs20250527_2/AST_DISCUSS.md,documentation,394,35118
+ElixirScope older monolith,docs/docs20250527_2/AST_DOCS_fromCode_sonnnet.md,documentation,284,10373
+ElixirScope older monolith,docs/docs20250527_2/AST_NEXTBUGS.md,documentation,103,3525
+ElixirScope older monolith,docs/docs20250527_2/AST_REPOSITORY_API_SPECIFICATION.md,documentation,849,20519
+ElixirScope older monolith,docs/docs20250527_2/AST_REPOSITORY_DATA_SCHEMAS_AND_SPECIFICATIONS.md,documentation,641,16165
+ElixirScope older monolith,docs/docs20250527_2/AST_REPOSITORY_IMPLEMENTATION_GUIDE.md,documentation,917,20984
+ElixirScope older monolith,docs/docs20250527_2/COMPETITIVE_ANALYSIS.md,documentation,267,59561
+ElixirScope older monolith,docs/docs20250527_2/CURRENT_PHASE.md,documentation,612,19655
+ElixirScope older monolith,docs/docs20250527_2/CURRENT_STEP.md,documentation,796,27391
+ElixirScope older monolith,docs/docs20250527_2/ELIXIRSCOPE_ARCH_DIAGS.md,documentation,557,14058
+ElixirScope older monolith,docs/docs20250527_2/INSTRUMENTATION_GUIDE.md,documentation,321,18348
+ElixirScope older monolith,docs/docs20250527_2/PUBLIC_DOCS.md,documentation,1171,28945
+ElixirScope older monolith,docs/docs20250527_2/README_.md,documentation,532,17715
+ElixirScope older monolith,docs/docs20250527_2/ROADMAP.md,documentation,267,11728
+ElixirScope older monolith,docs/docs20250527_2/WARNINGS.md,documentation,682,34766
+ElixirScope older monolith,docs/docs20250527_2/WEB_INTERFACE_PHASE.md,documentation,588,19881
+ElixirScope older monolith,docs/docs20250527_2/WRITEUP_CURSOR.md,documentation,207,8172
+ElixirScope older monolith,docs/API.md,documentation,849,20519
+ElixirScope older monolith,docs/ARCHITECTURE_DIAGRAMS.md,documentation,557,14058
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/expression_processors/assignment_processors.ex,application source,85,3032
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/expression_processors/basic_processors.ex,application source,239,7583
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/expression_processors/control_flow_processors.ex,application source,233,6939
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/expression_processors/data_structure_processors.ex,application source,172,5102
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/expression_processors/function_processors.ex,application source,118,3640
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/ast_processor_behavior.ex,application source,24,917
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/ast_utilities_behavior.ex,application source,47,1406
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/control_flow_processors.ex,application source,508,17360
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/integration_test.ex,application source,151,5473
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/state_manager_behaviour.ex,application source,24,800
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/state.ex,application source,19,605
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/validators.ex,application source,17,525
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_builder/complexity_analyzer.ex,application source,312,9133
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_builder/core.ex,application source,195,6253
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_builder/graph_merger.ex,application source,391,10917
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_builder/helpers.ex,application source,220,7052
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_builder/pattern_detector.ex,application source,123,3224
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_builder/performance_analyzer.ex,application source,243,7637
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_builder/quality_analyzer.ex,application source,469,14318
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_builder/query_processor.ex,application source,121,3446
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_builder/security_analyzer.ex,application source,274,8635
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_builder/validator.ex,application source,77,2258
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_generator/ast_analyzer.ex,application source,543,19034
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_generator/dependency_analyzer.ex,application source,363,12420
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_generator/edge_creator.ex,application source,242,7642
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_generator/node_creator.ex,application source,158,4433
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_generator/optimization_analyzer.ex,application source,336,11029
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_generator/pattern_analyzer.ex,application source,162,5969
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_generator/state_manager.ex,application source,76,1829
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_generator/structure_builder.ex,application source,267,8035
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_generator/variable_tracker.ex,application source,435,14039
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/project_populator/ast_extractor.ex,application source,99,3006
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/project_populator/complexity_analyzer.ex,application source,128,4433
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/project_populator/dependency_analyzer.ex,application source,65,1882
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/project_populator/file_discovery.ex,application source,52,1572
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/project_populator/file_parser.ex,application source,137,4245
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/project_populator/module_analyzer.ex,application source,202,7321
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/project_populator/optimization_hints.ex,application source,71,2088
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/project_populator/performance_metrics.ex,application source,29,1141
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/project_populator/quality_analyzer.ex,application source,31,924
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/project_populator/security_analyzer.ex,application source,38,1074
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_data.ex,application source,253,7843
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/complexity_metrics.ex,application source,449,16253
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_data.ex,application source,250,9685
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_data.ex,application source,567,20396
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_generator_minimal.ex,application source,83,2452
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/enhanced_function_data.ex,application source,141,3262
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/enhanced_module_data.ex,application source,49,1156
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/repository.ex,application source,548,19509
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/shared_data_structures.ex,application source,60,2148
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/supporting_structures.ex,application source,552,12031
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/synchronizer.ex,application source,273,11063
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/variable_data.ex,application source,27,527
+ElixirScope older monolith,lib/elixir_scope/ast_repository/memory_manager/cache_manager.ex,application source,263,7322
+ElixirScope older monolith,lib/elixir_scope/ast_repository/memory_manager/cleaner.ex,application source,274,8048
+ElixirScope older monolith,lib/elixir_scope/ast_repository/memory_manager/compressor.ex,application source,289,9294
+ElixirScope older monolith,lib/elixir_scope/ast_repository/memory_manager/config.ex,application source,283,8115
+ElixirScope older monolith,lib/elixir_scope/ast_repository/memory_manager/pressure_handler.ex,application source,310,9493
+ElixirScope older monolith,lib/elixir_scope/ast_repository/memory_manager/test_runner.ex,application source,98,3049
+ElixirScope older monolith,lib/elixir_scope/ast_repository/module_data/ast_analyzer.ex,application source,288,7930
+ElixirScope older monolith,lib/elixir_scope/ast_repository/module_data/attribute_extractor.ex,application source,86,2150
+ElixirScope older monolith,lib/elixir_scope/ast_repository/module_data/complexity_calculator.ex,application source,30,1068
+ElixirScope older monolith,lib/elixir_scope/ast_repository/module_data/dependency_extractor.ex,application source,28,954
+ElixirScope older monolith,lib/elixir_scope/ast_repository/module_data/pattern_detector.ex,application source,117,3274
+ElixirScope older monolith,lib/elixir_scope/ast_repository/pattern_matcher/analyzers.ex,application source,162,5224
+ElixirScope older monolith,lib/elixir_scope/ast_repository/pattern_matcher/cache.ex,application source,96,2449
+ElixirScope older monolith,lib/elixir_scope/ast_repository/pattern_matcher/config.ex,application source,68,2293
+ElixirScope older monolith,lib/elixir_scope/ast_repository/pattern_matcher/core.ex,application source,143,5067
+ElixirScope older monolith,lib/elixir_scope/ast_repository/pattern_matcher/pattern_library.ex,application source,133,4269
+ElixirScope older monolith,lib/elixir_scope/ast_repository/pattern_matcher/pattern_rules.ex,application source,97,2924
+ElixirScope older monolith,lib/elixir_scope/ast_repository/pattern_matcher/stats.ex,application source,45,1320
+ElixirScope older monolith,lib/elixir_scope/ast_repository/pattern_matcher/types.ex,application source,53,1263
+ElixirScope older monolith,lib/elixir_scope/ast_repository/pattern_matcher/validators.ex,application source,88,2595
+ElixirScope older monolith,lib/elixir_scope/ast_repository/performance_optimizer/batch_processor.ex,application source,99,2886
+ElixirScope older monolith,lib/elixir_scope/ast_repository/performance_optimizer/cache_manager.ex,application source,151,4329
+ElixirScope older monolith,lib/elixir_scope/ast_repository/performance_optimizer/lazy_loader.ex,application source,134,4516
+ElixirScope older monolith,lib/elixir_scope/ast_repository/performance_optimizer/optimization_scheduler.ex,application source,69,1824
+ElixirScope older monolith,lib/elixir_scope/ast_repository/performance_optimizer/statistics_collector.ex,application source,104,2574
+ElixirScope older monolith,lib/elixir_scope/ast_repository/query_builder/cache.ex,application source,178,4629
+ElixirScope older monolith,lib/elixir_scope/ast_repository/query_builder/executor.ex,application source,291,8379
+ElixirScope older monolith,lib/elixir_scope/ast_repository/query_builder/normalizer.ex,application source,79,2467
+ElixirScope older monolith,lib/elixir_scope/ast_repository/query_builder/optimizer.ex,application source,184,5628
+ElixirScope older monolith,lib/elixir_scope/ast_repository/query_builder/types.ex,application source,61,1690
+ElixirScope older monolith,lib/elixir_scope/ast_repository/query_builder/validator.ex,application source,101,3357
+ElixirScope older monolith,lib/elixir_scope/ast_repository/runtime_correlator/breakpoint_manager.ex,application source,199,6741
+ElixirScope older monolith,lib/elixir_scope/ast_repository/runtime_correlator/cache_manager.ex,application source,156,3969
+ElixirScope older monolith,lib/elixir_scope/ast_repository/runtime_correlator/config.ex,application source,161,4607
+ElixirScope older monolith,lib/elixir_scope/ast_repository/runtime_correlator/context_builder.ex,application source,139,4461
+ElixirScope older monolith,lib/elixir_scope/ast_repository/runtime_correlator/event_correlator.ex,application source,254,8519
+ElixirScope older monolith,lib/elixir_scope/ast_repository/runtime_correlator/trace_builder.ex,application source,316,11042
+ElixirScope older monolith,lib/elixir_scope/ast_repository/runtime_correlator/types.ex,application source,81,1995
+ElixirScope older monolith,lib/elixir_scope/ast_repository/runtime_correlator/utils.ex,application source,210,6116
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced_function_data.ex,application source,629,20729
+ElixirScope older monolith,lib/elixir_scope/ast_repository/instrumentation_mapper.ex,application source,502,17400
+ElixirScope older monolith,lib/elixir_scope/ast_repository/module_data.ex,application source,190,5699
+ElixirScope older monolith,lib/elixir_scope/ast_repository/parser.ex,application source,354,12670
+ElixirScope older monolith,lib/elixir_scope/ast_repository/repository.ex,application source,525,17172
+ElixirScope older monolith,lib/elixir_scope/capture/enhanced_instrumentation/ast_correlator.ex,application source,97,3022
+ElixirScope older monolith,lib/elixir_scope/capture/enhanced_instrumentation/breakpoint_manager.ex,application source,245,8240
+ElixirScope older monolith,lib/elixir_scope/capture/enhanced_instrumentation/debugger_interface.ex,application source,260,7254
+ElixirScope older monolith,lib/elixir_scope/capture/enhanced_instrumentation/event_handler.ex,application source,189,6616
+ElixirScope older monolith,lib/elixir_scope/capture/enhanced_instrumentation/storage.ex,application source,278,7518
+ElixirScope older monolith,lib/elixir_scope/capture/enhanced_instrumentation/utils.ex,application source,84,2681
+ElixirScope older monolith,lib/elixir_scope/capture/enhanced_instrumentation/watchpoint_manager.ex,application source,262,8079
+ElixirScope older monolith,lib/elixir_scope/capture/ingestor/channel.ex,application source,69,2494
+ElixirScope older monolith,lib/elixir_scope/capture/ingestor/distributed.ex,application source,42,1210
+ElixirScope older monolith,lib/elixir_scope/capture/ingestor/ecto.ex,application source,43,1443
+ElixirScope older monolith,lib/elixir_scope/capture/ingestor/gen_server.ex,application source,84,2499
+ElixirScope older monolith,lib/elixir_scope/capture/ingestor/live_view.ex,application source,138,4660
+ElixirScope older monolith,lib/elixir_scope/capture/ingestor/phoenix.ex,application source,139,4543
+ElixirScope older monolith,lib/elixir_scope/capture/instrumentation_runtime/ast_reporting.ex,application source,580,18432
+ElixirScope older monolith,lib/elixir_scope/capture/instrumentation_runtime/context.ex,application source,183,4711
+ElixirScope older monolith,lib/elixir_scope/capture/instrumentation_runtime/core_reporting.ex,application source,190,5145
+ElixirScope older monolith,lib/elixir_scope/capture/instrumentation_runtime/ecto_reporting.ex,application source,36,1314
+ElixirScope older monolith,lib/elixir_scope/capture/instrumentation_runtime/gen_server_reporting.ex,application source,59,2069
+ElixirScope older monolith,lib/elixir_scope/capture/instrumentation_runtime/performance.ex,application source,62,1996
+ElixirScope older monolith,lib/elixir_scope/capture/instrumentation_runtime/phoenix_reporting.ex,application source,285,10390
+ElixirScope older monolith,lib/elixir_scope/capture/temporal_bridge_enhancement/ast_context_builder.ex,application source,147,4622
+ElixirScope older monolith,lib/elixir_scope/capture/temporal_bridge_enhancement/cache_manager.ex,application source,190,5167
+ElixirScope older monolith,lib/elixir_scope/capture/temporal_bridge_enhancement/event_processor.ex,application source,159,4903
+ElixirScope older monolith,lib/elixir_scope/capture/temporal_bridge_enhancement/state_manager.ex,application source,140,4629
+ElixirScope older monolith,lib/elixir_scope/capture/temporal_bridge_enhancement/trace_builder.ex,application source,173,5680
+ElixirScope older monolith,lib/elixir_scope/capture/temporal_bridge_enhancement/types.ex,application source,58,1523
+ElixirScope older monolith,lib/elixir_scope/capture/ingestor.ex,application source,543,17964
+ElixirScope older monolith,lib/elixir_scope/capture/temporal_storage.ex,application source,449,13538
+ElixirScope older monolith,lib/elixir_scope/phoenix/integration.ex,application source,331,9510
+ElixirScope older monolith,lib/elixir_scope/application.ex,application source,69,2069
+ElixirScope older monolith,lib/elixir_scope/event_store.ex,application source,81,2269
+ElixirScope older monolith,lib/elixir_scope.ex,application source,467,13090
+ElixirScope older monolith,test/elixir_scope/ai/analysis/intelligent_code_analyzer_test.exs,test,642,21183
+ElixirScope older monolith,test/elixir_scope/ai/predictive/execution_predictor_test.exs,test,520,19834
+ElixirScope older monolith,test/elixir_scope/ast_repository/enhanced/cfg_generator/integration_test.exs,test,139,4890
+ElixirScope older monolith,test/elixir_scope/ast_repository/pattern_matcher/config_test.exs,test,43,1287
+ElixirScope older monolith,test/elixir_scope/ast_repository/pattern_matcher/types_test.exs,test,23,740
+ElixirScope older monolith,test/elixir_scope/ast_repository/pattern_matcher/validators_test.exs,test,68,2127
+ElixirScope older monolith,test/elixir_scope/ast_repository/test_support/cfg_validation_helpers.ex,test,331,10074
+ElixirScope older monolith,test/elixir_scope/ast_repository/test_support/dfg_validation_helpers.ex,test,328,10382
+ElixirScope older monolith,test/elixir_scope/ast_repository/cfg_generator_enhanced_test.exs,test,467,17522
+ElixirScope older monolith,test/elixir_scope/ast_repository/cpg_builder_test.exs,test,558,16873
+ElixirScope older monolith,test/elixir_scope/ast_repository/dfg_generator_enhanced_test.exs,test,485,18307
+ElixirScope older monolith,test/elixir_scope/ast_repository/dfg_generator_test.exs,test,496,14119
+ElixirScope older monolith,test/elixir_scope/ast_repository/enhanced_repository_test.exs,test,473,16433
+ElixirScope older monolith,test/elixir_scope/ast_repository/instrumentation_mapper_test.exs,test,522,19305
+ElixirScope older monolith,test/elixir_scope/ast_repository/pattern_matcher_old_test.exs,test,10,252
+ElixirScope older monolith,test/elixir_scope/ast_repository/query_builder_test.exs,test,635,21244
+ElixirScope older monolith,test/elixir_scope/ast_repository/synchronizer_test.exs,test,493,15612
+ElixirScope older monolith,test/elixir_scope/capture/instrumentation_runtime_temporal_integration_test.exs,test,377,14345
+ElixirScope older monolith,test/elixir_scope/capture/temporal_bridge_test.exs,test,520,20010
+ElixirScope older monolith,test/elixir_scope/capture/temporal_storage_test.exs,test,449,18280
+ElixirScope older monolith,test/elixir_scope/integration/ast_runtime_integration_test.exs,test,756,25207
+ElixirScope older monolith,test/elixir_scope/config_test.exs,test,394,11632
+ElixirScope older monolith,test/elixir_scope_test.exs,test,451,13466
+ElixirScope older monolith,test_apps/assets/css/app.css,other,5,127
+ElixirScope older monolith,test_apps/cinema_demo/lib/cinema_demo/application.ex,other,36,988
+ElixirScope older monolith,test_apps/cinema_demo/lib/cinema_demo/data_processor.ex,other,621,18892
+ElixirScope older monolith,test_apps/cinema_demo/lib/cinema_demo/task_manager.ex,other,335,9427
+ElixirScope older monolith,test_apps/cinema_demo/lib/cinema_demo.ex,other,428,12694
+ElixirScope older monolith,test_apps/cinema_demo/test/cinema_demo_test.exs,other,8,146
+ElixirScope older monolith,test_apps/cinema_demo/test/test_helper.exs,other,1,14
+ElixirScope older monolith,test_apps/cinema_demo/.formatter.exs,other,4,96
+ElixirScope older monolith,test_apps/cinema_demo/.gitignore,other,23,549
+ElixirScope older monolith,test_apps/cinema_demo/README.md,documentation,388,8462
+ElixirScope older monolith,test_apps/cinema_demo/run_showcase.sh,other,35,909
+ElixirScope older monolith,test_apps/cinema_demo/showcase_script.exs,other,156,5683
+ElixirScope older monolith,test_apps/docs/001_GEMINI.md,documentation,202,12267
+ElixirScope older monolith,test_apps/docs/002_GEMINI.md,documentation,1495,55500
+ElixirScope older monolith,test_apps/docs/003_BASIC_UI_GEMINI.md,documentation,1495,55500
+ElixirScope older monolith,test_apps/docs/004_BASIC_UI_V0.md,documentation,1088,33889
+ElixirScope older monolith,test_apps/docs/005_EXPAND_ON_001.md,documentation,311,15839
+ElixirScope older monolith,test_apps/docs/006_EXPAND_ON_002.md,documentation,331,15620
+ElixirScope older monolith,test_apps/docs/007_EXPAND_ON_004.md,documentation,1478,44999
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/config/config.exs,other,30,914
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/config/dev.exs,other,24,757
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/config/prod.exs,other,24,745
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/config/test.exs,other,22,757
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/lib/elixir_analyzer_demo/code_inspector.ex,other,28,673
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/lib/elixir_analyzer_demo/debug_interface.ex,other,110,3388
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/lib/elixir_analyzer_demo/performance_monitor.ex,other,383,10758
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/lib/elixir_analyzer_demo/quality_analyzer.ex,other,36,958
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/lib/elixir_analyzer_demo/runtime_correlation.ex,other,32,877
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/lib/elixir_analyzer_demo/telemetry.ex,other,19,416
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/test/elixir_analyzer_demo_test.exs,other,8,170
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/test/test_helper.exs,other,1,14
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/.formatter.exs,other,4,96
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/.gitignore,other,23,558
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/mix.exs,other,76,2306
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/README.md,documentation,329,7960
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/run.sh,other,3,61
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/SAMPLE_CURSOR.md,documentation,294,8291
+ElixirScope older monolith,test_apps/phoenix_scope_player/assets/css/app.css,other,5,144
+ElixirScope older monolith,test_apps/phoenix_scope_player/assets/js/app.js,other,43,1608
+ElixirScope older monolith,test_apps/phoenix_scope_player/assets/vendor/topbar.js,other,165,5373
+ElixirScope older monolith,test_apps/phoenix_scope_player/assets/tailwind.config.js,other,74,2565
+ElixirScope older monolith,test_apps/phoenix_scope_player/config/config.exs,other,65,2071
+ElixirScope older monolith,test_apps/phoenix_scope_player/config/dev.exs,other,75,2595
+ElixirScope older monolith,test_apps/phoenix_scope_player/config/prod.exs,other,21,775
+ElixirScope older monolith,test_apps/phoenix_scope_player/config/runtime.exs,other,102,4130
+ElixirScope older monolith,test_apps/phoenix_scope_player/config/test.exs,other,24,857
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/mix/tasks/clean.sessions.ex,other,54,1371
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/mix/tasks/gen.sample_session.ex,other,19,498
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/mix/tasks/gen.sessions.ex,other,44,1223
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player/calculator.ex,other,45,1100
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player/instrumentation.ex,other,246,8008
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player/mailer.ex,other,3,94
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player/session_generator.ex,other,53,1585
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/components/layouts/app.html.heex,other,32,1098
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/components/layouts/root.html.heex,other,17,610
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/components/core_components.ex,other,676,21534
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/components/layouts.ex,other,14,483
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/controllers/error_html.ex,other,24,771
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/controllers/error_json.ex,other,21,633
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/live/session_list_live.ex,other,64,3498
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/endpoint.ex,other,52,1603
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/gettext.ex,other,25,858
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/telemetry.ex,other,70,2138
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web.ex,other,116,2683
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player.ex,other,9,272
+ElixirScope older monolith,test_apps/phoenix_scope_player/test/phoenix_scope_player_web/controllers/error_html_test.exs,other,14,457
+ElixirScope older monolith,test_apps/phoenix_scope_player/test/phoenix_scope_player_web/controllers/error_json_test.exs,other,12,397
+ElixirScope older monolith,test_apps/phoenix_scope_player/test/support/conn_case.ex,other,37,1119
+ElixirScope older monolith,test_apps/phoenix_scope_player/test/test_helper.exs,other,1,14
+ElixirScope older monolith,test_apps/phoenix_scope_player/.formatter.exs,other,5,145
+ElixirScope older monolith,test_apps/phoenix_scope_player/mix.exs,other,79,2279
+ElixirScope older monolith,test_apps/priv/captured_data/sample_session_1/ast_map.json,other,22,387
+ElixirScope older monolith,test_apps/priv/captured_data/sample_session_1/events.json,other,54,1209
+ElixirScope older monolith,test_apps/priv/captured_data/sample_session_1/metadata.json,other,10,284
+ElixirScope older monolith,test_apps/priv/captured_data/sample_session_1/source_code.json,other,3,242
+ElixirScope older monolith,test_apps/.cursorignore,other,7,50
+ElixirScope older monolith,test_apps/.cursorrules,other,8,393
+ElixirScope older monolith,test_apps/CURSOR_PROMPT.md,documentation,48,1688
+ElixirScope older monolith,test_apps/ELIXIRSCOPE_DOCS.md,documentation,4207,158822
+ElixirScope older monolith,test_apps/README.md,documentation,255,6976
+ElixirScope older monolith,.formatter.exs,other,5,184
+ElixirScope older monolith,AA_CURSOR_DEBUG.md,documentation,9,536
+ElixirScope older monolith,AI_DEBUGGING_CPG.md,documentation,254,50644
+ElixirScope older monolith,API_DOCUMENTATION_gemini.md,documentation,1590,75128
+ElixirScope older monolith,API_DOCUMENTATION.md,documentation,1028,25373
+ElixirScope older monolith,CFG_MIGRATION_STRATEGY.md,documentation,162,5378
+ElixirScope older monolith,CONTRIBUTING.md,documentation,288,14295
+ElixirScope older monolith,CPG_ALGORITHMS_OVERVIEW.md,documentation,81,7357
+ElixirScope older monolith,CPG_ETS_INTEGRATION.md,documentation,273,8577
+ElixirScope older monolith,CPG_OPERATIONS_GUIDE.md,documentation,189,5127
+ElixirScope older monolith,CPG_PATTERN_DETECTION_ADVANCED.md,documentation,326,19252
+ElixirScope older monolith,CPG_PRD.md,documentation,136,10802
+ElixirScope older monolith,CPG_TEST_FILES.md,documentation,182,5795
+ElixirScope older monolith,CPG--TOC.md,documentation,732,18318
+ElixirScope older monolith,CPG-GEMINI_noteToClaude_TESTS.md,documentation,144,15565
+ElixirScope older monolith,CPG-GEMINI_TESTLIST.md,documentation,190,13157
+ElixirScope older monolith,CPG-OPUS_PROMPT_AND_TESTS.md,documentation,1303,42144
+ElixirScope older monolith,CPG-OPUS_TESTLIST_combinedWithGoogle.md,documentation,263,27133
+ElixirScope older monolith,CPG-OPUS_TESTLIST.md,documentation,158,10807
+ElixirScope older monolith,DESIGN_OVERVIEW_gemini.md,documentation,175,14051
+ElixirScope older monolith,ENHANCED_TEST_COVERAGE_SUMMARY.md,documentation,221,9463
+ElixirScope older monolith,FOUNDATION_TESTS_TODO.md,documentation,170,15886
+ElixirScope older monolith,INTEGRATION_GUIDE_gemini.md,documentation,229,19761
+ElixirScope older monolith,INTEGRATION_GUIDE.md,documentation,1095,31414
+ElixirScope older monolith,MIGRATION.md,documentation,289,97734
+ElixirScope older monolith,TEST_CURSOR_1THRU6_ENHANCE.md,documentation,166,8456
+ElixirScope older monolith,TEST_SHORE.md,documentation,180,14975
+ElixirScope older monolith,.github/workflows/ci.yml,other,47,979
+ElixirScope older monolith,config/test.exs,other,94,2452
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/ast_utilities.ex,application source,92,2739
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/complexity_calculator.ex,application source,199,6010
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/path_analyzer.ex,application source,245,7671
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/state_manager.ex,application source,63,1932
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/dfg_generator.ex,application source,125,3750
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/file_watcher.ex,application source,823,26284
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/project_populator.ex,application source,149,5058
+ElixirScope older monolith,lib/elixir_scope/ast_repository/memory_manager/monitor.ex,application source,205,5556
+ElixirScope older monolith,lib/elixir_scope/ast_repository/memory_manager/supervisor.ex,application source,123,3591
+ElixirScope older monolith,lib/elixir_scope/ast_repository/query_builder/supervisor.ex,application source,24,697
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced_module_data.ex,application source,432,13157
+ElixirScope older monolith,lib/elixir_scope/ast_repository/pattern_matcher.ex,application source,242,7097
+ElixirScope older monolith,lib/elixir_scope/ast_repository/performance_optimizer.ex,application source,267,8739
+ElixirScope older monolith,lib/elixir_scope/capture/temporal_bridge_enhancement.ex,application source,333,9937
+ElixirScope older monolith,lib/elixir_scope/capture/temporal_bridge.ex,application source,651,20806
+ElixirScope older monolith,lib/elixir_scope/core/ai_manager.ex,application source,140,4631
+ElixirScope older monolith,lib/elixir_scope/core/event_manager.ex,application source,236,7370
+ElixirScope older monolith,lib/elixir_scope/query/engine.ex,application source,303,8368
+ElixirScope older monolith,test/elixir_scope/ast_repository/enhanced/cfg_generator/expression_processors_test.exs,test,378,12719
+ElixirScope older monolith,test/elixir_scope/ast_repository/test_support/fixtures/sample_asts.ex,test,282,6859
+ElixirScope older monolith,test/elixir_scope/ast_repository/cfg_generator_test.exs,test,612,17413
+ElixirScope older monolith,test/elixir_scope/ast_repository/cpg_builder_enhanced_test.exs,test,493,17263
+ElixirScope older monolith,test/elixir_scope/ast_repository/enhanced_repository_integration_test.exs,test,317,11581
+ElixirScope older monolith,test/elixir_scope/ast_repository/file_watcher_test.exs,test,813,26496
+ElixirScope older monolith,test/elixir_scope/ast_repository/memory_manager_test.exs,test,419,13141
+ElixirScope older monolith,test/elixir_scope/ast_repository/performance_test.exs,test,879,30492
+ElixirScope older monolith,test/elixir_scope/ast_repository/project_populator_test.exs,test,480,15821
+ElixirScope older monolith,test/elixir_scope/ast_repository/repository_test.exs,test,357,11995
+ElixirScope older monolith,test/elixir_scope/integration/api_completion_test.exs,test,299,9400
+ElixirScope older monolith,test/elixir_scope/storage/event_store_test.exs,test,250,8424
+ElixirScope older monolith,test_apps/cinema_demo/BUILD.md,documentation,1175,34778
+ElixirScope older monolith,test_apps/cinema_demo/FULLY_BLOWN.md,documentation,775,21124
+ElixirScope older monolith,test_apps/cinema_demo/IMPLEMENTATION_COMPLETE.md,documentation,153,5339
+ElixirScope older monolith,test_apps/cinema_demo/mix.exs,other,43,913
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/lib/elixir_analyzer_demo/analysis_engine.ex,other,600,18684
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/lib/elixir_analyzer_demo/sample_data_manager.ex,other,890,26675
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player/application.ex,other,34,1069
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player/data_provider.ex,other,154,5026
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/live/playback_live.ex,other,227,9966
+ElixirScope older monolith,test_apps/phoenix_scope_player/lib/phoenix_scope_player_web/router.ex,other,45,1370
+ElixirScope older monolith,test_apps/phoenix_scope_player/.gitignore,other,38,878
+ElixirScope older monolith,test_apps/phoenix_scope_player/README.md,documentation,564,13719
+ElixirScope older monolith,test_apps/CURSOR.md,documentation,274,8085
+ElixirScope older monolith,.cursorignore,other,7,50
+ElixirScope older monolith,.gitignore,other,12,118
+ElixirScope older monolith,AST_DIAGS.md,documentation,427,14880
+ElixirScope older monolith,CPG_AI_ML_FEATURES.md,documentation,171,16520
+ElixirScope older monolith,CPG_IMPLEMENTATION_PROMPTS.md,documentation,441,26738
+ElixirScope older monolith,CPG_MATH_API.md,documentation,216,8593
+ElixirScope older monolith,CPG_OPTIMIZATION_STRATEGIES.md,documentation,292,21742
+ElixirScope older monolith,CPG_QUERY_ENHANCEMENTS.md,documentation,268,9748
+ElixirScope older monolith,CPG_SEMANTICS_API.md,documentation,164,10070
+ElixirScope older monolith,DIAGRAMS_gemini.md,documentation,617,35608
+ElixirScope older monolith,PROMPTS.md,documentation,801,29155
+ElixirScope older monolith,WARNINGS.md,documentation,575,23489
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/ast_processor.ex,application source,358,12456
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator/expression_processors.ex,application source,71,3361
+ElixirScope older monolith,lib/elixir_scope/ast_repository/query_builder.ex,application source,310,8624
+ElixirScope older monolith,lib/elixir_scope/capture/instrumentation_runtime.ex,application source,198,10105
+ElixirScope older monolith,lib/elixir_scope/core/message_tracker.ex,application source,189,5886
+ElixirScope older monolith,lib/elixir_scope/core/state_manager.ex,application source,123,3884
+ElixirScope older monolith,test/elixir_scope/ast_repository/runtime_correlator_test.exs,test,740,25201
+ElixirScope older monolith,test/elixir_scope/query/engine_test.exs,test,260,9172
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/lib/elixir_analyzer_demo/application.ex,other,91,2930
+ElixirScope older monolith,test_apps/elixir_analyzer_demo/lib/elixir_analyzer_demo.ex,other,416,14664
+ElixirScope older monolith,test_apps/lib/phoenix_scope_player/data_provider.ex,other,152,5027
+ElixirScope older monolith,test_apps/lib/phoenix_scope_player_web/live/playback_live.ex,other,217,9411
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cfg_generator.ex,application source,177,5325
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced/cpg_builder.ex,application source,46,1400
+ElixirScope older monolith,lib/elixir_scope/ast_repository/memory_manager.ex,application source,429,12130
+ElixirScope older monolith,lib/elixir_scope/ast_repository/runtime_correlator.ex,application source,310,9841
+ElixirScope older monolith,lib/elixir_scope/capture/enhanced_instrumentation.ex,application source,321,10355
+ElixirScope older monolith,lib/elixir_scope/storage/event_store.ex,application source,334,10150
+ElixirScope older monolith,test/elixir_scope/ast_repository/parser_enhanced_test.exs,test,420,17474
+ElixirScope older monolith,test/elixir_scope/ast_repository/pattern_matcher_test.exs,test,680,19613
+ElixirScope older monolith,.cursorrules,other,8,393
+ElixirScope older monolith,lib/elixir_scope/ast_repository/enhanced_repository.ex,application source,707,22862
+ElixirScope older monolith,test/test_helper.exs,test,246,7194
+ElixirScope older monolith,mix.exs,other,179,5155
+ElixirScope older monolith,README.md,documentation,427,22919
+ElixirScope later rework,docs/archive/ast_integration_history/source/cursor_guide.md,documentation,428,14035
+ElixirScope later rework,docs/archive/ast_integration_history/source/DIAGS_COMPLETE.md,documentation,1434,47577
+ElixirScope later rework,docs/archive/ast_integration_history/source/REQ_AST_gemini.md,documentation,1183,47426
+ElixirScope later rework,docs/archive/ast_integration_history/ADDENDEUM_20250604.md,documentation,161,16933
+ElixirScope later rework,docs/archive/ast_integration_history/DOCUMENT_REVIEW_SUMMARY.md,documentation,182,7427
+ElixirScope later rework,docs/archive/ast_integration_history/FOUNDATION_INTEGRATION_SUMMARY.md,documentation,134,7359
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/CLAUDE_FOUNDATION_CONCURRENCY.md,documentation,686,20901
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/COSONNET.md,documentation,1407,47382
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/DEV_.md,documentation,350,12801
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/DEV-Foundation-API.md,documentation,748,19480
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/FOUNDATION_INVESTIGATION_DESIGN.md,documentation,198,16858
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/FOUNDATION_OTP_COMPLETION_SUMMARY.md,documentation,185,8222
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/FOUNDATION_OTP_IMPLEMENT_NOW.md,documentation,1183,36752
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/FOUNDATION_TESTS_EXHAUSTIVE.md,documentation,304,24243
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/REMOVED_TESTS.md,documentation,385,15121
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/STANDARDIZE_API_CONTRACT.md,documentation,435,13984
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/STANDARDIZE_OTP.md,documentation,639,19199
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/TESTDIRS.md,documentation,657,26394
+ElixirScope later rework,docs/archive/dated_docs/docs20250602/TESTS.md,documentation,510,16940
+ElixirScope later rework,docs/archive/development_history/docs_local/001_DEPENDENCIES.md,documentation,389,26532
+ElixirScope later rework,docs/archive/development_history/docs_local/002_DOC.md,documentation,542,40248
+ElixirScope later rework,docs/archive/development_history/docs_local/003_15_modules.md,documentation,209,15548
+ElixirScope later rework,docs/archive/development_history/docs_local/004_organize.md,documentation,139,11356
+ElixirScope later rework,docs/archive/development_history/docs_local/005_pub_api_behaviors_shared_data_structures.md,documentation,355,25324
+ElixirScope later rework,docs/archive/development_history/docs_local/plan.md,documentation,116,9531
+ElixirScope later rework,docs/archive/development_history/docs_local/STATIC_DYNAMIC_CORRELATOR.md,documentation,242,8293
+ElixirScope later rework,docs/archive/development_history/docu/01_FORMAL.md,documentation,126,13085
+ElixirScope later rework,docs/archive/development_history/docu/02_FORMAL.md,documentation,138,10195
+ElixirScope later rework,docs/archive/development_history/docu/03_FORMAL.md,documentation,168,9693
+ElixirScope later rework,docs/archive/development_history/docu/04_FORMAL.md,documentation,646,17748
+ElixirScope later rework,docs/archive/development_history/docu/CURSOR_PLAN.md,documentation,316,11229
+ElixirScope later rework,docs/archive/development_history/docu/CURSOR_PROMPTS.md,documentation,26,646
+ElixirScope later rework,docs/archive/development_history/docu/CURSOR_TESTS_FOUNDATION.md,documentation,179,8707
+ElixirScope later rework,docs/archive/development_history/docu/CURSOR_TESTS.md,documentation,220,12986
+ElixirScope later rework,docs/archive/development_history/docu/DIAGS_startup.md,documentation,321,10377
+ElixirScope later rework,docs/archive/development_history/docu/DIRS.md,documentation,210,6238
+ElixirScope later rework,docs/archive/development_history/docu/ELIXIR_CURSOR.md,documentation,437,11660
+ElixirScope later rework,docs/archive/development_history/docu/FOUNDATION_GRAPH_01.ex,documentation,288,40802
+ElixirScope later rework,docs/archive/development_history/docu/FOUNDATION_GRAPH_02.ex,documentation,1,0
+ElixirScope later rework,docs/archive/development_history/docu/FOUNDATION_TECH_DOC_opus.md,documentation,572,17575
+ElixirScope later rework,docs/archive/development_history/docu/FOUNDATION_TESTS_DOC.md,documentation,171,6822
+ElixirScope later rework,docs/archive/development_history/docu/FOUNDATIONAL_LAYER_Phase1.md,documentation,1188,32646
+ElixirScope later rework,docs/archive/development_history/docu/FOUNDATIONAL_LAYER_Phase2.md,documentation,905,31398
+ElixirScope later rework,docs/archive/development_history/docu/FOUNDATIONAL_LAYER_Phase3.md,documentation,638,19547
+ElixirScope later rework,docs/archive/development_history/docu/FOUNDATIONAL_LAYER_Phase4.md,documentation,53,1986
+ElixirScope later rework,docs/archive/development_history/docu/GEMINI_ELIXIR_DESIGN_ROBUST.md,documentation,309,18189
+ElixirScope later rework,docs/archive/development_history/docu/GEMINI_ELIXIR_DESIGN.md,documentation,241,17453
+ElixirScope later rework,docs/archive/development_history/docu/HOW_TO_HANDLE_ERRORS.md,documentation,188,14195
+ElixirScope later rework,docs/archive/development_history/docu/HOW_TO_HOOK_IN_ERROR_LOGS.md,documentation,319,14225
+ElixirScope later rework,docs/archive/development_history/docu/MIGRATION.md,documentation,289,97734
+ElixirScope later rework,docs/archive/development_history/docu/OG_G_01-CONCURRENCY_ARCH_BEST_PRACTICES.md,documentation,41,10217
+ElixirScope later rework,docs/archive/development_history/docu/OG_G_02-FOUNDATION.md,documentation,265,23339
+ElixirScope later rework,docs/archive/development_history/docu/OG_G_03-CODE_ANALYSIS_AST_CPG.md,documentation,239,15817
+ElixirScope later rework,docs/archive/development_history/docu/OG_G_04-RUNTIME_FEATURES_ADVANCED.md,documentation,251,18123
+ElixirScope later rework,docs/archive/development_history/docu/OG_G_05-SYSTEMWIDE_PATTERNS.md,documentation,1,0
+ElixirScope later rework,docs/archive/development_history/docu/OG_G_06-SUP.md,documentation,82,10668
+ElixirScope later rework,docs/archive/development_history/docu/OG_G_07-SUMMARY.md,documentation,52,8521
+ElixirScope later rework,docs/archive/development_history/docu/OG_G_08-TESTS.md,documentation,292,21763
+ElixirScope later rework,docs/archive/development_history/docu/OTP_GENIUS_GEMINI.md,documentation,189,17136
+ElixirScope later rework,docs/archive/development_history/docu/OTP_GENIUS_GROK.md,documentation,81,5763
+ElixirScope later rework,docs/archive/development_history/docu/post_migration_tasks---migration_helpers.ex---.md,documentation,60,2067
+ElixirScope later rework,docs/archive/development_history/docu/post_migration_tasks.md,documentation,90,2847
+ElixirScope later rework,docs/archive/development_history/docu/README_DEV.md,documentation,282,7328
+ElixirScope later rework,docs/archive/development_history/docu/STANDARDS_FULL.md,documentation,1585,47678
+ElixirScope later rework,docs/archive/development_history/docu/STANDARDS.md,documentation,350,11058
+ElixirScope later rework,docs/archive/foundation_extraction/extract/01_foundation_enhance.md,documentation,205,16329
+ElixirScope later rework,docs/archive/foundation_extraction/extract/02_extract_plan.md,documentation,119,9691
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/01_C4_CMM_GREGOR_HOHPE.md,documentation,115,4973
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/02_C4_CMM_FOUNDATION_LAYER_ENTERPRISE_ARCHITECTURE.md,documentation,729,24721
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/03_C4_CMM_SIMON_BROWN_GREGOR_HOHPE.md,documentation,165,7158
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/04_C4_CMM_SIMON_BROWN_GREGOR_HOHPE.md,documentation,738,30071
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/05_ENHANCEMENT_INITIATIVE.md,documentation,470,37660
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/06_claude_synthesis.md,documentation,462,16187
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/07_gemini_synthesis.md,documentation,269,21851
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/08_gemini_infra.md,documentation,173,15168
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/09_gemini_enhanced_api_contract.md,documentation,314,22330
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/API_FULL.md,documentation,1906,53265
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/API_WITH_INFRA.md,documentation,952,33055
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/API.md,documentation,1659,42814
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/BEHAVIOUR_CONSISTENCY_ANALYSIS_REPORT.md,documentation,197,8123
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/claudeCodeProg.md,documentation,169,5741
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/CODE_QUALITY_REVIEW_BEHAVIOURS.md,documentation,258,7407
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/CODE_QUALITY_REVIEW.md,documentation,258,7407
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/CURSOR_OTP_prog.md,documentation,382,13125
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/CURSOR_OTP.md,documentation,219,8663
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/CURSOR_SONNET_OTP_L1_THRU_9.md,documentation,1078,27348
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/CURSOR_SONNET_OTP_P1_THRU_3_cursorReview.md,documentation,423,14100
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/CURSOR_SONNET_OTP.md,documentation,603,15580
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/DEPS_DOCS.md,documentation,587,28441
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/DIAGS.md,documentation,728,18020
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/ErrorContext.md,documentation,776,22029
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/FOUNDATION_GENERALIZATION_DREAM.md,documentation,310,10508
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/FOUNDATION_INTEGRATIONS.md,documentation,947,31092
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/POOLBOY.md,documentation,171,4690
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/REPORT_gemini.md,documentation,220,22576
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/REPORT_grok.md,documentation,323,10686
+ElixirScope later rework,docs/archive/foundation_extraction/foundation/REPORT.md,documentation,300,9375
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure/circuit_breaker.ex,documentation,397,11650
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure/connection_pool.ex,documentation,618,19023
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure/health_check.ex,documentation,585,17721
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure/memory_manager.ex,documentation,534,14807
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure/performance_monitor.ex,documentation,615,18223
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure/rate_limiter.ex,documentation,544,15917
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure_attempt2/circuit_breaker.ex,documentation,450,13724
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure_attempt2/enhanced_connection_pool_manager.ex,documentation,289,9885
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure_attempt2/enhanced_connection_pool.ex,documentation,582,20807
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure_attempt2/enhanced_rate_limiter.ex,documentation,753,22748
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure_attempt2/guide.md,documentation,293,9723
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure_attempt2/integrated.ex,documentation,293,10892
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/01_HYBRID_POOLBOY_IMPL.md,documentation,359,9997
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/02_POOLBOY.md,documentation,320,10202
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/03_PB_HAMMER.md,documentation,610,18194
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/04_MVP.md,documentation,290,10066
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/05_RUBE_REMOVE.md,documentation,126,12283
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/06_FANTASY_BEAM.md,documentation,113,10529
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/07_GEMINI_REDO.md,documentation,246,10619
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/08_GEMINI_REDO_REGISTRY.md,documentation,296,20355
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/09_CLAUDE_PLAN.md,documentation,341,13400
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/10_gemini_plan.md,documentation,393,23778
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/11_githubCopilotSonnet4_TODO.md,documentation,263,10516
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/INCREMENTAL.md,documentation,460,13449
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/infrastructure.ex,documentation,568,18499
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/KEY_INSIGHTS_FROM_EXISTING_TOOLS.md,documentation,512,17237
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/PHASE_1_COMPLETION_SUMMARY.md,documentation,221,7199
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/REGISTRY_ARCHITECTURE_GUIDE.md,documentation,447,14386
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/SAMUEL_MULLEN_DOT_COM_POOLBOY_ELIXIR.md,documentation,332,19081
+ElixirScope later rework,docs/archive/foundation_extraction/FOUNDATION_OTP_IMPLEMENT_NOW/WHY_HAND_ROLL.md,documentation,127,4870
+ElixirScope later rework,docs/archive/foundation_extraction/infrastructure/001_gemini_review_code.md,documentation,193,18195
+ElixirScope later rework,docs/archive/foundation_extraction/infrastructure/101_copilot_sonnet_tests_plan.md,documentation,595,18833
+ElixirScope later rework,docs/archive/foundation_extraction/infrastructure/101_gemini_review_tests.md,documentation,148,12652
+ElixirScope later rework,docs/archive/foundation_extraction/infrastructure/CURSOR_COMPLETED_INFRASTRUCTURE.md,documentation,1103,29053
+ElixirScope later rework,docs/archive/foundation_extraction/infrastructure/NOTE_TO_CURSOR.md,documentation,109,5380
+ElixirScope later rework,docs/archive/foundation_extraction/infrastructure/PHASE_1_IMPLEMENTATION_SUMMARY.md,documentation,180,6321
+ElixirScope later rework,docs/archive/legacy_monolith/docs_module2_ast/AST_FOUNDATION_API_UTILIZATION.md,documentation,1,0
+ElixirScope later rework,docs/archive/legacy_monolith/docs_module2_ast/FOUNDATION_AST_PROGRAMMATIC_CONTRACT.md,documentation,1,0
+ElixirScope later rework,docs/ast/AST_FOUNDATION_API_ENHANCED.md,documentation,702,23233
+ElixirScope later rework,docs/ast/AST_MIGRATION_IMPLEMENTATION_CURSOR_GUIDE.md,documentation,696,20387
+ElixirScope later rework,docs/ast/AST_PRD.md,documentation,449,20229
+ElixirScope later rework,docs/ast/AST_TECH_SPEC.md,documentation,535,18724
+ElixirScope later rework,docs/ast/DIAG.md,documentation,681,17158
+ElixirScope later rework,docs/ast/DIAGS_AST_EXTENDED.md,documentation,773,27848
+ElixirScope later rework,docs/ast/EST_SCHEMA.md,documentation,633,16751
+ElixirScope later rework,docs/ast/FOUNDATION_AST_PROGRAMMATIC_CONTRACT.md,documentation,2429,76518
+ElixirScope later rework,docs/ast/MIGRATION_INTEGRATION_CO_PRD.md,documentation,896,28022
+ElixirScope later rework,docs/ast/MIGRATION_INTEGRATION_PRD.md,documentation,722,24632
+ElixirScope later rework,docs/ast/MODULE_INTERFACES_DOCUMENTATION.md,documentation,1126,41979
+ElixirScope later rework,docs/ast/README.md,documentation,229,8923
+ElixirScope later rework,docs/ast/REQ-01-CORE-REPOSITORY.md,documentation,195,7857
+ElixirScope later rework,docs/ast/REQ-02-PARSING-QUERIES.md,documentation,233,9096
+ElixirScope later rework,docs/ast/REQ-03-PATTERN-MATCHING.md,documentation,252,10319
+ElixirScope later rework,docs/ast/REQ-04-ADVANCED-FEATURES.md,documentation,287,11915
+ElixirScope later rework,docs/ast/REQ-05-INCREMENTAL-SYNC.md,documentation,199,7913
+ElixirScope later rework,docs/ast/SUPERVISION_TREE.md,documentation,825,22158
+ElixirScope later rework,docs/ast_prompts/1.md,documentation,849,85786
+ElixirScope later rework,docs/ast_prompts/2.md,documentation,411,28813
+ElixirScope later rework,docs/diags/ast/01_ast_architecture_overview.md,documentation,294,8767
+ElixirScope later rework,docs/diags/ast/02_ast_repository_deep_dive.md,documentation,484,13197
+ElixirScope later rework,docs/diags/ast/03_ast_parsing_pipeline.md,documentation,686,17279
+ElixirScope later rework,docs/diags/ast/04_ast_pattern_matching.md,documentation,686,18237
+ElixirScope later rework,docs/diags/ast/05_ast_query_system.md,documentation,743,19276
+ElixirScope later rework,docs/diags/ast/06_ast_synchronization.md,documentation,745,21026
+ElixirScope later rework,docs/diags/ast/07_ast_performance_optimization.md,documentation,823,23193
+ElixirScope later rework,docs/diags/ast/08_ast_testing_framework.md,documentation,591,14878
+ElixirScope later rework,docs/diags/ast/09_ast_error_handling.md,documentation,574,14355
+ElixirScope later rework,docs/diags/ast/10_ast_integration_patterns.md,documentation,867,22249
+ElixirScope later rework,docs/diags/ast/11_ast_deployment_operations.md,documentation,893,20068
+ElixirScope later rework,docs/diags/foundation/01_foundation_architecture_overview.md,documentation,411,12454
+ElixirScope later rework,docs/diags/foundation/02_foundation_services_deep_dive.md,documentation,440,12614
+ElixirScope later rework,docs/diags/foundation/03_foundation_concurrency_otp.md,documentation,623,18061
+ElixirScope later rework,docs/diags/foundation/04_foundation_error_handling_resilience.md,documentation,741,22843
+ElixirScope later rework,docs/diags/foundation/05_foundation_data_flow_state.md,documentation,728,23223
+ElixirScope later rework,docs/diags/foundation/06_foundation_testing_strategies.md,documentation,952,33737
+ElixirScope later rework,docs/diags/foundation/07_foundation_deployment_operations.md,documentation,874,23973
+ElixirScope later rework,docs/diags/foundation/08_foundation_integration_patterns.md,documentation,770,21529
+ElixirScope later rework,docs/diags/L1_2_OTP_IMPLEMENTATION_STRATEGY.md,documentation,362,11439
+ElixirScope later rework,docs/diags/L1_2_OTP.md,documentation,1596,48328
+ElixirScope later rework,docs/FOUNDATION_TEST_COVERAGE/01-review.md,documentation,116,10591
+ElixirScope later rework,docs/implementation/AST_IMPLEMENTATION_GUIDE.md,documentation,273,9802
+ElixirScope later rework,docs/implementation/GRAPH_IMPLEMENTATION_GUIDE.md,documentation,365,11681
+ElixirScope later rework,docs/module_docs/Foundation-API.md,documentation,733,21867
+ElixirScope later rework,docs/module_docs/Foundation-Impl.md,documentation,1134,31058
+ElixirScope later rework,docs/reference_implementation/analysis/patterns/anti_patterns.ex,documentation,10,256
+ElixirScope later rework,docs/reference_implementation/analysis/patterns/design.ex,documentation,10,238
+ElixirScope later rework,docs/reference_implementation/analysis/patterns/elixir_specific.ex,documentation,10,262
+ElixirScope later rework,docs/reference_implementation/analysis/patterns/otp_patterns.ex,documentation,10,253
+ElixirScope later rework,docs/reference_implementation/analysis/patterns/smells.ex,documentation,10,238
+ElixirScope later rework,docs/reference_implementation/analysis/architectural.ex,documentation,10,232
+ElixirScope later rework,docs/reference_implementation/analysis/metrics.ex,documentation,10,214
+ElixirScope later rework,docs/reference_implementation/analysis/performance.ex,documentation,10,226
+ElixirScope later rework,docs/reference_implementation/analysis/quality.ex,documentation,10,214
+ElixirScope later rework,docs/reference_implementation/analysis/recommendations.ex,documentation,10,238
+ElixirScope later rework,docs/reference_implementation/analysis/security.ex,documentation,10,217
+ElixirScope later rework,docs/reference_implementation/ast/analysis/pattern_matcher/analyzers.ex,documentation,162,5224
+ElixirScope later rework,docs/reference_implementation/ast/analysis/pattern_matcher/cache.ex,documentation,96,2449
+ElixirScope later rework,docs/reference_implementation/ast/analysis/pattern_matcher/config.ex,documentation,68,2293
+ElixirScope later rework,docs/reference_implementation/ast/analysis/pattern_matcher/core.ex,documentation,143,5067
+ElixirScope later rework,docs/reference_implementation/ast/analysis/pattern_matcher/pattern_library.ex,documentation,133,4269
+ElixirScope later rework,docs/reference_implementation/ast/analysis/pattern_matcher/pattern_rules.ex,documentation,97,2924
+ElixirScope later rework,docs/reference_implementation/ast/analysis/pattern_matcher/stats.ex,documentation,45,1320
+ElixirScope later rework,docs/reference_implementation/ast/analysis/pattern_matcher/types.ex,documentation,53,1263
+ElixirScope later rework,docs/reference_implementation/ast/analysis/pattern_matcher/validators.ex,documentation,88,2595
+ElixirScope later rework,docs/reference_implementation/ast/analysis/performance_optimizer/batch_processor.ex,documentation,99,2886
+ElixirScope later rework,docs/reference_implementation/ast/analysis/performance_optimizer/cache_manager.ex,documentation,151,4329
+ElixirScope later rework,docs/reference_implementation/ast/analysis/performance_optimizer/lazy_loader.ex,documentation,134,4516
+ElixirScope later rework,docs/reference_implementation/ast/analysis/performance_optimizer/optimization_scheduler.ex,documentation,69,1824
+ElixirScope later rework,docs/reference_implementation/ast/analysis/performance_optimizer/statistics_collector.ex,documentation,104,2574
+ElixirScope later rework,docs/reference_implementation/ast/compilation/mix_task.ex,documentation,311,9693
+ElixirScope later rework,docs/reference_implementation/ast/data/complexity_metrics.ex,documentation,449,16253
+ElixirScope later rework,docs/reference_implementation/ast/data/enhanced_function_data.ex,documentation,141,3262
+ElixirScope later rework,docs/reference_implementation/ast/data/enhanced_module_data.ex,documentation,49,1156
+ElixirScope later rework,docs/reference_implementation/ast/data/function_data.ex,documentation,367,12350
+ElixirScope later rework,docs/reference_implementation/ast/data/module_data.ex,documentation,190,5699
+ElixirScope later rework,docs/reference_implementation/ast/data/shared_data_structures.ex,documentation,60,2148
+ElixirScope later rework,docs/reference_implementation/ast/data/supporting_structures.ex,documentation,552,12031
+ElixirScope later rework,docs/reference_implementation/ast/data/variable_data.ex,documentation,27,527
+ElixirScope later rework,docs/reference_implementation/ast/legacy/memory_manager.ex,documentation,429,12130
+ElixirScope later rework,docs/reference_implementation/ast/legacy/pattern_matcher.ex,documentation,242,7097
+ElixirScope later rework,docs/reference_implementation/ast/legacy/performance_optimizer.ex,documentation,267,8739
+ElixirScope later rework,docs/reference_implementation/ast/legacy/query_builder.ex,documentation,310,8624
+ElixirScope later rework,docs/reference_implementation/ast/parsing/analysis/ast_analyzer.ex,documentation,288,7930
+ElixirScope later rework,docs/reference_implementation/ast/parsing/analysis/attribute_extractor.ex,documentation,86,2150
+ElixirScope later rework,docs/reference_implementation/ast/parsing/analysis/complexity_calculator.ex,documentation,30,1068
+ElixirScope later rework,docs/reference_implementation/ast/parsing/analysis/dependency_extractor.ex,documentation,28,954
+ElixirScope later rework,docs/reference_implementation/ast/parsing/analysis/pattern_detector.ex,documentation,117,3274
+ElixirScope later rework,docs/reference_implementation/ast/parsing/instrumentation_mapper.ex,documentation,502,17400
+ElixirScope later rework,docs/reference_implementation/ast/parsing/parser.ex,documentation,354,12670
+ElixirScope later rework,docs/reference_implementation/ast/querying/cache.ex,documentation,178,4629
+ElixirScope later rework,docs/reference_implementation/ast/querying/executor.ex,documentation,291,8379
+ElixirScope later rework,docs/reference_implementation/ast/querying/normalizer.ex,documentation,79,2467
+ElixirScope later rework,docs/reference_implementation/ast/querying/optimizer.ex,documentation,184,5628
+ElixirScope later rework,docs/reference_implementation/ast/querying/supervisor.ex,documentation,24,697
+ElixirScope later rework,docs/reference_implementation/ast/querying/types.ex,documentation,61,1690
+ElixirScope later rework,docs/reference_implementation/ast/querying/validator.ex,documentation,101,3357
+ElixirScope later rework,docs/reference_implementation/ast/repository/memory_manager/cache_manager.ex,documentation,263,7322
+ElixirScope later rework,docs/reference_implementation/ast/repository/memory_manager/cleaner.ex,documentation,274,8048
+ElixirScope later rework,docs/reference_implementation/ast/repository/memory_manager/compressor.ex,documentation,289,9294
+ElixirScope later rework,docs/reference_implementation/ast/repository/memory_manager/config.ex,documentation,283,8115
+ElixirScope later rework,docs/reference_implementation/ast/repository/memory_manager/monitor.ex,documentation,205,5556
+ElixirScope later rework,docs/reference_implementation/ast/repository/memory_manager/pressure_handler.ex,documentation,310,9493
+ElixirScope later rework,docs/reference_implementation/ast/repository/memory_manager/supervisor.ex,documentation,123,3591
+ElixirScope later rework,docs/reference_implementation/ast/repository/memory_manager/test_runner.ex,documentation,98,3049
+ElixirScope later rework,docs/reference_implementation/ast/repository/project_population/ast_extractor.ex,documentation,99,3006
+ElixirScope later rework,docs/reference_implementation/ast/repository/project_population/complexity_analyzer.ex,documentation,128,4433
+ElixirScope later rework,docs/reference_implementation/ast/repository/project_population/dependency_analyzer.ex,documentation,65,1882
+ElixirScope later rework,docs/reference_implementation/ast/repository/project_population/file_discovery.ex,documentation,52,1572
+ElixirScope later rework,docs/reference_implementation/ast/repository/project_population/file_parser.ex,documentation,137,4245
+ElixirScope later rework,docs/reference_implementation/ast/repository/project_population/module_analyzer.ex,documentation,202,7321
+ElixirScope later rework,docs/reference_implementation/ast/repository/project_population/optimization_hints.ex,documentation,71,2088
+ElixirScope later rework,docs/reference_implementation/ast/repository/project_population/performance_metrics.ex,documentation,29,1141
+ElixirScope later rework,docs/reference_implementation/ast/repository/project_population/project_populator.ex,documentation,149,5058
+ElixirScope later rework,docs/reference_implementation/ast/repository/project_population/quality_analyzer.ex,documentation,31,924
+ElixirScope later rework,docs/reference_implementation/ast/repository/project_population/security_analyzer.ex,documentation,38,1074
+ElixirScope later rework,docs/reference_implementation/ast/repository/synchronization/file_watcher.ex,documentation,823,26284
+ElixirScope later rework,docs/reference_implementation/ast/repository/synchronization/synchronizer.ex,documentation,273,11063
+ElixirScope later rework,docs/reference_implementation/ast/repository/core.ex,documentation,525,17172
+ElixirScope later rework,docs/reference_implementation/ast/repository/enhanced_core.ex,documentation,548,19509
+ElixirScope later rework,docs/reference_implementation/ast/repository/enhanced.ex,documentation,707,22862
+ElixirScope later rework,docs/reference_implementation/ast/transformation/enhanced_transformer.ex,documentation,299,9990
+ElixirScope later rework,docs/reference_implementation/ast/transformation/injector_helpers.ex,documentation,355,9257
+ElixirScope later rework,docs/reference_implementation/ast/transformation/orchestrator.ex,documentation,314,9280
+ElixirScope later rework,docs/reference_implementation/ast/transformation/transformer.ex,documentation,278,10146
+ElixirScope later rework,docs/reference_implementation/capture/correlation/runtime/breakpoint_manager.ex,documentation,212,6829
+ElixirScope later rework,docs/reference_implementation/capture/correlation/runtime/cache_manager.ex,documentation,156,3967
+ElixirScope later rework,docs/reference_implementation/capture/correlation/runtime/config.ex,documentation,176,4647
+ElixirScope later rework,docs/reference_implementation/capture/correlation/runtime/context_builder.ex,documentation,153,4602
+ElixirScope later rework,docs/reference_implementation/capture/correlation/runtime/event_correlator.ex,documentation,264,8556
+ElixirScope later rework,docs/reference_implementation/capture/correlation/runtime/trace_builder.ex,documentation,342,11410
+ElixirScope later rework,docs/reference_implementation/capture/correlation/runtime/types.ex,documentation,82,2339
+ElixirScope later rework,docs/reference_implementation/capture/correlation/runtime/utils.ex,documentation,221,6178
+ElixirScope later rework,docs/reference_implementation/capture/correlation/runtime_correlator.ex,documentation,314,9639
+ElixirScope later rework,docs/reference_implementation/capture/enhanced/correlation.ex,documentation,10,258
+ElixirScope later rework,docs/reference_implementation/capture/enhanced/instrumentation.ex,documentation,10,270
+ElixirScope later rework,docs/reference_implementation/capture/enhanced/temporal.ex,documentation,10,249
+ElixirScope later rework,docs/reference_implementation/capture/runtime/ingestor/channel.ex,documentation,94,2770
+ElixirScope later rework,docs/reference_implementation/capture/runtime/ingestor/distributed.ex,documentation,44,1250
+ElixirScope later rework,docs/reference_implementation/capture/runtime/ingestor/ecto.ex,documentation,62,1663
+ElixirScope later rework,docs/reference_implementation/capture/runtime/ingestor/gen_server.ex,documentation,86,2537
+ElixirScope later rework,docs/reference_implementation/capture/runtime/ingestor/live_view.ex,documentation,181,5120
+ElixirScope later rework,docs/reference_implementation/capture/runtime/ingestor/phoenix.ex,documentation,176,4949
+ElixirScope later rework,docs/reference_implementation/capture/runtime/instrumentation_runtime/ast_reporting.ex,documentation,644,19013
+ElixirScope later rework,docs/reference_implementation/capture/runtime/instrumentation_runtime/context.ex,documentation,192,4827
+ElixirScope later rework,docs/reference_implementation/capture/runtime/instrumentation_runtime/core_reporting.ex,documentation,193,5199
+ElixirScope later rework,docs/reference_implementation/capture/runtime/instrumentation_runtime/ecto_reporting.ex,documentation,49,1448
+ElixirScope later rework,docs/reference_implementation/capture/runtime/instrumentation_runtime/gen_server_reporting.ex,documentation,68,2141
+ElixirScope later rework,docs/reference_implementation/capture/runtime/instrumentation_runtime/performance.ex,documentation,67,2101
+ElixirScope later rework,docs/reference_implementation/capture/runtime/instrumentation_runtime/phoenix_reporting.ex,documentation,383,11154
+ElixirScope later rework,docs/reference_implementation/capture/runtime/temporal_bridge_enhancement/ast_context_builder.ex,documentation,153,4707
+ElixirScope later rework,docs/reference_implementation/capture/runtime/temporal_bridge_enhancement/cache_manager.ex,documentation,197,5265
+ElixirScope later rework,docs/reference_implementation/capture/runtime/temporal_bridge_enhancement/event_processor.ex,documentation,165,5075
+ElixirScope later rework,docs/reference_implementation/capture/runtime/temporal_bridge_enhancement/state_manager.ex,documentation,149,4782
+ElixirScope later rework,docs/reference_implementation/capture/runtime/temporal_bridge_enhancement/trace_builder.ex,documentation,181,5851
+ElixirScope later rework,docs/reference_implementation/capture/runtime/temporal_bridge_enhancement/types.ex,documentation,59,1771
+ElixirScope later rework,docs/reference_implementation/capture/runtime/async_writer_pool.ex,documentation,384,10637
+ElixirScope later rework,docs/reference_implementation/capture/runtime/async_writer.ex,documentation,256,6582
+ElixirScope later rework,docs/reference_implementation/capture/runtime/enhanced_instrumentation.ex,documentation,346,10531
+ElixirScope later rework,docs/reference_implementation/capture/runtime/event_correlator.ex,documentation,717,20712
+ElixirScope later rework,docs/reference_implementation/capture/runtime/ingestor.ex,documentation,593,19338
+ElixirScope later rework,docs/reference_implementation/capture/runtime/instrumentation_runtime.ex,documentation,314,11129
+ElixirScope later rework,docs/reference_implementation/capture/runtime/pipeline_manager.ex,documentation,168,4001
+ElixirScope later rework,docs/reference_implementation/capture/runtime/ring_buffer.ex,documentation,321,9574
+ElixirScope later rework,docs/reference_implementation/capture/runtime/temporal_bridge_enhancement.ex,documentation,365,10219
+ElixirScope later rework,docs/reference_implementation/capture/runtime/temporal_bridge.ex,documentation,692,20680
+ElixirScope later rework,docs/reference_implementation/capture/runtime/temporal_storage.ex,documentation,468,13356
+ElixirScope later rework,docs/reference_implementation/capture/storage/storage/data_access.ex,documentation,595,18065
+ElixirScope later rework,docs/reference_implementation/capture/storage/storage/event_store.ex,documentation,345,10035
+ElixirScope later rework,docs/reference_implementation/capture/correlation.ex,documentation,10,231
+ElixirScope later rework,docs/reference_implementation/capture/ingestors.ex,documentation,10,225
+ElixirScope later rework,docs/reference_implementation/capture/instrumentation.ex,documentation,10,243
+ElixirScope later rework,docs/reference_implementation/capture/storage.ex,documentation,10,219
+ElixirScope later rework,docs/reference_implementation/capture/temporal.ex,documentation,10,222
+ElixirScope later rework,docs/reference_implementation/cpg/analysis/complexity_metrics.ex,documentation,557,16886
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/expression_processors/assignment_processors.ex,documentation,98,3074
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/expression_processors/basic_processors.ex,documentation,259,7875
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/expression_processors/control_flow_processors.ex,documentation,246,7013
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/expression_processors/data_structure_processors.ex,documentation,179,5110
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/expression_processors/function_processors.ex,documentation,139,3805
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/ast_processor_behavior.ex,documentation,26,909
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/ast_processor.ex,documentation,395,12641
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/ast_utilities_behavior.ex,documentation,48,1418
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/ast_utilities.ex,documentation,99,2681
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/complexity_calculator.ex,documentation,222,6261
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/control_flow_processors.ex,documentation,580,18299
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/expression_processors.ex,documentation,80,3360
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/integration_test.ex,documentation,163,5479
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/path_analyzer.ex,documentation,267,7808
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/state_manager_behaviour.ex,documentation,25,802
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/state_manager.ex,documentation,64,1884
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/state.ex,documentation,20,657
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg/cfg_generator/validators.ex,documentation,18,527
+ElixirScope later rework,docs/reference_implementation/cpg/builder/core/complexity_analyzer.ex,documentation,333,9348
+ElixirScope later rework,docs/reference_implementation/cpg/builder/core/core.ex,documentation,224,6342
+ElixirScope later rework,docs/reference_implementation/cpg/builder/core/graph_merger.ex,documentation,396,10955
+ElixirScope later rework,docs/reference_implementation/cpg/builder/core/helpers.ex,documentation,271,7342
+ElixirScope later rework,docs/reference_implementation/cpg/builder/core/pattern_detector.ex,documentation,133,3321
+ElixirScope later rework,docs/reference_implementation/cpg/builder/core/performance_analyzer.ex,documentation,315,8396
+ElixirScope later rework,docs/reference_implementation/cpg/builder/core/quality_analyzer.ex,documentation,572,15417
+ElixirScope later rework,docs/reference_implementation/cpg/builder/core/query_processor.ex,documentation,123,3448
+ElixirScope later rework,docs/reference_implementation/cpg/builder/core/security_analyzer.ex,documentation,299,8845
+ElixirScope later rework,docs/reference_implementation/cpg/builder/core/validator.ex,documentation,96,2341
+ElixirScope later rework,docs/reference_implementation/cpg/builder/dfg/dfg_generator/ast_analyzer.ex,documentation,661,20278
+ElixirScope later rework,docs/reference_implementation/cpg/builder/dfg/dfg_generator/dependency_analyzer.ex,documentation,449,13058
+ElixirScope later rework,docs/reference_implementation/cpg/builder/dfg/dfg_generator/edge_creator.ex,documentation,265,7906
+ElixirScope later rework,docs/reference_implementation/cpg/builder/dfg/dfg_generator/node_creator.ex,documentation,176,4611
+ElixirScope later rework,docs/reference_implementation/cpg/builder/dfg/dfg_generator/optimization_analyzer.ex,documentation,370,11341
+ElixirScope later rework,docs/reference_implementation/cpg/builder/dfg/dfg_generator/pattern_analyzer.ex,documentation,214,6541
+ElixirScope later rework,docs/reference_implementation/cpg/builder/dfg/dfg_generator/state_manager.ex,documentation,80,1840
+ElixirScope later rework,docs/reference_implementation/cpg/builder/dfg/dfg_generator/structure_builder.ex,documentation,285,8153
+ElixirScope later rework,docs/reference_implementation/cpg/builder/dfg/dfg_generator/variable_tracker.ex,documentation,525,14566
+ElixirScope later rework,docs/reference_implementation/cpg/builder/dfg/minimal.ex,documentation,84,2413
+ElixirScope later rework,docs/reference_implementation/cpg/builder/project_analysis/ast_extractor.ex,documentation,115,3085
+ElixirScope later rework,docs/reference_implementation/cpg/builder/project_analysis/complexity_analyzer.ex,documentation,154,4605
+ElixirScope later rework,docs/reference_implementation/cpg/builder/project_analysis/dependency_analyzer.ex,documentation,66,1884
+ElixirScope later rework,docs/reference_implementation/cpg/builder/project_analysis/file_discovery.ex,documentation,54,1616
+ElixirScope later rework,docs/reference_implementation/cpg/builder/project_analysis/file_parser.ex,documentation,149,4342
+ElixirScope later rework,docs/reference_implementation/cpg/builder/project_analysis/module_analyzer.ex,documentation,253,7951
+ElixirScope later rework,docs/reference_implementation/cpg/builder/project_analysis/optimization_hints.ex,documentation,102,2302
+ElixirScope later rework,docs/reference_implementation/cpg/builder/project_analysis/performance_metrics.ex,documentation,34,1178
+ElixirScope later rework,docs/reference_implementation/cpg/builder/project_analysis/quality_analyzer.ex,documentation,36,944
+ElixirScope later rework,docs/reference_implementation/cpg/builder/project_analysis/security_analyzer.ex,documentation,44,1123
+ElixirScope later rework,docs/reference_implementation/cpg/builder/call_graph.ex,documentation,10,229
+ElixirScope later rework,docs/reference_implementation/cpg/builder/cfg.ex,documentation,191,5393
+ElixirScope later rework,docs/reference_implementation/cpg/builder/dfg.ex,documentation,130,3665
+ElixirScope later rework,docs/reference_implementation/cpg/builder/project_populator.ex,documentation,162,5161
+ElixirScope later rework,docs/reference_implementation/cpg/data/cfg_data.ex,documentation,335,7663
+ElixirScope later rework,docs/reference_implementation/cpg/data/cpg_data.ex,documentation,357,10048
+ElixirScope later rework,docs/reference_implementation/cpg/data/dfg_data.ex,documentation,782,20622
+ElixirScope later rework,docs/reference_implementation/cpg/data/shared_structures.ex,documentation,80,2071
+ElixirScope later rework,docs/reference_implementation/cpg/data/supporting_structures.ex,documentation,563,12803
+ElixirScope later rework,docs/reference_implementation/cpg/data/variable_data.ex,documentation,28,579
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/analysis/dependency_impact.ex,documentation,10,280
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/analysis/performance_hotspots.ex,documentation,10,289
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/analysis/security_vulnerabilities.ex,documentation,10,301
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/builder/ai_enhanced_builder.ex,documentation,10,280
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/builder/incremental_builder.ex,documentation,10,283
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/builder/parallel_builder.ex,documentation,10,274
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/data/advanced_cpg_data.ex,documentation,10,265
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/data/semantic_annotations.ex,documentation,10,277
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/data/temporal_cpg_data.ex,documentation,10,265
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/builder.ex,documentation,10,226
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/optimization.ex,documentation,10,241
+ElixirScope later rework,docs/reference_implementation/cpg/enhanced/semantics.ex,documentation,10,232
+ElixirScope later rework,docs/reference_implementation/cpg/analysis.ex,documentation,10,202
+ElixirScope later rework,docs/reference_implementation/cpg/builder.ex,documentation,49,1400
+ElixirScope later rework,docs/reference_implementation/cpg/data.ex,documentation,10,190
+ElixirScope later rework,docs/reference_implementation/cpg/file_watcher.ex,documentation,868,26573
+ElixirScope later rework,docs/reference_implementation/cpg/optimization.ex,documentation,10,214
+ElixirScope later rework,docs/reference_implementation/cpg/semantics.ex,documentation,10,205
+ElixirScope later rework,docs/reference_implementation/cpg/synchronizer.ex,documentation,322,11434
+ElixirScope later rework,docs/reference_implementation/debugger/enhanced/instrumentation/ast_correlator.ex,documentation,101,3045
+ElixirScope later rework,docs/reference_implementation/debugger/enhanced/instrumentation/breakpoint_manager.ex,documentation,259,8334
+ElixirScope later rework,docs/reference_implementation/debugger/enhanced/instrumentation/debugger_interface.ex,documentation,262,7290
+ElixirScope later rework,docs/reference_implementation/debugger/enhanced/instrumentation/event_handler.ex,documentation,210,6821
+ElixirScope later rework,docs/reference_implementation/debugger/enhanced/instrumentation/storage.ex,documentation,285,7595
+ElixirScope later rework,docs/reference_implementation/debugger/enhanced/instrumentation/utils.ex,documentation,89,2707
+ElixirScope later rework,docs/reference_implementation/debugger/enhanced/instrumentation/watchpoint_manager.ex,documentation,273,8173
+ElixirScope later rework,docs/reference_implementation/debugger/enhanced/breakpoints.ex,documentation,10,253
+ElixirScope later rework,docs/reference_implementation/debugger/enhanced/session.ex,documentation,10,241
+ElixirScope later rework,docs/reference_implementation/debugger/enhanced/visualization.ex,documentation,10,259
+ElixirScope later rework,docs/reference_implementation/debugger/ai_assistant.ex,documentation,10,226
+ElixirScope later rework,docs/reference_implementation/debugger/breakpoints.ex,documentation,10,226
+ElixirScope later rework,docs/reference_implementation/debugger/core.ex,documentation,10,205
+ElixirScope later rework,docs/reference_implementation/debugger/interface.ex,documentation,10,220
+ElixirScope later rework,docs/reference_implementation/debugger/session.ex,documentation,10,214
+ElixirScope later rework,docs/reference_implementation/debugger/time_travel.ex,documentation,10,223
+ElixirScope later rework,docs/reference_implementation/debugger/visualization.ex,documentation,10,232
+ElixirScope later rework,docs/reference_implementation/graph/algorithms/advanced_centrality.ex,documentation,10,271
+ElixirScope later rework,docs/reference_implementation/graph/algorithms/centrality.ex,documentation,10,247
+ElixirScope later rework,docs/reference_implementation/graph/algorithms/community.ex,documentation,10,244
+ElixirScope later rework,docs/reference_implementation/graph/algorithms/connectivity.ex,documentation,10,253
+ElixirScope later rework,docs/reference_implementation/graph/algorithms/extracted_from_cpg.md,documentation,16,515
+ElixirScope later rework,docs/reference_implementation/graph/algorithms/machine_learning.ex,documentation,10,262
+ElixirScope later rework,docs/reference_implementation/graph/algorithms/pathfinding.ex,documentation,10,250
+ElixirScope later rework,docs/reference_implementation/graph/algorithms/temporal_analysis.ex,documentation,10,265
+ElixirScope later rework,docs/reference_implementation/graph/data_structures.ex,documentation,10,226
+ElixirScope later rework,docs/reference_implementation/graph/math.ex,documentation,10,196
+ElixirScope later rework,docs/reference_implementation/graph/utils.ex,documentation,10,199
+ElixirScope later rework,docs/reference_implementation/integration/phoenix/integration.ex,documentation,355,9720
+ElixirScope later rework,docs/reference_implementation/integration/analysis_intelligence.ex,documentation,10,262
+ElixirScope later rework,docs/reference_implementation/integration/ast_cpg.ex,documentation,10,220
+ElixirScope later rework,docs/reference_implementation/integration/capture_debugger.ex,documentation,10,247
+ElixirScope later rework,docs/reference_implementation/integration/cpg_analysis.ex,documentation,10,235
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/analysis/intelligent_code_analyzer.ex,documentation,910,25318
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/llm/providers/gemini.ex,documentation,450,14410
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/llm/providers/mock.ex,documentation,228,7565
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/llm/providers/vertex.ex,documentation,587,19075
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/llm/client.ex,documentation,170,5127
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/llm/config.ex,documentation,208,5748
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/llm/provider.ex,documentation,71,1986
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/llm/response.ex,documentation,104,2635
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/predictive/execution_predictor.ex,documentation,586,17310
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/code_analyzer.ex,documentation,693,20830
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/complexity_analyzer.ex,documentation,522,14264
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/orchestrator.ex,documentation,366,10372
+ElixirScope later rework,docs/reference_implementation/intelligence/ai/pattern_recognizer.ex,documentation,411,11510
+ElixirScope later rework,docs/reference_implementation/intelligence/models/bug_predictor.ex,documentation,10,262
+ElixirScope later rework,docs/reference_implementation/intelligence/models/complexity_predictor.ex,documentation,10,283
+ElixirScope later rework,docs/reference_implementation/intelligence/models/performance_predictor.ex,documentation,10,286
+ElixirScope later rework,docs/reference_implementation/intelligence/features.ex,documentation,10,229
+ElixirScope later rework,docs/reference_implementation/intelligence/insights.ex,documentation,10,229
+ElixirScope later rework,docs/reference_implementation/intelligence/models.ex,documentation,10,223
+ElixirScope later rework,docs/reference_implementation/intelligence/orchestration.ex,documentation,10,244
+ElixirScope later rework,docs/reference_implementation/intelligence/predictions.ex,documentation,10,238
+ElixirScope later rework,docs/reference_implementation/query/extensions/analysis.ex,documentation,10,241
+ElixirScope later rework,docs/reference_implementation/query/extensions/cpg.ex,documentation,10,226
+ElixirScope later rework,docs/reference_implementation/query/extensions/ml_queries.ex,documentation,10,244
+ElixirScope later rework,docs/reference_implementation/query/extensions/pattern_queries.ex,documentation,10,259
+ElixirScope later rework,docs/reference_implementation/query/extensions/security_queries.ex,documentation,10,262
+ElixirScope later rework,docs/reference_implementation/query/extensions/temporal.ex,documentation,10,241
+ElixirScope later rework,docs/reference_implementation/query/legacy/engine.ex,documentation,329,8411
+ElixirScope later rework,docs/reference_implementation/query/builder.ex,documentation,10,205
+ElixirScope later rework,docs/reference_implementation/query/cache.ex,documentation,10,199
+ElixirScope later rework,docs/reference_implementation/query/dsl.ex,documentation,10,193
+ElixirScope later rework,docs/reference_implementation/query/executor.ex,documentation,10,208
+ElixirScope later rework,docs/reference_implementation/query/optimizer.ex,documentation,10,211
+ElixirScope later rework,docs/reference_implementation/shared/behaviours.ex,documentation,10,217
+ElixirScope later rework,docs/reference_implementation/shared/constants.ex,documentation,10,214
+ElixirScope later rework,docs/reference_implementation/shared/protocols.ex,documentation,10,214
+ElixirScope later rework,docs/reference_implementation/shared/types.ex,documentation,10,202
+ElixirScope later rework,docs/reference_implementation/testing/fixtures.ex,documentation,10,214
+ElixirScope later rework,docs/reference_implementation/testing/helpers.ex,documentation,10,211
+ElixirScope later rework,docs/reference_implementation/testing/mocks.ex,documentation,10,205
+ElixirScope later rework,docs/reference_implementation/analysis.ex,documentation,10,190
+ElixirScope later rework,docs/reference_implementation/ast.ex,documentation,20,766
+ElixirScope later rework,docs/reference_implementation/capture.ex,documentation,10,187
+ElixirScope later rework,docs/reference_implementation/cpg.ex,documentation,10,175
+ElixirScope later rework,docs/reference_implementation/debugger.ex,documentation,10,190
+ElixirScope later rework,docs/reference_implementation/graph.ex,documentation,10,181
+ElixirScope later rework,docs/reference_implementation/intelligence.ex,documentation,10,202
+ElixirScope later rework,docs/reference_implementation/query.ex,documentation,10,181
+ElixirScope later rework,docs/CLEANUP.md,documentation,90,3345
+ElixirScope later rework,docs/CODE_QUALITY.md,documentation,433,17034
+ElixirScope later rework,docs/DOCUMENTATION_CLEANUP_SUMMARY.md,documentation,143,5568
+ElixirScope later rework,docs/README_FOUNDATION.md,documentation,424,17663
+ElixirScope later rework,docs/README_SHORT.md,documentation,52,3738
+ElixirScope later rework,docs/README.md,documentation,161,6809
+ElixirScope later rework,lib/elixir_scope/graph/algorithms/code_centrality.ex,application source,470,16681
+ElixirScope later rework,lib/elixir_scope/graph/algorithms/dependency_analysis.ex,application source,513,17259
+ElixirScope later rework,lib/elixir_scope/graph/algorithms/module_clustering.ex,application source,529,17344
+ElixirScope later rework,lib/elixir_scope/graph/converters.ex,application source,263,8510
+ElixirScope later rework,lib/elixir_scope/graph/core.ex,application source,321,10000
+ElixirScope later rework,lib/elixir_scope/graph/foundation_integration.ex,application source,222,5932
+ElixirScope later rework,test/smoke/foundation_integration_test.exs,test,66,1917
+ElixirScope later rework,test/unit/graph_test.exs,test,200,5511
+ElixirScope later rework,test/elixir_scope_test.exs,test,13,355
+ElixirScope later rework,.cursorignore,other,5,39
+ElixirScope later rework,.cursorrules,other,1,0
+ElixirScope later rework,.gitignore,other,13,130
+ElixirScope later rework,claudeCodeArchPlan.md,documentation,344,14373
+ElixirScope later rework,FOUNDATION_API_REF.md,documentation,1912,51414
+ElixirScope later rework,LICENSE,other,21,1067
+ElixirScope later rework,.formatter.exs,other,4,96
+ElixirScope later rework,CLAUDE.md,documentation,79,3218
+ElixirScope later rework,CODE_QUALITY.md,documentation,433,17034
+ElixirScope later rework,DIAGS_G25P_prev20250605.md,documentation,743,24686
+ElixirScope later rework,.dialyzer.ignore.exs,other,18,924
+ElixirScope later rework,lib/elixir_scope/graph/utils.ex,application source,419,13405
+ElixirScope later rework,lib/elixir_scope/analysis.ex,application source,14,384
+ElixirScope later rework,lib/elixir_scope/ast.ex,application source,30,761
+ElixirScope later rework,lib/elixir_scope/capture.ex,application source,14,366
+ElixirScope later rework,lib/elixir_scope/cpg.ex,application source,14,371
+ElixirScope later rework,lib/elixir_scope/debugger.ex,application source,14,411
+ElixirScope later rework,lib/elixir_scope/graph.ex,application source,209,7489
+ElixirScope later rework,lib/elixir_scope/intelligence.ex,application source,14,389
+ElixirScope later rework,lib/elixir_scope/query.ex,application source,14,359
+ElixirScope later rework,lib/elixir_scope.ex,application source,70,3043
+ElixirScope later rework,DEV.md,documentation,782,28306
+ElixirScope later rework,lib/elixir_scope/application.ex,application source,31,992
+ElixirScope later rework,test/test_helper.exs,test,1,14
+ElixirScope later rework,.github/workflows/elixir.yaml,other,152,4964
+ElixirScope later rework,mix.exs,other,116,3031
+ElixirScope later rework,README.md,documentation,144,6368

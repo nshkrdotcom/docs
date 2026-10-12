@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://elixirscope.example/schema/focus/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "repositoryId",
+    "revisionId",
+    "followMode",
+    "lens"
+  ],
+  "properties": {
+    "repositoryId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "revisionId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "symbolRef": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourceRef": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "captureSessionId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "processInstanceId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "logicalRoleId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "eventId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "causalRootId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comparedRevisionId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "followMode": {
+      "enum": [
+        "free",
+        "process",
+        "role",
+        "causal",
+        "function",
+        "value",
+        "effect",
+        "pinned"
+      ]
+    },
+    "lens": {
+      "enum": [
+        "review",
+        "diff",
+        "source",
+        "graph",
+        "cinema",
+        "process",
+        "state",
+        "effect",
+        "evidence",
+        "compare"
+      ]
+    },
+    "timeWindow": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "startNs": {
+          "type": "string"
+        },
+        "endNs": {
+          "type": "string"
+        }
+      }
+    },
+    "epoch": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

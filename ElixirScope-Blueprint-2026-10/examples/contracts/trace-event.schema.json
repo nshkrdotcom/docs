@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://elixirscope.example/schema/trace-event/v1",
+  "title": "Normalized trace event v1 — conceptual schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "sessionId",
+    "nodeInstanceId",
+    "localSequence",
+    "clockDomain",
+    "eventType",
+    "evidenceKind",
+    "captureStatus"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sessionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nodeInstanceId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "processInstanceId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "logicalRoleId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "localSequence": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "clockDomain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "monotonicNs": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]+$"
+    },
+    "wallTimeNs": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]+$"
+    },
+    "eventType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceRef": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "correlationId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "messageId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "payload": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "evidenceKind": {
+      "enum": [
+        "static",
+        "observed",
+        "reconstructed",
+        "inferred",
+        "unknown"
+      ]
+    },
+    "captureStatus": {
+      "enum": [
+        "complete",
+        "partial",
+        "metadata_only",
+        "sampled",
+        "redacted",
+        "truncated",
+        "not_captured"
+      ]
+    },
+    "captureProducer": {
+      "type": "string"
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

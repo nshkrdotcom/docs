@@ -1,0 +1,85 @@
+{
+  "synthetic": true,
+  "schemaVersion": "1.0",
+  "revisionId": "synthetic-rev-001",
+  "selectedSymbol": {
+    "id": "sym-worker-handle-info",
+    "sourceRef": {
+      "repositoryId": "synthetic-otp-recovery",
+      "revisionId": "synthetic-rev-001",
+      "language": "elixir",
+      "filePath": "lib/otp_recovery/command_worker.ex",
+      "contentHash": "synthetic-blob-command-worker-v1",
+      "symbolKey": "OtpRecovery.CommandWorker.handle_info/2",
+      "span": {
+        "startLine": 40,
+        "startColumn": 3,
+        "endLine": 66,
+        "endColumn": 6
+      },
+      "matchStatus": "exact"
+    },
+    "changeKind": "body_modified"
+  },
+  "directCallers": [],
+  "effectPaths": [
+    {
+      "kind": "may_effect",
+      "target": "external_write",
+      "provider": "synthetic_fixture",
+      "steps": [
+        {
+          "sourceRef": {
+            "repositoryId": "synthetic-otp-recovery",
+            "revisionId": "synthetic-rev-001",
+            "language": "elixir",
+            "filePath": "lib/otp_recovery/command_worker.ex",
+            "contentHash": "synthetic-blob-command-worker-v1",
+            "symbolKey": "OtpRecovery.CommandWorker.handle_info/2",
+            "span": {
+              "startLine": 40,
+              "startColumn": 3,
+              "endLine": 66,
+              "endColumn": 6
+            },
+            "matchStatus": "exact"
+          },
+          "kind": "calls"
+        },
+        {
+          "sourceRef": {
+            "repositoryId": "synthetic-otp-recovery",
+            "revisionId": "synthetic-rev-001",
+            "language": "elixir",
+            "filePath": "lib/otp_recovery/command_worker.ex",
+            "contentHash": "synthetic-blob-command-worker-v1",
+            "symbolKey": "OtpRecovery.CommandWorker.recover/2",
+            "span": {
+              "startLine": 71,
+              "startColumn": 3,
+              "endLine": 99,
+              "endColumn": 6
+            },
+            "matchStatus": "exact"
+          },
+          "kind": "may_effect"
+        }
+      ],
+      "limitations": [
+        "Not evidence that either call path executed"
+      ]
+    }
+  ],
+  "coverage": {
+    "status": "partial",
+    "reasons": [
+      "static_flow_fixture_only"
+    ]
+  },
+  "testLeads": [
+    {
+      "test": "OtpRecoveryTest crash recovery",
+      "kind": "candidate"
+    }
+  ]
+}

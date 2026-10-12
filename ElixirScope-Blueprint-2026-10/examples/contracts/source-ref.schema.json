@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://elixirscope.example/schema/source-ref/v1",
+  "title": "SourceRef v1 — conceptual JSON contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "repositoryId",
+    "revisionId",
+    "language",
+    "filePath",
+    "contentHash",
+    "span"
+  ],
+  "properties": {
+    "repositoryId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revisionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "enum": [
+        "elixir",
+        "erlang",
+        "gleam",
+        "other"
+      ]
+    },
+    "filePath": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contentHash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "symbolKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "span": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "startLine",
+        "startColumn",
+        "endLine",
+        "endColumn"
+      ],
+      "properties": {
+        "startLine": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "startColumn": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "endLine": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "endColumn": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "selectorKind": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "matchStatus": {
+      "enum": [
+        "exact",
+        "candidate",
+        "unresolved"
+      ]
+    },
+    "originMap": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  }
+}

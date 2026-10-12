@@ -1,0 +1,15 @@
+sequenceDiagram
+  participant A as Ingress Node A
+  participant B as Worker 1 Node B
+  participant C as Journal Node C
+  participant Sup as Supervisor Node B
+  participant B2 as Worker 2 Node B
+  A->>B: command 42 (captured send/receive)
+  B->>C: journal read/write (only if captured)
+  B->>B: external write attempted
+  Note right of B: External effect outcome unknown
+  B--xSup: abnormal exit (observed)
+  Sup->>B2: start replacement worker (observed)
+  B2->>C: recover command (if captured)
+  B2->>B2: second external write attempted
+  Note over B,B2: Same logical role, different process incarnations

@@ -1,0 +1,17 @@
+stateDiagram-v2
+  [*] --> StaticReview
+  StaticReview --> SymbolSelected: choose changed function
+  SymbolSelected --> ImpactFollow: follow call/effect
+  ImpactFollow --> SymbolSelected: back
+  SymbolSelected --> Cinema: open recorded run
+  Cinema --> ProcessFollow: follow process
+  ProcessFollow --> RoleFollow: cross restart role
+  RoleFollow --> CausalFollow: follow causal path
+  CausalFollow --> Comparing: compare two runs
+  Comparing --> Finding: attach evidence
+  Finding --> StaticReview: return to review
+  state SymbolSelected {
+    [*] --> Following
+    Following --> Pinned: pin source pane
+    Pinned --> Following: unpin source pane
+  }

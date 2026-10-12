@@ -1,0 +1,13 @@
+flowchart TD
+  Git[Git revisions / working snapshot] --> Eng[ElixirScope Engine\nSource + Reach + ExAST]
+  Reach[Reach / ExAST] --> Eng
+  OldTrace[Recorded capture / test fixture] --> Imp[Trace Import / Normalizer]
+  Imp --> Eng
+  Eng --> Server[Phoenix + Ash Delivery Server]
+  DB[(AshSqlite: repositories\nrevisions, investigations, findings)] --> Server
+  Server --> API[HTTP JSON + Optional Channels]
+  API --> Front[TypeScript Workbench]
+  Front --> Diff[Source / Diff]
+  Front --> Impact[Bounded Graph]
+  Front --> Cine[Causal Cinema Timeline]
+  Front --> Proof[Evidence Inspector]

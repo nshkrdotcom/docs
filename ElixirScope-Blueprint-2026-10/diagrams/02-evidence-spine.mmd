@@ -1,0 +1,8 @@
+flowchart LR
+  S[Source facts\nrev, symbols, relations] --> E[Evidence/correlation spine\nsource refs + provenance]
+  R[Recorded runtime\nnodes, processes, events] --> E
+  E --> I[Investigation\nquestion + claims + gaps]
+  E --> UI[Source, graph, Cinema, state, effects]
+  I --> UI
+  Intent[Declared intent / requirements] --> I
+  Hyp[AI inferred purpose: hypothesis] -.-> I
